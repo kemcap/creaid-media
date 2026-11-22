@@ -1,0 +1,311 @@
+{
+  "pages": 59,
+  "h1_changed": [],
+  "title_changed": [],
+  "description_changed": [],
+  "main_text_changed": [],
+  "missing_local_links": [],
+  "noindex_changed": [],
+  "missing_assets": [],
+  "counts": {
+    "b2b-portal-entwickeln-lassen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "beste-landingpage-elemente-fuer-kampagnen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "blog.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "branding.html": {
+      "h1": 1,
+      "header": 0,
+      "footer": 1
+    },
+    "cookie-einstellungen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "corporate-design-erstellen-lassen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "datenschutz.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "deutschsprachige-agentur-in-der-tuerkei-finden.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "firmennamen-entwickeln-lassen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "flyer-design-fuer-unternehmen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "google-ads-aber-keine-anfragen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "google-ads-social-media.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "google-maps-auffindbarkeit-verbessern.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "guenstige-webdesign-agentur-europa-finden.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "impressum.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "index.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "individuelle-webentwicklung-fuer-unternehmen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "kampagne-fuer-lokale-unternehmen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "ki-automatisierung-fuer-unternehmen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "ki-automatisierung.html": {
+      "h1": 1,
+      "header": 0,
+      "footer": 1
+    },
+    "ki-workflows-crm.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "kontakt.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "leistungen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "logo-design-agentur.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "logo-und-slogan-entwickeln.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "markenauftritt-fuer-kleine-unternehmen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "marketing.html": {
+      "h1": 1,
+      "header": 0,
+      "footer": 1
+    },
+    "marktplatz-plattform-entwickeln.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "messeauftritt-gestalten-lassen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "onlineshop-erfolgreich-aufbauen-anleitung.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "onlineshop-erstellen-lassen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "onlineshops-ecommerce.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "printdesign-editorial.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "produktfim-erstellen-lassen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "professionelle-website-fuer-lokale-dienstleister.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "projekt-detail.html": {
+      "h1": 1,
+      "header": 2,
+      "footer": 1
+    },
+    "referenzen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "schlechte-website-verbessern.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "seo-content-marketing.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "seo-fuer-lokale-sichtbarkeit.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "seo-grundlagen-lokale-dienstleister.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "shopware-vs-wordpress-shop.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "social-media-betreuung-unternehmen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "ueber-uns.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "warum-bringt-meine-website-keine-kunden.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "warum-corporate-design-wichtig-ist.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "was-kostet-ein-imagefilm.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "webdesign-agentur-fuer-handwerker.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "webdesign-agentur-fuer-kleine-unternehmen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "webdesign-fuer-arztpraxen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "webdesign-fuer-dachdecker-firma.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "webdesign-fuer-handwerker.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "webdesign-fuer-handwerksbetriebe.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "webdesign-fuer-kleine-unternehmen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "webdesign-handwerker.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "webdesign-outsourcing-deutschland.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "webdesign.html": {
+      "h1": 1,
+      "header": 0,
+      "footer": 1
+    },
+    "website-wartung-fuer-firmen.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    },
+    "wie-wirkt-corporate-design.html": {
+      "h1": 1,
+      "header": 1,
+      "footer": 1
+    }
+  },
+  "post_counts": {
+    "blog.html": 38,
+    "schlechte-website-verbessern.html": 3
+  }
+}

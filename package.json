@@ -1,0 +1,20 @@
+{
+  "name": "creaid-media-eleventy",
+  "version": "10.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CreAid-Media V10.1 – geprüfte Eleventy-Projektkopie mit lokaler Vorschau",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "watch": "eleventy --watch",
+    "preview": "node scripts/preview.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.8"
+  },
+  "dependencies": {
+    "@fontsource/ubuntu": "5.3.0",
+    "gsap": "3.15.0"
+  }
+}

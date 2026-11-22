@@ -1,0 +1,1074 @@
+{
+  "b2b-portal-entwickeln-lassen": [
+    {
+      "source": "b2b-portal-entwickeln-lassen",
+      "target": "ki-workflows-crm",
+      "url": "/ki-workflows-crm",
+      "anchor": "CRM und Schnittstellen automatisieren",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "b2b-portal-entwickeln-lassen",
+      "target": "individuelle-webentwicklung-fuer-unternehmen",
+      "url": "/individuelle-webentwicklung-fuer-unternehmen",
+      "anchor": "Standardsoftware und individuelle Entwicklung vergleichen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "beste-landingpage-elemente-fuer-kampagnen": [
+    {
+      "source": "beste-landingpage-elemente-fuer-kampagnen",
+      "target": "google-ads-social-media",
+      "url": "/google-ads-social-media",
+      "anchor": "Google Ads und Social-Media-Kampagnen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "beste-landingpage-elemente-fuer-kampagnen",
+      "target": "google-ads-aber-keine-anfragen",
+      "url": "/google-ads-aber-keine-anfragen",
+      "anchor": "Ursachen für Google-Ads-Klicks ohne Anfragen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "corporate-design-erstellen-lassen": [
+    {
+      "source": "corporate-design-erstellen-lassen",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "anchor": "Branding und Corporate Design",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "corporate-design-erstellen-lassen",
+      "target": "warum-corporate-design-wichtig-ist",
+      "url": "/warum-corporate-design-wichtig-ist",
+      "anchor": "Wann ein einheitliches Corporate Design sinnvoll ist",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "deutschsprachige-agentur-in-der-tuerkei-finden": [
+    {
+      "source": "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "target": "ueber-uns",
+      "url": "/ueber-uns",
+      "anchor": "CreAid-Media und die Zusammenarbeit kennenlernen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "target": "webdesign-outsourcing-deutschland",
+      "url": "/webdesign-outsourcing-deutschland",
+      "anchor": "Webdesign auslagern und die Übergabe planen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "firmennamen-entwickeln-lassen": [
+    {
+      "source": "firmennamen-entwickeln-lassen",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "anchor": "Markenentwicklung bei CreAid-Media",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "firmennamen-entwickeln-lassen",
+      "target": "logo-und-slogan-entwickeln",
+      "url": "/logo-und-slogan-entwickeln",
+      "anchor": "Logo und Slogan auf den Namen abstimmen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "flyer-design-fuer-unternehmen": [
+    {
+      "source": "flyer-design-fuer-unternehmen",
+      "target": "printdesign-editorial",
+      "url": "/print-design",
+      "anchor": "Professionelles Printdesign und druckfertiger Satz",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "flyer-design-fuer-unternehmen",
+      "target": "markenauftritt-fuer-kleine-unternehmen",
+      "url": "/markenauftritt-fuer-kleine-unternehmen",
+      "anchor": "Den Markenauftritt über alle Medien abstimmen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "google-ads-aber-keine-anfragen": [
+    {
+      "source": "google-ads-aber-keine-anfragen",
+      "target": "google-ads-social-media",
+      "url": "/google-ads-social-media",
+      "anchor": "Google-Ads-Kampagnen planen und auswerten",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "google-ads-aber-keine-anfragen",
+      "target": "beste-landingpage-elemente-fuer-kampagnen",
+      "url": "/beste-landingpage-elemente-fuer-kampagnen",
+      "anchor": "Checkliste für Kampagnen-Landingpages",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "google-maps-auffindbarkeit-verbessern": [
+    {
+      "source": "google-maps-auffindbarkeit-verbessern",
+      "target": "seo-content-marketing",
+      "url": "/seo-3",
+      "anchor": "Suchmaschinenoptimierung für lokale Unternehmen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "google-maps-auffindbarkeit-verbessern",
+      "target": "seo-fuer-lokale-sichtbarkeit",
+      "url": "/seo-fuer-lokale-sichtbarkeit",
+      "anchor": "Lokale SEO auf Website und Profil abstimmen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "guenstige-webdesign-agentur-europa-finden": [
+    {
+      "source": "guenstige-webdesign-agentur-europa-finden",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign-Leistungen im Überblick",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "guenstige-webdesign-agentur-europa-finden",
+      "target": "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "url": "/deutschsprachige-agentur-in-der-tuerkei-finden",
+      "anchor": "Zusammenarbeit mit einer deutschsprachigen Agentur in der Türkei",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "individuelle-webentwicklung-fuer-unternehmen": [
+    {
+      "source": "individuelle-webentwicklung-fuer-unternehmen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign und individuelle Entwicklung",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "individuelle-webentwicklung-fuer-unternehmen",
+      "target": "b2b-portal-entwickeln-lassen",
+      "url": "/b2b-portal-entwickeln-lassen",
+      "anchor": "Anforderungen an ein B2B-Portal",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "kampagne-fuer-lokale-unternehmen": [
+    {
+      "source": "kampagne-fuer-lokale-unternehmen",
+      "target": "marketing",
+      "url": "/digitales-marketing",
+      "anchor": "Digitales Marketing für Unternehmen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "kampagne-fuer-lokale-unternehmen",
+      "target": "beste-landingpage-elemente-fuer-kampagnen",
+      "url": "/beste-landingpage-elemente-fuer-kampagnen",
+      "anchor": "Die passende Landingpage zur Kampagne planen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "logo-design-agentur": [
+    {
+      "source": "logo-design-agentur",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "anchor": "Logoentwicklung und Corporate Design",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "logo-design-agentur",
+      "target": "logo-und-slogan-entwickeln",
+      "url": "/logo-und-slogan-entwickeln",
+      "anchor": "Wie Logo und Slogan zusammen entwickelt werden",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "logo-und-slogan-entwickeln": [
+    {
+      "source": "logo-und-slogan-entwickeln",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "anchor": "Gestaltung von Logo und Markenauftritt",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "logo-und-slogan-entwickeln",
+      "target": "firmennamen-entwickeln-lassen",
+      "url": "/firmennamen-entwickeln-lassen",
+      "anchor": "Einen passenden Firmennamen entwickeln",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "markenauftritt-fuer-kleine-unternehmen": [
+    {
+      "source": "markenauftritt-fuer-kleine-unternehmen",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "anchor": "Branding und Grafikdesign für Ihren Markenauftritt",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "markenauftritt-fuer-kleine-unternehmen",
+      "target": "corporate-design-erstellen-lassen",
+      "url": "/corporate-design-erstellen-lassen",
+      "anchor": "Ablauf und Kosten eines Corporate-Design-Projekts",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "marktplatz-plattform-entwickeln": [
+    {
+      "source": "marktplatz-plattform-entwickeln",
+      "target": "onlineshops-ecommerce",
+      "url": "/online-shop-entwicklung",
+      "anchor": "E-Commerce-Lösungen im Überblick",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "marktplatz-plattform-entwickeln",
+      "target": "b2b-portal-entwickeln-lassen",
+      "url": "/b2b-portal-entwickeln-lassen",
+      "anchor": "B2B-Portal als anderes Plattformmodell prüfen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "messeauftritt-gestalten-lassen": [
+    {
+      "source": "messeauftritt-gestalten-lassen",
+      "target": "printdesign-editorial",
+      "url": "/print-design",
+      "anchor": "Printdesign für den Messeauftritt",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "messeauftritt-gestalten-lassen",
+      "target": "flyer-design-fuer-unternehmen",
+      "url": "/flyer-design-fuer-unternehmen",
+      "anchor": "Flyer für die Messe gestalten",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "onlineshop-erfolgreich-aufbauen-anleitung": [
+    {
+      "source": "onlineshop-erfolgreich-aufbauen-anleitung",
+      "target": "onlineshops-ecommerce",
+      "url": "/online-shop-entwicklung",
+      "anchor": "Leistungen für Onlineshop und E-Commerce",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "onlineshop-erfolgreich-aufbauen-anleitung",
+      "target": "shopware-vs-wordpress-shop",
+      "url": "/shopware-vs-wordpress-shop",
+      "anchor": "Shopware und WooCommerce vergleichen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "onlineshop-erstellen-lassen": [
+    {
+      "source": "onlineshop-erstellen-lassen",
+      "target": "onlineshops-ecommerce",
+      "url": "/online-shop-entwicklung",
+      "anchor": "Onlineshop erstellen lassen bei CreAid-Media",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "onlineshop-erstellen-lassen",
+      "target": "onlineshop-erfolgreich-aufbauen-anleitung",
+      "url": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "anchor": "Anleitung für den Aufbau Ihres Onlineshops",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "produktfim-erstellen-lassen": [
+    {
+      "source": "produktfim-erstellen-lassen",
+      "target": "marketing",
+      "url": "/digitales-marketing",
+      "anchor": "Digitales Marketing und passende Kanäle",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "produktfim-erstellen-lassen",
+      "target": "was-kostet-ein-imagefilm",
+      "url": "/was-kostet-ein-imagefilm",
+      "anchor": "Kostenfaktoren eines Imagefilms vergleichen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "professionelle-website-fuer-lokale-dienstleister": [
+    {
+      "source": "professionelle-website-fuer-lokale-dienstleister",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Website für Ihr Unternehmen planen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "professionelle-website-fuer-lokale-dienstleister",
+      "target": "seo-grundlagen-lokale-dienstleister",
+      "url": "/seo-grundlagen-lokale-dienstleister",
+      "anchor": "Lokale SEO als Ergänzung Ihrer Website",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "schlechte-website-verbessern": [
+    {
+      "source": "schlechte-website-verbessern",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign und Überarbeitung Ihrer Website",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "schlechte-website-verbessern",
+      "target": "warum-bringt-meine-website-keine-kunden",
+      "url": "/warum-bringt-meine-website-keine-kunden",
+      "anchor": "Fehlende Website-Anfragen zuerst eingrenzen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "seo-fuer-lokale-sichtbarkeit": [
+    {
+      "source": "seo-fuer-lokale-sichtbarkeit",
+      "target": "seo-content-marketing",
+      "url": "/seo-3",
+      "anchor": "SEO und Content-Marketing für Unternehmen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "seo-fuer-lokale-sichtbarkeit",
+      "target": "seo-grundlagen-lokale-dienstleister",
+      "url": "/seo-grundlagen-lokale-dienstleister",
+      "anchor": "Mit der Local-SEO-Checkliste für Dienstleister starten",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "seo-grundlagen-lokale-dienstleister": [
+    {
+      "source": "seo-grundlagen-lokale-dienstleister",
+      "target": "seo-content-marketing",
+      "url": "/seo-3",
+      "anchor": "SEO-Unterstützung für lokale Dienstleister",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "seo-grundlagen-lokale-dienstleister",
+      "target": "seo-fuer-lokale-sichtbarkeit",
+      "url": "/seo-fuer-lokale-sichtbarkeit",
+      "anchor": "Die lokale SEO-Strategie vertiefen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "shopware-vs-wordpress-shop": [
+    {
+      "source": "shopware-vs-wordpress-shop",
+      "target": "onlineshops-ecommerce",
+      "url": "/online-shop-entwicklung",
+      "anchor": "Shopsystem für Ihr E-Commerce-Projekt wählen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "shopware-vs-wordpress-shop",
+      "target": "onlineshop-erfolgreich-aufbauen-anleitung",
+      "url": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "anchor": "Von der Systemwahl zum Onlineshop-Start",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "social-media-betreuung-unternehmen": [
+    {
+      "source": "social-media-betreuung-unternehmen",
+      "target": "marketing",
+      "url": "/digitales-marketing",
+      "anchor": "Digitales Marketing und Social Media",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "social-media-betreuung-unternehmen",
+      "target": "kampagne-fuer-lokale-unternehmen",
+      "url": "/kampagne-fuer-lokale-unternehmen",
+      "anchor": "Social Content in lokale Kampagnen einbinden",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "warum-bringt-meine-website-keine-kunden": [
+    {
+      "source": "warum-bringt-meine-website-keine-kunden",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Website und Nutzerführung verbessern",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "warum-bringt-meine-website-keine-kunden",
+      "target": "schlechte-website-verbessern",
+      "url": "/schlechte-website-verbessern",
+      "anchor": "Sieben Maßnahmen für eine bestehende Website",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "warum-corporate-design-wichtig-ist": [
+    {
+      "source": "warum-corporate-design-wichtig-ist",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "anchor": "Corporate Design und Grafikdesign",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "warum-corporate-design-wichtig-ist",
+      "target": "wie-wirkt-corporate-design",
+      "url": "/wie-wirkt-corporate-design",
+      "anchor": "Die Wirkung eines Corporate Designs prüfen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "was-kostet-ein-imagefilm": [
+    {
+      "source": "was-kostet-ein-imagefilm",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "anchor": "Markenauftritt und visuelle Gestaltung",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "was-kostet-ein-imagefilm",
+      "target": "produktfim-erstellen-lassen",
+      "url": "/produktfim-erstellen-lassen",
+      "anchor": "Einsatz und Briefing eines Produktfilms vergleichen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-agentur-fuer-handwerker": [
+    {
+      "source": "webdesign-agentur-fuer-handwerker",
+      "target": "webdesign-handwerker",
+      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "anchor": "Webdesign für Handwerksbetriebe beauftragen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-agentur-fuer-handwerker",
+      "target": "webdesign-fuer-handwerksbetriebe",
+      "url": "/webdesign-fuer-handwerksbetriebe",
+      "anchor": "Checkliste für den Handwerker-Website-Relaunch",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-agentur-fuer-kleine-unternehmen": [
+    {
+      "source": "webdesign-agentur-fuer-kleine-unternehmen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign-Angebot für Unternehmen kennenlernen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-agentur-fuer-kleine-unternehmen",
+      "target": "webdesign-fuer-kleine-unternehmen",
+      "url": "/webdesign-fuer-kleine-unternehmen",
+      "anchor": "Inhalte und Aufbau einer KMU-Website planen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-fuer-arztpraxen": [
+    {
+      "source": "webdesign-fuer-arztpraxen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign und Nutzerführung für Unternehmen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-fuer-arztpraxen",
+      "target": "professionelle-website-fuer-lokale-dienstleister",
+      "url": "/professionelle-website-fuer-lokale-dienstleister",
+      "anchor": "Lokale Leistungsseiten sinnvoll aufbauen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-fuer-dachdecker-firma": [
+    {
+      "source": "webdesign-fuer-dachdecker-firma",
+      "target": "webdesign-handwerker",
+      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "anchor": "Webdesign für Handwerksbetriebe",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-fuer-dachdecker-firma",
+      "target": "webdesign-fuer-handwerker",
+      "url": "/webdesign-fuer-handwerker",
+      "anchor": "Inhalte für eine Handwerker-Website vorbereiten",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-fuer-handwerker": [
+    {
+      "source": "webdesign-fuer-handwerker",
+      "target": "webdesign-handwerker",
+      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "anchor": "Webdesign für Handwerker bei CreAid-Media",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-fuer-handwerker",
+      "target": "webdesign-fuer-dachdecker-firma",
+      "url": "/webdesign-fuer-dachdecker-firma",
+      "anchor": "Beispiel für eine Dachdecker-Website",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-fuer-handwerksbetriebe": [
+    {
+      "source": "webdesign-fuer-handwerksbetriebe",
+      "target": "webdesign-handwerker",
+      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "anchor": "Unterstützung beim Handwerker-Webdesign",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-fuer-handwerksbetriebe",
+      "target": "webdesign-fuer-handwerker",
+      "url": "/webdesign-fuer-handwerker",
+      "anchor": "Inhalte für Ihre Handwerker-Website sammeln",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-fuer-kleine-unternehmen": [
+    {
+      "source": "webdesign-fuer-kleine-unternehmen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign für Unternehmen bei CreAid-Media",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-fuer-kleine-unternehmen",
+      "target": "professionelle-website-fuer-lokale-dienstleister",
+      "url": "/professionelle-website-fuer-lokale-dienstleister",
+      "anchor": "Den Website-Aufbau auf lokale Dienstleistungen zuschneiden",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-outsourcing-deutschland": [
+    {
+      "source": "webdesign-outsourcing-deutschland",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign und Zusammenarbeit anfragen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-outsourcing-deutschland",
+      "target": "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "url": "/deutschsprachige-agentur-in-der-tuerkei-finden",
+      "anchor": "Deutschsprachige Agentur in der Türkei auswählen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "website-wartung-fuer-firmen": [
+    {
+      "source": "website-wartung-fuer-firmen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webentwicklung und Weiterbetreuung besprechen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "website-wartung-fuer-firmen",
+      "target": "schlechte-website-verbessern",
+      "url": "/schlechte-website-verbessern",
+      "anchor": "Bestehende Website auf Schwachstellen prüfen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "wie-wirkt-corporate-design": [
+    {
+      "source": "wie-wirkt-corporate-design",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "anchor": "Unterstützung beim Corporate Design",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "wie-wirkt-corporate-design",
+      "target": "warum-corporate-design-wichtig-ist",
+      "url": "/warum-corporate-design-wichtig-ist",
+      "anchor": "Den Nutzen eines einheitlichen Corporate Designs verstehen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "index": [
+    {
+      "source": "index",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign und Entwicklung",
+      "priority": "P1",
+      "placement": "Einführung"
+    },
+    {
+      "source": "index",
+      "target": "marketing",
+      "url": "/digitales-marketing",
+      "anchor": "Digitales Marketing",
+      "priority": "P1",
+      "placement": "Einführung"
+    },
+    {
+      "source": "index",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "anchor": "Branding und Grafikdesign",
+      "priority": "P1",
+      "placement": "Einführung"
+    },
+    {
+      "source": "index",
+      "target": "ki-automatisierung",
+      "url": "/ki-automatisierung",
+      "anchor": "KI und Automatisierung",
+      "priority": "P1",
+      "placement": "Einführung"
+    },
+    {
+      "source": "index",
+      "target": "kontakt",
+      "url": "/kontakt",
+      "anchor": "Projekt besprechen",
+      "priority": "P1",
+      "placement": "Einführung"
+    }
+  ],
+  "blog": [
+    {
+      "source": "blog",
+      "target": "webdesign-fuer-kleine-unternehmen",
+      "url": "/webdesign-fuer-kleine-unternehmen",
+      "anchor": "Webdesign-Ratgeber für kleine Unternehmen",
+      "priority": "P1",
+      "placement": "Themenwahl"
+    },
+    {
+      "source": "blog",
+      "target": "seo-fuer-lokale-sichtbarkeit",
+      "url": "/seo-fuer-lokale-sichtbarkeit",
+      "anchor": "Strategie für lokale SEO",
+      "priority": "P1",
+      "placement": "Themenwahl"
+    },
+    {
+      "source": "blog",
+      "target": "markenauftritt-fuer-kleine-unternehmen",
+      "url": "/markenauftritt-fuer-kleine-unternehmen",
+      "anchor": "Markenauftritt für kleine Unternehmen",
+      "priority": "P1",
+      "placement": "Themenwahl"
+    },
+    {
+      "source": "blog",
+      "target": "ki-automatisierung-fuer-unternehmen",
+      "url": "/ki-automatisierung-fuer-unternehmen",
+      "anchor": "Einstieg in die KI-Automatisierung",
+      "priority": "P1",
+      "placement": "Themenwahl"
+    }
+  ],
+  "leistungen": [
+    {
+      "source": "leistungen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign und Beratung",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "leistungen",
+      "target": "marketing",
+      "url": "/digitales-marketing",
+      "anchor": "Digitales Marketing",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "leistungen",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "anchor": "Branding und Grafikdesign",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "leistungen",
+      "target": "ki-automatisierung",
+      "url": "/ki-automatisierung",
+      "anchor": "KI-Automatisierung",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "webdesign-handwerker": [
+    {
+      "source": "webdesign-handwerker",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign und Entwicklung",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "webdesign-handwerker",
+      "target": "webdesign-fuer-handwerker",
+      "url": "/webdesign-fuer-handwerker",
+      "anchor": "Inhalte für Ihre Handwerker-Website planen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "webdesign-handwerker",
+      "target": "webdesign-fuer-handwerksbetriebe",
+      "url": "/webdesign-fuer-handwerksbetriebe",
+      "anchor": "Handwerker-Website mit einer Checkliste prüfen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "webdesign-handwerker",
+      "target": "webdesign-agentur-fuer-handwerker",
+      "url": "/webdesign-agentur-fuer-handwerker",
+      "anchor": "Einen Webdesign-Partner auswählen",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "onlineshops-ecommerce": [
+    {
+      "source": "onlineshops-ecommerce",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign und Webentwicklung",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "onlineshops-ecommerce",
+      "target": "onlineshop-erstellen-lassen",
+      "url": "/onlineshop-erstellen-lassen",
+      "anchor": "Onlineshop selbst bauen oder beauftragen?",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "onlineshops-ecommerce",
+      "target": "shopware-vs-wordpress-shop",
+      "url": "/shopware-vs-wordpress-shop",
+      "anchor": "Shopware und WooCommerce vergleichen",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "onlineshops-ecommerce",
+      "target": "onlineshop-erfolgreich-aufbauen-anleitung",
+      "url": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "anchor": "Anleitung für den Onlineshop-Aufbau",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "seo-content-marketing": [
+    {
+      "source": "seo-content-marketing",
+      "target": "marketing",
+      "url": "/digitales-marketing",
+      "anchor": "Digitales Marketing im Überblick",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "seo-content-marketing",
+      "target": "seo-fuer-lokale-sichtbarkeit",
+      "url": "/seo-fuer-lokale-sichtbarkeit",
+      "anchor": "Strategie für lokale Sichtbarkeit",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "seo-content-marketing",
+      "target": "seo-grundlagen-lokale-dienstleister",
+      "url": "/seo-grundlagen-lokale-dienstleister",
+      "anchor": "Local-SEO-Checkliste für Dienstleister",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "seo-content-marketing",
+      "target": "google-maps-auffindbarkeit-verbessern",
+      "url": "/google-maps-auffindbarkeit-verbessern",
+      "anchor": "Google-Unternehmensprofil verbessern",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "google-ads-social-media": [
+    {
+      "source": "google-ads-social-media",
+      "target": "marketing",
+      "url": "/digitales-marketing",
+      "anchor": "Digitales Marketing im Überblick",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "google-ads-social-media",
+      "target": "google-ads-aber-keine-anfragen",
+      "url": "/google-ads-aber-keine-anfragen",
+      "anchor": "Google Ads ohne Anfragen analysieren",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "google-ads-social-media",
+      "target": "beste-landingpage-elemente-fuer-kampagnen",
+      "url": "/beste-landingpage-elemente-fuer-kampagnen",
+      "anchor": "Landingpages für Anzeigen vorbereiten",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "printdesign-editorial": [
+    {
+      "source": "printdesign-editorial",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "anchor": "Branding und Grafikdesign im Überblick",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "printdesign-editorial",
+      "target": "flyer-design-fuer-unternehmen",
+      "url": "/flyer-design-fuer-unternehmen",
+      "anchor": "Unternehmensflyer vorbereiten",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "printdesign-editorial",
+      "target": "messeauftritt-gestalten-lassen",
+      "url": "/messeauftritt-gestalten-lassen",
+      "anchor": "Grafik und Materialien für den Messeauftritt planen",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "ki-workflows-crm": [
+    {
+      "source": "ki-workflows-crm",
+      "target": "ki-automatisierung",
+      "url": "/ki-automatisierung",
+      "anchor": "KI-Automatisierung im Überblick",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "ki-workflows-crm",
+      "target": "ki-automatisierung-fuer-unternehmen",
+      "url": "/ki-automatisierung-fuer-unternehmen",
+      "anchor": "Mit einem überschaubaren Pilot beginnen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "ki-workflows-crm",
+      "target": "b2b-portal-entwickeln-lassen",
+      "url": "/b2b-portal-entwickeln-lassen",
+      "anchor": "B2B-Portale und CRM-Schnittstellen planen",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "ki-automatisierung-fuer-unternehmen": [
+    {
+      "source": "ki-automatisierung-fuer-unternehmen",
+      "target": "ki-automatisierung",
+      "url": "/ki-automatisierung",
+      "anchor": "KI-Automatisierung für Unternehmen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "ki-automatisierung-fuer-unternehmen",
+      "target": "ki-workflows-crm",
+      "url": "/ki-workflows-crm",
+      "anchor": "Praxisbeispiele für KI-Workflows und CRM",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "ki-automatisierung-fuer-unternehmen",
+      "target": "b2b-portal-entwickeln-lassen",
+      "url": "/b2b-portal-entwickeln-lassen",
+      "anchor": "Ein B2B-Portal mit Rollen und Schnittstellen planen",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "referenzen": [
+    {
+      "source": "referenzen",
+      "target": "projekt-detail",
+      "url": "/projekt-detail",
+      "anchor": "Webdesign-Projektstudie ansehen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "referenzen",
+      "target": "printdesign-editorial",
+      "url": "/print-design",
+      "anchor": "Printdesign und Editorial kennenlernen",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "referenzen",
+      "target": "ki-workflows-crm",
+      "url": "/ki-workflows-crm",
+      "anchor": "KI-Workflows und CRM-Automatisierung",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "projekt-detail": [
+    {
+      "source": "projekt-detail",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign und Nutzerführung für Unternehmen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "projekt-detail",
+      "target": "kontakt",
+      "url": "/kontakt",
+      "anchor": "Ähnliches Projekt besprechen",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "ueber-uns": [
+    {
+      "source": "ueber-uns",
+      "target": "referenzen",
+      "url": "/referenzen",
+      "anchor": "Designstudien von CreAid-Media ansehen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "ueber-uns",
+      "target": "kontakt",
+      "url": "/kontakt",
+      "anchor": "Zusammenarbeit besprechen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "kontakt": [
+    {
+      "source": "kontakt",
+      "target": "leistungen",
+      "url": "/leistungen",
+      "anchor": "Passende Spezialleistung finden",
+      "priority": "P2",
+      "placement": "Weiterführende Links"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "CreAid-Media",
+  "tagline": "Erste Hilfe für Ihre Marke",
+  "siteUrl": "https://creaid-media.de",
+  "corporate": {
+    "font": "Ubuntu",
+    "accentFont": "Georgia",
+    "pink": "#FA225B",
+    "berry": "#B3284F",
+    "dark": "#121315"
+  },
+  "navigation": [
+    {
+      "label": "Leistungen",
+      "href": "/#kompetenzen"
+    },
+    {
+      "label": "Spezialleistungen",
+      "href": "/leistungen"
+    },
+    {
+      "label": "Referenzen",
+      "href": "/referenzen"
+    },
+    {
+      "label": "Über uns",
+      "href": "/ueber-uns"
+    },
+    {
+      "label": "Journal",
+      "href": "/creaid-blog"
+    },
+    {
+      "label": "Kontakt",
+      "href": "/kontakt"
+    }
+  ],
+  "legal": {
+    "status": "ENTWURF – vor Veröffentlichung rechtlich prüfen"
+  }
+}

@@ -1,0 +1,66 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> creaid-media-eleventy@10.1.0 build
+> eleventy
+
+[11ty] Writing ./dist/.htaccess from ./src/apache.njk
+[11ty] Writing ./dist/blog.html from ./src/pages/blog.njk
+[11ty] Writing ./dist/branding.html from ./src/pages/branding.njk
+[11ty] Writing ./dist/cookie-einstellungen.html from ./src/pages/cookie-einstellungen.njk
+[11ty] Writing ./dist/datenschutz.html from ./src/pages/datenschutz.njk
+[11ty] Writing ./dist/google-ads-social-media.html from ./src/pages/google-ads-social-media.njk
+[11ty] Writing ./dist/impressum.html from ./src/pages/impressum.njk
+[11ty] Writing ./dist/index.html from ./src/pages/index.njk
+[11ty] Writing ./dist/ki-automatisierung-fuer-unternehmen.html from ./src/pages/ki-automatisierung-fuer-unternehmen.njk
+[11ty] Writing ./dist/ki-automatisierung.html from ./src/pages/ki-automatisierung.njk
+[11ty] Writing ./dist/ki-workflows-crm.html from ./src/pages/ki-workflows-crm.njk
+[11ty] Writing ./dist/kontakt.html from ./src/pages/kontakt.njk
+[11ty] Writing ./dist/leistungen.html from ./src/pages/leistungen.njk
+[11ty] Writing ./dist/marketing.html from ./src/pages/marketing.njk
+[11ty] Writing ./dist/onlineshops-ecommerce.html from ./src/pages/onlineshops-ecommerce.njk
+[11ty] Writing ./dist/printdesign-editorial.html from ./src/pages/printdesign-editorial.njk
+[11ty] Writing ./dist/projekt-detail.html from ./src/pages/projekt-detail.njk
+[11ty] Writing ./dist/referenzen.html from ./src/pages/referenzen.njk
+[11ty] Writing ./dist/seo-content-marketing.html from ./src/pages/seo-content-marketing.njk
+[11ty] Writing ./dist/ueber-uns.html from ./src/pages/ueber-uns.njk
+[11ty] Writing ./dist/webdesign-handwerker.html from ./src/pages/webdesign-handwerker.njk
+[11ty] Writing ./dist/webdesign.html from ./src/pages/webdesign.njk
+[11ty] Writing ./dist/b2b-portal-entwickeln-lassen.html from ./src/posts/b2b-portal-entwickeln-lassen.njk
+[11ty] Writing ./dist/beste-landingpage-elemente-fuer-kampagnen.html from ./src/posts/beste-landingpage-elemente-fuer-kampagnen.njk
+[11ty] Writing ./dist/corporate-design-erstellen-lassen.html from ./src/posts/corporate-design-erstellen-lassen.njk
+[11ty] Writing ./dist/deutschsprachige-agentur-in-der-tuerkei-finden.html from ./src/posts/deutschsprachige-agentur-in-der-tuerkei-finden.njk
+[11ty] Writing ./dist/firmennamen-entwickeln-lassen.html from ./src/posts/firmennamen-entwickeln-lassen.njk
+[11ty] Writing ./dist/flyer-design-fuer-unternehmen.html from ./src/posts/flyer-design-fuer-unternehmen.njk
+[11ty] Writing ./dist/google-ads-aber-keine-anfragen.html from ./src/posts/google-ads-aber-keine-anfragen.njk
+[11ty] Writing ./dist/google-maps-auffindbarkeit-verbessern.html from ./src/posts/google-maps-auffindbarkeit-verbessern.njk
+[11ty] Writing ./dist/guenstige-webdesign-agentur-europa-finden.html from ./src/posts/guenstige-webdesign-agentur-europa-finden.njk
+[11ty] Writing ./dist/individuelle-webentwicklung-fuer-unternehmen.html from ./src/posts/individuelle-webentwicklung-fuer-unternehmen.njk
+[11ty] Writing ./dist/kampagne-fuer-lokale-unternehmen.html from ./src/posts/kampagne-fuer-lokale-unternehmen.njk
+[11ty] Writing ./dist/logo-design-agentur.html from ./src/posts/logo-design-agentur.njk
+[11ty] Writing ./dist/logo-und-slogan-entwickeln.html from ./src/posts/logo-und-slogan-entwickeln.njk
+[11ty] Writing ./dist/markenauftritt-fuer-kleine-unternehmen.html from ./src/posts/markenauftritt-fuer-kleine-unternehmen.njk
+[11ty] Writing ./dist/marktplatz-plattform-entwickeln.html from ./src/posts/marktplatz-plattform-entwickeln.njk
+[11ty] Writing ./dist/messeauftritt-gestalten-lassen.html from ./src/posts/messeauftritt-gestalten-lassen.njk
+[11ty] Writing ./dist/onlineshop-erfolgreich-aufbauen-anleitung.html from ./src/posts/onlineshop-erfolgreich-aufbauen-anleitung.njk
+[11ty] Writing ./dist/onlineshop-erstellen-lassen.html from ./src/posts/onlineshop-erstellen-lassen.njk
+[11ty] Writing ./dist/produktfim-erstellen-lassen.html from ./src/posts/produktfim-erstellen-lassen.njk
+[11ty] Writing ./dist/professionelle-website-fuer-lokale-dienstleister.html from ./src/posts/professionelle-website-fuer-lokale-dienstleister.njk
+[11ty] Writing ./dist/schlechte-website-verbessern.html from ./src/posts/schlechte-website-verbessern.njk
+[11ty] Writing ./dist/seo-fuer-lokale-sichtbarkeit.html from ./src/posts/seo-fuer-lokale-sichtbarkeit.njk
+[11ty] Writing ./dist/seo-grundlagen-lokale-dienstleister.html from ./src/posts/seo-grundlagen-lokale-dienstleister.njk
+[11ty] Writing ./dist/shopware-vs-wordpress-shop.html from ./src/posts/shopware-vs-wordpress-shop.njk
+[11ty] Writing ./dist/social-media-betreuung-unternehmen.html from ./src/posts/social-media-betreuung-unternehmen.njk
+[11ty] Writing ./dist/warum-bringt-meine-website-keine-kunden.html from ./src/posts/warum-bringt-meine-website-keine-kunden.njk
+[11ty] Writing ./dist/warum-corporate-design-wichtig-ist.html from ./src/posts/warum-corporate-design-wichtig-ist.njk
+[11ty] Writing ./dist/was-kostet-ein-imagefilm.html from ./src/posts/was-kostet-ein-imagefilm.njk
+[11ty] Writing ./dist/webdesign-agentur-fuer-handwerker.html from ./src/posts/webdesign-agentur-fuer-handwerker.njk
+[11ty] Writing ./dist/webdesign-agentur-fuer-kleine-unternehmen.html from ./src/posts/webdesign-agentur-fuer-kleine-unternehmen.njk
+[11ty] Writing ./dist/webdesign-fuer-arztpraxen.html from ./src/posts/webdesign-fuer-arztpraxen.njk
+[11ty] Writing ./dist/webdesign-fuer-dachdecker-firma.html from ./src/posts/webdesign-fuer-dachdecker-firma.njk
+[11ty] Writing ./dist/webdesign-fuer-handwerker.html from ./src/posts/webdesign-fuer-handwerker.njk
+[11ty] Writing ./dist/webdesign-fuer-handwerksbetriebe.html from ./src/posts/webdesign-fuer-handwerksbetriebe.njk
+[11ty] Writing ./dist/webdesign-fuer-kleine-unternehmen.html from ./src/posts/webdesign-fuer-kleine-unternehmen.njk
+[11ty] Writing ./dist/webdesign-outsourcing-deutschland.html from ./src/posts/webdesign-outsourcing-deutschland.njk
+[11ty] Writing ./dist/website-wartung-fuer-firmen.html from ./src/posts/website-wartung-fuer-firmen.njk
+[11ty] Writing ./dist/wie-wirkt-corporate-design.html from ./src/posts/wie-wirkt-corporate-design.njk
+[11ty] Copied 132 Wrote 60 files in 0.46 seconds (v3.1.8)

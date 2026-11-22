@@ -1,0 +1,4577 @@
+{
+  "mode": "fixed",
+  "tests": [
+    {
+      "file": "b2b-portal-entwickeln-lassen.html",
+      "path": "/b2b-portal-entwickeln-lassen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "b2b-portal-entwickeln-lassen.html",
+      "path": "/b2b-portal-entwickeln-lassen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "b2b-portal-entwickeln-lassen.html",
+      "path": "/b2b-portal-entwickeln-lassen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "b2b-portal-entwickeln-lassen.html",
+      "path": "/b2b-portal-entwickeln-lassen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "beste-landingpage-elemente-fuer-kampagnen.html",
+      "path": "/beste-landingpage-elemente-fuer-kampagnen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "beste-landingpage-elemente-fuer-kampagnen.html",
+      "path": "/beste-landingpage-elemente-fuer-kampagnen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "beste-landingpage-elemente-fuer-kampagnen.html",
+      "path": "/beste-landingpage-elemente-fuer-kampagnen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "beste-landingpage-elemente-fuer-kampagnen.html",
+      "path": "/beste-landingpage-elemente-fuer-kampagnen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "blog.html",
+      "path": "/creaid-blog",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "blog.html",
+      "path": "/creaid-blog",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "blog.html",
+      "path": "/creaid-blog",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "blog.html",
+      "path": "/creaid-blog",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "branding.html",
+      "path": "/grafikdesign-2",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "branding.html",
+      "path": "/grafikdesign-2",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "branding.html",
+      "path": "/grafikdesign-2",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "branding.html",
+      "path": "/grafikdesign-2",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "cookie-einstellungen.html",
+      "path": "/cookie-einstellungen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "cookie-einstellungen.html",
+      "path": "/cookie-einstellungen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "cookie-einstellungen.html",
+      "path": "/cookie-einstellungen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "cookie-einstellungen.html",
+      "path": "/cookie-einstellungen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "corporate-design-erstellen-lassen.html",
+      "path": "/corporate-design-erstellen-lassen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "corporate-design-erstellen-lassen.html",
+      "path": "/corporate-design-erstellen-lassen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "corporate-design-erstellen-lassen.html",
+      "path": "/corporate-design-erstellen-lassen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "corporate-design-erstellen-lassen.html",
+      "path": "/corporate-design-erstellen-lassen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "datenschutz.html",
+      "path": "/datenschutz",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "datenschutz.html",
+      "path": "/datenschutz",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "datenschutz.html",
+      "path": "/datenschutz",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "datenschutz.html",
+      "path": "/datenschutz",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "deutschsprachige-agentur-in-der-tuerkei-finden.html",
+      "path": "/deutschsprachige-agentur-in-der-tuerkei-finden",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "deutschsprachige-agentur-in-der-tuerkei-finden.html",
+      "path": "/deutschsprachige-agentur-in-der-tuerkei-finden",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "deutschsprachige-agentur-in-der-tuerkei-finden.html",
+      "path": "/deutschsprachige-agentur-in-der-tuerkei-finden",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "deutschsprachige-agentur-in-der-tuerkei-finden.html",
+      "path": "/deutschsprachige-agentur-in-der-tuerkei-finden",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "firmennamen-entwickeln-lassen.html",
+      "path": "/firmennamen-entwickeln-lassen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "firmennamen-entwickeln-lassen.html",
+      "path": "/firmennamen-entwickeln-lassen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "firmennamen-entwickeln-lassen.html",
+      "path": "/firmennamen-entwickeln-lassen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "firmennamen-entwickeln-lassen.html",
+      "path": "/firmennamen-entwickeln-lassen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "flyer-design-fuer-unternehmen.html",
+      "path": "/flyer-design-fuer-unternehmen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "flyer-design-fuer-unternehmen.html",
+      "path": "/flyer-design-fuer-unternehmen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "flyer-design-fuer-unternehmen.html",
+      "path": "/flyer-design-fuer-unternehmen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "flyer-design-fuer-unternehmen.html",
+      "path": "/flyer-design-fuer-unternehmen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-ads-aber-keine-anfragen.html",
+      "path": "/google-ads-aber-keine-anfragen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-ads-aber-keine-anfragen.html",
+      "path": "/google-ads-aber-keine-anfragen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-ads-aber-keine-anfragen.html",
+      "path": "/google-ads-aber-keine-anfragen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-ads-aber-keine-anfragen.html",
+      "path": "/google-ads-aber-keine-anfragen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-ads-social-media.html",
+      "path": "/google-ads-social-media",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-ads-social-media.html",
+      "path": "/google-ads-social-media",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-ads-social-media.html",
+      "path": "/google-ads-social-media",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-ads-social-media.html",
+      "path": "/google-ads-social-media",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-maps-auffindbarkeit-verbessern.html",
+      "path": "/google-maps-auffindbarkeit-verbessern",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-maps-auffindbarkeit-verbessern.html",
+      "path": "/google-maps-auffindbarkeit-verbessern",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-maps-auffindbarkeit-verbessern.html",
+      "path": "/google-maps-auffindbarkeit-verbessern",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "google-maps-auffindbarkeit-verbessern.html",
+      "path": "/google-maps-auffindbarkeit-verbessern",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "guenstige-webdesign-agentur-europa-finden.html",
+      "path": "/guenstige-webdesign-agentur-europa-finden",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "guenstige-webdesign-agentur-europa-finden.html",
+      "path": "/guenstige-webdesign-agentur-europa-finden",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "guenstige-webdesign-agentur-europa-finden.html",
+      "path": "/guenstige-webdesign-agentur-europa-finden",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "guenstige-webdesign-agentur-europa-finden.html",
+      "path": "/guenstige-webdesign-agentur-europa-finden",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "impressum.html",
+      "path": "/impressum",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "impressum.html",
+      "path": "/impressum",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "impressum.html",
+      "path": "/impressum",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "index.html",
+      "path": "/",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "impressum.html",
+      "path": "/impressum",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "index.html",
+      "path": "/",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "index.html",
+      "path": "/",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "index.html",
+      "path": "/",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "individuelle-webentwicklung-fuer-unternehmen.html",
+      "path": "/individuelle-webentwicklung-fuer-unternehmen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "individuelle-webentwicklung-fuer-unternehmen.html",
+      "path": "/individuelle-webentwicklung-fuer-unternehmen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "individuelle-webentwicklung-fuer-unternehmen.html",
+      "path": "/individuelle-webentwicklung-fuer-unternehmen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "individuelle-webentwicklung-fuer-unternehmen.html",
+      "path": "/individuelle-webentwicklung-fuer-unternehmen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "kampagne-fuer-lokale-unternehmen.html",
+      "path": "/kampagne-fuer-lokale-unternehmen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "kampagne-fuer-lokale-unternehmen.html",
+      "path": "/kampagne-fuer-lokale-unternehmen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "kampagne-fuer-lokale-unternehmen.html",
+      "path": "/kampagne-fuer-lokale-unternehmen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "kampagne-fuer-lokale-unternehmen.html",
+      "path": "/kampagne-fuer-lokale-unternehmen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-automatisierung-fuer-unternehmen.html",
+      "path": "/ki-automatisierung-fuer-unternehmen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-automatisierung-fuer-unternehmen.html",
+      "path": "/ki-automatisierung-fuer-unternehmen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-automatisierung-fuer-unternehmen.html",
+      "path": "/ki-automatisierung-fuer-unternehmen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-automatisierung-fuer-unternehmen.html",
+      "path": "/ki-automatisierung-fuer-unternehmen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-automatisierung.html",
+      "path": "/ki-automatisierung",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-automatisierung.html",
+      "path": "/ki-automatisierung",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-automatisierung.html",
+      "path": "/ki-automatisierung",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-workflows-crm.html",
+      "path": "/ki-workflows-crm",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-automatisierung.html",
+      "path": "/ki-automatisierung",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-workflows-crm.html",
+      "path": "/ki-workflows-crm",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-workflows-crm.html",
+      "path": "/ki-workflows-crm",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ki-workflows-crm.html",
+      "path": "/ki-workflows-crm",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "kontakt.html",
+      "path": "/kontakt",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 1,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "kontakt.html",
+      "path": "/kontakt",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 1,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "kontakt.html",
+      "path": "/kontakt",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 1,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "kontakt.html",
+      "path": "/kontakt",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 1,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "leistungen.html",
+      "path": "/leistungen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "leistungen.html",
+      "path": "/leistungen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "leistungen.html",
+      "path": "/leistungen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "leistungen.html",
+      "path": "/leistungen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "logo-design-agentur.html",
+      "path": "/logo-design-agentur",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "logo-design-agentur.html",
+      "path": "/logo-design-agentur",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "logo-design-agentur.html",
+      "path": "/logo-design-agentur",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "logo-design-agentur.html",
+      "path": "/logo-design-agentur",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "logo-und-slogan-entwickeln.html",
+      "path": "/logo-und-slogan-entwickeln",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "logo-und-slogan-entwickeln.html",
+      "path": "/logo-und-slogan-entwickeln",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "logo-und-slogan-entwickeln.html",
+      "path": "/logo-und-slogan-entwickeln",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "logo-und-slogan-entwickeln.html",
+      "path": "/logo-und-slogan-entwickeln",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "markenauftritt-fuer-kleine-unternehmen.html",
+      "path": "/markenauftritt-fuer-kleine-unternehmen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "markenauftritt-fuer-kleine-unternehmen.html",
+      "path": "/markenauftritt-fuer-kleine-unternehmen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "markenauftritt-fuer-kleine-unternehmen.html",
+      "path": "/markenauftritt-fuer-kleine-unternehmen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "markenauftritt-fuer-kleine-unternehmen.html",
+      "path": "/markenauftritt-fuer-kleine-unternehmen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "marketing.html",
+      "path": "/digitales-marketing",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "marketing.html",
+      "path": "/digitales-marketing",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "marketing.html",
+      "path": "/digitales-marketing",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "marktplatz-plattform-entwickeln.html",
+      "path": "/marktplatz-plattform-entwickeln",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "marketing.html",
+      "path": "/digitales-marketing",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "marktplatz-plattform-entwickeln.html",
+      "path": "/marktplatz-plattform-entwickeln",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "marktplatz-plattform-entwickeln.html",
+      "path": "/marktplatz-plattform-entwickeln",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "messeauftritt-gestalten-lassen.html",
+      "path": "/messeauftritt-gestalten-lassen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "marktplatz-plattform-entwickeln.html",
+      "path": "/marktplatz-plattform-entwickeln",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "messeauftritt-gestalten-lassen.html",
+      "path": "/messeauftritt-gestalten-lassen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "messeauftritt-gestalten-lassen.html",
+      "path": "/messeauftritt-gestalten-lassen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshop-erfolgreich-aufbauen-anleitung.html",
+      "path": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "messeauftritt-gestalten-lassen.html",
+      "path": "/messeauftritt-gestalten-lassen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshop-erfolgreich-aufbauen-anleitung.html",
+      "path": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshop-erfolgreich-aufbauen-anleitung.html",
+      "path": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshop-erfolgreich-aufbauen-anleitung.html",
+      "path": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshop-erstellen-lassen.html",
+      "path": "/onlineshop-erstellen-lassen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshop-erstellen-lassen.html",
+      "path": "/onlineshop-erstellen-lassen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshop-erstellen-lassen.html",
+      "path": "/onlineshop-erstellen-lassen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshop-erstellen-lassen.html",
+      "path": "/onlineshop-erstellen-lassen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshops-ecommerce.html",
+      "path": "/online-shop-entwicklung",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshops-ecommerce.html",
+      "path": "/online-shop-entwicklung",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshops-ecommerce.html",
+      "path": "/online-shop-entwicklung",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "onlineshops-ecommerce.html",
+      "path": "/online-shop-entwicklung",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "printdesign-editorial.html",
+      "path": "/print-design",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "printdesign-editorial.html",
+      "path": "/print-design",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "printdesign-editorial.html",
+      "path": "/print-design",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "printdesign-editorial.html",
+      "path": "/print-design",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "produktfim-erstellen-lassen.html",
+      "path": "/produktfim-erstellen-lassen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "produktfim-erstellen-lassen.html",
+      "path": "/produktfim-erstellen-lassen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "produktfim-erstellen-lassen.html",
+      "path": "/produktfim-erstellen-lassen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "produktfim-erstellen-lassen.html",
+      "path": "/produktfim-erstellen-lassen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "professionelle-website-fuer-lokale-dienstleister.html",
+      "path": "/professionelle-website-fuer-lokale-dienstleister",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "professionelle-website-fuer-lokale-dienstleister.html",
+      "path": "/professionelle-website-fuer-lokale-dienstleister",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "professionelle-website-fuer-lokale-dienstleister.html",
+      "path": "/professionelle-website-fuer-lokale-dienstleister",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "professionelle-website-fuer-lokale-dienstleister.html",
+      "path": "/professionelle-website-fuer-lokale-dienstleister",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "projekt-detail.html",
+      "path": "/projekt-detail",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "projekt-detail.html",
+      "path": "/projekt-detail",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "projekt-detail.html",
+      "path": "/projekt-detail",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "projekt-detail.html",
+      "path": "/projekt-detail",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "referenzen.html",
+      "path": "/referenzen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "referenzen.html",
+      "path": "/referenzen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "referenzen.html",
+      "path": "/referenzen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "referenzen.html",
+      "path": "/referenzen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "schlechte-website-verbessern.html",
+      "path": "/schlechte-website-verbessern",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "schlechte-website-verbessern.html",
+      "path": "/schlechte-website-verbessern",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "schlechte-website-verbessern.html",
+      "path": "/schlechte-website-verbessern",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "schlechte-website-verbessern.html",
+      "path": "/schlechte-website-verbessern",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-content-marketing.html",
+      "path": "/seo-3",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-content-marketing.html",
+      "path": "/seo-3",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-content-marketing.html",
+      "path": "/seo-3",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-content-marketing.html",
+      "path": "/seo-3",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-fuer-lokale-sichtbarkeit.html",
+      "path": "/seo-fuer-lokale-sichtbarkeit",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-fuer-lokale-sichtbarkeit.html",
+      "path": "/seo-fuer-lokale-sichtbarkeit",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-fuer-lokale-sichtbarkeit.html",
+      "path": "/seo-fuer-lokale-sichtbarkeit",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-fuer-lokale-sichtbarkeit.html",
+      "path": "/seo-fuer-lokale-sichtbarkeit",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-grundlagen-lokale-dienstleister.html",
+      "path": "/seo-grundlagen-lokale-dienstleister",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-grundlagen-lokale-dienstleister.html",
+      "path": "/seo-grundlagen-lokale-dienstleister",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-grundlagen-lokale-dienstleister.html",
+      "path": "/seo-grundlagen-lokale-dienstleister",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "seo-grundlagen-lokale-dienstleister.html",
+      "path": "/seo-grundlagen-lokale-dienstleister",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "shopware-vs-wordpress-shop.html",
+      "path": "/shopware-vs-wordpress-shop",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "shopware-vs-wordpress-shop.html",
+      "path": "/shopware-vs-wordpress-shop",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "shopware-vs-wordpress-shop.html",
+      "path": "/shopware-vs-wordpress-shop",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "shopware-vs-wordpress-shop.html",
+      "path": "/shopware-vs-wordpress-shop",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "social-media-betreuung-unternehmen.html",
+      "path": "/social-media-betreuung-unternehmen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "social-media-betreuung-unternehmen.html",
+      "path": "/social-media-betreuung-unternehmen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "social-media-betreuung-unternehmen.html",
+      "path": "/social-media-betreuung-unternehmen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "social-media-betreuung-unternehmen.html",
+      "path": "/social-media-betreuung-unternehmen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ueber-uns.html",
+      "path": "/ueber-uns",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ueber-uns.html",
+      "path": "/ueber-uns",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ueber-uns.html",
+      "path": "/ueber-uns",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "ueber-uns.html",
+      "path": "/ueber-uns",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "warum-bringt-meine-website-keine-kunden.html",
+      "path": "/warum-bringt-meine-website-keine-kunden",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "warum-bringt-meine-website-keine-kunden.html",
+      "path": "/warum-bringt-meine-website-keine-kunden",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "warum-bringt-meine-website-keine-kunden.html",
+      "path": "/warum-bringt-meine-website-keine-kunden",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "warum-bringt-meine-website-keine-kunden.html",
+      "path": "/warum-bringt-meine-website-keine-kunden",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "warum-corporate-design-wichtig-ist.html",
+      "path": "/warum-corporate-design-wichtig-ist",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "warum-corporate-design-wichtig-ist.html",
+      "path": "/warum-corporate-design-wichtig-ist",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "warum-corporate-design-wichtig-ist.html",
+      "path": "/warum-corporate-design-wichtig-ist",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "warum-corporate-design-wichtig-ist.html",
+      "path": "/warum-corporate-design-wichtig-ist",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "was-kostet-ein-imagefilm.html",
+      "path": "/was-kostet-ein-imagefilm",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "was-kostet-ein-imagefilm.html",
+      "path": "/was-kostet-ein-imagefilm",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "was-kostet-ein-imagefilm.html",
+      "path": "/was-kostet-ein-imagefilm",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "was-kostet-ein-imagefilm.html",
+      "path": "/was-kostet-ein-imagefilm",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-agentur-fuer-handwerker.html",
+      "path": "/webdesign-agentur-fuer-handwerker",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-agentur-fuer-handwerker.html",
+      "path": "/webdesign-agentur-fuer-handwerker",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-agentur-fuer-handwerker.html",
+      "path": "/webdesign-agentur-fuer-handwerker",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-agentur-fuer-handwerker.html",
+      "path": "/webdesign-agentur-fuer-handwerker",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-agentur-fuer-kleine-unternehmen.html",
+      "path": "/webdesign-agentur-fuer-kleine-unternehmen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-agentur-fuer-kleine-unternehmen.html",
+      "path": "/webdesign-agentur-fuer-kleine-unternehmen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-agentur-fuer-kleine-unternehmen.html",
+      "path": "/webdesign-agentur-fuer-kleine-unternehmen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-agentur-fuer-kleine-unternehmen.html",
+      "path": "/webdesign-agentur-fuer-kleine-unternehmen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-arztpraxen.html",
+      "path": "/webdesign-fuer-arztpraxen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-arztpraxen.html",
+      "path": "/webdesign-fuer-arztpraxen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-arztpraxen.html",
+      "path": "/webdesign-fuer-arztpraxen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-arztpraxen.html",
+      "path": "/webdesign-fuer-arztpraxen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-dachdecker-firma.html",
+      "path": "/webdesign-fuer-dachdecker-firma",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-dachdecker-firma.html",
+      "path": "/webdesign-fuer-dachdecker-firma",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-dachdecker-firma.html",
+      "path": "/webdesign-fuer-dachdecker-firma",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-dachdecker-firma.html",
+      "path": "/webdesign-fuer-dachdecker-firma",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-handwerker.html",
+      "path": "/webdesign-fuer-handwerker",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-handwerker.html",
+      "path": "/webdesign-fuer-handwerker",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-handwerker.html",
+      "path": "/webdesign-fuer-handwerker",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-handwerker.html",
+      "path": "/webdesign-fuer-handwerker",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-handwerksbetriebe.html",
+      "path": "/webdesign-fuer-handwerksbetriebe",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-handwerksbetriebe.html",
+      "path": "/webdesign-fuer-handwerksbetriebe",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-handwerksbetriebe.html",
+      "path": "/webdesign-fuer-handwerksbetriebe",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-handwerksbetriebe.html",
+      "path": "/webdesign-fuer-handwerksbetriebe",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-kleine-unternehmen.html",
+      "path": "/webdesign-fuer-kleine-unternehmen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-kleine-unternehmen.html",
+      "path": "/webdesign-fuer-kleine-unternehmen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-kleine-unternehmen.html",
+      "path": "/webdesign-fuer-kleine-unternehmen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-fuer-kleine-unternehmen.html",
+      "path": "/webdesign-fuer-kleine-unternehmen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-handwerker.html",
+      "path": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-handwerker.html",
+      "path": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-handwerker.html",
+      "path": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-handwerker.html",
+      "path": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-outsourcing-deutschland.html",
+      "path": "/webdesign-outsourcing-deutschland",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-outsourcing-deutschland.html",
+      "path": "/webdesign-outsourcing-deutschland",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-outsourcing-deutschland.html",
+      "path": "/webdesign-outsourcing-deutschland",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign-outsourcing-deutschland.html",
+      "path": "/webdesign-outsourcing-deutschland",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign.html",
+      "path": "/webdesign",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign.html",
+      "path": "/webdesign",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign.html",
+      "path": "/webdesign",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "webdesign.html",
+      "path": "/webdesign",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "website-wartung-fuer-firmen.html",
+      "path": "/website-wartung-fuer-firmen",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "website-wartung-fuer-firmen.html",
+      "path": "/website-wartung-fuer-firmen",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "website-wartung-fuer-firmen.html",
+      "path": "/website-wartung-fuer-firmen",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "website-wartung-fuer-firmen.html",
+      "path": "/website-wartung-fuer-firmen",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "wie-wirkt-corporate-design.html",
+      "path": "/wie-wirkt-corporate-design",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "wie-wirkt-corporate-design.html",
+      "path": "/wie-wirkt-corporate-design",
+      "width": 768,
+      "height": 900,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "wie-wirkt-corporate-design.html",
+      "path": "/wie-wirkt-corporate-design",
+      "width": 375,
+      "height": 812,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "file": "wie-wirkt-corporate-design.html",
+      "path": "/wie-wirkt-corporate-design",
+      "width": 320,
+      "height": 700,
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "broken": [],
+      "ubuntu": true,
+      "brokenParagraphs": 0,
+      "articleMeta": [
+        {
+          "underTitle": true,
+          "reading": true,
+          "topics": true
+        }
+      ],
+      "errors": [],
+      "rejects": []
+    }
+  ],
+  "failures": [],
+  "interactions": [
+    {
+      "name": "Mobile Navigation index",
+      "passed": true
+    },
+    {
+      "name": "Mobile Navigation webdesign",
+      "passed": true
+    },
+    {
+      "name": "Mobile Navigation marketing",
+      "passed": true
+    },
+    {
+      "name": "Mobile Navigation branding",
+      "passed": true
+    },
+    {
+      "name": "Mobile Navigation ki-automatisierung",
+      "passed": true
+    },
+    {
+      "name": "Mobile Navigation kontakt",
+      "passed": true
+    },
+    {
+      "name": "Mobile Navigation blog",
+      "passed": true
+    },
+    {
+      "name": "Mobile Navigation webdesign-fuer-handwerker",
+      "passed": true
+    },
+    {
+      "name": "Mobile Navigation impressum",
+      "passed": true
+    },
+    {
+      "name": "Mobile Navigation ki-automatisierung-fuer-unternehmen",
+      "passed": true
+    },
+    {
+      "name": "Journal – Filter, Pagination, Suche und Fallback",
+      "passed": true
+    },
+    {
+      "name": "Artikel – mobiles Inhaltsverzeichnis, Clusterlink und Kopieren",
+      "passed": true
+    },
+    {
+      "name": "Kontakt – Vorwahl, Validierung und E-Mail-Entwurf ohne Versand",
+      "passed": true
+    },
+    {
+      "name": "Cookie-Auswahl – lokal speichern und zurücksetzen",
+      "passed": true
+    },
+    {
+      "name": "Scrollanimation index",
+      "passed": true
+    },
+    {
+      "name": "Scrollanimation webdesign",
+      "passed": true
+    },
+    {
+      "name": "Scrollanimation marketing",
+      "passed": true
+    },
+    {
+      "name": "Scrollanimation branding",
+      "passed": true
+    },
+    {
+      "name": "Scrollanimation ki-automatisierung",
+      "passed": true
+    },
+    {
+      "name": "Scrollanimation blog",
+      "passed": true
+    },
+    {
+      "name": "Scrollanimation ki-workflows-crm",
+      "passed": true
+    },
+    {
+      "name": "Scrollanimation ueber-uns",
+      "passed": true
+    },
+    {
+      "name": "Ohne JavaScript – Navigation, 38 Karten und Kontaktweg",
+      "passed": true
+    }
+  ],
+  "anomalies": []
+}

@@ -1,0 +1,404 @@
+{
+  "webdesign": {
+    "title": "Webdesign und Entwicklung für Unternehmen",
+    "intro": "Eine Unternehmenswebsite muss Leistungen verständlich machen, Vertrauen aufbauen und die Kontaktaufnahme erleichtern. Wir klären zuerst, welche Fragen Ihre Kundschaft auf der Website beantwortet haben muss und welche Inhalte Ihr Team später selbst pflegen möchte.",
+    "groups": [
+      {
+        "title": "Website und Relaunch",
+        "copy": "Für eine neue Website legen wir Seitenstruktur, Inhalte und Kontaktwege fest. Bei einem Relaunch prüfen wir zuerst, welche Seiten bereits gefunden werden und welche Adressen beim Wechsel erhalten bleiben sollten.",
+        "links": [
+          {
+            "source": "webdesign",
+            "target": "webdesign-fuer-kleine-unternehmen",
+            "url": "/webdesign-fuer-kleine-unternehmen",
+            "anchor": "Webdesign für kleine Unternehmen: Website planen",
+            "priority": "P2",
+            "placement": "Website und Relaunch"
+          },
+          {
+            "source": "webdesign",
+            "target": "schlechte-website-verbessern",
+            "url": "/schlechte-website-verbessern",
+            "anchor": "Website verbessern: 7 Schritte für bestehende Seiten",
+            "priority": "P2",
+            "placement": "Website und Relaunch"
+          }
+        ]
+      },
+      {
+        "title": "Websites für Handwerksbetriebe",
+        "copy": "Interessenten wollen wissen, welche Leistungen Sie anbieten, wo Sie arbeiten und wie sie Sie erreichen. Projektbilder und Referenzen helfen, wenn sie den jeweiligen Auftrag nachvollziehbar zeigen.",
+        "links": [
+          {
+            "source": "webdesign",
+            "target": "webdesign-handwerker",
+            "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+            "anchor": "Webdesign für Handwerksbetriebe",
+            "priority": "P1",
+            "placement": "Websites für Handwerksbetriebe"
+          },
+          {
+            "source": "webdesign",
+            "target": "webdesign-fuer-dachdecker-firma",
+            "url": "/webdesign-fuer-dachdecker-firma",
+            "anchor": "Website für Dachdecker: Leistungen, Bilder und Anfragen",
+            "priority": "P2",
+            "placement": "Websites für Handwerksbetriebe"
+          }
+        ]
+      },
+      {
+        "title": "Onlineshop, Portal oder individuelle Entwicklung",
+        "copy": "Für einen Shop klären wir Sortiment, Bestellweg und laufende Pflege. Portale und individuelle Anwendungen brauchen zusätzlich ein Bild der Rollen, Freigaben und Schnittstellen, bevor die technische Lösung feststeht.",
+        "links": [
+          {
+            "source": "webdesign",
+            "target": "onlineshops-ecommerce",
+            "url": "/online-shop-entwicklung",
+            "anchor": "Onlineshops und E-Commerce",
+            "priority": "P1",
+            "placement": "Onlineshop, Portal oder individuelle Entwicklung"
+          },
+          {
+            "source": "webdesign",
+            "target": "onlineshop-erfolgreich-aufbauen-anleitung",
+            "url": "/onlineshop-erfolgreich-aufbauen-anleitung",
+            "anchor": "Onlineshop aufbauen: Anleitung von Planung bis Start",
+            "priority": "P2",
+            "placement": "Onlineshop, Portal oder individuelle Entwicklung"
+          },
+          {
+            "source": "webdesign",
+            "target": "individuelle-webentwicklung-fuer-unternehmen",
+            "url": "/individuelle-webentwicklung-fuer-unternehmen",
+            "anchor": "Individuelle Webentwicklung: Standard oder Maßarbeit?",
+            "priority": "P2",
+            "placement": "Onlineshop, Portal oder individuelle Entwicklung"
+          }
+        ]
+      },
+      {
+        "title": "Was Sie für ein erstes Gespräch vorbereiten können",
+        "copy": "Schicken Sie uns die bisherige URL, zwei typische Kundenfragen und das wichtigste Ziel. Bei komplexeren Vorhaben helfen Beispiele für Abläufe, die sich heute nur mit mehreren Programmen oder manuellen Zwischenschritten erledigen lassen.",
+        "links": [
+          {
+            "source": "webdesign",
+            "target": "website-wartung-fuer-firmen",
+            "url": "/website-wartung-fuer-firmen",
+            "anchor": "Website-Wartung für Firmen: Aufgaben und Ablauf",
+            "priority": "P2",
+            "placement": "Was Sie für ein erstes Gespräch vorbereiten können"
+          },
+          {
+            "source": "webdesign",
+            "target": "kontakt",
+            "url": "/kontakt",
+            "anchor": "Projekt besprechen",
+            "priority": "P1",
+            "placement": "Was Sie für ein erstes Gespräch vorbereiten können"
+          }
+        ]
+      }
+    ]
+  },
+  "marketing": {
+    "title": "Digitales Marketing für Unternehmen",
+    "intro": "Die Wahl der Maßnahmen hängt davon ab, wo Ihre Kundschaft sucht und was ihr vor einer Anfrage fehlt. Wir betrachten Suchmaschinen, Anzeigen, Inhalte und Zielseiten gemeinsam, damit Sie nachvollziehen können, welche Maßnahme welche Aufgabe erfüllt.",
+    "groups": [
+      {
+        "title": "Organisch gefunden werden",
+        "copy": "SEO beginnt mit der Frage, welche Leistungen und Themen Ihre Kundschaft tatsächlich sucht. Technische Grundlagen, klare Leistungsseiten und hilfreiche Inhalte schaffen die Basis. Für lokale Unternehmen kommt ein gepflegtes Google-Unternehmensprofil hinzu.",
+        "links": [
+          {
+            "source": "marketing",
+            "target": "seo-content-marketing",
+            "url": "/seo-3",
+            "anchor": "SEO und Content-Marketing",
+            "priority": "P1",
+            "placement": "Organisch gefunden werden"
+          },
+          {
+            "source": "marketing",
+            "target": "seo-fuer-lokale-sichtbarkeit",
+            "url": "/seo-fuer-lokale-sichtbarkeit",
+            "anchor": "Lokale SEO: Strategie für mehr Sichtbarkeit vor Ort",
+            "priority": "P2",
+            "placement": "Organisch gefunden werden"
+          },
+          {
+            "source": "marketing",
+            "target": "google-maps-auffindbarkeit-verbessern",
+            "url": "/google-maps-auffindbarkeit-verbessern",
+            "anchor": "Google Maps: Auffindbarkeit für Unternehmen verbessern",
+            "priority": "P2",
+            "placement": "Organisch gefunden werden"
+          }
+        ]
+      },
+      {
+        "title": "Bezahlte Kampagnen planen",
+        "copy": "Vor dem Anzeigenstart braucht jede Kampagne ein Ziel, eine Zielgruppe und eine passende Zielseite. Zur Auswertung zählt ein sinnvoller Kontakt oder Kauf mehr als die reine Klickzahl. Welche Messung möglich ist, hängt von den eingesetzten Systemen und Freigaben ab.",
+        "links": [
+          {
+            "source": "marketing",
+            "target": "google-ads-social-media",
+            "url": "/google-ads-social-media",
+            "anchor": "Google Ads und Social-Media-Kampagnen",
+            "priority": "P1",
+            "placement": "Bezahlte Kampagnen planen"
+          },
+          {
+            "source": "marketing",
+            "target": "beste-landingpage-elemente-fuer-kampagnen",
+            "url": "/beste-landingpage-elemente-fuer-kampagnen",
+            "anchor": "Landingpage für Kampagnen: Elemente und Prüfliste",
+            "priority": "P2",
+            "placement": "Bezahlte Kampagnen planen"
+          },
+          {
+            "source": "marketing",
+            "target": "google-ads-aber-keine-anfragen",
+            "url": "/google-ads-aber-keine-anfragen",
+            "anchor": "Google Ads: Klicks, aber keine Anfragen? Ursachen prüfen",
+            "priority": "P2",
+            "placement": "Bezahlte Kampagnen planen"
+          }
+        ]
+      },
+      {
+        "title": "Social Media und redaktionelle Planung",
+        "copy": "Regelmäßige Beiträge brauchen klare Themen, Bildmaterial und Freigaben im Unternehmen. Die Planung legt fest, welche Fragen ein Beitrag beantwortet und bei welchen Themen sich eine bezahlte Kampagne ergänzend anbietet.",
+        "links": [
+          {
+            "source": "marketing",
+            "target": "social-media-betreuung-unternehmen",
+            "url": "/social-media-betreuung-unternehmen",
+            "anchor": "Social-Media-Betreuung: Leistungen und Aufwand",
+            "priority": "P2",
+            "placement": "Social Media und redaktionelle Planung"
+          },
+          {
+            "source": "marketing",
+            "target": "kampagne-fuer-lokale-unternehmen",
+            "url": "/kampagne-fuer-lokale-unternehmen",
+            "anchor": "Lokale Werbekampagne planen: Ziele, Kanäle und Messung",
+            "priority": "P2",
+            "placement": "Social Media und redaktionelle Planung"
+          }
+        ]
+      },
+      {
+        "title": "Mit einem messbaren Ziel starten",
+        "copy": "Definieren Sie eine Handlung, die für Ihr Geschäft zählt, etwa eine qualifizierte Anfrage. Dann prüfen wir vorhandene Kanäle, Inhalte und Hürden und legen gemeinsam fest, womit Sie anfangen.",
+        "links": [
+          {
+            "source": "marketing",
+            "target": "warum-bringt-meine-website-keine-kunden",
+            "url": "/warum-bringt-meine-website-keine-kunden",
+            "anchor": "Website bringt keine Anfragen: Ursachen finden",
+            "priority": "P2",
+            "placement": "Mit einem messbaren Ziel starten"
+          },
+          {
+            "source": "marketing",
+            "target": "kontakt",
+            "url": "/kontakt",
+            "anchor": "Projekt besprechen",
+            "priority": "P1",
+            "placement": "Mit einem messbaren Ziel starten"
+          }
+        ]
+      }
+    ]
+  },
+  "branding": {
+    "title": "Branding, Corporate Design und Grafikdesign",
+    "intro": "Ein erkennbarer Markenauftritt entsteht aus wiederkehrenden Entscheidungen. Wir klären, wie Ihr Unternehmen wahrgenommen werden soll, und übersetzen diese Ausrichtung in Gestaltung, die auf Website, Präsentationen und Drucksachen funktioniert.",
+    "groups": [
+      {
+        "title": "Markenauftritt und Corporate Design",
+        "copy": "Zum Corporate Design gehören abgestimmte Farben, Schriften, Bildsprache und Gestaltungsregeln. Wir legen zu Beginn fest, an welchen Anwendungen sich das System bewähren soll und welche Vorlagen Ihr Team für die tägliche Arbeit benötigt.",
+        "links": [
+          {
+            "source": "branding",
+            "target": "markenauftritt-fuer-kleine-unternehmen",
+            "url": "/markenauftritt-fuer-kleine-unternehmen",
+            "anchor": "Markenauftritt für kleine Unternehmen: Grundlagen",
+            "priority": "P2",
+            "placement": "Markenauftritt und Corporate Design"
+          },
+          {
+            "source": "branding",
+            "target": "corporate-design-erstellen-lassen",
+            "url": "/corporate-design-erstellen-lassen",
+            "anchor": "Corporate Design erstellen lassen: Ablauf und Kosten",
+            "priority": "P2",
+            "placement": "Markenauftritt und Corporate Design"
+          },
+          {
+            "source": "branding",
+            "target": "warum-corporate-design-wichtig-ist",
+            "url": "/warum-corporate-design-wichtig-ist",
+            "anchor": "Warum Corporate Design wichtig ist: Nutzen im Alltag",
+            "priority": "P2",
+            "placement": "Markenauftritt und Corporate Design"
+          }
+        ]
+      },
+      {
+        "title": "Name, Logo und Slogan",
+        "copy": "Ein Briefing hält fest, wen die Marke erreichen soll, was sie verspricht und wie sie spricht. Danach lassen sich Entwürfe sinnvoll vergleichen, etwa auf einem kleinen Bildschirm, einem Schild oder in einer Präsentation.",
+        "links": [
+          {
+            "source": "branding",
+            "target": "firmennamen-entwickeln-lassen",
+            "url": "/firmennamen-entwickeln-lassen",
+            "anchor": "Firmennamen entwickeln lassen: Vorgehen und Kriterien",
+            "priority": "P2",
+            "placement": "Name, Logo und Slogan"
+          },
+          {
+            "source": "branding",
+            "target": "logo-und-slogan-entwickeln",
+            "url": "/logo-und-slogan-entwickeln",
+            "anchor": "Logo und Slogan entwickeln: Briefing und Praxistest",
+            "priority": "P2",
+            "placement": "Name, Logo und Slogan"
+          },
+          {
+            "source": "branding",
+            "target": "logo-design-agentur",
+            "url": "/logo-design-agentur",
+            "anchor": "Logo-Design-Agentur: Auswahl, Ablauf und Leistung",
+            "priority": "P2",
+            "placement": "Name, Logo und Slogan"
+          }
+        ]
+      },
+      {
+        "title": "Print, Editorial und Messe",
+        "copy": "Für Magazine, Broschüren oder Messestandgrafik klären wir Inhalte, Format und Produktionsweg vor dem Entwurf. Das spart Korrekturen und macht die Übergabe an Redaktion, Druckerei oder Messebau planbarer.",
+        "links": [
+          {
+            "source": "branding",
+            "target": "printdesign-editorial",
+            "url": "/print-design",
+            "anchor": "Printdesign und Editorial",
+            "priority": "P1",
+            "placement": "Print, Editorial und Messe"
+          },
+          {
+            "source": "branding",
+            "target": "flyer-design-fuer-unternehmen",
+            "url": "/flyer-design-fuer-unternehmen",
+            "anchor": "Flyer-Design für Unternehmen: Aufbau und Gestaltung",
+            "priority": "P2",
+            "placement": "Print, Editorial und Messe"
+          },
+          {
+            "source": "branding",
+            "target": "messeauftritt-gestalten-lassen",
+            "url": "/messeauftritt-gestalten-lassen",
+            "anchor": "Messeauftritt gestalten lassen: Konzept und Aufwand",
+            "priority": "P2",
+            "placement": "Print, Editorial und Messe"
+          }
+        ]
+      },
+      {
+        "title": "Das Gestaltungsergebnis beurteilen",
+        "copy": "Prüfen Sie Entwürfe an konkreten Anwendungen. Wiedererkennung, Lesbarkeit und der Umgang mit typischen Formaten zeigen, welche Entscheidungen im Alltag tragen. Für ein Erstgespräch reichen vorhandene Materialien und zwei Anwendungen, die verbessert werden sollen.",
+        "links": [
+          {
+            "source": "branding",
+            "target": "wie-wirkt-corporate-design",
+            "url": "/wie-wirkt-corporate-design",
+            "anchor": "Corporate Design prüfen: Wirkung und Konsistenz",
+            "priority": "P2",
+            "placement": "Das Gestaltungsergebnis beurteilen"
+          },
+          {
+            "source": "branding",
+            "target": "referenzen",
+            "url": "/referenzen",
+            "anchor": "Designstudien im Portfolio ansehen",
+            "priority": "P1",
+            "placement": "Das Gestaltungsergebnis beurteilen"
+          },
+          {
+            "source": "branding",
+            "target": "kontakt",
+            "url": "/kontakt",
+            "anchor": "Projekt besprechen",
+            "priority": "P1",
+            "placement": "Das Gestaltungsergebnis beurteilen"
+          }
+        ]
+      }
+    ]
+  },
+  "ki-automatisierung": {
+    "title": "KI-Automatisierung und Workflows für Unternehmen",
+    "intro": "Ein guter Einstieg ist ein Ablauf, der häufig wiederkehrt und dessen Ergebnis sich prüfen lässt. Wir betrachten den Prozess, die beteiligten Systeme und die Freigabe im Team, bevor wir über KI oder regelbasierte Automatisierung entscheiden.",
+    "groups": [
+      {
+        "title": "Den passenden Prozess auswählen",
+        "copy": "Geeignet sind zum Beispiel wiederkehrende Anfragen, die sortiert werden müssen, oder Informationen, die für die weitere Bearbeitung strukturiert werden. Klären Sie, welche Eingaben vorliegen, wie oft der Vorgang auftritt und welche Ausnahmen heute Zeit kosten.",
+        "links": [
+          {
+            "source": "ki-automatisierung",
+            "target": "ki-automatisierung-fuer-unternehmen",
+            "url": "/ki-automatisierung-fuer-unternehmen",
+            "anchor": "Einstieg in KI-Automatisierung",
+            "priority": "P1",
+            "placement": "Den passenden Prozess auswählen"
+          }
+        ]
+      },
+      {
+        "title": "CRM und Schnittstellen verbinden",
+        "copy": "Für den Weg von der Anfrage zum CRM legen wir fest, welche Felder übertragen werden und wer die Übernahme prüft. Auch Dubletten, fehlende Angaben und nicht erreichbare Systeme brauchen einen definierten Ablauf.",
+        "links": [
+          {
+            "source": "ki-automatisierung",
+            "target": "ki-workflows-crm",
+            "url": "/ki-workflows-crm",
+            "anchor": "KI-Workflows und CRM-Automatisierung",
+            "priority": "P1",
+            "placement": "CRM und Schnittstellen verbinden"
+          },
+          {
+            "source": "ki-automatisierung",
+            "target": "b2b-portal-entwickeln-lassen",
+            "url": "/b2b-portal-entwickeln-lassen",
+            "anchor": "B2B-Portal entwickeln lassen: Funktionen und Aufwand",
+            "priority": "P2",
+            "placement": "CRM und Schnittstellen verbinden"
+          },
+          {
+            "source": "ki-automatisierung",
+            "target": "individuelle-webentwicklung-fuer-unternehmen",
+            "url": "/individuelle-webentwicklung-fuer-unternehmen",
+            "anchor": "Individuelle Webentwicklung: Standard oder Maßarbeit?",
+            "priority": "P2",
+            "placement": "CRM und Schnittstellen verbinden"
+          }
+        ]
+      },
+      {
+        "title": "Einen Pilot mit Freigabe aufsetzen",
+        "copy": "Starten Sie mit einem abgegrenzten Prozess und geeigneten Testfällen. Prüfen Sie Bearbeitungszeit, Fehler und manuelle Korrekturen im Vergleich zum bisherigen Ablauf. Erst mit klaren Zuständigkeiten und einem Rückfallweg lohnt sich die Ausweitung.",
+        "links": [
+          {
+            "source": "ki-automatisierung",
+            "target": "kontakt",
+            "url": "/kontakt",
+            "anchor": "Projekt besprechen",
+            "priority": "P1",
+            "placement": "Einen Pilot mit Freigabe aufsetzen"
+          }
+        ]
+      }
+    ]
+  }
+}

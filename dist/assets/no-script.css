@@ -1,0 +1,22 @@
+.j-filterbar, .j-pagination { display: none !important; }
+
+@media (max-width: 900px) {
+  #navToggle, #mobileToggle, #jToggle, #agencyMenu { display: none; }
+
+  #site-header, .navwrap, .j-header, .a-header { position: relative; top: auto; height: auto; }
+  .nav-inner, .navwrap .nav, .j-header-inner, .a-nav { height: auto; min-height: 60px; flex-wrap: wrap; }
+
+  #siteNav, #mainMenu, #jNav, #agencyLinks {
+    display: flex;
+    position: static;
+    height: auto;
+    width: 100%;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: .5rem .9rem;
+    padding: .5rem 0;
+    background: transparent;
+  }
+
+  #siteNav a, #mainMenu a, #jNav a, #agencyLinks a { border-bottom: 0; margin: 0; padding: .3rem; }
+}

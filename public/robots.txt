@@ -1,0 +1,3 @@
+# Lokale Vorschau. Die HTML-Seiten liefern noindex, nofollow.
+User-agent: *
+Disallow:

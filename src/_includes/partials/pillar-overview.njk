@@ -1,0 +1,20 @@
+{% set pillar = pillars[pageKey] %}
+<section id="im-ueberblick" class="audit-pillar" aria-labelledby="pillar-heading">
+  <div class="audit-inner">
+    <h2 id="pillar-heading">{{ pillar.title | escape }}</h2>
+    <p class="audit-lead">{{ pillar.intro | escape }}</p>
+    <div class="audit-grid">
+      {% for group in pillar.groups %}
+      <div class="audit-panel">
+        <h3>{{ group.title | escape }}</h3>
+        <p>{{ group.copy | escape }}</p>
+        <ul class="audit-links">
+          {% for link in group.links %}
+          <li><a href="{{ link.url | escape }}">{{ link.anchor | escape }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

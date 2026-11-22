@@ -1,0 +1,107 @@
+/* Content added in the existing CreAid typography and palette. */
+.audit-pillar, .audit-related {
+  background: #f7f4f2;
+  color: #121315;
+  padding: clamp(38px, 6vw, 88px) 0;
+  scroll-margin-top: 108px;
+}
+
+.audit-inner {
+  width: min(1160px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.audit-pillar h2, .audit-related h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.6rem, 4.4vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+
+.audit-lead {
+  max-width: 68ch;
+  margin: 0 0 1.8rem;
+  line-height: 1.65;
+}
+
+.audit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 1rem;
+}
+.audit-panel {
+  padding: clamp(16px, 3vw, 30px);
+  border: 1px solid #d4cbcc;
+  border-top: 2px solid #fa225b;
+  border-radius: 3px;
+}
+
+.audit-panel h3 { margin: 0 0 .65rem; line-height: 1.2; }
+.audit-panel p { margin: 0 0 .95rem; line-height: 1.6; }
+
+.audit-links {
+  margin: 0;
+  padding: 0 0 0 1.18rem;
+  list-style: disc;
+  line-height: 1.5;
+}
+.audit-links li + li { margin-top: .32em; }
+.audit-links a {
+  color: #87203c;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.audit-links a:hover { color: #420915; }
+.audit-links a:focus-visible { outline: 2px solid #87203c; outline-offset: 3px; }
+
+.audit-related-inline { padding: 0 0 2rem; background: transparent; }
+.audit-related-inline .audit-inner { width: 100%; }
+.audit-related-inline .audit-inner h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  margin: 0 0 .75rem;
+}
+.j-prose .audit-notice {
+  border-left: 3px solid #b3284f;
+  padding-left: .9rem;
+}
+.j-prose .audit-editorial-check {
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+  background: #f3e9e9;
+  border-left: 3px solid #b3284f;
+}
+.j-prose .audit-editorial-check h2 { margin-top: 0; }
+
+.j-card[hidden], .j-pagination[hidden], #agencyEnquiry[hidden] { display: none !important; }
+.j-footer-links, .a-footer nav { flex-wrap: wrap; min-width: 0; }
+
+@media (min-width: 781px) and (max-width: 1020px) {
+  .j-header .j-brand { width: 184px; }
+  .j-header .j-nav { gap: 12px; }
+}
+
+.audit-article-meta.j-article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: .9rem;
+  row-gap: .3rem;
+  padding-block: .45rem;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+/* Rendering fix (22.11.2026): the actual CreAid wordmark is 9066x1000,
+   not a square icon. Keep its proportions even if a legacy style is present. */
+.site-header .brand img,
+.navwrap .brand img,
+.a-header .a-brand img,
+.j-header .j-brand img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 9066 / 1000;
+  object-fit: contain;
+}

@@ -1,0 +1,101 @@
+/* CREAID V4 - 100svh pinned Detail & Closing; V1.1 brand typography preserved. */
+:root{--v4-ease:cubic-bezier(.22,1,.36,1)}
+/* Outer tracks provide scroll distance; only their inner stage is exactly one viewport. */
+.service-detail,.service-closing{height:310svh;min-height:0;display:block;position:relative;padding:0!important;overflow:clip;isolation:isolate}
+.service-closing{height:260svh}
+.detail-pin,.closing-pin{height:100svh;min-height:0;position:sticky;top:0;display:flex;align-items:center;overflow:clip;isolation:isolate;z-index:1}
+.detail-pin{background:var(--cream)}
+.closing-pin{background:radial-gradient(ellipse at 80% 37%,rgba(94,19,48,.15),transparent 50%),#17181a}
+.service-detail .detail-pin>.container{width:min(1480px,calc(100% - 112px));height:100%;display:flex;flex-direction:column;justify-content:center;padding:calc(var(--header-height) + 18px) 0 34px;box-sizing:border-box;gap:clamp(14px,3.5vh,32px)}
+.service-detail .detail-top{margin:0;grid-template-columns:145px minmax(0,1fr) 250px;gap:clamp(18px,2.5vw,36px);align-items:center}
+.service-detail .detail-top h2{font-size:clamp(38px,4.6vw,69px);line-height:1.04}
+.service-detail .detail-top p{margin:0}
+.service-detail .detail-grid{flex:0 0 auto}
+.service-detail .detail-card{min-height:clamp(176px,25vh,235px);padding:clamp(19px,2vw,30px);background:#f4f2ee;backface-visibility:hidden;transform-origin:50% 75%}
+.service-detail .detail-card h3{margin:clamp(20px,4vh,40px) 0 11px}
+.service-detail .detail-actions{margin:0;flex-shrink:0;min-height:28px}
+.service-detail::before{z-index:2;transform:translateY(var(--detail-drift,0px)) rotate(-12deg);will-change:transform}
+.detail-pin::after,.closing-pin::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;background:radial-gradient(370px circle at var(--mx,50%) var(--my,50%),rgba(250,34,91,.06),transparent 75%);opacity:0;transition:opacity .32s ease}
+@media(hover:hover) and (pointer:fine){.detail-pin:hover::after,.closing-pin:hover::after{opacity:1}}
+.detail-pin .container,.closing-pin .container{z-index:2}
+/* Card reveal doesn't change the DOM layout: headings remain H2/H3 and text stays indexable. */
+.service-detail .detail-card{will-change:transform,opacity}
+.service-detail .detail-card .motion-word,.service-closing .motion-word{will-change:transform,opacity}
+/* A compact chapter cue underlines that this is a scroll-controlled panel. */
+.chapter-cue{position:absolute;bottom:13px;right:max(20px,4.3vw);display:flex;align-items:center;gap:9px;color:#777278;font-size:10px;font-weight:700;letter-spacing:.15em;z-index:5;pointer-events:none}
+.chapter-cue:before{content:"";display:block;width:24px;height:1px;background:var(--pink)}
+.closing-pin .chapter-cue{color:#b0a9ae}
+/* Closing is also exactly 100svh, including its footer. */
+.service-closing .closing-pin>.container{width:min(1480px,calc(100% - 112px));height:100%;min-height:0;flex:1;display:flex;flex-direction:column;justify-content:space-between;box-sizing:border-box;padding:calc(var(--header-height) + 18px) 0 30px}
+.service-closing .service-closing-inner{flex:1;min-height:0;align-items:center;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.65fr);gap:clamp(28px,5vw,80px);padding-bottom:clamp(18px,4vh,48px)}
+.service-closing .service-closing-inner h2{font-size:clamp(49px,6.4vw,98px);line-height:.98;max-width:890px;overflow-wrap:break-word}
+.service-closing .service-closing-inner .right{align-self:center;margin:0;max-width:410px}
+.service-closing .service-closing-inner .right p{margin:0 0 25px}
+.service-closing .footer{flex-shrink:0;margin-top:0;padding-top:22px;min-height:52px}
+.service-closing::before{z-index:2}
+/* Pinned heights adapt to device viewport; don't require fixed tall min-heights. */
+@media(max-width:1080px){
+ .service-detail .detail-pin>.container,.service-closing .closing-pin>.container{width:calc(100% - 68px)}
+ .service-detail .detail-top{grid-template-columns:1fr;gap:8px}
+ .service-detail .detail-top h2{font-size:clamp(37px,5.7vw,60px)}
+ .service-detail .detail-top p{max-width:700px}
+ .service-detail .detail-card{min-height:165px}
+}
+@media(max-width:900px){
+ .service-detail .detail-pin>.container,.service-closing .closing-pin>.container{width:calc(100% - 46px)}
+ .service-detail .detail-pin>.container{gap:clamp(11px,1.5vh,22px);padding:calc(var(--header-height) + 10px) 0 32px}
+ .service-detail .detail-grid{grid-template-columns:1fr}
+ .service-detail .detail-card{min-height:0;display:grid;grid-template-columns:72px minmax(0,1fr);grid-template-rows:auto auto;align-items:start;column-gap:12px;padding:clamp(12px,1.9vh,19px) 20px}
+ .service-detail .detail-card .detail-no{grid-column:1;grid-row:1/span 2;padding-top:5px;font-size:9px}
+ .service-detail .detail-card h3{grid-column:2;grid-row:1;margin:0 0 5px;font-size:clamp(22px,3.7vw,29px)}
+ .service-detail .detail-card p{grid-column:2;grid-row:2;max-width:unset;font-size:13px;line-height:1.45}
+ .service-detail .detail-top h2{font-size:clamp(38px,6.4vw,56px)}
+ .service-detail .detail-actions{margin:0;min-height:23px}
+ .service-closing .service-closing-inner{grid-template-columns:1fr;gap:clamp(16px,3vh,32px);align-content:center;padding-bottom:18px}
+ .service-closing .service-closing-inner .right{max-width:650px}
+ .service-closing .service-closing-inner h2{font-size:clamp(46px,7vw,70px)}
+}
+@media(max-width:560px){
+ .service-detail,.service-closing{height:300svh}
+ .service-detail .detail-pin>.container,.service-closing .closing-pin>.container{width:calc(100% - 40px)}
+ .service-detail .detail-pin>.container{justify-content:center;padding:calc(var(--header-height) + 4px) 0 27px;gap:9px}
+ .service-detail .detail-top{gap:5px}
+ .service-detail .detail-kicker{font-size:9px;letter-spacing:.11em;padding:0}
+ .service-detail .detail-top h2{font-size:clamp(32px,9.1vw,42px);line-height:.99;max-width:100%}
+ .service-detail .detail-top p{font-size:12px;line-height:1.4;margin:0}
+ .service-detail .detail-grid{gap:1px}
+ .service-detail .detail-card{grid-template-columns:52px minmax(0,1fr);column-gap:9px;padding:clamp(10px,1.4vh,14px) 12px;min-height:0}
+ .service-detail .detail-card .detail-no{font-size:8px;letter-spacing:.04em}
+ .service-detail .detail-card h3{font-size:clamp(20px,5.6vw,23px);line-height:1.12;margin-bottom:3px}
+ .service-detail .detail-card p{font-size:12.2px;line-height:1.38}
+ .service-detail .detail-actions{display:flex;flex-direction:row;gap:8px;flex-wrap:wrap;align-items:center;font-size:9px;min-height:18px}
+ .service-detail .detail-actions a{font-size:9px}
+ .chapter-cue{bottom:8px;font-size:8px;gap:6px;right:20px}
+ .chapter-cue:before{width:16px}
+ .service-closing .closing-pin>.container{padding:calc(var(--header-height) + 16px) 0 27px}
+ .service-closing .service-closing-inner{align-content:center;gap:19px}
+ .service-closing .service-closing-inner h2{font-size:clamp(40px,10.5vw,57px)}
+ .service-closing .service-closing-inner .right p{font-size:14px;line-height:1.5}
+ .service-closing .footer{padding-top:14px;gap:9px;min-height:0}
+ .service-closing .footer img{width:175px}
+ .service-closing .footer small{font-size:8px}
+ .service-closing .footerlinks{gap:14px;flex-wrap:wrap}
+ .service-closing .footerlinks a{font-size:10px}
+}
+/* Very short mobile landscape: allow natural height instead of clipping essential content. */
+@media (max-height:610px) and (max-width:900px){
+ .service-detail,.service-closing{height:auto;min-height:100svh;overflow:visible}
+ .detail-pin,.closing-pin{height:auto;min-height:100svh;position:relative;top:auto;overflow:visible}
+ .service-detail .detail-pin>.container{padding-top:calc(var(--header-height) + 24px);padding-bottom:70px}
+ .service-closing .closing-pin>.container{padding-top:calc(var(--header-height) + 24px)}
+}
+@media(prefers-reduced-motion:reduce){
+ .service-detail,.service-closing{height:auto!important;min-height:100svh!important;overflow:visible!important}
+ .detail-pin,.closing-pin{position:relative!important;min-height:100svh!important;height:auto!important;overflow:visible!important}
+ .detail-card,.detail-card *,.service-closing .right,.service-closing .right *,.service-closing .micro,.service-closing h2,.service-closing h2 *,.service-closing .footer{opacity:1!important;transform:none!important}
+ .chapter-cue{display:none}
+}
+/* Unrevealed card slots blend into the stage instead of forming grey placeholders. */
+.service-detail .detail-grid{background:transparent;border-color:transparent;gap:0}
+.service-detail .detail-card{border:1px solid #d0ccc8;margin-right:-1px;background:var(--cream)}
+@media(max-width:900px){.service-detail .detail-card{margin-right:0;margin-bottom:-1px}}

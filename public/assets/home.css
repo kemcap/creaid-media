@@ -1,0 +1,11 @@
+
+/* V1.1: Kompetenzkarten sind eine eindeutige Navigation zu getrennten Leistungsseiten. */
+.capabilities a.cap{display:block;color:inherit;text-decoration:none;cursor:pointer}
+.capabilities a.cap:focus-visible{outline:3px solid var(--pink);outline-offset:-4px;z-index:3}
+.capabilities a.cap .arr,.capabilities a.cap .motif{transition:transform .32s var(--ease),opacity .3s,color .3s}
+.capabilities a.cap:hover .arr{transform:translate(5px,-5px);color:var(--pink)}
+.capabilities a.cap:hover .motif{transform:translateY(-7px);opacity:1}
+.capabilities .cap .cap-note span:first-child{color:#575258;font-weight:700;letter-spacing:.06em}
+.capability-end{font-weight:600}
+@media(prefers-reduced-motion:reduce){.capabilities a.cap .arr,.capabilities a.cap .motif{transition:none!important}}
+.skip-to-main{position:fixed;left:12px;top:-65px;z-index:200;background:var(--pink);padding:12px 18px;color:#fff}.skip-to-main:focus{top:12px}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de">
+{% set meta = pages[pageKey] %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if meta.themeColor %}<meta name="theme-color" content="{{ meta.themeColor | escape }}">{% endif %}
+  <title>{{ meta.title | escape }}</title>
+  <meta name="description" content="{{ meta.description | escape }}">
+  <meta name="robots" content="{{ meta.robots or 'noindex,nofollow,noarchive' }}">
+  <link rel="canonical" href="{{ meta.canonical | escape }}">
+  <meta property="og:site_name" content="{{ site.name | escape }}">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:type" content="{{ meta.ogType | escape }}">
+  <meta property="og:title" content="{{ meta.title | escape }}">
+  <meta property="og:description" content="{{ meta.description | escape }}">
+  <meta property="og:url" content="{{ meta.canonical | escape }}">
+  <meta property="og:image" content="{{ meta.shareImage | escape }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/fonts.css">
+  {{ meta.extraHead | safe }}
+  {% if meta.structuredData %}<script type="application/ld+json">{{ meta.structuredData | safe }}</script>{% endif %}
+  <link rel="stylesheet" href="/assets/audit.css">
+  <script defer src="/assets/audit-navigation.js"></script>
+  <noscript><link rel="stylesheet" href="/assets/no-script.css"></noscript>
+</head>
+<body{{ meta.bodyAttrs | safe }}>
+{{ content | safe }}
+</body>
+</html>

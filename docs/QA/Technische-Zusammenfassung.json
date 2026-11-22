@@ -1,0 +1,19 @@
+{
+  "HTML_Seiten": 59,
+  "Artikel": 38,
+  "geprüfte_Links_im_Hauptinhalt": 1573,
+  "offene_Fehler_im_statischen_Crawl": [],
+  "Befunde_automatisiert_V10": {
+    "Bildmaße fehlen": 59,
+    "Ziel fehlt in Projektkopie": 21,
+    "Canonical fehlt oder mehrfach": 21,
+    "Ungültiges Figure-Markup": 1
+  },
+  "Chromium_Ansichten": 236,
+  "Chromium_Funktionstests": 23,
+  "Apache": "2.4.71 · 59 kanonische 200-Routen, 127 direkte 301-Varianten, 6 Ressourcen, 3 Negativtests",
+  "Node_Vorschau": "59 kanonische 200-Routen, 127 direkte 301-Varianten, 6 Ressourcen, 3 Negativtests",
+  "Referenzstand": "22.11.2026",
+  "Artikelansichten_mit_Meta_Zeile_unter_H1": 156,
+  "Node_Build": "Node.js 24.22.3 · npm ci und nativer Eleventy-Build"
+}
