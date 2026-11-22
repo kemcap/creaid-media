@@ -1,0 +1,7 @@
+{% if service.children.length %}
+<ul class="audit-links">
+  {% for child in service.children %}
+  <li><a href="{{ routes[child] }}">{{ services[child].label | escape }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}

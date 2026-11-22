@@ -1,0 +1,11 @@
+<section class="service-faq" id="fragen" aria-labelledby="service-faq-title">
+  <div class="audit-inner">
+    <h2 id="service-faq-title">Häufige Fragen</h2>
+    {% for item in service.faqs %}
+    <details>
+      <summary>{{ item.question | escape }}</summary>
+      <p>{{ item.answer | escape }}</p>
+    </details>
+    {% endfor %}
+  </div>
+</section>

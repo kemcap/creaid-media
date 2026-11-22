@@ -1,9 +1,9 @@
 {
   "name": "creaid-media-eleventy",
-  "version": "10.1.0",
+  "version": "10.2.0",
   "private": true,
   "type": "module",
-  "description": "CreAid-Media V10.1 – geprüfte Eleventy-Projektkopie mit lokaler Vorschau",
+  "description": "CreAid-Media V10.2 – Leistungsstruktur und Journal-Kategorien mit lokaler Vorschau",
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve",

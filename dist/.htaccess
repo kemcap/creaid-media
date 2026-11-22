@@ -1,12 +1,34 @@
 # CreAid-Media · URL-Kandidat für Apache 2.4 / mod_rewrite.
-# Vorschau. WordPress-Regeln und Archiv-URLs vor einem Wechsel separat abgleichen.
+# Vorschau mit kanonischen Pfaden und Weiterleitungen für bisherige URLs.
 DirectoryIndex index.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteCond %{THE_REQUEST} \s/+addon-theme-entwicklung(?:[?\s])
+RewriteRule ^addon-theme-entwicklung$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+addon-theme-entwicklung\.html(?:[?\s])
+RewriteRule ^addon-theme-entwicklung\.html$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+addon-theme-entwicklung/(?:[?\s])
+RewriteRule ^addon-theme-entwicklung/$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+animation(?:[?\s])
+RewriteRule ^animation$ /leistungen/branding/animation-motion-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+animation\.html(?:[?\s])
+RewriteRule ^animation\.html$ /leistungen/branding/animation-motion-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+animation/(?:[?\s])
+RewriteRule ^animation/$ /leistungen/branding/animation-motion-design [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+b2b-portal-entwickeln-lassen\.html(?:[?\s])
 RewriteRule ^b2b-portal-entwickeln-lassen\.html$ /b2b-portal-entwickeln-lassen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+b2b-portal-entwickeln-lassen/(?:[?\s])
 RewriteRule ^b2b-portal-entwickeln-lassen/$ /b2b-portal-entwickeln-lassen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+b2b-portal-entwicklung(?:[?\s])
+RewriteRule ^b2b-portal-entwicklung$ /leistungen/webdesign/e-commerce/b2b-portale [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+b2b-portal-entwicklung\.html(?:[?\s])
+RewriteRule ^b2b-portal-entwicklung\.html$ /leistungen/webdesign/e-commerce/b2b-portale [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+b2b-portal-entwicklung/(?:[?\s])
+RewriteRule ^b2b-portal-entwicklung/$ /leistungen/webdesign/e-commerce/b2b-portale [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+b2b-portale(?:[?\s])
+RewriteRule ^b2b-portale$ /leistungen/webdesign/e-commerce/b2b-portale [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+b2b-portale\.html(?:[?\s])
+RewriteRule ^b2b-portale\.html$ /leistungen/webdesign/e-commerce/b2b-portale [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+beste-landingpage-elemente-fuer-kampagnen\.html(?:[?\s])
 RewriteRule ^beste-landingpage-elemente-fuer-kampagnen\.html$ /beste-landingpage-elemente-fuer-kampagnen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+beste-landingpage-elemente-fuer-kampagnen/(?:[?\s])
@@ -15,10 +37,198 @@ RewriteCond %{THE_REQUEST} \s/+blog(?:[?\s])
 RewriteRule ^blog$ /creaid-blog [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+blog\.html(?:[?\s])
 RewriteRule ^blog\.html$ /creaid-blog [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+branchen-webdesign(?:[?\s])
+RewriteRule ^branchen-webdesign$ /leistungen/webdesign/branchen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+branchen-webdesign\.html(?:[?\s])
+RewriteRule ^branchen-webdesign\.html$ /leistungen/webdesign/branchen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+branding(?:[?\s])
-RewriteRule ^branding$ /grafikdesign-2 [R=301,END,NE]
+RewriteRule ^branding$ /leistungen/branding [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+branding\.html(?:[?\s])
-RewriteRule ^branding\.html$ /grafikdesign-2 [R=301,END,NE]
+RewriteRule ^branding\.html$ /leistungen/branding [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/branding(?:[?\s])
+RewriteRule ^category/branding$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/branding\.html(?:[?\s])
+RewriteRule ^category/branding\.html$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/branding/(?:[?\s])
+RewriteRule ^category/branding/$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design(?:[?\s])
+RewriteRule ^category/corporate-design$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design\.html(?:[?\s])
+RewriteRule ^category/corporate-design\.html$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/(?:[?\s])
+RewriteRule ^category/corporate-design/$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/2(?:[?\s])
+RewriteRule ^category/corporate-design/page/2$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/2\.html(?:[?\s])
+RewriteRule ^category/corporate-design/page/2\.html$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/2/(?:[?\s])
+RewriteRule ^category/corporate-design/page/2/$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/3(?:[?\s])
+RewriteRule ^category/corporate-design/page/3$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/3\.html(?:[?\s])
+RewriteRule ^category/corporate-design/page/3\.html$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/3/(?:[?\s])
+RewriteRule ^category/corporate-design/page/3/$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/4(?:[?\s])
+RewriteRule ^category/corporate-design/page/4$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/4\.html(?:[?\s])
+RewriteRule ^category/corporate-design/page/4\.html$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/4/(?:[?\s])
+RewriteRule ^category/corporate-design/page/4/$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/5(?:[?\s])
+RewriteRule ^category/corporate-design/page/5$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/5\.html(?:[?\s])
+RewriteRule ^category/corporate-design/page/5\.html$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/corporate-design/page/5/(?:[?\s])
+RewriteRule ^category/corporate-design/page/5/$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/digitales-marketing(?:[?\s])
+RewriteRule ^category/digitales-marketing$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/digitales-marketing\.html(?:[?\s])
+RewriteRule ^category/digitales-marketing\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/digitales-marketing/(?:[?\s])
+RewriteRule ^category/digitales-marketing/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/digitales-marketing/page/2(?:[?\s])
+RewriteRule ^category/digitales-marketing/page/2$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/digitales-marketing/page/2\.html(?:[?\s])
+RewriteRule ^category/digitales-marketing/page/2\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/digitales-marketing/page/2/(?:[?\s])
+RewriteRule ^category/digitales-marketing/page/2/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/digitalisierung(?:[?\s])
+RewriteRule ^category/digitalisierung$ /journal/ki-automatisierung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/digitalisierung\.html(?:[?\s])
+RewriteRule ^category/digitalisierung\.html$ /journal/ki-automatisierung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/digitalisierung/(?:[?\s])
+RewriteRule ^category/digitalisierung/$ /journal/ki-automatisierung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/e-commerce(?:[?\s])
+RewriteRule ^category/e-commerce$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/e-commerce\.html(?:[?\s])
+RewriteRule ^category/e-commerce\.html$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/e-commerce/(?:[?\s])
+RewriteRule ^category/e-commerce/$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/google-ads(?:[?\s])
+RewriteRule ^category/google-ads$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/google-ads\.html(?:[?\s])
+RewriteRule ^category/google-ads\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/google-ads/(?:[?\s])
+RewriteRule ^category/google-ads/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk(?:[?\s])
+RewriteRule ^category/handwerk$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk\.html(?:[?\s])
+RewriteRule ^category/handwerk\.html$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/(?:[?\s])
+RewriteRule ^category/handwerk/$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/handwerk-handwerk(?:[?\s])
+RewriteRule ^category/handwerk/handwerk-handwerk$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/handwerk-handwerk\.html(?:[?\s])
+RewriteRule ^category/handwerk/handwerk-handwerk\.html$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/handwerk-handwerk/(?:[?\s])
+RewriteRule ^category/handwerk/handwerk-handwerk/$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/page/2(?:[?\s])
+RewriteRule ^category/handwerk/page/2$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/page/2\.html(?:[?\s])
+RewriteRule ^category/handwerk/page/2\.html$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/page/2/(?:[?\s])
+RewriteRule ^category/handwerk/page/2/$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/seo-handwerk(?:[?\s])
+RewriteRule ^category/handwerk/seo-handwerk$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/seo-handwerk\.html(?:[?\s])
+RewriteRule ^category/handwerk/seo-handwerk\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/seo-handwerk/(?:[?\s])
+RewriteRule ^category/handwerk/seo-handwerk/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/webdesign-handwerk(?:[?\s])
+RewriteRule ^category/handwerk/webdesign-handwerk$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/webdesign-handwerk\.html(?:[?\s])
+RewriteRule ^category/handwerk/webdesign-handwerk\.html$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/handwerk/webdesign-handwerk/(?:[?\s])
+RewriteRule ^category/handwerk/webdesign-handwerk/$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/kundengewinnung(?:[?\s])
+RewriteRule ^category/kundengewinnung$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/kundengewinnung\.html(?:[?\s])
+RewriteRule ^category/kundengewinnung\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/kundengewinnung/(?:[?\s])
+RewriteRule ^category/kundengewinnung/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/kundengewinnung/page/2(?:[?\s])
+RewriteRule ^category/kundengewinnung/page/2$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/kundengewinnung/page/2\.html(?:[?\s])
+RewriteRule ^category/kundengewinnung/page/2\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/kundengewinnung/page/2/(?:[?\s])
+RewriteRule ^category/kundengewinnung/page/2/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/lokal(?:[?\s])
+RewriteRule ^category/lokal$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/lokal\.html(?:[?\s])
+RewriteRule ^category/lokal\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/lokal/(?:[?\s])
+RewriteRule ^category/lokal/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/lokales-marketing(?:[?\s])
+RewriteRule ^category/lokales-marketing$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/lokales-marketing\.html(?:[?\s])
+RewriteRule ^category/lokales-marketing\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/lokales-marketing/(?:[?\s])
+RewriteRule ^category/lokales-marketing/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/marketing(?:[?\s])
+RewriteRule ^category/marketing$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/marketing\.html(?:[?\s])
+RewriteRule ^category/marketing\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/marketing/(?:[?\s])
+RewriteRule ^category/marketing/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/online-shop(?:[?\s])
+RewriteRule ^category/online-shop$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/online-shop\.html(?:[?\s])
+RewriteRule ^category/online-shop\.html$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/online-shop/(?:[?\s])
+RewriteRule ^category/online-shop/$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/plattform-konzeption(?:[?\s])
+RewriteRule ^category/plattform-konzeption$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/plattform-konzeption\.html(?:[?\s])
+RewriteRule ^category/plattform-konzeption\.html$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/plattform-konzeption/(?:[?\s])
+RewriteRule ^category/plattform-konzeption/$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/seo(?:[?\s])
+RewriteRule ^category/seo$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/seo\.html(?:[?\s])
+RewriteRule ^category/seo\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/seo/(?:[?\s])
+RewriteRule ^category/seo/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/suchmaschinenoptimierung(?:[?\s])
+RewriteRule ^category/suchmaschinenoptimierung$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/suchmaschinenoptimierung\.html(?:[?\s])
+RewriteRule ^category/suchmaschinenoptimierung\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/suchmaschinenoptimierung/(?:[?\s])
+RewriteRule ^category/suchmaschinenoptimierung/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/webdesign(?:[?\s])
+RewriteRule ^category/webdesign$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/webdesign-conversion(?:[?\s])
+RewriteRule ^category/webdesign-conversion$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/webdesign-conversion\.html(?:[?\s])
+RewriteRule ^category/webdesign-conversion\.html$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/webdesign-conversion/(?:[?\s])
+RewriteRule ^category/webdesign-conversion/$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/webdesign\.html(?:[?\s])
+RewriteRule ^category/webdesign\.html$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/webdesign/(?:[?\s])
+RewriteRule ^category/webdesign/$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/webdesign/page/2(?:[?\s])
+RewriteRule ^category/webdesign/page/2$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/webdesign/page/2\.html(?:[?\s])
+RewriteRule ^category/webdesign/page/2\.html$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/webdesign/page/2/(?:[?\s])
+RewriteRule ^category/webdesign/page/2/$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+cloud-hosting-3(?:[?\s])
+RewriteRule ^cloud-hosting-3$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+cloud-hosting-3\.html(?:[?\s])
+RewriteRule ^cloud-hosting-3\.html$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+cloud-hosting-3/(?:[?\s])
+RewriteRule ^cloud-hosting-3/$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+code-review(?:[?\s])
+RewriteRule ^code-review$ /leistungen/webdesign/spezialleistungen/code-review [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+code-review\.html(?:[?\s])
+RewriteRule ^code-review\.html$ /leistungen/webdesign/spezialleistungen/code-review [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+code-ueberpruefung(?:[?\s])
+RewriteRule ^code-ueberpruefung$ /leistungen/webdesign/spezialleistungen/code-review [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+code-ueberpruefung\.html(?:[?\s])
+RewriteRule ^code-ueberpruefung\.html$ /leistungen/webdesign/spezialleistungen/code-review [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+code-ueberpruefung/(?:[?\s])
+RewriteRule ^code-ueberpruefung/$ /leistungen/webdesign/spezialleistungen/code-review [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+cookie-einstellungen\.html(?:[?\s])
 RewriteRule ^cookie-einstellungen\.html$ /cookie-einstellungen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+cookie-einstellungen/(?:[?\s])
@@ -29,6 +239,22 @@ RewriteCond %{THE_REQUEST} \s/+corporate-design-erstellen-lassen/(?:[?\s])
 RewriteRule ^corporate-design-erstellen-lassen/$ /corporate-design-erstellen-lassen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+creaid-blog/(?:[?\s])
 RewriteRule ^creaid-blog/$ /creaid-blog [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+cs-cart(?:[?\s])
+RewriteRule ^cs-cart$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+cs-cart-konfiguration-einrichtung(?:[?\s])
+RewriteRule ^cs-cart-konfiguration-einrichtung$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+cs-cart-konfiguration-einrichtung\.html(?:[?\s])
+RewriteRule ^cs-cart-konfiguration-einrichtung\.html$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+cs-cart-konfiguration-einrichtung/(?:[?\s])
+RewriteRule ^cs-cart-konfiguration-einrichtung/$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+cs-cart-lizenz-reseller(?:[?\s])
+RewriteRule ^cs-cart-lizenz-reseller$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+cs-cart-lizenz-reseller\.html(?:[?\s])
+RewriteRule ^cs-cart-lizenz-reseller\.html$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+cs-cart-lizenz-reseller/(?:[?\s])
+RewriteRule ^cs-cart-lizenz-reseller/$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+cs-cart\.html(?:[?\s])
+RewriteRule ^cs-cart\.html$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+datenschutz\.html(?:[?\s])
 RewriteRule ^datenschutz\.html$ /datenschutz [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+datenschutz/(?:[?\s])
@@ -37,8 +263,18 @@ RewriteCond %{THE_REQUEST} \s/+deutschsprachige-agentur-in-der-tuerkei-finden\.h
 RewriteRule ^deutschsprachige-agentur-in-der-tuerkei-finden\.html$ /deutschsprachige-agentur-in-der-tuerkei-finden [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+deutschsprachige-agentur-in-der-tuerkei-finden/(?:[?\s])
 RewriteRule ^deutschsprachige-agentur-in-der-tuerkei-finden/$ /deutschsprachige-agentur-in-der-tuerkei-finden [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+digitales-marketing(?:[?\s])
+RewriteRule ^digitales-marketing$ /leistungen/marketing [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+digitales-marketing\.html(?:[?\s])
+RewriteRule ^digitales-marketing\.html$ /leistungen/marketing [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+digitales-marketing/(?:[?\s])
-RewriteRule ^digitales-marketing/$ /digitales-marketing [R=301,END,NE]
+RewriteRule ^digitales-marketing/$ /leistungen/marketing [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+e-commerce(?:[?\s])
+RewriteRule ^e-commerce$ /leistungen/webdesign/e-commerce [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+e-commerce\.html(?:[?\s])
+RewriteRule ^e-commerce\.html$ /leistungen/webdesign/e-commerce [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+e-commerce/(?:[?\s])
+RewriteRule ^e-commerce/$ /leistungen/webdesign/e-commerce [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+firmennamen-entwickeln-lassen\.html(?:[?\s])
 RewriteRule ^firmennamen-entwickeln-lassen\.html$ /firmennamen-entwickeln-lassen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+firmennamen-entwickeln-lassen/(?:[?\s])
@@ -51,20 +287,30 @@ RewriteCond %{THE_REQUEST} \s/+google-ads-aber-keine-anfragen\.html(?:[?\s])
 RewriteRule ^google-ads-aber-keine-anfragen\.html$ /google-ads-aber-keine-anfragen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+google-ads-aber-keine-anfragen/(?:[?\s])
 RewriteRule ^google-ads-aber-keine-anfragen/$ /google-ads-aber-keine-anfragen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+google-ads-social-media(?:[?\s])
+RewriteRule ^google-ads-social-media$ /leistungen/marketing/google-ads-social-media [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+google-ads-social-media\.html(?:[?\s])
-RewriteRule ^google-ads-social-media\.html$ /google-ads-social-media [R=301,END,NE]
+RewriteRule ^google-ads-social-media\.html$ /leistungen/marketing/google-ads-social-media [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+google-ads-social-media/(?:[?\s])
-RewriteRule ^google-ads-social-media/$ /google-ads-social-media [R=301,END,NE]
+RewriteRule ^google-ads-social-media/$ /leistungen/marketing/google-ads-social-media [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+google-maps-auffindbarkeit-verbessern\.html(?:[?\s])
 RewriteRule ^google-maps-auffindbarkeit-verbessern\.html$ /google-maps-auffindbarkeit-verbessern [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+google-maps-auffindbarkeit-verbessern/(?:[?\s])
 RewriteRule ^google-maps-auffindbarkeit-verbessern/$ /google-maps-auffindbarkeit-verbessern [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+grafikdesign-2(?:[?\s])
+RewriteRule ^grafikdesign-2$ /leistungen/branding [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+grafikdesign-2\.html(?:[?\s])
+RewriteRule ^grafikdesign-2\.html$ /leistungen/branding [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+grafikdesign-2/(?:[?\s])
-RewriteRule ^grafikdesign-2/$ /grafikdesign-2 [R=301,END,NE]
+RewriteRule ^grafikdesign-2/$ /leistungen/branding [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+guenstige-webdesign-agentur-europa-finden\.html(?:[?\s])
 RewriteRule ^guenstige-webdesign-agentur-europa-finden\.html$ /guenstige-webdesign-agentur-europa-finden [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+guenstige-webdesign-agentur-europa-finden/(?:[?\s])
 RewriteRule ^guenstige-webdesign-agentur-europa-finden/$ /guenstige-webdesign-agentur-europa-finden [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+hosting-wartung(?:[?\s])
+RewriteRule ^hosting-wartung$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+hosting-wartung\.html(?:[?\s])
+RewriteRule ^hosting-wartung\.html$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+impressum\.html(?:[?\s])
 RewriteRule ^impressum\.html$ /impressum [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+impressum/(?:[?\s])
@@ -73,34 +319,128 @@ RewriteCond %{THE_REQUEST} \s/+index(?:[?\s])
 RewriteRule ^index$ / [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s])
 RewriteRule ^index\.html$ / [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+individuelle-entwicklung(?:[?\s])
+RewriteRule ^individuelle-entwicklung$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+individuelle-entwicklung\.html(?:[?\s])
+RewriteRule ^individuelle-entwicklung\.html$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+individuelle-webentwicklung-fuer-unternehmen\.html(?:[?\s])
 RewriteRule ^individuelle-webentwicklung-fuer-unternehmen\.html$ /individuelle-webentwicklung-fuer-unternehmen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+individuelle-webentwicklung-fuer-unternehmen/(?:[?\s])
 RewriteRule ^individuelle-webentwicklung-fuer-unternehmen/$ /individuelle-webentwicklung-fuer-unternehmen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal-branding-design(?:[?\s])
+RewriteRule ^journal-branding-design$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal-branding-design\.html(?:[?\s])
+RewriteRule ^journal-branding-design\.html$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal-ki-automatisierung(?:[?\s])
+RewriteRule ^journal-ki-automatisierung$ /journal/ki-automatisierung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal-ki-automatisierung\.html(?:[?\s])
+RewriteRule ^journal-ki-automatisierung\.html$ /journal/ki-automatisierung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal-marketing-seo(?:[?\s])
+RewriteRule ^journal-marketing-seo$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal-marketing-seo\.html(?:[?\s])
+RewriteRule ^journal-marketing-seo\.html$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal-webdesign(?:[?\s])
+RewriteRule ^journal-webdesign$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal-webdesign\.html(?:[?\s])
+RewriteRule ^journal-webdesign\.html$ /journal/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal/branding-design/(?:[?\s])
+RewriteRule ^journal/branding-design/$ /journal/branding-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal/ki-automatisierung/(?:[?\s])
+RewriteRule ^journal/ki-automatisierung/$ /journal/ki-automatisierung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal/marketing-seo/(?:[?\s])
+RewriteRule ^journal/marketing-seo/$ /journal/marketing-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+journal/webdesign/(?:[?\s])
+RewriteRule ^journal/webdesign/$ /journal/webdesign [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+kampagne-fuer-lokale-unternehmen\.html(?:[?\s])
 RewriteRule ^kampagne-fuer-lokale-unternehmen\.html$ /kampagne-fuer-lokale-unternehmen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+kampagne-fuer-lokale-unternehmen/(?:[?\s])
 RewriteRule ^kampagne-fuer-lokale-unternehmen/$ /kampagne-fuer-lokale-unternehmen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+ki-automatisierung(?:[?\s])
+RewriteRule ^ki-automatisierung$ /leistungen/ki-automatisierung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+ki-automatisierung-fuer-unternehmen(?:[?\s])
+RewriteRule ^ki-automatisierung-fuer-unternehmen$ /leistungen/ki-automatisierung/pilotprojekt [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+ki-automatisierung-fuer-unternehmen\.html(?:[?\s])
-RewriteRule ^ki-automatisierung-fuer-unternehmen\.html$ /ki-automatisierung-fuer-unternehmen [R=301,END,NE]
+RewriteRule ^ki-automatisierung-fuer-unternehmen\.html$ /leistungen/ki-automatisierung/pilotprojekt [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+ki-automatisierung-fuer-unternehmen/(?:[?\s])
-RewriteRule ^ki-automatisierung-fuer-unternehmen/$ /ki-automatisierung-fuer-unternehmen [R=301,END,NE]
+RewriteRule ^ki-automatisierung-fuer-unternehmen/$ /leistungen/ki-automatisierung/pilotprojekt [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+ki-automatisierung\.html(?:[?\s])
-RewriteRule ^ki-automatisierung\.html$ /ki-automatisierung [R=301,END,NE]
+RewriteRule ^ki-automatisierung\.html$ /leistungen/ki-automatisierung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+ki-automatisierung/(?:[?\s])
-RewriteRule ^ki-automatisierung/$ /ki-automatisierung [R=301,END,NE]
+RewriteRule ^ki-automatisierung/$ /leistungen/ki-automatisierung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+ki-workflows-crm(?:[?\s])
+RewriteRule ^ki-workflows-crm$ /leistungen/ki-automatisierung/crm-workflows [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+ki-workflows-crm\.html(?:[?\s])
-RewriteRule ^ki-workflows-crm\.html$ /ki-workflows-crm [R=301,END,NE]
+RewriteRule ^ki-workflows-crm\.html$ /leistungen/ki-automatisierung/crm-workflows [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+ki-workflows-crm/(?:[?\s])
-RewriteRule ^ki-workflows-crm/$ /ki-workflows-crm [R=301,END,NE]
+RewriteRule ^ki-workflows-crm/$ /leistungen/ki-automatisierung/crm-workflows [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+kontakt\.html(?:[?\s])
 RewriteRule ^kontakt\.html$ /kontakt [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+kontakt/(?:[?\s])
 RewriteRule ^kontakt/$ /kontakt [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+kundenspezifische-entwicklung(?:[?\s])
+RewriteRule ^kundenspezifische-entwicklung$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+kundenspezifische-entwicklung\.html(?:[?\s])
+RewriteRule ^kundenspezifische-entwicklung\.html$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+kundenspezifische-entwicklung/(?:[?\s])
+RewriteRule ^kundenspezifische-entwicklung/$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+leistungen\.html(?:[?\s])
 RewriteRule ^leistungen\.html$ /leistungen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+leistungen/(?:[?\s])
 RewriteRule ^leistungen/$ /leistungen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/branding/(?:[?\s])
+RewriteRule ^leistungen/branding/$ /leistungen/branding [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/branding/animation-motion-design/(?:[?\s])
+RewriteRule ^leistungen/branding/animation-motion-design/$ /leistungen/branding/animation-motion-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/branding/printdesign-editorial/(?:[?\s])
+RewriteRule ^leistungen/branding/printdesign-editorial/$ /leistungen/branding/printdesign-editorial [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/ki-automatisierung/(?:[?\s])
+RewriteRule ^leistungen/ki-automatisierung/$ /leistungen/ki-automatisierung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/ki-automatisierung/crm-workflows/(?:[?\s])
+RewriteRule ^leistungen/ki-automatisierung/crm-workflows/$ /leistungen/ki-automatisierung/crm-workflows [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/ki-automatisierung/pilotprojekt/(?:[?\s])
+RewriteRule ^leistungen/ki-automatisierung/pilotprojekt/$ /leistungen/ki-automatisierung/pilotprojekt [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/marketing/(?:[?\s])
+RewriteRule ^leistungen/marketing/$ /leistungen/marketing [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/marketing/google-ads-social-media/(?:[?\s])
+RewriteRule ^leistungen/marketing/google-ads-social-media/$ /leistungen/marketing/google-ads-social-media [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/marketing/seo-content-marketing/(?:[?\s])
+RewriteRule ^leistungen/marketing/seo-content-marketing/$ /leistungen/marketing/seo-content-marketing [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/(?:[?\s])
+RewriteRule ^leistungen/webdesign/$ /leistungen/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/branchen/(?:[?\s])
+RewriteRule ^leistungen/webdesign/branchen/$ /leistungen/webdesign/branchen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/branchen/arztpraxen/(?:[?\s])
+RewriteRule ^leistungen/webdesign/branchen/arztpraxen/$ /leistungen/webdesign/branchen/arztpraxen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/branchen/handwerk/(?:[?\s])
+RewriteRule ^leistungen/webdesign/branchen/handwerk/$ /leistungen/webdesign/branchen/handwerk [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/branchen/immobilienmakler/(?:[?\s])
+RewriteRule ^leistungen/webdesign/branchen/immobilienmakler/$ /leistungen/webdesign/branchen/immobilienmakler [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/e-commerce/(?:[?\s])
+RewriteRule ^leistungen/webdesign/e-commerce/$ /leistungen/webdesign/e-commerce [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/e-commerce/b2b-portale/(?:[?\s])
+RewriteRule ^leistungen/webdesign/e-commerce/b2b-portale/$ /leistungen/webdesign/e-commerce/b2b-portale [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/e-commerce/cs-cart/(?:[?\s])
+RewriteRule ^leistungen/webdesign/e-commerce/cs-cart/$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/e-commerce/marktplaetze/(?:[?\s])
+RewriteRule ^leistungen/webdesign/e-commerce/marktplaetze/$ /leistungen/webdesign/e-commerce/marktplaetze [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/spezialleistungen/(?:[?\s])
+RewriteRule ^leistungen/webdesign/spezialleistungen/$ /leistungen/webdesign/spezialleistungen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/spezialleistungen/code-review/(?:[?\s])
+RewriteRule ^leistungen/webdesign/spezialleistungen/code-review/$ /leistungen/webdesign/spezialleistungen/code-review [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/spezialleistungen/hosting-wartung/(?:[?\s])
+RewriteRule ^leistungen/webdesign/spezialleistungen/hosting-wartung/$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/spezialleistungen/individuelle-entwicklung/(?:[?\s])
+RewriteRule ^leistungen/webdesign/spezialleistungen/individuelle-entwicklung/$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/spezialleistungen/performance/(?:[?\s])
+RewriteRule ^leistungen/webdesign/spezialleistungen/performance/$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/spezialleistungen/ui-ux-design/(?:[?\s])
+RewriteRule ^leistungen/webdesign/spezialleistungen/ui-ux-design/$ /leistungen/webdesign/spezialleistungen/ui-ux-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+load-testing-3(?:[?\s])
+RewriteRule ^load-testing-3$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+load-testing-3\.html(?:[?\s])
+RewriteRule ^load-testing-3\.html$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+load-testing-3/(?:[?\s])
+RewriteRule ^load-testing-3/$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+logo-design-agentur\.html(?:[?\s])
 RewriteRule ^logo-design-agentur\.html$ /logo-design-agentur [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+logo-design-agentur/(?:[?\s])
@@ -114,9 +454,19 @@ RewriteRule ^markenauftritt-fuer-kleine-unternehmen\.html$ /markenauftritt-fuer-
 RewriteCond %{THE_REQUEST} \s/+markenauftritt-fuer-kleine-unternehmen/(?:[?\s])
 RewriteRule ^markenauftritt-fuer-kleine-unternehmen/$ /markenauftritt-fuer-kleine-unternehmen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+marketing(?:[?\s])
-RewriteRule ^marketing$ /digitales-marketing [R=301,END,NE]
+RewriteRule ^marketing$ /leistungen/marketing [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+marketing\.html(?:[?\s])
-RewriteRule ^marketing\.html$ /digitales-marketing [R=301,END,NE]
+RewriteRule ^marketing\.html$ /leistungen/marketing [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+marktplaetze(?:[?\s])
+RewriteRule ^marktplaetze$ /leistungen/webdesign/e-commerce/marktplaetze [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+marktplaetze\.html(?:[?\s])
+RewriteRule ^marktplaetze\.html$ /leistungen/webdesign/e-commerce/marktplaetze [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+marktplatz-entwicklung(?:[?\s])
+RewriteRule ^marktplatz-entwicklung$ /leistungen/webdesign/e-commerce/marktplaetze [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+marktplatz-entwicklung\.html(?:[?\s])
+RewriteRule ^marktplatz-entwicklung\.html$ /leistungen/webdesign/e-commerce/marktplaetze [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+marktplatz-entwicklung/(?:[?\s])
+RewriteRule ^marktplatz-entwicklung/$ /leistungen/webdesign/e-commerce/marktplaetze [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+marktplatz-plattform-entwickeln\.html(?:[?\s])
 RewriteRule ^marktplatz-plattform-entwickeln\.html$ /marktplatz-plattform-entwickeln [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+marktplatz-plattform-entwickeln/(?:[?\s])
@@ -125,8 +475,12 @@ RewriteCond %{THE_REQUEST} \s/+messeauftritt-gestalten-lassen\.html(?:[?\s])
 RewriteRule ^messeauftritt-gestalten-lassen\.html$ /messeauftritt-gestalten-lassen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+messeauftritt-gestalten-lassen/(?:[?\s])
 RewriteRule ^messeauftritt-gestalten-lassen/$ /messeauftritt-gestalten-lassen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+online-shop-entwicklung(?:[?\s])
+RewriteRule ^online-shop-entwicklung$ /leistungen/webdesign/e-commerce [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+online-shop-entwicklung\.html(?:[?\s])
+RewriteRule ^online-shop-entwicklung\.html$ /leistungen/webdesign/e-commerce [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+online-shop-entwicklung/(?:[?\s])
-RewriteRule ^online-shop-entwicklung/$ /online-shop-entwicklung [R=301,END,NE]
+RewriteRule ^online-shop-entwicklung/$ /leistungen/webdesign/e-commerce [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+onlineshop-erfolgreich-aufbauen-anleitung\.html(?:[?\s])
 RewriteRule ^onlineshop-erfolgreich-aufbauen-anleitung\.html$ /onlineshop-erfolgreich-aufbauen-anleitung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+onlineshop-erfolgreich-aufbauen-anleitung/(?:[?\s])
@@ -136,15 +490,35 @@ RewriteRule ^onlineshop-erstellen-lassen\.html$ /onlineshop-erstellen-lassen [R=
 RewriteCond %{THE_REQUEST} \s/+onlineshop-erstellen-lassen/(?:[?\s])
 RewriteRule ^onlineshop-erstellen-lassen/$ /onlineshop-erstellen-lassen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+onlineshops-ecommerce(?:[?\s])
-RewriteRule ^onlineshops-ecommerce$ /online-shop-entwicklung [R=301,END,NE]
+RewriteRule ^onlineshops-ecommerce$ /leistungen/webdesign/e-commerce [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+onlineshops-ecommerce\.html(?:[?\s])
-RewriteRule ^onlineshops-ecommerce\.html$ /online-shop-entwicklung [R=301,END,NE]
+RewriteRule ^onlineshops-ecommerce\.html$ /leistungen/webdesign/e-commerce [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+performance(?:[?\s])
+RewriteRule ^performance$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+performance-audit-3(?:[?\s])
+RewriteRule ^performance-audit-3$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+performance-audit-3\.html(?:[?\s])
+RewriteRule ^performance-audit-3\.html$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+performance-audit-3/(?:[?\s])
+RewriteRule ^performance-audit-3/$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+performance-optimization-3(?:[?\s])
+RewriteRule ^performance-optimization-3$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+performance-optimization-3\.html(?:[?\s])
+RewriteRule ^performance-optimization-3\.html$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+performance-optimization-3/(?:[?\s])
+RewriteRule ^performance-optimization-3/$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+performance\.html(?:[?\s])
+RewriteRule ^performance\.html$ /leistungen/webdesign/spezialleistungen/performance [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+print-design(?:[?\s])
+RewriteRule ^print-design$ /leistungen/branding/printdesign-editorial [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+print-design\.html(?:[?\s])
+RewriteRule ^print-design\.html$ /leistungen/branding/printdesign-editorial [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+print-design/(?:[?\s])
-RewriteRule ^print-design/$ /print-design [R=301,END,NE]
+RewriteRule ^print-design/$ /leistungen/branding/printdesign-editorial [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+printdesign-editorial(?:[?\s])
-RewriteRule ^printdesign-editorial$ /print-design [R=301,END,NE]
+RewriteRule ^printdesign-editorial$ /leistungen/branding/printdesign-editorial [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+printdesign-editorial\.html(?:[?\s])
-RewriteRule ^printdesign-editorial\.html$ /print-design [R=301,END,NE]
+RewriteRule ^printdesign-editorial\.html$ /leistungen/branding/printdesign-editorial [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+produktfilm-erstellen-lassen(?:[?\s])
 RewriteRule ^produktfilm-erstellen-lassen$ /produktfim-erstellen-lassen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+produktfilm-erstellen-lassen\.html(?:[?\s])
@@ -169,12 +543,16 @@ RewriteCond %{THE_REQUEST} \s/+schlechte-website-verbessern\.html(?:[?\s])
 RewriteRule ^schlechte-website-verbessern\.html$ /schlechte-website-verbessern [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+schlechte-website-verbessern/(?:[?\s])
 RewriteRule ^schlechte-website-verbessern/$ /schlechte-website-verbessern [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+seo-3(?:[?\s])
+RewriteRule ^seo-3$ /leistungen/marketing/seo-content-marketing [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+seo-3\.html(?:[?\s])
+RewriteRule ^seo-3\.html$ /leistungen/marketing/seo-content-marketing [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+seo-3/(?:[?\s])
-RewriteRule ^seo-3/$ /seo-3 [R=301,END,NE]
+RewriteRule ^seo-3/$ /leistungen/marketing/seo-content-marketing [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+seo-content-marketing(?:[?\s])
-RewriteRule ^seo-content-marketing$ /seo-3 [R=301,END,NE]
+RewriteRule ^seo-content-marketing$ /leistungen/marketing/seo-content-marketing [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+seo-content-marketing\.html(?:[?\s])
-RewriteRule ^seo-content-marketing\.html$ /seo-3 [R=301,END,NE]
+RewriteRule ^seo-content-marketing\.html$ /leistungen/marketing/seo-content-marketing [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+seo-fuer-lokale-sichtbarkeit\.html(?:[?\s])
 RewriteRule ^seo-fuer-lokale-sichtbarkeit\.html$ /seo-fuer-lokale-sichtbarkeit [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+seo-fuer-lokale-sichtbarkeit/(?:[?\s])
@@ -183,6 +561,12 @@ RewriteCond %{THE_REQUEST} \s/+seo-grundlagen-lokale-dienstleister\.html(?:[?\s]
 RewriteRule ^seo-grundlagen-lokale-dienstleister\.html$ /seo-grundlagen-lokale-dienstleister [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+seo-grundlagen-lokale-dienstleister/(?:[?\s])
 RewriteRule ^seo-grundlagen-lokale-dienstleister/$ /seo-grundlagen-lokale-dienstleister [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+server-wartung(?:[?\s])
+RewriteRule ^server-wartung$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+server-wartung\.html(?:[?\s])
+RewriteRule ^server-wartung\.html$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+server-wartung/(?:[?\s])
+RewriteRule ^server-wartung/$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+shopware-vs-wordpress-shop\.html(?:[?\s])
 RewriteRule ^shopware-vs-wordpress-shop\.html$ /shopware-vs-wordpress-shop [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+shopware-vs-wordpress-shop/(?:[?\s])
@@ -191,10 +575,42 @@ RewriteCond %{THE_REQUEST} \s/+social-media-betreuung-unternehmen\.html(?:[?\s])
 RewriteRule ^social-media-betreuung-unternehmen\.html$ /social-media-betreuung-unternehmen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+social-media-betreuung-unternehmen/(?:[?\s])
 RewriteRule ^social-media-betreuung-unternehmen/$ /social-media-betreuung-unternehmen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+spezialleistungen(?:[?\s])
+RewriteRule ^spezialleistungen$ /leistungen/webdesign/spezialleistungen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+spezialleistungen\.html(?:[?\s])
+RewriteRule ^spezialleistungen\.html$ /leistungen/webdesign/spezialleistungen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+store-builder-standardlizenzen(?:[?\s])
+RewriteRule ^store-builder-standardlizenzen$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+store-builder-standardlizenzen\.html(?:[?\s])
+RewriteRule ^store-builder-standardlizenzen\.html$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+store-builder-standardlizenzen/(?:[?\s])
+RewriteRule ^store-builder-standardlizenzen/$ /leistungen/webdesign/e-commerce/cs-cart [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+systemintegration(?:[?\s])
+RewriteRule ^systemintegration$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+systemintegration\.html(?:[?\s])
+RewriteRule ^systemintegration\.html$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+systemintegration/(?:[?\s])
+RewriteRule ^systemintegration/$ /leistungen/webdesign/spezialleistungen/individuelle-entwicklung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+ueber-uns\.html(?:[?\s])
 RewriteRule ^ueber-uns\.html$ /ueber-uns [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+ueber-uns/(?:[?\s])
 RewriteRule ^ueber-uns/$ /ueber-uns [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+ui-ux(?:[?\s])
+RewriteRule ^ui-ux$ /leistungen/webdesign/spezialleistungen/ui-ux-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+ui-ux-entwicklung(?:[?\s])
+RewriteRule ^ui-ux-entwicklung$ /leistungen/webdesign/spezialleistungen/ui-ux-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+ui-ux-entwicklung\.html(?:[?\s])
+RewriteRule ^ui-ux-entwicklung\.html$ /leistungen/webdesign/spezialleistungen/ui-ux-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+ui-ux-entwicklung/(?:[?\s])
+RewriteRule ^ui-ux-entwicklung/$ /leistungen/webdesign/spezialleistungen/ui-ux-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+ui-ux\.html(?:[?\s])
+RewriteRule ^ui-ux\.html$ /leistungen/webdesign/spezialleistungen/ui-ux-design [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+upgrades-wartung(?:[?\s])
+RewriteRule ^upgrades-wartung$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+upgrades-wartung\.html(?:[?\s])
+RewriteRule ^upgrades-wartung\.html$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+upgrades-wartung/(?:[?\s])
+RewriteRule ^upgrades-wartung/$ /leistungen/webdesign/spezialleistungen/hosting-wartung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+warum-bringt-meine-website-keine-kunden\.html(?:[?\s])
 RewriteRule ^warum-bringt-meine-website-keine-kunden\.html$ /warum-bringt-meine-website-keine-kunden [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+warum-bringt-meine-website-keine-kunden/(?:[?\s])
@@ -207,6 +623,12 @@ RewriteCond %{THE_REQUEST} \s/+was-kostet-ein-imagefilm\.html(?:[?\s])
 RewriteRule ^was-kostet-ein-imagefilm\.html$ /was-kostet-ein-imagefilm [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+was-kostet-ein-imagefilm/(?:[?\s])
 RewriteRule ^was-kostet-ein-imagefilm/$ /was-kostet-ein-imagefilm [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign(?:[?\s])
+RewriteRule ^webdesign$ /leistungen/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign-aerzte(?:[?\s])
+RewriteRule ^webdesign-aerzte$ /leistungen/webdesign/branchen/arztpraxen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign-aerzte\.html(?:[?\s])
+RewriteRule ^webdesign-aerzte\.html$ /leistungen/webdesign/branchen/arztpraxen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-agentur-fuer-handwerker\.html(?:[?\s])
 RewriteRule ^webdesign-agentur-fuer-handwerker\.html$ /webdesign-agentur-fuer-handwerker [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-agentur-fuer-handwerker/(?:[?\s])
@@ -231,24 +653,44 @@ RewriteCond %{THE_REQUEST} \s/+webdesign-fuer-handwerksbetriebe\.html(?:[?\s])
 RewriteRule ^webdesign-fuer-handwerksbetriebe\.html$ /webdesign-fuer-handwerksbetriebe [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-fuer-handwerksbetriebe/(?:[?\s])
 RewriteRule ^webdesign-fuer-handwerksbetriebe/$ /webdesign-fuer-handwerksbetriebe [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign-fuer-immobilienmakler-moderne-immobilien-websites(?:[?\s])
+RewriteRule ^webdesign-fuer-immobilienmakler-moderne-immobilien-websites$ /leistungen/webdesign/branchen/immobilienmakler [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign-fuer-immobilienmakler-moderne-immobilien-websites\.html(?:[?\s])
+RewriteRule ^webdesign-fuer-immobilienmakler-moderne-immobilien-websites\.html$ /leistungen/webdesign/branchen/immobilienmakler [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign-fuer-immobilienmakler-moderne-immobilien-websites/(?:[?\s])
+RewriteRule ^webdesign-fuer-immobilienmakler-moderne-immobilien-websites/$ /leistungen/webdesign/branchen/immobilienmakler [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-fuer-kleine-unternehmen\.html(?:[?\s])
 RewriteRule ^webdesign-fuer-kleine-unternehmen\.html$ /webdesign-fuer-kleine-unternehmen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-fuer-kleine-unternehmen/(?:[?\s])
 RewriteRule ^webdesign-fuer-kleine-unternehmen/$ /webdesign-fuer-kleine-unternehmen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-handwerker(?:[?\s])
-RewriteRule ^webdesign-handwerker$ /webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen [R=301,END,NE]
+RewriteRule ^webdesign-handwerker$ /leistungen/webdesign/branchen/handwerk [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-handwerker\.html(?:[?\s])
-RewriteRule ^webdesign-handwerker\.html$ /webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen [R=301,END,NE]
+RewriteRule ^webdesign-handwerker\.html$ /leistungen/webdesign/branchen/handwerk [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign-immobilienmakler(?:[?\s])
+RewriteRule ^webdesign-immobilienmakler$ /leistungen/webdesign/branchen/immobilienmakler [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign-immobilienmakler\.html(?:[?\s])
+RewriteRule ^webdesign-immobilienmakler\.html$ /leistungen/webdesign/branchen/immobilienmakler [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-outsourcing-deutschland\.html(?:[?\s])
 RewriteRule ^webdesign-outsourcing-deutschland\.html$ /webdesign-outsourcing-deutschland [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-outsourcing-deutschland/(?:[?\s])
 RewriteRule ^webdesign-outsourcing-deutschland/$ /webdesign-outsourcing-deutschland [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign\.html(?:[?\s])
-RewriteRule ^webdesign\.html$ /webdesign [R=301,END,NE]
+RewriteRule ^webdesign\.html$ /leistungen/webdesign [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign/(?:[?\s])
-RewriteRule ^webdesign/$ /webdesign [R=301,END,NE]
+RewriteRule ^webdesign/$ /leistungen/webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign/webdesign-fuer-aerzte(?:[?\s])
+RewriteRule ^webdesign/webdesign-fuer-aerzte$ /leistungen/webdesign/branchen/arztpraxen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign/webdesign-fuer-aerzte\.html(?:[?\s])
+RewriteRule ^webdesign/webdesign-fuer-aerzte\.html$ /leistungen/webdesign/branchen/arztpraxen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign/webdesign-fuer-aerzte/(?:[?\s])
+RewriteRule ^webdesign/webdesign-fuer-aerzte/$ /leistungen/webdesign/branchen/arztpraxen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen(?:[?\s])
+RewriteRule ^webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen$ /leistungen/webdesign/branchen/handwerk [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen\.html(?:[?\s])
+RewriteRule ^webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen\.html$ /leistungen/webdesign/branchen/handwerk [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen/(?:[?\s])
-RewriteRule ^webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen/$ /webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen [R=301,END,NE]
+RewriteRule ^webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen/$ /leistungen/webdesign/branchen/handwerk [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+website-wartung-fuer-firmen\.html(?:[?\s])
 RewriteRule ^website-wartung-fuer-firmen\.html$ /website-wartung-fuer-firmen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+website-wartung-fuer-firmen/(?:[?\s])
@@ -261,7 +703,7 @@ RewriteRule ^wie-wirkt-corporate-design/$ /wie-wirkt-corporate-design [R=301,END
 RewriteRule ^b2b-portal-entwickeln-lassen$ b2b-portal-entwickeln-lassen.html [END]
 RewriteRule ^beste-landingpage-elemente-fuer-kampagnen$ beste-landingpage-elemente-fuer-kampagnen.html [END]
 RewriteRule ^creaid-blog$ blog.html [END]
-RewriteRule ^grafikdesign-2$ branding.html [END]
+RewriteRule ^leistungen/branding$ branding.html [END]
 RewriteRule ^cookie-einstellungen$ cookie-einstellungen.html [END]
 RewriteRule ^corporate-design-erstellen-lassen$ corporate-design-erstellen-lassen.html [END]
 RewriteRule ^datenschutz$ datenschutz.html [END]
@@ -269,33 +711,33 @@ RewriteRule ^deutschsprachige-agentur-in-der-tuerkei-finden$ deutschsprachige-ag
 RewriteRule ^firmennamen-entwickeln-lassen$ firmennamen-entwickeln-lassen.html [END]
 RewriteRule ^flyer-design-fuer-unternehmen$ flyer-design-fuer-unternehmen.html [END]
 RewriteRule ^google-ads-aber-keine-anfragen$ google-ads-aber-keine-anfragen.html [END]
-RewriteRule ^google-ads-social-media$ google-ads-social-media.html [END]
+RewriteRule ^leistungen/marketing/google-ads-social-media$ google-ads-social-media.html [END]
 RewriteRule ^google-maps-auffindbarkeit-verbessern$ google-maps-auffindbarkeit-verbessern.html [END]
 RewriteRule ^guenstige-webdesign-agentur-europa-finden$ guenstige-webdesign-agentur-europa-finden.html [END]
 RewriteRule ^impressum$ impressum.html [END]
 RewriteRule ^individuelle-webentwicklung-fuer-unternehmen$ individuelle-webentwicklung-fuer-unternehmen.html [END]
 RewriteRule ^kampagne-fuer-lokale-unternehmen$ kampagne-fuer-lokale-unternehmen.html [END]
-RewriteRule ^ki-automatisierung-fuer-unternehmen$ ki-automatisierung-fuer-unternehmen.html [END]
-RewriteRule ^ki-automatisierung$ ki-automatisierung.html [END]
-RewriteRule ^ki-workflows-crm$ ki-workflows-crm.html [END]
+RewriteRule ^leistungen/ki-automatisierung/pilotprojekt$ ki-automatisierung-fuer-unternehmen.html [END]
+RewriteRule ^leistungen/ki-automatisierung$ ki-automatisierung.html [END]
+RewriteRule ^leistungen/ki-automatisierung/crm-workflows$ ki-workflows-crm.html [END]
 RewriteRule ^kontakt$ kontakt.html [END]
 RewriteRule ^leistungen$ leistungen.html [END]
 RewriteRule ^logo-design-agentur$ logo-design-agentur.html [END]
 RewriteRule ^logo-und-slogan-entwickeln$ logo-und-slogan-entwickeln.html [END]
 RewriteRule ^markenauftritt-fuer-kleine-unternehmen$ markenauftritt-fuer-kleine-unternehmen.html [END]
-RewriteRule ^digitales-marketing$ marketing.html [END]
+RewriteRule ^leistungen/marketing$ marketing.html [END]
 RewriteRule ^marktplatz-plattform-entwickeln$ marktplatz-plattform-entwickeln.html [END]
 RewriteRule ^messeauftritt-gestalten-lassen$ messeauftritt-gestalten-lassen.html [END]
 RewriteRule ^onlineshop-erfolgreich-aufbauen-anleitung$ onlineshop-erfolgreich-aufbauen-anleitung.html [END]
 RewriteRule ^onlineshop-erstellen-lassen$ onlineshop-erstellen-lassen.html [END]
-RewriteRule ^online-shop-entwicklung$ onlineshops-ecommerce.html [END]
-RewriteRule ^print-design$ printdesign-editorial.html [END]
+RewriteRule ^leistungen/webdesign/e-commerce$ onlineshops-ecommerce.html [END]
+RewriteRule ^leistungen/branding/printdesign-editorial$ printdesign-editorial.html [END]
 RewriteRule ^produktfim-erstellen-lassen$ produktfim-erstellen-lassen.html [END]
 RewriteRule ^professionelle-website-fuer-lokale-dienstleister$ professionelle-website-fuer-lokale-dienstleister.html [END]
 RewriteRule ^projekt-detail$ projekt-detail.html [END]
 RewriteRule ^referenzen$ referenzen.html [END]
 RewriteRule ^schlechte-website-verbessern$ schlechte-website-verbessern.html [END]
-RewriteRule ^seo-3$ seo-content-marketing.html [END]
+RewriteRule ^leistungen/marketing/seo-content-marketing$ seo-content-marketing.html [END]
 RewriteRule ^seo-fuer-lokale-sichtbarkeit$ seo-fuer-lokale-sichtbarkeit.html [END]
 RewriteRule ^seo-grundlagen-lokale-dienstleister$ seo-grundlagen-lokale-dienstleister.html [END]
 RewriteRule ^shopware-vs-wordpress-shop$ shopware-vs-wordpress-shop.html [END]
@@ -311,10 +753,27 @@ RewriteRule ^webdesign-fuer-dachdecker-firma$ webdesign-fuer-dachdecker-firma.ht
 RewriteRule ^webdesign-fuer-handwerker$ webdesign-fuer-handwerker.html [END]
 RewriteRule ^webdesign-fuer-handwerksbetriebe$ webdesign-fuer-handwerksbetriebe.html [END]
 RewriteRule ^webdesign-fuer-kleine-unternehmen$ webdesign-fuer-kleine-unternehmen.html [END]
-RewriteRule ^webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen$ webdesign-handwerker.html [END]
+RewriteRule ^leistungen/webdesign/branchen/handwerk$ webdesign-handwerker.html [END]
 RewriteRule ^webdesign-outsourcing-deutschland$ webdesign-outsourcing-deutschland.html [END]
-RewriteRule ^webdesign$ webdesign.html [END]
+RewriteRule ^leistungen/webdesign$ webdesign.html [END]
 RewriteRule ^website-wartung-fuer-firmen$ website-wartung-fuer-firmen.html [END]
 RewriteRule ^wie-wirkt-corporate-design$ wie-wirkt-corporate-design.html [END]
+RewriteRule ^leistungen/webdesign/branchen$ branchen-webdesign.html [END]
+RewriteRule ^leistungen/webdesign/branchen/arztpraxen$ webdesign-aerzte.html [END]
+RewriteRule ^leistungen/webdesign/branchen/immobilienmakler$ webdesign-immobilienmakler.html [END]
+RewriteRule ^leistungen/webdesign/e-commerce/b2b-portale$ b2b-portale.html [END]
+RewriteRule ^leistungen/webdesign/e-commerce/marktplaetze$ marktplaetze.html [END]
+RewriteRule ^leistungen/webdesign/e-commerce/cs-cart$ cs-cart.html [END]
+RewriteRule ^leistungen/webdesign/spezialleistungen$ spezialleistungen.html [END]
+RewriteRule ^leistungen/webdesign/spezialleistungen/individuelle-entwicklung$ individuelle-entwicklung.html [END]
+RewriteRule ^leistungen/webdesign/spezialleistungen/ui-ux-design$ ui-ux.html [END]
+RewriteRule ^leistungen/webdesign/spezialleistungen/code-review$ code-review.html [END]
+RewriteRule ^leistungen/webdesign/spezialleistungen/performance$ performance.html [END]
+RewriteRule ^leistungen/webdesign/spezialleistungen/hosting-wartung$ hosting-wartung.html [END]
+RewriteRule ^leistungen/branding/animation-motion-design$ animation.html [END]
+RewriteRule ^journal/webdesign$ journal-webdesign.html [END]
+RewriteRule ^journal/marketing-seo$ journal-marketing-seo.html [END]
+RewriteRule ^journal/branding-design$ journal-branding-design.html [END]
+RewriteRule ^journal/ki-automatisierung$ journal-ki-automatisierung.html [END]
 
 </IfModule>

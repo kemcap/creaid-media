@@ -1,4 +1,12 @@
-# V10.1 – Testprotokoll
+# V10.2 – Leistungsstruktur und Journal
+
+- 76 kanonische URLs, 348 direkte 301-Weiterleitungen, sechs Ressourcen und drei Negativtests in der Node-Vorschau und auf Apache 2.4 geprüft.
+- 3.173 interne Verweise einschließlich Sprungmarken geprüft. Jede Leistungsseite ist mit ihrer übergeordneten Seite in beide Richtungen verbunden.
+- 24 Leistungsseiten mit jeweils sieben geschlossenen FAQ-Einträgen. Jede Seite hat einen eindeutigen Titel, eine eindeutige Meta-Beschreibung und eine H1.
+- 40 der 41 zuvor offenen URLs sind zugeordnet. Die bisherige Cookie-Richtlinie bleibt offen.
+- Der neue Stand wurde technisch und strukturell geprüft. Eine visuelle Kontrolle im Browser steht aus, da Chromium in der Ausführungsumgebung nicht gestartet werden konnte.
+
+## V10.1 – Testprotokoll des Ausgangsstands
 
 Stand 22.11.2026. Testbasis war die vollständig gerenderte Eleventy-Projektkopie.
 

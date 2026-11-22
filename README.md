@@ -1,6 +1,6 @@
-# CreAid-Media V10.1 – Eleventy-Projektkopie
+# CreAid-Media V10.2 – Leistungsstruktur und Journal-Kategorien
 
-Stand 22.11.2026. Das Projekt enthält 59 HTML-Seiten, davon 38 Journalartikel, sowie die fertig gebaute lokale Vorschau. Alle Seiten tragen den Indexierungsschutz der Vorschau.
+Stand 22.11.2026. Das Projekt enthält 76 HTML-Seiten, davon 24 Leistungsseiten, 38 Journalartikel und vier Journal-Kategorien. Die gebaute lokale Vorschau liegt in `dist/`. Alle Seiten tragen den Indexierungsschutz der Vorschau.
 
 ## Lokale Vorschau öffnen
 
@@ -32,7 +32,7 @@ node scripts/check-routes.mjs http://127.0.0.1:8080
 
 ## Projektaufbau
 
-- `src/pages/` enthält die 21 Seitenvorlagen, `src/posts/` die 38 Artikel.
+- `src/pages/` enthält die Seitenvorlagen, `src/posts/` die 38 Artikel. `src/_data/services.json` definiert den Leistungsbaum und die FAQs. `journalCategories.json` enthält die Journal-Kategorien und Themenlisten.
 - `src/_data/pages.json` enthält Titel, Beschreibungen, Canonicals und Social-Metadaten.
 - `src/_data/postsIndex.json`, `pillars.json` und `editorialLinks.json` pflegen Journal, Leistungsübersichten und redaktionelle Links.
 - `src/_data/routes.json` enthält die bevorzugten Adressen. Das Projekt leitet die Standardvarianten automatisch ab. Zusätzliche Aliasregeln stehen in `aliases.json`. Vorschau, Routing-Test und generierte Apache-Regeln verwenden dieselben Daten. Änderungen an Pfaden erfordern auch einen Abgleich von HTML-Verweisen, Metadaten und Sitemap-Kandidat.
@@ -42,4 +42,8 @@ node scripts/check-routes.mjs http://127.0.0.1:8080
 
 ## Status vor einer Veröffentlichungsentscheidung
 
-21 bestehende Seiten und 20 Kategoriearchive brauchen einen eigenen Inhalts- bzw. Migrationsentscheid. Die Rechtsseiten und der redaktionelle Ersatzartikel benötigen Freigabe. Das Kontaktformular öffnet einen lokalen E-Mail-Entwurf. Die dokumentierten Regeln sind für Apache 2.4 getestet. Hosting, serverseitige Zustellung und Google-Felddaten bleiben offene Produktionsaufgaben. Siehe Auditbericht und URL-Matrix.
+Die neuen Leistungs-URLs liegen unter `/leistungen/`. 20 frühere Leistungsseiten sind über direkte Weiterleitungen eingebunden. Die 20 früheren Kategoriearchive führen zu vier Journal-Kategorien. Die Artikel-URLs bleiben erhalten. Der alte Pfad `/cookie-richtlinie` bleibt bis zur Abstimmung über den Inhalt der Richtlinie offen. Rechtsseiten und der redaktionelle Ersatzartikel benötigen weiterhin Freigabe.
+
+Das Kontaktformular öffnet einen lokalen E-Mail-Entwurf. Der Build ist eine Vorschau mit `noindex`. `docs/sitemap-kandidat-nach-freigabe.xml` enthält den aktualisierten Sitemap-Kandidaten für die Veröffentlichung.
+
+Für die IONOS-Vorschau wird der Inhalt von `dist/` einschließlich `.htaccess` in ein eigenes Apache-Webspace-Verzeichnis geladen. Dieser Stand wurde lokal auf Apache 2.4 geprüft. Der IONOS-Livetest steht aus.

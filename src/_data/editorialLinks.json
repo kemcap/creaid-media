@@ -2,8 +2,14 @@
   "b2b-portal-entwickeln-lassen": [
     {
       "source": "b2b-portal-entwickeln-lassen",
+      "target": "b2b-portale",
+      "url": "/leistungen/webdesign/e-commerce/b2b-portale",
+      "anchor": "B2B-Portal-Entwicklung"
+    },
+    {
+      "source": "b2b-portal-entwickeln-lassen",
       "target": "ki-workflows-crm",
-      "url": "/ki-workflows-crm",
+      "url": "/leistungen/ki-automatisierung/crm-workflows",
       "anchor": "CRM und Schnittstellen automatisieren",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -21,7 +27,7 @@
     {
       "source": "beste-landingpage-elemente-fuer-kampagnen",
       "target": "google-ads-social-media",
-      "url": "/google-ads-social-media",
+      "url": "/leistungen/marketing/google-ads-social-media",
       "anchor": "Google Ads und Social-Media-Kampagnen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -39,7 +45,7 @@
     {
       "source": "corporate-design-erstellen-lassen",
       "target": "branding",
-      "url": "/grafikdesign-2",
+      "url": "/leistungen/branding",
       "anchor": "Branding und Corporate Design",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -75,7 +81,7 @@
     {
       "source": "firmennamen-entwickeln-lassen",
       "target": "branding",
-      "url": "/grafikdesign-2",
+      "url": "/leistungen/branding",
       "anchor": "Markenentwicklung bei CreAid-Media",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -93,7 +99,7 @@
     {
       "source": "flyer-design-fuer-unternehmen",
       "target": "printdesign-editorial",
-      "url": "/print-design",
+      "url": "/leistungen/branding/printdesign-editorial",
       "anchor": "Professionelles Printdesign und druckfertiger Satz",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -111,7 +117,7 @@
     {
       "source": "google-ads-aber-keine-anfragen",
       "target": "google-ads-social-media",
-      "url": "/google-ads-social-media",
+      "url": "/leistungen/marketing/google-ads-social-media",
       "anchor": "Google-Ads-Kampagnen planen und auswerten",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -129,7 +135,7 @@
     {
       "source": "google-maps-auffindbarkeit-verbessern",
       "target": "seo-content-marketing",
-      "url": "/seo-3",
+      "url": "/leistungen/marketing/seo-content-marketing",
       "anchor": "Suchmaschinenoptimierung für lokale Unternehmen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -147,7 +153,7 @@
     {
       "source": "guenstige-webdesign-agentur-europa-finden",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign-Leistungen im Überblick",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -164,8 +170,14 @@
   "individuelle-webentwicklung-fuer-unternehmen": [
     {
       "source": "individuelle-webentwicklung-fuer-unternehmen",
+      "target": "individuelle-entwicklung",
+      "url": "/leistungen/webdesign/spezialleistungen/individuelle-entwicklung",
+      "anchor": "Individuelle Webentwicklung & Schnittstellen"
+    },
+    {
+      "source": "individuelle-webentwicklung-fuer-unternehmen",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign und individuelle Entwicklung",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -183,7 +195,7 @@
     {
       "source": "kampagne-fuer-lokale-unternehmen",
       "target": "marketing",
-      "url": "/digitales-marketing",
+      "url": "/leistungen/marketing",
       "anchor": "Digitales Marketing für Unternehmen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -201,7 +213,7 @@
     {
       "source": "logo-design-agentur",
       "target": "branding",
-      "url": "/grafikdesign-2",
+      "url": "/leistungen/branding",
       "anchor": "Logoentwicklung und Corporate Design",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -219,7 +231,7 @@
     {
       "source": "logo-und-slogan-entwickeln",
       "target": "branding",
-      "url": "/grafikdesign-2",
+      "url": "/leistungen/branding",
       "anchor": "Gestaltung von Logo und Markenauftritt",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -237,7 +249,7 @@
     {
       "source": "markenauftritt-fuer-kleine-unternehmen",
       "target": "branding",
-      "url": "/grafikdesign-2",
+      "url": "/leistungen/branding",
       "anchor": "Branding und Grafikdesign für Ihren Markenauftritt",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -254,8 +266,14 @@
   "marktplatz-plattform-entwickeln": [
     {
       "source": "marktplatz-plattform-entwickeln",
+      "target": "marktplaetze",
+      "url": "/leistungen/webdesign/e-commerce/marktplaetze",
+      "anchor": "Marktplatz-Entwicklung"
+    },
+    {
+      "source": "marktplatz-plattform-entwickeln",
       "target": "onlineshops-ecommerce",
-      "url": "/online-shop-entwicklung",
+      "url": "/leistungen/webdesign/e-commerce",
       "anchor": "E-Commerce-Lösungen im Überblick",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -273,7 +291,7 @@
     {
       "source": "messeauftritt-gestalten-lassen",
       "target": "printdesign-editorial",
-      "url": "/print-design",
+      "url": "/leistungen/branding/printdesign-editorial",
       "anchor": "Printdesign für den Messeauftritt",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -291,7 +309,7 @@
     {
       "source": "onlineshop-erfolgreich-aufbauen-anleitung",
       "target": "onlineshops-ecommerce",
-      "url": "/online-shop-entwicklung",
+      "url": "/leistungen/webdesign/e-commerce",
       "anchor": "Leistungen für Onlineshop und E-Commerce",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -309,7 +327,7 @@
     {
       "source": "onlineshop-erstellen-lassen",
       "target": "onlineshops-ecommerce",
-      "url": "/online-shop-entwicklung",
+      "url": "/leistungen/webdesign/e-commerce",
       "anchor": "Onlineshop erstellen lassen bei CreAid-Media",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -326,8 +344,14 @@
   "produktfim-erstellen-lassen": [
     {
       "source": "produktfim-erstellen-lassen",
+      "target": "animation",
+      "url": "/leistungen/branding/animation-motion-design",
+      "anchor": "Animation & Motion Design"
+    },
+    {
+      "source": "produktfim-erstellen-lassen",
       "target": "marketing",
-      "url": "/digitales-marketing",
+      "url": "/leistungen/marketing",
       "anchor": "Digitales Marketing und passende Kanäle",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -345,7 +369,7 @@
     {
       "source": "professionelle-website-fuer-lokale-dienstleister",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Website für Ihr Unternehmen planen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -362,8 +386,14 @@
   "schlechte-website-verbessern": [
     {
       "source": "schlechte-website-verbessern",
+      "target": "ui-ux",
+      "url": "/leistungen/webdesign/spezialleistungen/ui-ux-design",
+      "anchor": "UI/UX-Design"
+    },
+    {
+      "source": "schlechte-website-verbessern",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign und Überarbeitung Ihrer Website",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -381,7 +411,7 @@
     {
       "source": "seo-fuer-lokale-sichtbarkeit",
       "target": "seo-content-marketing",
-      "url": "/seo-3",
+      "url": "/leistungen/marketing/seo-content-marketing",
       "anchor": "SEO und Content-Marketing für Unternehmen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -399,7 +429,7 @@
     {
       "source": "seo-grundlagen-lokale-dienstleister",
       "target": "seo-content-marketing",
-      "url": "/seo-3",
+      "url": "/leistungen/marketing/seo-content-marketing",
       "anchor": "SEO-Unterstützung für lokale Dienstleister",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -417,7 +447,7 @@
     {
       "source": "shopware-vs-wordpress-shop",
       "target": "onlineshops-ecommerce",
-      "url": "/online-shop-entwicklung",
+      "url": "/leistungen/webdesign/e-commerce",
       "anchor": "Shopsystem für Ihr E-Commerce-Projekt wählen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -435,7 +465,7 @@
     {
       "source": "social-media-betreuung-unternehmen",
       "target": "marketing",
-      "url": "/digitales-marketing",
+      "url": "/leistungen/marketing",
       "anchor": "Digitales Marketing und Social Media",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -453,7 +483,7 @@
     {
       "source": "warum-bringt-meine-website-keine-kunden",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Website und Nutzerführung verbessern",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -471,7 +501,7 @@
     {
       "source": "warum-corporate-design-wichtig-ist",
       "target": "branding",
-      "url": "/grafikdesign-2",
+      "url": "/leistungen/branding",
       "anchor": "Corporate Design und Grafikdesign",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -489,7 +519,7 @@
     {
       "source": "was-kostet-ein-imagefilm",
       "target": "branding",
-      "url": "/grafikdesign-2",
+      "url": "/leistungen/branding",
       "anchor": "Markenauftritt und visuelle Gestaltung",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -507,7 +537,7 @@
     {
       "source": "webdesign-agentur-fuer-handwerker",
       "target": "webdesign-handwerker",
-      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "url": "/leistungen/webdesign/branchen/handwerk",
       "anchor": "Webdesign für Handwerksbetriebe beauftragen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -525,7 +555,7 @@
     {
       "source": "webdesign-agentur-fuer-kleine-unternehmen",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign-Angebot für Unternehmen kennenlernen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -542,8 +572,14 @@
   "webdesign-fuer-arztpraxen": [
     {
       "source": "webdesign-fuer-arztpraxen",
+      "target": "webdesign-aerzte",
+      "url": "/leistungen/webdesign/branchen/arztpraxen",
+      "anchor": "Webdesign für Ärzte"
+    },
+    {
+      "source": "webdesign-fuer-arztpraxen",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign und Nutzerführung für Unternehmen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -561,7 +597,7 @@
     {
       "source": "webdesign-fuer-dachdecker-firma",
       "target": "webdesign-handwerker",
-      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "url": "/leistungen/webdesign/branchen/handwerk",
       "anchor": "Webdesign für Handwerksbetriebe",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -579,7 +615,7 @@
     {
       "source": "webdesign-fuer-handwerker",
       "target": "webdesign-handwerker",
-      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "url": "/leistungen/webdesign/branchen/handwerk",
       "anchor": "Webdesign für Handwerker bei CreAid-Media",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -597,7 +633,7 @@
     {
       "source": "webdesign-fuer-handwerksbetriebe",
       "target": "webdesign-handwerker",
-      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "url": "/leistungen/webdesign/branchen/handwerk",
       "anchor": "Unterstützung beim Handwerker-Webdesign",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -615,7 +651,7 @@
     {
       "source": "webdesign-fuer-kleine-unternehmen",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign für Unternehmen bei CreAid-Media",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -633,7 +669,7 @@
     {
       "source": "webdesign-outsourcing-deutschland",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign und Zusammenarbeit anfragen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -650,8 +686,14 @@
   "website-wartung-fuer-firmen": [
     {
       "source": "website-wartung-fuer-firmen",
+      "target": "hosting-wartung",
+      "url": "/leistungen/webdesign/spezialleistungen/hosting-wartung",
+      "anchor": "Cloud-Hosting & Wartung"
+    },
+    {
+      "source": "website-wartung-fuer-firmen",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webentwicklung und Weiterbetreuung besprechen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -669,7 +711,7 @@
     {
       "source": "wie-wirkt-corporate-design",
       "target": "branding",
-      "url": "/grafikdesign-2",
+      "url": "/leistungen/branding",
       "anchor": "Unterstützung beim Corporate Design",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
@@ -687,7 +729,7 @@
     {
       "source": "index",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign und Entwicklung",
       "priority": "P1",
       "placement": "Einführung"
@@ -695,7 +737,7 @@
     {
       "source": "index",
       "target": "marketing",
-      "url": "/digitales-marketing",
+      "url": "/leistungen/marketing",
       "anchor": "Digitales Marketing",
       "priority": "P1",
       "placement": "Einführung"
@@ -703,7 +745,7 @@
     {
       "source": "index",
       "target": "branding",
-      "url": "/grafikdesign-2",
+      "url": "/leistungen/branding",
       "anchor": "Branding und Grafikdesign",
       "priority": "P1",
       "placement": "Einführung"
@@ -711,7 +753,7 @@
     {
       "source": "index",
       "target": "ki-automatisierung",
-      "url": "/ki-automatisierung",
+      "url": "/leistungen/ki-automatisierung",
       "anchor": "KI und Automatisierung",
       "priority": "P1",
       "placement": "Einführung"
@@ -753,7 +795,7 @@
     {
       "source": "blog",
       "target": "ki-automatisierung-fuer-unternehmen",
-      "url": "/ki-automatisierung-fuer-unternehmen",
+      "url": "/leistungen/ki-automatisierung/pilotprojekt",
       "anchor": "Einstieg in die KI-Automatisierung",
       "priority": "P1",
       "placement": "Themenwahl"
@@ -763,7 +805,7 @@
     {
       "source": "leistungen",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign und Beratung",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -771,7 +813,7 @@
     {
       "source": "leistungen",
       "target": "marketing",
-      "url": "/digitales-marketing",
+      "url": "/leistungen/marketing",
       "anchor": "Digitales Marketing",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -779,7 +821,7 @@
     {
       "source": "leistungen",
       "target": "branding",
-      "url": "/grafikdesign-2",
+      "url": "/leistungen/branding",
       "anchor": "Branding und Grafikdesign",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -787,7 +829,7 @@
     {
       "source": "leistungen",
       "target": "ki-automatisierung",
-      "url": "/ki-automatisierung",
+      "url": "/leistungen/ki-automatisierung",
       "anchor": "KI-Automatisierung",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -797,7 +839,7 @@
     {
       "source": "webdesign-handwerker",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign und Entwicklung",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -831,7 +873,7 @@
     {
       "source": "onlineshops-ecommerce",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign und Webentwicklung",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -865,7 +907,7 @@
     {
       "source": "seo-content-marketing",
       "target": "marketing",
-      "url": "/digitales-marketing",
+      "url": "/leistungen/marketing",
       "anchor": "Digitales Marketing im Überblick",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -899,7 +941,7 @@
     {
       "source": "google-ads-social-media",
       "target": "marketing",
-      "url": "/digitales-marketing",
+      "url": "/leistungen/marketing",
       "anchor": "Digitales Marketing im Überblick",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -925,7 +967,7 @@
     {
       "source": "printdesign-editorial",
       "target": "branding",
-      "url": "/grafikdesign-2",
+      "url": "/leistungen/branding",
       "anchor": "Branding und Grafikdesign im Überblick",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -951,7 +993,7 @@
     {
       "source": "ki-workflows-crm",
       "target": "ki-automatisierung",
-      "url": "/ki-automatisierung",
+      "url": "/leistungen/ki-automatisierung",
       "anchor": "KI-Automatisierung im Überblick",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -959,7 +1001,7 @@
     {
       "source": "ki-workflows-crm",
       "target": "ki-automatisierung-fuer-unternehmen",
-      "url": "/ki-automatisierung-fuer-unternehmen",
+      "url": "/leistungen/ki-automatisierung/pilotprojekt",
       "anchor": "Mit einem überschaubaren Pilot beginnen",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -977,7 +1019,7 @@
     {
       "source": "ki-automatisierung-fuer-unternehmen",
       "target": "ki-automatisierung",
-      "url": "/ki-automatisierung",
+      "url": "/leistungen/ki-automatisierung",
       "anchor": "KI-Automatisierung für Unternehmen",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -985,7 +1027,7 @@
     {
       "source": "ki-automatisierung-fuer-unternehmen",
       "target": "ki-workflows-crm",
-      "url": "/ki-workflows-crm",
+      "url": "/leistungen/ki-automatisierung/crm-workflows",
       "anchor": "Praxisbeispiele für KI-Workflows und CRM",
       "priority": "P1",
       "placement": "Weiterführende Links"
@@ -1011,7 +1053,7 @@
     {
       "source": "referenzen",
       "target": "printdesign-editorial",
-      "url": "/print-design",
+      "url": "/leistungen/branding/printdesign-editorial",
       "anchor": "Printdesign und Editorial kennenlernen",
       "priority": "P2",
       "placement": "Weiterführende Links"
@@ -1019,7 +1061,7 @@
     {
       "source": "referenzen",
       "target": "ki-workflows-crm",
-      "url": "/ki-workflows-crm",
+      "url": "/leistungen/ki-automatisierung/crm-workflows",
       "anchor": "KI-Workflows und CRM-Automatisierung",
       "priority": "P2",
       "placement": "Weiterführende Links"
@@ -1029,7 +1071,7 @@
     {
       "source": "projekt-detail",
       "target": "webdesign",
-      "url": "/webdesign",
+      "url": "/leistungen/webdesign",
       "anchor": "Webdesign und Nutzerführung für Unternehmen",
       "priority": "P1",
       "placement": "Weiterführende Links"

@@ -12,7 +12,7 @@ permalink: /webdesign.html
 <span class="serif">&amp; Entwicklung<span class="pink-point">.</span></span></h1>
 <p class="service-hero-lead">Individuelle Websites. Klare Nutzerführung. Auf jedem Bildschirm.</p>
 <div class="service-hero-actions"><a class="cta" href="#im-ueberblick">Leistung entdecken <span aria-hidden="true">↓</span></a><a class="text-link" href="/#kompetenzen">Alle Leistungen</a> <a class="text-link" href="#scrollstory">Animation ansehen</a></div>
-<span class="service-hero-index">01 / DIGITAL EXPERIENCE<br/>DESIGNSTUDIE / FIRST AID</span></div></section>{% include "partials/pillar-overview.njk" %}<section aria-label="Interaktive Präsentation: Webdesign &amp; Entwicklung" class="web-story service-story webdesign-story" id="scrollstory">
+<span class="service-hero-index">01 / DIGITAL EXPERIENCE<br/>DESIGNSTUDIE / FIRST AID</span></div></section>{% set service = services[pageKey] %}{% include "partials/service-links.njk" %}{% include "partials/pillar-overview.njk" %}<section aria-label="Interaktive Präsentation: Webdesign &amp; Entwicklung" class="web-story service-story webdesign-story" id="scrollstory">
 <div class="web-pin">
 <div aria-hidden="true" class="grid-lines web-grid"></div>
 <div aria-hidden="true" class="web-accent-glow"></div>
@@ -102,8 +102,8 @@ permalink: /webdesign.html
 <div><span class="micro pink">NÄCHSTER SCHRITT / CREAID-MEDIA</span><h2>Ihre Website. Unser nächster Schritt.<br/><em>Reden wir darüber.</em></h2></div>
 <div class="right"><p>Erzählen Sie uns kurz von Ihrem Vorhaben. Gemeinsam klären wir, welche Lösung zu Ihrem Unternehmen passt.</p>
 <a class="cta" href="mailto:info@creaid-media.de?subject=Webdesign%20%26amp;%20Entwicklung">Projekt besprechen <span aria-hidden="true">↗</span></a></div></div>
-{% include "partials/footer-service.njk" %}
-</div></div></section></main>
+
+</div></div></section>{% set service = services[pageKey] %}{% include "partials/service-faq.njk" %}</main>{% include "partials/footer-service.njk" %}
 <script defer="" src="/assets/navigation.js"></script><script defer="" src="/assets/scrollstory.js"></script>
 <script defer="" src="/assets/motion-v4.js"></script>
 

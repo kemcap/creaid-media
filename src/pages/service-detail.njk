@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: serviceDetailPages
+  size: 1
+  alias: serviceKey
+eleventyComputed:
+  pageKey: "{{ serviceKey }}"
+permalink: "/{{ serviceKey }}.html"
+eleventyExcludeFromCollections: true
+---
+{% set service = services[serviceKey] %}
+<a class="sp-skip" href="#hauptinhalt">Zum Inhalt springen</a>
+{% include "partials/header-agency.njk" %}
+<main id="hauptinhalt">
+  <section class="service-content-hero">
+    <div class="audit-inner">
+      {% include "partials/service-breadcrumbs.njk" %}
+      <h1>{{ service.title | escape }}</h1>
+      <p>{{ service.intro | escape }}</p>
+      <a class="a-btn" href="{{ routes.kontakt }}">Projekt besprechen <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+  <section class="audit-pillar" aria-labelledby="service-content-title">
+    <div class="audit-inner">
+      <h2 id="service-content-title">Leistungen im Überblick</h2>
+      <div class="audit-grid">
+        {% for section in service.sections %}
+        <div class="audit-panel">
+          <h3>{{ section.heading | escape }}</h3>
+          <p>{{ section.copy | escape }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% include "partials/service-links.njk" %}
+  {% include "partials/service-faq.njk" %}
+</main>
+{% include "partials/footer-agency.njk" %}

@@ -12,10 +12,6 @@
   "navigation": [
     {
       "label": "Leistungen",
-      "href": "/#kompetenzen"
-    },
-    {
-      "label": "Spezialleistungen",
       "href": "/leistungen"
     },
     {

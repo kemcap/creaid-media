@@ -105,3 +105,55 @@
   aspect-ratio: 9066 / 1000;
   object-fit: contain;
 }
+
+.service-content-hero {
+  padding: clamp(7rem, 14vw, 12rem) 0 clamp(3rem, 7vw, 6rem);
+  background: #121315;
+  color: #fdfcf9;
+}
+
+.service-content-hero h1 {
+  max-width: 18ch;
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.5rem, 6.5vw, 5.6rem);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+  overflow-wrap: anywhere;
+}
+
+.service-content-hero p {
+  max-width: 66ch;
+  margin: 0 0 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: #e4dfe1;
+}
+
+.service-path { margin-bottom: 1.2rem; font-size: .9rem; }
+.service-path ol { display: flex; flex-wrap: wrap; gap: .35rem .75rem; list-style: none; padding: 0; }
+.service-path li + li::before { content: "/"; margin-right: .75rem; color: #fc89a8; }
+.service-path a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
+
+.service-links { padding-block: clamp(1.5rem, 3vw, 3rem); }
+.service-links h2, .service-faq h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+.service-links ul + ul { margin-top: .65rem; }
+
+.service-faq {
+  padding: clamp(1.6rem, 4vw, 3rem) 0;
+  background: #f7f4f2;
+  color: #121315;
+  scroll-margin-top: 105px;
+}
+.service-faq .audit-inner { max-width: 1160px; }
+.service-faq h2 { margin: 0 0 .8rem; line-height: 1.2; }
+.service-faq details { border-top: 1px solid #d4cbcc; max-width: 52rem; }
+.service-faq details:last-child { border-bottom: 1px solid #d4cbcc; }
+.service-faq summary { padding: .7rem .25rem; cursor: pointer; font-weight: 700; line-height: 1.35; }
+.service-faq summary::marker { color: #b3284f; }
+.service-faq summary:focus-visible { outline: 2px solid #b3284f; outline-offset: 2px; }
+.service-faq details p { max-width: 70ch; margin: 0; padding: 0 .5rem .8rem 1.35rem; line-height: 1.55; }
+
+.journal-topic-links { display: flex; flex-wrap: wrap; gap: .65rem 1.4rem; }
+.journal-topic-links li + li { margin-top: 0; }
+.service-faq details ul { margin-bottom: .8rem; }
+.agency-body:has(.service-content-hero) .a-header { top: 0; }
