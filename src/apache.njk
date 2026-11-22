@@ -4,14 +4,16 @@ eleventyExcludeFromCollections: true
 ---
 # CreAid-Media · URL-Kandidat für Apache 2.4 / mod_rewrite.
 # Vorschau mit kanonischen Pfaden und Weiterleitungen für bisherige URLs.
+Options -MultiViews
 DirectoryIndex index.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteBase /
 {% for route in apacheRoutes.aliases -%}
 RewriteCond %{THE_REQUEST} \s/+{{ route.from | safe }}(?:[?\s])
 RewriteRule ^{{ route.from | safe }}$ {{ route.to }} [R=301,END,NE]
 {% endfor %}
 {% for route in apacheRoutes.paths -%}
-RewriteRule ^{{ route.from | safe }}$ {{ route.file }} [END]
+RewriteRule ^{{ route.from | safe }}$ /{{ route.file }} [END]
 {% endfor %}
 </IfModule>

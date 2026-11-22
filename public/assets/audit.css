@@ -157,3 +157,9 @@
 .journal-topic-links li + li { margin-top: 0; }
 .service-faq details ul { margin-bottom: .8rem; }
 .agency-body:has(.service-content-hero) .a-header { top: 0; }
+
+/* Honor the wordmark proportions in footers without changing their layout widths. */
+:is(.site-footer, .a-footer, .j-footer, .footer) img[src$="/creaid-media-logo.webp"] {
+  height: auto;
+  max-width: 100%;
+}
