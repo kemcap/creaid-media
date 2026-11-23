@@ -13,7 +13,10 @@
     button.setAttribute('aria-label', 'Hauptmenü öffnen');
     header.classList.remove('cm-header--menu-open');
     if (details) details.open = false;
-    if (restoreFocus) button.focus();
+    if (restoreFocus) {
+      const target = mobile() ? button : details?.querySelector('summary');
+      target?.focus();
+    }
   };
   header.classList.add('cm-header--ready');
   button.addEventListener('click', () => {

@@ -1,13 +1,13 @@
 (() => { 'use strict';
  const tracks=[...document.querySelectorAll('.sp-track.sp-story')]; if(!tracks.length)return;
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
- if(reduced.matches)return;
+ const staticView=window.matchMedia('(max-height:620px),(max-width:900px) and (max-height:700px),(prefers-reduced-motion:reduce)');
  const clamp=x=>Math.max(0,Math.min(1,x));
  const ease=(a,b,x)=>{const t=clamp((x-a)/Math.max(.0001,b-a));return t*t*(3-2*t)};
  let pending=false;
  function paint(){pending=false;let easingActive=false;const vh=window.innerHeight;
   tracks.forEach(track=>{
-    if(window.matchMedia('(max-height:620px),(max-width:900px) and (max-height:700px),(prefers-reduced-motion:reduce)').matches){track.querySelectorAll('.sp-scene').forEach(n=>n.setAttribute('aria-hidden','false'));return;}
+    if(staticView.matches){track.querySelectorAll('.sp-scene').forEach(n=>n.setAttribute('aria-hidden','false'));return;}
     const rect=track.getBoundingClientRect();if(rect.bottom<0||rect.top>vh)return;
     const travel=Math.max(1,track.offsetHeight-vh),target=clamp(-rect.top/travel);
     const sample=window.CreAidAdaptiveScroll?.progress(track,target) || {value:target,pending:false};
@@ -30,5 +30,5 @@
   if(easingActive)request();
  }
  function request(){if(!pending){pending=true;window.requestAnimationFrame(paint);}}
- window.addEventListener('scroll',request,{passive:true});window.addEventListener('resize',request,{passive:true});request();
+ window.addEventListener('scroll',request,{passive:true});window.addEventListener('resize',request,{passive:true});staticView.addEventListener('change',request);request();
 })();
