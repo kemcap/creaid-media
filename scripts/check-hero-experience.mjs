@@ -91,16 +91,8 @@ for(const filename of ['leistungen.html','onlineshops-ecommerce.html','google-ad
 }
 for(const expected of [
   'main > .service-story.web-story {height:235svh}',
-  'main > .service-detail {height:205svh}',
-  'main > .service-closing {height:170svh}',
-  'main > .a-track {height:175vh',
   'main > .a-track.sp-story {height:235vh',
-  'main > .sp-track#leistungen-im-detail {height:205vh',
-  'main > .sp-track#ablauf {height:185vh',
-  'main > .j-feature-track {height:155vh',
   'main > .service-story.web-story {height:265svh}',
-  '@media(max-width:900px) and (max-height:610px)',
-  '@media(prefers-reduced-motion:reduce)',
   '.sp-hero.cm-crosshair-ready > .a-grid-cross {display:none}'
 ])assert.ok(balance.includes(expected),'Missing shared motion rule: '+expected);
 const crossJS=load('dist/assets/service-crosshair.js');
@@ -265,3 +257,9 @@ for(const rule of [
  '@media (min-width:1081px)'
 ])assert.ok(headingLayoutCss.includes(rule),'Missing responsive heading placement: '+rule);
 console.log('PASS: explicit responsive semantic heading grid placements retained.');
+
+assert.ok(!balance.includes('main > .service-detail {height:'),'Flow detail must not have a competing scroll height');
+assert.ok(!balance.includes('main > .a-track {height:'),'Only real story tracks may have a pinned scroll height');
+assert.ok(fakeWindow.CreAidMotion?.staticStory && fakeWindow.CreAidMotion?.reduced,'Shared motion preferences missing');
+assert.ok(load('dist/assets/fonts.css').includes('--cm-brand-berry:#b3284f'));
+console.log('PASS: shared motion preferences, single scroll-height ownership, brand tokens.');

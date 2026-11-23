@@ -229,10 +229,10 @@ main > .j-feature-track .j-feature-footer{position:absolute;bottom:0}
 /* UX closeout: accessible filled CTAs within the existing CreAid palette.
    Preserve outlined buttons and dark closing-section buttons. */
 body :is(.cm-header__cta,.cm-footer__lead-cta,.button-primary,.cta,.a-btn:not(.a-btn-outline),.j-button,.l-button:not(.l-button-line)):not(.j-bottom-cta *):not(.l-final *):not(.a-pink *){
-  background:#b3284f;border-color:#b3284f;color:#fff!important;
+  background:var(--cm-brand-berry);border-color:var(--cm-brand-berry);color:#fff!important;
 }
 body :is(.cm-header__cta,.cm-footer__lead-cta,.button-primary,.cta,.a-btn:not(.a-btn-outline),.j-button,.l-button:not(.l-button-line)):not(.j-bottom-cta *):not(.l-final *):not(.a-pink *):is(:hover,:focus-visible){
-  background:#93203f;border-color:#93203f;color:#fff!important;
+  background:var(--cm-action-hover);border-color:var(--cm-action-hover);color:#fff!important;
 }
 @media(max-width:900px){
   main :is(.hero-intro p,.cap-intro p,.method-heading p,.work-titleline p,.sp-scene p,.scene-copy p,.j-article-desc,.sp-big-faq>p){
