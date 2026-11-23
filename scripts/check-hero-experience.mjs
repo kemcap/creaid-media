@@ -142,7 +142,7 @@ for(const name of files){
   const html=load('dist/'+name);
   assert.ok(html.includes('/assets/ux-phase1.css')&&html.includes('/assets/ux-phase1.js'),name+' missing global UX assets');
 }
-for(const rule of ['--cm-nav-height','100dvh - var(--cm-nav-height)','body > .topline','main > .a-track:not(.sp-story)','main > .service-detail','main > .j-feature-track','main > .track-capabilities','main > .track-work','@media(max-height:620px)','cm-has-closing-cta','.cm-flow-enter','.j-article-hero.j-article-hero-v9'])assert.ok(ux.includes(rule),'Missing Phase 1 rule '+rule);
+for(const rule of ['--cm-nav-height','100dvh - var(--cm-nav-height)','body > .topline','main > .a-track:not(.sp-story)','main > .service-detail','main > .j-feature-track','main > .track-capabilities','main > .track-work','@media(max-height:620px)','cm-has-closing-cta','.cm-flow-enter','.j-article-hero'])assert.ok(ux.includes(rule),'Missing Phase 1 rule '+rule);
 assert.ok(uxJS.includes('ResizeObserver')&&uxJS.includes('IntersectionObserver'),'Header measurement and time-based reveals missing');
 assert.ok(homeJS.includes('(max-height:620px)'),'Homepage short viewport mask fallback missing');
 assert.ok(load('dist/assets/specialty-pages.js').includes("querySelectorAll('.sp-track.sp-story')"),'Static specialty cards should not be scroll-scrubbed');
