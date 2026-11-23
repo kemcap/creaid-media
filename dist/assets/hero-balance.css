@@ -1,3 +1,4 @@
+/* cm-semantic-heading-selectors-v1 */
 /* CreAid-Media – viewport-balanced hero system.
    Overrides the separate page-family layouts without changing their mobile composition. */
 @media (min-width:901px) {
@@ -54,7 +55,7 @@
     padding-top:clamp(86px,10vh,125px);
     padding-bottom:clamp(86px,10vh,125px);
   }
-  .page-top .service-hero-inner h1 {
+  .page-top .service-hero-inner :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)) {
     font-size:clamp(55px,min(8.3vw,14vh),133px);
     margin-bottom:clamp(15px,3vh,31px);
   }

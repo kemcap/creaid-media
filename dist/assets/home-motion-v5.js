@@ -25,9 +25,9 @@
   }
   const nodes = {
     hero: { heading: $('.hero-heading'), lines: $$('.hero-heading>span'), intro: $('.hero-intro'), actions: $('.hero-actions'), axes: $('.axes'), stamp: $('.hero-stamp') },
-    capabilities: { tiles: $$('.service-tile'), art: $$('.service-tile .tile-art'), active: $('.cap-active-index'), activeLabel: $('.cap-active-label'), heading: $('.cap-intro h2') },
-    method: { cards: $$('.method-card'), line: $('.method-line span'), heading: $('.method-heading h2') },
-    work: { mag: $('.work-mag'), browser: $('.work-browser'), heading: $('.work-titleline h2') },
+    capabilities: { tiles: $$('.service-tile'), art: $$('.service-tile .tile-art'), active: $('.cap-active-index'), activeLabel: $('.cap-active-label'), heading: $('.cap-intro .cm-claim-h2') },
+    method: { cards: $$('.method-card'), line: $('.method-line span'), heading: $('.method-heading .cm-claim-h2') },
+    work: { mag: $('.work-mag'), browser: $('.work-browser'), heading: $('.work-titleline .cm-claim-h2') },
     statementContact: { statement: $('.statement-panel'), contact: $('.contact-panel'), edge: $('.statement-mask-edge') }
   };
   function translate(el, x=0, y=0, scale=1, rotate=0) {

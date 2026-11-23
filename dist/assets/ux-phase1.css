@@ -1,3 +1,4 @@
+/* cm-semantic-heading-selectors-v1 */
 /* Phase 1: shared viewport, natural content flow and compact global shell. */
 :root{--cm-nav-height:93px;--cm-viewport:calc(100vh - var(--cm-nav-height));--cm-space:clamp(32px,5vw,72px)}
 @supports(height:100dvh){:root{--cm-viewport:calc(100dvh - var(--cm-nav-height))}}
@@ -52,15 +53,15 @@ main > .j-article-hero > .j-shell{
   height:auto!important;min-height:0!important;align-content:center;
   padding-top:clamp(32px,6vh,70px);padding-bottom:58px;gap:clamp(18px,4vw,72px);
 }
-main > .j-article-hero h1{margin:14px 0 12px;font-size:clamp(34px,min(5vw,8vh),70px)}
+main > .j-article-hero :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){margin:14px 0 12px;font-size:clamp(34px,min(5vw,8vh),70px)}
 main > .j-article-hero .j-article-desc{display:block;overflow:visible;-webkit-line-clamp:unset;margin:0 0 14px}
 main > .j-article-hero .j-article-cover{max-height:clamp(230px,49vh,460px);height:auto}
 main > .j-article-hero .j-article-scroll{bottom:16px}
 main > .j-bottom-cta{min-height:0}
 main > .j-bottom-cta .j-shell{padding:clamp(48px,7vw,100px) 0}
-main > .j-bottom-cta h2{font-size:clamp(44px,7.4vw,106px);margin:18px 0}
+main > .j-bottom-cta :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(44px,7.4vw,106px);margin:18px 0}
 main > .l-section{min-height:0;padding:clamp(48px,7vw,100px) 0}
-main > .l-section.l-final h2{font-size:clamp(42px,7.2vw,102px)}
+main > .l-section.l-final :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(42px,7.2vw,102px)}
 /* Cards, references, FAQ, contact and simple CTA chapters are regular document flow. */
 main > .a-track:not(.sp-story),
 main > .service-detail,main > .service-closing,
@@ -124,7 +125,7 @@ body.cm-has-closing-cta .cm-footer__lead{display:none}
   main > .l-hero .l-title{font-size:clamp(40px,min(11vw,10vh),82px)}
   main > .l-hero .l-hero-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
   main > .j-article-hero > .j-shell{padding:30px 0 53px;gap:16px}
-  main > .j-article-hero h1{font-size:clamp(30px,6.4vw,52px)}
+  main > .j-article-hero :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){font-size:clamp(30px,6.4vw,52px)}
   main > .j-article-hero .j-article-cover{height:clamp(125px,20vh,230px);max-height:none}
 }
 @media(max-width:570px){
@@ -133,20 +134,20 @@ body.cm-has-closing-cta .cm-footer__lead{display:none}
   main > .track-hero .hero-actions{margin-top:18px}
   main > .track-hero .next-arrow{bottom:49px}
   main > .page-top > .service-hero-inner{padding:32px 0 48px}
-  main > .page-top .service-hero-inner h1{font-size:clamp(43px,12vw,70px)}
+  main > .page-top .service-hero-inner :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){font-size:clamp(43px,12vw,70px)}
   main > .page-top .service-hero-actions{gap:12px 20px}
   main > .a-normal:first-of-type .sp-hero-h1{font-size:clamp(36px,11.2vw,64px)}
   main > .j-hero .j-hero-title{font-size:clamp(52px,14vw,82px)}
-  main > .j-article-hero h1{font-size:clamp(28px,8vw,41px)}
+  main > .j-article-hero :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){font-size:clamp(28px,8vw,41px)}
   main > .j-article-hero .j-article-cover{height:clamp(116px,18vh,174px)}
   main > .j-article-hero .j-article-desc{font-size:13px;line-height:1.48}
   main > .track-capabilities .cap-grid{grid-template-rows:repeat(2,minmax(132px,auto))}
   main > .a-track:not(.sp-story) .sp-big-faq>p{font-size:13px;line-height:1.5}
   .cm-footer__lead{padding:18px 0;gap:12px}
-  .cm-footer__lead h2{font-size:clamp(28px,8vw,40px);margin:7px 0 5px}
+  .cm-footer__lead :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(28px,8vw,40px);margin:7px 0 5px}
   .cm-footer__lead-cta{min-height:44px;padding:11px 14px}
   .cm-footer__grid{padding:20px 0;gap:18px 14px}
-  .cm-footer__grid h2,.cm-footer__services.audit-related h2{font-size:12px;margin-bottom:8px}
+  .cm-footer__grid :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)),.cm-footer__services.audit-related :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:12px;margin-bottom:8px}
   .cm-footer__services .audit-links li{margin:0}
   .cm-footer__services .audit-links a,.cm-footer__contact>a,.cm-footer__legal>a{font-size:12px;line-height:1.45;padding:5px 0;margin:0}
   .cm-footer__company p{margin:8px 0;font-size:12px}
@@ -164,7 +165,7 @@ body.cm-has-closing-cta .cm-footer__lead{display:none}
   main > .l-hero > .l-hero-in{min-height:0;padding:32px 0 48px}
   main > .a-normal:first-of-type,main > .page-top,main > .j-hero,main > .l-hero{min-height:0!important}
   main > .a-normal:first-of-type .a-h1{font-size:clamp(37px,min(10vw,15vh),92px)}
-  main > .page-top .service-hero-inner h1{font-size:clamp(39px,min(10vw,16vh),96px)}
+  main > .page-top .service-hero-inner :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){font-size:clamp(39px,min(10vw,16vh),96px)}
   main > .j-hero .j-hero-title,main > .l-hero .l-title{font-size:clamp(40px,min(12vw,16vh),98px)}
   main > .track-method,main > .track-statement-contact,main > .a-track.sp-story,main > .service-story.web-story{height:auto!important;min-height:0!important}
   main > .track-method .motion-stage,main > .track-statement-contact .motion-stage,
@@ -178,15 +179,15 @@ body.cm-has-closing-cta .cm-footer__lead{display:none}
     position:relative;inset:auto;height:auto;min-height:0;clip-path:none!important;overflow:hidden;
   }
   main > .track-statement-contact :is(.statement-layout,.contact-layout){height:auto!important;min-height:0!important;padding:var(--cm-space) 0 64px}
-  main > .track-statement-contact .statement-layout h2{font-size:clamp(46px,9vw,100px)}
-  main > .track-statement-contact .contact-copy h2{font-size:clamp(43px,9vw,92px)}
+  main > .track-statement-contact .statement-layout :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(46px,9vw,100px)}
+  main > .track-statement-contact .contact-copy :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(43px,9vw,92px)}
   main > .track-statement-contact .statement-mask-edge{display:none}
   main > .track-statement-contact .contact-scroll-anchor{top:50%}
   main > .sp-story .sp-story-shell{height:auto;min-height:0;padding:var(--cm-space) 0 48px}
   main > .sp-story .sp-story-layout{display:flex;flex-direction:column;gap:24px;align-items:stretch;height:auto;flex:none}
   main > .sp-story .sp-copy-stack{height:auto;min-height:0;flex:none}
   main > .sp-story .sp-scene{position:relative;inset:auto;display:flex!important;opacity:1!important;transform:none!important;pointer-events:auto!important;padding:14px 0}
-  main > .sp-story .sp-scene h2{font-size:clamp(28px,6vw,53px)}
+  main > .sp-story .sp-scene :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(28px,6vw,53px)}
   main > .sp-story .sp-story-instruction{display:none}
   main > .sp-story .sp-visual{height:clamp(240px,42vw,380px);max-height:none;min-height:0;flex:none}
   main > .sp-story .sp-art-panel{display:none!important}
@@ -194,7 +195,7 @@ body.cm-has-closing-cta .cm-footer__lead{display:none}
   main > .service-story .web-columns{height:auto;min-height:0;display:flex;flex-direction:column;gap:22px;padding:40px 6vw 66px}
   main > .service-story .copy-area,main > .service-story .scene-stack{height:auto;min-height:0;max-width:none;width:100%}
   main > .service-story .scene-copy{position:relative;inset:auto;visibility:visible!important;opacity:1!important;transform:none!important;padding:12px 0;max-width:none}
-  main > .service-story .scene-copy h2{font-size:clamp(30px,6vw,54px)}
+  main > .service-story .scene-copy :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(30px,6vw,54px)}
   main > .service-story .visual-stage{height:clamp(235px,42vw,380px);max-height:none;min-height:0;width:100%;flex:none}
   main > .service-story .visual-stage :is(.device-laptop,.chapter-asset.asset-one){opacity:1!important;visibility:visible!important;transform:none!important}
   main > .service-story .visual-stage :is(.device-phone,.conversion-card,.conversion-line,.chapter-asset:not(.asset-one)){opacity:0!important;visibility:hidden!important}
@@ -219,7 +220,7 @@ main > .j-feature-track .j-feature-footer{position:absolute;bottom:0}
 .cm-header__specialties{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
 .cm-header__dropdown a[aria-current=page]{color:#ff8aa8;font-weight:700}
 .cm-portfolio-proof{margin:0;background:#f5f2ef;color:#201b1e;padding:clamp(42px,7vw,96px) max(24px,calc((100vw - 1320px)/2))}
-.cm-portfolio-proof h2{font-size:clamp(34px,5vw,70px);line-height:1.04;margin:14px 0;letter-spacing:-.04em}
+.cm-portfolio-proof :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(34px,5vw,70px);line-height:1.04;margin:14px 0;letter-spacing:-.04em}
 .cm-portfolio-proof p{max-width:65ch;line-height:1.65}
 .cm-portfolio-proof a{display:inline-flex;align-items:center;min-height:44px;margin:12px 0;color:#9e2046;font-weight:700;text-decoration:underline;text-underline-offset:5px}
 @media(max-width:860px){.cm-header__dropdown{max-height:none;overflow:visible;width:100%}.cm-header__specialties{grid-template-columns:1fr}.cm-hero-cta-group{flex-shrink:1}}

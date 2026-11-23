@@ -1,0 +1,28 @@
+/* Visible semantic labels, independently styled from the large creative claims. */
+main .cm-semantic-heading{
+ display:block;position:relative;z-index:2;flex:none;width:auto;max-width:100%;
+ font-family:var(--font-body,'Ubuntu',Arial,sans-serif);font-weight:700;
+ font-size:clamp(13px,1.18vw,17px);line-height:1.38;letter-spacing:.005em;
+ margin:0 0 9px;padding:0;color:inherit;text-transform:none;
+ opacity:1;visibility:visible;overflow-wrap:break-word;
+}
+main .cm-semantic-h1{font-size:clamp(15px,1.45vw,21px);margin:10px 0 0}
+main .hero-content>.cm-semantic-h1{margin:10px 0 0;color:#fff;max-width:65ch}
+main .hero-content>.hero-heading{margin-top:12px}
+main .sp-hero .cm-semantic-h1{margin:0;max-width:68ch}
+main .sp-hero .sp-hero-h1{margin-top:0}
+main .a-normal:first-of-type>.a-shell>.cm-semantic-h1{margin-bottom:0}
+main .cm-semantic-h2{margin-bottom:8px}
+main .scene-copy .cm-semantic-h2,main .sp-scene .cm-semantic-h2{font-size:clamp(12px,1.12vw,16px)}
+main .detail-top>.cm-semantic-h2,main .sp-section-head>.cm-semantic-h2{margin-bottom:6px}
+main .statement-layout>.cm-semantic-h2{margin-bottom:10px}
+main .j-prose .cm-semantic-h2{font-size:clamp(20px,2vw,27px);margin:28px 0 12px}
+main .cm-archive>.j-shell>.cm-semantic-h2{margin-top:24px;font-size:clamp(17px,1.7vw,24px)}
+main .cm-claim-h1,main .cm-claim-h2{overflow-wrap:normal}
+@media(max-width:570px){
+ main .cm-semantic-h1{font-size:15px}
+ main .cm-semantic-h2{font-size:13px;line-height:1.35;margin-bottom:6px}
+ main .hero-content>.hero-heading{margin-top:9px;margin-bottom:12px}
+ main .hero-content>.cm-semantic-h1{margin-top:7px}
+ main .sp-hero .cm-semantic-h1{margin-bottom:0}
+}

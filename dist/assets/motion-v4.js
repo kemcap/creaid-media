@@ -27,11 +27,11 @@
   });
   return wrappers;
  }
- const dTitle=tokenize(detail.querySelector('.detail-top h2'));
+ const dTitle=tokenize(detail.querySelector('.detail-top .cm-claim-h2'));
  const cards=[...detail.querySelectorAll('.detail-card')];
  const cardTitles=cards.map(c=>tokenize(c.querySelector('h3')));
  const cardDesc=cards.map(c=>tokenize(c.querySelector('p')));
- const cTitle=tokenize(closing.querySelector('.service-closing h2'));
+ const cTitle=tokenize(closing.querySelector('.service-closing .cm-claim-h2'));
  const dKicker=detail.querySelector('.detail-kicker'),dLead=detail.querySelector('.detail-top>p'),dActions=detail.querySelector('.detail-actions');
  const cKicker=closing.querySelector('.micro'),cPara=closing.querySelector('.right p'),cCTA=closing.querySelector('.right .cta'),cFooter=closing.querySelector('.footer');
  const detailCue=document.createElement('div');detailCue.className='chapter-cue';detailCue.textContent='01 / 03 · SCROLLEN';detailCue.setAttribute('aria-hidden','true');dStage.append(detailCue);
