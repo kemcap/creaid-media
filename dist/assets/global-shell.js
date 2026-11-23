@@ -1,48 +1,43 @@
-/* Globales Menü: eine Logik für alle 59 Seiten, unabhängig von Page-Layouts. */
+/* Global CreAid-Media navigation; independent of page-specific scripts. */
 (() => {
-  const header = document.querySelector('[data-cm-header]');
+  'use strict';
+  const header = document.querySelector('#cm-global-header');
   if (!header) return;
-  const toggle = header.querySelector('[data-cm-toggle]');
-  const nav = header.querySelector('[data-cm-nav]');
-  const services = header.querySelector('[data-cm-services]');
-  if (!toggle || !nav) return;
-
-  const closeMenu = () => {
-    nav.classList.remove('cm-is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Hauptmenü öffnen');
-    header.classList.remove('cm-menu-open');
-    if (services) services.open = false;
+  const button = header.querySelector('#cm-menu-toggle');
+  const nav = header.querySelector('#cm-primary-nav');
+  const details = header.querySelector('.cm-header__services');
+  const mobile = () => window.matchMedia('(max-width: 860px)').matches;
+  const close = (restoreFocus = false) => {
+    nav.classList.remove('is-open');
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', 'Hauptmenü öffnen');
+    header.classList.remove('cm-header--menu-open');
+    if (details) details.open = false;
+    if (restoreFocus) button.focus();
   };
-
-  toggle.addEventListener('click', () => {
-    const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
-    if (!willOpen) return closeMenu();
-    nav.classList.add('cm-is-open');
-    header.classList.add('cm-menu-open');
-    toggle.setAttribute('aria-expanded', 'true');
-    toggle.setAttribute('aria-label', 'Hauptmenü schließen');
+  header.classList.add('cm-header--ready');
+  button.addEventListener('click', () => {
+    const open = !nav.classList.contains('is-open');
+    nav.classList.toggle('is-open', open);
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Hauptmenü schließen' : 'Hauptmenü öffnen');
+    header.classList.toggle('cm-header--menu-open', open);
+    if (!open && details) details.open = false;
   });
-
-  nav.addEventListener('click', (event) => {
-    if (event.target.closest('a')) closeMenu();
+  nav.addEventListener('click', event => {
+    if (event.target.closest('a') && mobile()) close();
   });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeMenu();
-      if (header.contains(document.activeElement)) toggle.focus();
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && (nav.classList.contains('is-open') || details?.open)) {
+      close(true);
     }
   });
-  document.addEventListener('click', (event) => {
-    if (!header.contains(event.target)) closeMenu();
+  document.addEventListener('pointerdown', event => {
+    if (!header.contains(event.target) && (nav.classList.contains('is-open') || details?.open)) close();
   });
-  window.matchMedia('(min-width: 981px)').addEventListener('change', (event) => {
-    if (event.matches) closeMenu();
-  });
-
-  const top = document.querySelector('[data-cm-backtop]');
-  top?.addEventListener('click', (event) => {
-    event.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  window.addEventListener('resize', () => {
+    if (!mobile() && nav.classList.contains('is-open')) close();
+  }, { passive: true });
+  // Don't trap navigation when JavaScript is unavailable; global-shell.css
+  // keeps the mobile links readable until this class is added.
 })();

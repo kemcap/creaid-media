@@ -32,52 +32,53 @@
 
 <a class="skip-to-main" href="#service-title">Zum Inhalt springen</a>
 <div class="topline"><div class="container micro"><span><span class="smallred"></span>CREAID · ERSTE HILFE FÜR IHRE MARKE</span><span>BRAND FIRST AID / LEISTUNGEN</span></div></div>
-
-<header class="cm-site-header" data-cm-header>
-  <div class="cm-header-inner">
-    <a class="cm-header-brand" href="/" aria-label="CreAid-Media – zur Startseite">
-      <img src="/assets/creaid-media-logo.webp" width="9066" height="1000" alt="CreAid-Media" decoding="async">
+<header class="cm-header" id="cm-global-header">
+  <div class="cm-header__inner">
+    <a class="cm-header__brand" href="/" aria-label="CreAid-Media – zur Startseite">
+      <img src="/assets/creaid-media-logo.webp" alt="CreAid-Media" width="9066" height="1000" decoding="async">
     </a>
-    <button class="cm-mobile-toggle" type="button" aria-controls="cm-primary-navigation" aria-expanded="false" aria-label="Hauptmenü öffnen" data-cm-toggle>
-      <span class="cm-toggle-line"></span><span class="cm-toggle-line"></span><span class="cm-toggle-line"></span>
+    <button class="cm-header__toggle" id="cm-menu-toggle" type="button" aria-controls="cm-primary-nav" aria-expanded="false" aria-label="Hauptmenü öffnen">
+      <span class="cm-header__toggle-label">Menü</span>
+      <span class="cm-header__toggle-icon" aria-hidden="true"><i></i><i></i><i></i></span>
     </button>
-    <nav class="cm-primary-navigation" id="cm-primary-navigation" aria-label="Hauptnavigation" data-cm-nav>
-      <ul class="cm-nav-list">
-        <li class="cm-nav-item cm-nav-services">
-          <details class="cm-nav-details" data-cm-services>
-            <summary class="cm-nav-summary">Leistungen <span class="cm-chevron" aria-hidden="true"></span></summary>
-            <div class="cm-nav-panel">
-              <a class="cm-panel-overview" href="/leistungen">Alle Leistungen <span aria-hidden="true">↗</span></a>
-              
-              
-              <a href="/leistungen/webdesign" aria-current="page">Webdesign und Entwicklung <span aria-hidden="true">↗</span></a>
-              
-              
-              
-              <a href="/leistungen/marketing">Digitales Marketing <span aria-hidden="true">↗</span></a>
-              
-              
-              
-              <a href="/leistungen/branding">Branding und Grafikdesign <span aria-hidden="true">↗</span></a>
-              
-              
-              
-              <a href="/leistungen/ki-automatisierung">KI und Automatisierung <span aria-hidden="true">↗</span></a>
-              
-              
-              
-              
-            </div>
-          </details>
-        </li>
-        <li><a href="/referenzen">Referenzen</a></li>
-        <li><a href="/ueber-uns">Über uns</a></li>
-        <li><a href="/creaid-blog">Journal</a></li>
-        <li class="cm-nav-cta"><a href="/kontakt">Projekt anfragen <span aria-hidden="true">↗</span></a></li>
-      </ul>
+    <nav class="cm-header__nav" id="cm-primary-nav" aria-label="Hauptnavigation">
+      <a class="cm-header__link" href="/">Startseite</a>
+      <details class="cm-header__services">
+        <summary class="cm-header__link" aria-label="Leistungen und Leistungsbereiche">
+          Leistungen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="cm-header__dropdown">
+          <div class="cm-header__dropdown-kicker">Was wir für Sie tun</div>
+          
+          
+          <a href="/leistungen/webdesign">Webdesign und Entwicklung <span aria-hidden="true">↗</span></a>
+          
+          
+          
+          <a href="/leistungen/marketing">Digitales Marketing <span aria-hidden="true">↗</span></a>
+          
+          
+          
+          <a href="/leistungen/branding">Branding und Grafikdesign <span aria-hidden="true">↗</span></a>
+          
+          
+          
+          <a href="/leistungen/ki-automatisierung">KI und Automatisierung <span aria-hidden="true">↗</span></a>
+          
+          
+          
+          
+          <a class="cm-header__dropdown-all" href="/leistungen">Alle Leistungen <span aria-hidden="true">→</span></a>
+        </div>
+      </details>
+      <a class="cm-header__link" href="/referenzen">Referenzen</a>
+      <a class="cm-header__link" href="/ueber-uns">Über uns</a>
+      <a class="cm-header__link" href="/creaid-blog">Journal</a>
+      <a class="cm-header__cta" href="/kontakt">Projekt anfragen <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
 </header>
+
 <main id="main"><section aria-labelledby="service-title" class="page-top"><div class="service-hero-inner">
 <p class="service-breadcrumb"><span class="little-plus">+</span><a href="/#kompetenzen">KOMPETENZEN</a><span>/</span>WEBDESIGN &amp; ENTWICKLUNG</p>
 <h1 id="service-title">WEBDESIGN
@@ -241,64 +242,68 @@
 <script defer="" src="/assets/motion-v4.js"></script>
 
 
-
-<footer class="cm-site-footer" id="cm-footer">
-  <div class="cm-footer-inner">
-    <div class="cm-footer-intro">
-      <div>
-        <p class="cm-footer-kicker"><span aria-hidden="true">✳</span> CREAID-MEDIA / FIRST AID FOR YOUR BRAND</p>
-        <h2>Gute Ideen.<br><em>Starke Wirkung.</em></h2>
-        <p>Webdesign, Markenauftritte, Marketing und smarte Abläufe. Alles für einen Auftritt, der zu Ihrem Unternehmen passt.</p>
+<footer class="cm-footer" id="cm-global-footer">
+  <div class="cm-footer__inner">
+    <div class="cm-footer__lead">
+      <div class="cm-footer__lead-copy">
+        <span class="cm-footer__eyebrow"><span aria-hidden="true">+</span> Ihr nächstes Projekt</span>
+        <h2>Ideen verdienen<br><em>Wirkung.</em></h2>
+        <p>Von der ersten Idee bis zum starken Auftritt. Wir bringen Gestaltung, Strategie und digitale Lösungen zusammen.</p>
       </div>
-      <a class="cm-footer-cta" href="/kontakt">Projekt besprechen <span aria-hidden="true">↗</span></a>
+      <a class="cm-footer__lead-cta" href="/kontakt">Projekt besprechen <span aria-hidden="true">↗</span></a>
     </div>
-    <div class="cm-footer-grid">
-      <div class="cm-footer-brand-column">
-        <a href="/" class="cm-footer-brand" aria-label="CreAid-Media zur Startseite"><img src="/assets/creaid-media-logo.webp" width="9066" height="1000" loading="lazy" decoding="async" alt="CreAid-Media"></a>
-        <p>Erste Hilfe für Ihre Werbung.</p>
-        <span class="cm-footer-location">Kreativagentur in Antalya · für Unternehmen in Deutschland und der Türkei.</span>
+    <div class="cm-footer__grid">
+      <div class="cm-footer__company">
+        <a class="cm-footer__logo" href="/" aria-label="CreAid-Media – zur Startseite">
+          <img src="/assets/creaid-media-logo.webp" width="9066" height="1000" alt="CreAid-Media" loading="lazy" decoding="async">
+        </a>
+        <p>Erste Hilfe für Ihre Marke.</p>
+        <div class="cm-footer__social" aria-label="Social Media">
+          <span title="Profiladresse noch nicht hinterlegt">Facebook</span>
+          <span title="Profiladresse noch nicht hinterlegt">Instagram</span>
+        </div>
       </div>
-      <nav class="cm-footer-column cm-footer-services" aria-labelledby="cm-footer-services-heading">
-        <h3 id="cm-footer-services-heading">Leistungen im Überblick</h3>
-        <ul class="cm-footer-links">
-          
-          <li><a href="/leistungen/webdesign">Webdesign und Entwicklung <span aria-hidden="true">↗</span></a></li>
-          
-          <li><a href="/leistungen/marketing">Digitales Marketing <span aria-hidden="true">↗</span></a></li>
-          
-          <li><a href="/leistungen/branding">Branding und Grafikdesign <span aria-hidden="true">↗</span></a></li>
-          
-          <li><a href="/leistungen/ki-automatisierung">KI und Automatisierung <span aria-hidden="true">↗</span></a></li>
-          
-          <li><a href="/kontakt">Projekt besprechen <span aria-hidden="true">↗</span></a></li>
-          
-        </ul>
-      </nav>
-      <div class="cm-footer-column cm-footer-contact">
-        <h3>Kontakt</h3>
+      <section class="cm-footer__services audit-related" aria-labelledby="cm-footer-leistungen-heading">
+        <div class="audit-inner">
+          <h2 id="cm-footer-leistungen-heading">Leistungen im Überblick</h2>
+          <ul class="audit-links">
+            
+            <li><a href="/leistungen/webdesign">Webdesign und Entwicklung <span aria-hidden="true">↗</span></a></li>
+            
+            <li><a href="/leistungen/marketing">Digitales Marketing <span aria-hidden="true">↗</span></a></li>
+            
+            <li><a href="/leistungen/branding">Branding und Grafikdesign <span aria-hidden="true">↗</span></a></li>
+            
+            <li><a href="/leistungen/ki-automatisierung">KI und Automatisierung <span aria-hidden="true">↗</span></a></li>
+            
+            <li><a href="/kontakt">Projekt besprechen <span aria-hidden="true">↗</span></a></li>
+            
+          </ul>
+        </div>
+      </section>
+      <section class="cm-footer__contact" aria-labelledby="cm-footer-contact-heading">
+        <h2 id="cm-footer-contact-heading">Kontakt</h2>
         <a href="tel:+4915678451152">+49 1567 8451152</a>
         <a href="mailto:info@creaid-media.de">info@creaid-media.de</a>
-        <address>Yeniköy Mahallesi, 71. Sokak No: 19<br>07190 Döşemealtı / Antalya<br>Türkei</address>
-      </div>
-      <div class="cm-footer-column cm-footer-company">
-        <h3>Unternehmen</h3>
-        <a href="/ueber-uns">Über uns</a>
-        <a href="/referenzen">Referenzen</a>
-        <a href="/creaid-blog">Journal</a>
-        <p class="cm-social-label">Social Media</p>
-        <p class="cm-social-unlinked" title="Links werden nach Bestätigung der Profiladressen ergänzt">Facebook · Instagram</p>
-      </div>
-    </div>
-    <div class="cm-footer-bottom">
-      <span>© 2026 CreAid-Media. Mit Ideen, die weiterhelfen.</span>
-      <nav aria-label="Rechtliche Informationen">
+        <address>
+          Yeniköy Mahallesi, 71. Sokak No: 19<br>07190 Döşemealtı / Antalya<br>Türkei
+        </address>
+      </section>
+      <nav class="cm-footer__legal" aria-label="Rechtliche Informationen">
+        <h2>Informationen</h2>
         <a href="/impressum">Impressum</a>
         <a href="/datenschutz">Datenschutz</a>
         <a href="/cookie-einstellungen">Cookie-Einstellungen</a>
+        <a href="/ueber-uns">Über CreAid-Media</a>
       </nav>
-      <a class="cm-backtop" href="#top" data-cm-backtop>Nach oben ↑</a>
+    </div>
+    <div class="cm-footer__bottom">
+      <span>© 2026 CreAid-Media · Kreativität mit Wirkung</span>
+      <span>Designvorschau · Nicht die veröffentlichte Unternehmenswebsite</span>
+      <a href="#cm-global-header">Nach oben ↑</a>
     </div>
   </div>
 </footer>
+
 </body>
 </html>
