@@ -44,11 +44,16 @@
    const a=phase(p,st,stop);textStage(el,a,(1-a)*offset);
   });
  }
+ let smoothingActive=false;
  function scrollProgress(section,stage){
   const outer=section.getBoundingClientRect(),distance=Math.max(1,outer.height-stage.getBoundingClientRect().height);
-  return clamp(-outer.top/distance);
+  const target=clamp(-outer.top/distance);
+  const sample=window.CreAidAdaptiveScroll?.progress(section,target) || {value:target,pending:false};
+  smoothingActive ||= sample.pending;
+  return sample.value;
  }
  function render(){
+  smoothingActive=false;
   if(reduced||prefersShort()){
    const all=[dKicker,dLead,dActions,cKicker,cPara,cCTA,cFooter,...cards,...dTitle,...cTitle,...cardTitles.flat(),...cardDesc.flat()];
    all.forEach(el=>{if(el){el.style.opacity='1';el.style.transform='none';}});
@@ -81,6 +86,7 @@
   textStage(cFooter,phase(c,.76,.89),(1-phase(c,.76,.89))*14);
   closing.style.setProperty('--closing-drift',((c-.5)*-53).toFixed(0)+'px');
   closingCue.textContent=c>=.89?'BEREIT FÜR IHR PROJEKT':'WEITER SCROLLEN';
+  if(smoothingActive)update();
  }
  if(!reduced)document.body.classList.add('motion-ready');
  let pending=false;

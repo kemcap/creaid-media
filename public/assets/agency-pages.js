@@ -13,12 +13,16 @@
   });nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='MENÜ ☰'}));}
   let raf=0;
   function draw(){raf=0;
+    let easingActive=false;
     const vh=window.innerHeight;
     tracks.forEach(track=>{
       const box=track.getBoundingClientRect();
       if(box.bottom < -vh*.2 || box.top > vh*1.2)return;
       const travel=Math.max(1,track.offsetHeight-vh);
-      const raw=clamp(-box.top/travel),k=clamp(raw/.9); // 90/10 hold
+      const target=clamp(-box.top/travel);
+      const sample=window.CreAidAdaptiveScroll?.progress(track,target) || {value:target,pending:false};
+      const raw=sample.value,k=clamp(raw/.9); // 90/10 hold
+      easingActive ||= sample.pending;
       track.style.setProperty('--a-progress',`${Math.round(raw*100)}%`);
       const percent=track.querySelector('[data-percent]');if(percent)percent.textContent=`${Math.round(raw*100).toString().padStart(2,'0')} %`;
       track.querySelectorAll('[data-step]').forEach((node,i)=>{
@@ -44,6 +48,7 @@
       });
       const active=track.querySelector('[data-active]');if(active)active.textContent=String(Math.min(3,Math.floor(k*3.0)+1)).padStart(2,'0');
     });
+    if(easingActive)update();
   }
   function update(){if(!raf)raf=requestAnimationFrame(draw)}
   if(!reduce.matches){document.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update,{passive:true});requestAnimationFrame(draw);}

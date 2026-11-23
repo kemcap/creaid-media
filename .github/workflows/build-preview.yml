@@ -35,6 +35,16 @@ jobs:
         run: |
           node --check public/assets/home-motion-v5.js
           node scripts/check-home-motion.mjs
+      - name: Check hero centering, ticker, pointer and adaptive motion
+        run: |
+          node --check public/assets/adaptive-scroll.js
+          node --check public/assets/home-motion-v5.js
+          node --check public/assets/agency-pages.js
+          node --check public/assets/specialty-pages.js
+          node --check public/assets/journal.js
+          node --check public/assets/motion-v4.js
+          node --check public/assets/scrollstory.js
+          node scripts/check-hero-experience.mjs
       - name: Update prebuilt local preview
         run: |
           git config user.name "github-actions[bot]"

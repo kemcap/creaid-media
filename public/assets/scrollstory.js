@@ -21,9 +21,12 @@ function ui(p){
 }
 if(reduced){document.body.classList.add('reduced-motion');ui(0);copies.forEach(e=>e.setAttribute('aria-hidden','false'));return;}
 const set=(el,x,y,sc,rot,opacity)=>{if(!el)return;el.style.transform=`translate(${x}%,${y}%) rotate(${rot}deg) scale(${sc})`;el.style.opacity=opacity;el.style.visibility=opacity<.015?'hidden':'visible';};
+let fallbackRequest=null;
 function nativeDraw(){
  const rect=story.getBoundingClientRect();
- const scrollProgress=clamp(-rect.top/Math.max(1,story.offsetHeight-innerHeight));
+ const target=clamp(-rect.top/Math.max(1,story.offsetHeight-innerHeight));
+ const sample=window.CreAidAdaptiveScroll?.progress(story,target) || {value:target,pending:false};
+ const scrollProgress=sample.value;
  const p=clamp(scrollProgress/.90); // last 10% is a stable final-scene buffer
  const a=ease(.015,.24,p),b=ease(.32,.57,p),c=ease(.68,.91,p);
  const op=[1-ease(.30,.42,p),ease(.31,.42,p)*(1-ease(.65,.77,p)),ease(.66,.78,p)];
@@ -39,6 +42,7 @@ function nativeDraw(){
   set(assets[2],45*(1-c),24*(1-c)-3*c,.75+.25*c,6-6*c,c);
  }
  ui(scrollProgress);
+ if(sample.pending)fallbackRequest?.();
 }
 function startGSAP(){
  if(!window.gsap||!window.ScrollTrigger)return false;
@@ -79,6 +83,7 @@ function startGSAP(){
 function fallback(){
  document.body.classList.add('native-fallback');let waiting=false;
  function update(){if(waiting)return;waiting=true;requestAnimationFrame(()=>{waiting=false;nativeDraw()})}
+ fallbackRequest=update;
  addEventListener('scroll',update,{passive:true});addEventListener('resize',update,{passive:true});update();
 }
 // Load the pinned local GSAP files. Keep the native fallback if loading fails.

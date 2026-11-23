@@ -10,6 +10,7 @@
   const state = new Map();
   const tracks = $$('.motion-track');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const adaptive = window.CreAidAdaptiveScroll;
   const navToggle = $('#navToggle'), nav = $('#siteNav');
   if (navToggle && nav) {
     navToggle.addEventListener('click', () => {
@@ -39,7 +40,8 @@
     n.lines.forEach((el,i)=> { opacity(el, 1 - exit * .47); translate(el,0,-exit*(18+i*18)); });
     translate(n.intro,0,-exit*28); opacity(n.intro,1-exit*.55);
     translate(n.actions,0,-exit*15); opacity(n.actions,1-exit*.45);
-    translate(n.axes, 0, exit*30); translate(n.stamp,0,-exit*30);
+    // The interactive crosshair owns the axes positioning.
+    translate(n.stamp,0,-exit*30);
   }
   function updateCapabilities(p) {
     // Die Servicekarten werden zeitgesteuert eingeblendet, nicht durch Scrollfortschritt gesteuert.
@@ -108,6 +110,7 @@
     tracks.forEach(t=>{
       const rect=t.getBoundingClientRect();
       state.set(t, { top:window.scrollY + rect.top, duration:Math.max(1,t.offsetHeight - window.innerHeight) });
+      adaptive?.reset(t);
     });
   }
   let scheduled = false;
@@ -118,10 +121,13 @@
       $$('.stage-footer [data-percent]').forEach(e=>e.textContent='100 %');
       return;
     }
-    let visibleIndex=0, local=0;
+    let visibleIndex=0, local=0, easingActive=false;
     tracks.forEach((t,i)=>{
       const conf=state.get(t); if(!conf)return;
-      const p=clamp((window.scrollY-conf.top)/conf.duration);
+      const target=clamp((window.scrollY-conf.top)/conf.duration);
+      const sample=adaptive ? adaptive.progress(t,target) : {value:target,pending:false};
+      const p=sample.value;
+      easingActive ||= sample.pending;
       const type=t.querySelector('[data-scene]')?.dataset.scene;
       if(type && updaters[type]) updaters[type](p);
       const meter=$(`[data-percent="${type}"]`,t);
@@ -133,6 +139,7 @@
     if(chapter)chapter.textContent=String(visibleIndex+1).padStart(2,'0')+' / '+(visibleIndex===4 && local>.7?'KONTAKT':names[visibleIndex]);
     if(count)count.textContent=String(visibleIndex+1).padStart(2,'0')+' — 05';
     if(line)line.style.height=(100*local)+'%';
+    if(easingActive) schedule();
   }
   function schedule(){ if(!scheduled){scheduled=true;requestAnimationFrame(render);} }
   let resizeTimer;
@@ -142,6 +149,63 @@
   reduced.addEventListener('change',()=>{measure();schedule()});
   window.addEventListener('load',()=>{measure();schedule()});
   measure();schedule();
+  // Hero Fadenkreuz: sanfte Maus-Nachführung, kurzer Touch-Impuls, niemals Pointer-Blocking.
+  const heroStage=$('.hero-stage'), cross=nodes.hero.axes;
+  if(heroStage && cross){
+    const fine=window.matchMedia('(hover:hover) and (pointer:fine)');
+    const motion={x:.60,y:.47,targetX:.60,targetY:.47,frame:0};
+    let touchFade;
+    const position=e=>{
+      const rect=heroStage.getBoundingClientRect();
+      return {x:clamp((e.clientX-rect.left)/Math.max(1,rect.width)),
+              y:clamp((e.clientY-rect.top)/Math.max(1,rect.height))};
+    };
+    const paint=(x,y)=>{
+      cross.style.setProperty('--cm-cross-x',`${(x*100).toFixed(3)}%`);
+      cross.style.setProperty('--cm-cross-y',`${(y*100).toFixed(3)}%`);
+    };
+    const follow=()=>{
+      motion.frame=0;
+      if(reduced.matches)return;
+      motion.x=mix(motion.x,motion.targetX,.14);
+      motion.y=mix(motion.y,motion.targetY,.14);
+      paint(motion.x,motion.y);
+      if(Math.abs(motion.targetX-motion.x)+Math.abs(motion.targetY-motion.y)>.001)
+        motion.frame=requestAnimationFrame(follow);
+    };
+    const cue=()=>{if(!motion.frame && !reduced.matches)motion.frame=requestAnimationFrame(follow)};
+    heroStage.addEventListener('pointermove',e=>{
+      if(reduced.matches)return;
+      if(e.pointerType==='touch'){
+        if(!cross.classList.contains('cm-cross-touch-active'))return;
+        const point=position(e);paint(point.x,point.y);
+      }else if(fine.matches){
+        const point=position(e);
+        motion.targetX=point.x;motion.targetY=point.y;
+        cue();
+      }
+    },{passive:true});
+    heroStage.addEventListener('pointerleave',e=>{
+      if(e.pointerType==='touch'||reduced.matches)return;
+      motion.targetX=.60;motion.targetY=.47;cue();
+    },{passive:true});
+    heroStage.addEventListener('pointerdown',e=>{
+      if(e.pointerType!=='touch'||reduced.matches)return;
+      clearTimeout(touchFade);
+      if(motion.frame){cancelAnimationFrame(motion.frame);motion.frame=0}
+      const point=position(e);
+      motion.x=motion.targetX=point.x;motion.y=motion.targetY=point.y;
+      paint(point.x,point.y);
+      cross.classList.add('cm-cross-touch-active');
+    },{passive:true});
+    const fadeTouch=()=>{
+      clearTimeout(touchFade);
+      touchFade=setTimeout(()=>cross.classList.remove('cm-cross-touch-active'),550);
+    };
+    heroStage.addEventListener('pointerup',fadeTouch,{passive:true});
+    heroStage.addEventListener('pointercancel',fadeTouch,{passive:true});
+  }
+
   // Mauslicht ist reines Dekor. Kein Cursor-Replacement, kein Maus-Blocking.
   const glow=$('.cursor-glow');
   if(glow && window.matchMedia('(hover:hover) and (pointer:fine)').matches && !reduced.matches){
