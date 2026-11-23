@@ -38,19 +38,23 @@
   "footerServices": [
     {
       "label": "Webdesign und Entwicklung",
-      "href": "/leistungen/webdesign"
+      "href": "/leistungen/webdesign",
+      "pageKey": "webdesign"
     },
     {
       "label": "Digitales Marketing",
-      "href": "/leistungen/marketing"
+      "href": "/leistungen/marketing",
+      "pageKey": "marketing"
     },
     {
       "label": "Branding und Grafikdesign",
-      "href": "/leistungen/branding"
+      "href": "/leistungen/branding",
+      "pageKey": "branding"
     },
     {
       "label": "KI und Automatisierung",
-      "href": "/leistungen/ki-automatisierung"
+      "href": "/leistungen/ki-automatisierung",
+      "pageKey": "ki-automatisierung"
     },
     {
       "label": "Projekt besprechen",
@@ -69,9 +73,42 @@
   },
   "social": {
     "facebook": "",
-    "instagram": ""
+    "instagram": "",
+    "linkedin": "https://www.linkedin.com/company/creaid-media"
   },
   "legal": {
     "status": "ENTWURF – vor Veröffentlichung rechtlich prüfen"
-  }
+  },
+  "specialtyServices": [
+    {
+      "label": "Onlineshop & E-Commerce",
+      "href": "/online-shop-entwicklung",
+      "pageKey": "onlineshops-ecommerce"
+    },
+    {
+      "label": "Webdesign für Handwerker",
+      "href": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "pageKey": "webdesign-handwerker"
+    },
+    {
+      "label": "Google Ads & Social Media",
+      "href": "/google-ads-social-media",
+      "pageKey": "google-ads-social-media"
+    },
+    {
+      "label": "SEO & Content-Marketing",
+      "href": "/seo-3",
+      "pageKey": "seo-content-marketing"
+    },
+    {
+      "label": "Printdesign & Editorial",
+      "href": "/print-design",
+      "pageKey": "printdesign-editorial"
+    },
+    {
+      "label": "KI-Workflows & CRM",
+      "href": "/ki-workflows-crm",
+      "pageKey": "ki-workflows-crm"
+    }
+  ]
 }

@@ -147,3 +147,16 @@ assert.ok(uxJS.includes('ResizeObserver')&&uxJS.includes('IntersectionObserver')
 assert.ok(homeJS.includes('(max-height:620px)'),'Homepage short viewport mask fallback missing');
 assert.ok(load('dist/assets/specialty-pages.js').includes("querySelectorAll('.sp-track.sp-story')"),'Static specialty cards should not be scroll-scrubbed');
 console.log('PASS: Phase 1 shared viewport, natural flow, accessible low-height fallbacks, compact footer on all '+files.length+' pages.');
+
+// Phase 2: explicit contact entry and all service topics, across the site.
+const contact=load('dist/kontakt.html');
+const topics=['Webdesign &amp; Entwicklung','Digitales Marketing','Branding &amp; Grafikdesign','KI &amp; Automatisierung','Onlineshop &amp; E-Commerce','Google Ads &amp; Social Media','SEO &amp; Content-Marketing','Printdesign &amp; Editorial','KI-Workflows &amp; CRM','Webdesign für Handwerker'];
+for(const topic of topics)assert.ok(contact.includes('value="'+topic+'"'),'Missing inquiry topic '+topic);
+for(const name of ['webdesign','marketing','branding','ki-automatisierung','onlineshops-ecommerce','google-ads-social-media','seo-content-marketing','printdesign-editorial','ki-workflows-crm','webdesign-handwerker']){
+  const page=load('dist/'+name+'.html');assert.ok(page.includes('/kontakt?service='),'No service-specific inquiry on '+name);assert.ok(!page.includes('ANIMATION ENTDECKEN <span>'),'Animation still primary on '+name);assert.ok(!page.includes('%26amp;'),'Malformed mailto encoding on '+name);
+}
+assert.ok(load('dist/index.html').includes('href="/kontakt#anfrage">Projekt besprechen'));
+assert.ok(load('dist/referenzen.html').includes('id="arbeitsproben"'));
+assert.ok(contact.includes('name="company"')&&contact.includes('name="phone"'));
+for(const name of files){const page=load('dist/'+name);assert.ok(page.includes('cm-header__specialties'),name+' missing specialty navigation');assert.ok(!page.includes('Profiladresse noch nicht hinterlegt'),name+' unlinked social placeholder');}
+console.log('PASS: Phase 2 CTA hierarchy, 10 service topics, grouped navigation and portfolio provenance.');

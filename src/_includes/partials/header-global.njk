@@ -14,19 +14,19 @@
           Leistungen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </summary>
         <div class="cm-header__dropdown">
-          <div class="cm-header__dropdown-kicker">Was wir für Sie tun</div>
+          <div class="cm-header__dropdown-kicker">Kompetenzbereiche</div>
           {% for item in site.footerServices %}
           {% if item.href != "/kontakt" %}
-          <a href="{{ item.href | escape }}">{{ item.label | escape }} <span aria-hidden="true">↗</span></a>
+          <a href="{{ item.href | escape }}"{% if item.pageKey == pageKey %} aria-current="page"{% endif %}>{{ item.label | escape }} <span aria-hidden="true">↗</span></a>
           {% endif %}
           {% endfor %}
-          <a class="cm-header__dropdown-all" href="/leistungen">Alle Leistungen <span aria-hidden="true">→</span></a>
+          <div class="cm-header__dropdown-kicker cm-header__specialty-label">Spezialleistungen</div><div class="cm-header__specialties">{% for item in site.specialtyServices %}<a href="{{ item.href | escape }}"{% if item.pageKey == pageKey %} aria-current="page"{% endif %}>{{ item.label | escape }} <span aria-hidden="true">↗</span></a>{% endfor %}</div><a class="cm-header__dropdown-all" href="/leistungen">Alle Leistungen <span aria-hidden="true">→</span></a>
         </div>
       </details>
       <a class="cm-header__link" href="/referenzen"{% if pageKey == "referenzen" %} aria-current="page"{% endif %}>Referenzen</a>
       <a class="cm-header__link" href="/ueber-uns"{% if pageKey == "ueber-uns" %} aria-current="page"{% endif %}>Über uns</a>
       <a class="cm-header__link" href="/creaid-blog"{% if pageKey == "blog" %} aria-current="page"{% endif %}>Journal</a>
-      <a class="cm-header__cta" href="/kontakt"{% if pageKey == "kontakt" %} aria-current="page"{% endif %}>Projekt anfragen <span aria-hidden="true">↗</span></a>
+      <a class="cm-header__cta" href="/kontakt"{% if pageKey == "kontakt" %} aria-current="page"{% endif %}>Projekt besprechen <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
 </header>
