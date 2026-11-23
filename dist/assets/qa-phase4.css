@@ -1,0 +1,7 @@
+/* Phase 4: narrow-screen legal readability and accessible controls. */
+.l-content :is(p,small,a,.l-placeholder),.l-info-table span{overflow-wrap:anywhere}
+.l-consent-actions button{min-height:44px;white-space:normal;text-align:left}
+.l-consent-panel .l-setting{cursor:default}
+main :is(a,button,input,select,textarea,summary):focus-visible{outline:2px solid #fa225b;outline-offset:4px}
+@media(max-width:570px){main > .l-hero .l-title{font-size:clamp(29px,8.6vw,49px);overflow-wrap:anywhere}.l-info-table>div,.l-status-list>div{min-width:0}.cm-header__nav.is-open{max-height:calc(100dvh - var(--cm-nav-height));overflow-y:auto;overscroll-behavior:contain}.cm-header__dropdown a{min-height:44px}.cm-depth-actions a{white-space:normal}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
