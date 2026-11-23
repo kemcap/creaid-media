@@ -33,4 +33,27 @@ const workCode=js.slice(js.indexOf('function updateWork('),js.indexOf('function 
 assert(!capCode.includes('n.tiles.forEach') && !workCode.includes('opacity(n.mag'), 'Service and work mockups must not be scrubbed by scroll');
 assert(fallback.includes('track-statement-contact') && fallback.includes('clip-path:none!important'), 'No-JS fallback missing');
 assert(css.includes('@media (prefers-reduced-motion: reduce)'), 'Reduced motion fallback missing');
+
+// Scroll-track durations are deliberately short for static gallery/capability scenes.
+for (const [name,height] of [
+  ['track-hero',118],['track-capabilities',155],['track-method',185],
+  ['track-work',150],['track-statement-contact',195]
+]) {
+  assert(source.includes('class="motion-track '+name+'"') && source.includes('--track:'+height+'vh'),
+    name+' must use the compact scroll distance '+height+'vh');
+}
+const heroBalance = readFileSync('dist/assets/hero-balance.css','utf8');
+assert(heroBalance.includes('height:calc(100dvh - 92px)') &&
+       heroBalance.includes('height:calc(100dvh - 76px)'),
+       'Hero stage and ticker must fit the visible desktop/mobile viewport');
+assert(js.includes('stage?.offsetHeight || window.innerHeight'),
+       'Scroll progress must be measured against the sticky stage height');
+const globalCSS = readFileSync('dist/assets/global-shell.css','utf8');
+assert(globalCSS.includes('Compact global footer'), 'Compact footer CSS missing');
+assert(globalCSS.includes('padding:38px 0 34px') &&
+       globalCSS.includes('padding:29px 0 33px'),
+       'Compact footer spacing missing');
+assert(html.includes('Ideen verdienen <em>Wirkung.</em>'),
+       'Compact footer heading must use natural wrapping');
+
 console.log('Homepage verified: time-staggered cards and mockups, one mask-based statement/contact section, separate global footer, fallback states.');

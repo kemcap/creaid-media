@@ -100,3 +100,38 @@
 
 /* Without JavaScript, mobile navigation remains accessible. */
 @media(max-width:860px){.cm-header:not(.cm-header--ready) .cm-header__nav{display:flex}.cm-header:not(.cm-header--ready) .cm-header__toggle{display:none}}
+
+/* Compact global footer – approved preview, retaining the existing semantic links. */
+.cm-footer__lead{padding:38px 0 34px;align-items:center;gap:24px}
+.cm-footer__eyebrow{font-size:10px;letter-spacing:.15em}
+.cm-footer__lead h2{font-size:clamp(36px,5vw,58px);line-height:1.02;margin:12px 0 10px;letter-spacing:-.067em}
+.cm-footer__lead p{font-size:13px;line-height:1.45;max-width:520px}
+.cm-footer__lead-cta{padding:15px 19px;min-width:200px;gap:22px;font-size:12px}
+.cm-footer__grid{grid-template-columns:1.12fr 1.35fr 1.2fr .9fr;gap:clamp(18px,2.4vw,34px);padding:29px 0 33px}
+.cm-footer__logo{width:min(205px,100%)}
+.cm-footer__company p{font-size:12px;line-height:1.5;margin:14px 0 12px}
+.cm-footer__social{gap:12px;font-size:11px}
+.cm-footer__grid h2,.cm-footer__services.audit-related h2{font-size:12px;margin-bottom:13px}
+.cm-footer__services .audit-links li{margin-bottom:6px}
+.cm-footer__services .audit-links a{font-size:12px;line-height:1.5}
+.cm-footer__contact>a,.cm-footer__legal>a{font-size:12px;line-height:1.5;margin-bottom:8px}
+.cm-footer__contact address{font-size:12px;line-height:1.55;margin-top:5px}
+.cm-footer__bottom{padding:16px 0 19px;gap:12px;font-size:10px}
+@media(max-width:1120px){
+  .cm-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 30px}
+}
+@media(max-width:860px){
+  .cm-footer__lead{padding:34px 0 30px;gap:18px;align-items:flex-start}
+  .cm-footer__lead h2{font-size:clamp(38px,7.4vw,56px)}
+}
+@media(max-width:570px){
+  .cm-footer__lead{padding:29px 0 29px}
+  .cm-footer__lead h2{font-size:clamp(36px,10vw,52px)}
+  .cm-footer__lead p{font-size:12px}
+  .cm-footer__lead-cta{width:100%;justify-content:space-between}
+  .cm-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px;padding:28px 0 30px}
+  .cm-footer__grid h2,.cm-footer__services.audit-related h2{font-size:11px;margin-bottom:12px}
+  .cm-footer__services .audit-links a{font-size:11px}
+  .cm-footer__contact>a,.cm-footer__legal>a,.cm-footer__contact address{font-size:11px}
+  .cm-footer__bottom{padding:16px 0 18px;gap:6px;font-size:10px}
+}
