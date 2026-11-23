@@ -93,8 +93,9 @@
 }
 /* Short landscape windows: let the hero grow naturally instead of clipping CTAs. */
 @media (min-width:901px) and (max-height:600px) {
-  .motion-track.track-hero {min-height:630px}
-  .hero-stage .hero-content {padding-top:102px;padding-bottom:76px}
+  .motion-track.track-hero {height:auto!important;min-height:700px}
+  .motion-track.track-hero .hero-stage {position:relative;height:auto;min-height:700px;overflow:visible}
+  .hero-stage .hero-content {min-height:700px;padding-top:110px;padding-bottom:80px}
   main > .a-normal:first-of-type {height:auto;min-height:630px;overflow:visible}
   main > .a-normal:first-of-type > .a-shell.a-l {min-height:630px;height:auto}
   .page-top,.page-top .service-hero-inner {min-height:620px}
