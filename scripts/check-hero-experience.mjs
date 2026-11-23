@@ -135,3 +135,15 @@ pointerHandlers.pointercancel.fn({pointerType:'touch',pointerId:1});
 assert.ok(touchTimer);touchTimer();
 assert.ok(!crossClasses.has('cm-cross-touch-active'),'Touch effect did not fade');
 console.log('PASS: '+files.length+' pages, responsive hero rules, looping service ticker, accessible crosshair, adaptive motion behavior.');
+
+// Phase 1 regression checks: common viewport system and natural scroll flow.
+const ux=load('dist/assets/ux-phase1.css'), uxJS=load('dist/assets/ux-phase1.js');
+for(const name of files){
+  const html=load('dist/'+name);
+  assert.ok(html.includes('/assets/ux-phase1.css')&&html.includes('/assets/ux-phase1.js'),name+' missing global UX assets');
+}
+for(const rule of ['--cm-nav-height','100dvh - var(--cm-nav-height)','body > .topline','main > .a-track:not(.sp-story)','main > .service-detail','main > .j-feature-track','main > .track-capabilities','main > .track-work','@media(max-height:620px)','cm-has-closing-cta','.cm-flow-enter','.j-article-hero.j-article-hero-v9'])assert.ok(ux.includes(rule),'Missing Phase 1 rule '+rule);
+assert.ok(uxJS.includes('ResizeObserver')&&uxJS.includes('IntersectionObserver'),'Header measurement and time-based reveals missing');
+assert.ok(homeJS.includes('(max-height:620px)'),'Homepage short viewport mask fallback missing');
+assert.ok(load('dist/assets/specialty-pages.js').includes("querySelectorAll('.sp-track.sp-story')"),'Static specialty cards should not be scroll-scrubbed');
+console.log('PASS: Phase 1 shared viewport, natural flow, accessible low-height fallbacks, compact footer on all '+files.length+' pages.');

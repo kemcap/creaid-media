@@ -1,5 +1,5 @@
 (() => { 'use strict';
- const tracks=[...document.querySelectorAll('.sp-track')]; if(!tracks.length)return;
+ const tracks=[...document.querySelectorAll('.sp-track.sp-story')]; if(!tracks.length)return;
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
  if(reduced.matches)return;
  const clamp=x=>Math.max(0,Math.min(1,x));
@@ -7,6 +7,7 @@
  let pending=false;
  function paint(){pending=false;let easingActive=false;const vh=window.innerHeight;
   tracks.forEach(track=>{
+    if(window.matchMedia('(max-height:620px),(max-width:900px) and (max-height:700px),(prefers-reduced-motion:reduce)').matches){track.querySelectorAll('.sp-scene').forEach(n=>n.setAttribute('aria-hidden','false'));return;}
     const rect=track.getBoundingClientRect();if(rect.bottom<0||rect.top>vh)return;
     const travel=Math.max(1,track.offsetHeight-vh),target=clamp(-rect.top/travel);
     const sample=window.CreAidAdaptiveScroll?.progress(track,target) || {value:target,pending:false};

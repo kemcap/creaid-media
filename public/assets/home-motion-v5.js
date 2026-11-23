@@ -64,7 +64,7 @@
   function updateStatementContact(p) {
     const n = nodes.statementContact;
     if (!n.contact || !n.statement) return;
-    const noWipe = reduced.matches || window.matchMedia('(max-width: 640px)').matches;
+    const noWipe = reduced.matches || window.matchMedia('(max-width:640px),(max-height:620px),(max-width:900px) and (max-height:700px)').matches;
     const reveal = noWipe ? 1 : show(p, .32, .82);
     // Nur die fuchsiafarbene Statement-Maske gibt den fertig aufgebauten Kontakt frei.
     n.contact.style.clipPath = `inset(0 0 0 ${(1-reveal)*100}%)`;

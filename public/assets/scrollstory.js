@@ -14,7 +14,8 @@ const ease=(a,b,p)=>{const t=clamp((p-a)/(b-a));return t*t*(3-2*t)};
 function ui(p){
  const active=p<.345?0:p<.69?1:2;
  steps.forEach((e,i)=>e.classList.toggle('active',i===active));
- copies.forEach((e,i)=>e.setAttribute('aria-hidden',i===active?'false':'true'));
+ const staticStory=matchMedia('(max-height:620px),(max-width:900px) and (max-height:700px),(prefers-reduced-motion:reduce)').matches;
+ copies.forEach((e,i)=>e.setAttribute('aria-hidden',staticStory||i===active?'false':'true'));
  const fill=story.querySelector('.progress-fill'),num=story.querySelector('.progress-number');
  if(fill)fill.style.width=(p*100).toFixed(0)+'%';
  if(num)num.textContent=String(Math.round(p*100)).padStart(2,'0')+'%';
