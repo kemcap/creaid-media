@@ -1,0 +1,7 @@
+# Phase 4 – Freigabestatus
+Die GitHub-Pages-Vorschau ist keine rechtlich freigegebene Produktionswebsite.
+- Firmenbezeichnung, Inhaber, amtliche Rechtsform, geschäftliche Anschrift und Erreichbarkeit anhand der Registrierung bestätigen. Register-/Steuerangaben, redaktionelle Verantwortung und Anwendbarkeit deutscher/türkischer Vorschriften prüfen.
+- Für die tatsächlichen Datenverarbeitungen Hoster, E-Mail-Anbieter, Auftragsverarbeiter, Rechtsgrundlagen, Speicherfristen, Empfänger, internationale Übermittlungen und ggf. EU-Vertretung/Datenschutzbeauftragten klären. Direkte HubSpot-Anbindung fehlt. Keine erfundenen Fristen oder Vertragsdaten.
+- Quellen: https://www.gesetze-im-internet.de/ddg/__5.html ; https://www.gesetze-im-internet.de/ttdsg/__25.html ; https://eur-lex.europa.eu/eli/reg/2016/679/oj ; https://www.kvkk.gov.tr/Icerik/6641/Obligation-to-inform ; https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages .
+- Kein optionaler Dienst in der geprüften Vorschau; alte lokale Demo-Präferenz nur auf ausdrücklichen Klick entfernen. Für künftige optionale Dienste Consent vor dem Laden, gleichwertige Ablehnung und Widerruf sowie tatsächliche Netzwerk-/Speicherprüfung implementieren.
+- Vor Produktion aktuelle Host-Konfiguration und TLS, Sicherheitsheader, Cache, Kompression, echte Ladezeiten/LCP/INP/CLS prüfen. Keine Live-Freigabe und keine Änderung an WordPress.

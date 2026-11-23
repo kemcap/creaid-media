@@ -193,3 +193,23 @@ for(const [key,p] of Object.entries(pageMeta)){
   if(p.isPost){assert.ok(postIndex.some(x=>x.slug===key));assert.equal(JSON.parse(p.structuredData)['@type'],'BlogPosting');}
 }
 console.log('PASS: Phase 3 content scope on 10 services, all 39 journal cards, unique metadata and stable URLs for 59 pages.');
+
+ // Phase 4: keep legal status honest, avoid automatic third-party resources/storage.
+const privacy=load('dist/datenschutz.html'), imprint=load('dist/impressum.html'), cookies=load('dist/cookie-einstellungen.html'), legalJs=load('dist/assets/legal-pages.js');
+assert.ok(!privacy.includes('{placeholder('),'Unrendered legal placeholders');
+assert.ok(privacy.includes('GitHub Pages')&&privacy.includes('GitHub-Datenschutzerklärung'));
+assert.ok(privacy.includes('keine neue Cookie-Präferenz')&&privacy.includes('direkte HubSpot-Übermittlung ist nicht eingerichtet'));
+assert.ok(imprint.includes('ENTWURF')&&imprint.includes('amtliche Geschäftsanschrift'));
+assert.ok(!cookies.includes('id="lSaveConsent"')&&!legalJs.includes('localStorage.setItem'));
+assert.ok(legalJs.includes("localStorage.removeItem('creaid-prototype-consent-v1')"));
+for(const name of files){
+ const html=load('dist/'+name);
+ assert.ok(html.includes('href="/assets/qa-phase4.css"'));
+ for(const match of html.matchAll(/<(?:script|img|iframe|video|audio|source)\b[^>]*\bsrc=["']([^"']+)["']/gi)){
+  assert.ok(!/^(?:https?:)?\/\//i.test(match[1]),'Unexpected external resource '+name+': '+match[1]);
+ }
+ for(const match of html.matchAll(/<link\b[^>]*>/gi)){
+  if(/\brel=["'](?:stylesheet|preload|preconnect|prefetch|dns-prefetch)["']/i.test(match[0]))assert.ok(!/\bhref=["'](?:https?:)?\/\//i.test(match[0]),'Unexpected external link resource '+name);
+ }
+}
+console.log('PASS: Phase 4 legal draft integrity, no automatic external HTML resources and no new preference storage.');
