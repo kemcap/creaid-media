@@ -101,6 +101,22 @@ RewriteCond %{THE_REQUEST} \s/+leistungen\.html(?:[?\s])
 RewriteRule ^leistungen\.html$ /leistungen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+leistungen/(?:[?\s])
 RewriteRule ^leistungen/$ /leistungen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/branding(?:[?\s])
+RewriteRule ^leistungen/branding$ /grafikdesign-2 [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/branding/(?:[?\s])
+RewriteRule ^leistungen/branding/$ /grafikdesign-2 [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/ki-automatisierung(?:[?\s])
+RewriteRule ^leistungen/ki-automatisierung$ /ki-automatisierung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/ki-automatisierung/(?:[?\s])
+RewriteRule ^leistungen/ki-automatisierung/$ /ki-automatisierung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/marketing(?:[?\s])
+RewriteRule ^leistungen/marketing$ /digitales-marketing [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/marketing/(?:[?\s])
+RewriteRule ^leistungen/marketing/$ /digitales-marketing [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign(?:[?\s])
+RewriteRule ^leistungen/webdesign$ /webdesign [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+leistungen/webdesign/(?:[?\s])
+RewriteRule ^leistungen/webdesign/$ /webdesign [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+logo-design-agentur\.html(?:[?\s])
 RewriteRule ^logo-design-agentur\.html$ /logo-design-agentur [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+logo-design-agentur/(?:[?\s])
