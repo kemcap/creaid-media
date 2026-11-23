@@ -223,3 +223,28 @@ for(const row of legacyCoverage){assert.ok(Object.values(routeMap).includes(row.
 for(const name of ['webdesign-aerzte','webdesign-immobilienmakler']){const html=load('dist/'+name+'.html');assert.ok(html.includes('sp-hero')&&html.includes('sp-story')&&html.includes('id="projektumfang"')&&html.includes('/assets/service-crosshair.js'));assert.ok(html.includes('/kontakt?service='));assert.ok(contact.includes('value="'+serviceDepth[name].topic+'"'));}
 for(const row of legacyCoverage.filter(x=>x.url.startsWith('/category/'))){const key=Object.keys(routeMap).find(k=>routeMap[k]===row.url);assert.ok(load('dist/'+key+'.html').includes('class="j-card"'));}
 console.log('PASS: 87 original sitemap URLs mapped, 98 content pages, 19 archives and 2 restored industry landing pages.');
+
+// Phase 6: full page-specific semantic outline, rendered in HTML before JS.
+const headingPlan=JSON.parse(load('src/_data/headingPlan.json'));
+assert.equal(Object.keys(headingPlan).length,98);
+const decode=t=>t.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
+const uniqueH1=new Set();
+for(const [key,plan] of Object.entries(headingPlan)){
+ const html=load('dist/'+key+'.html'),main=html.match(/<main\b[^>]*>[\s\S]*?<\/main>/)?.[0];
+ assert.ok(main,key+' missing main');
+ const hs=[...main.matchAll(/<h([123])\b[^>]*>([\s\S]*?)<\/h\1>/g)];
+ assert.equal((html.match(/<h1\b/g)||[]).length,1,key+' must have exactly one H1');
+ assert.equal(decode(hs[0][2]),plan.h1,key+' H1 mismatch');
+ assert.ok(!uniqueH1.has(plan.h1),'Duplicate H1 '+plan.h1);uniqueH1.add(plan.h1);
+ let previous=1;
+ for(const h of hs){
+  const level=Number(h[1]);assert.ok(level<=previous+1,key+' heading hierarchy jumps: '+decode(h[2]));previous=level;
+ }
+ assert.ok(html.includes('/assets/heading-semantics.css'),key+' missing semantic stylesheet');
+ if(plan.mode==='creative')assert.ok(main.includes('cm-claim-h1')&&main.includes('cm-semantic-h1'),key+' claim not retained');
+ if(plan.mode==='archive')assert.ok(main.includes('Beiträge zu '),key+' missing archive section heading');
+}
+assert.ok(load('dist/index.html').includes('ERSTE HILFE')&&load('dist/index.html').includes('hero-heading'));
+assert.ok(load('dist/assets/home-motion-v5.js').includes('.cap-intro .cm-claim-h2'));
+assert.ok(load('dist/assets/motion-v4.js').includes('.detail-top .cm-claim-h2'));
+console.log('PASS: all 98 pages have unique, visible H1 headings and no H1–H3 level jumps; creative claims and animation hooks preserved.');

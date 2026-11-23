@@ -1,4 +1,5 @@
 import { redirect, routeFiles } from './scripts/routes.mjs';
+import { transformHeadings, preserveClaimStyles } from './scripts/heading-semantics.mjs';
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'public/assets': 'assets' });
@@ -30,6 +31,8 @@ export default function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addTransform('semantic-headings',function(content){return transformHeadings(content,this.page.outputPath);});
+  eleventyConfig.on('eleventy.after',()=>preserveClaimStyles('dist'));
   eleventyConfig.addWatchTarget('src/_data/');
   return {
     dir: { input: 'src', includes: '_includes', data: '_data', output: 'dist' },
