@@ -53,6 +53,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+      # Give the GitHub Actions artifact index time to expose the fresh upload.
+      # Rerunning the same job would create duplicate github-pages artifacts.
+      - name: Wait for uploaded artifact registration
+        run: sleep 20
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
