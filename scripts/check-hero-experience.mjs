@@ -77,4 +77,24 @@ assert.equal(controller.progress(node,.8).value,.8,'Touch interaction must use n
 media.matches=true;
 assert.equal(controller.progress(node,.2).value,.2,'Reduced motion must bypass smoothing');
 assert.ok(events.wheel[0].options.passive,'Wheel events must not be intercepted');
+
+// Webdesign compact sections and scoped styles – other service pages remain unchanged.
+const wd=load('dist/webdesign.html');
+assert.ok(wd.includes('<main id="main" class="webdesign-page">'), 'Only Webdesign must opt in to shorter scroll tracks');
+for(const part of ['webdesign-story','service-detail','service-closing']) {
+  assert.ok(wd.includes(part), 'Webdesign missing '+part);
+}
+for(const expected of [
+  'main.webdesign-page > .service-story.webdesign-story {height:235svh}',
+  'main.webdesign-page > .service-detail {height:205svh}',
+  'main.webdesign-page > .service-closing {height:170svh}',
+  'main.webdesign-page > .service-story.webdesign-story {height:265svh}',
+  '@media(max-width:900px) and (max-height:610px)',
+  '@media(prefers-reduced-motion:reduce)'
+])assert.ok(balance.includes(expected), 'Webdesign-specific motion override missing: '+expected);
+for(const filename of ['branding.html','marketing.html','ki-automatisierung.html']){
+  const other=load('dist/'+filename);
+  assert.ok(!other.includes('class="webdesign-page"'),filename+' unexpectedly inherits Webdesign scroll changes');
+}
+
 console.log('PASS: '+files.length+' pages, responsive hero rules, looping service ticker, accessible crosshair, adaptive motion behavior.');

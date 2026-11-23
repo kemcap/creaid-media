@@ -218,3 +218,31 @@
 @media(max-width:840px){
   .hero-stage .cm-hero-ticker .cm-hero-ticker__item:last-child{display:flex}
 }
+
+/* Webdesign-only shorter chapter scroll tracks.
+   Preserve 3 scene changes, cumulative detail-card entrances and closing CTA animation.
+   All other service pages retain their existing motion timings. */
+main.webdesign-page > .service-story.webdesign-story {height:235svh}
+main.webdesign-page > .service-detail {height:205svh}
+main.webdesign-page > .service-closing {height:170svh}
+@media(max-width:900px){
+  main.webdesign-page > .service-story.webdesign-story {height:260svh}
+  main.webdesign-page > .service-detail {height:225svh}
+  main.webdesign-page > .service-closing {height:185svh}
+}
+@media(max-width:560px){
+  main.webdesign-page > .service-story.webdesign-story {height:265svh}
+  main.webdesign-page > .service-detail {height:225svh}
+  main.webdesign-page > .service-closing {height:190svh}
+}
+/* At very low mobile landscape heights, retain the existing natural-flow
+   content accessibility instead of creating a pinned scroll trap. */
+@media(max-width:900px) and (max-height:610px){
+  main.webdesign-page > .service-detail,
+  main.webdesign-page > .service-closing {height:auto;min-height:100svh}
+}
+@media(prefers-reduced-motion:reduce){
+  main.webdesign-page > .service-story.webdesign-story,
+  main.webdesign-page > .service-detail,
+  main.webdesign-page > .service-closing {height:auto!important;min-height:100svh}
+}
