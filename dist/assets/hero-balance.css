@@ -1,0 +1,190 @@
+/* CreAid-Media – viewport-balanced hero system.
+   Overrides the separate page-family layouts without changing their mobile composition. */
+@media (min-width:901px) {
+  /* Homepage: all intro elements form one vertically balanced group above the ticker. */
+  .hero-stage .hero-content {
+    min-height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding-top:clamp(94px,11.5vh,132px);
+    padding-bottom:clamp(86px,10.5vh,122px);
+  }
+  .hero-stage .hero-heading {
+    font-size:clamp(57px,min(10.05vw,13vh),154px);
+    margin:clamp(13px,2vh,24px) 0 clamp(14px,2.4vh,28px);
+  }
+  .hero-stage .hero-bottom,
+  .hero-stage .hero-actions {flex-shrink:0}
+  .hero-stage .hero-actions {margin-top:clamp(15px,2.5vh,28px)}
+
+  /* Agency and speciality heroes: remove the bottom-pushed CTA block. */
+  main > .a-normal:first-of-type > .a-shell.a-l {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:clamp(13px,2.2vh,24px);
+    padding-top:clamp(102px,12vh,142px);
+    padding-bottom:clamp(74px,9vh,104px);
+  }
+  main > .a-normal:first-of-type .a-h1 {
+    margin:0;
+    font-size:clamp(53px,min(9.2vw,13.2vh),151px);
+  }
+  main > .a-normal:first-of-type .sp-hero-h1 {
+    font-size:clamp(50px,min(8.6vw,12.6vh),138px);
+  }
+  main > .a-normal:first-of-type .a-intro-row {
+    margin-top:0;
+    align-items:center;
+  }
+  main > .a-normal:first-of-type .sp-hero-bottom {padding-bottom:0}
+
+  /* Webdesign / Marketing / Branding / AI service heroes. */
+  .page-top {
+    min-height:calc(100vh - 92px);
+    min-height:calc(100dvh - 92px);
+  }
+  .page-top .service-hero-inner {
+    min-height:calc(100vh - 92px);
+    min-height:calc(100dvh - 92px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding-top:clamp(86px,10vh,125px);
+    padding-bottom:clamp(86px,10vh,125px);
+  }
+  .page-top .service-hero-inner h1 {
+    font-size:clamp(55px,min(8.3vw,14vh),133px);
+    margin-bottom:clamp(15px,3vh,31px);
+  }
+  .page-top .service-breadcrumb {margin-bottom:clamp(14px,3vh,29px)}
+  .page-top .service-hero-index {bottom:clamp(25px,4.2vh,54px)}
+
+  /* Journal: preserve artwork and editorial treatment, balance top/bottom air. */
+  .j-hero .j-shell {
+    justify-content:center;
+    padding-top:clamp(96px,11vh,138px);
+    padding-bottom:clamp(90px,11vh,128px);
+  }
+  .j-hero .j-hero-title {
+    font-size:clamp(61px,min(10.8vw,14vh),166px);
+    margin:clamp(18px,3vh,30px) 0;
+  }
+
+  /* Legal pages: the legal progress line stays pinned to the bottom. */
+  .l-hero .l-hero-in {
+    justify-content:center;
+    gap:clamp(18px,3vh,32px);
+    padding-top:clamp(100px,12vh,142px);
+    padding-bottom:clamp(90px,10vh,128px);
+  }
+  .l-hero .l-title {
+    margin:0;
+    font-size:clamp(54px,min(10.3vw,13.4vh),158px);
+  }
+  .l-hero .l-hero-bottom {margin-top:0;padding-bottom:0}
+  .l-hero .l-hero-line {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:clamp(17px,3vh,27px);
+  }
+}
+/* Short landscape windows: let the hero grow naturally instead of clipping CTAs. */
+@media (min-width:901px) and (max-height:600px) {
+  .motion-track.track-hero {min-height:630px}
+  .hero-stage .hero-content {padding-top:102px;padding-bottom:76px}
+  main > .a-normal:first-of-type {height:auto;min-height:630px;overflow:visible}
+  main > .a-normal:first-of-type > .a-shell.a-l {min-height:630px;height:auto}
+  .page-top,.page-top .service-hero-inner {min-height:620px}
+  .j-hero,.j-hero .j-shell {min-height:680px}
+  .l-hero {height:auto;min-height:630px;overflow:visible}
+  .l-hero .l-hero-in {min-height:630px;height:auto}
+}
+
+/* Hero ticker – continuous right-to-left loop with two identical sequences. */
+.hero-stage .cm-hero-ticker {
+  z-index:12;
+  display:block;
+  padding:0;
+  overflow:hidden;
+  background:rgba(18,19,21,.96);
+  border-top:1px solid rgba(255,255,255,.17);
+  height:60px;
+  line-height:60px;
+  color:#bcb6bc;
+}
+.cm-hero-ticker__viewport {overflow:hidden;width:100%;height:100%}
+.cm-hero-ticker__track {
+  display:flex;
+  width:max-content;
+  height:100%;
+  align-items:center;
+  animation:cm-hero-ticker-move 31s linear infinite;
+}
+.cm-hero-ticker__group {
+  display:flex;
+  align-items:center;
+  flex:0 0 auto;
+  gap:clamp(24px,4vw,65px);
+  white-space:nowrap;
+  padding-right:clamp(24px,4vw,65px);
+}
+.cm-hero-ticker__item {
+  color:#c1bbc0;
+  font-size:11px;
+  letter-spacing:.17em;
+  font-weight:800;
+  text-transform:uppercase;
+  line-height:1.1;
+  display:flex;
+  align-items:center;
+  gap:clamp(24px,4vw,65px);
+}
+.cm-hero-ticker__item::after {
+  content:'+';
+  display:inline-block;
+  font-size:19px;
+  font-weight:400;
+  color:#fa225b;
+}
+@keyframes cm-hero-ticker-move {to{transform:translate3d(-50%,0,0)}}
+.cm-sr-only {
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+/* The existing axes form the decorative interactive crosshair. */
+.hero-stage .axes {
+  --cm-cross-x:60%;
+  --cm-cross-y:47%;
+  pointer-events:none;
+  transition:opacity .28s ease;
+}
+.hero-stage .axes span:first-child {left:var(--cm-cross-x)}
+.hero-stage .axes span:nth-child(2) {top:var(--cm-cross-y)}
+.hero-stage .axes b {
+  left:calc(var(--cm-cross-x) - 4px);
+  top:calc(var(--cm-cross-y) - 4px);
+  box-shadow:0 0 0 6px rgba(250,34,91,.04);
+}
+@media (max-width:600px) {
+  .hero-stage .cm-hero-ticker {height:42px;line-height:42px}
+  .cm-hero-ticker__item {font-size:9px}
+}
+@media (hover:none), (pointer:coarse) {
+  .hero-stage .axes {opacity:.15}
+  .hero-stage .axes.cm-cross-touch-active {opacity:.83}
+}
+@media (prefers-reduced-motion:reduce) {
+  .cm-hero-ticker__track {animation:none;transform:none}
+  .hero-stage .axes {transition:none!important}
+}

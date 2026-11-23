@@ -5,10 +5,13 @@
  const clamp=x=>Math.max(0,Math.min(1,x));
  const ease=(a,b,x)=>{const t=clamp((x-a)/Math.max(.0001,b-a));return t*t*(3-2*t)};
  let pending=false;
- function paint(){pending=false;const vh=window.innerHeight;
+ function paint(){pending=false;let easingActive=false;const vh=window.innerHeight;
   tracks.forEach(track=>{
     const rect=track.getBoundingClientRect();if(rect.bottom<0||rect.top>vh)return;
-    const travel=Math.max(1,track.offsetHeight-vh),raw=clamp(-rect.top/travel),k=clamp(raw/.9);
+    const travel=Math.max(1,track.offsetHeight-vh),target=clamp(-rect.top/travel);
+    const sample=window.CreAidAdaptiveScroll?.progress(track,target) || {value:target,pending:false};
+    const raw=sample.value,k=clamp(raw/.9);
+    easingActive ||= sample.pending;
     track.style.setProperty('--a-progress', `${Math.round(raw*100)}%`);
     const percentage=track.querySelector('[data-percent]');if(percentage)percentage.textContent=`${String(Math.round(raw*100)).padStart(2,'0')} %`;
     // Scenes: fade previous out before next takes center stage; final composition holds through 90–100%.
@@ -23,6 +26,7 @@
     track.querySelectorAll('[data-sp-end]').forEach((node,i)=>{const w=ease(.04+i*.26,.24+i*.26,k);node.style.opacity=String(.03+.97*w);node.style.transform=`translate3d(0,${(1-w)*46}px,0)`;});
     track.querySelectorAll('.sp-hub-link,.sp-hub-card').forEach((node,i)=>{const w=ease(.03+(i%6)*.12,.22+(i%6)*.12,k);node.style.opacity=String(.2+.8*w);node.style.transform=`translate3d(0,${(1-w)*25}px,0)`;});
   });
+  if(easingActive)request();
  }
  function request(){if(!pending){pending=true;window.requestAnimationFrame(paint);}}
  window.addEventListener('scroll',request,{passive:true});window.addEventListener('resize',request,{passive:true});request();
