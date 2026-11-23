@@ -78,23 +78,60 @@ media.matches=true;
 assert.equal(controller.progress(node,.2).value,.2,'Reduced motion must bypass smoothing');
 assert.ok(events.wheel[0].options.passive,'Wheel events must not be intercepted');
 
-// Webdesign compact sections and scoped styles – other service pages remain unchanged.
-const wd=load('dist/webdesign.html');
-assert.ok(wd.includes('<main id="main" class="webdesign-page">'), 'Only Webdesign must opt in to shorter scroll tracks');
-for(const part of ['webdesign-story','service-detail','service-closing']) {
-  assert.ok(wd.includes(part), 'Webdesign missing '+part);
+// Shared compact tracks and interactive service hero coverage.
+for(const filename of ['webdesign.html','branding.html','marketing.html','ki-automatisierung.html']){
+  const page=load('dist/'+filename);
+  for(const part of ['class="page-top"','service-story','service-detail','service-closing','/assets/service-crosshair.js'])
+    assert.ok(page.includes(part),filename+' missing '+part);
+}
+for(const filename of ['leistungen.html','onlineshops-ecommerce.html','google-ads-social-media.html','printdesign-editorial.html','seo-content-marketing.html','ki-workflows-crm.html','webdesign-handwerker.html']){
+  const page=load('dist/'+filename);
+  assert.ok(page.includes('sp-hero')&&page.includes('/assets/service-crosshair.js'),filename+' missing shared hero crosshair');
+  assert.ok(page.includes('sp-track'),filename+' missing specialty chapters');
 }
 for(const expected of [
-  'main.webdesign-page > .service-story.webdesign-story {height:235svh}',
-  'main.webdesign-page > .service-detail {height:205svh}',
-  'main.webdesign-page > .service-closing {height:170svh}',
-  'main.webdesign-page > .service-story.webdesign-story {height:265svh}',
+  'main > .service-story.web-story {height:235svh}',
+  'main > .service-detail {height:205svh}',
+  'main > .service-closing {height:170svh}',
+  'main > .a-track {height:175vh',
+  'main > .a-track.sp-story {height:235vh',
+  'main > .sp-track#leistungen-im-detail {height:205vh',
+  'main > .sp-track#ablauf {height:185vh',
+  'main > .j-feature-track {height:155vh',
+  'main > .service-story.web-story {height:265svh}',
   '@media(max-width:900px) and (max-height:610px)',
-  '@media(prefers-reduced-motion:reduce)'
-])assert.ok(balance.includes(expected), 'Webdesign-specific motion override missing: '+expected);
-for(const filename of ['branding.html','marketing.html','ki-automatisierung.html']){
-  const other=load('dist/'+filename);
-  assert.ok(!other.includes('class="webdesign-page"'),filename+' unexpectedly inherits Webdesign scroll changes');
-}
-
+  '@media(prefers-reduced-motion:reduce)',
+  '.sp-hero.cm-crosshair-ready > .a-grid-cross {display:none}'
+])assert.ok(balance.includes(expected),'Missing shared motion rule: '+expected);
+const crossJS=load('dist/assets/service-crosshair.js');
+const pointerHandlers={}, props={}, classes=new Set();
+const fakeHero={
+ querySelector:()=>null, prepend(el){this.cross=el},
+ classList:{add:s=>classes.add(s)},
+ getBoundingClientRect:()=>({left:0,top:0,width:1000,height:500}),
+ addEventListener:(name,fn,opts)=>pointerHandlers[name]={fn,opts}
+};
+const crossClasses=new Set();
+const fakeCross={setAttribute(k,v){this[k]=v},append(){},
+ style:{setProperty:(k,v)=>props[k]=v},
+ classList:{add:x=>crossClasses.add(x),remove:x=>crossClasses.delete(x)}};
+let nextFrame, touchTimer;
+const noMotion={matches:false,addEventListener(){}};
+runInNewContext(crossJS,{
+ document:{querySelectorAll:()=>[fakeHero],createElement:tag=>tag==='div'?fakeCross:{}},
+ window:{matchMedia:q=>q.includes('reduced-motion')?noMotion:{matches:true}},
+ requestAnimationFrame:fn=>{nextFrame=fn;return 1},cancelAnimationFrame:()=>{nextFrame=null},
+ setTimeout:fn=>{touchTimer=fn;return 1},clearTimeout:()=>{touchTimer=null}
+});
+assert.ok(classes.has('cm-crosshair-ready')&&fakeCross['aria-hidden']==='true');
+assert.ok(pointerHandlers.pointermove.opts.passive,'Do not intercept native scroll');
+pointerHandlers.pointermove.fn({pointerType:'mouse',clientX:900,clientY:100});
+assert.ok(nextFrame);nextFrame();
+assert.ok(parseFloat(props['--cm-cross-x'])>60,'Mouse follow failed');
+pointerHandlers.pointerdown.fn({pointerType:'touch',pointerId:1,clientX:250,clientY:125});
+assert.equal(props['--cm-cross-x'],'25.000%');
+assert.ok(crossClasses.has('cm-cross-touch-active'));
+pointerHandlers.pointercancel.fn({pointerType:'touch',pointerId:1});
+assert.ok(touchTimer);touchTimer();
+assert.ok(!crossClasses.has('cm-cross-touch-active'),'Touch effect did not fade');
 console.log('PASS: '+files.length+' pages, responsive hero rules, looping service ticker, accessible crosshair, adaptive motion behavior.');
