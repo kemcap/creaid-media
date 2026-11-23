@@ -109,7 +109,8 @@
   function measure(){
     tracks.forEach(t=>{
       const rect=t.getBoundingClientRect();
-      state.set(t, { top:window.scrollY + rect.top, duration:Math.max(1,t.offsetHeight - window.innerHeight) });
+      const stage = t.querySelector('.motion-stage');
+      state.set(t, { top:window.scrollY + rect.top, duration:Math.max(1,t.offsetHeight - (stage?.offsetHeight || window.innerHeight)) });
       adaptive?.reset(t);
     });
   }

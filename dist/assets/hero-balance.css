@@ -189,3 +189,32 @@
   .cm-hero-ticker__track {animation:none;transform:none}
   .hero-stage .axes {transition:none!important}
 }
+
+/* Keep the ticker within the first viewport, below the 92px / 76px sticky global header.
+   Normal viewports: hero-stage starts at header bottom and ends exactly at viewport bottom. */
+.track-hero .hero-stage{
+  top:92px;
+  height:calc(100vh - 92px);
+  height:calc(100dvh - 92px);
+}
+@media(max-width:860px){
+  .track-hero .hero-stage{
+    top:76px;
+    height:calc(100vh - 76px);
+    height:calc(100dvh - 76px);
+  }
+}
+@media(max-width:530px) and (max-height:700px){
+  .hero-stage .hero-content{padding-top:clamp(68px,11vh,91px)}
+  .hero-stage .hero-heading{font-size:clamp(39px,11vw,58px);margin:11px 0 12px}
+  .hero-stage .hero-bottom{margin-top:8px}
+  .hero-stage .hero-actions{margin-top:12px}
+}
+/* The short-landscape fallback favors readable, accessible CTA content over clipping. */
+@media(min-width:901px) and (max-height:600px){
+  .track-hero .hero-stage{top:0;height:auto;min-height:700px}
+}
+/* Original generic mobile rules hide last-child spans; never hide ticker services. */
+@media(max-width:840px){
+  .hero-stage .cm-hero-ticker .cm-hero-ticker__item:last-child{display:flex}
+}
