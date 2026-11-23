@@ -57,3 +57,9 @@ assert(html.includes('Ideen verdienen <em>Wirkung.</em>'),
        'Compact footer heading must use natural wrapping');
 
 console.log('Homepage verified: time-staggered cards and mockups, one mask-based statement/contact section, separate global footer, fallback states.');
+
+assert(html.includes('<span class="pink-dot" aria-hidden="true"></span>'),'Decorative hero ball missing');
+assert(css.includes('animation:cm-hero-ball-hop 3s infinite'),'Hero ball needs a three-second loop');
+assert(css.includes('margin-left:.15em')&&css.includes('translateY(-.65em)')&&css.includes('translateY(-.20em)'),'Hero ball spacing and rebound must match approved prototype');
+assert(css.includes('animation:none!important;transform:none!important'),'Reduced-motion fallback missing');
+console.log('PASS: decorative homepage ball, elastic rebound, spacing and reduced motion.');

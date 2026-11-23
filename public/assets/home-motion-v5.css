@@ -199,3 +199,28 @@ html.cm-enhanced .work-gallery.is-revealed .work-browser {
   .statement-contact-stage .statement-mask-edge {display:none}
   .contact-scroll-anchor {top:100dvh}
 }
+
+/* Homepage signature: elastic ball bounce, independent of the scroll animation. */
+.hero-heading .hero-last .pink-dot{
+  display:inline-block!important;
+  width:.18em;height:.18em;
+  margin-left:.15em;
+  vertical-align:baseline;
+  background:var(--pink);
+  border-radius:50%;
+  transform-origin:center bottom;
+  animation:cm-hero-ball-hop 3s infinite;
+}
+@keyframes cm-hero-ball-hop{
+  0%,62%,100%{transform:translateY(0) scale(1)}
+  65%{transform:translateY(0) scale(1.15,.8);animation-timing-function:cubic-bezier(.1,.6,.35,1)}
+  73%{transform:translateY(-.65em) scale(.94,1.07);animation-timing-function:cubic-bezier(.55,0,.95,.6)}
+  81%{transform:translateY(0) scale(.96,1.07)}
+  83%{transform:translateY(0) scale(1.28,.72);animation-timing-function:ease-out}
+  88%{transform:translateY(-.20em) scale(1);animation-timing-function:ease-in}
+  93%{transform:translateY(0) scale(1.12,.88)}
+  97%{transform:translateY(0) scale(1)}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-heading .hero-last .pink-dot{animation:none!important;transform:none!important}
+}
