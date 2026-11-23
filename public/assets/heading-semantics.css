@@ -26,3 +26,11 @@ main .cm-claim-h1,main .cm-claim-h2{overflow-wrap:normal}
  main .hero-content>.cm-semantic-h1{margin-top:7px}
  main .sp-hero .cm-semantic-h1{margin-bottom:0}
 }
+
+/* Journal listing uses a two-column editorial grid. The semantic label and the
+   preserved claim belong in the first column, not two separate columns. */
+main .j-listing-head{row-gap:8px}
+main .j-listing-head>.cm-semantic-h2{grid-column:1;grid-row:1;margin:0;align-self:end;min-width:0}
+main .j-listing-head>.cm-claim-h2{grid-column:1;grid-row:2;min-width:0;margin-top:0}
+main .j-listing-head>p{grid-column:2;grid-row:2;min-width:0}
+@media(max-width:780px){main .j-listing-head>p{grid-column:1;grid-row:3}}
