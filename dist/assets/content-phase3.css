@@ -13,3 +13,6 @@
 .cm-depth-actions a.cm-depth-primary{background:#b3284f;color:#fff;text-decoration:none;padding:12px 19px}
 .cm-depth-actions a:focus-visible{outline:2px solid #420915;outline-offset:4px}
 @media(max-width:800px){.cm-depth-inner{width:calc(100% - 36px)}.cm-depth-grid{grid-template-columns:1fr}.cm-depth-grid p{font-size:14px}.cm-depth-actions{align-items:flex-start}}
+
+/* Phase 5: restored archive pages and discoverable topic navigation. */
+.cm-archive{padding:clamp(40px,6vw,80px) 0}.cm-archive-title{font-size:clamp(36px,7vw,88px);line-height:1.06;margin:20px 0;overflow-wrap:anywhere}.cm-archive .j-articles{margin-top:28px}.cm-archive-links{margin:28px 0}.cm-archive-links h3{font-size:16px}.cm-archive-links>div{display:flex;flex-wrap:wrap;gap:8px}.cm-archive-links a{display:inline-flex;min-height:44px;align-items:center;padding:6px 12px;border:1px solid currentColor;text-decoration:none;font-size:13px}.cm-archive-links a:hover{text-decoration:underline}.cm-service-depth h3 a{color:inherit;text-decoration:underline;text-underline-offset:4px}.cm-service-depth .audit-links a{overflow-wrap:anywhere}
