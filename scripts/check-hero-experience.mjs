@@ -31,6 +31,7 @@ for(const selector of [
   '.hero-stage .axes b'
 ])assert.ok(balance.includes(selector),'Missing layout or interaction style: '+selector);
 assert.ok(balance.includes('justify-content:center'),'Desktop centering missing');
+assert.ok(balance.includes('position:relative;height:auto;min-height:700px;overflow:visible'),'Short desktop viewports must not clip hero CTAs');
 assert.ok(balance.includes('min(10.05vw,13vh)'),'Viewport-height responsive typography missing');
 assert.ok(balance.includes('31s linear infinite'),'Ticker must run smoothly');
 assert.ok(balance.includes('translate3d(-50%,0,0)'),'Ticker loop incomplete');
