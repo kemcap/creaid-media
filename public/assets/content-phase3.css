@@ -1,8 +1,9 @@
+/* cm-semantic-heading-selectors-v1 */
 /* Phase 3 – content in natural flow, aligned with the editorial design system. */
 .cm-service-depth{background:#f4f2ee;color:#202023;padding:clamp(44px,7vw,96px) 0;overflow:hidden}
 .cm-depth-inner{width:min(1320px,calc(100% - 76px));margin:auto}
 .cm-depth-kicker{font-size:11px;font-weight:700;letter-spacing:.15em;color:#b3284f;margin:0 0 12px}
-.cm-service-depth h2{font-size:clamp(32px,4.8vw,72px);line-height:1.06;letter-spacing:-.052em;margin:0 0 28px;max-width:1050px}
+.cm-service-depth :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(32px,4.8vw,72px);line-height:1.06;letter-spacing:-.052em;margin:0 0 28px;max-width:1050px}
 .cm-depth-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,24px)}
 .cm-depth-grid article{padding:clamp(18px,2.3vw,30px);background:#fff;border:1px solid #ded9d7;min-width:0}
 .cm-depth-grid article>span{font-size:12px;color:#b3284f;font-weight:700}

@@ -1,3 +1,4 @@
+/* cm-semantic-heading-selectors-v1 */
 /* CreAid-Media – zentraler globaler Header und Footer. Alle Selektoren namespaced. */
 .cm-header,.cm-footer{--cm-pink:#fa225b;--cm-berry:#b3284f;--cm-night:#121315;--cm-ink:#f9f7f5;--cm-line:rgba(255,255,255,.16);font-family:"Ubuntu",Arial,sans-serif;box-sizing:border-box}
 .cm-header *, .cm-header *::before,.cm-header *::after,.cm-footer *,.cm-footer *::before,.cm-footer *::after{box-sizing:border-box}
@@ -31,8 +32,8 @@
 .cm-footer__lead{padding:94px 0 93px;display:flex;align-items:flex-end;justify-content:space-between;gap:36px;border-bottom:1px solid rgba(255,255,255,.15)}
 .cm-footer__eyebrow{display:inline-flex;gap:10px;align-items:center;font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:#d5cbd0}
 .cm-footer__eyebrow span{color:var(--cm-pink);font-size:20px}
-.cm-footer__lead h2{margin:23px 0 15px;font-size:clamp(58px,7.7vw,119px);line-height:.92;letter-spacing:-.075em;font-weight:700;color:#fff}
-.cm-footer__lead h2 em{font-family:Georgia,serif;font-weight:400;color:#fa225b;letter-spacing:-.07em}
+.cm-footer__lead :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){margin:23px 0 15px;font-size:clamp(58px,7.7vw,119px);line-height:.92;letter-spacing:-.075em;font-weight:700;color:#fff}
+.cm-footer__lead :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)) em{font-family:Georgia,serif;font-weight:400;color:#fa225b;letter-spacing:-.07em}
 .cm-footer__lead p{max-width:580px;margin:0;color:#b3b1b4;font-size:15px;line-height:1.7}
 .cm-footer__lead-cta{display:flex;gap:30px;align-items:center;justify-content:space-between;white-space:nowrap;background:#fa225b;color:#fff!important;padding:20px 25px;border:1px solid #fa225b;min-width:233px;text-decoration:none;font-size:13px;font-weight:700;transition:background .2s,transform .2s}
 .cm-footer__lead-cta:hover{background:#c90f45;transform:translateY(-3px)}
@@ -44,10 +45,10 @@
 .cm-footer__social>a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:5px}
 .cm-footer__social>a:hover{color:#ff6b95}
 .cm-footer__social>span{color:#817e83;border-bottom:1px dashed #6b6266;padding-bottom:5px;cursor:default}
-.cm-footer__grid h2{font-size:13px;line-height:1.3;color:#fff;font-weight:700;letter-spacing:.02em;margin:0 0 26px}
+.cm-footer__grid :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:13px;line-height:1.3;color:#fff;font-weight:700;letter-spacing:.02em;margin:0 0 26px}
 .cm-footer__services.audit-related{padding:0;background:transparent;color:inherit;scroll-margin-top:0}
 .cm-footer__services .audit-inner{width:100%;margin:0}
-.cm-footer__services.audit-related h2{font-size:13px;letter-spacing:.02em;line-height:1.3;margin:0 0 26px;color:#fff}
+.cm-footer__services.audit-related :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:13px;letter-spacing:.02em;line-height:1.3;margin:0 0 26px;color:#fff}
 .cm-footer__services .audit-links{padding:0;margin:0;list-style:none}
 .cm-footer__services .audit-links li{margin:0 0 13px}
 .cm-footer__services .audit-links a{font-size:13px;line-height:1.6;font-weight:400;color:#bbb7bc;text-decoration:none;display:flex;align-items:baseline;justify-content:space-between;gap:8px;transition:color .2s}
@@ -82,7 +83,7 @@
  .cm-header__dropdown::before{display:none}
  .cm-header__cta{margin-top:18px;justify-content:space-between}
  .cm-footer__lead{padding:70px 0;align-items:flex-start;flex-direction:column;gap:25px}
- .cm-footer__lead h2{font-size:clamp(56px,12vw,88px)}
+ .cm-footer__lead :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(56px,12vw,88px)}
 }
 @media(max-width:570px){
  .cm-header__inner,.cm-footer__inner{width:calc(100% - 34px)}
@@ -104,14 +105,14 @@
 /* Compact global footer – approved preview, retaining the existing semantic links. */
 .cm-footer__lead{padding:38px 0 34px;align-items:center;gap:24px}
 .cm-footer__eyebrow{font-size:10px;letter-spacing:.15em}
-.cm-footer__lead h2{font-size:clamp(36px,5vw,58px);line-height:1.02;margin:12px 0 10px;letter-spacing:-.067em}
+.cm-footer__lead :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(36px,5vw,58px);line-height:1.02;margin:12px 0 10px;letter-spacing:-.067em}
 .cm-footer__lead p{font-size:13px;line-height:1.45;max-width:520px}
 .cm-footer__lead-cta{padding:15px 19px;min-width:200px;gap:22px;font-size:12px}
 .cm-footer__grid{grid-template-columns:1.12fr 1.35fr 1.2fr .9fr;gap:clamp(18px,2.4vw,34px);padding:29px 0 33px}
 .cm-footer__logo{width:min(205px,100%)}
 .cm-footer__company p{font-size:12px;line-height:1.5;margin:14px 0 12px}
 .cm-footer__social{gap:12px;font-size:11px}
-.cm-footer__grid h2,.cm-footer__services.audit-related h2{font-size:12px;margin-bottom:13px}
+.cm-footer__grid :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)),.cm-footer__services.audit-related :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:12px;margin-bottom:13px}
 .cm-footer__services .audit-links li{margin-bottom:6px}
 .cm-footer__services .audit-links a{font-size:12px;line-height:1.5}
 .cm-footer__contact>a,.cm-footer__legal>a{font-size:12px;line-height:1.5;margin-bottom:8px}
@@ -122,15 +123,15 @@
 }
 @media(max-width:860px){
   .cm-footer__lead{padding:34px 0 30px;gap:18px;align-items:flex-start}
-  .cm-footer__lead h2{font-size:clamp(38px,7.4vw,56px)}
+  .cm-footer__lead :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(38px,7.4vw,56px)}
 }
 @media(max-width:570px){
   .cm-footer__lead{padding:29px 0 29px}
-  .cm-footer__lead h2{font-size:clamp(36px,10vw,52px)}
+  .cm-footer__lead :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:clamp(36px,10vw,52px)}
   .cm-footer__lead p{font-size:12px}
   .cm-footer__lead-cta{width:100%;justify-content:space-between}
   .cm-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px;padding:28px 0 30px}
-  .cm-footer__grid h2,.cm-footer__services.audit-related h2{font-size:11px;margin-bottom:12px}
+  .cm-footer__grid :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)),.cm-footer__services.audit-related :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){font-size:11px;margin-bottom:12px}
   .cm-footer__services .audit-links a{font-size:11px}
   .cm-footer__contact>a,.cm-footer__legal>a,.cm-footer__contact address{font-size:11px}
   .cm-footer__bottom{padding:16px 0 18px;gap:6px;font-size:10px}

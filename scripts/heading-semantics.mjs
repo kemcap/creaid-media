@@ -1,5 +1,5 @@
-import {readFileSync,writeFileSync,readdirSync,existsSync} from 'node:fs';
-import {join,basename} from 'node:path';
+import {readFileSync} from 'node:fs';
+import {basename} from 'node:path';
 const plans=JSON.parse(readFileSync(new URL('../src/_data/headingPlan.json',import.meta.url),'utf8'));
 const esc=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const plain=s=>s.replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim();
@@ -70,19 +70,4 @@ export function transformHeadings(html,outputPath){
  // Keep TOC text and section anchors synchronized when article headings are refined.
  for(const [id,label] of toc)section=section.replace(/<a\b([^>]*?)href="#([^"]+)"([^>]*)>[\s\S]*?<\/a>/g,(all,a,target,b)=>target===id?'<a'+a+'href="#'+target+'"'+b+'>'+esc(label)+'</a>':all);
  return html.replace(main[0],section);
-}
-// Preserve the selector specificity and original visual styling of demoted claims.
-// The semantic heading is deliberately excluded from the old oversized heading rules.
-const flag='/* cm-semantic-heading-selectors-v1 */';
-export function preserveClaimStyles(output='dist'){
- const dir=join(output,'assets');if(!existsSync(dir))return;
- for(const file of readdirSync(dir).filter(f=>f.endsWith('.css')&&f!=='heading-semantics.css')){
-  const path=join(dir,file),css=readFileSync(path,'utf8');if(css.startsWith(flag))continue;
-  const adjusted=css.replace(/([^{}]+)\{/g,(all,selector)=>{
-    if(selector.trimStart().startsWith('@'))return all;
-    const next=selector.replace(/(?<![\w.-])h([12])(?![\w-])/g,(_,n)=>':is(h'+n+':not(:where(.cm-semantic-heading)),:where(.cm-claim-h'+n+'))');
-    return next+'{';
-  });
-  if(adjusted!==css)writeFileSync(path,flag+'\n'+adjusted);
- }
 }

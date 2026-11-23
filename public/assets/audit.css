@@ -1,3 +1,4 @@
+/* cm-semantic-heading-selectors-v1 */
 /* Content added in the existing CreAid typography and palette. */
 .audit-pillar, .audit-related {
   background: #f7f4f2;
@@ -11,7 +12,7 @@
   margin-inline: auto;
 }
 
-.audit-pillar h2, .audit-related h2 {
+.audit-pillar :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)), .audit-related :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)) {
   margin: 0 0 1rem;
   font-size: clamp(1.6rem, 4.4vw, 3.75rem);
   line-height: 1.08;
@@ -56,7 +57,7 @@
 
 .audit-related-inline { padding: 0 0 2rem; background: transparent; }
 .audit-related-inline .audit-inner { width: 100%; }
-.audit-related-inline .audit-inner h2 {
+.audit-related-inline .audit-inner :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)) {
   font-size: clamp(1.2rem, 2.5vw, 1.7rem);
   letter-spacing: -.02em;
   line-height: 1.2;
@@ -72,7 +73,7 @@
   background: #f3e9e9;
   border-left: 3px solid #b3284f;
 }
-.j-prose .audit-editorial-check h2 { margin-top: 0; }
+.j-prose .audit-editorial-check :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)) { margin-top: 0; }
 
 .j-card[hidden], .j-pagination[hidden], #agencyEnquiry[hidden] { display: none !important; }
 .j-footer-links, .a-footer nav { flex-wrap: wrap; min-width: 0; }
