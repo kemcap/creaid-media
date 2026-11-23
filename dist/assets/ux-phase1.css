@@ -210,3 +210,16 @@ main > .a-track:not(.sp-story) .a-contact-options{margin-top:0;flex:none}
 main > .a-track:not(.sp-story) .a-case-layout{height:auto;min-height:0}
 main > .j-feature-track .j-feature-footer{position:absolute;bottom:0}
 @media(max-width:570px){.cm-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cm-footer__company,.cm-footer__contact,.cm-footer__services,.cm-footer__legal{min-width:0}.cm-footer a{overflow-wrap:anywhere}}
+
+/* Phase 2: service discovery and explicit inquiry hierarchy. */
+.cm-hero-cta-group{display:flex;flex-direction:column;gap:10px;align-items:flex-start;flex-shrink:0}
+.cm-secondary-cta{display:inline-flex;align-items:center;min-height:44px;color:inherit;font-weight:700;font-size:13px;text-decoration:underline;text-underline-offset:5px}
+.cm-header__dropdown{width:min(510px,90vw);max-height:calc(100dvh - var(--cm-nav-height) - 24px);overflow-y:auto;overscroll-behavior:contain}
+.cm-header__specialty-label{margin-top:16px;margin-bottom:4px}
+.cm-header__specialties{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
+.cm-header__dropdown a[aria-current=page]{color:#ff8aa8;font-weight:700}
+.cm-portfolio-proof{margin:0;background:#f5f2ef;color:#201b1e;padding:clamp(42px,7vw,96px) max(24px,calc((100vw - 1320px)/2))}
+.cm-portfolio-proof h2{font-size:clamp(34px,5vw,70px);line-height:1.04;margin:14px 0;letter-spacing:-.04em}
+.cm-portfolio-proof p{max-width:65ch;line-height:1.65}
+.cm-portfolio-proof a{display:inline-flex;align-items:center;min-height:44px;margin:12px 0;color:#9e2046;font-weight:700;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:860px){.cm-header__dropdown{max-height:none;overflow:visible;width:100%}.cm-header__specialties{grid-template-columns:1fr}.cm-hero-cta-group{flex-shrink:1}}

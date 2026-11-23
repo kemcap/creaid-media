@@ -57,11 +57,11 @@
   if(pointer&&!reduce.matches&&matchMedia('(hover:hover) and (pointer:fine)').matches){document.addEventListener('pointermove',e=>{pointer.style.left=`${e.clientX}px`;pointer.style.top=`${e.clientY}px`;pointer.style.opacity='1'},{passive:true});document.addEventListener('pointerleave',()=>pointer.style.opacity='0');}
   document.querySelectorAll('[data-service]').forEach(link=>link.addEventListener('click',()=>{const sel=document.querySelector('#aService');if(sel)sel.value=link.getAttribute('data-service');}));
   const form=document.querySelector('#agencyEnquiry');
-  if(form){const params=new URLSearchParams(location.search);if(params.get('service')){const sel=form.querySelector('[name="service"]');const option=[...sel.options].find(x=>x.value===params.get('service'));if(option)sel.value=option.value;}
+  if(form){const params=new URLSearchParams(location.search);if(params.get('service')){const sel=form.querySelector('[name="service"]');const requested=params.get('service');const legacy={'Marketing & Branding':'Digitales Marketing'};const option=[...sel.options].find(x=>x.value===(legacy[requested]||requested));if(option)sel.value=option.value;}
     form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;
       const data=new FormData(form);
       const subject=`Projektanfrage CreAid-Media: ${String(data.get('service')||'Allgemein').slice(0,80)}`;
-      const body=`Name: ${data.get('name')}\nE-Mail: ${data.get('email')}\nLeistung: ${data.get('service')}\n\nProjektbeschreibung:\n${data.get('message')}`;
+      const body=`Name: ${data.get('name')}\nE-Mail: ${data.get('email')}\nUnternehmen: ${data.get('company')||'–'}\nTelefon: ${data.get('phone')||'–'}\nLeistung: ${data.get('service')}\n\nProjektbeschreibung:\n${data.get('message')}`;
       document.querySelector('#aFormMessage').textContent='Ihr E-Mail-Programm wird geöffnet. Bitte die Nachricht dort noch selbst absenden.';
       window.location.href='mailto:info@creaid-media.de?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     });
