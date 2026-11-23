@@ -248,3 +248,20 @@ assert.ok(load('dist/index.html').includes('ERSTE HILFE')&&load('dist/index.html
 assert.ok(load('dist/assets/home-motion-v5.js').includes('.cap-intro .cm-claim-h2'));
 assert.ok(load('dist/assets/motion-v4.js').includes('.detail-top .cm-claim-h2'));
 console.log('PASS: all 98 pages have unique, visible H1 headings and no H1–H3 level jumps; creative claims and animation hooks preserved.');
+
+
+// Phase 6 layout regression: explicit placements preserve the original heading
+// column when the visible semantic heading adds an extra direct grid child.
+const headingLayoutCss=load('dist/assets/heading-semantics.css');
+assert.equal(headingLayoutCss,load('public/assets/heading-semantics.css'),'Heading layout source and generated CSS differ');
+for(const rule of [
+ 'main .method-heading>.cm-semantic-h2{grid-column:1;grid-row:1',
+ 'main .method-heading>.cm-claim-h2{grid-column:1;grid-row:2',
+ 'main .method-heading:has(>.cm-claim-h2)>p{grid-column:2;grid-row:2',
+ 'main .detail-top>.cm-semantic-h2{grid-column:2;grid-row:1',
+ 'main .detail-top>.cm-claim-h2{grid-column:2;grid-row:2',
+ 'main .detail-top:has(>.cm-claim-h2)>p{grid-column:3;grid-row:2',
+ '@media (min-width:531px)',
+ '@media (min-width:1081px)'
+])assert.ok(headingLayoutCss.includes(rule),'Missing responsive heading placement: '+rule);
+console.log('PASS: explicit responsive semantic heading grid placements retained.');

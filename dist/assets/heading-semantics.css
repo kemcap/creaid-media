@@ -34,3 +34,29 @@ main .j-listing-head>.cm-semantic-h2{grid-column:1;grid-row:1;margin:0;align-sel
 main .j-listing-head>.cm-claim-h2{grid-column:1;grid-row:2;min-width:0;margin-top:0}
 main .j-listing-head>p{grid-column:2;grid-row:2;min-width:0}
 @media(max-width:780px){main .j-listing-head>p{grid-column:1;grid-row:3}}
+
+
+/* Phase 6 regression: keep the semantic label and the visual claim in the
+   original heading column. Never let the new label consume a side column. */
+@media (min-width:531px){
+ main .method-heading:has(>.cm-claim-h2){row-gap:8px;align-items:end}
+ main .method-heading>.cm-semantic-h2{grid-column:1;grid-row:1;margin:0;min-width:0}
+ main .method-heading>.cm-claim-h2{grid-column:1;grid-row:2;min-width:0;overflow-wrap:break-word}
+ main .method-heading:has(>.cm-claim-h2)>p{grid-column:2;grid-row:2;min-width:0}
+}
+@media (min-width:1081px){
+ main .service-detail .detail-top:has(>.cm-claim-h2){row-gap:8px}
+ main .detail-top:has(>.cm-claim-h2)>.detail-kicker{grid-column:1;grid-row:2;min-width:0}
+ main .detail-top>.cm-semantic-h2{grid-column:2;grid-row:1;margin:0;min-width:0}
+ main .detail-top>.cm-claim-h2{grid-column:2;grid-row:2;min-width:0;overflow-wrap:break-word}
+ main .detail-top:has(>.cm-claim-h2)>p{grid-column:3;grid-row:2;min-width:0}
+}
+/* Below the existing grid breakpoints, keep natural DOM order. */
+@media (max-width:1080px){
+ main .detail-top>.cm-semantic-h2{margin-bottom:0}
+ main .detail-top>.cm-claim-h2{min-width:0;overflow-wrap:break-word}
+}
+@media (max-width:530px){
+ main .method-heading>.cm-semantic-h2{margin-bottom:6px}
+ main .method-heading>.cm-claim-h2{overflow-wrap:break-word}
+}
