@@ -11,14 +11,16 @@
   <link rel="stylesheet" href="/assets/journal.css">
   <link rel="stylesheet" href="/assets/journal-v9.css">
   <link rel="stylesheet" href="/assets/audit.css">
+  <link rel="stylesheet" href="/assets/global-shell.css">
   <script defer src="/assets/audit-navigation.js"></script>
+  <script defer src="/assets/global-shell.js"></script>
   <noscript><link rel="stylesheet" href="/assets/no-script.css"></noscript>
 </head>
 <body>
 <a class="j-skip" href="#hauptinhalt">Zum Inhalt springen</a>
 {% include "partials/header-journal.njk" %}
 <main class="j-body" id="hauptinhalt"><article class="j-shell j-prose" style="padding-block:110px">{{ content | safe }}</article></main>
-{% include "partials/footer-journal.njk" %}
+{% include "partials/footer-global.njk" %}
 <script src="/assets/journal.js" defer></script>
 </body>
 </html>

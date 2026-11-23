@@ -1,4 +1,12 @@
 {
   "/produktfilm-erstellen-lassen": "/produktfim-erstellen-lassen",
-  "/produktfilm-erstellen-lassen.html": "/produktfim-erstellen-lassen"
+  "/produktfilm-erstellen-lassen.html": "/produktfim-erstellen-lassen",
+  "/leistungen/webdesign": "/webdesign",
+  "/leistungen/webdesign/": "/webdesign",
+  "/leistungen/marketing": "/digitales-marketing",
+  "/leistungen/marketing/": "/digitales-marketing",
+  "/leistungen/branding": "/grafikdesign-2",
+  "/leistungen/branding/": "/grafikdesign-2",
+  "/leistungen/ki-automatisierung": "/ki-automatisierung",
+  "/leistungen/ki-automatisierung/": "/ki-automatisierung"
 }

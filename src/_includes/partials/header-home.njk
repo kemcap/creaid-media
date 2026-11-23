@@ -1,7 +1,1 @@
-<header class="site-header" id="site-header">
-<div class="shell nav-inner">
-<a aria-label="CreAid-Media, zur Startseite" class="brand" href="#top"><img width="9066" height="1000" alt="CreAid-Media" src="/assets/creaid-media-logo.webp"/></a>
-<button aria-controls="siteNav" aria-expanded="false" class="nav-toggle" id="navToggle" type="button">MENÜ <span aria-hidden="true">☰</span></button>
-<nav aria-label="Hauptnavigation" class="nav-links" id="siteNav"><a href="/#kompetenzen">Leistungen</a><a href="/leistungen"{% if pageKey == "leistungen" %} aria-current="page"{% endif %}>Spezialleistungen</a><a href="/referenzen"{% if pageKey == "referenzen" %} aria-current="page"{% endif %}>Referenzen</a><a href="/ueber-uns"{% if pageKey == "ueber-uns" %} aria-current="page"{% endif %}>Über uns</a><a href="/creaid-blog"{% if pageKey == "blog" %} aria-current="page"{% endif %}>Journal</a><a class="nav-contact" href="/kontakt"{% if pageKey == "kontakt" %} aria-current="page"{% endif %}>Kontakt<i aria-hidden="true"></i></a></nav>
-</div>
-</header>
+{% include "partials/header-global.njk" %}

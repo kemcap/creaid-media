@@ -1,5 +1,5 @@
 {% set links = editorialLinks[pageKey] %}
-{% if links %}
+{% if links and pageKey != "index" %}
 <section class="audit-related{% if pageKey == 'blog' %} audit-related-inline{% endif %}" aria-labelledby="weiter-heading">
   <div class="audit-inner">
     <h2 id="weiter-heading">{% if pageKey == 'blog' %}Ratgeber nach Themen{% elif pageKey == 'index' %}Leistungen im Überblick{% else %}Passende Leistungen und Ratgeber{% endif %}</h2>

@@ -1,0 +1,32 @@
+{# Einheitlicher, datenbasierter Header für alle CreAid-Media-Seiten. #}
+<header class="cm-site-header" data-cm-header>
+  <div class="cm-header-inner">
+    <a class="cm-header-brand" href="/" aria-label="CreAid-Media – zur Startseite">
+      <img src="/assets/creaid-media-logo.webp" width="9066" height="1000" alt="CreAid-Media" decoding="async">
+    </a>
+    <button class="cm-mobile-toggle" type="button" aria-controls="cm-primary-navigation" aria-expanded="false" aria-label="Hauptmenü öffnen" data-cm-toggle>
+      <span class="cm-toggle-line"></span><span class="cm-toggle-line"></span><span class="cm-toggle-line"></span>
+    </button>
+    <nav class="cm-primary-navigation" id="cm-primary-navigation" aria-label="Hauptnavigation" data-cm-nav>
+      <ul class="cm-nav-list">
+        <li class="cm-nav-item cm-nav-services">
+          <details class="cm-nav-details" data-cm-services>
+            <summary class="cm-nav-summary">Leistungen <span class="cm-chevron" aria-hidden="true"></span></summary>
+            <div class="cm-nav-panel">
+              <a class="cm-panel-overview" href="/leistungen">Alle Leistungen <span aria-hidden="true">↗</span></a>
+              {% for link in site.footerServiceLinks %}
+              {% if link.label != 'Projekt besprechen' %}
+              <a href="{{ link.href | escape }}"{% if pageKey == link.pageKey %} aria-current="page"{% endif %}>{{ link.label | escape }} <span aria-hidden="true">↗</span></a>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </details>
+        </li>
+        <li><a href="/referenzen"{% if pageKey == 'referenzen' %} aria-current="page"{% endif %}>Referenzen</a></li>
+        <li><a href="/ueber-uns"{% if pageKey == 'ueber-uns' %} aria-current="page"{% endif %}>Über uns</a></li>
+        <li><a href="/creaid-blog"{% if pageKey == 'blog' %} aria-current="page"{% endif %}>Journal</a></li>
+        <li class="cm-nav-cta"><a href="/kontakt"{% if pageKey == 'kontakt' %} aria-current="page"{% endif %}>Projekt anfragen <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

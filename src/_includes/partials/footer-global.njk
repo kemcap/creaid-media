@@ -1,0 +1,51 @@
+{# Einmal im äußeren Layout eingefügt, nie innerhalb von Scroll-/Pin-Szenen. #}
+<footer class="cm-site-footer" id="cm-footer">
+  <div class="cm-footer-inner">
+    <div class="cm-footer-intro">
+      <div>
+        <p class="cm-footer-kicker"><span aria-hidden="true">✳</span> CREAID-MEDIA / FIRST AID FOR YOUR BRAND</p>
+        <h2>Gute Ideen.<br><em>Starke Wirkung.</em></h2>
+        <p>Webdesign, Markenauftritte, Marketing und smarte Abläufe. Alles für einen Auftritt, der zu Ihrem Unternehmen passt.</p>
+      </div>
+      <a class="cm-footer-cta" href="/kontakt">Projekt besprechen <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="cm-footer-grid">
+      <div class="cm-footer-brand-column">
+        <a href="/" class="cm-footer-brand" aria-label="CreAid-Media zur Startseite"><img src="/assets/creaid-media-logo.webp" width="9066" height="1000" loading="lazy" decoding="async" alt="CreAid-Media"></a>
+        <p>Erste Hilfe für Ihre Werbung.</p>
+        <span class="cm-footer-location">Kreativagentur in Antalya · für Unternehmen in Deutschland und der Türkei.</span>
+      </div>
+      <nav class="cm-footer-column cm-footer-services" aria-labelledby="cm-footer-services-heading">
+        <h3 id="cm-footer-services-heading">Leistungen im Überblick</h3>
+        <ul class="cm-footer-links">
+          {% for link in site.footerServiceLinks %}
+          <li><a href="{{ link.href | escape }}">{{ link.label | escape }} <span aria-hidden="true">↗</span></a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="cm-footer-column cm-footer-contact">
+        <h3>Kontakt</h3>
+        <a href="tel:+4915678451152">+49 1567 8451152</a>
+        <a href="mailto:info@creaid-media.de">info@creaid-media.de</a>
+        <address>Yeniköy Mahallesi, 71. Sokak No: 19<br>07190 Döşemealtı / Antalya<br>Türkei</address>
+      </div>
+      <div class="cm-footer-column cm-footer-company">
+        <h3>Unternehmen</h3>
+        <a href="/ueber-uns">Über uns</a>
+        <a href="/referenzen">Referenzen</a>
+        <a href="/creaid-blog">Journal</a>
+        <p class="cm-social-label">Social Media</p>
+        <p class="cm-social-unlinked" title="Links werden nach Bestätigung der Profiladressen ergänzt">Facebook · Instagram</p>
+      </div>
+    </div>
+    <div class="cm-footer-bottom">
+      <span>© 2026 CreAid-Media. Mit Ideen, die weiterhelfen.</span>
+      <nav aria-label="Rechtliche Informationen">
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+        <a href="/cookie-einstellungen">Cookie-Einstellungen</a>
+      </nav>
+      <a class="cm-backtop" href="#top" data-cm-backtop>Nach oben ↑</a>
+    </div>
+  </div>
+</footer>

@@ -37,5 +37,32 @@
   ],
   "legal": {
     "status": "ENTWURF – vor Veröffentlichung rechtlich prüfen"
-  }
+  },
+  "footerServiceLinks": [
+    {
+      "label": "Webdesign und Entwicklung",
+      "href": "/leistungen/webdesign",
+      "pageKey": "webdesign"
+    },
+    {
+      "label": "Digitales Marketing",
+      "href": "/leistungen/marketing",
+      "pageKey": "marketing"
+    },
+    {
+      "label": "Branding und Grafikdesign",
+      "href": "/leistungen/branding",
+      "pageKey": "branding"
+    },
+    {
+      "label": "KI und Automatisierung",
+      "href": "/leistungen/ki-automatisierung",
+      "pageKey": "ki-automatisierung"
+    },
+    {
+      "label": "Projekt besprechen",
+      "href": "/kontakt",
+      "pageKey": "kontakt"
+    }
+  ]
 }
