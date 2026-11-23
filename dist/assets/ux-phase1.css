@@ -47,8 +47,8 @@ main > .track-hero .next-arrow{bottom:70px}
 main > .track-hero .hero-heading>span,main > .track-hero .hero-intro,
 main > .track-hero .hero-actions,main > .track-hero .hero-stamp{transform:none!important;opacity:1!important}
 /* Articles are reading pages, not long pinned landing pages. */
-main > .j-article-hero.j-article-hero-v9{height:auto!important;min-height:0!important;overflow:hidden}
-main > .j-article-hero.j-article-hero-v9 > .j-shell{
+main > .j-article-hero{height:auto!important;min-height:0!important;overflow:hidden}
+main > .j-article-hero > .j-shell{
   height:auto!important;min-height:0!important;align-content:center;
   padding-top:clamp(32px,6vh,70px);padding-bottom:58px;gap:clamp(18px,4vw,72px);
 }
@@ -123,7 +123,7 @@ body.cm-has-closing-cta .cm-footer__lead{display:none}
   main > .a-normal:first-of-type .a-intro-row .a-btn{margin-left:0}
   main > .l-hero .l-title{font-size:clamp(40px,min(11vw,10vh),82px)}
   main > .l-hero .l-hero-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
-  main > .j-article-hero.j-article-hero-v9 > .j-shell{padding:30px 0 53px;gap:16px}
+  main > .j-article-hero > .j-shell{padding:30px 0 53px;gap:16px}
   main > .j-article-hero h1{font-size:clamp(30px,6.4vw,52px)}
   main > .j-article-hero .j-article-cover{height:clamp(125px,20vh,230px);max-height:none}
 }
@@ -203,7 +203,7 @@ body.cm-has-closing-cta .cm-footer__lead{display:none}
   main > .sp-story [data-percent],main > .sp-story .sp-story-instruction{display:none}
 }
 @media(prefers-reduced-motion:reduce){.cm-flow-enter{animation:none!important}}
-@media print{#cm-global-header,.cm-footer,.j-readbar{display:none!important}main > .j-article-hero.j-article-hero-v9{min-height:0!important}}
+@media print{#cm-global-header,.cm-footer,.j-readbar{display:none!important}main > .j-article-hero{min-height:0!important}}
 
 /* Ensure the natural-flow footer and chapter cues cannot cover links. */
 main > .a-track:not(.sp-story) .a-contact-options{margin-top:0;flex:none}
