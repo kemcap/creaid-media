@@ -20,3 +20,13 @@
 
   #siteNav a, #mainMenu a, #jNav a, #agencyLinks a { border-bottom: 0; margin: 0; padding: .3rem; }
 }
+
+/* Ohne JavaScript bleibt der kombinierte Abschluss vollständig les- und nutzbar. */
+.motion-track.track-statement-contact{height:auto!important}
+.statement-contact-stage.motion-stage{height:auto!important;position:relative;overflow:visible;contain:none}
+.statement-contact-stage .statement-panel,.statement-contact-stage .contact-panel{
+ position:relative;inset:auto;height:auto;min-height:100vh;clip-path:none!important
+}
+.statement-contact-stage .statement-layout,.statement-contact-stage .contact-layout{height:auto;min-height:100vh}
+.statement-contact-stage .statement-mask-edge{display:none}
+.contact-scroll-anchor{top:100vh}

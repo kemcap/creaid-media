@@ -30,3 +30,172 @@
 .hero-stage .hero-heading>span:nth-child(3){animation-delay:.21s}
 @media(max-width:530px){.tile-ai .tile-end h3{font-size:clamp(17px,4.75vw,24px);hyphens:manual}}
 @media(prefers-reduced-motion:reduce){.hero-stage .hero-heading>span{animation:none!important}}
+
+
+/* CREAID 2026: AUTO REVEAL + SINGLE STATEMENT CONTACT
+   Karten: automatisches gestaffeltes Erscheinen nach Sichtbarkeit, kein Scroll-Scrubbing.
+   Der Start der letzten Servicekarte liegt exakt 0.7 Sekunden nach dem Beginn. */
+@keyframes cm-service-enter {
+  from {opacity:0;transform:translate3d(0,36px,0) scale(.945)}
+  to {opacity:1;transform:translate3d(0,0,0) scale(1)}
+}
+@keyframes cm-work-editorial-enter {
+  from {opacity:0;transform:translate3d(-42px,32px,0) scale(.91) rotate(-3deg)}
+  to {opacity:1;transform:translate3d(0,0,0) scale(1) rotate(0deg)}
+}
+@keyframes cm-work-browser-enter {
+  from {opacity:0;transform:translate3d(65px,28px,0) scale(.9) rotate(2.5deg)}
+  to {opacity:1;transform:translate3d(0,0,0) scale(1) rotate(0deg)}
+}
+html.cm-enhanced .cap-grid:not(.is-revealed) .service-tile {
+  opacity:0;
+  transform:translate3d(0,36px,0) scale(.945);
+}
+html.cm-enhanced .cap-grid.is-revealed .service-tile {
+  animation:cm-service-enter .62s cubic-bezier(.2,.85,.18,1) both;
+}
+html.cm-enhanced .cap-grid.is-revealed .service-tile:nth-child(1){animation-delay:0s}
+html.cm-enhanced .cap-grid.is-revealed .service-tile:nth-child(2){animation-delay:.233s}
+html.cm-enhanced .cap-grid.is-revealed .service-tile:nth-child(3){animation-delay:.467s}
+html.cm-enhanced .cap-grid.is-revealed .service-tile:nth-child(4){animation-delay:.7s}
+html.cm-enhanced .work-gallery:not(.is-revealed) .work-mock {
+  opacity:0;
+}
+html.cm-enhanced .work-gallery.is-revealed .work-mag {
+  animation:cm-work-editorial-enter .78s cubic-bezier(.18,.86,.2,1) 0s both;
+}
+html.cm-enhanced .work-gallery.is-revealed .work-browser {
+  animation:cm-work-browser-enter .9s cubic-bezier(.18,.86,.2,1) .42s both;
+}
+
+/* Statement ist ursprünglich fuchsia mit dunkler Schrift.
+   Die fertige anthrazitfarbene Kontaktansicht wird von RECHTS nach LINKS
+   durch die nach links wandernde Maskenkante sichtbar. */
+.statement-contact-stage {
+  background:var(--pink);
+}
+.statement-contact-stage .statement-panel,
+.statement-contact-stage .contact-panel {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+.statement-contact-stage .statement-panel {
+  z-index:1;
+  background:var(--pink);
+  color:#190d11;
+}
+.statement-contact-stage .contact-panel {
+  z-index:2;
+  background:#17181a;
+  color:#fff;
+  clip-path:inset(0 0 0 100%);
+  will-change:clip-path;
+}
+.statement-contact-stage .contact-panel .contact-layout,
+.statement-contact-stage .statement-panel .statement-layout {
+  height:100%;
+}
+.statement-contact-stage .contact-panel .contact-graphic {
+  position:absolute;
+  inset:0;
+}
+.statement-contact-stage .statement-mask-edge {
+  position:absolute;
+  z-index:3;
+  left:100%;
+  top:0;
+  bottom:0;
+  width:15px;
+  opacity:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(250,34,91,.92),rgba(250,34,91,.38),transparent);
+  box-shadow:-9px 0 34px rgba(250,34,91,.24);
+  will-change:left,opacity;
+}
+.statement-contact-stage .contact-panel .contact-copy h2 span,
+.statement-contact-stage .contact-panel .contact-copy h2 em,
+.statement-contact-stage .contact-panel .contact-aside,
+.statement-contact-stage .contact-panel .contact-aside .button-primary,
+.statement-contact-stage .statement-panel .statement-layout h2>span {
+  opacity:1;
+  transform:none;
+}
+.statement-contact-stage .contact-panel .contact-aside .button-primary {
+  display:inline-flex;
+}
+.contact-scroll-anchor {
+  position:absolute;
+  left:0;
+  top:calc(100% - 112vh);
+  width:1px;
+  height:1px;
+  pointer-events:none;
+}
+
+/* Auf kleinen Bildschirmen beide Ansichten natürlich untereinander:
+   keine horizontale Maske, lesbarer Text und sofort bedienbarer CTA. */
+@media (max-width:640px) {
+  .motion-track.track-statement-contact {height:auto !important}
+  .statement-contact-stage.motion-stage {
+    position:relative;
+    height:auto;
+    overflow:visible;
+    contain:none;
+  }
+  .statement-contact-stage .statement-panel,
+  .statement-contact-stage .contact-panel {
+    position:relative;
+    inset:auto;
+    height:auto;
+    min-height:100vh;
+    min-height:100dvh;
+    clip-path:none !important;
+  }
+  .statement-contact-stage .statement-layout,
+  .statement-contact-stage .contact-layout {
+    height:auto!important;
+    min-height:100vh;
+    min-height:100dvh;
+  }
+  .statement-contact-stage .statement-layout {padding-bottom:86px}
+  .statement-contact-stage .contact-layout {padding-bottom:92px}
+  .statement-contact-stage .statement-mask-edge {display:none}
+  .contact-scroll-anchor {top:100dvh}
+}
+
+/* Reduced motion: beide Ansichten sind ohne Animation nacheinander zugänglich. */
+@media (prefers-reduced-motion: reduce) {
+  html.cm-enhanced .cap-grid .service-tile,
+  html.cm-enhanced .work-gallery .work-mock {
+    opacity:1!important;
+    transform:none!important;
+    animation:none!important;
+  }
+  .motion-track.track-statement-contact {height:auto!important}
+  .statement-contact-stage.motion-stage {
+    position:relative;
+    height:auto;
+    overflow:visible;
+    contain:none;
+  }
+  .statement-contact-stage .statement-panel,
+  .statement-contact-stage .contact-panel {
+    position:relative;
+    inset:auto;
+    height:auto;
+    min-height:100vh;
+    min-height:100dvh;
+    clip-path:none!important;
+  }
+  .statement-contact-stage .statement-layout,
+  .statement-contact-stage .contact-layout {
+    min-height:100vh;
+    min-height:100dvh;
+    height:auto!important;
+  }
+  .statement-contact-stage .statement-mask-edge {display:none}
+  .contact-scroll-anchor {top:100dvh}
+}
