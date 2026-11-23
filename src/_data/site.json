@@ -35,34 +35,43 @@
       "href": "/kontakt"
     }
   ],
-  "legal": {
-    "status": "ENTWURF – vor Veröffentlichung rechtlich prüfen"
-  },
-  "footerServiceLinks": [
+  "footerServices": [
     {
       "label": "Webdesign und Entwicklung",
-      "href": "/leistungen/webdesign",
-      "pageKey": "webdesign"
+      "href": "/leistungen/webdesign"
     },
     {
       "label": "Digitales Marketing",
-      "href": "/leistungen/marketing",
-      "pageKey": "marketing"
+      "href": "/leistungen/marketing"
     },
     {
       "label": "Branding und Grafikdesign",
-      "href": "/leistungen/branding",
-      "pageKey": "branding"
+      "href": "/leistungen/branding"
     },
     {
       "label": "KI und Automatisierung",
-      "href": "/leistungen/ki-automatisierung",
-      "pageKey": "ki-automatisierung"
+      "href": "/leistungen/ki-automatisierung"
     },
     {
       "label": "Projekt besprechen",
-      "href": "/kontakt",
-      "pageKey": "kontakt"
+      "href": "/kontakt"
     }
-  ]
+  ],
+  "contact": {
+    "phoneDisplay": "+49 1567 8451152",
+    "phoneHref": "+4915678451152",
+    "email": "info@creaid-media.de",
+    "addressLines": [
+      "Yeniköy Mahallesi, 71. Sokak No: 19",
+      "07190 Döşemealtı / Antalya",
+      "Türkei"
+    ]
+  },
+  "social": {
+    "facebook": "",
+    "instagram": ""
+  },
+  "legal": {
+    "status": "ENTWURF – vor Veröffentlichung rechtlich prüfen"
+  }
 }

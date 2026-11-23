@@ -1,0 +1,47 @@
+name: Build & verify CreAid redesign
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'scripts/**'
+      - 'eleventy.config.js'
+      - 'package*.json'
+      - '.github/workflows/build-redesign.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: creaid-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Generate Eleventy preview
+        run: npm run build
+      - name: Check global header, footer and links
+        run: node scripts/check-global-shell.mjs
+      - name: Update tracked dist preview
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist
+          if ! git diff --cached --quiet; then
+            git commit -m "Build global header and footer preview [skip ci]"
+            git push origin HEAD:main
+          fi

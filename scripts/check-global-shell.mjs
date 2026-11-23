@@ -1,37 +1,55 @@
-import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
-import { join, relative } from 'node:path';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { redirect } from './routes.mjs';
 
-function collect(dir) {
-  return readdirSync(dir).flatMap((name) => {
-    const p = join(dir, name);
-    return statSync(p).isDirectory() ? collect(p) : p.endsWith('.html') ? [p] : [];
-  });
-}
-const files = collect('dist');
-if (files.length < 50) throw new Error(`Expected at least 50 HTML pages, got ${files.length}`);
-const links = ['/leistungen/webdesign', '/leistungen/marketing', '/leistungen/branding', '/leistungen/ki-automatisierung', '/kontakt'];
-for (const file of files) {
-  const html = readFileSync(file, 'utf8');
-  const headerCount = (html.match(/class="cm-site-header"/g) || []).length;
-  const footerCount = (html.match(/class="cm-site-footer"/g) || []).length;
-  if (headerCount !== 1 || footerCount !== 1) throw new Error(`${relative('dist',file)}: header ${headerCount}, footer ${footerCount}`);
-  for (const target of links) {
-    if (!html.includes(`href="${target}"`)) throw new Error(`${relative('dist',file)} is missing footer destination ${target}`);
+const assert = (ok, message) => { if (!ok) throw new Error(message); };
+const file = (path) => readFileSync(path, 'utf8');
+const pages = readdirSync('dist').filter(name => name.endsWith('.html'));
+assert(pages.length >= 50, 'Expected the full CreAid-Media preview site to be generated, found ' + pages.length);
+const expectedLinks = [
+  '/leistungen/webdesign',
+  '/leistungen/marketing',
+  '/leistungen/branding',
+  '/leistungen/ki-automatisierung',
+  '/kontakt'
+];
+const expectedText = [
+  'Leistungen im Überblick',
+  'Webdesign und Entwicklung',
+  'Digitales Marketing',
+  'Branding und Grafikdesign',
+  'KI und Automatisierung',
+  'Projekt besprechen',
+  '+49 1567 8451152',
+  'info@creaid-media.de',
+  'Yeniköy Mahallesi',
+  'Impressum',
+  'Datenschutz'
+];
+for (const name of pages) {
+  const html = file('dist/' + name);
+  for (const id of ['cm-global-header', 'cm-global-footer']) {
+    const matches = html.match(new RegExp('id="' + id + '"', 'g')) || [];
+    assert(matches.length === 1, name + ': expected exactly one ' + id + ', found ' + matches.length);
   }
-  if (!html.includes('global-shell.css') || !html.includes('global-shell.js')) throw new Error(`${relative('dist',file)} missing global shell assets`);
+  assert(html.includes('href="/assets/global-shell.css"'), name + ': global CSS missing');
+  assert(html.includes('src="/assets/global-shell.js"'), name + ': global JS missing');
+  for (const link of expectedLinks) assert(html.includes('href="' + link + '"'), name + ': missing link ' + link);
+  for (const phrase of expectedText) assert(html.includes(phrase), name + ': missing footer text ' + phrase);
 }
-for(const asset of ['dist/assets/global-shell.css','dist/assets/global-shell.js','dist/assets/creaid-media-logo.webp']){
-  if(!existsSync(asset)) throw new Error('Missing global asset '+asset);
+assert(existsSync('dist/assets/global-shell.css'), 'global CSS not built');
+assert(existsSync('dist/assets/global-shell.js'), 'global JS not built');
+const css = file('dist/assets/global-shell.css');
+assert(css.includes('.cm-header__nav.is-open'), 'mobile navigation style missing');
+assert(css.includes('.cm-footer__services'), 'footer service style missing');
+const js = file('dist/assets/global-shell.js');
+assert(js.includes("aria-expanded"), 'accessible menu behavior missing');
+for (const [from,to] of Object.entries({
+  '/leistungen/webdesign': '/webdesign',
+  '/leistungen/marketing': '/digitales-marketing',
+  '/leistungen/branding': '/grafikdesign-2',
+  '/leistungen/ki-automatisierung': '/ki-automatisierung'
+})) {
+  assert(redirect(new URL('https://example.test' + from)) === to, 'Alias missing: ' + from);
+  assert(redirect(new URL('https://example.test' + from + '/')) === to, 'Trailing slash alias missing: ' + from);
 }
-const destinations = {
- '/leistungen/webdesign':'/webdesign',
- '/leistungen/marketing':'/digitales-marketing',
- '/leistungen/branding':'/grafikdesign-2',
- '/leistungen/ki-automatisierung':'/ki-automatisierung'
-};
-for (const [source,dest] of Object.entries(destinations)) {
-  const actual=redirect(new URL(source, 'https://creaid-media.de'));
-  if(actual !== dest)throw new Error(`Incorrect redirect: ${source} -> ${actual}`);
-}
-console.log(`PASS: ${files.length} HTML pages; one global header and footer per page; expected links/assets/routes.`);
+console.log('Global CreAid header/footer verified on ' + pages.length + ' generated HTML pages, including 5 footer links and 4 alias redirects.');

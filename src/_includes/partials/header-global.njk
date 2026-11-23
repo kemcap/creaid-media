@@ -1,32 +1,32 @@
-{# Einheitlicher, datenbasierter Header für alle CreAid-Media-Seiten. #}
-<header class="cm-site-header" data-cm-header>
-  <div class="cm-header-inner">
-    <a class="cm-header-brand" href="/" aria-label="CreAid-Media – zur Startseite">
-      <img src="/assets/creaid-media-logo.webp" width="9066" height="1000" alt="CreAid-Media" decoding="async">
+<header class="cm-header" id="cm-global-header">
+  <div class="cm-header__inner">
+    <a class="cm-header__brand" href="/" aria-label="CreAid-Media – zur Startseite">
+      <img src="/assets/creaid-media-logo.webp" alt="CreAid-Media" width="9066" height="1000" decoding="async">
     </a>
-    <button class="cm-mobile-toggle" type="button" aria-controls="cm-primary-navigation" aria-expanded="false" aria-label="Hauptmenü öffnen" data-cm-toggle>
-      <span class="cm-toggle-line"></span><span class="cm-toggle-line"></span><span class="cm-toggle-line"></span>
+    <button class="cm-header__toggle" id="cm-menu-toggle" type="button" aria-controls="cm-primary-nav" aria-expanded="false" aria-label="Hauptmenü öffnen">
+      <span class="cm-header__toggle-label">Menü</span>
+      <span class="cm-header__toggle-icon" aria-hidden="true"><i></i><i></i><i></i></span>
     </button>
-    <nav class="cm-primary-navigation" id="cm-primary-navigation" aria-label="Hauptnavigation" data-cm-nav>
-      <ul class="cm-nav-list">
-        <li class="cm-nav-item cm-nav-services">
-          <details class="cm-nav-details" data-cm-services>
-            <summary class="cm-nav-summary">Leistungen <span class="cm-chevron" aria-hidden="true"></span></summary>
-            <div class="cm-nav-panel">
-              <a class="cm-panel-overview" href="/leistungen">Alle Leistungen <span aria-hidden="true">↗</span></a>
-              {% for link in site.footerServiceLinks %}
-              {% if link.label != 'Projekt besprechen' %}
-              <a href="{{ link.href | escape }}"{% if pageKey == link.pageKey %} aria-current="page"{% endif %}>{{ link.label | escape }} <span aria-hidden="true">↗</span></a>
-              {% endif %}
-              {% endfor %}
-            </div>
-          </details>
-        </li>
-        <li><a href="/referenzen"{% if pageKey == 'referenzen' %} aria-current="page"{% endif %}>Referenzen</a></li>
-        <li><a href="/ueber-uns"{% if pageKey == 'ueber-uns' %} aria-current="page"{% endif %}>Über uns</a></li>
-        <li><a href="/creaid-blog"{% if pageKey == 'blog' %} aria-current="page"{% endif %}>Journal</a></li>
-        <li class="cm-nav-cta"><a href="/kontakt"{% if pageKey == 'kontakt' %} aria-current="page"{% endif %}>Projekt anfragen <span aria-hidden="true">↗</span></a></li>
-      </ul>
+    <nav class="cm-header__nav" id="cm-primary-nav" aria-label="Hauptnavigation">
+      <a class="cm-header__link" href="/"{% if pageKey == "index" %} aria-current="page"{% endif %}>Startseite</a>
+      <details class="cm-header__services">
+        <summary class="cm-header__link" aria-label="Leistungen und Leistungsbereiche">
+          Leistungen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="cm-header__dropdown">
+          <div class="cm-header__dropdown-kicker">Was wir für Sie tun</div>
+          {% for item in site.footerServices %}
+          {% if item.href != "/kontakt" %}
+          <a href="{{ item.href | escape }}">{{ item.label | escape }} <span aria-hidden="true">↗</span></a>
+          {% endif %}
+          {% endfor %}
+          <a class="cm-header__dropdown-all" href="/leistungen">Alle Leistungen <span aria-hidden="true">→</span></a>
+        </div>
+      </details>
+      <a class="cm-header__link" href="/referenzen"{% if pageKey == "referenzen" %} aria-current="page"{% endif %}>Referenzen</a>
+      <a class="cm-header__link" href="/ueber-uns"{% if pageKey == "ueber-uns" %} aria-current="page"{% endif %}>Über uns</a>
+      <a class="cm-header__link" href="/creaid-blog"{% if pageKey == "blog" %} aria-current="page"{% endif %}>Journal</a>
+      <a class="cm-header__cta" href="/kontakt"{% if pageKey == "kontakt" %} aria-current="page"{% endif %}>Projekt anfragen <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
 </header>
