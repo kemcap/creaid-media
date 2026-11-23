@@ -228,5 +228,51 @@
       "href": "/webdesign-fuer-handwerksbetriebe",
       "label": "Relaunch-Checkliste für Handwerker"
     }
+  },
+  "webdesign-aerzte": {
+    "title": "Eine Praxiswebsite mit klaren Patientenwegen",
+    "topic": "Webdesign für Ärzte",
+    "contact": "/kontakt?service=Webdesign%20f%C3%BCr%20%C3%84rzte#anfrage",
+    "groups": [
+      {
+        "title": "Praxis und Leistungen",
+        "copy": "Fachgebiete, Behandlungsangebote, Team, Sprechzeiten und Anfahrt verständlich aufbereiten. Medizinische Aussagen und Bilder müssen von der Praxis freigegeben werden."
+      },
+      {
+        "title": "Kontakt und Terminoptionen",
+        "copy": "Telefon, allgemeine Kontaktinformationen und optional eine geprüfte Terminlösung. Sensible Gesundheitsdaten gehören nicht in ein gewöhnliches Kontaktformular."
+      },
+      {
+        "title": "Für das Briefing",
+        "copy": "Fachrichtung, Standort, bestehende Website, Praxisfotos, Sprechzeiten und bevorzugtes Terminsystem."
+      }
+    ],
+    "link": {
+      "href": "/webdesign-fuer-arztpraxen",
+      "label": "Ratgeber für Praxis-Websites lesen"
+    }
+  },
+  "webdesign-immobilienmakler": {
+    "title": "Ein digitaler Auftritt für Käufer und Eigentümer",
+    "topic": "Webdesign für Immobilienmakler",
+    "contact": "/kontakt?service=Webdesign%20f%C3%BCr%20Immobilienmakler#anfrage",
+    "groups": [
+      {
+        "title": "Objekte und Exposés",
+        "copy": "Kauf- und Mietobjekte, Eckdaten, Bilder und Exposé-Downloads strukturiert darstellen. Filter und Objektfeeds werden nach Datenquelle geplant."
+      },
+      {
+        "title": "Lokale Sichtbarkeit und Anfragewege",
+        "copy": "Standortbezogene Inhalte, Team, Verkaufsberatung und Objektanfragen logisch verbinden. Externe Karten oder WhatsApp nur nach abgestimmter Integration."
+      },
+      {
+        "title": "Für das Briefing",
+        "copy": "Objektarten, Anzahl der Angebote, Maklersoftware, vorhandene Bilder, Exposé-Daten und gewünschte Kontaktwege."
+      }
+    ],
+    "link": {
+      "href": "/professionelle-website-fuer-lokale-dienstleister",
+      "label": "Ratgeber für lokale Dienstleister lesen"
+    }
   }
 }

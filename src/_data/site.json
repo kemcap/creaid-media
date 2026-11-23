@@ -109,6 +109,16 @@
       "label": "KI-Workflows & CRM",
       "href": "/ki-workflows-crm",
       "pageKey": "ki-workflows-crm"
+    },
+    {
+      "label": "Webdesign für Ärzte",
+      "href": "/webdesign/webdesign-fuer-aerzte",
+      "pageKey": "webdesign-aerzte"
+    },
+    {
+      "label": "Webdesign für Immobilienmakler",
+      "href": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+      "pageKey": "webdesign-immobilienmakler"
     }
   ]
 }

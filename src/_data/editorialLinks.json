@@ -542,6 +542,14 @@
   "webdesign-fuer-arztpraxen": [
     {
       "source": "webdesign-fuer-arztpraxen",
+      "target": "webdesign-aerzte",
+      "url": "/webdesign/webdesign-fuer-aerzte",
+      "anchor": "Webdesign für Ärzte – Praxiswebsite planen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "webdesign-fuer-arztpraxen",
       "target": "webdesign",
       "url": "/webdesign",
       "anchor": "Webdesign und Nutzerführung für Unternehmen",
@@ -789,6 +797,22 @@
       "target": "ki-automatisierung",
       "url": "/ki-automatisierung",
       "anchor": "KI-Automatisierung",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "leistungen",
+      "target": "webdesign-aerzte",
+      "url": "/webdesign/webdesign-fuer-aerzte",
+      "anchor": "Webdesign für Ärzte",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "leistungen",
+      "target": "webdesign-immobilienmakler",
+      "url": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+      "anchor": "Webdesign für Immobilienmakler",
       "priority": "P1",
       "placement": "Weiterführende Links"
     }
@@ -1068,6 +1092,58 @@
       "url": "/leistungen",
       "anchor": "Passende Spezialleistung finden",
       "priority": "P2",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "webdesign-aerzte": [
+    {
+      "source": "webdesign-aerzte",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign und Entwicklung",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "webdesign-aerzte",
+      "target": "webdesign-fuer-arztpraxen",
+      "url": "/webdesign-fuer-arztpraxen",
+      "anchor": "Ratgeber für Praxis-Websites lesen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "webdesign-aerzte",
+      "target": "seo-content-marketing",
+      "url": "/seo-3",
+      "anchor": "SEO und lokale Sichtbarkeit",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "webdesign-immobilienmakler": [
+    {
+      "source": "webdesign-immobilienmakler",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "anchor": "Webdesign und Entwicklung",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "webdesign-immobilienmakler",
+      "target": "professionelle-website-fuer-lokale-dienstleister",
+      "url": "/professionelle-website-fuer-lokale-dienstleister",
+      "anchor": "Ratgeber für lokale Dienstleister lesen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "webdesign-immobilienmakler",
+      "target": "seo-content-marketing",
+      "url": "/seo-3",
+      "anchor": "SEO und lokale Sichtbarkeit",
+      "priority": "P1",
       "placement": "Weiterführende Links"
     }
   ]

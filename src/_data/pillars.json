@@ -26,8 +26,8 @@
         ]
       },
       {
-        "title": "Websites für Handwerksbetriebe",
-        "copy": "Interessenten wollen wissen, welche Leistungen Sie anbieten, wo Sie arbeiten und wie sie Sie erreichen. Projektbilder und Referenzen helfen, wenn sie den jeweiligen Auftrag nachvollziehbar zeigen.",
+        "title": "Branchen-Websites",
+        "copy": "Handwerksbetriebe, Arztpraxen und Immobilienmakler benötigen jeweils eigene Inhalte und Kontaktwege. Wir strukturieren den Auftritt passend zu den Fragen Ihrer Zielgruppe.",
         "links": [
           {
             "source": "webdesign",
@@ -44,6 +44,22 @@
             "anchor": "Website für Dachdecker: Leistungen, Bilder und Anfragen",
             "priority": "P2",
             "placement": "Websites für Handwerksbetriebe"
+          },
+          {
+            "source": "webdesign",
+            "target": "webdesign-aerzte",
+            "url": "/webdesign/webdesign-fuer-aerzte",
+            "anchor": "Webdesign für Ärzte",
+            "priority": "P1",
+            "placement": "Weiterführende Links"
+          },
+          {
+            "source": "webdesign",
+            "target": "webdesign-immobilienmakler",
+            "url": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+            "anchor": "Webdesign für Immobilienmakler",
+            "priority": "P1",
+            "placement": "Weiterführende Links"
           }
         ]
       },

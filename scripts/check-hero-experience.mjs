@@ -166,14 +166,14 @@ const pageMeta=JSON.parse(load('src/_data/pages.json'));
 const postIndex=JSON.parse(load('src/_data/postsIndex.json'));
 const routeMap=JSON.parse(load('src/_data/routes.json'));
 const serviceDepth=JSON.parse(load('src/_data/serviceDepth.json'));
-assert.equal(Object.keys(pageMeta).length,59);
+assert.equal(Object.keys(pageMeta).length,98);
 assert.equal(postIndex.length,39);
 assert.equal(Object.values(pageMeta).filter(p=>p.isPost).length,39);
 assert.equal(new Set(postIndex.map(p=>p.slug)).size,39);
 const journal=load('dist/blog.html');
 assert.equal((journal.match(/class="j-card j-reveal"/g)||[]).length,39);
 assert.ok(journal.includes('href="/ki-automatisierung-fuer-unternehmen"'));
-assert.equal(Object.keys(serviceDepth).length,10);
+assert.equal(Object.keys(serviceDepth).length,12);
 for(const [key,info] of Object.entries(serviceDepth)){
   const html=load('dist/'+key+'.html');
   assert.ok(html.includes('id="projektumfang"'),key+' missing concrete scope');
@@ -192,7 +192,7 @@ for(const [key,p] of Object.entries(pageMeta)){
   if(p.structuredData){const schema=JSON.parse(p.structuredData);assert.ok(schema['@context']==='https://schema.org');}
   if(p.isPost){assert.ok(postIndex.some(x=>x.slug===key));assert.equal(JSON.parse(p.structuredData)['@type'],'BlogPosting');}
 }
-console.log('PASS: Phase 3 content scope on 10 services, all 39 journal cards, unique metadata and stable URLs for 59 pages.');
+console.log('PASS: Phase 3 content scope on 12 services, all 39 journal cards, unique metadata and stable URLs.');
 
  // Phase 4: keep legal status honest, avoid automatic third-party resources/storage.
 const privacy=load('dist/datenschutz.html'), imprint=load('dist/impressum.html'), cookies=load('dist/cookie-einstellungen.html'), legalJs=load('dist/assets/legal-pages.js');
@@ -213,3 +213,13 @@ for(const name of files){
  }
 }
 console.log('PASS: Phase 4 legal draft integrity, no automatic external HTML resources and no new preference storage.');
+
+// Phase 5: original sitemap coverage, no accidental URL loss.
+const legacyCoverage=JSON.parse(load('src/_data/legacySitemapCoverage.json'));
+const aliasMap=JSON.parse(load('src/_data/aliases.json'));
+assert.equal(legacyCoverage.length,87);
+assert.equal(new Set(legacyCoverage.map(row=>row.url)).size,87);
+for(const row of legacyCoverage){assert.ok(Object.values(routeMap).includes(row.target),'Missing target '+row.url);assert.ok(row.url===row.target||aliasMap[row.url]===row.target,'Missing legacy alias '+row.url);}
+for(const name of ['webdesign-aerzte','webdesign-immobilienmakler']){const html=load('dist/'+name+'.html');assert.ok(html.includes('sp-hero')&&html.includes('sp-story')&&html.includes('id="projektumfang"')&&html.includes('/assets/service-crosshair.js'));assert.ok(html.includes('/kontakt?service='));assert.ok(contact.includes('value="'+serviceDepth[name].topic+'"'));}
+for(const row of legacyCoverage.filter(x=>x.url.startsWith('/category/'))){const key=Object.keys(routeMap).find(k=>routeMap[k]===row.url);assert.ok(load('dist/'+key+'.html').includes('class="j-card"'));}
+console.log('PASS: 87 original sitemap URLs mapped, 98 content pages, 19 archives and 2 restored industry landing pages.');

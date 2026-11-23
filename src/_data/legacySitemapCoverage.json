@@ -1,0 +1,524 @@
+[
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/",
+    "status": "canonical",
+    "target": "/"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+    "status": "canonical",
+    "target": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/webdesign",
+    "status": "canonical",
+    "target": "/webdesign"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/creaid-blog",
+    "status": "canonical",
+    "target": "/creaid-blog"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/webdesign/webdesign-fuer-aerzte",
+    "status": "canonical",
+    "target": "/webdesign/webdesign-fuer-aerzte"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+    "status": "canonical",
+    "target": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/performance-optimization-3",
+    "status": "canonical",
+    "target": "/performance-optimization-3"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/load-testing-3",
+    "status": "canonical",
+    "target": "/load-testing-3"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/performance-audit-3",
+    "status": "canonical",
+    "target": "/performance-audit-3"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/code-ueberpruefung",
+    "status": "canonical",
+    "target": "/code-ueberpruefung"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/upgrades-wartung",
+    "status": "canonical",
+    "target": "/upgrades-wartung"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/server-wartung",
+    "status": "canonical",
+    "target": "/server-wartung"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/cloud-hosting-3",
+    "status": "canonical",
+    "target": "/cloud-hosting-3"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/systemintegration",
+    "status": "canonical",
+    "target": "/systemintegration"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/cs-cart-lizenz-reseller",
+    "status": "canonical",
+    "target": "/cs-cart-lizenz-reseller"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/cs-cart-konfiguration-einrichtung",
+    "status": "canonical",
+    "target": "/cs-cart-konfiguration-einrichtung"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/store-builder-standardlizenzen",
+    "status": "canonical",
+    "target": "/store-builder-standardlizenzen"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/b2b-portal-entwicklung",
+    "status": "canonical",
+    "target": "/b2b-portal-entwicklung"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/marktplatz-entwicklung",
+    "status": "canonical",
+    "target": "/marktplatz-entwicklung"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/online-shop-entwicklung",
+    "status": "canonical",
+    "target": "/online-shop-entwicklung"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/e-commerce",
+    "status": "canonical",
+    "target": "/e-commerce"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/kundenspezifische-entwicklung",
+    "status": "canonical",
+    "target": "/kundenspezifische-entwicklung"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/addon-theme-entwicklung",
+    "status": "canonical",
+    "target": "/addon-theme-entwicklung"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/ui-ux-entwicklung",
+    "status": "canonical",
+    "target": "/ui-ux-entwicklung"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/seo-3",
+    "status": "canonical",
+    "target": "/seo-3"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/digitales-marketing",
+    "status": "canonical",
+    "target": "/digitales-marketing"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/animation",
+    "status": "canonical",
+    "target": "/animation"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/print-design",
+    "status": "canonical",
+    "target": "/print-design"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/impressum",
+    "status": "canonical",
+    "target": "/impressum"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/grafikdesign-2",
+    "status": "canonical",
+    "target": "/grafikdesign-2"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/datenschutz",
+    "status": "canonical",
+    "target": "/datenschutz"
+  },
+  {
+    "source": "26-06-13-PAGE-XML-Sitemap - CreAid-Media.xml",
+    "url": "/cookie-richtlinie",
+    "status": "alias",
+    "target": "/cookie-einstellungen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/corporate-design-erstellen-lassen",
+    "status": "canonical",
+    "target": "/corporate-design-erstellen-lassen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/webdesign-agentur-fuer-kleine-unternehmen",
+    "status": "canonical",
+    "target": "/webdesign-agentur-fuer-kleine-unternehmen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/seo-fuer-lokale-sichtbarkeit",
+    "status": "canonical",
+    "target": "/seo-fuer-lokale-sichtbarkeit"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/onlineshop-erfolgreich-aufbauen-anleitung",
+    "status": "canonical",
+    "target": "/onlineshop-erfolgreich-aufbauen-anleitung"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/schlechte-website-verbessern",
+    "status": "canonical",
+    "target": "/schlechte-website-verbessern"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/webdesign-fuer-dachdecker-firma",
+    "status": "canonical",
+    "target": "/webdesign-fuer-dachdecker-firma"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/professionelle-website-fuer-lokale-dienstleister",
+    "status": "canonical",
+    "target": "/professionelle-website-fuer-lokale-dienstleister"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/google-ads-aber-keine-anfragen",
+    "status": "canonical",
+    "target": "/google-ads-aber-keine-anfragen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/google-maps-auffindbarkeit-verbessern",
+    "status": "canonical",
+    "target": "/google-maps-auffindbarkeit-verbessern"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/webdesign-fuer-arztpraxen",
+    "status": "canonical",
+    "target": "/webdesign-fuer-arztpraxen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/warum-bringt-meine-website-keine-kunden",
+    "status": "canonical",
+    "target": "/warum-bringt-meine-website-keine-kunden"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/webdesign-agentur-fuer-handwerker",
+    "status": "canonical",
+    "target": "/webdesign-agentur-fuer-handwerker"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/webdesign-outsourcing-deutschland",
+    "status": "canonical",
+    "target": "/webdesign-outsourcing-deutschland"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/logo-design-agentur",
+    "status": "canonical",
+    "target": "/logo-design-agentur"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/was-kostet-ein-imagefilm",
+    "status": "canonical",
+    "target": "/was-kostet-ein-imagefilm"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/onlineshop-erstellen-lassen",
+    "status": "canonical",
+    "target": "/onlineshop-erstellen-lassen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/website-wartung-fuer-firmen",
+    "status": "canonical",
+    "target": "/website-wartung-fuer-firmen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/shopware-vs-wordpress-shop",
+    "status": "canonical",
+    "target": "/shopware-vs-wordpress-shop"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/b2b-portal-entwickeln-lassen",
+    "status": "canonical",
+    "target": "/b2b-portal-entwickeln-lassen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/webdesign-fuer-handwerker",
+    "status": "canonical",
+    "target": "/webdesign-fuer-handwerker"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/produktfim-erstellen-lassen",
+    "status": "canonical",
+    "target": "/produktfim-erstellen-lassen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/firmennamen-entwickeln-lassen",
+    "status": "canonical",
+    "target": "/firmennamen-entwickeln-lassen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/deutschsprachige-agentur-in-der-tuerkei-finden",
+    "status": "canonical",
+    "target": "/deutschsprachige-agentur-in-der-tuerkei-finden"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/guenstige-webdesign-agentur-europa-finden",
+    "status": "canonical",
+    "target": "/guenstige-webdesign-agentur-europa-finden"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/social-media-betreuung-unternehmen",
+    "status": "canonical",
+    "target": "/social-media-betreuung-unternehmen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/seo-grundlagen-lokale-dienstleister",
+    "status": "canonical",
+    "target": "/seo-grundlagen-lokale-dienstleister"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/marktplatz-plattform-entwickeln",
+    "status": "canonical",
+    "target": "/marktplatz-plattform-entwickeln"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/individuelle-webentwicklung-fuer-unternehmen",
+    "status": "canonical",
+    "target": "/individuelle-webentwicklung-fuer-unternehmen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/webdesign-fuer-handwerksbetriebe",
+    "status": "canonical",
+    "target": "/webdesign-fuer-handwerksbetriebe"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/logo-und-slogan-entwickeln",
+    "status": "canonical",
+    "target": "/logo-und-slogan-entwickeln"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/wie-wirkt-corporate-design",
+    "status": "canonical",
+    "target": "/wie-wirkt-corporate-design"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/messeauftritt-gestalten-lassen",
+    "status": "canonical",
+    "target": "/messeauftritt-gestalten-lassen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/kampagne-fuer-lokale-unternehmen",
+    "status": "canonical",
+    "target": "/kampagne-fuer-lokale-unternehmen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/flyer-design-fuer-unternehmen",
+    "status": "canonical",
+    "target": "/flyer-design-fuer-unternehmen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/markenauftritt-fuer-kleine-unternehmen",
+    "status": "canonical",
+    "target": "/markenauftritt-fuer-kleine-unternehmen"
+  },
+  {
+    "source": "26-06-13-POST-XML-Sitemap - CreAid-Media.xml",
+    "url": "/warum-corporate-design-wichtig-ist",
+    "status": "canonical",
+    "target": "/warum-corporate-design-wichtig-ist"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/corporate-design",
+    "status": "canonical",
+    "target": "/category/corporate-design"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/branding",
+    "status": "canonical",
+    "target": "/category/branding"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/seo",
+    "status": "canonical",
+    "target": "/category/seo"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/lokales-marketing",
+    "status": "canonical",
+    "target": "/category/lokales-marketing"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/kundengewinnung",
+    "status": "canonical",
+    "target": "/category/kundengewinnung"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/lokal",
+    "status": "canonical",
+    "target": "/category/lokal"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/marketing",
+    "status": "canonical",
+    "target": "/category/marketing"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/webdesign",
+    "status": "canonical",
+    "target": "/category/webdesign"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/handwerk",
+    "status": "canonical",
+    "target": "/category/handwerk"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/handwerk/webdesign-handwerk",
+    "status": "canonical",
+    "target": "/category/handwerk/webdesign-handwerk"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/handwerk/seo-handwerk",
+    "status": "canonical",
+    "target": "/category/handwerk/seo-handwerk"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/handwerk/handwerk-handwerk",
+    "status": "canonical",
+    "target": "/category/handwerk/handwerk-handwerk"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/webdesign-conversion",
+    "status": "canonical",
+    "target": "/category/webdesign-conversion"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/digitalisierung",
+    "status": "canonical",
+    "target": "/category/digitalisierung"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/suchmaschinenoptimierung",
+    "status": "canonical",
+    "target": "/category/suchmaschinenoptimierung"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/plattform-konzeption",
+    "status": "canonical",
+    "target": "/category/plattform-konzeption"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/e-commerce",
+    "status": "canonical",
+    "target": "/category/e-commerce"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/online-shop",
+    "status": "canonical",
+    "target": "/category/online-shop"
+  },
+  {
+    "source": "26-06-13-Category-XML-Sitemap - CreAid-Media.xml",
+    "url": "/category/digitales-marketing",
+    "status": "canonical",
+    "target": "/category/digitales-marketing"
+  }
+]
