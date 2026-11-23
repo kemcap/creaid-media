@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const tracks=[...document.querySelectorAll('.a-track')];
+  const tracks=[...document.querySelectorAll('.a-track:not(.sp-track)')];
   const root=document.documentElement;
   const reduce=matchMedia('(prefers-reduced-motion: reduce)');
   const clamp=n=>Math.min(1,Math.max(0,n));
@@ -16,6 +16,7 @@
     let easingActive=false;
     const vh=window.innerHeight;
     tracks.forEach(track=>{
+      if(getComputedStyle(track.firstElementChild).position!=='sticky')return;
       const box=track.getBoundingClientRect();
       if(box.bottom < -vh*.2 || box.top > vh*1.2)return;
       const travel=Math.max(1,track.offsetHeight-vh);

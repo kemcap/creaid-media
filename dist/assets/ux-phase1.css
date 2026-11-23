@@ -1,0 +1,212 @@
+/* Phase 1: shared viewport, natural content flow and compact global shell. */
+:root{--cm-nav-height:93px;--cm-viewport:calc(100vh - var(--cm-nav-height));--cm-space:clamp(32px,5vw,72px)}
+@supports(height:100dvh){:root{--cm-viewport:calc(100dvh - var(--cm-nav-height))}}
+@media(max-width:860px){:root{--cm-nav-height:77px}}
+body > .topline,body > .a-topline,body > .j-topline{display:none!important}
+html{scroll-padding-top:calc(var(--cm-nav-height) + 12px)}
+main > section[id]{scroll-margin-top:0}
+.j-readbar{top:var(--cm-nav-height)}
+/* Normal heroes account for exactly one sticky global header and can grow with content. */
+main > .page-top,
+main > .a-normal:first-of-type,
+main > .j-hero,
+main > .l-hero{
+  height:auto!important;min-height:var(--cm-viewport);overflow:hidden;
+}
+main > .page-top > .service-hero-inner,
+main > .a-normal:first-of-type > .a-shell.a-l,
+main > .j-hero > .j-shell,
+main > .l-hero > .l-hero-in{
+  height:auto!important;min-height:var(--cm-viewport);box-sizing:border-box;
+  display:flex;flex-direction:column;justify-content:center;
+  padding-top:clamp(28px,5vh,64px);padding-bottom:clamp(48px,8vh,84px);
+}
+main > .a-normal:first-of-type > .a-shell.a-l{gap:clamp(12px,2vh,24px)}
+main > .a-normal:first-of-type .a-h1{margin:0}
+main > .a-normal:first-of-type .a-intro-row,
+main > .l-hero .l-hero-bottom{margin-top:0;align-items:center;padding-bottom:0}
+main > .a-normal:first-of-type .sp-hero-bottom{padding-bottom:0}
+main > .l-hero .l-hero-in{gap:clamp(12px,2.4vh,28px)}
+main > .l-hero .l-title{margin:0}
+main > .l-hero .l-hero-line{position:absolute;left:0;right:0;bottom:16px}
+main > .j-hero .j-hero-title{margin:clamp(12px,2.4vh,26px) 0}
+main > .j-hero .j-hero-bottom>p{margin:0}
+/* Homepage: no empty pinned distance before the first chapter; ticker stays in flow. */
+main > .track-hero{height:auto!important;min-height:0!important}
+main > .track-hero .hero-stage{
+  position:relative;top:0;height:auto!important;min-height:var(--cm-viewport)!important;
+  display:flex;flex-direction:column;overflow:visible;contain:none;
+}
+main > .track-hero .hero-content{
+  min-height:0!important;height:auto;flex:1;display:flex;flex-direction:column;
+  justify-content:center;padding:clamp(26px,5vh,64px) 0 clamp(58px,9vh,94px);
+}
+main > .track-hero .hero-heading{font-size:clamp(42px,min(10.05vw,13vh),154px)}
+main > .track-hero .hero-floor{position:relative;bottom:auto;flex:none;margin-top:auto}
+main > .track-hero .next-arrow{bottom:70px}
+main > .track-hero .hero-heading>span,main > .track-hero .hero-intro,
+main > .track-hero .hero-actions,main > .track-hero .hero-stamp{transform:none!important;opacity:1!important}
+/* Articles are reading pages, not long pinned landing pages. */
+main > .j-article-hero.j-article-hero-v9{height:auto!important;min-height:0!important;overflow:hidden}
+main > .j-article-hero.j-article-hero-v9 > .j-shell{
+  height:auto!important;min-height:0!important;align-content:center;
+  padding-top:clamp(32px,6vh,70px);padding-bottom:58px;gap:clamp(18px,4vw,72px);
+}
+main > .j-article-hero h1{margin:14px 0 12px;font-size:clamp(34px,min(5vw,8vh),70px)}
+main > .j-article-hero .j-article-desc{display:block;overflow:visible;-webkit-line-clamp:unset;margin:0 0 14px}
+main > .j-article-hero .j-article-cover{max-height:clamp(230px,49vh,460px);height:auto}
+main > .j-article-hero .j-article-scroll{bottom:16px}
+main > .j-bottom-cta{min-height:0}
+main > .j-bottom-cta .j-shell{padding:clamp(48px,7vw,100px) 0}
+main > .j-bottom-cta h2{font-size:clamp(44px,7.4vw,106px);margin:18px 0}
+main > .l-section{min-height:0;padding:clamp(48px,7vw,100px) 0}
+main > .l-section.l-final h2{font-size:clamp(42px,7.2vw,102px)}
+/* Cards, references, FAQ, contact and simple CTA chapters are regular document flow. */
+main > .a-track:not(.sp-story),
+main > .service-detail,main > .service-closing,
+main > .j-feature-track,
+main > .track-capabilities,main > .track-work{
+  height:auto!important;min-height:0!important;overflow:visible;
+}
+main > .a-track:not(.sp-story) > .a-stage,
+main > .a-normal:not(:first-of-type),
+main > .service-detail > .detail-pin,
+main > .service-closing > .closing-pin,
+main > .j-feature-track > .j-feature-stage,
+main > .track-capabilities > .motion-stage,
+main > .track-work > .motion-stage{
+  position:relative;top:auto;height:auto!important;min-height:0!important;overflow:hidden;contain:none;
+}
+main > .a-track:not(.sp-story) > .a-stage > .a-shell,
+main > .a-normal:not(:first-of-type) > .a-shell{
+  flex:1;height:auto!important;min-height:0!important;display:flex;flex-direction:column;
+  gap:clamp(14px,2.2vw,30px);padding:var(--cm-space) 0 calc(var(--cm-space) + 24px);
+}
+main > .a-track:not(.sp-story) .a-bottom,main > .a-normal:not(:first-of-type) .a-bottom{height:32px}
+main > .a-track:not(.sp-story) :is([data-step],[data-reveal],[data-panel],[data-grow],[data-sp-card],[data-sp-process],[data-sp-faq],[data-sp-end],.sp-hub-link,.sp-hub-card){
+  opacity:1!important;transform:none!important;
+}
+main > .a-track:not(.sp-story) :is(.sp-card-row,.sp-process-row,.sp-faq-row,.sp-hub-list,.sp-hub-grid,.sp-closer){margin-top:0;margin-bottom:0;flex:none}
+main > .a-track:not(.sp-story) .sp-hub-card p{display:block}
+main > .a-track:not(.sp-story) .a-case-visual{flex:none;min-height:220px}
+main > .a-track:not(.sp-story) .sp-big-faq{min-height:0}
+main > .a-track#fragen .sp-faq-next{margin:0}
+main > #anfrage .a-form-wrap{flex:none;min-height:0}
+main > #anfrage .a-form-left p{display:block}
+main > #anfrage :is(input,select,textarea){font-size:16px;min-height:44px}
+main > .service-detail > .detail-pin > .container,
+main > .service-closing > .closing-pin > .container{height:auto!important;min-height:0;padding:var(--cm-space) 0;gap:clamp(20px,3vw,36px)}
+main > .service-closing .service-closing-inner{min-height:0;flex:none;padding:0}
+main > .service-detail :is(.detail-card,.detail-card *,.detail-top *,.detail-actions),
+main > .service-closing :is(.motion-word,.micro,.right,.right *,.footer){
+  opacity:1!important;transform:none!important;
+}
+main > .service-detail .chapter-cue,main > .service-closing .chapter-cue{display:none}
+main > .j-feature-track .j-feature-wrap{padding:var(--cm-space) 0 calc(var(--cm-space) + 25px);height:auto;min-height:0}
+main > .j-feature-track :is(.j-feature-copy,.j-feature-media,.j-feature-media img){opacity:1!important;transform:none!important}
+main > .track-capabilities .capability-layout,
+main > .track-work .work-layout{height:auto;min-height:0;padding:var(--cm-space) 0 calc(var(--cm-space) + 34px)}
+main > .track-capabilities .cap-grid{height:auto;grid-auto-rows:minmax(160px,auto);grid-template-rows:repeat(2,minmax(160px,auto))}
+main > .track-capabilities .cap-active{margin-top:20px;padding-bottom:0}
+main > .track-work .work-gallery{flex:none;min-height:clamp(210px,32vw,480px)}
+/* Time-based stagger without hiding content before the observer runs. */
+.cm-flow-enter{animation:cm-flow-rise .48s cubic-bezier(.19,1,.22,1) both;animation-delay:var(--cm-flow-delay,0ms)}
+@keyframes cm-flow-rise{from{translate:0 16px}to{translate:0 0}}
+/* Desktop footer retains its four-column links; keep one CTA at the end of each journey. */
+body.cm-has-closing-cta .cm-footer__lead{display:none}
+.cm-footer__grid{padding:24px 0 26px}
+.cm-footer__bottom{padding:12px 0 14px}
+@media(max-width:900px){
+  main > .a-normal:first-of-type > .a-shell.a-l{justify-content:center;gap:14px;padding-top:32px;padding-bottom:52px}
+  main > .a-normal:first-of-type .a-h1{font-size:clamp(40px,min(11vw,9vh),82px)}
+  main > .a-normal:first-of-type .a-intro-row{margin:0;align-items:flex-start;gap:14px}
+  main > .a-normal:first-of-type .a-intro-row .a-btn{margin-left:0}
+  main > .l-hero .l-title{font-size:clamp(40px,min(11vw,10vh),82px)}
+  main > .l-hero .l-hero-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+  main > .j-article-hero.j-article-hero-v9 > .j-shell{padding:30px 0 53px;gap:16px}
+  main > .j-article-hero h1{font-size:clamp(30px,6.4vw,52px)}
+  main > .j-article-hero .j-article-cover{height:clamp(125px,20vh,230px);max-height:none}
+}
+@media(max-width:570px){
+  main > .track-hero .hero-heading{font-size:clamp(38px,11.4vw,66px);margin:14px 0 18px}
+  main > .track-hero .hero-bottom{margin-top:0}
+  main > .track-hero .hero-actions{margin-top:18px}
+  main > .track-hero .next-arrow{bottom:49px}
+  main > .page-top > .service-hero-inner{padding:32px 0 48px}
+  main > .page-top .service-hero-inner h1{font-size:clamp(43px,12vw,70px)}
+  main > .page-top .service-hero-actions{gap:12px 20px}
+  main > .a-normal:first-of-type .sp-hero-h1{font-size:clamp(36px,11.2vw,64px)}
+  main > .j-hero .j-hero-title{font-size:clamp(52px,14vw,82px)}
+  main > .j-article-hero h1{font-size:clamp(28px,8vw,41px)}
+  main > .j-article-hero .j-article-cover{height:clamp(116px,18vh,174px)}
+  main > .j-article-hero .j-article-desc{font-size:13px;line-height:1.48}
+  main > .track-capabilities .cap-grid{grid-template-rows:repeat(2,minmax(132px,auto))}
+  main > .a-track:not(.sp-story) .sp-big-faq>p{font-size:13px;line-height:1.5}
+  .cm-footer__lead{padding:18px 0;gap:12px}
+  .cm-footer__lead h2{font-size:clamp(28px,8vw,40px);margin:7px 0 5px}
+  .cm-footer__lead-cta{min-height:44px;padding:11px 14px}
+  .cm-footer__grid{padding:20px 0;gap:18px 14px}
+  .cm-footer__grid h2,.cm-footer__services.audit-related h2{font-size:12px;margin-bottom:8px}
+  .cm-footer__services .audit-links li{margin:0}
+  .cm-footer__services .audit-links a,.cm-footer__contact>a,.cm-footer__legal>a{font-size:12px;line-height:1.45;padding:5px 0;margin:0}
+  .cm-footer__company p{margin:8px 0;font-size:12px}
+  .cm-footer__contact address{font-size:12px;line-height:1.45}
+  .cm-footer__bottom{padding:12px 0;gap:5px}
+}
+/* Low-height / reduced-motion: all essential text visible; no pinned clipping. */
+@media(max-height:620px),(max-width:900px) and (max-height:700px),(prefers-reduced-motion:reduce){
+  main > .track-hero .hero-content{padding:26px 0 56px}
+  main > .track-hero .hero-heading{font-size:clamp(36px,min(10vw,15vh),88px)}
+  main > .track-hero .next-arrow{display:none}
+  main > .a-normal:first-of-type > .a-shell.a-l,
+  main > .page-top > .service-hero-inner,
+  main > .j-hero > .j-shell,
+  main > .l-hero > .l-hero-in{min-height:0;padding:32px 0 48px}
+  main > .a-normal:first-of-type,main > .page-top,main > .j-hero,main > .l-hero{min-height:0!important}
+  main > .a-normal:first-of-type .a-h1{font-size:clamp(37px,min(10vw,15vh),92px)}
+  main > .page-top .service-hero-inner h1{font-size:clamp(39px,min(10vw,16vh),96px)}
+  main > .j-hero .j-hero-title,main > .l-hero .l-title{font-size:clamp(40px,min(12vw,16vh),98px)}
+  main > .track-method,main > .track-statement-contact,main > .a-track.sp-story,main > .service-story.web-story{height:auto!important;min-height:0!important}
+  main > .track-method .motion-stage,main > .track-statement-contact .motion-stage,
+  main > .sp-story > .a-stage,main > .service-story > .web-pin{
+    position:relative;top:auto;height:auto!important;min-height:0!important;overflow:visible;contain:none;
+  }
+  main > .track-method .method-layout{height:auto;min-height:0;padding:var(--cm-space) 0 60px}
+  main > .track-method .method-card{opacity:1!important;transform:none!important}
+  main > .track-statement-contact .statement-panel,
+  main > .track-statement-contact .contact-panel{
+    position:relative;inset:auto;height:auto;min-height:0;clip-path:none!important;overflow:hidden;
+  }
+  main > .track-statement-contact :is(.statement-layout,.contact-layout){height:auto!important;min-height:0!important;padding:var(--cm-space) 0 64px}
+  main > .track-statement-contact .statement-layout h2{font-size:clamp(46px,9vw,100px)}
+  main > .track-statement-contact .contact-copy h2{font-size:clamp(43px,9vw,92px)}
+  main > .track-statement-contact .statement-mask-edge{display:none}
+  main > .track-statement-contact .contact-scroll-anchor{top:50%}
+  main > .sp-story .sp-story-shell{height:auto;min-height:0;padding:var(--cm-space) 0 48px}
+  main > .sp-story .sp-story-layout{display:flex;flex-direction:column;gap:24px;align-items:stretch;height:auto;flex:none}
+  main > .sp-story .sp-copy-stack{height:auto;min-height:0;flex:none}
+  main > .sp-story .sp-scene{position:relative;inset:auto;display:flex!important;opacity:1!important;transform:none!important;pointer-events:auto!important;padding:14px 0}
+  main > .sp-story .sp-scene h2{font-size:clamp(28px,6vw,53px)}
+  main > .sp-story .sp-story-instruction{display:none}
+  main > .sp-story .sp-visual{height:clamp(240px,42vw,380px);max-height:none;min-height:0;flex:none}
+  main > .sp-story .sp-art-panel{display:none!important}
+  main > .sp-story .sp-art-panel[data-art="0"]{display:grid!important;opacity:1!important;transform:none!important}
+  main > .service-story .web-columns{height:auto;min-height:0;display:flex;flex-direction:column;gap:22px;padding:40px 6vw 66px}
+  main > .service-story .copy-area,main > .service-story .scene-stack{height:auto;min-height:0;max-width:none;width:100%}
+  main > .service-story .scene-copy{position:relative;inset:auto;visibility:visible!important;opacity:1!important;transform:none!important;padding:12px 0;max-width:none}
+  main > .service-story .scene-copy h2{font-size:clamp(30px,6vw,54px)}
+  main > .service-story .visual-stage{height:clamp(235px,42vw,380px);max-height:none;min-height:0;width:100%;flex:none}
+  main > .service-story .visual-stage :is(.device-laptop,.chapter-asset.asset-one){opacity:1!important;visibility:visible!important;transform:none!important}
+  main > .service-story .visual-stage :is(.device-phone,.conversion-card,.conversion-line,.chapter-asset:not(.asset-one)){opacity:0!important;visibility:hidden!important}
+  main > .service-story .web-topline,main > .service-story .progress-wrap{display:none}
+  main > .service-story .web-bottom{bottom:12px}
+  main > .sp-story [data-percent],main > .sp-story .sp-story-instruction{display:none}
+}
+@media(prefers-reduced-motion:reduce){.cm-flow-enter{animation:none!important}}
+@media print{#cm-global-header,.cm-footer,.j-readbar{display:none!important}main > .j-article-hero.j-article-hero-v9{min-height:0!important}}
+
+/* Ensure the natural-flow footer and chapter cues cannot cover links. */
+main > .a-track:not(.sp-story) .a-contact-options{margin-top:0;flex:none}
+main > .a-track:not(.sp-story) .a-case-layout{height:auto;min-height:0}
+main > .j-feature-track .j-feature-footer{position:absolute;bottom:0}
+@media(max-width:570px){.cm-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cm-footer__company,.cm-footer__contact,.cm-footer__services,.cm-footer__legal{min-width:0}.cm-footer a{overflow-wrap:anywhere}}
