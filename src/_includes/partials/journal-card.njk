@@ -3,6 +3,6 @@
     <div class="j-card-image"><img src="{{ post.image | escape }}" alt="" width="{{ post.width }}" height="{{ post.height }}" loading="lazy" decoding="async"></div>
     <div class="j-card-top">{{ post.categoryText | escape }}<span> / </span>{{ post.badgeText | escape }}</div>
     <h3>{{ post.title | escape }}</h3><p>{{ post.excerpt | escape }}</p>
-    <div class="j-card-bottom"><span><time datetime="{{ post.date }}">{{ post.dateLabel }}</time> · ca. {{ post.minutes }} Min.</span><span class="j-card-read" aria-hidden="true">LESEN ↗</span></div>
+    <div class="j-card-bottom"><span>{% if post.date %}<time datetime="{{ post.date }}">{{ post.dateLabel }}</time> · {% endif %}ca. {{ post.minutes }} Min.</span><span class="j-card-read" aria-hidden="true">LESEN ↗</span></div>
   </a>
 </article>

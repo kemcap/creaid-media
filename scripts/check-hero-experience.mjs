@@ -160,3 +160,36 @@ assert.ok(load('dist/referenzen.html').includes('id="arbeitsproben"'));
 assert.ok(contact.includes('name="company"')&&contact.includes('name="phone"'));
 for(const name of files){const page=load('dist/'+name);assert.ok(page.includes('cm-header__specialties'),name+' missing specialty navigation');assert.ok(!page.includes('Profiladresse noch nicht hinterlegt'),name+' unlinked social placeholder');}
 console.log('PASS: Phase 2 CTA hierarchy, 10 service topics, grouped navigation and portfolio provenance.');
+
+ // Phase 3: content depth, complete journal, stable URL mapping and valid metadata.
+const pageMeta=JSON.parse(load('src/_data/pages.json'));
+const postIndex=JSON.parse(load('src/_data/postsIndex.json'));
+const routeMap=JSON.parse(load('src/_data/routes.json'));
+const serviceDepth=JSON.parse(load('src/_data/serviceDepth.json'));
+assert.equal(Object.keys(pageMeta).length,59);
+assert.equal(postIndex.length,39);
+assert.equal(Object.values(pageMeta).filter(p=>p.isPost).length,39);
+assert.equal(new Set(postIndex.map(p=>p.slug)).size,39);
+const journal=load('dist/blog.html');
+assert.equal((journal.match(/class="j-card j-reveal"/g)||[]).length,39);
+assert.ok(journal.includes('href="/ki-automatisierung-fuer-unternehmen"'));
+assert.equal(Object.keys(serviceDepth).length,10);
+for(const [key,info] of Object.entries(serviceDepth)){
+  const html=load('dist/'+key+'.html');
+  assert.ok(html.includes('id="projektumfang"'),key+' missing concrete scope');
+  assert.ok(html.includes('class="cm-depth-grid"')&&info.groups.length===3);
+  assert.equal(JSON.parse(pageMeta[key].structuredData)['@type'],'Service');
+}
+const titles=new Set(),desc=new Set(),canonicals=new Set();
+for(const [key,p] of Object.entries(pageMeta)){
+  assert.ok(p.title&&p.description&&p.canonical);
+  assert.ok(!titles.has(p.title)&&!desc.has(p.description)&&!canonicals.has(p.canonical),'Duplicate metadata '+key);
+  titles.add(p.title);desc.add(p.description);canonicals.add(p.canonical);
+  assert.equal(p.canonical,'https://creaid-media.de'+routeMap[key],'Production URL changed: '+key);
+  assert.equal(p.robots,'noindex,nofollow,noarchive','Preview must remain noindex');
+  const html=load('dist/'+key+'.html');
+  assert.ok(html.includes('/assets/content-phase3.css'));
+  if(p.structuredData){const schema=JSON.parse(p.structuredData);assert.ok(schema['@context']==='https://schema.org');}
+  if(p.isPost){assert.ok(postIndex.some(x=>x.slug===key));assert.equal(JSON.parse(p.structuredData)['@type'],'BlogPosting');}
+}
+console.log('PASS: Phase 3 content scope on 10 services, all 39 journal cards, unique metadata and stable URLs for 59 pages.');

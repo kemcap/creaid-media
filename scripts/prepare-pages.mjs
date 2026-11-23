@@ -38,11 +38,21 @@ function rewrite(text,extension){
       const rewritten=value.replace(/(^|,\s*)\/(?!\/)/g,(m,lead)=>lead+base+'/');
       return 'srcset='+quote+rewritten+quote;
     });
-    // Preview should never claim the production URL as its canonical target.
-    text=text.replace(/(<link\b[^>]*\brel="canonical"[^>]*\bhref=")https:\/\/creaid-media\.de(\/[^"]*)?(")/g,
-      (_,start,path='',end)=>start+origin+base+path+end);
-    text=text.replace(/(<meta\b[^>]*\bproperty="og:url"[^>]*\bcontent=")https:\/\/creaid-media\.de(\/[^"]*)?(")/g,
-      (_,start,path='',end)=>start+origin+base+path+end);
+    // Rewrite metadata only; editorial links to the existing production site stay intact.
+    const previewUrl = value => {
+      if(typeof value!=='string'||!value.startsWith('https://creaid-media.de'))return value;
+      const url = new URL(value);
+      if(url.hostname!=='creaid-media.de')return value;
+      const path=url.pathname;
+      return origin+base+path+(routeFiles[path]&&!path.endsWith('/')?'/':'')+url.search+url.hash;
+    };
+    text=text.replace(/(<link\b[^>]*\brel="canonical"[^>]*\bhref=")([^"]+)(")/g,(_,a,url,b)=>a+previewUrl(url)+b);
+    text=text.replace(/(<meta\b[^>]*\bproperty="og:(?:url|image)"[^>]*\bcontent=")([^"]+)(")/g,(_,a,url,b)=>a+previewUrl(url)+b);
+    const previewSchema = value => Array.isArray(value) ? value.map(previewSchema) :
+      value && typeof value==='object' ? Object.fromEntries(Object.entries(value).map(([k,v])=>[k,previewSchema(v)])) : previewUrl(value);
+    text=text.replace(/(<script\b[^>]*type="application\/ld\+json"[^>]*>)([\s\S]*?)(<\/script>)/g,
+      (_,a,json,b)=>a+JSON.stringify(previewSchema(JSON.parse(json))).replace(/</g,'\\u003c')+b);
+    text=text.replace(/(<meta\b[^>]*name="robots"[^>]*content=")[^"]*(")/g,'$1noindex,nofollow,noarchive$2');
   }
   if(extension==='.css'){
     text=text.replace(/url\(\s*(["']?)\/(?!\/)(?=[A-Za-z0-9_.-])/g,
@@ -90,7 +100,7 @@ for(const [from,to] of redirects){
   if(from.endsWith('.html'))continue;
   alias(from,to);
 }
-save(join(output,'robots.txt'),'User-agent: *\nDisallow: /\n');
+save(join(output,'robots.txt'),'User-agent: *\nDisallow:\n');
 save(join(output,'.nojekyll'),'');
 save(join(output,'404.html'),'<!doctype html><html lang="de"><meta charset="utf-8">'+
  '<meta name="robots" content="noindex,nofollow"><title>CreAid-Media Vorschau</title>'+
@@ -111,3 +121,18 @@ for(const [ok,why] of [
 ])if(!ok)throw new Error(why);
 console.log('Pages preview staged: '+files.size+' HTML files, '+Object.keys(routeFiles).length+
  ' clean URLs, assets and redirect routes at '+origin+base+'/');
+
+for(const file of files){
+  const html=readFileSync(join(output,file),'utf8');
+  if(!html.includes('name="robots" content="noindex,nofollow,noarchive"'))throw new Error('Preview index guard missing: '+file);
+  const canon=html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
+  const og=html.match(/<meta property="og:url" content="([^"]+)"/)?.[1];
+  const image=html.match(/<meta property="og:image" content="([^"]+)"/)?.[1];
+  if(!canon?.startsWith(origin+base+'/')||canon!==og||!image?.startsWith(origin+base+'/assets/'))throw new Error('Preview metadata inconsistent: '+file);
+  if(!existsSync(join(output,decodeURIComponent(new URL(image).pathname.slice(base.length+1)))))throw new Error('Share image missing: '+file);
+  for(const m of html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)){
+    JSON.parse(m[1]);
+    if(m[1].includes('https://creaid-media.de/'))throw new Error('Production schema URL leaked: '+file);
+  }
+}
+console.log('PASS: Preview canonical, Open Graph, structured data, local image targets and noindex guard for '+files.size+' pages.');
