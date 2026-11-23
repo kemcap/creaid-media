@@ -1,4 +1,6 @@
 (() => {
+  // The shared header owns all navigation events; retain only the legacy fallback.
+  if (document.querySelector('#cm-global-header')) return;
   const nav = document.querySelector('nav[aria-label="Hauptnavigation"]');
   if (!nav?.id) return;
 

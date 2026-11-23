@@ -2,9 +2,10 @@
 (() => {
   'use strict';
   const header = document.querySelector('#cm-global-header');
-  if (!header) return;
+  if (!header || header.classList.contains('cm-header--ready')) return;
   const button = header.querySelector('#cm-menu-toggle');
   const nav = header.querySelector('#cm-primary-nav');
+  if (!button || !nav) return;
   const details = header.querySelector('.cm-header__services');
   const mobile = () => window.matchMedia('(max-width: 860px)').matches;
   const close = (restoreFocus = false) => {
@@ -32,6 +33,7 @@
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && (nav.classList.contains('is-open') || details?.open)) {
+      event.preventDefault();
       close(true);
     }
   });
