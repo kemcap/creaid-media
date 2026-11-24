@@ -87,7 +87,229 @@ for key in new:
   if key=="blog":
    s,n=re.subn(r'<nav class="cm-archive-links"[\s\S]*?</nav>','{% include "partials/journal-categories.njk" %}',s,count=1)
    if not n:s=s.replace("</main>",'{% include "partials/journal-categories.njk" %}</main>',1)
-  write(mainpath,remap(s))
+  # Preserve Eleventy's physical output filename; canonical routes are not permalinks.
+  s=re.sub(r'(?m)^permalink:.*
+ else:
+  for p in candidates:
+   try:restore(V102,p);selected[key]="v10.2 template";break
+   except subprocess.CalledProcessError:continue
+  else:raise ValueError("Missing template "+key)
+for k,p in meta.items():
+ p["canonical"]="https://creaid-media.de"+new[k];p["robots"]="noindex,nofollow,noarchive"
+ if p.get("structuredData"):p["structuredData"]=remap(p["structuredData"])
+save(mpath,meta)
+# Updated taxonomy, links and shared global navigation.
+site=data(MAIN,"src/_data/site.json")
+site["navigation"]=data(V102,"src/_data/site.json")["navigation"]
+site["specialtyServices"]=[{"label":v["label"],"href":new[k],"pageKey":k} for k,v in services.items() if k not in ("webdesign","marketing","branding","ki-automatisierung")]
+for it in site["footerServices"]:
+ if it.get("pageKey") in new:it["href"]=new[it["pageKey"]]
+save("src/_data/site.json",site)
+for path in ("src/_data/serviceDepth.json","src/_data/legacySitemapCoverage.json"):
+ obj=data(MAIN,path)
+ if isinstance(obj,dict):obj={k:v for k,v in obj.items() if k in new and selected.get(k)=="main enhanced"}
+ else:
+  for row in obj:
+   target=resolve(row["target"]) or resolve(row["url"])
+   if not target:raise ValueError("Unmapped original sitemap URL "+row["url"])
+   row["target"]=target
+ save(path,obj)
+# The old page-specific plans only apply to unchanged enhanced templates, not newly generated pages.
+save("src/_data/headingPlan.json",{k:v for k,v in plans.items() if selected.get(k)=="main enhanced" and k!="blog"})
+p="scripts/heading-semantics.mjs";s=read(MAIN,p)
+s=s.replace("let section=main[0].replace(", "const marker='<!-- V103-STRUCTURE -->'; const [core,addition]=main[0].split(marker); let section=core.replace(")
+s=s.replace("return html.replace(main[0],section);","return html.replace(main[0],section+(addition===undefined?'':marker+addition));")
+write(p,s)
+# Copy only the later V10.2-specific CSS tail, retaining all of main's shared fixes.
+base=read("8fc08390c4c05a6700340f695fb5a5ba9c90dd1c","public/assets/audit.css")
+v=read(V102,"public/assets/audit.css")
+main=read(MAIN,"public/assets/audit.css")
+if v.startswith(base):extra=v[len(base):]
+else:
+ # Explicitly preserve V10.2 rules by extracting added lines from the branch diff.
+ diff=git("diff","8fc08390c4c05a6700340f695fb5a5ba9c90dd1c",V102,"--","public/assets/audit.css")
+ extra="\n".join(l[1:] for l in diff.splitlines() if l.startswith("+") and not l.startswith("+++"))
+write("public/assets/audit.css",main+"\n/* V10.2 structural additions */\n"+extra+"\n")
+restore(PERF,"public/assets/home-motion-v5.js")
+# Remap links in existing partials/data, not route definitions themselves.
+for p in Path("src/_includes").rglob("*.njk"):write(str(p),remap(p.read_text()))
+for p in Path("src/_data").glob("*.json"):
+ if p.name not in ("routes.json","aliases.json","pages.json","legacySitemapCoverage.json"):
+  write(str(p),remap(p.read_text()))
+# Generated pages use shared header/footer via main's existing wrappers.
+# Apache needs explicit root substitutions for nested URL routes (V10.2 IONOS fix).
+p=".github/scripts/prepare-ionos.mjs";s=read(MAIN,p)
+s=s.replace("'DirectoryIndex index.html'","'Options -MultiViews','DirectoryIndex index.html'").replace("'RewriteEngine On'","'RewriteEngine On','RewriteBase /'")
+s=s.replace("'$ '+file+' [END]'","'$ /'+file+' [END]'")
+write(p,s)
+pkg=data(MAIN,"package.json");pkg["version"]="10.3.0";pkg["description"]="CreAid-Media V10.3 – konsolidierte Leistungsstruktur und UX-Stabilisierung"
+pkg["scripts"]["test:structure"]="node scripts/check-v103-structure.mjs"
+save("package.json",pkg)
+lock=data(MAIN,"package-lock.json");lock["version"]="10.3.0";lock["packages"][""]["version"]="10.3.0";save("package-lock.json",lock)
+# Browser assertions keep the same functional coverage; route names follow V10.2.
+p="scripts/check-browser.mjs";s=remap(read(MAIN,p))
+s=s.replace("p.locator('.j-card:visible').count()>0","p.locator('.audit-panel:visible').count()>0")
+s=s.replace("const representative=[","const representative=[")
+write(p,s)
+# Keep the old regression script as a historical test; replace outdated route/count assumptions
+# with V10.3-specific checks without declaring new visual differences to be regressions.
+p="scripts/check-v103-structure.mjs"
+write(p,r"""import assert from 'node:assert/strict';
+import {readFileSync,readdirSync,existsSync} from 'node:fs';
+import {routeFiles,redirects} from './routes.mjs';
+const load=p=>readFileSync(p,'utf8');
+const data=n=>JSON.parse(load('src/_data/'+n+'.json'));
+const routes=data('routes'),pages=data('pages'),services=data('services'),categories=data('journalCategories');
+assert.equal(Object.keys(routes).length,76);assert.equal(Object.keys(services).length,24);
+assert.equal(Object.keys(categories).length,4);assert.equal(data('postsIndex').length,38);
+assert.equal(readdirSync('dist').filter(f=>f.endsWith('.html')).length,76);
+const names=new Set(),descriptions=new Set();
+for(const [key,url] of Object.entries(routes)){
+ const p=pages[key],h=load('dist/'+key+'.html');
+ assert.ok(p.title&&p.description&&!names.has(p.title)&&!descriptions.has(p.description),'Duplicate/missing metadata: '+key);
+ names.add(p.title);descriptions.add(p.description);
+ assert.equal(p.canonical,'https://creaid-media.de'+url);
+ assert.equal(p.robots,'noindex,nofollow,noarchive');
+ for(const id of ['cm-global-header','cm-global-footer'])assert.equal((h.match(new RegExp('id="'+id+'"','g'))||[]).length,1,key+' '+id);
+ assert.equal((h.match(/<h1\b/g)||[]).length,1,key+' H1 count');
+ assert.ok(h.includes('/assets/global-shell.css')&&h.includes('/assets/ux-phase1.css')&&h.includes('/assets/adaptive-scroll.js'),key+' shared assets');
+ if(p.structuredData)JSON.parse(p.structuredData);
+ for(const tag of h.matchAll(/<(?:script|img|iframe|video|audio|source)\b[^>]*\bsrc=["']([^"']+)/gi))assert.ok(!/^(?:https?:)?\/\//i.test(tag[1]),key+' external resource');
+}
+for(const [k,v] of Object.entries(services)){
+ const h=load('dist/'+k+'.html');
+ assert.ok(h.includes('Häufige Fragen'),k+' missing FAQ');
+ for(const child of v.children||[])assert.ok(h.includes('href="'+routes[child]+'"'),k+' missing child '+child);
+}
+const blog=load('dist/blog.html');
+for(const k of Object.keys(categories))assert.ok(blog.includes('href="'+routes[k]+'"'),k+' missing journal navigation');
+const index=load('dist/index.html');
+assert.equal((index.match(/class="cm-hero-ticker__group"/g)||[]).length,2);
+assert.ok(index.includes('class="axes"')&&index.includes('href="/kontakt#anfrage">Projekt besprechen'));
+assert.ok(load('dist/assets/journal.js').includes("const tocLinks=$$('.j-toc"));
+assert.ok(load('dist/impressum.html').includes('ENTWURF'));
+assert.ok(!load('dist/assets/legal-pages.js').includes('localStorage.setItem'));
+const alias=new Map(redirects);
+for(const row of data('legacySitemapCoverage'))assert.ok(row.url===row.target||alias.get(row.url)===row.target,'Legacy URL missing '+row.url);
+for(const [from,to] of redirects){assert.ok(!Object.hasOwn(routeFiles,from)&&Object.hasOwn(routeFiles,to),'Redirect conflict '+from);}
+console.log('PASS: 76 pages, 24 services, 4 journal categories, 38 articles, shell, metadata, FAQ and legacy URLs.');
+""")
+save("docs/v10.3-integration-map.json",{"base":MAIN,"structure":V102,"performance":PERF,"templates":selected,"canonicalPages":len(new),"services":len(services)})
+write("docs/V10.3-INTEGRATION.md","# V10.3 Integrationskandidat\n\nV10.2 URL- und Leistungsstruktur; bewährte main-Templates und gemeinsame UI-Assets; spätere Pointer-Optimierung. Bewusst neue URLs und zusammengeführte Archive. Keine Produktionsfreigabe; rechtliche Entwürfe und noindex bleiben. Die Integration ist erst nach den tatsächlichen Build- und Browserprüfungen validiert.\n")
+print("Prepared integration map for",len(new),"canonical pages.")
+, 'permalink: /'+key+'.html', s)
+  mapped=remap(s)
+  mapped=re.sub(r'(?m)^permalink:.*
+ else:
+  for p in candidates:
+   try:restore(V102,p);selected[key]="v10.2 template";break
+   except subprocess.CalledProcessError:continue
+  else:raise ValueError("Missing template "+key)
+for k,p in meta.items():
+ p["canonical"]="https://creaid-media.de"+new[k];p["robots"]="noindex,nofollow,noarchive"
+ if p.get("structuredData"):p["structuredData"]=remap(p["structuredData"])
+save(mpath,meta)
+# Updated taxonomy, links and shared global navigation.
+site=data(MAIN,"src/_data/site.json")
+site["navigation"]=data(V102,"src/_data/site.json")["navigation"]
+site["specialtyServices"]=[{"label":v["label"],"href":new[k],"pageKey":k} for k,v in services.items() if k not in ("webdesign","marketing","branding","ki-automatisierung")]
+for it in site["footerServices"]:
+ if it.get("pageKey") in new:it["href"]=new[it["pageKey"]]
+save("src/_data/site.json",site)
+for path in ("src/_data/serviceDepth.json","src/_data/legacySitemapCoverage.json"):
+ obj=data(MAIN,path)
+ if isinstance(obj,dict):obj={k:v for k,v in obj.items() if k in new and selected.get(k)=="main enhanced"}
+ else:
+  for row in obj:
+   target=resolve(row["target"]) or resolve(row["url"])
+   if not target:raise ValueError("Unmapped original sitemap URL "+row["url"])
+   row["target"]=target
+ save(path,obj)
+# The old page-specific plans only apply to unchanged enhanced templates, not newly generated pages.
+save("src/_data/headingPlan.json",{k:v for k,v in plans.items() if selected.get(k)=="main enhanced" and k!="blog"})
+p="scripts/heading-semantics.mjs";s=read(MAIN,p)
+s=s.replace("let section=main[0].replace(", "const marker='<!-- V103-STRUCTURE -->'; const [core,addition]=main[0].split(marker); let section=core.replace(")
+s=s.replace("return html.replace(main[0],section);","return html.replace(main[0],section+(addition===undefined?'':marker+addition));")
+write(p,s)
+# Copy only the later V10.2-specific CSS tail, retaining all of main's shared fixes.
+base=read("8fc08390c4c05a6700340f695fb5a5ba9c90dd1c","public/assets/audit.css")
+v=read(V102,"public/assets/audit.css")
+main=read(MAIN,"public/assets/audit.css")
+if v.startswith(base):extra=v[len(base):]
+else:
+ # Explicitly preserve V10.2 rules by extracting added lines from the branch diff.
+ diff=git("diff","8fc08390c4c05a6700340f695fb5a5ba9c90dd1c",V102,"--","public/assets/audit.css")
+ extra="\n".join(l[1:] for l in diff.splitlines() if l.startswith("+") and not l.startswith("+++"))
+write("public/assets/audit.css",main+"\n/* V10.2 structural additions */\n"+extra+"\n")
+restore(PERF,"public/assets/home-motion-v5.js")
+# Remap links in existing partials/data, not route definitions themselves.
+for p in Path("src/_includes").rglob("*.njk"):write(str(p),remap(p.read_text()))
+for p in Path("src/_data").glob("*.json"):
+ if p.name not in ("routes.json","aliases.json","pages.json","legacySitemapCoverage.json"):
+  write(str(p),remap(p.read_text()))
+# Generated pages use shared header/footer via main's existing wrappers.
+# Apache needs explicit root substitutions for nested URL routes (V10.2 IONOS fix).
+p=".github/scripts/prepare-ionos.mjs";s=read(MAIN,p)
+s=s.replace("'DirectoryIndex index.html'","'Options -MultiViews','DirectoryIndex index.html'").replace("'RewriteEngine On'","'RewriteEngine On','RewriteBase /'")
+s=s.replace("'$ '+file+' [END]'","'$ /'+file+' [END]'")
+write(p,s)
+pkg=data(MAIN,"package.json");pkg["version"]="10.3.0";pkg["description"]="CreAid-Media V10.3 – konsolidierte Leistungsstruktur und UX-Stabilisierung"
+pkg["scripts"]["test:structure"]="node scripts/check-v103-structure.mjs"
+save("package.json",pkg)
+lock=data(MAIN,"package-lock.json");lock["version"]="10.3.0";lock["packages"][""]["version"]="10.3.0";save("package-lock.json",lock)
+# Browser assertions keep the same functional coverage; route names follow V10.2.
+p="scripts/check-browser.mjs";s=remap(read(MAIN,p))
+s=s.replace("p.locator('.j-card:visible').count()>0","p.locator('.audit-panel:visible').count()>0")
+s=s.replace("const representative=[","const representative=[")
+write(p,s)
+# Keep the old regression script as a historical test; replace outdated route/count assumptions
+# with V10.3-specific checks without declaring new visual differences to be regressions.
+p="scripts/check-v103-structure.mjs"
+write(p,r"""import assert from 'node:assert/strict';
+import {readFileSync,readdirSync,existsSync} from 'node:fs';
+import {routeFiles,redirects} from './routes.mjs';
+const load=p=>readFileSync(p,'utf8');
+const data=n=>JSON.parse(load('src/_data/'+n+'.json'));
+const routes=data('routes'),pages=data('pages'),services=data('services'),categories=data('journalCategories');
+assert.equal(Object.keys(routes).length,76);assert.equal(Object.keys(services).length,24);
+assert.equal(Object.keys(categories).length,4);assert.equal(data('postsIndex').length,38);
+assert.equal(readdirSync('dist').filter(f=>f.endsWith('.html')).length,76);
+const names=new Set(),descriptions=new Set();
+for(const [key,url] of Object.entries(routes)){
+ const p=pages[key],h=load('dist/'+key+'.html');
+ assert.ok(p.title&&p.description&&!names.has(p.title)&&!descriptions.has(p.description),'Duplicate/missing metadata: '+key);
+ names.add(p.title);descriptions.add(p.description);
+ assert.equal(p.canonical,'https://creaid-media.de'+url);
+ assert.equal(p.robots,'noindex,nofollow,noarchive');
+ for(const id of ['cm-global-header','cm-global-footer'])assert.equal((h.match(new RegExp('id="'+id+'"','g'))||[]).length,1,key+' '+id);
+ assert.equal((h.match(/<h1\b/g)||[]).length,1,key+' H1 count');
+ assert.ok(h.includes('/assets/global-shell.css')&&h.includes('/assets/ux-phase1.css')&&h.includes('/assets/adaptive-scroll.js'),key+' shared assets');
+ if(p.structuredData)JSON.parse(p.structuredData);
+ for(const tag of h.matchAll(/<(?:script|img|iframe|video|audio|source)\b[^>]*\bsrc=["']([^"']+)/gi))assert.ok(!/^(?:https?:)?\/\//i.test(tag[1]),key+' external resource');
+}
+for(const [k,v] of Object.entries(services)){
+ const h=load('dist/'+k+'.html');
+ assert.ok(h.includes('Häufige Fragen'),k+' missing FAQ');
+ for(const child of v.children||[])assert.ok(h.includes('href="'+routes[child]+'"'),k+' missing child '+child);
+}
+const blog=load('dist/blog.html');
+for(const k of Object.keys(categories))assert.ok(blog.includes('href="'+routes[k]+'"'),k+' missing journal navigation');
+const index=load('dist/index.html');
+assert.equal((index.match(/class="cm-hero-ticker__group"/g)||[]).length,2);
+assert.ok(index.includes('class="axes"')&&index.includes('href="/kontakt#anfrage">Projekt besprechen'));
+assert.ok(load('dist/assets/journal.js').includes("const tocLinks=$$('.j-toc"));
+assert.ok(load('dist/impressum.html').includes('ENTWURF'));
+assert.ok(!load('dist/assets/legal-pages.js').includes('localStorage.setItem'));
+const alias=new Map(redirects);
+for(const row of data('legacySitemapCoverage'))assert.ok(row.url===row.target||alias.get(row.url)===row.target,'Legacy URL missing '+row.url);
+for(const [from,to] of redirects){assert.ok(!Object.hasOwn(routeFiles,from)&&Object.hasOwn(routeFiles,to),'Redirect conflict '+from);}
+console.log('PASS: 76 pages, 24 services, 4 journal categories, 38 articles, shell, metadata, FAQ and legacy URLs.');
+""")
+save("docs/v10.3-integration-map.json",{"base":MAIN,"structure":V102,"performance":PERF,"templates":selected,"canonicalPages":len(new),"services":len(services)})
+write("docs/V10.3-INTEGRATION.md","# V10.3 Integrationskandidat\n\nV10.2 URL- und Leistungsstruktur; bewährte main-Templates und gemeinsame UI-Assets; spätere Pointer-Optimierung. Bewusst neue URLs und zusammengeführte Archive. Keine Produktionsfreigabe; rechtliche Entwürfe und noindex bleiben. Die Integration ist erst nach den tatsächlichen Build- und Browserprüfungen validiert.\n")
+print("Prepared integration map for",len(new),"canonical pages.")
+, 'permalink: /'+key+'.html', mapped)
+  write(mainpath,mapped)
  else:
   for p in candidates:
    try:restore(V102,p);selected[key]="v10.2 template";break
