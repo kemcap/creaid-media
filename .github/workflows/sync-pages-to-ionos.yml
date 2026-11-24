@@ -1,0 +1,95 @@
+name: Synchronize approved GitHub Pages reference to IONOS
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/sync-pages-to-ionos.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+  deployments: read
+concurrency:
+  group: ionos-preview-deployment
+  cancel-in-progress: false
+jobs:
+  synchronize:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Identify successful GitHub Pages reference
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/deploy-pages.yml/runs?status=success&per_page=1" --jq '.workflow_runs[0] | {id,head_sha,head_branch,html_url}' | tee "$RUNNER_TEMP/pages-run.json"
+          sha=$(jq -er '.head_sha' "$RUNNER_TEMP/pages-run.json")
+          [[ "$sha" =~ ^[0-9a-f]{40}$ ]]
+          git cat-file -e "$sha^{commit}"
+          git worktree add --detach "$RUNNER_TEMP/pages-reference" "$sha"
+          echo "REFERENCE_SHA=$sha" >> "$GITHUB_ENV"
+          echo "REFERENCE_DIR=$RUNNER_TEMP/pages-reference" >> "$GITHUB_ENV"
+          echo "REFERENCE_RUN=$(jq -er '.id' "$RUNNER_TEMP/pages-run.json")" >> "$GITHUB_ENV"
+          echo "Rebuilding approved Pages reference $sha"
+      - name: Build exactly as GitHub Pages does
+        run: |
+          cd "$REFERENCE_DIR"
+          npm ci
+          npm run build
+          python -m pip install --disable-pip-version-check Pillow==11.3.0
+          python scripts/optimize-preview-images.py
+          node scripts/prepare-pages.mjs
+      - name: Verify rebuilt reference against published GitHub Pages
+        run: |
+          python .github/scripts/verify-pages-reference.py
+      - name: Prepare IONOS root paths, routing and noindex
+        run: |
+          mkdir -p "$REFERENCE_DIR/.github/scripts"
+          cp .github/scripts/prepare-ionos.mjs .github/scripts/upload-ionos.py "$REFERENCE_DIR/.github/scripts/"
+          cd "$REFERENCE_DIR"
+          node .github/scripts/prepare-ionos.mjs
+          node scripts/preview.mjs > "$RUNNER_TEMP/preview.log" 2>&1 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/check-routes.mjs http://127.0.0.1:8080
+      - name: Install SFTP client
+        run: |
+          if ! /usr/bin/python3 -c 'import paramiko'; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends python3-paramiko
+          fi
+      - name: Upload approved reference to existing dedicated preview
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: |
+          cd "$REFERENCE_DIR"
+          /usr/bin/python3 .github/scripts/upload-ionos.py
+      - name: Verify IONOS against uploaded root build over HTTPS
+        env:
+          VERIFY_IONOS: 'true'
+        run: python .github/scripts/verify-pages-reference.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: approved-preview-verification
+          path: |
+            pages-reference-verification.json
+            ionos-reference-verification.json
+          if-no-files-found: warn
