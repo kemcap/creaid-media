@@ -1,0 +1,70 @@
+name: V10.3 - Konsolidierung und QA
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: v103-consolidation
+  cancel-in-progress: false
+jobs:
+  candidate:
+    if: github.event.pull_request.head.ref == 'qa/v10.3-consolidation' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: qa/v10.3-consolidation
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Reconcile the exact reviewed source revisions
+        run: |
+          git fetch origin v10.2-ionos-vorschau qa/performance-launch main
+          python3 .github/scripts/consolidate-v103.py
+          rm -rf dist
+          npm ci
+          npm run build
+      - name: Commit reviewable candidate to its isolated branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A src public scripts dist docs package.json package-lock.json .github/scripts/prepare-ionos.mjs
+          git diff --cached --quiet || git commit -m "V10.3: reconcile V10.2 architecture with approved UX and performance work"
+          git push origin HEAD:qa/v10.3-consolidation
+      - name: Validate integrated structure and links
+        run: |
+          npm run test:structure
+          npm run test:quality
+          node .github/scripts/prepare-ionos.mjs
+          node scripts/preview.mjs > "$RUNNER_TEMP/preview.log" 2>&1 &
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:routes -- http://127.0.0.1:8080
+      - name: Install browser tools
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1 pixelmatch@7.1.0 pngjs@7.0.0
+          npx playwright install --with-deps chromium firefox webkit
+      - name: Browser regression matrix (new architecture)
+        run: |
+          node scripts/preview.mjs > "$RUNNER_TEMP/preview.log" 2>&1 &
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v103-consolidation-results
+          path: |
+            qa-results/
+            docs/v10.3-integration-map.json
+          if-no-files-found: warn
