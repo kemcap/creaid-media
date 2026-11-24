@@ -52,7 +52,7 @@ jobs:
       - name: Verify rebuilt reference against published GitHub Pages
         run: |
           python .github/scripts/verify-pages-reference.py
-      - name: Prepare IONOS root paths, routing and noindex
+      - name: Prepare IONOS root paths, nested routing without MultiViews and noindex
         run: |
           mkdir -p "$REFERENCE_DIR/.github/scripts"
           cp .github/scripts/prepare-ionos.mjs .github/scripts/upload-ionos.py "$REFERENCE_DIR/.github/scripts/"

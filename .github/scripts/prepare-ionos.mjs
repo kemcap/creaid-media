@@ -4,7 +4,7 @@ import {routeFiles,redirects} from '../../scripts/routes.mjs';
 const esc=s=>s.replaceAll('.','\\.');
 const validPath=s=>/^\/[a-z0-9/_.-]*$/.test(s)&&!s.includes('..')&&!s.includes('//');
 const files=Object.entries(routeFiles);
-const lines=['# Generated from scripts/routes.mjs; preview only','DirectoryIndex index.html','<IfModule mod_rewrite.c>','RewriteEngine On','RewriteBase /'];
+const lines=['# Generated from scripts/routes.mjs; preview only','Options -MultiViews','DirectoryIndex index.html','<IfModule mod_rewrite.c>','RewriteEngine On','RewriteBase /'];
 for(const [from,to] of redirects){
  assert.ok(validPath(from)&&validPath(to)&&Object.hasOwn(routeFiles,to)&&!Object.hasOwn(routeFiles,from),'Invalid redirect: '+from);
  const p=esc(from.slice(1));
