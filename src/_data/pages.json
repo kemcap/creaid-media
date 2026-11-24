@@ -226,7 +226,7 @@
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/",
-    "extraHead": "<link href=\"/assets/home-motion-v5.css\" rel=\"stylesheet\"/>\n<script defer=\"\" src=\"/assets/home-motion-v5.js\"></script>\n<link href=\"/assets/agency-pages.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/home-motion-v5.css\" rel=\"stylesheet\"/>\n\n<link href=\"/assets/agency-pages.css\" rel=\"stylesheet\"/>\n<link rel=\"stylesheet\" href=\"/assets/home-editorial.css\">",
     "bodyAttrs": "",
     "family": "home",
     "url": "index.html",

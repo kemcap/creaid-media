@@ -18,7 +18,7 @@ for(const phrase of ['Webdesign &amp; Entwicklung','Digitales Marketing','Brandi
 }
 assert.ok(!index.includes('ANALYSE / KONZEPT / UMSETZUNG</span></div>'),'Old static hero floor still present');
 assert.ok(index.includes('class="axes"'),'Original crosshair removed');
-assert.ok(index.includes('class="motion-track track-statement-contact"'),'Mask scroll scene must stay intact');
+assert.ok(index.includes('class="cm-home-editorial"')&&!index.includes('track-statement-contact'),'Homepage must use natural editorial flow');
 assert.equal((index.match(/id="cm-global-footer"/g)||[]).length,1,'Only one global footer is allowed');
 const balance=load('dist/assets/hero-balance.css');
 for(const selector of [
