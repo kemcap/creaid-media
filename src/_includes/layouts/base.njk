@@ -18,6 +18,7 @@
   <meta property="og:url" content="{{ meta.canonical | escape }}">
   <meta property="og:image" content="{{ meta.shareImage | escape }}">
   <meta name="twitter:card" content="summary_large_image">
+  <script>document.documentElement.classList.add("cm-nav-enhanced");</script>
   <link rel="stylesheet" href="/assets/fonts.css">
   <script defer src="/assets/adaptive-scroll.js"></script>
   {{ meta.extraHead | safe }}
@@ -31,7 +32,7 @@
   <link rel="stylesheet" href="/assets/heading-semantics.css">
   <link rel="stylesheet" href="/assets/global-design-system.css">
   <script defer src="/assets/audit-navigation.js"></script>
-  <script defer src="/assets/global-shell.js"></script>
+  <script defer src="/assets/global-shell.js" onerror="document.documentElement.classList.remove('cm-nav-enhanced')"></script>
   <script defer src="/assets/service-crosshair.js"></script>
   <script defer src="/assets/ux-phase1.js"></script>
   <noscript><link rel="stylesheet" href="/assets/no-script.css"></noscript>

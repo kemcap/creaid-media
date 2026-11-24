@@ -1,0 +1,81 @@
+name: Phase 6 full editorial release candidate QA
+on:
+  push:
+    branches: ['audit/editorial-ux-2026-11']
+    paths: ['.github/workflows/phase-six-final.yml','scripts/check-header-stability.mjs','scripts/check-editorial-seo-links.mjs','public/assets/global-shell.css','src/_includes/layouts/base.njk']
+  workflow_dispatch:
+permissions:
+  contents: read
+  statuses: write
+jobs:
+  final:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Register actual run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state=pending -f context=audit/phase-six -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+      - run: npm ci
+      - run: npm run verify
+      - run: node scripts/check-global-shell.mjs && node scripts/check-home-motion.mjs
+      - run: node scripts/check-editorial-seo-links.mjs
+      - run: pip install Pillow==11.3.0
+      - run: python scripts/optimize-preview-images.py
+      - run: node scripts/check-cache-fingerprint.mjs
+      - run: node scripts/fingerprint-preview-assets.mjs
+      - run: node scripts/prepare-pages.mjs && node .github/scripts/prepare-ionos.mjs
+      - run: npm install --no-save --package-lock=false playwright@1.56.1 lighthouse@12.8.2 pixelmatch@7.1.0 pngjs@7.0.0
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - name: Full functional and cross-browser release gate
+        run: |
+          node scripts/preview.mjs > /tmp/creaid-preview.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:routes -- http://127.0.0.1:8080
+          node scripts/check-header-stability.mjs
+          node design/phase-3/check-home.mjs
+          node scripts/check-journal-pagination.mjs
+          node scripts/check-design-system.mjs
+          node scripts/check-browser.mjs
+          mkdir -p phase-six-report
+          export CHROME_PATH=$(node --input-type=module -e 'import {chromium} from "playwright"; console.log(chromium.executablePath())')
+          for entry in home journal; do
+            url=http://127.0.0.1:8080/
+            if [ "$entry" = journal ]; then url="${url}creaid-blog"; fi
+            for device in desktop mobile; do
+              args=()
+              if [ "$device" = desktop ]; then args+=(--preset=desktop); fi
+              npx --no-install lighthouse "$url" "${args[@]}" --quiet --chrome-flags="--headless --no-sandbox" --output=json --output-path="phase-six-report/lighthouse-$entry-$device.json"
+            done
+          done
+          node --input-type=module -e 'import{readdirSync,readFileSync}from"node:fs";for(const f of readdirSync("phase-six-report")){const j=JSON.parse(readFileSync("phase-six-report/"+f));if(j.runtimeError)throw Error(f+" "+JSON.stringify(j.runtimeError));const cls=j.audits["cumulative-layout-shift"].numericValue;console.log("LIGHTHOUSE_FINAL",f,JSON.stringify({scores:Object.fromEntries(Object.entries(j.categories).map(([k,v])=>[k,v.score])),lcp:j.audits["largest-contentful-paint"].numericValue,cls,tbt:j.audits["total-blocking-time"].numericValue,failedSeo:j.categories.seo.auditRefs.filter(r=>j.audits[r.id].score===0).map(r=>r.id)}));if(f.includes("mobile")&&cls>0.1)process.exitCode=1;}'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: editorial-final-qa
+          path: |
+            phase-six-report/
+            qa-results/
+            design-system-report/
+            phase3-home-*.png
+            journal-*.png
+          if-no-files-found: warn
+      - name: Record actual result
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          state=failure
+          if [ "$JOB_STATUS" = success ]; then state=success; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state="$state" -f context=audit/phase-six -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"

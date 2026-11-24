@@ -9,6 +9,7 @@
       <article><span aria-hidden="true">0{{ loop.index }}</span><h3>{{ group.title | escape }}</h3><p>{{ group.copy | escape }}</p></article>
       {% endfor %}
     </div>
+    {% if editorialLinks[pageKey] %}<nav class="cm-depth-actions" aria-label="Vertiefende Leistungen">{% for item in editorialLinks[pageKey] %}<a href="{{ item.url | escape }}">{{ item.anchor | escape }} ↗</a>{% endfor %}</nav>{% endif %}
     <div class="cm-depth-actions"><a class="cm-depth-primary" href="{{ info.contact | escape }}">Projekt besprechen ↗</a><a href="{{ info.link.href | escape }}">{{ info.link.label | escape }} ↗</a></div>
   </div>
 </section>

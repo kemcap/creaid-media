@@ -100,7 +100,7 @@
 }
 
 /* Without JavaScript, mobile navigation remains accessible. */
-@media(max-width:860px){.cm-header:not(.cm-header--ready) .cm-header__nav{display:flex}.cm-header:not(.cm-header--ready) .cm-header__toggle{display:none}}
+@media(max-width:860px){html:not(.cm-nav-enhanced) .cm-header:not(.cm-header--ready){position:relative}html:not(.cm-nav-enhanced) .cm-header:not(.cm-header--ready) .cm-header__nav{display:flex}html:not(.cm-nav-enhanced) .cm-header:not(.cm-header--ready) .cm-header__toggle{display:none}}
 
 /* Compact global footer – approved preview, retaining the existing semantic links. */
 .cm-footer__lead{padding:38px 0 34px;align-items:center;gap:24px}

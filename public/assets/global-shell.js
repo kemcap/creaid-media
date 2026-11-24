@@ -5,7 +5,7 @@
   if (!header || header.classList.contains('cm-header--ready')) return;
   const button = header.querySelector('#cm-menu-toggle');
   const nav = header.querySelector('#cm-primary-nav');
-  if (!button || !nav) return;
+  if (!button || !nav) {document.documentElement.classList.remove('cm-nav-enhanced');return;}
   const details = header.querySelector('.cm-header__services');
   const mobile = () => window.matchMedia('(max-width: 860px)').matches;
   const close = (restoreFocus = false) => {
