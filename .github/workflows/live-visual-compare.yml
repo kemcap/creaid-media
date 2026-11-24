@@ -1,0 +1,33 @@
+name: Compare live preview rendering
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/live-visual-compare.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ionos-preview-deployment
+  cancel-in-progress: false
+jobs:
+  compare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci
+      - run: npm install --no-save --package-lock=false playwright@1.56.1 pixelmatch@7.1.0 pngjs@7.0.0
+      - run: npx playwright install --with-deps chromium
+      - name: Compare freshly rendered reference and IONOS
+        run: node .github/scripts/compare-live-visual.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-visual-comparison
+          path: live-visual-report/
+          if-no-files-found: warn
