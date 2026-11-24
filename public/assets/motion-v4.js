@@ -1,7 +1,7 @@
 /* CREAID V4 – pin & scrub: detail cards accumulate; closing reveals in sequence. */
 (()=>{
  'use strict';
- const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const reduced=window.CreAidMotion?.reduced || matchMedia('(prefers-reduced-motion: reduce)');
  const detail=document.querySelector('.service-detail'),closing=document.querySelector('.service-closing');
  if(!detail||!closing)return;
  const dStage=detail.querySelector('.detail-pin'),cStage=closing.querySelector('.closing-pin');
@@ -54,7 +54,7 @@
  }
  function render(){
   smoothingActive=false;
-  if(reduced||prefersShort()){
+  if(reduced.matches||prefersShort()||[dStage,cStage].every(stage=>getComputedStyle(stage).position!=='sticky')){
    const all=[dKicker,dLead,dActions,cKicker,cPara,cCTA,cFooter,...cards,...dTitle,...cTitle,...cardTitles.flat(),...cardDesc.flat()];
    all.forEach(el=>{if(el){el.style.opacity='1';el.style.transform='none';}});
    detailCue.style.display='none';closingCue.style.display='none';
@@ -88,13 +88,19 @@
   closingCue.textContent=c>=.89?'BEREIT FÜR IHR PROJEKT':'WEITER SCROLLEN';
   if(smoothingActive)update();
  }
- if(!reduced)document.body.classList.add('motion-ready');
+ document.body.classList.toggle('motion-ready',!reduced.matches);
  let pending=false;
  function update(){if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;render()})}
- addEventListener('scroll',update,{passive:true});addEventListener('resize',update,{passive:true});render();
- if(!reduced&&matchMedia('(hover:hover) and (pointer:fine)').matches){
+ const syncMode=()=>{
+  document.body.classList.toggle('motion-ready',!reduced.matches);
+  removeEventListener('scroll',update);
+  if(!reduced.matches&&[dStage,cStage].some(stage=>getComputedStyle(stage).position==='sticky'))addEventListener('scroll',update,{passive:true});
+  update();
+ };
+ addEventListener('resize',syncMode,{passive:true});reduced.addEventListener('change',syncMode);syncMode();
+ if(!reduced.matches&&matchMedia('(hover:hover) and (pointer:fine)').matches){
   [dStage,cStage].forEach(el=>{let tick=false,x=0,y=0;
-   el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();x=e.clientX-r.left;y=e.clientY-r.top;if(tick)return;tick=true;requestAnimationFrame(()=>{tick=false;el.style.setProperty('--mx',x+'px');el.style.setProperty('--my',y+'px')})},{passive:true});
+   el.addEventListener('pointermove',e=>{if(reduced.matches)return;const r=el.getBoundingClientRect();x=e.clientX-r.left;y=e.clientY-r.top;if(tick)return;tick=true;requestAnimationFrame(()=>{tick=false;el.style.setProperty('--mx',x+'px');el.style.setProperty('--my',y+'px')})},{passive:true});
   });
  }
 })();

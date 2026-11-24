@@ -1,7 +1,8 @@
+/* cm-semantic-heading-selectors-v1 */
 /* V9 complete journal migration: carefully readable long-form articles; Ubuntu primary, Georgia italic. */
 .j-article-hero-v9{min-height:100vh;min-height:100dvh;height:100vh;height:100dvh}
 .j-article-hero-v9 .j-shell{min-height:100vh;min-height:100dvh;height:100vh;height:100dvh}
-.j-article-hero-v9 h1{font-family:var(--font-body),Ubuntu,sans-serif;font-size:clamp(37px,5.25vw,77px);line-height:1.035;letter-spacing:-.064em;overflow-wrap:anywhere;hyphens:auto;max-width:790px}
+.j-article-hero-v9 :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){font-family:var(--font-body),Ubuntu,sans-serif;font-size:clamp(37px,5.25vw,77px);line-height:1.035;letter-spacing:-.064em;overflow-wrap:anywhere;hyphens:auto;max-width:790px}
 .j-article-hero-v9 .j-article-kicker{color:var(--j-pink);margin:18px 0 0}
 .j-article-hero-v9 .j-article-desc{max-width:680px}
 .j-article-cover img{width:100%;height:100%;object-fit:cover;object-position:center}
@@ -11,9 +12,9 @@
 .j-card-letter{font-family:var(--font-accent),Georgia,serif;color:#fa225b;font-size:130px;font-style:italic;display:grid;place-items:center;width:100%;height:100%;background:#241a20}
 .j-article-hero-v9 .j-article-meta{margin-top:18px}.j-inline-link{font-weight:700;color:#a61e4d}.j-prose figure{max-width:100%}
 .j-prose figure img{max-height:none;object-fit:contain;background:#ece9e4}
-.j-prose h2,.j-prose h3,.j-prose p,.j-bottom-cta h2{overflow-wrap:anywhere;hyphens:auto}
-@media(max-width:950px){.j-article-hero-v9 h1{font-size:clamp(36px,5vw,66px)} }
-@media(max-width:780px){.j-article-hero-v9 h1{font-size:clamp(29px,6vw,47px);line-height:1.04;letter-spacing:-.045em}.j-article-hero-v9 .j-article-kicker{margin:8px 0 0}.j-article-hero-v9 .j-article-cover{height:20vh;max-height:20vh;aspect-ratio:2.5}.j-article-hero-v9 .j-shell{gap:8px;padding-top:78px;padding-bottom:30px}.j-article-hero-v9 .j-article-desc{font-size:13px;line-height:1.48;margin:9px 0}.j-article-hero-v9 .j-article-meta{margin-top:8px}.j-article-hero-v9 .j-article-scroll{bottom:4px}}
-@media(max-width:530px){.j-article-hero-v9 h1{font-size:clamp(27px,8vw,42px);line-height:1.04}.j-article-hero-v9 .j-shell{padding-top:76px;padding-bottom:25px}.j-article-hero-v9 .j-article-desc{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.j-article-hero-v9 .j-article-cover{height:17vh;max-height:17vh}.j-related-head{display:block}.j-related-head .j-inline-link{display:inline-block;margin-top:15px}}
-@media(max-width:360px) and (max-height:600px){.j-article-hero-v9 h1{font-size:clamp(23px,6.9vw,32px)}.j-article-hero-v9 .j-article-desc{display:none}.j-article-hero-v9 .j-article-cover{height:14vh;max-height:14vh}.j-article-hero-v9 .j-article-meta{font-size:9px}.j-article-hero-v9 .j-article-kicker{font-size:8px}}
+.j-prose :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)),.j-prose h3,.j-prose p,.j-bottom-cta :is(h2:not(:where(.cm-semantic-heading)),:where(.cm-claim-h2)){overflow-wrap:anywhere;hyphens:auto}
+@media(max-width:950px){.j-article-hero-v9 :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){font-size:clamp(36px,5vw,66px)} }
+@media(max-width:780px){.j-article-hero-v9 :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){font-size:clamp(29px,6vw,47px);line-height:1.04;letter-spacing:-.045em}.j-article-hero-v9 .j-article-kicker{margin:8px 0 0}.j-article-hero-v9 .j-article-cover{height:20vh;max-height:20vh;aspect-ratio:2.5}.j-article-hero-v9 .j-shell{gap:8px;padding-top:78px;padding-bottom:30px}.j-article-hero-v9 .j-article-desc{font-size:13px;line-height:1.48;margin:9px 0}.j-article-hero-v9 .j-article-meta{margin-top:8px}.j-article-hero-v9 .j-article-scroll{bottom:4px}}
+@media(max-width:530px){.j-article-hero-v9 :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){font-size:clamp(27px,8vw,42px);line-height:1.04}.j-article-hero-v9 .j-shell{padding-top:76px;padding-bottom:25px}.j-article-hero-v9 .j-article-desc{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.j-article-hero-v9 .j-article-cover{height:17vh;max-height:17vh}.j-related-head{display:block}.j-related-head .j-inline-link{display:inline-block;margin-top:15px}}
+@media(max-width:360px) and (max-height:600px){.j-article-hero-v9 :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){font-size:clamp(23px,6.9vw,32px)}.j-article-hero-v9 .j-article-desc{display:none}.j-article-hero-v9 .j-article-cover{height:14vh;max-height:14vh}.j-article-hero-v9 .j-article-meta{font-size:9px}.j-article-hero-v9 .j-article-kicker{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.j-article-hero-v9 *{transition:none!important}}

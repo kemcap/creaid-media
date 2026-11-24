@@ -1,7 +1,6 @@
 (() => { 'use strict';
  const tracks=[...document.querySelectorAll('.sp-track.sp-story')]; if(!tracks.length)return;
- const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
- const staticView=window.matchMedia('(max-height:620px),(max-width:900px) and (max-height:700px),(prefers-reduced-motion:reduce)');
+ const staticView=window.CreAidMotion?.staticStory || window.matchMedia('(max-height:620px),(max-width:900px) and (max-height:700px),(prefers-reduced-motion:reduce)');
  const clamp=x=>Math.max(0,Math.min(1,x));
  const ease=(a,b,x)=>{const t=clamp((x-a)/Math.max(.0001,b-a));return t*t*(3-2*t)};
  let pending=false;

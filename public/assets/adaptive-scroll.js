@@ -3,6 +3,8 @@
 (() => {
   'use strict';
   const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const staticStory = window.matchMedia('(max-height:620px),(max-width:900px) and (max-height:700px),(prefers-reduced-motion:reduce)');
+  window.CreAidMotion = Object.freeze({reduced:media,staticStory});
   const positions = new WeakMap();
   const input = {wheelAt:-Infinity,previousWheel:-Infinity,discrete:0,nativeUntil:0,touchUntil:0};
   const clamp = (x,a,b) => Math.min(b,Math.max(a,x));

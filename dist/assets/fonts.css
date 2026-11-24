@@ -74,5 +74,10 @@
 :root {
   --font-body: 'Ubuntu', Arial, sans-serif;
   --font-accent: Georgia, 'Times New Roman', serif;
+  --cm-brand-pink:#fa225b;
+  --cm-brand-berry:#b3284f;
+  --cm-brand-wine:#420915;
+  --cm-brand-ink:#1a1a1b;
+  --cm-action-hover:#93203f;
 }
 html, body, button, input, textarea, select { font-family: var(--font-body); }
