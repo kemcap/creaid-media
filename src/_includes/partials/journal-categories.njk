@@ -1,0 +1,10 @@
+<section class="audit-related" aria-labelledby="journal-categories-title">
+  <div class="audit-inner">
+    <h2 id="journal-categories-title">Journal-Themen</h2>
+    <ul class="audit-links journal-topic-links">
+      {% for categoryKey, category in journalCategories %}
+      <li><a href="{{ routes[categoryKey] }}">{{ category.title | escape }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

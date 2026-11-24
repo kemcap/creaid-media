@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -48,11 +48,10 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check Pillow==11.3.0
           python scripts/optimize-preview-images.py
-      - name: Verify global layout and motion
+      - name: Verify V10.3 structure and links
         run: |
-          node scripts/check-global-shell.mjs
-          node scripts/check-home-motion.mjs
-          node scripts/check-hero-experience.mjs
+          npm run test:structure
+          npm run test:quality
       - name: Prepare GitHub Pages project-site paths and clean URLs
         run: node scripts/prepare-pages.mjs
       - name: Configure GitHub Pages

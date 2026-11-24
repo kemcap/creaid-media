@@ -1,0 +1,17 @@
+{% if service.children.length or service.parent != 'leistungen' or service.related.length %}
+<section class="audit-related service-links" aria-labelledby="service-links-title">
+  <div class="audit-inner">
+    <h2 id="service-links-title">Passende Leistungen und Ratgeber</h2>
+    {% include "partials/service-children.njk" %}
+    <ul class="audit-links">
+      {% if service.parent != 'leistungen' %}
+      <li><a href="{{ routes[service.parent] }}">Zur Übersicht: {{ services[service.parent].label | escape }}</a></li>
+      {% endif %}
+      {% for related in service.related %}
+      {% set label = services[related].label or pages[related].title | replace(" | CreAid-Media", "") %}
+      <li><a href="{{ routes[related] }}">{{ label | escape }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}

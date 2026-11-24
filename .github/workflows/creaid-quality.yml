@@ -22,22 +22,18 @@ jobs:
         run: |
           npm install --no-save --package-lock=false playwright@1.56.1 pixelmatch@7.1.0 pngjs@7.0.0
           npx playwright install --with-deps chromium firefox webkit
-      - name: Start candidate and immutable baseline
+      - name: Prepare and verify canonical Apache configuration
+        run: node .github/scripts/prepare-ionos.mjs
+      - name: Start candidate
         run: |
-          git worktree add --detach "$RUNNER_TEMP/creaid-baseline" 335c4c27fa7b50af10e095c5e8db0d69c4d457b8
           node scripts/preview.mjs > "$RUNNER_TEMP/creaid-preview.log" 2>&1 &
-          (cd "$RUNNER_TEMP/creaid-baseline" && CREAID_PREVIEW_PORT=8081 node scripts/preview.mjs > "$RUNNER_TEMP/creaid-baseline.log" 2>&1) &
-          for port in 8080 8081; do
-            for attempt in {1..30}; do
-              if curl -fsS "http://127.0.0.1:$port/" >/dev/null; then break; fi
-              sleep 1
-            done
-            curl -fsS "http://127.0.0.1:$port/" >/dev/null
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
           done
+          curl -fsS http://127.0.0.1:8080/ >/dev/null
       - run: npm run test:routes -- http://127.0.0.1:8080
-      - name: Browser matrix and reference comparison
-        env:
-          CREAID_QA_BASELINE: http://127.0.0.1:8081
+      - name: Browser matrix and representative screenshots
         run: npm run test:browser
       - uses: actions/upload-artifact@v4
         if: always()

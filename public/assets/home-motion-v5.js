@@ -209,10 +209,31 @@
 
   // Mauslicht ist reines Dekor. Kein Cursor-Replacement, kein Maus-Blocking.
   const glow=$('.cursor-glow');
-  if(glow && window.matchMedia('(hover:hover) and (pointer:fine)').matches && !reduced.matches){
-    let targetX=-1000,targetY=-1000,x=-1000,y=-1000;
-    window.addEventListener('pointermove',e=>{targetX=e.clientX-180;targetY=e.clientY-180;},{passive:true});
-    const follow=()=>{x=mix(x,targetX,.12);y=mix(y,targetY,.12);glow.style.transform=`translate3d(${x}px,${y}px,0)`;requestAnimationFrame(follow)};
-    requestAnimationFrame(follow);
+  if(glow){
+    const fine=window.matchMedia('(hover:hover) and (pointer:fine)');
+    let targetX=-1000,targetY=-1000,x=-1000,y=-1000,frame=0;
+    const enabled=()=>fine.matches&&!reduced.matches&&!document.hidden;
+    const follow=()=>{
+      frame=0;
+      if(!enabled())return;
+      x=mix(x,targetX,.12);y=mix(y,targetY,.12);
+      const unsettled=Math.abs(x-targetX)+Math.abs(y-targetY)>.1;
+      if(!unsettled){x=targetX;y=targetY;}
+      glow.style.transform=`translate3d(${x}px,${y}px,0)`;
+      if(unsettled)frame=requestAnimationFrame(follow);
+    };
+    window.addEventListener('pointermove',e=>{
+      if(!enabled()||e.pointerType==='touch')return;
+      targetX=e.clientX-180;targetY=e.clientY-180;
+      if(!frame)frame=requestAnimationFrame(follow);
+    },{passive:true});
+    const reset=()=>{
+      if(frame){cancelAnimationFrame(frame);frame=0;}
+      x=targetX=-1000;y=targetY=-1000;
+      glow.style.transform='translate3d(-1000px,-1000px,0)';
+    };
+    fine.addEventListener('change',reset);
+    reduced.addEventListener('change',reset);
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)reset();});
   }
 })();
