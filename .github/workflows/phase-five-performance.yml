@@ -1,0 +1,78 @@
+name: Phase 5 performance and cache integrity
+on:
+  push:
+    branches: ['audit/editorial-ux-2026-11']
+    paths: ['scripts/fingerprint-preview-assets.mjs','scripts/check-cache-fingerprint.mjs','.github/workflows/phase-five-performance.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  statuses: write
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Register run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state=pending -f context=audit/phase-five -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+      - run: npm ci
+      - run: npm run verify
+      - run: node scripts/check-global-shell.mjs && node scripts/check-home-motion.mjs
+      - run: pip install Pillow==11.3.0
+      - run: python scripts/optimize-preview-images.py
+      - run: node scripts/check-cache-fingerprint.mjs
+      - run: node scripts/fingerprint-preview-assets.mjs
+      - run: node scripts/prepare-pages.mjs
+      - run: node .github/scripts/prepare-ionos.mjs
+      - run: npm install --no-save --package-lock=false playwright@1.56.1 lighthouse@12.8.2
+      - run: npx playwright install --with-deps chromium
+      - name: Test fingerprinted build and capture before-after lab diagnostics
+        run: |
+          node scripts/preview.mjs > /tmp/creaid-preview.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:routes -- http://127.0.0.1:8080
+          node design/phase-3/check-home.mjs
+          node scripts/check-journal-pagination.mjs
+          node scripts/check-design-system.mjs
+          mkdir -p phase-five-report
+          export CHROME_PATH=$(node --input-type=module -e 'import {chromium} from "playwright"; console.log(chromium.executablePath())')
+          for entry in home journal; do
+            url=http://127.0.0.1:8080/
+            if [ "$entry" = journal ]; then url="${url}creaid-blog"; fi
+            for device in desktop mobile; do
+              args=()
+              if [ "$device" = desktop ]; then args+=(--preset=desktop); fi
+              npx --no-install lighthouse "$url" "${args[@]}" --quiet --chrome-flags="--headless --no-sandbox" --output=json --output-path="phase-five-report/lighthouse-$entry-$device.json"
+            done
+          done
+          node --input-type=module -e 'import{readdirSync,readFileSync}from"node:fs"; for(const f of readdirSync("phase-five-report")){const j=JSON.parse(readFileSync("phase-five-report/"+f));if(j.runtimeError)throw Error(f+" "+JSON.stringify(j.runtimeError));console.log("LIGHTHOUSE",f,JSON.stringify({scores:Object.fromEntries(Object.entries(j.categories).map(([k,v])=>[k,v.score])),lcp:j.audits["largest-contentful-paint"].numericValue,cls:j.audits["cumulative-layout-shift"].numericValue,tbt:j.audits["total-blocking-time"].numericValue,failedSeo:j.categories.seo.auditRefs.filter(r=>j.audits[r.id].score===0).map(r=>r.id)}));}'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase-five-performance
+          path: |
+            phase-five-report/
+            design-system-report/
+            phase3-home-*.png
+            journal-*.png
+          if-no-files-found: warn
+      - name: Report actual result
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          state=failure
+          if [ "$JOB_STATUS" = success ]; then state=success; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state="$state" -f context=audit/phase-five -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"

@@ -53,6 +53,8 @@ jobs:
           node scripts/check-global-shell.mjs
           node scripts/check-home-motion.mjs
           node scripts/check-hero-experience.mjs
+      - name: Fingerprint optimized preview assets
+        run: node scripts/fingerprint-preview-assets.mjs
       - name: Prepare GitHub Pages project-site paths and clean URLs
         run: node scripts/prepare-pages.mjs
       - name: Configure GitHub Pages

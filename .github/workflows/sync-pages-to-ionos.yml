@@ -48,6 +48,7 @@ jobs:
           npm run build
           python -m pip install --disable-pip-version-check Pillow==11.3.0
           python scripts/optimize-preview-images.py
+          if [ -f scripts/fingerprint-preview-assets.mjs ]; then node scripts/fingerprint-preview-assets.mjs; fi
           node scripts/prepare-pages.mjs
       - name: Verify rebuilt reference against published GitHub Pages
         run: |
