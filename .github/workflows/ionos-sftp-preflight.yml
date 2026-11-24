@@ -1,0 +1,82 @@
+name: IONOS - SFTP-Verbindung prüfen
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ionos-sftp-preflight
+  cancel-in-progress: false
+jobs:
+  preflight:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Prepare SFTP client
+        run: |
+          if ! command -v sshpass >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends sshpass
+          fi
+      - name: Verify IONOS host key
+        shell: bash
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+        run: |
+          set -euo pipefail
+          : "${SFTP_HOST:?Missing SFTP_HOST}"
+          : "${SFTP_PORT:?Missing SFTP_PORT}"
+          [[ "$SFTP_HOST" =~ ^[A-Za-z0-9][A-Za-z0-9.-]+$ ]] || { echo "Invalid host"; exit 1; }
+          [[ "$SFTP_PORT" == "22" ]] || { echo "Expected SFTP port 22"; exit 1; }
+          # Published IONOS Webhosting SHA256 fingerprints, verified 2026-11-24:
+          # https://www.ionos.de/hilfe/hosting/ssh-zugaenge-einrichten-und-verwalten/uebersicht-der-ssh-fingerabdruecke-im-ionos-webhosting/
+          umask 077
+          known="$RUNNER_TEMP/ionos_known_hosts"
+          scan="$RUNNER_TEMP/ionos_scan"
+          candidate="$RUNNER_TEMP/ionos_candidate"
+          trap 'rm -f "$scan" "$candidate"' EXIT
+          : > "$known"
+          ssh-keyscan -T 15 -p "$SFTP_PORT" -t ed25519,ecdsa,rsa "$SFTP_HOST" > "$scan" 2>/dev/null
+          while IFS= read -r key; do
+            [[ -n "$key" && "$key" != \#* ]] || continue
+            printf '%s\n' "$key" > "$candidate"
+            fingerprint=$(ssh-keygen -E sha256 -lf "$candidate" | awk 'NR==1{print $2}')
+            case "$fingerprint" in
+              SHA256:J4oM+B2g7zZWAI3DolXR1e4vdIMrGO301kEN14/slsQ|SHA256:psLDE8kfhoS9GWrc/GTrdlPvyKPcWcGZv2JxOCvwF3w|SHA256:1gx2w8Rtv3wCgi7Jh8myf/KVd72cRQbow03UP8P095Q)
+                printf '%s\n' "$key" >> "$known";;
+            esac
+          done < "$scan"
+          [[ -s "$known" ]] || { echo "::error::No server key matched the published IONOS fingerprints. Do not bypass verification."; exit 1; }
+          echo "IONOS host key verified."
+      - name: Read-only SFTP connection and directory inspection
+        shell: bash
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SSHPASS: ${{ secrets.SFTP_PASSWORD }}
+        run: |
+          set -euo pipefail
+          : "${SFTP_USERNAME:?Missing SFTP_USERNAME}"
+          : "${SSHPASS:?Missing SFTP_PASSWORD}"
+          [[ "$SFTP_USERNAME" =~ ^[A-Za-z0-9_.-]+$ ]] || { echo "Invalid SFTP username"; exit 1; }
+          umask 077
+          result="$RUNNER_TEMP/ionos_directory"
+          trap 'rm -f "$result"' EXIT
+          printf 'pwd\nls -a\nbye\n' | sshpass -e sftp -q \
+            -oBatchMode=no -oStrictHostKeyChecking=yes \
+            -oUserKnownHostsFile="$RUNNER_TEMP/ionos_known_hosts" \
+            -oGlobalKnownHostsFile=/dev/null -oConnectTimeout=15 \
+            -oPubkeyAuthentication=no -oNumberOfPasswordPrompts=1 \
+            -P "$SFTP_PORT" -b - "$SFTP_USERNAME@$SFTP_HOST" > "$result"
+          echo "SFTP authentication and read-only directory listing succeeded."
+          if grep -Eq '(^|[[:space:]/])(wp-admin|wp-content|wp-includes|wp-config\.php)([[:space:]/]|$)' "$result"; then
+            echo "::warning::WordPress files detected in login directory. Do not upload there."
+          fi
+          if grep -Eq '(^|[[:space:]/])creaid-v11([[:space:]/]|$)' "$result"; then
+            echo "A creaid-v11 entry exists. Confirm its path and contents in IONOS before uploading."
+          else
+            echo "No creaid-v11 entry detected in login directory. It may already be the restricted directory; verify in IONOS."
+          fi
+          echo "No files uploaded, deleted or changed."
