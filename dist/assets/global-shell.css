@@ -136,3 +136,6 @@
   .cm-footer__contact>a,.cm-footer__legal>a,.cm-footer__contact address{font-size:11px}
   .cm-footer__bottom{padding:16px 0 18px;gap:6px;font-size:10px}
 }
+
+/* V10.3: keep the expanded service navigation within the available viewport. */
+@media(min-width:1081px){.cm-header__dropdown{max-height:calc(100dvh - 110px);overflow-y:auto;overscroll-behavior:contain;}}

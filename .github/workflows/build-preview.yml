@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -37,22 +37,11 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check Pillow==11.3.0
           python scripts/optimize-preview-images.py
-      - name: Check global header, footer and routes
-        run: node scripts/check-global-shell.mjs
-      - name: Check homepage animations, mask and accessibility fallbacks
+      - name: Verify V10.3 structure, links and local assets
         run: |
-          node --check public/assets/home-motion-v5.js
-          node scripts/check-home-motion.mjs
-      - name: Check hero centering, ticker, pointer and adaptive motion
-        run: |
-          node --check public/assets/adaptive-scroll.js
-          node --check public/assets/home-motion-v5.js
-          node --check public/assets/agency-pages.js
-          node --check public/assets/specialty-pages.js
-          node --check public/assets/journal.js
-          node --check public/assets/motion-v4.js
-          node --check public/assets/scrollstory.js
-          node scripts/check-hero-experience.mjs
+          npm run test:structure
+          npm run test:quality
+          node .github/scripts/prepare-ionos.mjs
       - name: Update prebuilt local preview
         run: |
           git config user.name "github-actions[bot]"

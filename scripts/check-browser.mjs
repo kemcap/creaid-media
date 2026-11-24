@@ -60,6 +60,10 @@ async function inspect(page,route,viewport,engine,compare){
   if(info.width>info.viewport+2)localErrors.push('Horizontal overflow '+(info.width-info.viewport)+' px');
   if(info.canonical!=='https://creaid-media.de'+route||info.robots!=='noindex,nofollow,noarchive')localErrors.push('SEO metadata mismatch');
   if(info.badImages.length)localErrors.push('Broken images: '+info.badImages.join(', '));
+  if(engine==='chromium'&&representative.includes(route)&&!compare){
+   await readyForScreenshot(page);
+   await page.screenshot({animations:'disabled',caret:'hide',path:join(out,id+'-current.png')});
+  }
   if(compare){
    await readyForScreenshot(page);
    const actual=await page.screenshot({animations:'disabled',caret:'hide',path:join(out,id+'-current.png')});
