@@ -39,10 +39,10 @@ assert.ok(balance.includes('@media (prefers-reduced-motion:reduce)'),'Ticker nee
 assert.ok(balance.includes('cm-cross-touch-active'),'Mobile crosshair visual state missing');
 const homeJS=load('dist/assets/home-motion-v5.js');
 assert.ok(homeJS.includes('adaptive.progress(t,target)'),'Home animations must use adaptive progress');
-assert.ok(homeJS.includes('pointerdown')&&homeJS.includes('pointermove')&&homeJS.includes('pointercancel'),'Crosshair needs mouse/touch handling');
+assert.ok(!homeJS.includes('heroStage.addEventListener'), 'Home crosshair must use the shared controller');
 assert.ok(homeJS.includes("const timers=[0,233,467,700]"),'Keep existing service card timing');
 assert.ok(homeJS.includes('contact.style.clipPath'),'Keep existing statement/contact wipe');
-for(const file of ['agency-pages.js','specialty-pages.js','journal.js','motion-v4.js','scrollstory.js']){
+for(const file of ['agency-pages.js','specialty-pages.js','motion-v4.js','scrollstory.js']){
   assert.ok(load('dist/assets/'+file).includes('CreAidAdaptiveScroll?.progress'),file+' not using shared input smoothing');
 }
 const events={};
@@ -96,6 +96,7 @@ for(const expected of [
   '.sp-hero.cm-crosshair-ready > .a-grid-cross {display:none}'
 ])assert.ok(balance.includes(expected),'Missing shared motion rule: '+expected);
 const crossJS=load('dist/assets/service-crosshair.js');
+assert.ok(crossJS.includes('pointerdown')&&crossJS.includes('pointermove')&&crossJS.includes('pointercancel'),'Shared crosshair needs mouse/touch handling');
 const pointerHandlers={}, props={}, classes=new Set();
 const fakeHero={
  querySelector:()=>null, prepend(el){this.cross=el},
@@ -112,10 +113,13 @@ const noMotion={matches:false,addEventListener(){}};
 runInNewContext(crossJS,{
  document:{querySelectorAll:()=>[fakeHero],createElement:tag=>tag==='div'?fakeCross:{}},
  window:{matchMedia:q=>q.includes('reduced-motion')?noMotion:{matches:true}},
+ getComputedStyle:()=>({backgroundColor:'rgb(18, 19, 21)',position:'relative'}),
  requestAnimationFrame:fn=>{nextFrame=fn;return 1},cancelAnimationFrame:()=>{nextFrame=null},
  setTimeout:fn=>{touchTimer=fn;return 1},clearTimeout:()=>{touchTimer=null}
 });
 assert.ok(classes.has('cm-crosshair-ready')&&fakeCross['aria-hidden']==='true');
+assert.ok(!load('dist/assets/journal.js').includes('CreAidAdaptiveScroll?.progress'),'Journal index must not restore removed scroll scrubbing');
+assert.ok(load('dist/assets/journal.js').includes('journal-results'),'Journal paging must target results');
 assert.ok(pointerHandlers.pointermove.opts.passive,'Do not intercept native scroll');
 pointerHandlers.pointermove.fn({pointerType:'mouse',clientX:900,clientY:100});
 assert.ok(nextFrame);nextFrame();

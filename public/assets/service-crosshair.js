@@ -1,17 +1,36 @@
-/* Homepage-style decorative crosshair for service and specialty hero sections. */
+/* Global CreAid crosshair: one shared decoration/controller per dark content surface. */
 (() => {
   'use strict';
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
   const fine=window.matchMedia('(hover:hover) and (pointer:fine)');
   const clamp=n=>Math.max(0,Math.min(1,n));
-  document.querySelectorAll('main > .page-top, main > .sp-hero').forEach(hero=>{
-    if(hero.querySelector('.cm-service-crosshair'))return;
-    const cross=document.createElement('div');
-    cross.className='cm-service-crosshair';
+  // Only actual content sections, never navigation, cards, or individual controls.
+  const stageSelector=':scope > .motion-stage,:scope > .a-stage,:scope > .detail-pin,:scope > .j-feature-stage,:scope > .closing-pin';
+  function dark(node){
+    const color=getComputedStyle(node).backgroundColor;
+    const m=color.match(/^rgba?\(([^)]+)\)$/);if(!m)return false;
+    const c=m[1].split(',').map(Number);
+    return c.length>=3&&(c[3]??1)>.9&&.2126*c[0]+.7152*c[1]+.0722*c[2]<70;
+  }
+  const surfaces=new Set();
+  document.querySelectorAll('main section').forEach(section=>{
+    const stage=section.querySelector(stageSelector);
+    if(stage&&dark(stage))surfaces.add(stage);
+    else if(dark(section))surfaces.add(section);
+  });
+  surfaces.forEach(hero=>{
+    if(hero.querySelector(':scope > .cm-service-crosshair'))return;
+    // Reuse the original homepage axes instead of layering a second decoration.
+    let cross=hero.querySelector(':scope > .axes');
+    if(!cross){
+      cross=document.createElement('div');
+      cross.className='cm-service-crosshair';
+      cross.append(document.createElement('span'),document.createElement('span'),document.createElement('b'));
+      hero.prepend(cross);
+    }
     cross.setAttribute('aria-hidden','true');
-    cross.append(document.createElement('span'),document.createElement('span'),document.createElement('b'));
-    hero.prepend(cross);
     hero.classList.add('cm-crosshair-ready');
+    if(getComputedStyle(hero).position==='static')hero.classList.add('cm-crosshair-positioned');
     const m={x:.60,y:.47,tx:.60,ty:.47,frame:0};
     let timer=0,activeTouch=null;
     const point=e=>{

@@ -1,0 +1,49 @@
+name: Phase 2 global design system regression
+on:
+  push:
+    branches: ['audit/editorial-ux-2026-11']
+    paths: ['public/assets/global-design-system.css','public/assets/service-crosshair.js','scripts/check-design-system.mjs','.github/workflows/phase-two-design.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  statuses: write
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Register actual run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state=pending -f context=audit/phase-two -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+      - run: npm ci
+      - run: npm run verify
+      - run: npm install --no-save --package-lock=false playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - name: Verify dark sections and shared shell on all routes
+        run: |
+          node scripts/preview.mjs > /tmp/creaid-preview.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/check-design-system.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: global-design-system-regression
+          path: design-system-report/
+          if-no-files-found: warn
+      - name: Report actual result
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          state=failure
+          if [ "$JOB_STATUS" = success ]; then state=success; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state="$state" -f context=audit/phase-two -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"

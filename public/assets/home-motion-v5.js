@@ -151,61 +151,7 @@
   window.addEventListener('load',()=>{measure();schedule()});
   measure();schedule();
   // Hero Fadenkreuz: sanfte Maus-Nachführung, kurzer Touch-Impuls, niemals Pointer-Blocking.
-  const heroStage=$('.hero-stage'), cross=nodes.hero.axes;
-  if(heroStage && cross){
-    const fine=window.matchMedia('(hover:hover) and (pointer:fine)');
-    const motion={x:.60,y:.47,targetX:.60,targetY:.47,frame:0};
-    let touchFade;
-    const position=e=>{
-      const rect=heroStage.getBoundingClientRect();
-      return {x:clamp((e.clientX-rect.left)/Math.max(1,rect.width)),
-              y:clamp((e.clientY-rect.top)/Math.max(1,rect.height))};
-    };
-    const paint=(x,y)=>{
-      cross.style.setProperty('--cm-cross-x',`${(x*100).toFixed(3)}%`);
-      cross.style.setProperty('--cm-cross-y',`${(y*100).toFixed(3)}%`);
-    };
-    const follow=()=>{
-      motion.frame=0;
-      if(reduced.matches)return;
-      motion.x=mix(motion.x,motion.targetX,.14);
-      motion.y=mix(motion.y,motion.targetY,.14);
-      paint(motion.x,motion.y);
-      if(Math.abs(motion.targetX-motion.x)+Math.abs(motion.targetY-motion.y)>.001)
-        motion.frame=requestAnimationFrame(follow);
-    };
-    const cue=()=>{if(!motion.frame && !reduced.matches)motion.frame=requestAnimationFrame(follow)};
-    heroStage.addEventListener('pointermove',e=>{
-      if(reduced.matches)return;
-      if(e.pointerType==='touch'){
-        if(!cross.classList.contains('cm-cross-touch-active'))return;
-        const point=position(e);paint(point.x,point.y);
-      }else if(fine.matches){
-        const point=position(e);
-        motion.targetX=point.x;motion.targetY=point.y;
-        cue();
-      }
-    },{passive:true});
-    heroStage.addEventListener('pointerleave',e=>{
-      if(e.pointerType==='touch'||reduced.matches)return;
-      motion.targetX=.60;motion.targetY=.47;cue();
-    },{passive:true});
-    heroStage.addEventListener('pointerdown',e=>{
-      if(e.pointerType!=='touch'||reduced.matches)return;
-      clearTimeout(touchFade);
-      if(motion.frame){cancelAnimationFrame(motion.frame);motion.frame=0}
-      const point=position(e);
-      motion.x=motion.targetX=point.x;motion.y=motion.targetY=point.y;
-      paint(point.x,point.y);
-      cross.classList.add('cm-cross-touch-active');
-    },{passive:true});
-    const fadeTouch=()=>{
-      clearTimeout(touchFade);
-      touchFade=setTimeout(()=>cross.classList.remove('cm-cross-touch-active'),550);
-    };
-    heroStage.addEventListener('pointerup',fadeTouch,{passive:true});
-    heroStage.addEventListener('pointercancel',fadeTouch,{passive:true});
-  }
+  // Crosshair pointer and reduced-motion behavior are owned by service-crosshair.js for all sections.
 
   // Mauslicht ist reines Dekor. Kein Cursor-Replacement, kein Maus-Blocking.
   const glow=$('.cursor-glow');
