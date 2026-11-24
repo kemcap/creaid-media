@@ -269,3 +269,32 @@ const journalScript=load('dist/assets/journal.js');
 assert.ok(journalScript.includes("const tocLinks=$$('.j-toc"),'TOC links must be a collection, even when empty');
 assert.ok(journalScript.includes("const headings=$$('.j-prose"),'TOC headings must be a collection');
 assert.equal(journalScript,load('public/assets/journal.js'),'Journal source/dist mismatch');
+
+
+// Execute the actual cursor-glow block with deterministic requestAnimationFrame queues.
+// The animation must sleep until input and stop after reaching its target.
+{
+ const code=load('dist/assets/home-motion-v5.js');
+ assert.equal(code,load('public/assets/home-motion-v5.js'),'Home motion source/dist mismatch');
+ const block=code.slice(code.indexOf('  // Mauslicht ist reines Dekor.'),code.lastIndexOf('})();'));
+ const handlers={},prefs={},queue=new Map();let id=0;
+ const glow={style:{}},fine={matches:true,addEventListener:(type,fn)=>{prefs.fine=fn;}};
+ const reducedMotion={matches:false,addEventListener:(type,fn)=>{prefs.reduced=fn;}};
+ const doc={hidden:false,addEventListener:(type,fn)=>{handlers[type]=fn;}};
+ runInNewContext(block,{$:()=>glow,mix:(a,b,t)=>a+(b-a)*t,reduced:reducedMotion,window:{matchMedia:()=>fine,addEventListener:(type,fn)=>{handlers[type]=fn;}},document:doc,requestAnimationFrame:fn=>{queue.set(++id,fn);return id;},cancelAnimationFrame:i=>queue.delete(i)});
+ assert.equal(queue.size,0,'Cursor glow must idle without pointer input');
+ handlers.pointermove({clientX:500,clientY:400,pointerType:'mouse'});
+ handlers.pointermove({clientX:520,clientY:420,pointerType:'mouse'});
+ assert.equal(queue.size,1,'Only one pending animation frame');
+ let count=0;
+ while(queue.size&&count++<200){const [key,fn]=queue.entries().next().value;queue.delete(key);fn();}
+ assert.equal(queue.size,0,'Cursor glow must stop after convergence');
+ assert.equal(glow.style.transform,'translate3d(340px,240px,0)');
+ handlers.pointermove({clientX:600,clientY:500,pointerType:'mouse'});
+ reducedMotion.matches=true;prefs.reduced();
+ assert.equal(queue.size,0,'Reduced motion cancels pending frame');
+ handlers.pointermove({clientX:700,clientY:600,pointerType:'mouse'});
+ assert.equal(queue.size,0,'Reduced motion must not schedule frames');
+ assert.equal(glow.style.transform,'translate3d(-1000px,-1000px,0)');
+ console.log('PASS: homepage pointer glow is idle until input, converges, stops, and honors reduced motion.');
+}

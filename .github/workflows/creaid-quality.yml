@@ -24,7 +24,7 @@ jobs:
           npx playwright install --with-deps chromium firefox webkit
       - name: Start candidate and immutable baseline
         run: |
-          git worktree add --detach "$RUNNER_TEMP/creaid-baseline" 335c4c27fa7b50af10e095c5e8db0d69c4d457b8
+          git worktree add --detach "$RUNNER_TEMP/creaid-baseline" 2bae30bd95265e9c4b6438bb9fd1845d496fd221
           node scripts/preview.mjs > "$RUNNER_TEMP/creaid-preview.log" 2>&1 &
           (cd "$RUNNER_TEMP/creaid-baseline" && CREAID_PREVIEW_PORT=8081 node scripts/preview.mjs > "$RUNNER_TEMP/creaid-baseline.log" 2>&1) &
           for port in 8080 8081; do
@@ -42,6 +42,8 @@ jobs:
       - name: Prepare launch manifests (preview protection remains enabled)
         run: npm run prepare:launch
       - name: Cold-cache performance audit
+        env:
+          CREAID_PERF_BASELINE: http://127.0.0.1:8081
         run: npm run test:performance
       - uses: actions/upload-artifact@v4
         if: always()

@@ -24,3 +24,6 @@ Ausgangsstand: 2bae30bd95265e9c4b6438bb9fd1845d496fd221 (bestandene Browser-Matr
 | Rollback | Bestehenden WordPress-Stand, DNS, Hosting-Konfiguration und Daten sichern; Rückkehrpfad vor Umstellung testen |
 
 Weder Vorschau-Server noch ein erfolgreicher CI-Job belegen die Produktionskonfiguration. Kein automatischer Deployment-Schritt.
+
+## Gezielte Optimierung 01 – Mauslicht
+Die frühere Startseiten-Implementierung rief requestAnimationFrame dauerhaft auf, auch bei stillstehender Maus und vor der ersten Mausbewegung. Der neue Code plant Frames nur nach Zeigerbewegungen ein, hält dieselbe Interpolationsrate (.12), beendet die Schleife nach Konvergenz auf 0,1 px und setzt den Effekt bei geänderten Eingabe-/Bewegungspräferenzen oder ausgeblendetem Dokument zurück. Touch löst das Mauslicht nicht aus. Der deterministische Regressionstest führt den tatsächlichen Block aus und prüft Idle, Zusammenfassen der Eingaben, Konvergenz und Reduced Motion. Die reale Browserprüfung vergleicht jetzt gegen den abgenommenen Merge 2bae30bd. Cold-cache-Vergleich: 80 Messungen (40 je Stand). Die tatsächliche CPU- und Ladezeitverbesserung muss anhand der Messdaten beurteilt werden.
