@@ -25,3 +25,68 @@ main .cm-crosshair-ready > .a-grid-cross{display:none}
  main .cm-crosshair-ready > :is(.cm-service-crosshair,.axes).cm-cross-touch-active{opacity:.83}
 }
 @media(prefers-reduced-motion:reduce){main .cm-crosshair-ready > :is(.cm-service-crosshair,.axes){transition:none!important}}
+
+/* Phase 2b — shared primitives, preserving the individual editorial compositions.
+   Container sizing is for the page shells, not narrow reading columns. */
+:root{
+ --cm-content-max:1380px;
+ --cm-gutter:clamp(18px,3.6vw,52px);
+ --cm-content-width:min(var(--cm-content-max),calc(100% - 2 * var(--cm-gutter)));
+ --cm-component-radius:3px;
+ --cm-control-height:44px;
+ --cm-button-padding:12px 20px;
+ --cm-button-gap:20px;
+ --cm-button-font:13px;
+ --cm-card-padding:clamp(16px,2.2vw,26px);
+ --cm-card-title:clamp(20px,2vw,30px);
+ --cm-card-body:15px;
+ --cm-reading-leading:1.65;
+ --cm-focus-width:2px;
+ --cm-focus-offset:4px;
+}
+main :is(.shell,.a-shell,.j-shell):not(.j-prose *):not(.j-reading-sidebar *){
+ width:var(--cm-content-width);margin-inline:auto;
+}
+main :is(.audit-inner,.cm-depth-inner){
+ width:min(1160px,calc(100% - 2 * var(--cm-gutter)));margin-inline:auto;
+}
+/* Same button dimensions and type; retain existing light/dark and outline variants. */
+body :is(.cm-header__cta,.cm-footer__lead-cta,.button-primary,.a-btn,.j-button,.l-button,.cta,.cm-depth-primary){
+ box-sizing:border-box;min-height:var(--cm-control-height);
+ padding:var(--cm-button-padding);gap:var(--cm-button-gap);
+ border-radius:var(--cm-component-radius);
+ font-family:var(--font-body);font-size:var(--cm-button-font);font-weight:700;
+ line-height:1.35;max-width:100%;white-space:normal;
+}
+body :is(.cm-header__cta,.cm-footer__lead-cta,.button-primary,.a-btn,.j-button,.l-button,.cta,.cm-depth-primary):focus-visible{
+ outline-width:var(--cm-focus-width);outline-offset:var(--cm-focus-offset);outline-style:solid;
+}
+main :is(.a-form .a-field input,.a-form .a-field select,.a-form .a-field textarea,.j-index-editorial .j-search input){
+ box-sizing:border-box;min-height:var(--cm-control-height);
+ font-family:var(--font-body);font-size:16px;line-height:1.5;
+}
+main .a-form .a-field :is(input,select,textarea){padding:12px 14px;border-radius:var(--cm-component-radius)}
+main .a-form .a-field textarea{min-height:120px;max-height:none}
+main .a-form .a-field label{font-size:12px;line-height:1.4;letter-spacing:.035em;text-transform:none}
+main .a-form{border-radius:var(--cm-component-radius)}
+/* Content cards, not artwork, pinned story panels or decorative mockups. */
+main :is(.cm-depth-grid article,.audit-panel){padding:var(--cm-card-padding);border-radius:var(--cm-component-radius)}
+main :is(.cm-depth-grid article,.audit-panel,.j-index-editorial .j-card) h3{
+ font-family:var(--font-body);font-size:var(--cm-card-title);line-height:1.2;letter-spacing:-.035em;
+}
+main :is(.cm-depth-grid article,.audit-panel,.j-index-editorial .j-card) p{
+ font-size:var(--cm-card-body);line-height:var(--cm-reading-leading);
+}
+main .j-index-editorial .j-card .j-card-image,main .j-index-editorial .j-feature-media{
+ border-radius:var(--cm-component-radius);
+}
+main .j-index-editorial :is(.j-filter,.j-page-btn){min-height:var(--cm-control-height);font-family:var(--font-body)}
+@media(max-width:600px){
+ :root{--cm-button-padding:11px 15px;--cm-button-gap:12px;--cm-card-body:14px}
+ main .a-form{padding:var(--cm-card-padding)}
+ main .a-form-actions{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){
+ body :is(.cm-header__cta,.cm-footer__lead-cta,.button-primary,.a-btn,.j-button,.l-button,.cta,.cm-depth-primary){transition:none!important}
+ body :is(.cm-header__cta,.cm-footer__lead-cta,.button-primary,.a-btn,.j-button,.l-button,.cta,.cm-depth-primary):hover{transform:none!important}
+}
