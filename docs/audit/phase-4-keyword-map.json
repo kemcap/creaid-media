@@ -1,0 +1,979 @@
+{
+  "source": "Ubersuggest DE/de live query; historical workbook reviewed separately",
+  "metrics": [
+    {
+      "keyword": "werbeagentur",
+      "volume": 12100,
+      "cpcUsd": 6.24,
+      "sd": 11,
+      "providerIntent": "Commercial",
+      "key": "index",
+      "url": "/",
+      "status": "proposed; SERP and fit validation pending"
+    },
+    {
+      "keyword": "website erstellen lassen",
+      "volume": 2900,
+      "cpcUsd": 18.06,
+      "sd": 31,
+      "providerIntent": "Commercial",
+      "key": "webdesign",
+      "url": "/webdesign",
+      "status": "proposed; SERP and fit validation pending"
+    },
+    {
+      "keyword": "webdesign für handwerker",
+      "volume": 480,
+      "cpcUsd": 9.37,
+      "sd": 9,
+      "providerIntent": "Informational",
+      "key": "webdesign-handwerker",
+      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "status": "proposed; SERP and fit validation pending"
+    },
+    {
+      "keyword": "webdesign für ärzte",
+      "volume": 590,
+      "cpcUsd": 11.59,
+      "sd": 27,
+      "providerIntent": "Commercial",
+      "key": "webdesign-aerzte",
+      "url": "/webdesign/webdesign-fuer-aerzte",
+      "status": "proposed; SERP and fit validation pending"
+    },
+    {
+      "keyword": "webdesign für immobilienmakler",
+      "volume": 170,
+      "cpcUsd": 15.12,
+      "sd": 9,
+      "providerIntent": "Commercial",
+      "key": "webdesign-immobilienmakler",
+      "url": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+      "status": "proposed; SERP and fit validation pending"
+    },
+    {
+      "keyword": "corporate design erstellen lassen",
+      "volume": 90,
+      "cpcUsd": 10.42,
+      "sd": 20,
+      "providerIntent": "Transactional",
+      "key": "branding",
+      "url": "/grafikdesign-2",
+      "status": "proposed; SERP and fit validation pending"
+    },
+    {
+      "keyword": "seo agentur",
+      "volume": 3600,
+      "cpcUsd": 29.97,
+      "sd": 11,
+      "providerIntent": "Commercial",
+      "key": "seo-content-marketing",
+      "url": "/seo-3",
+      "status": "proposed; SERP and fit validation pending"
+    },
+    {
+      "keyword": "onlineshop erstellen lassen",
+      "volume": 320,
+      "cpcUsd": 22.85,
+      "sd": 21,
+      "providerIntent": "Transactional",
+      "key": "onlineshops-ecommerce",
+      "url": "/online-shop-entwicklung",
+      "status": "proposed; SERP and fit validation pending"
+    },
+    {
+      "keyword": "ki automatisierung für unternehmen",
+      "volume": 10,
+      "cpcUsd": 9.855,
+      "sd": 23,
+      "providerIntent": null,
+      "key": "ki-automatisierung",
+      "url": "/ki-automatisierung",
+      "status": "proposed; SERP and fit validation pending"
+    }
+  ],
+  "pages": [
+    {
+      "key": "b2b-portal-entwickeln-lassen",
+      "url": "/b2b-portal-entwickeln-lassen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "B2B-Portal entwickeln lassen: Funktionen und Aufwand",
+      "commercialTarget": "/b2b-portal-entwicklung",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "beste-landingpage-elemente-fuer-kampagnen",
+      "url": "/beste-landingpage-elemente-fuer-kampagnen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Landingpage für Kampagnen: Elemente und Prüfliste",
+      "commercialTarget": "/google-ads-social-media",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "blog",
+      "url": "/creaid-blog",
+      "type": "journal",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber für Webdesign, Marketing, Branding und Digitalisierung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "branding",
+      "url": "/grafikdesign-2",
+      "type": "service",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "corporate design erstellen lassen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "cookie-einstellungen",
+      "url": "/cookie-einstellungen",
+      "type": "agency",
+      "searchIntent": "legal",
+      "proposedTopic": "Cookie-Einstellungen und externe Dienste",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "corporate-design-erstellen-lassen",
+      "url": "/corporate-design-erstellen-lassen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Corporate Design erstellen lassen: Briefing, Umfang & Ablauf",
+      "commercialTarget": "/grafikdesign-2",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "datenschutz",
+      "url": "/datenschutz",
+      "type": "agency",
+      "searchIntent": "legal",
+      "proposedTopic": "Datenschutzerklärung von CreAid-Media",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "url": "/deutschsprachige-agentur-in-der-tuerkei-finden",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Deutschsprachige Agentur in der Türkei: Auswahlkriterien",
+      "commercialTarget": "/",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "firmennamen-entwickeln-lassen",
+      "url": "/firmennamen-entwickeln-lassen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Firmennamen entwickeln lassen: Vorgehen und Kriterien",
+      "commercialTarget": "/grafikdesign-2",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "flyer-design-fuer-unternehmen",
+      "url": "/flyer-design-fuer-unternehmen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Flyer-Design für Unternehmen: Aufbau und Gestaltung",
+      "commercialTarget": "/print-design",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "google-ads-aber-keine-anfragen",
+      "url": "/google-ads-aber-keine-anfragen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Google Ads: Klicks, aber keine Anfragen? Ursachen prüfen",
+      "commercialTarget": "/google-ads-social-media",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "google-ads-social-media",
+      "url": "/google-ads-social-media",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Google Ads und Social-Media-Kampagnen für Unternehmen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "google-maps-auffindbarkeit-verbessern",
+      "url": "/google-maps-auffindbarkeit-verbessern",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Google Maps: Auffindbarkeit für Unternehmen verbessern",
+      "commercialTarget": "/seo-3",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "guenstige-webdesign-agentur-europa-finden",
+      "url": "/guenstige-webdesign-agentur-europa-finden",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Webdesign-Agenturen in Europa: Angebote vergleichen",
+      "commercialTarget": "/webdesign",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "impressum",
+      "url": "/impressum",
+      "type": "agency",
+      "searchIntent": "legal",
+      "proposedTopic": "Impressum von CreAid-Media",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "index",
+      "url": "/",
+      "type": "home",
+      "searchIntent": "agency selection",
+      "proposedTopic": "werbeagentur",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "individuelle-webentwicklung-fuer-unternehmen",
+      "url": "/individuelle-webentwicklung-fuer-unternehmen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Individuelle Webentwicklung: Standard oder Maßarbeit?",
+      "commercialTarget": "/webdesign",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "kampagne-fuer-lokale-unternehmen",
+      "url": "/kampagne-fuer-lokale-unternehmen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Lokale Werbekampagne planen: Ziele, Kanäle und Messung",
+      "commercialTarget": "/digitales-marketing",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "ki-automatisierung-fuer-unternehmen",
+      "url": "/ki-automatisierung-fuer-unternehmen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "KI-Automatisierung für kleine Unternehmen: Einstieg",
+      "commercialTarget": "/ki-automatisierung",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "ki-automatisierung",
+      "url": "/ki-automatisierung",
+      "type": "service",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "ki automatisierung für unternehmen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "ki-workflows-crm",
+      "url": "/ki-workflows-crm",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "KI-Workflows und CRM-Automatisierung für Unternehmen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "kontakt",
+      "url": "/kontakt",
+      "type": "agency",
+      "searchIntent": "contact",
+      "proposedTopic": "Kontakt und Projektanfrage bei CreAid-Media",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "leistungen",
+      "url": "/leistungen",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Leistungen für Webdesign, Marketing, Design und KI",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "logo-design-agentur",
+      "url": "/logo-design-agentur",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Logo-Design-Agentur: Auswahl, Ablauf und Leistung",
+      "commercialTarget": "/grafikdesign-2",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "logo-und-slogan-entwickeln",
+      "url": "/logo-und-slogan-entwickeln",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Logo und Slogan entwickeln: Briefing und Praxistest",
+      "commercialTarget": "/grafikdesign-2",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "markenauftritt-fuer-kleine-unternehmen",
+      "url": "/markenauftritt-fuer-kleine-unternehmen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Markenauftritt für kleine Unternehmen: Grundlagen",
+      "commercialTarget": "/grafikdesign-2",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "marketing",
+      "url": "/digitales-marketing",
+      "type": "service",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Digitales Marketing für Unternehmen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "marktplatz-plattform-entwickeln",
+      "url": "/marktplatz-plattform-entwickeln",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Online-Marktplatz entwickeln: MVP, Rollen und Betrieb",
+      "commercialTarget": "/marktplatz-entwicklung",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "messeauftritt-gestalten-lassen",
+      "url": "/messeauftritt-gestalten-lassen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Messeauftritt gestalten lassen: Konzept und Aufwand",
+      "commercialTarget": "/print-design",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "onlineshop-erfolgreich-aufbauen-anleitung",
+      "url": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Onlineshop aufbauen: Anleitung von Planung bis Start",
+      "commercialTarget": "/online-shop-entwicklung",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "onlineshop-erstellen-lassen",
+      "url": "/onlineshop-erstellen-lassen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Onlineshop selbst bauen oder erstellen lassen?",
+      "commercialTarget": "/online-shop-entwicklung",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "onlineshops-ecommerce",
+      "url": "/online-shop-entwicklung",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "onlineshop erstellen lassen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "printdesign-editorial",
+      "url": "/print-design",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Printdesign und Editorial Design für Unternehmen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "produktfim-erstellen-lassen",
+      "url": "/produktfim-erstellen-lassen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Produktfilm erstellen lassen: Briefing und Formate",
+      "commercialTarget": "/digitales-marketing",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "professionelle-website-fuer-lokale-dienstleister",
+      "url": "/professionelle-website-fuer-lokale-dienstleister",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Website für lokale Dienstleister: Aufbau und Inhalte",
+      "commercialTarget": "/webdesign",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "projekt-detail",
+      "url": "/projekt-detail",
+      "type": "agency",
+      "searchIntent": "portfolio review",
+      "proposedTopic": "Webdesign-Studie: von der Struktur zur Nutzerführung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "referenzen",
+      "url": "/referenzen",
+      "type": "agency",
+      "searchIntent": "portfolio review",
+      "proposedTopic": "Portfolio und Designstudien für Webdesign, Grafikdesign und Editorial",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "schlechte-website-verbessern",
+      "url": "/schlechte-website-verbessern",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Website verbessern: 7 Schritte für bestehende Seiten",
+      "commercialTarget": "/webdesign",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "seo-content-marketing",
+      "url": "/seo-3",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "seo agentur",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "seo-fuer-lokale-sichtbarkeit",
+      "url": "/seo-fuer-lokale-sichtbarkeit",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Lokale SEO-Strategie: Website und Google-Profil abstimmen",
+      "commercialTarget": "/seo-3",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "seo-grundlagen-lokale-dienstleister",
+      "url": "/seo-grundlagen-lokale-dienstleister",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Local SEO Checkliste: Grundlagen für lokale Dienstleister",
+      "commercialTarget": "/seo-3",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "shopware-vs-wordpress-shop",
+      "url": "/shopware-vs-wordpress-shop",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Shopware oder WooCommerce? Vergleich für Unternehmen",
+      "commercialTarget": "/online-shop-entwicklung",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "social-media-betreuung-unternehmen",
+      "url": "/social-media-betreuung-unternehmen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Social-Media-Betreuung: Leistungen und Aufwand",
+      "commercialTarget": "/google-ads-social-media",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "ueber-uns",
+      "url": "/ueber-uns",
+      "type": "agency",
+      "searchIntent": "agency information",
+      "proposedTopic": "Über CreAid-Media – unsere Werbeagentur und Arbeitsweise",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "warum-bringt-meine-website-keine-kunden",
+      "url": "/warum-bringt-meine-website-keine-kunden",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Website bringt keine Anfragen: Ursachen finden",
+      "commercialTarget": "/webdesign",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "warum-corporate-design-wichtig-ist",
+      "url": "/warum-corporate-design-wichtig-ist",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Warum Corporate Design wichtig ist: Nutzen im Unternehmen",
+      "commercialTarget": "/grafikdesign-2",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "was-kostet-ein-imagefilm",
+      "url": "/was-kostet-ein-imagefilm",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Was kostet ein Imagefilm? Budget und Kostenfaktoren",
+      "commercialTarget": "/digitales-marketing",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign-agentur-fuer-handwerker",
+      "url": "/webdesign-agentur-fuer-handwerker",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Webdesign-Agentur für Handwerker auswählen: Briefing & Angebot",
+      "commercialTarget": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign-agentur-fuer-kleine-unternehmen",
+      "url": "/webdesign-agentur-fuer-kleine-unternehmen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Webdesign-Agentur für KMU: Angebot und Ablauf prüfen",
+      "commercialTarget": "/webdesign",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign-fuer-arztpraxen",
+      "url": "/webdesign-fuer-arztpraxen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Website für Arztpraxen: Inhalte und Terminwege",
+      "commercialTarget": "/webdesign/webdesign-fuer-aerzte",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign-fuer-dachdecker-firma",
+      "url": "/webdesign-fuer-dachdecker-firma",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Website für Dachdecker: Leistungen, Bilder und Anfragen",
+      "commercialTarget": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign-fuer-handwerker",
+      "url": "/webdesign-fuer-handwerker",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Handwerker-Website: Inhalte für die erste eigene Website",
+      "commercialTarget": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign-fuer-handwerksbetriebe",
+      "url": "/webdesign-fuer-handwerksbetriebe",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Handwerker-Website modernisieren: Relaunch-Checkliste",
+      "commercialTarget": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign-fuer-kleine-unternehmen",
+      "url": "/webdesign-fuer-kleine-unternehmen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Webdesign für kleine Unternehmen: Website planen",
+      "commercialTarget": "/webdesign",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign-handwerker",
+      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "webdesign für handwerker",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign-outsourcing-deutschland",
+      "url": "/webdesign-outsourcing-deutschland",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Webdesign-Outsourcing: Briefing, Abnahme und Übergabe",
+      "commercialTarget": "/webdesign",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign",
+      "url": "/webdesign",
+      "type": "service",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "website erstellen lassen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "website-wartung-fuer-firmen",
+      "url": "/website-wartung-fuer-firmen",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Website-Wartung für Firmen: Aufgaben und Ablauf",
+      "commercialTarget": "/upgrades-wartung",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "wie-wirkt-corporate-design",
+      "url": "/wie-wirkt-corporate-design",
+      "type": "article",
+      "searchIntent": "informational/comparison",
+      "proposedTopic": "Corporate Design prüfen: Kriterien für einen konsistenten Auftritt",
+      "commercialTarget": "/grafikdesign-2",
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign-aerzte",
+      "url": "/webdesign/webdesign-fuer-aerzte",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "webdesign für ärzte",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "webdesign-immobilienmakler",
+      "url": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "webdesign für immobilienmakler",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "performance-optimization-3",
+      "url": "/performance-optimization-3",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Performance-Optimierung für Websites",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "load-testing-3",
+      "url": "/load-testing-3",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Load Testing für Websites und Anwendungen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "performance-audit-3",
+      "url": "/performance-audit-3",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Performance-Audit für Websites",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "code-ueberpruefung",
+      "url": "/code-ueberpruefung",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Code-Überprüfung für Webanwendungen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "upgrades-wartung",
+      "url": "/upgrades-wartung",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Website-Upgrades und Wartung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "server-wartung",
+      "url": "/server-wartung",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Server-Wartung und Betriebsberatung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "cloud-hosting-3",
+      "url": "/cloud-hosting-3",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Cloud-Hosting: Beratung und Projektplanung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "systemintegration",
+      "url": "/systemintegration",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Systemintegration und Schnittstellen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "cs-cart-lizenz-reseller",
+      "url": "/cs-cart-lizenz-reseller",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "CS-Cart-Lizenzen: Reseller-Anfrage und Beratung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "cs-cart-konfiguration-einrichtung",
+      "url": "/cs-cart-konfiguration-einrichtung",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "CS-Cart-Konfiguration und Einrichtung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "store-builder-standardlizenzen",
+      "url": "/store-builder-standardlizenzen",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Store Builder und Standardlizenzen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "b2b-portal-entwicklung",
+      "url": "/b2b-portal-entwicklung",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "B2B-Portal-Entwicklung für Unternehmen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "marktplatz-entwicklung",
+      "url": "/marktplatz-entwicklung",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Online-Marktplatz-Entwicklung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "e-commerce",
+      "url": "/e-commerce",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "E-Commerce-Beratung und Handelsarchitektur",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "kundenspezifische-entwicklung",
+      "url": "/kundenspezifische-entwicklung",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Kundenspezifische Webentwicklung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "addon-theme-entwicklung",
+      "url": "/addon-theme-entwicklung",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Add-on- und Theme-Entwicklung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "ui-ux-entwicklung",
+      "url": "/ui-ux-entwicklung",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "UI/UX-Entwicklung für digitale Produkte",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "animation",
+      "url": "/animation",
+      "type": "agency",
+      "searchIntent": "service evaluation",
+      "proposedTopic": "Animation für Websites und Markenkommunikation",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-corporate-design",
+      "url": "/category/corporate-design",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Corporate Design",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-branding",
+      "url": "/category/branding",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Branding",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-seo",
+      "url": "/category/seo",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu SEO",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-lokales-marketing",
+      "url": "/category/lokales-marketing",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Lokales Marketing",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-kundengewinnung",
+      "url": "/category/kundengewinnung",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Kundengewinnung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-lokal",
+      "url": "/category/lokal",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Lokale Unternehmen",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-marketing",
+      "url": "/category/marketing",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Marketing",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-webdesign",
+      "url": "/category/webdesign",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Webdesign",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-handwerk",
+      "url": "/category/handwerk",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Handwerk",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-handwerk-webdesign-handwerk",
+      "url": "/category/handwerk/webdesign-handwerk",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Webdesign im Handwerk",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-handwerk-seo-handwerk",
+      "url": "/category/handwerk/seo-handwerk",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu SEO im Handwerk",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-handwerk-handwerk-handwerk",
+      "url": "/category/handwerk/handwerk-handwerk",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Handwerksbetriebe digital",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-webdesign-conversion",
+      "url": "/category/webdesign-conversion",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Webdesign & Conversion",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-digitalisierung",
+      "url": "/category/digitalisierung",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Digitalisierung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-suchmaschinenoptimierung",
+      "url": "/category/suchmaschinenoptimierung",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Suchmaschinenoptimierung",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-plattform-konzeption",
+      "url": "/category/plattform-konzeption",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Plattform-Konzeption",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-e-commerce",
+      "url": "/category/e-commerce",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu E-Commerce",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-online-shop",
+      "url": "/category/online-shop",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Onlineshop",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    },
+    {
+      "key": "archiv-digitales-marketing",
+      "url": "/category/digitales-marketing",
+      "type": "archive",
+      "searchIntent": "topic discovery",
+      "proposedTopic": "Ratgeber zu Digitales Marketing",
+      "commercialTarget": null,
+      "status": "provisional; page intent mapped, editorial and SERP review pending"
+    }
+  ]
+}

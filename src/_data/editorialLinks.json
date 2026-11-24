@@ -15,6 +15,14 @@
       "anchor": "Standardsoftware und individuelle Entwicklung vergleichen",
       "priority": "P2",
       "placement": "Im Artikel: Vertiefung"
+    },
+    {
+      "source": "b2b-portal-entwickeln-lassen",
+      "target": "b2b-portal-entwicklung",
+      "url": "/b2b-portal-entwicklung",
+      "anchor": "B2B-Portal-Entwicklung",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
     }
   ],
   "beste-landingpage-elemente-fuer-kampagnen": [
@@ -69,6 +77,14 @@
       "anchor": "Webdesign auslagern und die Übergabe planen",
       "priority": "P2",
       "placement": "Im Artikel: Vertiefung"
+    },
+    {
+      "source": "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "target": "index",
+      "url": "/",
+      "anchor": "CreAid-Media – Werbeagentur und Leistungen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
     }
   ],
   "firmennamen-entwickeln-lassen": [
@@ -267,6 +283,14 @@
       "anchor": "B2B-Portal als anderes Plattformmodell prüfen",
       "priority": "P2",
       "placement": "Im Artikel: Vertiefung"
+    },
+    {
+      "source": "marktplatz-plattform-entwickeln",
+      "target": "marktplatz-entwicklung",
+      "url": "/marktplatz-entwicklung",
+      "anchor": "Marktplatz-Entwicklung",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
     }
   ],
   "messeauftritt-gestalten-lassen": [
@@ -447,6 +471,14 @@
       "anchor": "Social Content in lokale Kampagnen einbinden",
       "priority": "P2",
       "placement": "Im Artikel: Vertiefung"
+    },
+    {
+      "source": "social-media-betreuung-unternehmen",
+      "target": "google-ads-social-media",
+      "url": "/google-ads-social-media",
+      "anchor": "Google Ads und Social-Media-Kampagnen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
     }
   ],
   "warum-bringt-meine-website-keine-kunden": [
@@ -501,6 +533,14 @@
       "anchor": "Einsatz und Briefing eines Produktfilms vergleichen",
       "priority": "P2",
       "placement": "Im Artikel: Vertiefung"
+    },
+    {
+      "source": "was-kostet-ein-imagefilm",
+      "target": "marketing",
+      "url": "/digitales-marketing",
+      "anchor": "Digitales Marketing im Überblick",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
     }
   ],
   "webdesign-agentur-fuer-handwerker": [
@@ -671,6 +711,14 @@
       "anchor": "Bestehende Website auf Schwachstellen prüfen",
       "priority": "P2",
       "placement": "Im Artikel: Vertiefung"
+    },
+    {
+      "source": "website-wartung-fuer-firmen",
+      "target": "upgrades-wartung",
+      "url": "/upgrades-wartung",
+      "anchor": "Website-Wartung und Upgrades",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
     }
   ],
   "wie-wirkt-corporate-design": [
@@ -1143,6 +1191,78 @@
       "target": "seo-content-marketing",
       "url": "/seo-3",
       "anchor": "SEO und lokale Sichtbarkeit",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "webdesign": [
+    {
+      "source": "webdesign",
+      "target": "webdesign-handwerker",
+      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "anchor": "Webdesign für Handwerksbetriebe",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "webdesign",
+      "target": "webdesign-aerzte",
+      "url": "/webdesign/webdesign-fuer-aerzte",
+      "anchor": "Webdesign für Arztpraxen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "webdesign",
+      "target": "webdesign-immobilienmakler",
+      "url": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+      "anchor": "Webdesign für Immobilienmakler",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "webdesign",
+      "target": "onlineshops-ecommerce",
+      "url": "/online-shop-entwicklung",
+      "anchor": "Professionellen Onlineshop erstellen lassen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "branding": [
+    {
+      "source": "branding",
+      "target": "printdesign-editorial",
+      "url": "/print-design",
+      "anchor": "Printdesign und Editorial",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "marketing": [
+    {
+      "source": "marketing",
+      "target": "seo-content-marketing",
+      "url": "/seo-3",
+      "anchor": "SEO und Content-Marketing für Unternehmen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    },
+    {
+      "source": "marketing",
+      "target": "google-ads-social-media",
+      "url": "/google-ads-social-media",
+      "anchor": "Google Ads und Social-Media-Kampagnen",
+      "priority": "P1",
+      "placement": "Weiterführende Links"
+    }
+  ],
+  "ki-automatisierung": [
+    {
+      "source": "ki-automatisierung",
+      "target": "ki-workflows-crm",
+      "url": "/ki-workflows-crm",
+      "anchor": "KI-Workflows und CRM",
       "priority": "P1",
       "placement": "Weiterführende Links"
     }
