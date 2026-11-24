@@ -263,3 +263,9 @@ assert.ok(!balance.includes('main > .a-track {height:'),'Only real story tracks 
 assert.ok(fakeWindow.CreAidMotion?.staticStory && fakeWindow.CreAidMotion?.reduced,'Shared motion preferences missing');
 assert.ok(load('dist/assets/fonts.css').includes('--cm-brand-berry:#b3284f'));
 console.log('PASS: shared motion preferences, single scroll-height ownership, brand tokens.');
+
+// Guard against accidental querySelector in collection-based Journal code.
+const journalScript=load('dist/assets/journal.js');
+assert.ok(journalScript.includes("const tocLinks=$$('.j-toc"),'TOC links must be a collection, even when empty');
+assert.ok(journalScript.includes("const headings=$$('.j-prose"),'TOC headings must be a collection');
+assert.equal(journalScript,load('public/assets/journal.js'),'Journal source/dist mismatch');

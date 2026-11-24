@@ -21,6 +21,20 @@ async function settle(page,url){
  if(!response?.ok())throw Error('HTTP '+response?.status()+' '+url);
  await page.evaluate(async()=>{await document.fonts.ready;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));});
 }
+// Decode all images actually visible in the captured viewport before comparing pixels.
+// Native lazy loading may otherwise complete on a different frame on either server.
+async function readyForScreenshot(page){
+ await page.evaluate(async()=>{
+  await document.fonts.ready;
+  const visible=[...document.images].filter(img=>{
+   const r=img.getBoundingClientRect();
+   return r.width>0&&r.height>0&&r.top<innerHeight&&r.bottom>0&&r.left<innerWidth&&r.right>0;
+  });
+  for(const img of visible)img.loading='eager';
+  await Promise.all(visible.map(async img=>{try{await img.decode();}catch{/* broken images are checked separately */}}));
+  await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+ });
+}
 async function inspect(page,route,viewport,engine,compare){
  const localErrors=[];
  const onError=e=>localErrors.push('JS: '+e.message);
@@ -47,10 +61,12 @@ async function inspect(page,route,viewport,engine,compare){
   if(info.canonical!=='https://creaid-media.de'+route||info.robots!=='noindex,nofollow,noarchive')localErrors.push('SEO metadata mismatch');
   if(info.badImages.length)localErrors.push('Broken images: '+info.badImages.join(', '));
   if(compare){
+   await readyForScreenshot(page);
    const actual=await page.screenshot({animations:'disabled',caret:'hide',path:join(out,id+'-current.png')});
    const refPage=await page.context().newPage();
    try{
     await settle(refPage,reference+route);
+    await readyForScreenshot(refPage);
     const expected=await refPage.screenshot({animations:'disabled',caret:'hide',path:join(out,id+'-baseline.png')});
     const a=PNG.sync.read(actual),b=PNG.sync.read(expected);const diff=new PNG({width:a.width,height:a.height});
     const changed=pixelmatch(a.data,b.data,diff.data,a.width,a.height,{threshold:.15});const fraction=changed/(a.width*a.height);
@@ -72,6 +88,15 @@ async function interactionTests(browser){
   assert.ok(await p.locator('#agencyEnquiry').isVisible()); // do not submit any enquiry
   await settle(p,base+'/creaid-blog');
   const search=p.locator('#jSearch');await search.fill('ZZZ-QA-NO-MATCH-987654');assert.equal(await p.locator('.j-card[data-cat]:visible').count(),0);await search.fill('');assert.ok(await p.locator('.j-card[data-cat]:visible').count()>0);
+  await settle(p,base+'/google-ads-aber-keine-anfragen');
+  const faq=p.locator('.j-prose h3[id]').filter({hasNotText:'QA-NONEXISTENT'});
+  const faqId=await faq.first().getAttribute('id');
+  assert.ok(faqId,'Expected FAQ H3');
+  await faq.first().scrollIntoViewIfNeeded();
+  await p.evaluate(id=>{const h=document.getElementById(id);window.scrollTo(0,window.scrollY+h.getBoundingClientRect().top-innerHeight*.25);},faqId);
+  await p.waitForFunction(id=>[...document.querySelectorAll('.j-toc a,.j-toc-mobile a')].some(a=>a.getAttribute('href')==='#'+id&&a.getAttribute('aria-current')==='location'),faqId);
+  await settle(p,base+'/category/seo');
+  assert.ok(await p.locator('.j-card:visible').count()>0);
   await p.setViewportSize({width:390,height:600});
   await settle(p,base+'/online-shop-entwicklung');
   assert.equal(await p.locator('.sp-story .sp-art-panel:visible').count(),3);

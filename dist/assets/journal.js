@@ -51,10 +51,10 @@
  if('IntersectionObserver' in window&&!reduce){const ob=new IntersectionObserver(entries=>{for(const e of entries){if(e.isIntersecting){e.target.classList.remove('is-pending');e.target.classList.add('visible');ob.unobserve(e.target);}}},{threshold:.075,rootMargin:'0px 0px -5% 0px'});$$('.j-reveal').forEach(e=>{e.classList.add('is-pending');ob.observe(e)});}
  else $$('.j-reveal').forEach(e=>e.classList.add('visible'));
  // Active table of contents – independent of filter/hero.
- const tocLinks=$('.j-toc a[href^="#"],.j-toc-mobile a[href^="#"]');
+ const tocLinks=$$('.j-toc a[href^="#"],.j-toc-mobile a[href^="#"]');
  const tocTargets=new Set(tocLinks.map(a=>a.getAttribute('href').slice(1)));
- const headings=$('.j-prose :is(h2,h3)[id]').filter(h=>tocTargets.has(h.id));
- if(headings.length){const onHeading=()=>{let current=headings[0].id;for(const h of headings){if(h.getBoundingClientRect().top<=innerHeight*.33)current=h.id;}tocLinks.forEach(a=>{const active=a.getAttribute('href')==='#'+current;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});};addEventListener('scroll',onHeading,{passive:true});onHeading();}
+ const headings=$$('.j-prose :is(h2,h3)[id]').filter(h=>tocTargets.has(h.id));
+ if(headings.length){const onHeading=()=>{let current=headings[0].id;for(const h of headings){if(h.getBoundingClientRect().top<=innerHeight*.33)current=h.id;}tocLinks.forEach(a=>{const active=a.getAttribute('href')==='#'+current;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});};addEventListener('scroll',onHeading,{passive:true});addEventListener('resize',onHeading,{passive:true});onHeading();}
  $('#jShare')?.addEventListener('click',async e=>{const btn=e.currentTarget;const url=location.href.split('#')[0];try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(url);}else{const temp=document.createElement('textarea');temp.value=url;temp.style.position='fixed';temp.style.opacity='0';document.body.appendChild(temp);temp.select();if(!document.execCommand('copy'))throw new Error('copy');temp.remove();}const label=btn.textContent;btn.textContent='Link kopiert ✓';setTimeout(()=>btn.textContent=label,2000);}catch(_){btn.textContent='Link: '+url;}});
  $('#jPrint')?.addEventListener('click',()=>window.print());
 })();
