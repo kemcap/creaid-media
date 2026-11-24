@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths: ['.github/workflows/observe-ionos-reference.yml']
   workflow_run:
-    workflows: ['Synchronize approved GitHub Pages reference to IONOS']
+    workflows: ['Synchronize approved GitHub Pages reference to IONOS', 'Compare live preview rendering']
     types: [in_progress, completed]
 permissions:
   actions: read
@@ -21,24 +21,24 @@ jobs:
           set -euo pipefail
           if [ "$GITHUB_EVENT_NAME" = workflow_run ]; then
             run=$(jq -er '.workflow_run.id' "$GITHUB_EVENT_PATH")
-            gh api "repos/$GITHUB_REPOSITORY/actions/runs/$run" > run.json
+            gh api "repos/$GITHUB_REPOSITORY/actions/runs/$run" | jq -c . > runs.jsonl
           else
-            gh api "repos/$GITHUB_REPOSITORY/actions/workflows/sync-pages-to-ionos.yml/runs?per_page=1" --jq '.workflow_runs[0]' > run.json
+            for file in sync-pages-to-ionos.yml live-visual-compare.yml; do
+              gh api "repos/$GITHUB_REPOSITORY/actions/workflows/$file/runs?per_page=1" | jq -c '.workflow_runs[]' >> runs.jsonl
+            done
           fi
-          jq '{id,head_sha,status,conclusion,html_url}' run.json
-          sha=$(jq -er '.head_sha' run.json)
-          url=$(jq -er '.html_url' run.json)
-          status=$(jq -er '.status' run.json)
-          conclusion=$(jq -r '.conclusion' run.json)
-          state=pending
-          description="Reference synchronization is running"
-          if [ "$status" = completed ]; then
-            if [ "$conclusion" = success ]; then
-              state=success
-              description="Approved reference uploaded and HTTPS verified"
-            else
-              state=failure
-              description="Reference synchronization did not pass; inspect workflow"
+          while IFS= read -r row; do
+            echo "$row" | jq '{id,name,head_sha,status,conclusion,html_url}'
+            sha=$(echo "$row" | jq -er '.head_sha')
+            url=$(echo "$row" | jq -er '.html_url')
+            status=$(echo "$row" | jq -er '.status')
+            conclusion=$(echo "$row" | jq -r '.conclusion')
+            name=$(echo "$row" | jq -r '.name')
+            context=ionos/reference-sync
+            if [ "$name" = 'Compare live preview rendering' ]; then context=ionos/visual-compare; fi
+            state=pending
+            if [ "$status" = completed ]; then
+              if [ "$conclusion" = success ]; then state=success; else state=failure; fi
             fi
-          fi
-          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$sha" -f state="$state" -f context="ionos/reference-sync" -f description="$description" -f target_url="$url"
+            gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$sha" -f state="$state" -f context="$context" -f description="Actual workflow status: $status / $conclusion" -f target_url="$url"
+          done < runs.jsonl
