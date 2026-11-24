@@ -1,0 +1,546 @@
+{
+  "source": "XML sitemaps 2026-06-13",
+  "stats": {
+    "canonical": 86,
+    "redirect": 1,
+    "missing": 0
+  },
+  "matrix": [
+    {
+      "type": "pages",
+      "old": "/",
+      "current": "/",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+      "current": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/webdesign",
+      "current": "/webdesign",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/creaid-blog",
+      "current": "/creaid-blog",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/webdesign/webdesign-fuer-aerzte",
+      "current": "/webdesign/webdesign-fuer-aerzte",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "current": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/performance-optimization-3",
+      "current": "/performance-optimization-3",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/load-testing-3",
+      "current": "/load-testing-3",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/performance-audit-3",
+      "current": "/performance-audit-3",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/code-ueberpruefung",
+      "current": "/code-ueberpruefung",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/upgrades-wartung",
+      "current": "/upgrades-wartung",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/server-wartung",
+      "current": "/server-wartung",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/cloud-hosting-3",
+      "current": "/cloud-hosting-3",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/systemintegration",
+      "current": "/systemintegration",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/cs-cart-lizenz-reseller",
+      "current": "/cs-cart-lizenz-reseller",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/cs-cart-konfiguration-einrichtung",
+      "current": "/cs-cart-konfiguration-einrichtung",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/store-builder-standardlizenzen",
+      "current": "/store-builder-standardlizenzen",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/b2b-portal-entwicklung",
+      "current": "/b2b-portal-entwicklung",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/marktplatz-entwicklung",
+      "current": "/marktplatz-entwicklung",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/online-shop-entwicklung",
+      "current": "/online-shop-entwicklung",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/e-commerce",
+      "current": "/e-commerce",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/kundenspezifische-entwicklung",
+      "current": "/kundenspezifische-entwicklung",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/addon-theme-entwicklung",
+      "current": "/addon-theme-entwicklung",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/ui-ux-entwicklung",
+      "current": "/ui-ux-entwicklung",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/seo-3",
+      "current": "/seo-3",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/digitales-marketing",
+      "current": "/digitales-marketing",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/animation",
+      "current": "/animation",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/print-design",
+      "current": "/print-design",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/impressum",
+      "current": "/impressum",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/grafikdesign-2",
+      "current": "/grafikdesign-2",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/datenschutz",
+      "current": "/datenschutz",
+      "status": "canonical"
+    },
+    {
+      "type": "pages",
+      "old": "/cookie-richtlinie",
+      "current": "/cookie-einstellungen",
+      "status": "redirect"
+    },
+    {
+      "type": "posts",
+      "old": "/corporate-design-erstellen-lassen",
+      "current": "/corporate-design-erstellen-lassen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/webdesign-agentur-fuer-kleine-unternehmen",
+      "current": "/webdesign-agentur-fuer-kleine-unternehmen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/seo-fuer-lokale-sichtbarkeit",
+      "current": "/seo-fuer-lokale-sichtbarkeit",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "current": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/schlechte-website-verbessern",
+      "current": "/schlechte-website-verbessern",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/webdesign-fuer-dachdecker-firma",
+      "current": "/webdesign-fuer-dachdecker-firma",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/professionelle-website-fuer-lokale-dienstleister",
+      "current": "/professionelle-website-fuer-lokale-dienstleister",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/google-ads-aber-keine-anfragen",
+      "current": "/google-ads-aber-keine-anfragen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/google-maps-auffindbarkeit-verbessern",
+      "current": "/google-maps-auffindbarkeit-verbessern",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/webdesign-fuer-arztpraxen",
+      "current": "/webdesign-fuer-arztpraxen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/warum-bringt-meine-website-keine-kunden",
+      "current": "/warum-bringt-meine-website-keine-kunden",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/webdesign-agentur-fuer-handwerker",
+      "current": "/webdesign-agentur-fuer-handwerker",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/webdesign-outsourcing-deutschland",
+      "current": "/webdesign-outsourcing-deutschland",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/logo-design-agentur",
+      "current": "/logo-design-agentur",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/was-kostet-ein-imagefilm",
+      "current": "/was-kostet-ein-imagefilm",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/onlineshop-erstellen-lassen",
+      "current": "/onlineshop-erstellen-lassen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/website-wartung-fuer-firmen",
+      "current": "/website-wartung-fuer-firmen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/shopware-vs-wordpress-shop",
+      "current": "/shopware-vs-wordpress-shop",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/b2b-portal-entwickeln-lassen",
+      "current": "/b2b-portal-entwickeln-lassen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/webdesign-fuer-handwerker",
+      "current": "/webdesign-fuer-handwerker",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/produktfim-erstellen-lassen",
+      "current": "/produktfim-erstellen-lassen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/firmennamen-entwickeln-lassen",
+      "current": "/firmennamen-entwickeln-lassen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/deutschsprachige-agentur-in-der-tuerkei-finden",
+      "current": "/deutschsprachige-agentur-in-der-tuerkei-finden",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/guenstige-webdesign-agentur-europa-finden",
+      "current": "/guenstige-webdesign-agentur-europa-finden",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/social-media-betreuung-unternehmen",
+      "current": "/social-media-betreuung-unternehmen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/seo-grundlagen-lokale-dienstleister",
+      "current": "/seo-grundlagen-lokale-dienstleister",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/marktplatz-plattform-entwickeln",
+      "current": "/marktplatz-plattform-entwickeln",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/individuelle-webentwicklung-fuer-unternehmen",
+      "current": "/individuelle-webentwicklung-fuer-unternehmen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/webdesign-fuer-handwerksbetriebe",
+      "current": "/webdesign-fuer-handwerksbetriebe",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/logo-und-slogan-entwickeln",
+      "current": "/logo-und-slogan-entwickeln",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/wie-wirkt-corporate-design",
+      "current": "/wie-wirkt-corporate-design",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/messeauftritt-gestalten-lassen",
+      "current": "/messeauftritt-gestalten-lassen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/kampagne-fuer-lokale-unternehmen",
+      "current": "/kampagne-fuer-lokale-unternehmen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/flyer-design-fuer-unternehmen",
+      "current": "/flyer-design-fuer-unternehmen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/markenauftritt-fuer-kleine-unternehmen",
+      "current": "/markenauftritt-fuer-kleine-unternehmen",
+      "status": "canonical"
+    },
+    {
+      "type": "posts",
+      "old": "/warum-corporate-design-wichtig-ist",
+      "current": "/warum-corporate-design-wichtig-ist",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/corporate-design",
+      "current": "/category/corporate-design",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/branding",
+      "current": "/category/branding",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/seo",
+      "current": "/category/seo",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/lokales-marketing",
+      "current": "/category/lokales-marketing",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/kundengewinnung",
+      "current": "/category/kundengewinnung",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/lokal",
+      "current": "/category/lokal",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/marketing",
+      "current": "/category/marketing",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/webdesign",
+      "current": "/category/webdesign",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/handwerk",
+      "current": "/category/handwerk",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/handwerk/webdesign-handwerk",
+      "current": "/category/handwerk/webdesign-handwerk",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/handwerk/seo-handwerk",
+      "current": "/category/handwerk/seo-handwerk",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/handwerk/handwerk-handwerk",
+      "current": "/category/handwerk/handwerk-handwerk",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/webdesign-conversion",
+      "current": "/category/webdesign-conversion",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/digitalisierung",
+      "current": "/category/digitalisierung",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/suchmaschinenoptimierung",
+      "current": "/category/suchmaschinenoptimierung",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/plattform-konzeption",
+      "current": "/category/plattform-konzeption",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/e-commerce",
+      "current": "/category/e-commerce",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/online-shop",
+      "current": "/category/online-shop",
+      "status": "canonical"
+    },
+    {
+      "type": "categories",
+      "old": "/category/digitales-marketing",
+      "current": "/category/digitales-marketing",
+      "status": "canonical"
+    }
+  ],
+  "extras": [
+    "/beste-landingpage-elemente-fuer-kampagnen",
+    "/cookie-einstellungen",
+    "/google-ads-social-media",
+    "/ki-automatisierung-fuer-unternehmen",
+    "/ki-automatisierung",
+    "/ki-workflows-crm",
+    "/kontakt",
+    "/leistungen",
+    "/projekt-detail",
+    "/referenzen",
+    "/ueber-uns",
+    "/webdesign-fuer-kleine-unternehmen"
+  ]
+}
