@@ -44,8 +44,13 @@
  }
  filters.forEach(f=>f.addEventListener('click',()=>{filter=f.dataset.filter;page=1;filters.forEach(b=>b.setAttribute('aria-pressed',String(b===f)));update();}));
  if(search)search.addEventListener('input',()=>{term=search.value.trim().toLocaleLowerCase('de');page=1;update();});
- $('#jPrev')?.addEventListener('click',()=>{page--;update();$('#artikel')?.scrollIntoView({behavior:reduce?'instant':'smooth'});});
- $('#jNext')?.addEventListener('click',()=>{page++;update();$('#artikel')?.scrollIntoView({behavior:reduce?'instant':'smooth'});});
+ function changePage(delta){
+  page+=delta;update();
+  const results=$('#journal-results');
+  if(results){results.focus({preventScroll:true});results.scrollIntoView({block:'start',behavior:reduce?'instant':'smooth'});}
+ }
+ $('#jPrev')?.addEventListener('click',()=>changePage(-1));
+ $('#jNext')?.addEventListener('click',()=>changePage(1));
  update();
  // Small motion, never hiding content if observers/JS fail.
  if('IntersectionObserver' in window&&!reduce){const ob=new IntersectionObserver(entries=>{for(const e of entries){if(e.isIntersecting){e.target.classList.remove('is-pending');e.target.classList.add('visible');ob.unobserve(e.target);}}},{threshold:.075,rootMargin:'0px 0px -5% 0px'});$$('.j-reveal').forEach(e=>{e.classList.add('is-pending');ob.observe(e)});}

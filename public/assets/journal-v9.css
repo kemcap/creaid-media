@@ -18,3 +18,7 @@
 @media(max-width:530px){.j-article-hero-v9 :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){font-size:clamp(27px,8vw,42px);line-height:1.04}.j-article-hero-v9 .j-shell{padding-top:76px;padding-bottom:25px}.j-article-hero-v9 .j-article-desc{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.j-article-hero-v9 .j-article-cover{height:17vh;max-height:17vh}.j-related-head{display:block}.j-related-head .j-inline-link{display:inline-block;margin-top:15px}}
 @media(max-width:360px) and (max-height:600px){.j-article-hero-v9 :is(h1:not(:where(.cm-semantic-heading)),:where(.cm-claim-h1)){font-size:clamp(23px,6.9vw,32px)}.j-article-hero-v9 .j-article-desc{display:none}.j-article-hero-v9 .j-article-cover{height:14vh;max-height:14vh}.j-article-hero-v9 .j-article-meta{font-size:9px}.j-article-hero-v9 .j-article-kicker{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.j-article-hero-v9 *{transition:none!important}}
+
+/* Return directly to the article list, below the global sticky header. */
+#journal-results{scroll-margin-top:calc(var(--cm-nav-height,80px) + 24px)}
+#journal-results:focus-visible{outline:2px solid #B3284F;outline-offset:6px}
