@@ -90,3 +90,7 @@ main .j-index-editorial :is(.j-filter,.j-page-btn){min-height:var(--cm-control-h
  body :is(.cm-header__cta,.cm-footer__lead-cta,.button-primary,.a-btn,.j-button,.l-button,.cta,.cm-depth-primary){transition:none!important}
  body :is(.cm-header__cta,.cm-footer__lead-cta,.button-primary,.a-btn,.j-button,.l-button,.cta,.cm-depth-primary):hover{transform:none!important}
 }
+
+/* Resolve old service/specialty CTA overrides found in the 196-view test. */
+body main :is(.page-top,.service-detail,.service-closing,.sp-body,.sp-hero,.a-stage,.a-normal) :is(.cta,.a-btn,.button-primary),
+body.sp-body main .a-btn{font-size:var(--cm-button-font)!important}

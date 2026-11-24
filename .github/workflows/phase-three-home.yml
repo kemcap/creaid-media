@@ -1,0 +1,74 @@
+name: Phase 3 editorial homepage staged import
+on:
+  push:
+    branches: ['audit/editorial-ux-2026-11']
+    paths: ['design/phase-3/**','.github/workflows/phase-three-home.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  statuses: write
+concurrency:
+  group: editorial-home-import
+  cancel-in-progress: false
+jobs:
+  stage:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Register actual run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state=pending -f context=audit/phase-three -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+      - run: pip install Pillow==11.3.0
+      - name: Import exact original media and stage source
+        run: python design/phase-3/import-media.py
+      - run: npm ci
+      - run: npm run verify
+      - run: npm install --no-save --package-lock=false playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - name: Browser gates on staged homepage and complete website
+        run: |
+          node scripts/preview.mjs > /tmp/creaid-preview.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:routes -- http://127.0.0.1:8080
+          node design/phase-3/check-home.mjs
+          node scripts/check-journal-pagination.mjs
+          node scripts/check-design-system.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: editorial-homepage-staging
+          path: |
+            phase3-home-*.png
+            design-system-report/
+          if-no-files-found: warn
+      - name: Commit validated source and assets to audit branch only
+        if: success()
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = refs/heads/audit/editorial-ux-2026-11
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/pages/index.njk src/_data/pages.json src/_data/headingPlan.json public/assets/portfolio public/assets/home-editorial.css scripts/check-hero-experience.mjs
+          git commit -m "Integrate verified original portfolio images and tested editorial homepage"
+          git push origin HEAD:refs/heads/audit/editorial-ux-2026-11
+      - name: Record actual result
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          state=failure
+          if [ "$JOB_STATUS" = success ]; then state=success; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state="$state" -f context=audit/phase-three -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
