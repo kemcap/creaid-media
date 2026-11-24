@@ -1,0 +1,101 @@
+name: Deploy tested editorial candidate to dedicated IONOS preview
+on:
+  push:
+    branches: ['audit/editorial-ux-2026-11']
+    paths: ['.github/workflows/deploy-editorial-candidate.yml']
+permissions:
+  contents: read
+  actions: read
+  statuses: write
+concurrency:
+  group: ionos-preview-deployment
+  cancel-in-progress: false
+jobs:
+  preview:
+    if: github.ref == 'refs/heads/audit/editorial-ux-2026-11'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      REFERENCE_SHA: '2f6d207541da3679f0da30be5620e0c9778abe8b'
+      REFERENCE_RUN: '45495999520'
+      VERIFY_IONOS: 'true'
+    steps:
+      - name: Verify exact successful QA run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$REFERENCE_RUN" | jq -e --arg sha "$REFERENCE_SHA" '.head_sha == $sha and .conclusion == "success" and .head_branch == "audit/editorial-ux-2026-11" and .path == ".github/workflows/phase-six-final.yml"'
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state=pending -f context=audit/ionos-candidate -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+      - uses: actions/checkout@v4
+        with:
+          ref: '2f6d207541da3679f0da30be5620e0c9778abe8b'
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rebuild and verify the approved candidate
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$REFERENCE_SHA"
+          npm ci
+          npm run verify
+          node scripts/check-global-shell.mjs
+          node scripts/check-home-motion.mjs
+          node scripts/check-editorial-seo-links.mjs
+          python -m pip install --disable-pip-version-check Pillow==11.3.0
+          python scripts/optimize-preview-images.py
+          node scripts/check-cache-fingerprint.mjs
+          node scripts/fingerprint-preview-assets.mjs | tee fingerprint.log
+          grep -F '"version":"1cee32f980ad5b0bee50"' fingerprint.log
+          node .github/scripts/prepare-ionos.mjs
+          node scripts/preview.mjs > "$RUNNER_TEMP/preview.log" 2>&1 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:routes -- http://127.0.0.1:8080
+      - name: Install existing pinned-host SFTP uploader dependency
+        run: |
+          if ! /usr/bin/python3 -c 'import paramiko'; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends python3-paramiko
+          fi
+      - name: Replace dedicated preview with protected previous-version backup
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: /usr/bin/python3 .github/scripts/clean-upload-ionos.py
+      - name: Verify all published pages and assets against exact root build
+        run: |
+          export REFERENCE_DIR="$GITHUB_WORKSPACE"
+          python .github/scripts/verify-pages-reference.py
+          npm run test:routes -- https://vorschau.creaid-media.de
+          curl -fsSI https://vorschau.creaid-media.de/ | tee preview-headers.txt
+          grep -iE '^x-robots-tag:.*noindex' preview-headers.txt
+          grep -iE '^cache-control:.*no-store' preview-headers.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: editorial-ionos-verification
+          path: |
+            fingerprint.log
+            ionos-reference-verification.json
+            preview-headers.txt
+          if-no-files-found: warn
+      - name: Report actual preview deployment result
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          state=failure
+          if [ "$JOB_STATUS" = success ]; then state=success; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state="$state" -f context=audit/ionos-candidate -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
