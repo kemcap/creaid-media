@@ -95,6 +95,19 @@ for key in new:
    try:restore(V102,p);selected[key]="v10.2 template";break
    except subprocess.CalledProcessError:continue
   else:raise ValueError("Missing template "+key)
+# The semantic plans depend on the existing editorial section on enhanced pages.
+# Keep that section's original presence and remap its links to the new architecture.
+editorial=data(V102,"src/_data/editorialLinks.json")
+previous=data(MAIN,"src/_data/editorialLinks.json")
+for key,source in selected.items():
+ if source=="main enhanced" and key!="blog":
+  if key in previous:editorial[key]=previous[key]
+  else:editorial.pop(key,None)
+save("src/_data/editorialLinks.json",editorial)
+# Preserve existing FAQ anchors; the added FAQ is a separate section.
+p="src/_includes/partials/service-faq.njk"
+faq=Path(p).read_text().replace('id="fragen"','id="v103-faq"')
+write(p,faq)
 for k,p in meta.items():
  p["canonical"]="https://creaid-media.de"+new[k];p["robots"]="noindex,nofollow,noarchive"
  if p.get("structuredData"):p["structuredData"]=remap(p["structuredData"])
