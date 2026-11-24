@@ -88,7 +88,9 @@ for key in new:
    s,n=re.subn(r'<nav class="cm-archive-links"[\s\S]*?</nav>','{% include "partials/journal-categories.njk" %}',s,count=1)
    if not n:s=s.replace("</main>",'{% include "partials/journal-categories.njk" %}</main>',1)
   # Preserve Eleventy's physical output filename; canonical routes are not permalinks.
-  s=re.sub(r'(?m)^permalink:.*
+  mapped=remap(s)
+  mapped=re.sub(r'(?m)^permalink:.*$', 'permalink: /'+key+'.html', mapped)
+  write(mainpath,mapped)
  else:
   for p in candidates:
    try:restore(V102,p);selected[key]="v10.2 template";break
