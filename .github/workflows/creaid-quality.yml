@@ -7,7 +7,7 @@ permissions:
 jobs:
   quality:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    timeout-minutes: 65
     steps:
       - uses: actions/checkout@v4
         with:
@@ -39,6 +39,10 @@ jobs:
         env:
           CREAID_QA_BASELINE: http://127.0.0.1:8081
         run: npm run test:browser
+      - name: Prepare launch manifests (preview protection remains enabled)
+        run: npm run prepare:launch
+      - name: Cold-cache performance audit
+        run: npm run test:performance
       - uses: actions/upload-artifact@v4
         if: always()
         with:
