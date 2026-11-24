@@ -1,15 +1,15 @@
 {
   "name": "creaid-media-eleventy",
-  "version": "10.1.0",
+  "version": "10.3.0",
   "private": true,
   "type": "module",
-  "description": "CreAid-Media V10.1 – geprüfte Eleventy-Projektkopie mit lokaler Vorschau",
+  "description": "CreAid-Media V10.3 – konsolidierte Leistungsstruktur und UX-Stabilisierung",
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve",
     "watch": "eleventy --watch",
     "preview": "node scripts/preview.mjs",
-    "test:structure": "node scripts/check-hero-experience.mjs",
+    "test:structure": "node scripts/check-v103-structure.mjs",
     "test:routes": "node scripts/check-routes.mjs",
     "verify": "npm run build && npm run test:structure && npm run test:quality",
     "test:quality": "node scripts/check-quality.mjs",

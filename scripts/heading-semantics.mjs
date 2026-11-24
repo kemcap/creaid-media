@@ -19,7 +19,7 @@ export function transformHeadings(html,outputPath){
  const main=html.match(/<main\b[^>]*>[\s\S]*?<\/main>/);
  if(!main)throw Error('Heading plan: main missing '+key);
  let h1=0,h2=0,h3=0,faq=false,lastLevel=0;const toc=new Map();
- let section=main[0].replace(/<h([123])\b([^>]*)>([\s\S]*?)<\/h\1>/g,(all,n,a,b)=>{
+ const marker='<!-- V103-STRUCTURE -->'; const [core,addition]=main[0].split(marker); let section=core.replace(/<h([123])\b([^>]*)>([\s\S]*?)<\/h\1>/g,(all,n,a,b)=>{
    let level=Number(n),label=plain(b),id=attr(a,'id');
    if(level===1){
      h1++;lastLevel=1;
@@ -69,5 +69,5 @@ export function transformHeadings(html,outputPath){
  if(plan.mode==='creative'&&h2!==plan.h2.length)throw Error('H2 plan mismatch '+key+' '+h2+' vs '+plan.h2.length);
  // Keep TOC text and section anchors synchronized when article headings are refined.
  for(const [id,label] of toc)section=section.replace(/<a\b([^>]*?)href="#([^"]+)"([^>]*)>[\s\S]*?<\/a>/g,(all,a,target,b)=>target===id?'<a'+a+'href="#'+target+'"'+b+'>'+esc(label)+'</a>':all);
- return html.replace(main[0],section);
+ return html.replace(main[0],section+(addition===undefined?'':marker+addition));
 }

@@ -10,7 +10,7 @@ const base=process.env.CREAID_QA_URL||'http://127.0.0.1:8080';
 const reference=process.env.CREAID_QA_BASELINE||'';
 const out=process.env.CREAID_QA_OUTPUT||'qa-results';
 const all=Object.keys(routeFiles);
-const representative=['/','/webdesign','/grafikdesign-2','/digitales-marketing','/ki-automatisierung','/leistungen','/online-shop-entwicklung','/webdesign/webdesign-fuer-aerzte','/kontakt','/referenzen','/ueber-uns','/creaid-blog','/google-ads-aber-keine-anfragen','/category/seo','/impressum','/performance-audit-3'].filter(r=>all.includes(r));
+const representative=['/','/leistungen/webdesign','/leistungen/branding','/leistungen/marketing','/leistungen/ki-automatisierung','/leistungen','/leistungen/webdesign/e-commerce','/leistungen/webdesign/branchen/arztpraxen','/kontakt','/referenzen','/ueber-uns','/creaid-blog','/google-ads-aber-keine-anfragen','/journal/marketing-seo','/impressum','/leistungen/webdesign/spezialleistungen/performance'].filter(r=>all.includes(r));
 const errors=[],results=[],differences=[];
 mkdirSync(out,{recursive:true});
 const sizes=[{width:390,height:844},{width:768,height:1024},{width:1440,height:900}];
@@ -95,10 +95,10 @@ async function interactionTests(browser){
   await faq.first().scrollIntoViewIfNeeded();
   await p.evaluate(id=>{const h=document.getElementById(id);window.scrollTo(0,window.scrollY+h.getBoundingClientRect().top-innerHeight*.25);},faqId);
   await p.waitForFunction(id=>[...document.querySelectorAll('.j-toc a,.j-toc-mobile a')].some(a=>a.getAttribute('href')==='#'+id&&a.getAttribute('aria-current')==='location'),faqId);
-  await settle(p,base+'/category/seo');
-  assert.ok(await p.locator('.j-card:visible').count()>0);
+  await settle(p,base+'/journal/marketing-seo');
+  assert.ok(await p.locator('.audit-panel:visible').count()>0);
   await p.setViewportSize({width:390,height:600});
-  await settle(p,base+'/online-shop-entwicklung');
+  await settle(p,base+'/leistungen/webdesign/e-commerce');
   assert.equal(await p.locator('.sp-story .sp-art-panel:visible').count(),3);
   await p.screenshot({animations:'disabled',path:join(out,'mobile-story.png'),fullPage:true});
  }catch(e){errors.push({id:'interactions',issues:[String(e.message||e)]});}finally{await context.close();}
@@ -120,7 +120,7 @@ for(const [engine,launcher] of Object.entries({chromium,firefox,webkit})){
   if(engine==='chromium'){
    for(const viewport of breakpoints){
     const c=await browser.newContext({viewport,reducedMotion:'no-preference',deviceScaleFactor:1});const p=await c.newPage();
-    for(const route of ['/', '/webdesign','/creaid-blog','/online-shop-entwicklung'])await inspect(p,route,viewport,engine,false);
+    for(const route of ['/', '/leistungen/webdesign','/creaid-blog','/leistungen/webdesign/e-commerce'])await inspect(p,route,viewport,engine,false);
     await c.close();
    }
    await interactionTests(browser);

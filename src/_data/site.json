@@ -12,10 +12,6 @@
   "navigation": [
     {
       "label": "Leistungen",
-      "href": "/#kompetenzen"
-    },
-    {
-      "label": "Spezialleistungen",
       "href": "/leistungen"
     },
     {
@@ -81,44 +77,104 @@
   },
   "specialtyServices": [
     {
-      "label": "Onlineshop & E-Commerce",
-      "href": "/online-shop-entwicklung",
-      "pageKey": "onlineshops-ecommerce"
+      "label": "KI-Pilotprojekte für Unternehmen",
+      "href": "/leistungen/ki-automatisierung/pilotprojekt",
+      "pageKey": "ki-automatisierung-fuer-unternehmen"
     },
     {
-      "label": "Webdesign für Handwerker",
-      "href": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
-      "pageKey": "webdesign-handwerker"
+      "label": "KI-Workflows & CRM-Automatisierung",
+      "href": "/leistungen/ki-automatisierung/crm-workflows",
+      "pageKey": "ki-workflows-crm"
     },
     {
       "label": "Google Ads & Social Media",
-      "href": "/google-ads-social-media",
+      "href": "/leistungen/marketing/google-ads-social-media",
       "pageKey": "google-ads-social-media"
     },
     {
       "label": "SEO & Content-Marketing",
-      "href": "/seo-3",
+      "href": "/leistungen/marketing/seo-content-marketing",
       "pageKey": "seo-content-marketing"
     },
     {
+      "label": "Onlineshops & E-Commerce",
+      "href": "/leistungen/webdesign/e-commerce",
+      "pageKey": "onlineshops-ecommerce"
+    },
+    {
       "label": "Printdesign & Editorial",
-      "href": "/print-design",
+      "href": "/leistungen/branding/printdesign-editorial",
       "pageKey": "printdesign-editorial"
     },
     {
-      "label": "KI-Workflows & CRM",
-      "href": "/ki-workflows-crm",
-      "pageKey": "ki-workflows-crm"
+      "label": "Webdesign für Handwerker",
+      "href": "/leistungen/webdesign/branchen/handwerk",
+      "pageKey": "webdesign-handwerker"
+    },
+    {
+      "label": "Branchen-Webdesign",
+      "href": "/leistungen/webdesign/branchen",
+      "pageKey": "branchen-webdesign"
     },
     {
       "label": "Webdesign für Ärzte",
-      "href": "/webdesign/webdesign-fuer-aerzte",
+      "href": "/leistungen/webdesign/branchen/arztpraxen",
       "pageKey": "webdesign-aerzte"
     },
     {
       "label": "Webdesign für Immobilienmakler",
-      "href": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+      "href": "/leistungen/webdesign/branchen/immobilienmakler",
       "pageKey": "webdesign-immobilienmakler"
+    },
+    {
+      "label": "Technische Spezialleistungen",
+      "href": "/leistungen/webdesign/spezialleistungen",
+      "pageKey": "spezialleistungen"
+    },
+    {
+      "label": "Individuelle Webentwicklung & Schnittstellen",
+      "href": "/leistungen/webdesign/spezialleistungen/individuelle-entwicklung",
+      "pageKey": "individuelle-entwicklung"
+    },
+    {
+      "label": "B2B-Portal-Entwicklung",
+      "href": "/leistungen/webdesign/e-commerce/b2b-portale",
+      "pageKey": "b2b-portale"
+    },
+    {
+      "label": "Marktplatz-Entwicklung",
+      "href": "/leistungen/webdesign/e-commerce/marktplaetze",
+      "pageKey": "marktplaetze"
+    },
+    {
+      "label": "CS-Cart: Einrichtung & Lizenzen",
+      "href": "/leistungen/webdesign/e-commerce/cs-cart",
+      "pageKey": "cs-cart"
+    },
+    {
+      "label": "Ladezeit, Performance-Audit & Lasttests",
+      "href": "/leistungen/webdesign/spezialleistungen/performance",
+      "pageKey": "performance"
+    },
+    {
+      "label": "Cloud-Hosting & Wartung",
+      "href": "/leistungen/webdesign/spezialleistungen/hosting-wartung",
+      "pageKey": "hosting-wartung"
+    },
+    {
+      "label": "Code-Review",
+      "href": "/leistungen/webdesign/spezialleistungen/code-review",
+      "pageKey": "code-review"
+    },
+    {
+      "label": "UI/UX-Design",
+      "href": "/leistungen/webdesign/spezialleistungen/ui-ux-design",
+      "pageKey": "ui-ux"
+    },
+    {
+      "label": "Animation & Motion Design",
+      "href": "/leistungen/branding/animation-motion-design",
+      "pageKey": "animation"
     }
   ]
 }

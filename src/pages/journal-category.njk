@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: journalCategories
+  size: 1
+  alias: categoryKey
+eleventyComputed:
+  pageKey: "{{ categoryKey }}"
+permalink: "/{{ categoryKey }}.html"
+eleventyExcludeFromCollections: true
+---
+{% set category = journalCategories[categoryKey] %}
+<a class="sp-skip" href="#hauptinhalt">Zum Inhalt springen</a>
+{% include "partials/header-journal.njk" %}
+<main id="hauptinhalt">
+  <section class="service-content-hero">
+    <div class="audit-inner">
+      <nav aria-label="Brotkrumennavigation" class="service-path">
+        <ol><li><a href="{{ routes.blog }}">Journal</a></li><li aria-current="page">{{ category.title | escape }}</li></ol>
+      </nav>
+      <h1>{{ category.title | escape }}</h1>
+      <p>{{ category.description | escape }}</p>
+    </div>
+  </section>
+  <section class="audit-pillar" aria-labelledby="journal-categories-articles">
+    <div class="audit-inner">
+      <h2 id="journal-categories-articles">Beiträge zu {{ category.title | escape }}</h2>
+      <div class="audit-grid">
+        {% for post in postsIndex %}
+        {% if post.slug in category.articles %}
+        <article class="audit-panel">
+          <h3><a href="{{ routes[post.slug] }}">{{ post.title | escape }}</a></h3>
+          <p>{{ post.excerpt | escape }}</p>
+        </article>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% if category.topics.length %}
+  <section class="service-faq" aria-labelledby="journal-topics-title">
+    <div class="audit-inner">
+      <h2 id="journal-topics-title">Beiträge nach Thema</h2>
+      {% for topic in category.topics %}
+      <details>
+        <summary>{{ topic.title | escape }}</summary>
+        <ul class="audit-links">
+          {% for post in postsIndex %}
+          {% if post.slug in topic.articles %}
+          <li><a href="{{ routes[post.slug] }}">{{ post.title | escape }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </details>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+  <section class="audit-related" aria-labelledby="journal-categories-next">
+    <div class="audit-inner">
+      <h2 id="journal-categories-next">Weiterlesen und beraten lassen</h2>
+      <ul class="audit-links">
+        <li><a href="{{ routes[category.service] }}">Leistung: {{ services[category.service].label | escape }}</a></li>
+        <li><a href="{{ routes.blog }}">Alle Journalartikel</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+{% include "partials/footer-journal.njk" %}

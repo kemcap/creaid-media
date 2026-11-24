@@ -1,0 +1,9 @@
+<nav aria-label="Brotkrumennavigation" class="service-path">
+  <ol>
+    <li><a href="{{ routes.leistungen }}">Leistungen</a></li>
+    {% for ancestor in service.ancestors %}
+    <li><a href="{{ routes[ancestor] }}">{{ services[ancestor].label | escape }}</a></li>
+    {% endfor %}
+    <li aria-current="page">{{ service.label | escape }}</li>
+  </ol>
+</nav>

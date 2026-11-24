@@ -1,0 +1,229 @@
+{
+  "journal-webdesign": {
+    "title": "Webdesign",
+    "description": "Websites, Shops, digitale Plattformen und bessere Nutzerführung. Ratgeber für Unternehmen, die einen Webauftritt planen oder gezielt verbessern möchten.",
+    "service": "webdesign",
+    "articles": [
+      "webdesign-fuer-kleine-unternehmen",
+      "onlineshop-erstellen-lassen",
+      "website-wartung-fuer-firmen",
+      "shopware-vs-wordpress-shop",
+      "b2b-portal-entwickeln-lassen",
+      "webdesign-fuer-handwerker",
+      "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "webdesign-outsourcing-deutschland",
+      "guenstige-webdesign-agentur-europa-finden",
+      "warum-bringt-meine-website-keine-kunden",
+      "onlineshop-erfolgreich-aufbauen-anleitung",
+      "webdesign-agentur-fuer-kleine-unternehmen",
+      "schlechte-website-verbessern",
+      "professionelle-website-fuer-lokale-dienstleister",
+      "webdesign-fuer-dachdecker-firma",
+      "webdesign-agentur-fuer-handwerker",
+      "marktplatz-plattform-entwickeln",
+      "individuelle-webentwicklung-fuer-unternehmen",
+      "webdesign-fuer-arztpraxen",
+      "webdesign-fuer-handwerksbetriebe"
+    ],
+    "topics": [
+      {
+        "title": "Nutzerführung und Anfragen",
+        "articles": [
+          "beste-landingpage-elemente-fuer-kampagnen",
+          "guenstige-webdesign-agentur-europa-finden",
+          "schlechte-website-verbessern",
+          "seo-grundlagen-lokale-dienstleister"
+        ]
+      },
+      {
+        "title": "Onlineshops und Plattformen",
+        "articles": [
+          "onlineshop-erfolgreich-aufbauen-anleitung",
+          "marktplatz-plattform-entwickeln"
+        ]
+      },
+      {
+        "title": "Unternehmenswebsites",
+        "articles": [
+          "webdesign-fuer-kleine-unternehmen",
+          "deutschsprachige-agentur-in-der-tuerkei-finden",
+          "warum-bringt-meine-website-keine-kunden",
+          "onlineshop-erfolgreich-aufbauen-anleitung",
+          "webdesign-agentur-fuer-kleine-unternehmen",
+          "schlechte-website-verbessern",
+          "professionelle-website-fuer-lokale-dienstleister",
+          "webdesign-agentur-fuer-handwerker",
+          "individuelle-webentwicklung-fuer-unternehmen",
+          "webdesign-fuer-arztpraxen"
+        ]
+      },
+      {
+        "title": "Websites fürs Handwerk",
+        "articles": [
+          "webdesign-fuer-kleine-unternehmen",
+          "deutschsprachige-agentur-in-der-tuerkei-finden",
+          "webdesign-outsourcing-deutschland",
+          "guenstige-webdesign-agentur-europa-finden",
+          "webdesign-fuer-dachdecker-firma",
+          "webdesign-agentur-fuer-handwerker",
+          "webdesign-fuer-handwerksbetriebe"
+        ]
+      }
+    ]
+  },
+  "journal-marketing-seo": {
+    "title": "Marketing & SEO",
+    "description": "Ratgeber zur lokalen Auffindbarkeit, zu Website-Inhalten, Google Ads und digitalen Kampagnen.",
+    "service": "marketing",
+    "articles": [
+      "beste-landingpage-elemente-fuer-kampagnen",
+      "produktfim-erstellen-lassen",
+      "social-media-betreuung-unternehmen",
+      "seo-fuer-lokale-sichtbarkeit",
+      "google-ads-aber-keine-anfragen",
+      "seo-grundlagen-lokale-dienstleister",
+      "kampagne-fuer-lokale-unternehmen",
+      "google-maps-auffindbarkeit-verbessern"
+    ],
+    "topics": [
+      {
+        "title": "Digitales Marketing und Kampagnen",
+        "articles": [
+          "beste-landingpage-elemente-fuer-kampagnen",
+          "produktfim-erstellen-lassen",
+          "deutschsprachige-agentur-in-der-tuerkei-finden",
+          "guenstige-webdesign-agentur-europa-finden",
+          "social-media-betreuung-unternehmen",
+          "corporate-design-erstellen-lassen",
+          "webdesign-agentur-fuer-kleine-unternehmen",
+          "google-ads-aber-keine-anfragen",
+          "webdesign-fuer-dachdecker-firma",
+          "webdesign-agentur-fuer-handwerker",
+          "webdesign-fuer-arztpraxen",
+          "kampagne-fuer-lokale-unternehmen"
+        ]
+      },
+      {
+        "title": "Google Ads",
+        "articles": [
+          "google-ads-aber-keine-anfragen"
+        ]
+      },
+      {
+        "title": "Lokale Sichtbarkeit",
+        "articles": [
+          "seo-fuer-lokale-sichtbarkeit",
+          "webdesign-agentur-fuer-kleine-unternehmen",
+          "google-ads-aber-keine-anfragen",
+          "professionelle-website-fuer-lokale-dienstleister",
+          "webdesign-fuer-dachdecker-firma",
+          "seo-grundlagen-lokale-dienstleister",
+          "webdesign-fuer-arztpraxen",
+          "webdesign-fuer-handwerksbetriebe",
+          "kampagne-fuer-lokale-unternehmen"
+        ]
+      },
+      {
+        "title": "Suchmaschinenoptimierung",
+        "articles": [
+          "seo-fuer-lokale-sichtbarkeit",
+          "seo-grundlagen-lokale-dienstleister",
+          "webdesign-fuer-arztpraxen",
+          "google-maps-auffindbarkeit-verbessern"
+        ]
+      },
+      {
+        "title": "Website-Anfragen und Kundengewinnung",
+        "articles": [
+          "produktfim-erstellen-lassen",
+          "guenstige-webdesign-agentur-europa-finden",
+          "warum-bringt-meine-website-keine-kunden",
+          "social-media-betreuung-unternehmen",
+          "seo-fuer-lokale-sichtbarkeit",
+          "webdesign-fuer-dachdecker-firma",
+          "seo-grundlagen-lokale-dienstleister",
+          "kampagne-fuer-lokale-unternehmen"
+        ]
+      }
+    ]
+  },
+  "journal-branding-design": {
+    "title": "Branding & Design",
+    "description": "Praxiswissen zu Markenauftritt, Corporate Design, Logo, Print und visueller Kommunikation.",
+    "service": "branding",
+    "articles": [
+      "was-kostet-ein-imagefilm",
+      "logo-design-agentur",
+      "firmennamen-entwickeln-lassen",
+      "corporate-design-erstellen-lassen",
+      "messeauftritt-gestalten-lassen",
+      "logo-und-slogan-entwickeln",
+      "flyer-design-fuer-unternehmen",
+      "wie-wirkt-corporate-design",
+      "markenauftritt-fuer-kleine-unternehmen",
+      "warum-corporate-design-wichtig-ist"
+    ],
+    "topics": [
+      {
+        "title": "Corporate Design",
+        "articles": [
+          "beste-landingpage-elemente-fuer-kampagnen",
+          "webdesign-fuer-kleine-unternehmen",
+          "was-kostet-ein-imagefilm",
+          "onlineshop-erstellen-lassen",
+          "website-wartung-fuer-firmen",
+          "shopware-vs-wordpress-shop",
+          "b2b-portal-entwickeln-lassen",
+          "logo-design-agentur",
+          "webdesign-fuer-handwerker",
+          "firmennamen-entwickeln-lassen",
+          "deutschsprachige-agentur-in-der-tuerkei-finden",
+          "webdesign-outsourcing-deutschland",
+          "guenstige-webdesign-agentur-europa-finden",
+          "warum-bringt-meine-website-keine-kunden",
+          "seo-fuer-lokale-sichtbarkeit",
+          "onlineshop-erfolgreich-aufbauen-anleitung",
+          "corporate-design-erstellen-lassen",
+          "webdesign-agentur-fuer-kleine-unternehmen",
+          "individuelle-webentwicklung-fuer-unternehmen",
+          "messeauftritt-gestalten-lassen",
+          "logo-und-slogan-entwickeln",
+          "flyer-design-fuer-unternehmen",
+          "wie-wirkt-corporate-design",
+          "markenauftritt-fuer-kleine-unternehmen",
+          "warum-corporate-design-wichtig-ist"
+        ]
+      },
+      {
+        "title": "Markenauftritt",
+        "articles": [
+          "firmennamen-entwickeln-lassen",
+          "corporate-design-erstellen-lassen",
+          "logo-und-slogan-entwickeln",
+          "flyer-design-fuer-unternehmen",
+          "markenauftritt-fuer-kleine-unternehmen"
+        ]
+      }
+    ]
+  },
+  "journal-ki-automatisierung": {
+    "title": "KI & Automatisierung",
+    "description": "Beiträge zu KI-Anwendungen, automatisierten Arbeitsabläufen und dem Zusammenspiel von Software und Teams.",
+    "service": "ki-automatisierung",
+    "articles": [
+      "b2b-portal-entwickeln-lassen"
+    ],
+    "topics": [
+      {
+        "title": "Digitalisierung",
+        "articles": [
+          "webdesign-outsourcing-deutschland",
+          "schlechte-website-verbessern",
+          "professionelle-website-fuer-lokale-dienstleister",
+          "individuelle-webentwicklung-fuer-unternehmen",
+          "webdesign-fuer-arztpraxen"
+        ]
+      }
+    ]
+  }
+}

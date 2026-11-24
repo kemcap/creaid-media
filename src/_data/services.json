@@ -1,0 +1,1235 @@
+{
+  "webdesign": {
+    "faqs": [
+      {
+        "question": "Was umfasst ein Webdesign-Projekt?",
+        "answer": "Wir planen Seitenstruktur und Nutzerführung, gestalten die Ansichten für Mobilgeräte und Desktop und setzen die vereinbarten Seiten technisch um."
+      },
+      {
+        "question": "Können Sie meine bestehende Website modernisieren?",
+        "answer": "Ja. Dafür prüfen wir zuerst Inhalte, Technik und bisherige URLs. Nutzbare Texte, Bilder und funktionierende Kontaktwege können in die neue Website einfließen."
+      },
+      {
+        "question": "Arbeiten Sie mit WordPress?",
+        "answer": "WordPress kommt infrage, wenn Ihr Team Inhalte selbst pflegen möchte. Das System wählen wir nach Funktionsumfang, Pflegebedarf und Betriebskosten."
+      },
+      {
+        "question": "Was brauchen Sie für ein Angebot?",
+        "answer": "Schicken Sie uns Ihre bisherige URL, Ihre wichtigsten Leistungen sowie eine kurze Beschreibung Ihrer Zielgruppe und der gewünschten Funktionen."
+      },
+      {
+        "question": "Wie lange dauert der Relaunch?",
+        "answer": "Das hängt von Seitenumfang, vorhandenen Inhalten und der Zahl der Abstimmungen ab. Die Meilensteine vereinbaren wir vor dem Start."
+      },
+      {
+        "question": "Was passiert mit meinen bisherigen URLs?",
+        "answer": "Wichtige Adressen können erhalten bleiben. Bei einem Wechsel planen wir direkte Weiterleitungen zu den jeweils passenden neuen Inhalten."
+      },
+      {
+        "question": "Ist Suchmaschinenoptimierung Teil der Website?",
+        "answer": "Wir berücksichtigen Seitenstruktur, Metadaten, interne Links und technische Grundlagen. Laufende SEO-Arbeit können wir ergänzend planen."
+      }
+    ],
+    "label": "Webdesign & Entwicklung",
+    "parent": "leistungen",
+    "related": [
+      "webdesign-fuer-kleine-unternehmen",
+      "ui-ux"
+    ],
+    "children": [
+      "branchen-webdesign",
+      "onlineshops-ecommerce",
+      "spezialleistungen"
+    ],
+    "ancestors": []
+  },
+  "marketing": {
+    "faqs": [
+      {
+        "question": "Welche Marketingmaßnahme ist für den Einstieg sinnvoll?",
+        "answer": "Das hängt davon ab, wo Interessenten heute auf Sie aufmerksam werden und an welcher Stelle Anfragen verloren gehen. Dort setzen wir zuerst an."
+      },
+      {
+        "question": "Wann lohnt sich SEO für ein lokales Unternehmen?",
+        "answer": "Wenn Menschen in Ihrer Region aktiv nach Ihren Leistungen suchen, können regionale Leistungsseiten und ein gepflegtes Google-Unternehmensprofil helfen."
+      },
+      {
+        "question": "Wann kommen Anzeigen infrage?",
+        "answer": "Anzeigen eignen sich für ein konkretes Angebot mit erreichbarer Zielgruppe, passender Zielseite und einem messbaren Anfrageweg."
+      },
+      {
+        "question": "Kann ich organische Sichtbarkeit und Anzeigen kombinieren?",
+        "answer": "Ja. Erkenntnisse aus Suchanfragen und Kampagnen können auch bei der Planung neuer Leistungsseiten und Ratgeber helfen."
+      },
+      {
+        "question": "Welche Rolle spielt meine bestehende Website?",
+        "answer": "Sie beantwortet Fragen zum Angebot und führt zur Anfrage. Diese Wege prüfen wir, bevor wir zusätzlich Besucher auf die Seite bringen."
+      },
+      {
+        "question": "Wie bewerten Sie den Erfolg?",
+        "answer": "Wir stimmen ab, welche Aktionen zählen, etwa qualifizierte Anfragen oder Terminbuchungen, und betrachten diese im Verhältnis zum Aufwand."
+      },
+      {
+        "question": "Ist eine laufende Betreuung möglich?",
+        "answer": "Wir können wiederkehrende Aufgaben wie Redaktionsplanung, Auswertung und Optimierung nach Bedarf vereinbaren."
+      }
+    ],
+    "label": "Digitales Marketing",
+    "parent": "leistungen",
+    "related": [
+      "seo-fuer-lokale-sichtbarkeit",
+      "webdesign"
+    ],
+    "children": [
+      "seo-content-marketing",
+      "google-ads-social-media"
+    ],
+    "ancestors": []
+  },
+  "branding": {
+    "faqs": [
+      {
+        "question": "Was gehört zu einem Corporate Design?",
+        "answer": "Dazu können Logo, Farbwelt, Schriften und Regeln für Layout und Bildsprache gehören. Der Umfang richtet sich nach Ihren Anwendungen."
+      },
+      {
+        "question": "Kann mein vorhandenes Logo bleiben?",
+        "answer": "Ja. Bei einem bestehenden Auftritt prüfen wir, welche Elemente bereits wiedererkennbar sind und wo Anpassungen nötig sind."
+      },
+      {
+        "question": "Gestalten Sie auch für Druck und Web?",
+        "answer": "Ja. Wir definieren ein gemeinsames Erscheinungsbild und bereiten die Dateien für die jeweiligen Medien vor."
+      },
+      {
+        "question": "Welche Dateien bekomme ich bei einer Logoentwicklung?",
+        "answer": "Die vereinbarten Varianten und Formate werden für typische Anwendungen wie Website, Druck und Geschäftsausstattung aufbereitet."
+      },
+      {
+        "question": "Was brauchen Sie für den Einstieg?",
+        "answer": "Hilfreich sind bestehende Unterlagen, Angaben zu Zielgruppe und Leistungen sowie Beispiele dafür, wo Ihre Marke sichtbar wird."
+      },
+      {
+        "question": "Kann mein Team die Gestaltung später selbst anwenden?",
+        "answer": "Ein kompakter Leitfaden und geeignete Vorlagen können die Anwendung im Alltag erleichtern."
+      },
+      {
+        "question": "Lässt sich das Branding schrittweise einführen?",
+        "answer": "Ja. Wir können zuerst die häufigsten Anwendungen gestalten und die Überarbeitung weiterer Medien danach einplanen."
+      }
+    ],
+    "label": "Branding & Grafikdesign",
+    "parent": "leistungen",
+    "related": [
+      "corporate-design-erstellen-lassen",
+      "webdesign"
+    ],
+    "children": [
+      "printdesign-editorial",
+      "animation"
+    ],
+    "ancestors": []
+  },
+  "ki-automatisierung": {
+    "faqs": [
+      {
+        "question": "Welche Abläufe eignen sich für eine Automatisierung?",
+        "answer": "Geeignet sind wiederkehrende Aufgaben mit klaren Eingaben und Zuständigkeiten, etwa die Zuordnung von Anfragen oder die Vorbereitung von Erinnerungen."
+      },
+      {
+        "question": "Wann ist KI sinnvoll?",
+        "answer": "KI kann beim Einordnen, Zusammenfassen oder Entwerfen helfen. Für feste Entscheidungen und Berechnungen sind klare Regeln oft die bessere Grundlage."
+      },
+      {
+        "question": "Müssen wir unsere bestehende Software wechseln?",
+        "answer": "Das hängt von den verfügbaren Schnittstellen ab. Wir prüfen vorhandene Anwendungen, bevor wir neue Werkzeuge vorschlagen."
+      },
+      {
+        "question": "Wie werden sensible Daten behandelt?",
+        "answer": "Wir klären, welche Daten verarbeitet werden, wer Zugriff braucht und wo menschliche Freigaben vorgesehen werden müssen."
+      },
+      {
+        "question": "Was passiert, wenn ein Ablauf fehlschlägt?",
+        "answer": "Wichtige Prozesse brauchen einen erkennbaren Fehlerstatus, eine zuständige Person und einen Weg zur manuellen Weiterbearbeitung."
+      },
+      {
+        "question": "Wie kann ich klein anfangen?",
+        "answer": "Wählen Sie einen wiederkehrenden Ablauf und beschreiben Sie Auslöser, Arbeitsschritte und gewünschtes Ergebnis. Daraus lässt sich ein Pilot ableiten."
+      },
+      {
+        "question": "Wie lässt sich der Nutzen bewerten?",
+        "answer": "Vergleichen Sie vor und nach dem Pilot den Zeitaufwand, die Zahl manueller Eingriffe und die Häufigkeit von Fehlern."
+      }
+    ],
+    "label": "KI & Automatisierung",
+    "parent": "leistungen",
+    "related": [
+      "ki-workflows-crm",
+      "individuelle-entwicklung"
+    ],
+    "children": [
+      "ki-automatisierung-fuer-unternehmen",
+      "ki-workflows-crm"
+    ],
+    "ancestors": []
+  },
+  "ki-automatisierung-fuer-unternehmen": {
+    "faqs": [
+      {
+        "question": "Für welche Unternehmen eignet sich eine KI-Pilotlösung?",
+        "answer": "Für Teams mit einem klar abgrenzbaren Ablauf, genügend typischen Beispielen und einer Person, die Ergebnisse zuverlässig beurteilen kann."
+      },
+      {
+        "question": "Welche Beispiele helfen bei der Planung?",
+        "answer": "Typische E-Mails, anonymisierte Dokumente und Fälle, bei denen heute Nacharbeit entsteht, machen Umfang und Risiken sichtbar."
+      },
+      {
+        "question": "Kann ein Modell Texte für Mitarbeitende vorbereiten?",
+        "answer": "Ja. Entwürfe für Antworten oder Zusammenfassungen lassen sich vorbereiten und vor der weiteren Verwendung fachlich prüfen."
+      },
+      {
+        "question": "Was kostet eine erste Umsetzung?",
+        "answer": "Der Aufwand hängt von Datenquellen, Schnittstellen, Testfällen und Freigaben ab. Ein abgegrenzter Pilot lässt sich besser kalkulieren als ein ganzer Geschäftsprozess."
+      },
+      {
+        "question": "Wie erkennen wir fehlerhafte Ausgaben?",
+        "answer": "Wir legen mit Ihrem Team Beispiele für gute und schlechte Ergebnisse fest und definieren, welche Fälle zur manuellen Kontrolle gehen."
+      },
+      {
+        "question": "Wie vermeiden wir unnötige Datenweitergabe?",
+        "answer": "Es werden nur die für den Ablauf notwendigen Angaben eingeplant. Vor der Umsetzung klären wir Systeme, Zugriffe und Verantwortlichkeiten."
+      },
+      {
+        "question": "Wie geht es nach dem Pilot weiter?",
+        "answer": "Auswertung, Dokumentation und Rückmeldungen aus dem Team bilden die Grundlage für Anpassungen oder die Ausweitung auf weitere Abläufe."
+      }
+    ],
+    "label": "KI-Pilotprojekte für Unternehmen",
+    "parent": "ki-automatisierung",
+    "related": [
+      "ki-workflows-crm",
+      "individuelle-entwicklung"
+    ],
+    "children": [],
+    "ancestors": [
+      "ki-automatisierung"
+    ],
+    "generated": true,
+    "title": "KI-Pilotprojekte für Unternehmen",
+    "intro": "Wenn Ihr Team Anfragen mehrfach überträgt, Dokumente vorsortiert oder ähnliche Antworten vorbereitet, kann sich ein abgegrenztes KI-Pilotprojekt lohnen. Wir klären mit Ihnen, welchen Teil des Ablaufs das System übernehmen soll und wo eine Prüfung durch Menschen nötig ist.",
+    "sections": [
+      {
+        "heading": "Einen passenden Prozess auswählen",
+        "copy": "Wir betrachten wiederkehrende Aufgaben, vorhandene Daten und die eingesetzten Programme. Für den Pilot wählen wir einen überschaubaren Ablauf mit messbarem Aufwand, klarer Verantwortung und einem manuellen Ersatzweg."
+      },
+      {
+        "heading": "Ergebnisse prüfen und gemeinsam auswerten",
+        "copy": "Der Pilot wird mit anonymisierten oder geeigneten Beispielen geprüft. Ihr Team entscheidet, welche Ergebnisse für die Weiterarbeit ausreichen und bei welchen Fällen eine Freigabe erforderlich ist. Erst danach planen wir eine Anbindung an weitere Abläufe."
+      }
+    ]
+  },
+  "ki-workflows-crm": {
+    "faqs": [
+      {
+        "question": "Welche CRM-Aufgaben lassen sich vereinfachen?",
+        "answer": "Anfragen erfassen, Felder vorbelegen, Zuständigkeiten zuweisen und Folgeaufgaben erstellen sind typische Ausgangspunkte."
+      },
+      {
+        "question": "Lässt sich HubSpot anbinden?",
+        "answer": "Eine Anbindung hängt von den benötigten Funktionen, dem Tarif und den verfügbaren Schnittstellen ab. Diese Punkte prüfen wir zu Beginn."
+      },
+      {
+        "question": "Wie vermeiden wir doppelte Kontakte?",
+        "answer": "Wir vereinbaren zuerst, anhand welcher Merkmale bestehende Einträge erkannt werden, und testen den Ablauf mit realistischen Beispielen."
+      },
+      {
+        "question": "Kann mein Team Änderungen prüfen, bevor sie gespeichert werden?",
+        "answer": "Ja. Für unsichere Zuordnungen und sensible Vorgänge kann ein Freigabeschritt vorgesehen werden."
+      },
+      {
+        "question": "Kann ein Website-Formular Leads an das CRM übergeben?",
+        "answer": "Wenn das Formular und das CRM geeignete Schnittstellen bieten, lässt sich die Übergabe mit definierten Feldern und einem Fehlerpfad planen."
+      },
+      {
+        "question": "Was passiert bei einer unterbrochenen Verbindung?",
+        "answer": "Der Ablauf sollte Fehler protokollieren und erkennen, ob ein Datensatz bereits angelegt wurde. So lassen sich betroffene Vorgänge gezielt nachbearbeiten."
+      },
+      {
+        "question": "Wie wird der Workflow dokumentiert?",
+        "answer": "Wir halten Auslöser, Feldzuordnungen, Freigaben und Ansprechpartner so fest, dass Ihr Team den Ablauf nachvollziehen kann."
+      }
+    ],
+    "label": "KI-Workflows & CRM-Automatisierung",
+    "parent": "ki-automatisierung",
+    "related": [
+      "ki-automatisierung-fuer-unternehmen",
+      "individuelle-entwicklung"
+    ],
+    "children": [],
+    "ancestors": [
+      "ki-automatisierung"
+    ]
+  },
+  "google-ads-social-media": {
+    "faqs": [
+      {
+        "question": "Wie wähle ich zwischen Google Ads und Meta Ads?",
+        "answer": "Google Ads kann bestehende Nachfrage erreichen. Meta Ads bietet sich an, wenn ein erklärungsbedürftiges oder visuelles Angebot Aufmerksamkeit gewinnen soll."
+      },
+      {
+        "question": "Welches Anzeigenbudget brauche ich?",
+        "answer": "Das hängt von Wettbewerb, Region und Ziel ab. Ein Startbudget lässt sich aus dem geplanten Test und den erwarteten Kosten pro Klick ableiten."
+      },
+      {
+        "question": "Ist eine eigene Landingpage sinnvoll?",
+        "answer": "Ja, wenn die Anzeige ein konkretes Angebot bewirbt. Die Zielseite sollte dieses Angebot erklären und direkt zur gewünschten Aktion führen."
+      },
+      {
+        "question": "Welche Kennzahlen sind entscheidend?",
+        "answer": "Für Lead-Kampagnen zählen vor allem qualifizierte Anfragen und deren Kosten. Klicks helfen bei der Diagnose, wenn zu wenige Anfragen entstehen."
+      },
+      {
+        "question": "Wer besitzt die Werbekonten?",
+        "answer": "Die Kampagne sollte in Ihrem eigenen Werbekonto laufen. Benötigte Zugriffe werden im Projekt abgestimmt."
+      },
+      {
+        "question": "Kann ich Anzeigen und SEO gleichzeitig nutzen?",
+        "answer": "Ja. Anzeigen und organische Suche erreichen Interessenten auf unterschiedlichen Wegen. Erkenntnisse aus beiden können die Zielseiten verbessern."
+      },
+      {
+        "question": "Wie lässt sich eine Kampagne testen?",
+        "answer": "Wir grenzen Zielgruppe, Angebot und Zielseite ein und ändern jeweils gezielt einzelne Elemente, damit Ergebnisse vergleichbar bleiben."
+      }
+    ],
+    "label": "Google Ads & Social Media",
+    "parent": "marketing",
+    "related": [
+      "google-ads-aber-keine-anfragen",
+      "seo-content-marketing"
+    ],
+    "children": [],
+    "ancestors": [
+      "marketing"
+    ]
+  },
+  "seo-content-marketing": {
+    "faqs": [
+      {
+        "question": "Was prüfen Sie bei einem SEO-Einstieg?",
+        "answer": "Wir betrachten Indexierung, Seitenstruktur, interne Links und Inhalte zu den Suchanfragen, die zu Ihrem Angebot passen."
+      },
+      {
+        "question": "Brauche ich für jedes Keyword eine eigene Seite?",
+        "answer": "Suchbegriffe mit gleicher Absicht lassen sich auf einer guten Seite bündeln. Eigenständige Seiten lohnen sich für unterschiedliche Angebote oder Fragen."
+      },
+      {
+        "question": "Kann ich vorhandene Texte und Blogartikel verbessern lassen?",
+        "answer": "Ja. Wir prüfen, ob Inhalte aktualisiert, mit Leistungsseiten verknüpft oder mit verwandten Texten zusammengeführt werden sollten."
+      },
+      {
+        "question": "Wie lange dauert es, bis sich Änderungen zeigen?",
+        "answer": "Das hängt von Wettbewerb, Ausgangslage und Umfang ab. Wir beobachten nach der Umsetzung, welche Seiten häufiger in der Suche erscheinen und Klicks gewinnen."
+      },
+      {
+        "question": "Lohnt sich SEO auch ohne Blog?",
+        "answer": "Ja. Gut ausgearbeitete Leistungsseiten und klare lokale Informationen sind für viele Betriebe die erste Priorität."
+      },
+      {
+        "question": "Was bringt interne Verlinkung?",
+        "answer": "Sie führt Besucher zu passenden Leistungen und vertiefenden Artikeln. Beschreibende Linktexte erleichtern die Orientierung."
+      },
+      {
+        "question": "Welche Daten helfen bei der Auswertung?",
+        "answer": "Suchanfragen, Zielseiten und Klicks aus der Search Console geben Hinweise. Für geschäftliche Ziele ergänzen wir diese um die vereinbarten Anfragekennzahlen."
+      }
+    ],
+    "label": "SEO & Content-Marketing",
+    "parent": "marketing",
+    "related": [
+      "seo-fuer-lokale-sichtbarkeit",
+      "branchen-webdesign"
+    ],
+    "children": [],
+    "ancestors": [
+      "marketing"
+    ]
+  },
+  "onlineshops-ecommerce": {
+    "faqs": [
+      {
+        "question": "Welches Shopsystem passt zu meinem Sortiment?",
+        "answer": "Wir betrachten Artikelzahl, Varianten, Zahlungs- und Versandabläufe sowie die Pflege durch Ihr Team. Danach vergleichen wir passende Systeme."
+      },
+      {
+        "question": "Kommt WooCommerce infrage?",
+        "answer": "Ja, besonders bei einem bestehenden WordPress-Auftritt. Für komplexe Händler- oder Marktplatzmodelle prüfen wir zusätzliche Anforderungen."
+      },
+      {
+        "question": "Können vorhandene Produkte übernommen werden?",
+        "answer": "Das ist möglich, wenn die Daten in einem nutzbaren Export vorliegen. Varianten, Bilder und Weiterleitungen prüfen wir vor dem Import."
+      },
+      {
+        "question": "Wie werden Zahlung und Versand eingerichtet?",
+        "answer": "Wir stimmen Anbieter, Liefergebiete und Sonderfälle ab und testen den vereinbarten Bestellablauf einschließlich Bestätigung und Fehlerfällen."
+      },
+      {
+        "question": "Kann ich den Shop selbst pflegen?",
+        "answer": "Die Pflege von Produkten, Varianten und Beständen wird bei der Auswahl und Einrichtung des Systems berücksichtigt."
+      },
+      {
+        "question": "Was passiert mit meinen bisherigen Produkt-URLs?",
+        "answer": "Wichtige Adressen bleiben möglichst erhalten. Geänderte URLs werden auf die passenden neuen Produkte oder Kategorien weitergeleitet."
+      },
+      {
+        "question": "Was ist der Unterschied zwischen einem Shop und einem Marktplatz?",
+        "answer": "Ein Shop verkauft in der Regel das Sortiment eines Betreibers. Ein Marktplatz braucht zusätzlich Regeln und Werkzeuge für mehrere Anbieter."
+      }
+    ],
+    "label": "Onlineshops & E-Commerce",
+    "parent": "webdesign",
+    "related": [
+      "onlineshop-erfolgreich-aufbauen-anleitung",
+      "performance"
+    ],
+    "children": [
+      "b2b-portale",
+      "marktplaetze",
+      "cs-cart"
+    ],
+    "ancestors": [
+      "webdesign"
+    ]
+  },
+  "printdesign-editorial": {
+    "faqs": [
+      {
+        "question": "Welche Drucksachen gestalten Sie?",
+        "answer": "Dazu gehören Broschüren, Kataloge, Magazine und Geschäftsausstattung. Der Umfang richtet sich nach Format, Auflage und vorhandenen Inhalten."
+      },
+      {
+        "question": "Kann ein bestehendes Magazin-Layout fortgeführt werden?",
+        "answer": "Ja. Wir stimmen Raster, Typografie und wiederkehrende Elemente ab und führen diese in neuen Ausgaben konsistent weiter."
+      },
+      {
+        "question": "Wie läuft eine Korrekturrunde ab?",
+        "answer": "Sie erhalten einen abgestimmten Entwurf mit Seitenstand. Änderungen lassen sich anschließend gesammelt zurückgeben und einarbeiten."
+      },
+      {
+        "question": "Was sollte ich anliefern?",
+        "answer": "Hilfreich sind finale Texte, Bilder in guter Qualität, Logos, Gestaltungsvorgaben und die technischen Angaben der Druckerei."
+      },
+      {
+        "question": "Erhalte ich druckfähige Dateien?",
+        "answer": "Ja. Wir bereiten die vereinbarten Dateien nach den Anforderungen der Druckerei auf, etwa zu Beschnitt, Farbprofil und PDF-Standard."
+      },
+      {
+        "question": "Kann dieselbe Vorlage mehrfach genutzt werden?",
+        "answer": "Bei wiederkehrenden Publikationen lohnt sich ein Satzsystem mit Vorlagen und Formatdefinitionen."
+      },
+      {
+        "question": "Lässt sich eine digitale Fassung ergänzen?",
+        "answer": "Auf Wunsch können wir neben dem Druck-PDF eine Fassung zur digitalen Veröffentlichung vorbereiten."
+      }
+    ],
+    "label": "Printdesign & Editorial",
+    "parent": "branding",
+    "related": [
+      "flyer-design-fuer-unternehmen",
+      "animation"
+    ],
+    "children": [],
+    "ancestors": [
+      "branding"
+    ]
+  },
+  "webdesign-handwerker": {
+    "faqs": [
+      {
+        "question": "Welche Informationen braucht eine Handwerker-Website?",
+        "answer": "Leistungen, Einsatzgebiet, Projektbeispiele und ein klarer Kontaktweg sollten auf Anhieb erkennbar sein."
+      },
+      {
+        "question": "Wie zeige ich mehrere Gewerke übersichtlich?",
+        "answer": "Wichtige Leistungen bekommen eine eigene Beschreibung oder Unterseite. Die Auswahl richtet sich nach Ihrem Angebot und den Fragen Ihrer Kunden."
+      },
+      {
+        "question": "Kann ich meine bisherigen Projektbilder verwenden?",
+        "answer": "Ja. Wir wählen Bilder mit erkennbarem Bezug zur Leistung aus und klären vor Veröffentlichung die nötigen Freigaben."
+      },
+      {
+        "question": "Wie hilft die Website bei regionalen Anfragen?",
+        "answer": "Regionale Leistungsinformationen, verständliche Einsatzgebiete und ein stimmiges Google-Unternehmensprofil unterstützen die Auffindbarkeit."
+      },
+      {
+        "question": "Ist eine Anfrage per Telefon und Formular möglich?",
+        "answer": "Ja. Wir planen erreichbare Kontaktwege und können das Formular auf Angaben wie Ort, Gewerk und gewünschten Zeitraum zuschneiden."
+      },
+      {
+        "question": "Muss ich alle Texte vorbereiten?",
+        "answer": "Stichpunkte zu Leistungen und typischen Aufträgen reichen für den Einstieg. Daraus lässt sich die Seitenstruktur entwickeln."
+      },
+      {
+        "question": "Kann eine vorhandene Website schrittweise erneuert werden?",
+        "answer": "Ja. Wir können beispielsweise mit den wichtigsten Leistungen und dem Kontakt beginnen und Referenzen oder weitere Gewerke danach ergänzen."
+      }
+    ],
+    "label": "Webdesign für Handwerker",
+    "parent": "branchen-webdesign",
+    "related": [
+      "webdesign-fuer-dachdecker-firma",
+      "seo-content-marketing"
+    ],
+    "children": [],
+    "ancestors": [
+      "webdesign",
+      "branchen-webdesign"
+    ]
+  },
+  "branchen-webdesign": {
+    "faqs": [
+      {
+        "question": "Welche Branchen decken die Unterseiten ab?",
+        "answer": "Wir zeigen konkrete Lösungen für Handwerksbetriebe, Arztpraxen und Immobilienmakler. Andere Branchen können wir anhand ihrer typischen Anfragen einordnen."
+      },
+      {
+        "question": "Ist eine Branchenlösung immer sinnvoll?",
+        "answer": "Wenn Ihre Zielgruppe eigene Informations- oder Funktionsanforderungen hat, hilft eine darauf zugeschnittene Struktur. Sonst genügt oft eine allgemeine Unternehmenswebsite."
+      },
+      {
+        "question": "Was muss ich für das Erstgespräch vorbereiten?",
+        "answer": "Nennen Sie Ihre wichtigsten Leistungen und welche Fragen Kunden oder Patienten immer wieder stellen."
+      },
+      {
+        "question": "Welche Rolle spielt mein Standort?",
+        "answer": "Bei regionalen Anfragen helfen ein klares Einsatzgebiet oder eine nachvollziehbare Anfahrtsbeschreibung."
+      },
+      {
+        "question": "Kann eine Website mehrere Zielgruppen ansprechen?",
+        "answer": "Ja. Wenn die Anliegen deutlich voneinander abweichen, bekommen die Gruppen eigene Einstiege und passende Kontaktwege."
+      },
+      {
+        "question": "Arbeiten Sie mit vorhandenen Texten und Bildern?",
+        "answer": "Wir sichten Ihre Unterlagen und übernehmen Material, das aktuell ist und für das die nötigen Rechte vorliegen."
+      },
+      {
+        "question": "Gibt es zu jeder Branche eigene Funktionen?",
+        "answer": "Das hängt vom Ablauf ab. Terminbuchung, Objektimport oder eine detaillierte Handwerksanfrage brauchen jeweils andere Voraussetzungen."
+      }
+    ],
+    "title": "Webdesign für Branchen",
+    "description": "Webdesign für Handwerk, Arztpraxen und Immobilienmakler. Finden Sie heraus, welche Seiten, Funktionen und Kontaktwege Ihr Betrieb braucht.",
+    "intro": "Eine gute Website beantwortet zuerst die Fragen, die Ihre Kunden oder Patienten tatsächlich stellen. Im Handwerk zählt oft das Einsatzgebiet. In einer Praxis sind Sprechzeiten und Terminwege wichtig. Bei Immobilien stehen das aktuelle Angebot und der Weg zur Besichtigung im Vordergrund.",
+    "sections": [
+      {
+        "heading": "Handwerk, Gesundheit und Immobilien",
+        "copy": "Wir planen Ihre Website rund um typische Anliegen Ihrer Zielgruppe. Jede Branche bekommt eine eigene Struktur und Sprache, von der Darstellung einer Handwerksleistung bis zu Praxisinformationen und Objektseiten."
+      },
+      {
+        "heading": "Regionale Auffindbarkeit",
+        "copy": "Wir stimmen Leistungsseiten, regionale Angaben und Kontaktinformationen aufeinander ab. Eigene Seiten für Standorte sind sinnvoll, wenn sie konkrete und unterschiedliche Informationen bieten."
+      }
+    ],
+    "label": "Branchen-Webdesign",
+    "parent": "webdesign",
+    "related": [
+      "webdesign-fuer-kleine-unternehmen",
+      "marketing"
+    ],
+    "generated": true,
+    "children": [
+      "webdesign-handwerker",
+      "webdesign-aerzte",
+      "webdesign-immobilienmakler"
+    ],
+    "ancestors": [
+      "webdesign"
+    ]
+  },
+  "webdesign-aerzte": {
+    "faqs": [
+      {
+        "question": "Welche Informationen gehören auf die Startseite einer Praxis?",
+        "answer": "Fachrichtung, Standort und Terminwege haben Vorrang. Sprechzeiten und Hinweise für neue Patienten sollten von dort gut erreichbar sein."
+      },
+      {
+        "question": "Können wir unsere Online-Terminbuchung weiterverwenden?",
+        "answer": "Wenn Ihr Anbieter einen geeigneten Link oder eine Einbindung bereitstellt, lässt sich die Terminbuchung in die neue Website einplanen."
+      },
+      {
+        "question": "Eignet sich ein normales Formular für Gesundheitsdaten?",
+        "answer": "Für allgemeine Anfragen reichen meist wenige Kontaktdaten. Sensible medizinische Angaben brauchen einen eigens abgestimmten Übermittlungsweg."
+      },
+      {
+        "question": "Können Sprechzeiten kurzfristig geändert werden?",
+        "answer": "Wir können dafür einen gut sichtbaren, leicht pflegbaren Bereich vorsehen, etwa für Urlaubszeiten und Vertretungen."
+      },
+      {
+        "question": "Kann die Website mehrere Standorte zeigen?",
+        "answer": "Ja. Eigene Standortseiten können Anfahrt, Team, Sprechzeiten und Kontakt des jeweiligen Standorts zusammenführen."
+      },
+      {
+        "question": "Ist ein Relaunch mit bestehender Domain möglich?",
+        "answer": "Ja. Wir erfassen die vorhandenen Praxis-URLs und halten wichtige Adressen möglichst stabil oder legen passende Weiterleitungen an."
+      },
+      {
+        "question": "Was benötigen Sie von der Praxis?",
+        "answer": "Wir brauchen Fachgebiete, Leistungen, aktuelle Sprechzeiten, Kontaktwege und eine Ansprechperson für die Freigabe fachlicher Inhalte."
+      }
+    ],
+    "title": "Webdesign für Ärzte und Arztpraxen",
+    "description": "Praxis-Website gestalten lassen mit verständlichen Leistungen, Sprechzeiten, Anfahrt und klaren Wegen zur Terminvereinbarung.",
+    "intro": "Patientinnen und Patienten möchten schnell wissen, welche Behandlungen Ihre Praxis anbietet, wie sie Sie erreichen und wie sie einen Termin vereinbaren. Wir gestalten Ihre Praxis-Website so, dass diese Informationen auch auf dem Smartphone leicht zu finden sind.",
+    "sections": [
+      {
+        "heading": "Praxis, Team und Behandlungen",
+        "copy": "Wir ordnen Fachgebiete, Praxisleistungen und organisatorische Hinweise in einer verständlichen Navigation. Fotos der Praxis und des Teams ergänzen die Informationen, wenn Bildmaterial und Freigaben vorliegen."
+      },
+      {
+        "heading": "Termine und Auffindbarkeit vor Ort",
+        "copy": "Wir planen sichtbare Kontaktwege, Anfahrt, Sprechzeiten und bei Bedarf den Anschluss eines Terminbuchungssystems. Medizinische Aussagen und der Umgang mit sensiblen Angaben werden mit der Praxis abgestimmt."
+      }
+    ],
+    "label": "Webdesign für Ärzte",
+    "parent": "branchen-webdesign",
+    "related": [
+      "webdesign-fuer-arztpraxen",
+      "seo-content-marketing"
+    ],
+    "generated": false,
+    "children": [],
+    "ancestors": [
+      "webdesign",
+      "branchen-webdesign"
+    ]
+  },
+  "webdesign-immobilienmakler": {
+    "faqs": [
+      {
+        "question": "Kann meine Maklersoftware Objekte einspeisen?",
+        "answer": "Das hängt vom Anbieter ab. Wir prüfen, ob eine Schnittstelle oder ein brauchbarer Export für Objektdaten und Bilder verfügbar ist."
+      },
+      {
+        "question": "Was passiert mit verkauften oder vermieteten Objekten?",
+        "answer": "Wir vereinbaren, ob sie als Referenz bestehen bleiben, im Angebot ausgeblendet werden oder auf eine inhaltlich passende Seite weiterleiten."
+      },
+      {
+        "question": "Kann ich Verkaufs- und Mietangebote trennen?",
+        "answer": "Ja. Filter und Übersichtsseiten richten sich nach Objektbestand und den häufigsten Suchanliegen Ihrer Interessenten."
+      },
+      {
+        "question": "Brauche ich eine separate Seite für Eigentümer?",
+        "answer": "Wenn die Vermittlung von Eigentümeraufträgen wichtig ist, kann eine Seite den Bewertungs- und Vermarktungsablauf erklären und Anfragen gezielt aufnehmen."
+      },
+      {
+        "question": "Welche Angaben enthält ein Objektformular?",
+        "answer": "Neben Kontaktangaben sind Objekt-ID und Anliegen sinnvoll. Weitere Felder richten sich nach Ihrem Bearbeitungsprozess."
+      },
+      {
+        "question": "Sind Standortseiten sinnvoll?",
+        "answer": "Ja, wenn Sie für die Region konkrete Marktkenntnis, passende Objekte oder Referenzen zeigen können."
+      },
+      {
+        "question": "Kann ich Objektbilder und Texte selbst pflegen?",
+        "answer": "Das hängt vom vereinbarten System und vom Datenimport ab. Zuständigkeit und Bearbeitung erklären wir bei der Übergabe."
+      }
+    ],
+    "title": "Webdesign für Immobilienmakler",
+    "description": "Immobilien-Website mit übersichtlichen Objektseiten, verständlicher Immobiliensuche und klaren Anfragewegen für Käufer und Eigentümer.",
+    "intro": "Eine Makler-Website muss zwei Anliegen bedienen. Interessenten suchen passende Objekte und wollen schnell anfragen. Eigentümer möchten verstehen, wie die Vermarktung abläuft und warum sie ihr Objekt Ihrer Agentur anvertrauen sollten.",
+    "sections": [
+      {
+        "heading": "Objekte verständlich präsentieren",
+        "copy": "Objektseiten zeigen Bilder, Kerndaten, Lage und Ausstattung in fester Reihenfolge. Filter für Ort, Objektart und Angebotstyp sind sinnvoll, wenn Ihr Bestand groß genug ist."
+      },
+      {
+        "heading": "Schnittstellen und Kontaktanfragen",
+        "copy": "Wenn Ihr Maklersystem geeignete Daten liefert, prüfen wir einen geregelten Import. Objektanfragen tragen eine eindeutige Referenz. Für Verkäufer kann eine separate Kontaktstrecke zur Bewertung oder Vermarktung vorgesehen werden."
+      }
+    ],
+    "label": "Webdesign für Immobilienmakler",
+    "parent": "branchen-webdesign",
+    "related": [
+      "schlechte-website-verbessern",
+      "individuelle-entwicklung"
+    ],
+    "generated": false,
+    "children": [],
+    "ancestors": [
+      "webdesign",
+      "branchen-webdesign"
+    ]
+  },
+  "spezialleistungen": {
+    "faqs": [
+      {
+        "question": "Wo fange ich bei einer langsamen Website an?",
+        "answer": "Beginnen Sie mit wiederholbaren Messungen typischer Seiten und Aktionen. So lässt sich klären, ob Bilder, Skripte, Server oder Datenbank den Ausschlag geben."
+      },
+      {
+        "question": "Wann ist eine individuelle Entwicklung sinnvoll?",
+        "answer": "Wenn ein klar beschriebener Prozess mit den Funktionen des vorhandenen Systems schwer abzubilden ist, vergleichen wir Erweiterung und Eigenentwicklung."
+      },
+      {
+        "question": "Übernehmen Sie Einzelaufträge an bestehenden Websites?",
+        "answer": "Ja, wenn Umfang, Datenlage und Zuständigkeiten abgegrenzt sind. Beschreiben Sie zuerst das konkrete Problem und die eingesetzte Technik."
+      },
+      {
+        "question": "Was muss vor einem Eingriff vorliegen?",
+        "answer": "Hilfreich sind ein aktueller Sicherungsstand, eine Testumgebung und eine Ansprechperson für fachliche und technische Freigaben."
+      },
+      {
+        "question": "Kann mein bestehender Dienstleister eingebunden werden?",
+        "answer": "Ja. Wir vereinbaren Zuständigkeiten und Übergabe, damit Änderungen und Wartung nachvollziehbar bleiben."
+      },
+      {
+        "question": "Kann ich Prüfung und Umsetzung getrennt beauftragen?",
+        "answer": "Der Befund kann zuerst erstellt und priorisiert werden. Auf dieser Grundlage lässt sich die Umsetzung planen."
+      },
+      {
+        "question": "Welche Angaben helfen bei einer Anfrage?",
+        "answer": "Nennen Sie System, betroffene Abläufe, typische Fehler und vorhandene Dokumentation. Bei Leistungsproblemen helfen konkrete Zeitpunkte und Seiten."
+      }
+    ],
+    "title": "Technische Spezialleistungen für Websites und Shops",
+    "description": "Individuelle Entwicklung, Schnittstellen, UI/UX, Leistungsprüfung und Hosting. Finden Sie die passende technische Leistung für Ihre Website oder Plattform.",
+    "intro": "Bei einem laufenden Webprojekt steht häufig eine einzelne Aufgabe an. Eine Schnittstelle soll Daten abgleichen, ein Shop reagiert zu langsam oder eine bestehende Oberfläche braucht eine nachvollziehbare Nutzerführung. Hier finden Sie den passenden Einstieg.",
+    "sections": [
+      {
+        "heading": "Entwickeln und verbinden",
+        "copy": "Individuelle Erweiterungen, Themes, Datenimporte und Systemanbindungen unterstützen vorhandene Prozesse. Wir unterscheiden zwischen Anpassungen an einem bestehenden System und einer eigenständigen Webanwendung."
+      },
+      {
+        "heading": "Prüfen und betreiben",
+        "copy": "Für bestehende Anwendungen kommen Quellcodeprüfung, Ladezeitoptimierung, Lasttests, Hosting und Wartung infrage. Die Auswahl hängt von Ihrem Problem, den vorhandenen Zugängen und der betrieblichen Verantwortung ab."
+      }
+    ],
+    "label": "Technische Spezialleistungen",
+    "parent": "webdesign",
+    "related": [
+      "website-wartung-fuer-firmen",
+      "onlineshops-ecommerce"
+    ],
+    "generated": true,
+    "children": [
+      "individuelle-entwicklung",
+      "ui-ux",
+      "code-review",
+      "performance",
+      "hosting-wartung"
+    ],
+    "ancestors": [
+      "webdesign"
+    ]
+  },
+  "individuelle-entwicklung": {
+    "faqs": [
+      {
+        "question": "Wann ist ein Add-on besser als eine neue Anwendung?",
+        "answer": "Wenn sich ein klar begrenzter Funktionsbedarf mit den vorgesehenen Erweiterungspunkten des Systems umsetzen lässt, bleibt der Betrieb meist einfacher."
+      },
+      {
+        "question": "Können Sie ein bestehendes Theme anpassen?",
+        "answer": "Ja, nach Prüfung von Plattform, Theme und Versionsstand. Änderungen sollten möglichst von den Originaldateien getrennt bleiben."
+      },
+      {
+        "question": "Wie verbinden Sie zwei vorhandene Programme?",
+        "answer": "Wir prüfen verfügbare Schnittstellen oder regelmäßige Datenexporte und legen Felder, Übertragungsrichtung und Fehlerbehandlung fest."
+      },
+      {
+        "question": "Können Sie einen vorhandenen Prototyp weiterentwickeln?",
+        "answer": "Das hängt von Codequalität, Rechten und Dokumentation ab. Ein kurzer technischer Überblick hilft bei der Entscheidung."
+      },
+      {
+        "question": "Wie wird festgelegt, was zum Projekt gehört?",
+        "answer": "Wir definieren Funktionen und Abnahmekriterien anhand konkreter Beispielsituationen aus Ihrem Alltag."
+      },
+      {
+        "question": "Was passiert bei fehlgeschlagenen Datenimporten?",
+        "answer": "Importe können Fehler protokollieren und betroffene Datensätze zum Prüfen markieren. Ein erneuter Lauf sollte bereits übernommene Daten erkennen."
+      },
+      {
+        "question": "Welche Unterlagen erhält mein Team?",
+        "answer": "Wir stimmen die Übergabe ab, etwa Quellstand, Installationsschritte, Schnittstellenbeschreibung und Hinweise zum Betrieb."
+      }
+    ],
+    "title": "Individuelle Webentwicklung und Schnittstellen",
+    "description": "Webanwendungen, API-Schnittstellen, Add-ons und Themes entwickeln lassen. Mit klaren Anforderungen, Tests und nachvollziehbarer Übergabe.",
+    "intro": "Wenn Standardfunktionen einen Arbeitsschritt nicht sauber abbilden, lohnt sich eine gezielte technische Erweiterung. Wir beschreiben zuerst den gewünschten Ablauf und klären danach, ob ein Add-on, ein individuelles Theme, eine Schnittstelle oder eine eigene Webanwendung sinnvoll ist.",
+    "sections": [
+      {
+        "heading": "Add-ons, Themes und Webanwendungen",
+        "copy": "Wir planen Erweiterungen für vorhandene Systeme, etwa zusätzliche Eingabefelder, eigene Ansichten oder wiederkehrende Bearbeitungsschritte. Zu Beginn klären wir Systemversion, Abhängigkeiten und spätere Wartung."
+      },
+      {
+        "heading": "Systemintegration für ERP, CRM und Shops",
+        "copy": "Für den Austausch von Warenbeständen, Produktdaten, Bestellungen oder Kontakten bestimmen wir, welches System die jeweiligen Daten führt. Auch Fehlerbehandlung, Zugriffsrechte und ein möglicher Wiederanlauf gehören zur Planung."
+      }
+    ],
+    "label": "Individuelle Webentwicklung & Schnittstellen",
+    "parent": "spezialleistungen",
+    "related": [
+      "individuelle-webentwicklung-fuer-unternehmen",
+      "ki-workflows-crm"
+    ],
+    "generated": true,
+    "children": [],
+    "ancestors": [
+      "webdesign",
+      "spezialleistungen"
+    ]
+  },
+  "b2b-portale": {
+    "faqs": [
+      {
+        "question": "Welche Unternehmen profitieren von einem B2B-Portal?",
+        "answer": "Typisch sind Großhändler und Hersteller mit wiederkehrenden Bestellungen, unterschiedlichen Konditionen oder einem hohen Abstimmungsaufwand."
+      },
+      {
+        "question": "Lassen sich Preise pro Kunde oder Händlergruppe anzeigen?",
+        "answer": "Ja, wenn Preisregeln und Datenquelle geklärt sind. Wir testen auch Fälle, in denen mehrere Konditionen zusammenkommen."
+      },
+      {
+        "question": "Kann ich Rollen für Einkauf und Freigabe trennen?",
+        "answer": "Ja. Nutzer können für das Erfassen, Genehmigen oder Einsehen von Bestellungen unterschiedliche Rechte erhalten."
+      },
+      {
+        "question": "Können Händler selbst einen Zugang beantragen?",
+        "answer": "Ein Registrierungsablauf kann Anfragen sammeln und nach Prüfung durch Ihr Team freischalten."
+      },
+      {
+        "question": "Ist eine ERP-Anbindung Voraussetzung?",
+        "answer": "Ein Pilot kann auch mit einem begrenzten Katalog beginnen. Bei regelmäßig wechselnden Beständen oder Preisen lohnt sich eine zuverlässige Anbindung."
+      },
+      {
+        "question": "Welche Dokumente können Kunden abrufen?",
+        "answer": "Je nach Datenlage können Auftragsbestätigungen, Lieferscheine, Rechnungen oder Produktunterlagen bereitgestellt werden."
+      },
+      {
+        "question": "Welche Angaben helfen für eine Aufwandsschätzung?",
+        "answer": "Beschreiben Sie Kundengruppen, Preisregeln, Bestellabläufe, Datenquellen und notwendige Freigaben."
+      }
+    ],
+    "title": "B2B-Portal entwickeln lassen",
+    "description": "Händler- und Kundenportale für individuelle Preise, Bestellungen, Dokumente und rollenbasierte Zugriffe planen und umsetzen.",
+    "intro": "Ein B2B-Portal gibt Händlern und Geschäftskunden einen zentralen Zugang zu den Informationen und Funktionen, die für sie relevant sind. Das können kundenspezifische Preise, Bestellstatus, Unterlagen oder Freigaben sein.",
+    "sections": [
+      {
+        "heading": "Konten, Preise und Bestellabläufe",
+        "copy": "Wir klären, welche Unternehmen und Rollen Zugriff erhalten, wie Rabatte oder Staffelpreise gepflegt werden und wer eine Bestellung freigibt. Wiederkehrende Bestellungen lassen sich durch gespeicherte Listen vereinfachen."
+      },
+      {
+        "heading": "Anbindung an Warenwirtschaft und CRM",
+        "copy": "Bei vorhandener Warenwirtschaft bestimmen wir, wo Bestände, Artikel, Rechnungsdaten und Auftragsstatus geführt werden. Das Portal zeigt nur Daten an, für die Nutzer die jeweiligen Berechtigungen haben."
+      }
+    ],
+    "label": "B2B-Portal-Entwicklung",
+    "parent": "onlineshops-ecommerce",
+    "related": [
+      "b2b-portal-entwickeln-lassen",
+      "individuelle-entwicklung"
+    ],
+    "generated": true,
+    "children": [],
+    "ancestors": [
+      "webdesign",
+      "onlineshops-ecommerce"
+    ]
+  },
+  "marktplaetze": {
+    "faqs": [
+      {
+        "question": "Was unterscheidet einen Marktplatz von einem Onlineshop?",
+        "answer": "Auf einem Marktplatz pflegen mehrere Anbieter eigene Angebote. Deshalb braucht die Plattform zusätzliche Abläufe für Freigaben, Provisionen und Bestellungen."
+      },
+      {
+        "question": "Ist eine Standardplattform ausreichend?",
+        "answer": "Das hängt vom Geschäftsmodell ab. Für einen ersten Umfang können Standardfunktionen genügen. Besondere Abrechnungs- oder Freigaberegeln brauchen womöglich Anpassungen."
+      },
+      {
+        "question": "Wie werden neue Händler aufgenommen?",
+        "answer": "Wir planen Registrierung, Prüfung und Freigabe. Die benötigten Angaben und Zuständigkeiten ergeben sich aus Ihrem Geschäftsprozess."
+      },
+      {
+        "question": "Kann ich Provisionen pro Kategorie festlegen?",
+        "answer": "Das lässt sich prüfen, sobald Provisionsgrundlage, Sonderfälle und Abrechnung definiert sind."
+      },
+      {
+        "question": "Wer bearbeitet Rücksendungen?",
+        "answer": "Das Modell sollte festlegen, ob Händler oder Betreiber Rückgaben bearbeiten, wer Kunden informiert und wie Erstattungen ausgelöst werden."
+      },
+      {
+        "question": "Sind Produktbewertungen möglich?",
+        "answer": "Das hängt vom System ab. Bei Bewertungen sollten auch Zuständigkeiten für Moderation und Meldungen feststehen."
+      },
+      {
+        "question": "Wie starte ich mit überschaubarem Aufwand?",
+        "answer": "Ein Start mit wenigen Händlern, einem klaren Sortiment und einem vollständigen Bestellablauf erleichtert die Auswertung."
+      }
+    ],
+    "title": "Online-Marktplatz entwickeln lassen",
+    "description": "Marktplatz für mehrere Anbieter planen und entwickeln. Mit Händleraufnahme, Produktfreigaben, Provisionen und einem klaren Bestellablauf.",
+    "intro": "Ein Online-Marktplatz bringt mehrere Anbieter und ihre Kunden auf einer gemeinsamen Plattform zusammen. Die technische Planung beginnt bei den Regeln für Händler, Angebote, Bestellungen und Zuständigkeiten im laufenden Betrieb.",
+    "sections": [
+      {
+        "heading": "Händleraufnahme und Produktverwaltung",
+        "copy": "Wir definieren, wie Anbieter aufgenommen werden, welche Informationen sie pflegen können und wer Angebote vor der Veröffentlichung prüft. Rollen für Betreiber, Händler und Kunden bleiben nachvollziehbar."
+      },
+      {
+        "heading": "Bestellungen, Provisionen und Betrieb",
+        "copy": "Zu klären sind Warenkörbe mit mehreren Händlern, Zahlungs- und Auszahlungsabläufe sowie Zuständigkeiten für Versand, Rückgaben und Support. Daraus ergeben sich Anforderungen an Software und Zahlungsanbieter."
+      }
+    ],
+    "label": "Marktplatz-Entwicklung",
+    "parent": "onlineshops-ecommerce",
+    "related": [
+      "marktplatz-plattform-entwickeln",
+      "cs-cart"
+    ],
+    "generated": true,
+    "children": [],
+    "ancestors": [
+      "webdesign",
+      "onlineshops-ecommerce"
+    ]
+  },
+  "cs-cart": {
+    "faqs": [
+      {
+        "question": "Wann brauche ich Multi-Vendor?",
+        "answer": "Wenn mehrere unabhängige Anbieter ihre eigenen Produkte über die Plattform verkaufen sollen, prüfen wir Multi-Vendor. Für ein einzelnes Sortiment kann eine Shop-Edition ausreichen."
+      },
+      {
+        "question": "Wie komme ich an eine passende CS-Cart-Lizenz?",
+        "answer": "Wir prüfen Edition, Bezugsweg und aktuelle Konditionen für Ihr Projekt. So können Sie Lizenz, Einrichtung und laufende Kosten getrennt einplanen."
+      },
+      {
+        "question": "Welche Kosten entstehen neben der Lizenz?",
+        "answer": "Je nach Projekt fallen Kosten für Einrichtung, Hosting, Erweiterungen, Zahlungen oder laufende Pflege an. Diese Positionen sollten getrennt betrachtet werden."
+      },
+      {
+        "question": "Kann ich einen bestehenden CS-Cart-Shop umbauen lassen?",
+        "answer": "Nach Prüfung von Edition, Versionsstand, Theme und Erweiterungen können wir passende Anpassungen einplanen."
+      },
+      {
+        "question": "Kann mein Katalog importiert werden?",
+        "answer": "Das hängt vom vorhandenen Export ab. Ein Testimport mit Varianten, Bildern und Kategorien zeigt früh, welche Felder angepasst werden müssen."
+      },
+      {
+        "question": "Brauche ich ein individuelles Theme?",
+        "answer": "Ein Standardtheme spart Aufwand. Eine individuelle Anpassung lohnt sich, wenn Gestaltung oder benötigte Abläufe deutlich davon abweichen."
+      },
+      {
+        "question": "Was prüfen Sie vor dem Start?",
+        "answer": "Wir prüfen exemplarisch Produkte, Zahlung, Versand, Bestätigungen und bei Marktplätzen den vorgesehenen Händlerablauf."
+      }
+    ],
+    "title": "CS-Cart einrichten und Lizenzen auswählen",
+    "description": "Unterstützung bei CS-Cart und Multi-Vendor. Editionen vergleichen, Katalog und Zahlungsarten einrichten und Erweiterungen abgestimmt auswählen.",
+    "intro": "Ob eine CS-Cart-Edition für Ihren Shop oder Marktplatz geeignet ist, hängt von Händlerrollen, Katalog und Bestellabläufen ab. Wir prüfen die benötigten Funktionen und den vorgesehenen Installationsweg anhand Ihres Projekts.",
+    "sections": [
+      {
+        "heading": "Edition und Lizenzbedarf",
+        "copy": "Wir vergleichen die benötigten Shop- oder Multi-Vendor-Funktionen mit dem jeweils verfügbaren Lizenzmodell. Laufzeiten, Updates, Zusatzmodule und die verfügbaren Bezugswege werden vor dem Kauf geprüft."
+      },
+      {
+        "heading": "Einrichtung und Anpassung",
+        "copy": "Zur Planung gehören Produktkatalog, Kategorien und Varianten, Theme, Versand- und Zahlungsarten sowie Schnittstellen. Für Marktplätze kommen Händlerzugänge und die Abläufe zur Produktfreigabe hinzu."
+      }
+    ],
+    "label": "CS-Cart: Einrichtung & Lizenzen",
+    "parent": "onlineshops-ecommerce",
+    "related": [
+      "shopware-vs-wordpress-shop",
+      "marktplaetze"
+    ],
+    "generated": true,
+    "children": [],
+    "ancestors": [
+      "webdesign",
+      "onlineshops-ecommerce"
+    ]
+  },
+  "performance": {
+    "faqs": [
+      {
+        "question": "Was ist der Unterschied zwischen Audit und Optimierung?",
+        "answer": "Das Audit ermittelt Ursachen und priorisiert Maßnahmen. Bei der Optimierung werden ausgewählte Änderungen umgesetzt und erneut gemessen."
+      },
+      {
+        "question": "Welche Seiten sollten gemessen werden?",
+        "answer": "Neben der Startseite sind stark besuchte Angebote und wichtige Abläufe relevant, etwa Produktansichten, Warenkorb und Kasse."
+      },
+      {
+        "question": "Reicht ein einzelner Lighthouse-Wert?",
+        "answer": "Ein Einzelwert schwankt je nach Umgebung. Wiederholte Messungen, echte Nutzungsdaten soweit verfügbar und konkrete Abläufe liefern mehr Kontext."
+      },
+      {
+        "question": "Können Sie bestehende Caches prüfen?",
+        "answer": "Ja. Wir prüfen, welche Inhalte zwischengespeichert werden dürfen und wo persönliche oder dynamische Inhalte besondere Regeln brauchen."
+      },
+      {
+        "question": "Findet ein Lasttest auf der Live-Website statt?",
+        "answer": "Lasttests werden normalerweise in einer abgestimmten Testumgebung geplant, damit der laufende Betrieb nicht beeinträchtigt wird."
+      },
+      {
+        "question": "Wie wird eine Verbesserung nachgewiesen?",
+        "answer": "Wir vergleichen Messungen mit gleichen Seiten, Szenarien und möglichst gleichen Randbedingungen."
+      },
+      {
+        "question": "Benötige ich für die Umsetzung einen Hostingwechsel?",
+        "answer": "Erst der Befund zeigt, ob Konfiguration, Anwendung oder Infrastruktur der wirksamste Ansatzpunkt ist."
+      }
+    ],
+    "title": "Performance-Audit, Ladezeitoptimierung und Lasttests",
+    "description": "Langsame Websites und Onlineshops untersuchen, Engpässe unter Last erkennen und Verbesserungen mit vergleichbaren Messungen belegen.",
+    "intro": "Wenn Seiten langsam reagieren oder ein Shop bei Spitzenlast stockt, braucht es zuerst einen nachvollziehbaren Befund. Wir unterscheiden die Ladezeit im Browser von der Reaktionszeit der Anwendung und dem Verhalten bei mehreren gleichzeitigen Zugriffen.",
+    "sections": [
+      {
+        "heading": "Messung und Ladezeitoptimierung",
+        "copy": "Wir messen vereinbarte Seitentypen und Abläufe. Je nach Befund prüfen wir Bilder, Schriften, Skripte, Zwischenspeicherung, Serverantworten oder Datenbankabfragen. Maßnahmen werden priorisiert und mit einem vergleichbaren Ausgangswert bewertet."
+      },
+      {
+        "heading": "Lasttests für erwartete Spitzen",
+        "copy": "Für Kampagnen und stark besuchte Verkaufstage lassen sich typische Abläufe unter vereinbarter Last in einer geeigneten Testumgebung prüfen. Der Bericht hält Szenario, gemessene Engpässe und empfohlene Maßnahmen fest."
+      }
+    ],
+    "label": "Ladezeit, Performance-Audit & Lasttests",
+    "parent": "spezialleistungen",
+    "related": [
+      "beste-landingpage-elemente-fuer-kampagnen",
+      "hosting-wartung"
+    ],
+    "generated": true,
+    "children": [],
+    "ancestors": [
+      "webdesign",
+      "spezialleistungen"
+    ]
+  },
+  "hosting-wartung": {
+    "faqs": [
+      {
+        "question": "Kann ich bei meinem bisherigen Hoster bleiben?",
+        "answer": "Ja, wenn Ihr Paket die Anforderungen erfüllt und die nötigen Wartungs- und Sicherungswege verfügbar sind."
+      },
+      {
+        "question": "Wann ist ein eigener Server sinnvoll?",
+        "answer": "Das hängt von Last, Sonderanforderungen und Betriebsaufwand ab. Für viele Websites ist ein passendes verwaltetes Hosting ausreichend."
+      },
+      {
+        "question": "Was umfasst die Serverwartung?",
+        "answer": "Je nach Vereinbarung gehören Systemupdates, Überwachung und die Kontrolle der Sicherungen dazu. Anwendungsupdates sind ein eigener Aufgabenbereich."
+      },
+      {
+        "question": "Wie unterscheiden sich Backup und Wiederherstellungstest?",
+        "answer": "Ein Backup enthält einen gesicherten Stand. Ein Wiederherstellungstest zeigt, ob sich daraus eine funktionierende Website oder Anwendung herstellen lässt."
+      },
+      {
+        "question": "Müssen Updates die Website unterbrechen?",
+        "answer": "Viele Änderungen sind planbar. Für Eingriffe mit möglicher Unterbrechung vereinbaren wir ein Wartungsfenster."
+      },
+      {
+        "question": "Können Sie einen Hostingumzug vorbereiten?",
+        "answer": "Ja. Dazu gehören die Erfassung von Dateien, Datenbank, Domainzielen und gegebenenfalls E-Mail-Abhängigkeiten sowie ein Rückwechselplan."
+      },
+      {
+        "question": "Wovon hängen laufende Kosten ab?",
+        "answer": "Entscheidend sind Hostingtarif, Umfang der Wartung, Sicherungsbedarf und vereinbarte Reaktionszeiten."
+      }
+    ],
+    "title": "Cloud-Hosting, Serverwartung und Updates",
+    "description": "Hosting für Websites und Shops planen, Server und Anwendungen pflegen und Datensicherung, Updates und Zuständigkeiten abstimmen.",
+    "intro": "Der laufende Betrieb einer Website umfasst mehr als Speicherplatz. Wir klären, welche Infrastruktur zur Anwendung passt, wer Updates einspielt und wie sich die Website bei einem Fehler wiederherstellen lässt.",
+    "sections": [
+      {
+        "heading": "Cloud-Hosting und Serverbetrieb",
+        "copy": "Je nach Projekt kommen ein Webhosting-Paket, ein verwalteter Server oder eine Cloud-Umgebung infrage. In die Auswahl fließen Last, technische Anforderungen, verfügbare Sicherungen und die Zuständigkeit für Systemupdates ein."
+      },
+      {
+        "heading": "Wartung, Upgrades und Wiederherstellung",
+        "copy": "Wir planen Updates für Anwendung und Erweiterungen, stimmen Tests für kritische Abläufe ab und dokumentieren, wann eine Sicherung zurückgespielt werden kann. Umfang und Reaktionswege werden vorab vereinbart."
+      }
+    ],
+    "label": "Cloud-Hosting & Wartung",
+    "parent": "spezialleistungen",
+    "related": [
+      "website-wartung-fuer-firmen",
+      "performance"
+    ],
+    "generated": true,
+    "children": [],
+    "ancestors": [
+      "webdesign",
+      "spezialleistungen"
+    ]
+  },
+  "code-review": {
+    "faqs": [
+      {
+        "question": "Welche Unterlagen brauchen Sie für ein Code-Review?",
+        "answer": "Hilfreich sind der vereinbarte Quellcode, eine kurze Systembeschreibung und Hinweise zu bekannten Problemen oder wichtigen Geschäftsabläufen."
+      },
+      {
+        "question": "Können Sie nur einen Teil der Anwendung prüfen?",
+        "answer": "Ja. Ein klar begrenztes Modul oder eine Schnittstelle kann sinnvoll sein, wenn die Abhängigkeiten nachvollziehbar sind."
+      },
+      {
+        "question": "Ist ein Code-Review ein Penetrationstest?",
+        "answer": "Ein Code-Review untersucht den Quellcode und seine Struktur. Ein gesonderter Sicherheitstest hätte einen eigenen Prüfauftrag."
+      },
+      {
+        "question": "Wie erfahren wir, welche Befunde zuerst bearbeitet werden sollten?",
+        "answer": "Wir ordnen die Befunde nach Auswirkung und Dringlichkeit und beschreiben eine sinnvolle Reihenfolge."
+      },
+      {
+        "question": "Prüfen Sie auch die vorhandenen Tests?",
+        "answer": "Im vereinbarten Umfang schauen wir, ob kritische Abläufe und typische Fehlerfälle mit Tests abgedeckt sind."
+      },
+      {
+        "question": "Können Befunde mit meinem Entwicklerteam besprochen werden?",
+        "answer": "Ja. Eine gemeinsame Durchsicht hilft, Zuständigkeiten zu klären und Maßnahmen realistisch einzuplanen."
+      },
+      {
+        "question": "Muss zuerst etwas auf dem Live-System geändert werden?",
+        "answer": "Für ein Code-Review reichen in der Regel die freigegebenen Unterlagen und eine geeignete Testumgebung."
+      }
+    ],
+    "title": "Code-Review für Websites und Webanwendungen",
+    "description": "Quellcode auf Wartbarkeit, Fehleranfälligkeit und technische Risiken prüfen lassen. Mit priorisierten Befunden und umsetzbaren Empfehlungen.",
+    "intro": "Ein Code-Review ist sinnvoll, wenn eine Anwendung übernommen, erweitert oder stabilisiert werden soll. Wir betrachten die betroffenen Teile des Quellcodes, vorhandene Tests und die Abläufe, die für Ihr Unternehmen wichtig sind.",
+    "sections": [
+      {
+        "heading": "Quellcode und Abhängigkeiten prüfen",
+        "copy": "Der vereinbarte Umfang kann Struktur, Fehlerbehandlung, Datenzugriffe, Abhängigkeiten und die Vollständigkeit zentraler Tests abdecken. Befunde werden mit Fundstelle und Auswirkung dokumentiert."
+      },
+      {
+        "heading": "Empfehlungen für die Weiterentwicklung",
+        "copy": "Sie erhalten eine priorisierte Übersicht mit Maßnahmen für den nächsten Entwicklungsschritt. Bei Bedarf lassen sich Änderungen separat umsetzen und anhand festgelegter Beispiele überprüfen."
+      }
+    ],
+    "label": "Code-Review",
+    "parent": "spezialleistungen",
+    "related": [
+      "individuelle-webentwicklung-fuer-unternehmen",
+      "performance"
+    ],
+    "generated": true,
+    "children": [],
+    "ancestors": [
+      "webdesign",
+      "spezialleistungen"
+    ]
+  },
+  "ui-ux": {
+    "faqs": [
+      {
+        "question": "Was ist der Unterschied zwischen UI und UX?",
+        "answer": "UX beschreibt, wie gut Nutzer eine Aufgabe erledigen können. UI betrifft die sichtbare Oberfläche, etwa Navigation, Formulare und Rückmeldungen."
+      },
+      {
+        "question": "Brauche ich dafür einen vollständigen Relaunch?",
+        "answer": "Oft lässt sich ein einzelner Ablauf wie Suche, Anfrage oder Bestellabschluss gezielt verbessern."
+      },
+      {
+        "question": "Sind klickbare Prototypen Teil der Leistung?",
+        "answer": "Für Abläufe mit mehreren Schritten sind sie häufig sinnvoll. Die nötige Detailtiefe wird vorab vereinbart."
+      },
+      {
+        "question": "Können bestehende Designvorgaben berücksichtigt werden?",
+        "answer": "Ja. Wir prüfen vorhandene Farben, Typografie und Komponenten und ergänzen sie dort, wo Lücken bestehen."
+      },
+      {
+        "question": "Kann mein Entwicklerteam den Entwurf selbst umsetzen?",
+        "answer": "Ja. Dazu stimmen wir benötigte Ansichten, Zustände und Regeln für unterschiedliche Bildschirmgrößen ab."
+      },
+      {
+        "question": "Wie wird die Verständlichkeit geprüft?",
+        "answer": "Mit realistischen Aufgaben lässt sich beobachten, ob Nutzer den vorgesehenen Weg finden und Fehlermeldungen verstehen."
+      },
+      {
+        "question": "Was sollte ich für den Einstieg zeigen?",
+        "answer": "Nennen Sie typische Aufgaben und bekannte Abbrüche. Screenshots, Ablaufbeschreibungen oder bestehende Rückmeldungen helfen bei der Eingrenzung."
+      }
+    ],
+    "title": "UI/UX-Design für Websites und Webanwendungen",
+    "description": "Nutzerführung, Navigation und Oberflächen für Websites, Shops und Dashboards planen, prototypisieren und für die Entwicklung vorbereiten.",
+    "intro": "Wenn Nutzer Inhalte schwer finden oder einen Vorgang abbrechen, lohnt sich ein Blick auf die konkrete Aufgabe. Wir untersuchen, an welcher Stelle Orientierung fehlt, und gestalten die Schritte so, dass die nächste Handlung verständlich ist.",
+    "sections": [
+      {
+        "heading": "Nutzerführung und Prototypen",
+        "copy": "Wir erfassen wichtige Aufgaben, strukturieren Inhalte und entwerfen klickbare Ansichten. Ein Prototyp hilft dabei, Navigation, Formulare und Rückmeldungen vor der technischen Umsetzung zu prüfen."
+      },
+      {
+        "heading": "Oberflächen und Übergabe",
+        "copy": "Auf Grundlage der abgestimmten Abläufe gestalten wir Komponenten, Zustände und Ansichten für relevante Bildschirmgrößen. Die Übergabe beschreibt Wiederverwendung und Verhalten, etwa bei Fehlern oder leeren Listen."
+      }
+    ],
+    "label": "UI/UX-Design",
+    "parent": "spezialleistungen",
+    "related": [
+      "schlechte-website-verbessern",
+      "webdesign"
+    ],
+    "generated": true,
+    "children": [],
+    "ancestors": [
+      "webdesign",
+      "spezialleistungen"
+    ]
+  },
+  "animation": {
+    "faqs": [
+      {
+        "question": "Für welche Formate eignen sich die Animationen?",
+        "answer": "Typische Einsätze sind Website, Social Media, Präsentation und Video. Seitenverhältnis und Dateiformat richten sich nach der Platzierung."
+      },
+      {
+        "question": "Kann mein bestehendes Logo animiert werden?",
+        "answer": "Ja, wenn die nötigen Vorlagen vorliegen. Eine Vektordatei erleichtert die saubere Trennung einzelner Elemente."
+      },
+      {
+        "question": "Brauche ich ein fertiges Drehbuch?",
+        "answer": "Eine Botschaft und der geplante Einsatz reichen für den Einstieg. Daraus kann ein Storyboard entstehen."
+      },
+      {
+        "question": "Kann ich Varianten für Hoch- und Querformat bekommen?",
+        "answer": "Ja. Eine frühe Planung sorgt dafür, dass Text und wichtige Elemente in beiden Bildausschnitten sichtbar bleiben."
+      },
+      {
+        "question": "Was ist bei Animation auf einer Website wichtig?",
+        "answer": "Dateigröße, Ladezeit und eine ruhige Ansicht bei reduzierter Bewegung sollten von Beginn an berücksichtigt werden."
+      },
+      {
+        "question": "Sind Ton oder Sprecher nötig?",
+        "answer": "Das hängt vom Einsatz ab. Für Social Media ist es sinnvoll, dass die wichtigste Aussage auch ohne Ton verständlich bleibt."
+      },
+      {
+        "question": "Welche Dateien liefern Sie aus?",
+        "answer": "Wir vereinbaren die Ausgabe je nach Einsatz, beispielsweise ein Videoformat für Social Media oder ein geeignetes Webformat."
+      }
+    ],
+    "title": "Animation und Motion Design für Marken",
+    "description": "Logoanimationen, animierte Grafiken und kurze Erklärsequenzen für Website, Social Media und Präsentationen gestalten lassen.",
+    "intro": "Animation hilft, wenn ein Produktablauf, eine Funktion oder eine Botschaft im Standbild schwer zu erklären ist. Wir entwickeln kurze Sequenzen, deren Tempo und Bildsprache zum Medium und zu Ihrem Auftritt passen.",
+    "sections": [
+      {
+        "heading": "Logoanimationen und Markenbewegung",
+        "copy": "Für animierte Logos und Grafikelemente stimmen wir Einsatz, Dauer, Übergänge und Endbild ab. Die Bewegung orientiert sich an Ihrem Erscheinungsbild und unterstützt die Wiedererkennung."
+      },
+      {
+        "heading": "Erklärsequenzen und Social Media",
+        "copy": "Aus einer klaren Aussage entwickeln wir einen kurzen Ablauf, etwa für ein Produkt, eine Präsentation oder ein Reel. Vor der Umsetzung stimmen wir Storyboard und Ausgabeformate ab."
+      }
+    ],
+    "label": "Animation & Motion Design",
+    "parent": "branding",
+    "related": [
+      "produktfim-erstellen-lassen",
+      "google-ads-social-media"
+    ],
+    "generated": false,
+    "children": [],
+    "ancestors": [
+      "branding"
+    ]
+  }
+}

@@ -26,13 +26,13 @@
         ]
       },
       {
-        "title": "Branchen-Websites",
-        "copy": "Handwerksbetriebe, Arztpraxen und Immobilienmakler benötigen jeweils eigene Inhalte und Kontaktwege. Wir strukturieren den Auftritt passend zu den Fragen Ihrer Zielgruppe.",
+        "title": "Websites für Handwerksbetriebe",
+        "copy": "Interessenten wollen wissen, welche Leistungen Sie anbieten, wo Sie arbeiten und wie sie Sie erreichen. Projektbilder und Referenzen helfen, wenn sie den jeweiligen Auftrag nachvollziehbar zeigen.",
         "links": [
           {
             "source": "webdesign",
             "target": "webdesign-handwerker",
-            "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+            "url": "/leistungen/webdesign/branchen/handwerk",
             "anchor": "Webdesign für Handwerksbetriebe",
             "priority": "P1",
             "placement": "Websites für Handwerksbetriebe"
@@ -44,22 +44,6 @@
             "anchor": "Website für Dachdecker: Leistungen, Bilder und Anfragen",
             "priority": "P2",
             "placement": "Websites für Handwerksbetriebe"
-          },
-          {
-            "source": "webdesign",
-            "target": "webdesign-aerzte",
-            "url": "/webdesign/webdesign-fuer-aerzte",
-            "anchor": "Webdesign für Ärzte",
-            "priority": "P1",
-            "placement": "Weiterführende Links"
-          },
-          {
-            "source": "webdesign",
-            "target": "webdesign-immobilienmakler",
-            "url": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
-            "anchor": "Webdesign für Immobilienmakler",
-            "priority": "P1",
-            "placement": "Weiterführende Links"
           }
         ]
       },
@@ -70,7 +54,7 @@
           {
             "source": "webdesign",
             "target": "onlineshops-ecommerce",
-            "url": "/online-shop-entwicklung",
+            "url": "/leistungen/webdesign/e-commerce",
             "anchor": "Onlineshops und E-Commerce",
             "priority": "P1",
             "placement": "Onlineshop, Portal oder individuelle Entwicklung"
@@ -128,7 +112,7 @@
           {
             "source": "marketing",
             "target": "seo-content-marketing",
-            "url": "/seo-3",
+            "url": "/leistungen/marketing/seo-content-marketing",
             "anchor": "SEO und Content-Marketing",
             "priority": "P1",
             "placement": "Organisch gefunden werden"
@@ -158,7 +142,7 @@
           {
             "source": "marketing",
             "target": "google-ads-social-media",
-            "url": "/google-ads-social-media",
+            "url": "/leistungen/marketing/google-ads-social-media",
             "anchor": "Google Ads und Social-Media-Kampagnen",
             "priority": "P1",
             "placement": "Bezahlte Kampagnen planen"
@@ -298,7 +282,7 @@
           {
             "source": "branding",
             "target": "printdesign-editorial",
-            "url": "/print-design",
+            "url": "/leistungen/branding/printdesign-editorial",
             "anchor": "Printdesign und Editorial",
             "priority": "P1",
             "placement": "Print, Editorial und Messe"
@@ -364,7 +348,7 @@
           {
             "source": "ki-automatisierung",
             "target": "ki-automatisierung-fuer-unternehmen",
-            "url": "/ki-automatisierung-fuer-unternehmen",
+            "url": "/leistungen/ki-automatisierung/pilotprojekt",
             "anchor": "Einstieg in KI-Automatisierung",
             "priority": "P1",
             "placement": "Den passenden Prozess auswählen"
@@ -378,7 +362,7 @@
           {
             "source": "ki-automatisierung",
             "target": "ki-workflows-crm",
-            "url": "/ki-workflows-crm",
+            "url": "/leistungen/ki-automatisierung/crm-workflows",
             "anchor": "KI-Workflows und CRM-Automatisierung",
             "priority": "P1",
             "placement": "CRM und Schnittstellen verbinden"
