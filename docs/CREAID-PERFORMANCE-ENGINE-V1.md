@@ -1,4 +1,4 @@
-# CreAid Performance Engine V1.3
+# CreAid Performance Engine V1.4
 
 Wiederverwendbarer, optionaler Node-22-Buildschritt für statische Websites mit Root-Assetpfaden /assets/. Kein WordPress-Plugin, kein Service Worker, keine Serverinstallation. Das Modul verändert weder Quelldateien noch den normalen Build oder das Deployment.
 
@@ -129,3 +129,24 @@ Lighthouse-Konfiguration: {"routes":["/"],"runs":3,"formFactor":"mobile"}. Weite
 CSS-Coverage erfasst initiale und gescrollte Zustände auf 390 und 1440 Pixeln, meldet verwendete Bereiche und nicht beobachtete Zeichen. Dies ist ein Prüfwerkzeug, keine sichere Critical-CSS-Extraktion. Hover, Fokus, Navigation, Dialoge, Media Queries und dynamische Animationen benötigen zusätzliche Tests. Kein automatisches Entfernen von CSS. Lighthouse läuft gegen einen no-store-Loopback-Server; weder produktive HTTP-Kompression noch IONOS-Warmcache werden damit nachgewiesen. CI testet eine synthetische Lighthouse-Messung; kein Score-Ziel und kein Nachweis realer Website-Verbesserungen.
 
 Verweise: https://playwright.dev/docs/api/class-coverage und https://github.com/GoogleChrome/lighthouse/blob/main/docs/readme.md.
+
+## V1.4 – Performance Studio, visuelle Regression und Snapshots
+
+### Lokales Control Panel
+Die Datei `scripts/performance/studio.html` direkt im Browser öffnen (kein Webserver notwendig). Safe aktiviert nur den Audit-/Cache-Paket-Workflow; Balanced bietet die optionale Minifizierung und responsive Bildkandidaten; Maximum zusätzlich explizite Defer-/Preload-Hinweise. Einzelne Module können unabhängig gewählt werden. Die Profile verändern keine Dateien automatisch. Dateilisten und Hinweise müssen vom Anwender eingegeben und geprüft werden, bevor die JSON-Datei exportiert wird. Audit-Budgets in KiB werden in Byte umgerechnet. Die Konfiguration entspricht dem bestehenden Pipeline-Schema. Anschließend die exportierte Datei in den Projektordner legen und den angezeigten npm-Befehl ausführen. Das Panel selbst ist kein Server-Adminpanel, führt keine Shell-Befehle aus und stellt keine Live-Website um.
+
+### Lokale Build-Sicherung und Wiederherstellung
+```sh
+npm run performance:snapshot -- dist backup-before-v14
+npm run performance:restore -- backup-before-v14 dist-restored
+```
+Die Sicherung enthält den unveränderten statischen Build samt SHA-256-Dateiinventar, auch vorhandene .htaccess und leere Verzeichnisse. Wiederherstellung prüft die Integrität vor und nach dem Kopieren und schreibt ausschließlich in einen neuen Ordner. Manipulierte oder unvollständige Sicherungen werden zurückgewiesen. Kein Überschreiben, kein automatischer IONOS-Rollback; für produktive Rollbacks Serverkonfiguration und alte versionierte Assets separat vorhalten. Sicherungen privat aufbewahren; Hashes erkennen versehentliche Änderungen, sind keine digitale Signatur gegen absichtliche Manipulation des gesamten Snapshots.
+
+### Visueller Vorher-Nachher-Vergleich
+```sh
+npm install --prefix .performance-browser-tools --save-exact playwright@1.56.1 lighthouse@12.8.2 pngjs@7.0.0 pixelmatch@7.1.0
+npm run performance:visual -- dist performance-v14/package/site visual-report .performance-browser-tools /
+```
+Vergleicht lokale Builds in Chromium auf 390 und 1440 Pixeln, jeweils am oberen und mittleren Seitenabschnitt. Erstellt Vorher-/Nachher-/Differenz-PNGs und einen JSON-Bericht, standardmäßig maximal 0,5 % abweichende Pixel (programmatisch konfigurierbar). Neue Browserfehler, defekte Bilder, horizontale Überläufe, veränderte Titel/H1 und Dokumenthöhe werden zusätzlich geprüft. Abweichungen führen zu einem Nichtbestehen des Vergleichs, nicht zu automatischer Fehlerbehebung. Screenshots bleiben privat; echte Seiten, dynamische/interaktive Zustände und weitere Browser separat prüfen. Reduzierte Animation und blockierte externe Requests können die Darstellung gegenüber der Live-Website verändern. Die CI prüft identische und absichtlich veränderte Testseiten sowie Studio-Bedienung und JSON-Download auf einem mobilen Viewport.
+
+Lighthouse-Messungen und Medianvergleich bleiben eigene Befehle; die grafische Oberfläche exportiert die Konfiguration, orchestriert aber noch keine Browserläufe. Critical-CSS-Extraktion, JS-Verzögerung bis zur Interaktion, automatische Einbindung responsiver Varianten, vollständige visuelle Abnahme des tatsächlichen CreAid-Builds sowie Produktionsfreigabe bleiben offen.
