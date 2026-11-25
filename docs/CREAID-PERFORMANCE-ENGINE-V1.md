@@ -1,4 +1,4 @@
-# CreAid Performance Engine V1.1
+# CreAid Performance Engine V1.2
 
 Wiederverwendbarer, optionaler Node-22-Buildschritt für statische Websites mit Root-Assetpfaden /assets/. Kein WordPress-Plugin, kein Service Worker, keine Serverinstallation. Das Modul verändert weder Quelldateien noch den normalen Build oder das Deployment.
 
@@ -26,7 +26,7 @@ HTML wird revalidiert; SHA-256-versionierte Assets erhalten ein Jahr immutable b
 - Browserprüfung aller Seitentypen, Lighthouse kalt/warm mit identischer Konfiguration, keine garantierten Scores.
 - Rollback: unveränderten vorherigen Build und ursprüngliche .htaccess wiederherstellen. Alte Fingerprint-Dateien bei einem späteren Produktionsrollout für laufende Clients vorhalten; nicht blind löschen.
 - Keine automatische Veröffentlichung; weder WordPress noch IONOS werden geändert. GitHub Pages unterstützt keine Apache-.htaccess.
-- Brotli/Gzip werden in Apache ausgehandelt, wenn die entsprechenden Module verfügbar sind. Die Reportgrößen sind weiterhin Schätzungen, keine Messwerte des Zielservers. Responsive Bildgrößen, Critical CSS, JS-Delay und tiefe Abhängigkeitsanalyse bleiben getrennte Erweiterungen.
+- Brotli/Gzip werden in Apache ausgehandelt, wenn die entsprechenden Module verfügbar sind. Die Reportgrößen sind weiterhin Schätzungen, keine Messwerte des Zielservers. Responsive Bildkandidaten sind in V1.2 verfügbar; Critical CSS, JS-Delay und tiefe Abhängigkeitsanalyse bleiben getrennte Erweiterungen.
 
 
 ## Optionale Asset-Optimierung (vor dem Fingerprinting)
@@ -50,3 +50,38 @@ Allowlist-Beispiel (Dateinamen anhand des tatsächlichen Builds prüfen; keine p
 - Byte- und SHA-256-Vergleich in optimization-report.json; für Code auch Gzip-/Brotli-Größen. Kein automatisches Deployment. Vor Nutzung auf realen Seiten Browser-/Bild- und Funktionsregression prüfen.
 - HTTP-Integrationstest unter Linux: node scripts/performance/test-apache-http.mjs. Testet echte Antworten eines isolierten Apache, inklusive Brotli/Gzip, Fallbacks, Cache-Control, 304 und 404. Das ersetzt nicht den IONOS-Test.
 - Die exakten optionalen Toolversionen werden geprüft; das separate Installations-Lockfile liegt nicht in diesem Repository. Abhängigkeiten vor produktivem Einsatz auf Sicherheitsupdates überprüfen.
+
+## V1.2 – Build-Audit, Dashboard, responsive Bilder und Lighthouse-Vergleich
+
+### Audit und Dashboard
+
+```sh
+npm run build
+npm run performance:audit -- dist performance-audit
+```
+
+Öffne performance-audit/dashboard.html lokal im Browser. Enthält Seiteninventar, direkt referenzierte unkomprimierte Assets, nach Häufigkeit gruppierte Hinweise und die größten Assets. Die JSON-Ausgabe eignet sich für weitere Auswertung. Standardbudgets: 150 KiB HTML, 200 KiB direktes CSS, 300 KiB direktes JS pro Seite, 400 KiB je Bild ohne srcset. Das sind frei konfigurierbare interne Prüfwerte, keine Google-Grenzwerte. Aus dem HTML ermittelte CSS-/JS-Hinweise sind keine Messung tatsächlich blockierender Ressourcen. Fehlende srcset-Alternativen, CSS-Abhängigkeiten und dynamische Ressourcen erfasst das Inventar nicht vollständig.
+
+Berichte bleiben außerhalb des Website-Builds. Dieses Repository ist öffentlich: keine internen Routen-/Asset-Berichte in CI-Artefakten oder Commits veröffentlichen. Der CI-Lauf prüft den realen Build und zeigt aggregierte Zahlen, nicht die Detailberichte. noindex ist kein Zugangsschutz.
+
+### Responsive Bilder
+
+Mit dem separaten sharp-Toolordner aus V1.1:
+```sh
+node scripts/performance/responsive-images.mjs dist responsive-input responsive-allowlist.json .performance-tools
+```
+Konfiguration: {"images":["assets/example.jpg"],"widths":[320,480,768,1024,1440],"quality":82}
+
+Erzeugt kleinere WebP-Kandidaten in einer isolierten Kopie, ohne Upscaling, Seitenverhältnisänderung oder Überschreiben der Originale. Der JSON-Report liefert srcset-Kandidaten. Einbindung in die tatsächlich geeigneten img/picture-Elemente mit realistischen sizes, korrekten Dimensionen, Alt-Text und LCP-Priorität ist separat zu prüfen. Kein automatisches Ändern des HTML. Varianten erst nach visueller Qualitätskontrolle verwenden; Fingerprinting danach.
+
+### Lighthouse-Vergleich
+
+Je Seite mindestens drei Vorher-/Nachher-Lighthouse-JSON-Messungen bei gleicher Browser-, Geräte-, Cache- und Drosselungskonfiguration aufnehmen. Kalt- und Warmläufe getrennt vergleichen. Beispiel:
+```sh
+node scripts/performance/compare-lighthouse.mjs --before before1.json before2.json before3.json --after after1.json after2.json after3.json --output comparison.json
+```
+Der Vergleich berechnet Median, Spannweite und Delta für Performance-Score, LCP, FCP, CLS, TBT und Speed Index. Keine eigene Browser-Messung und kein INP-/Felddatennachweis; die Vergleichbarkeit muss zusätzlich vom Prüfer sichergestellt werden.
+
+### Bewusst offen
+
+Critical CSS und automatische JS-Verzögerung werden nicht ohne echte Browser-Coverage, Prüfung dynamischer Zustände und visuelle/interaktive Regression aktiviert. Das Dashboard ist eine lokale HTML-Auswertung, kein Server-Adminpanel. IONOS-Header, tatsächliche Kompression, Live-Caching, Lighthouse-Messungen der realen Website und Freigabe des produktiven Builds bleiben separate Abnahmen.
