@@ -222,3 +222,25 @@ npm run performance:release-plan -- previous-site next-site release-plan.json
 Vergleicht zwei getrennte lokale Website-Verzeichnisse, validiert SHA-256-Namen, gruppiert geänderte immutable Assets, sonstige Assets, HTML und Serverregeln, und meldet entfernte Dateien, die vorerst erhalten bleiben sollen. Stabile geänderte Asset-URLs, entfernte unversionierte Seiten und Preview-Markierungen sind Prüfblocker. Kein FTP, keine automatische Veröffentlichung, keine automatische Löschung. Für einen produktiven Wechsel möglichst atomaren Releasewechsel verwenden; die Upload-Reihenfolge ist nur ein Planungshinweis, kein Ersatz für eine Abnahme. Alte immutable Assets bei Rollback oder offenen Browser-Tabs berücksichtigen. Die beiden Build-Verzeichnisse müssen außerhalb des Berichtspfads liegen.
 
 IONOS bietet tarifabhängige CDN-Funktionen; die IONOS-Hilfe weist darauf hin, dass die CDN-Funktion in Webhosting-Tarifen ab 10.09.2024 nicht mehr enthalten ist. Den tatsächlichen Vertrag und die Aktivierung prüfen: https://www.ionos.de/hilfe/hosting/click-build-anwendungen/click-build-faq/ und https://www.ionos.de/hilfe/hosting/content-delivery-network-cdn/cdn-im-ionos-kundenkonto-aktivieren/. Keine unbestätigte Purge-API implementiert. Eine spätere geschützte Online-Verwaltung benötigt ein geeignetes Backend, Authentifizierung, TLS, getrennte Dateirechte und eine ausdrücklich konfigurierte Hosting-Schnittstelle. Den lokalen Studio-Server nicht öffentlich erreichbar machen.
+
+## Priorisierte Audit-Aufgaben und direkter Studio-Benchmark
+
+Der Audit erzeugt zusätzlich `priorities.json` und zeigt die 50 höchstpriorisierten unterschiedlichen Prüfaufgaben im Dashboard. Gleichartige Ressourcenhinweise werden über mehrere Seiten zusammengefasst; Budget- und Seitenhinweise bleiben seitenbezogen. Sortiert nach statischem Schweregrad, Zahl betroffener Seiten und Häufigkeit. Keine geschätzten Performance-Gewinne und keine automatischen Eingriffe.
+
+Im Studio erhält jeder erfolgreiche Optimierungslauf eine eigene unveränderte Ausgangskopie unter `baseline/site` sowie ein SHA-256-Inventar. Diese Kopie wird als Eingabe für die Optimierung verwendet und vor späteren Messungen erneut geprüft. Sie gehört zum jeweiligen Testlauf und wird bei bestätigter Bereinigung dieses alten Laufs zusammen mit dessen Berichten entfernt. Wichtige Sicherungen weiterhin außerhalb des Studio-Cacheordners aufbewahren.
+
+### Browser-Werkzeuge installieren und Benchmark starten
+
+```sh
+npm install --prefix .performance-browser-tools --save-exact playwright@1.56.1 lighthouse@12.8.2 pngjs@7.0.0 pixelmatch@7.1.0
+npx --prefix .performance-browser-tools playwright install chromium
+npm run performance:studio
+```
+
+Nach einem erfolgreichen Build im Studio „Performance messen“ wählen, Mobil oder Desktop auswählen. Drei Lighthouse-Läufe je Variante, abwechselnd ausgeführt. Die Oberfläche zeigt Fortschritt und eine Vergleichstabelle für Performance-Score, LCP, FCP, CLS, TBT und Speed Index. Die JSON-Datei im Benchmark-Unterordner enthält zusätzlich Min/Max-Spannweiten und Messkonfiguration. Nur die Startseite wird gemessen. Jeder Lauf startet eine frische lokale Browser-Messung; keine produktive Apache-Kompression, kein tatsächlicher Browser- oder CDN-Warmcache, keine Felddaten. Unterschiede können Messstreuung sein. Keine Veröffentlichung. Der CLI-Runner kann zwei separat bereitgestellte Builds vergleichen:
+
+```sh
+npm run performance:benchmark -- original-site optimized-site benchmark-report .performance-browser-tools mobile
+```
+
+Die neue GitHub-QA prüft den Start aus dem Studio mit sechs echten Lighthouse-Messungen einer synthetischen Testseite, nicht der echten CreAid-Website. Der vorherige QA-Lauf 45701738759 war vollständig erfolgreich, einschließlich Release-Plan, lokaler HTTP-Diagnose, Safe-Abnahme und Lighthouse-Smoke-Test. Der neue Benchmark und die priorisierte Audit-Ausgabe müssen im aktuellen CI-Lauf separat bestätigt werden.
