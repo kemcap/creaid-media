@@ -53,6 +53,8 @@ jobs:
           npm run performance:pipeline -- dist performance-pipeline "$RUNNER_TEMP/creaid-pipeline-config.json"
       - name: Real CreAid safe preview acceptance (no deployment)
         run: npm run performance:accept -- dist performance-pipeline/package performance-acceptance "$RUNNER_TEMP/creaid-browser-tools"
+      - name: Evaluate actual CreAid Balanced candidate (no deployment)
+        run: node scripts/performance/evaluate-balanced.mjs dist performance-balanced "$RUNNER_TEMP/creaid-opt-tools" "$RUNNER_TEMP/creaid-browser-tools"
       - name: Lighthouse smoke test (synthetic fixture only)
         run: node scripts/performance/test-browser-measurement.mjs "$RUNNER_TEMP/creaid-browser-tools" --lighthouse
       # Reports contain internal paths; keep them in the runner, not public artifacts.
