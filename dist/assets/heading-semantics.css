@@ -60,3 +60,36 @@ main .j-listing-head>p{grid-column:2;grid-row:2;min-width:0}
  main .method-heading>.cm-semantic-h2{margin-bottom:6px}
  main .method-heading>.cm-claim-h2{overflow-wrap:break-word}
 }
+
+/* Global CreAid signature: original homepage spring and rebound, shared by large visual headlines. */
+.cm-heading-dot, .hero-heading .hero-last .pink-dot{
+ display:inline-block!important;
+ width:.18em;height:.18em;
+ margin-left:.15em;
+ vertical-align:baseline;
+ background:var(--cm-heading-dot-color,#FA225B);
+ border-radius:50%;
+ color:transparent!important;
+ font-size:inherit!important;
+ line-height:0;
+ letter-spacing:0;
+ overflow:hidden;
+ transform-origin:center bottom;
+ animation:cm-hero-ball-hop 3s infinite;
+ pointer-events:none;
+}
+/* Dark dot on the existing fuchsia panels: the signature stays visible. */
+.a-pink,.statement-panel,.statement-stage,.cm-footer__lead{--cm-heading-dot-color:#1a1a1b}
+@keyframes cm-hero-ball-hop{
+  0%,62%,100%{transform:translateY(0) scale(1)}
+  65%{transform:translateY(0) scale(1.15,.8);animation-timing-function:cubic-bezier(.1,.6,.35,1)}
+  73%{transform:translateY(-.65em) scale(.94,1.07);animation-timing-function:cubic-bezier(.55,0,.95,.6)}
+  81%{transform:translateY(0) scale(.96,1.07)}
+  83%{transform:translateY(0) scale(1.28,.72);animation-timing-function:ease-out}
+  88%{transform:translateY(-.20em) scale(1);animation-timing-function:ease-in}
+  93%{transform:translateY(0) scale(1.12,.88)}
+  97%{transform:translateY(0) scale(1)}
+}
+@media(prefers-reduced-motion:reduce){
+ .cm-heading-dot,.hero-heading .hero-last .pink-dot{animation:none!important;transform:none!important}
+}
