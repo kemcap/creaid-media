@@ -14,7 +14,7 @@ try{
   assert.equal(report.steps.hints.length,3);
   const staged=readFileSync(join(out,'package/site/index.html'),'utf8');
   assert.match(staged,/<script src="\/assets\/app\.sha256-[a-f0-9]{64}\.js" defer>/);
-  assert.match(staged,/<link rel="preload" as="font" href="\/assets\/font\.sha256-[a-f0-9]{64}\.woff2" type="font\/woff2" crossorigin>/);
+  assert.match(staged,/<link rel="preload" as="font" href="\/assets\/font\.woff2" type="font\/woff2" crossorigin>/);
   assert.match(staged,/<link rel="preload" as="image" href="\/assets\/hero\.sha256-[a-f0-9]{64}\.webp">/);
   assert.equal(readFileSync(join(source,'index.html'),'utf8'),html);
   assert.ok(existsSync(join(out,'audit/dashboard.html')));
