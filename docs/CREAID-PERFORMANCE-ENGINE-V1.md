@@ -152,3 +152,13 @@ Vergleicht lokale Builds in Chromium auf 390 und 1440 Pixeln, jeweils am oberen 
 Lighthouse-Messungen und Medianvergleich bleiben eigene Befehle; die grafische Oberfläche exportiert die Konfiguration, orchestriert aber noch keine Browserläufe. Critical-CSS-Extraktion, JS-Verzögerung bis zur Interaktion, automatische Einbindung responsiver Varianten, vollständige visuelle Abnahme des tatsächlichen CreAid-Builds sowie Produktionsfreigabe bleiben offen.
 
 CI-Hinweis: V1.3-Coverage und bisherige Unit-Tests bestanden; der Lighthouse-Smoke-Test meldete Exit 1. V1.4 speichert private stderr-Diagnosen. Nur der synthetische Fixture-Test im CI-Runner darf den expliziten Sandbox-Fallback nutzen; normale Messungen behalten den Browser-Sandbox-Standard. Die Behebung ist bis zum erfolgreichen erneuten Test offen.
+
+## V1.4 – Abnahme des SAFE-Pakets für CreAid-Media
+
+Der V1.4-QA-Lauf 45699941343 (Commit 7920665275c1353e8ebb1d28f0a074b6dfee2391) bestand sämtliche Prüfungen einschließlich Lighthouse-Smoke-Test, Studio-Bedienung, visuelle Fixture-Regression und normalem Website-Build. Der Sandbox-Fallback gilt nur für das synthetische CI-Fixture; lokale Produktionsmessungen sind separat zu prüfen. Der Lauf bestätigte 122 HTML-Seiten und 153 verifizierte Asset-Fingerprints. Der statische Audit meldete 1238 Hinweise, nicht 1238 Fehler; eine Priorisierung und tatsächliche Performance-Messung stehen separat aus.
+
+```sh
+npm run performance:accept -- dist performance-v14/package acceptance-report .performance-browser-tools
+```
+
+Verwendet ausschließlich das SAFE-Paket ohne optionale Transformationen. Prüft die exakte HTML-Übereinstimmung nach Rückersetzung der generierten Fingerprint-URLs, unveränderte Original-Assets, die erwartete Dateiliste, Preview-no-store sowie alle kanonischen Routen aus der projektinternen Routing-Tabelle. Chromium vergleicht acht repräsentative Seiten (Startseite, Webdesign, Grafikdesign, Shopentwicklung, Kontakt, Blogübersicht, Blogartikel und Branchenlandingpage) bei 390 und 1440 Pixeln am oberen und mittleren Seitenabschnitt. Die 32 Bildvergleichspaare bleiben lokal/privat. Der neue Gate-Schritt ist separat im CI konfiguriert; erst ein erfolgreiches Ergebnis bestätigt die zusätzliche Abnahme. Keine IONOS-Rewrite-Prüfung, keine produktive Cache-Messung, keine Freigabe der optionalen Optimierungsprofile. Lighthouse-Smoke-Test ist keine Lighthouse-Messung der tatsächlichen Website. Vor einem produktiven Release separate echte Vorher-Nachher-Messungen und interaktive Funktionsprüfung durchführen.
