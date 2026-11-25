@@ -27,7 +27,7 @@ try {
   assert.equal(prod.verifiedAssets,3);
   assert.match(apachePolicy('production'),/immutable/);
   assert.match(apachePolicy('production'),/REQUEST_STATUS/);
-  assert.match(apachePolicy('production'),/DEFLATE/);
+  assert.match(apachePolicy('production'),/BROTLI_COMPRESS;DEFLATE/);
   assert.throws(()=>buildPerformance({source,output}),/isolated|new isolated/);
   assert.throws(()=>buildPerformance({source,output:join(source,'bad')}),/isolated/);
   const asset=join(output,'site',report.manifest[0].fingerprinted.slice(1));
@@ -38,6 +38,10 @@ try {
   writeFileSync(join(source,'index.html'),html);
   writeFileSync(join(source,'robots.txt'),'User-agent: *\nDisallow: /\n');
   assert.throws(()=>buildPerformance({source,output:join(root,'blocked2'),profile:'production',approved:true}),/robots/);
+  rmSync(join(source,'robots.txt'));
+  writeFileSync(join(source,'handler.php'),'<?php echo 1;');
+  assert.throws(()=>buildPerformance({source,output:join(root,'executable'),profile:'production',approved:true}),/Executable/);
+  rmSync(join(source,'handler.php'));
   writeFileSync(join(source,'.htaccess'),'Header set Cache-Control "public"\n');
   assert.throws(()=>buildPerformance({source,output:join(root,'conflict')}),/reconciliation/);
   assert.throws(()=>apachePolicy('invalid'),/Unknown/);
