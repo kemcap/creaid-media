@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {mkdirSync,writeFileSync} from 'node:fs';
+import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {chromium,firefox,webkit} from 'playwright';
 import pixelmatch from 'pixelmatch';
@@ -10,6 +10,16 @@ const base=process.env.CREAID_QA_URL||'http://127.0.0.1:8080';
 const reference=process.env.CREAID_QA_BASELINE||'';
 const out=process.env.CREAID_QA_OUTPUT||'qa-results';
 const all=Object.keys(routeFiles);
+// A historical route inventory distinguishes new content from a broken baseline.
+// Never infer absence from a failed HTTP request: existing baseline routes must load.
+const baselineManifest=process.env.CREAID_QA_BASELINE_ROUTES||'';
+if(reference&&!baselineManifest)throw Error('CREAID_QA_BASELINE_ROUTES is required when a reference is configured');
+const baselineRoutes=new Set(reference?Object.values(JSON.parse(readFileSync(baselineManifest,'utf8'))):[]);
+if(reference&&(!baselineRoutes.size||[...baselineRoutes].some(r=>typeof r!=='string'||!r.startsWith('/'))))throw Error('Invalid baseline route inventory');
+const sharedRoutes=reference?all.filter(r=>baselineRoutes.has(r)):[];
+const newRoutes=reference?all.filter(r=>!baselineRoutes.has(r)):[];
+const removedRoutes=reference?[...baselineRoutes].filter(r=>!Object.hasOwn(routeFiles,r)):[];
+const newRouteCaptures=[];
 const representative=['/','/webdesign','/grafikdesign-2','/digitales-marketing','/ki-automatisierung','/leistungen','/online-shop-entwicklung','/webdesign/webdesign-fuer-aerzte','/kontakt','/referenzen','/ueber-uns','/creaid-blog','/google-ads-aber-keine-anfragen','/category/seo','/impressum','/performance-audit-3'].filter(r=>all.includes(r));
 const errors=[],results=[],differences=[];
 mkdirSync(out,{recursive:true});
@@ -63,6 +73,9 @@ async function inspect(page,route,viewport,engine,compare){
   if(compare){
    await readyForScreenshot(page);
    const actual=await page.screenshot({animations:'disabled',caret:'hide',path:join(out,id+'-current.png')});
+   if(!baselineRoutes.has(route)){
+    newRouteCaptures.push({id,route,viewport,screenshot:id+'-current.png',status:'new-route-no-historical-reference'});
+   }else{
    const refPage=await page.context().newPage();
    try{
     await settle(refPage,reference+route);
@@ -72,6 +85,7 @@ async function inspect(page,route,viewport,engine,compare){
     const changed=pixelmatch(a.data,b.data,diff.data,a.width,a.height,{threshold:.15});const fraction=changed/(a.width*a.height);
     if(fraction>.005){differences.push({id,changedFraction:fraction});writeFileSync(join(out,id+'-diff.png'),PNG.sync.write(diff));}
    }finally{await refPage.close();}
+   }
   }
  }catch(e){localErrors.push(String(e.message||e));}
  finally{page.off('pageerror',onError);page.off('response',onResponse);page.off('requestfailed',onRequestFailed);page.off('request',onRequest);}
@@ -139,8 +153,14 @@ for(const [engine,launcher] of Object.entries({chromium,firefox,webkit})){
   }
  }finally{await browser.close();}
 }
-const report={routeCount:all.length,representativeCount:representative.length,renderings:results.length,errors,visualDifferences:differences,results};
+const referenceCoverage=reference?{baselineRouteCount:baselineRoutes.size,sharedRouteCount:sharedRoutes.length,newRoutes,removedRoutes,newRouteCaptures,visualReviewRequired:differences.length>0||newRouteCaptures.length>0||removedRoutes.length>0}:null;
+const report={routeCount:all.length,representativeCount:representative.length,renderings:results.length,errors,referenceCoverage,visualDifferences:differences,results};
 writeFileSync(join(out,'report.json'),JSON.stringify(report,null,2));
-console.log(JSON.stringify({routeCount:all.length,renderings:results.length,errors,visualDifferences:differences},null,2));
+console.log(JSON.stringify({routeCount:all.length,renderings:results.length,errors,referenceCoverage,visualDifferences:differences},null,2));
 assert.equal(errors.length,0,'Browser QA found functional or layout errors');
-assert.equal(differences.length,0,'Visual differences require review; see screenshots');
+if(reference){
+ assert.equal(removedRoutes.length,0,'Historical canonical routes removed; review required');
+ assert.equal(newRouteCaptures.length,newRoutes.length*sizes.length,'Missing screenshots for new routes');
+}
+assert.equal(differences.length,0,'Visual differences on shared routes require review; see screenshots');
+if(newRouteCaptures.length)console.log('New routes require initial visual review; candidate screenshots are provided separately.');
