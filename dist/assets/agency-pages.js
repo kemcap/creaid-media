@@ -58,6 +58,7 @@
   document.querySelectorAll('[data-service]').forEach(link=>link.addEventListener('click',()=>{const sel=document.querySelector('#aService');if(sel)sel.value=link.getAttribute('data-service');}));
   const form=document.querySelector('#agencyEnquiry');
   if(form){const params=new URLSearchParams(location.search);if(params.get('service')){const sel=form.querySelector('[name="service"]');const requested=params.get('service');const legacy={'Marketing & Branding':'Digitales Marketing'};const option=[...sel.options].find(x=>x.value===(legacy[requested]||requested));if(option)sel.value=option.value;}
+    const packageName=params.get('paket');const allowedPackages=["Starter","Wachstum","Dominanz","Praxis-Kompakt","Praxis-Plus","Praxis-Premium","Immo-Kompakt","Immo-Plus","Immo-Premium"];const message=form.querySelector('[name="message"]');if(allowedPackages.includes(packageName)&&message&&!message.value)message.value='Ich interessiere mich für das Paket '+packageName+'.\n\n';
     form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;
       const data=new FormData(form);
       const subject=`Projektanfrage CreAid-Media: ${String(data.get('service')||'Allgemein').slice(0,80)}`;
