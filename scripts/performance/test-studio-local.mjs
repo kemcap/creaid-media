@@ -21,11 +21,11 @@ try{
   const olderSession=join(out,'run-00000000-0000-4000-8000-000000000000');
   mkdirSync(olderSession);writeFileSync(join(olderSession,'keep.txt'),'old session');
   const backup=join(root,'backup');mkdirSync(backup);writeFileSync(join(backup,'index.html'),original);
-  server=await startStudio({source,outputRoot:out,port:0});
+  const toolRoot=resolve(process.argv[2]??'.');
+  server=await startStudio({source,outputRoot:out,browserToolRoot:toolRoot,port:0});
   assert.equal((await fetch(server.origin+'/api/status')).status,403);
   assert.equal((await fetch(server.origin+'/api/run',{method:'POST',headers:{'Content-Type':'application/json'},body:'{"schemaVersion":1}'})).status,403);
   assert.equal((await fetch(server.origin+'/api/cache/clear',{method:'POST',headers:{'Content-Type':'application/json'},body:'{"confirm":"remove-previous-session-runs"}'})).status,403);
-  const toolRoot=resolve(process.argv[2]??'.');
   const {chromium}=createRequire(join(toolRoot,'package.json'))('playwright');
   browser=await chromium.launch({headless:true});
   const page=await browser.newPage();
@@ -66,6 +66,15 @@ try{
   const diagnostic=JSON.parse(await page.locator('#diagnosisResult').textContent());
   assert.equal(diagnostic.requests,2);assert.equal(diagnostic.reportedHits,0);
   assert.ok(diagnostic.rows.every(r=>r.status===200&&r.cache==='not-suitable-for-shared-warmup'));
+  assert.equal(readFileSync(join(newer.output,'baseline','site','index.html'),'utf8'),original);
+  if(process.argv.includes('--benchmark')){
+    if(process.env.CI==='true')process.env.CREAID_LIGHTHOUSE_CI_FIXTURE='1';
+    await page.locator('#runBenchmark').click();
+    await page.waitForFunction(()=>document.querySelector('#benchmarkStatus').textContent.startsWith('Abgeschlossen'),{},{timeout:240000});
+    assert.equal(await page.locator('#benchmarkTable tbody tr').count(),6);
+    assert.equal(await page.locator('#runBenchmark').isEnabled(),true);
+    console.log('PASS: real six-run Lighthouse comparison from Studio with saved baseline');
+  }
   assert.deepEqual(errors,[]);
   console.log('PASS: local Studio UI starts real safe pipeline, report opens, authorization, confirmed old-run cleanup and source/backup preservation');
 }finally{if(browser)await browser.close();if(server)await server.close();rmSync(root,{recursive:true,force:true});}
