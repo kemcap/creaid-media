@@ -1,12 +1,20 @@
 name: IONOS - Website hochladen (Vorschau)
 on:
   workflow_dispatch:
+    inputs:
+      preview_cache:
+        description: "Normaler Upload / Vorschau-Cache aktivieren / deaktivieren"
+        type: choice
+        options: [normal, enabled, disabled]
+        default: normal
+        required: true
   push:
     branches: [main]
     paths:
       - 'src/**'
       - 'public/**'
       - 'scripts/**'
+      - '!scripts/performance/**'
       - 'eleventy.config.js'
       - 'package.json'
       - 'package-lock.json'
@@ -47,6 +55,11 @@ jobs:
           npm run test:routes -- http://127.0.0.1:8080
       - name: Prepare protected preview and Apache routing
         run: node .github/scripts/prepare-ionos.mjs
+      - name: Prepare isolated cache-only candidate
+        if: github.event_name == 'workflow_dispatch' && inputs.preview_cache != 'normal'
+        run: |
+          node scripts/performance/test-prepare-candidate.mjs
+          node .github/scripts/prepare-preview-cache.mjs
       - name: Install SFTP client
         run: |
           if ! /usr/bin/python3 -c 'import paramiko'; then
@@ -55,6 +68,7 @@ jobs:
           fi
       - name: Upload only to dedicated IONOS preview directory
         env:
+          CREAID_PREVIEW_CACHE_MODE: ${{ inputs.preview_cache || 'normal' }}
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}

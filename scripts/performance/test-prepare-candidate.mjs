@@ -8,7 +8,8 @@ const root=mkdtempSync(join(tmpdir(),'creaid-perf-'));
 try{
   const source=join(root,'dist'),out=join(root,'candidate');
   mkdirSync(join(source,'assets'),{recursive:true});
-  const html='<html><meta name="robots" content="noindex,nofollow,noarchive"><link href="/assets/style.css" rel="stylesheet"><img src="/assets/a.webp" srcset="/assets/a.webp 1x, /assets/b.webp 2x"><a href="/kontakt#anfrage">Kontakt</a><script src="/assets/app.js?v=1"></script><img src="https://example.test/external.webp"></html>';
+  const raw = `<script>const sample = '<img src="/assets/missing.webp">';</script><!-- <img src="/assets/missing.webp"> --><textarea><img src="/assets/missing.webp"></textarea>`;
+  const html='<html><meta name="robots" content="noindex,nofollow,noarchive"><link href="/assets/style.css" rel="stylesheet"><img src="/assets/a.webp" srcset="/assets/a.webp 1x, /assets/b.webp 2x"><a href="/kontakt#anfrage">Kontakt</a><script src="/assets/app.js?v=1"></script><img src="https://example.test/external.webp">'+raw+'</html>';
   writeFileSync(join(source,'index.html'),html);
   writeFileSync(join(source,'assets/style.css'),'body{background:url(a.webp)}');
   writeFileSync(join(source,'assets/app.js'),'console.log("test")');
@@ -19,6 +20,7 @@ try{
   assert.equal(readFileSync(join(source,'index.html'),'utf8'),html);
   const updated=readFileSync(join(out,'site/index.html'),'utf8');
   assert.ok(updated.includes('noindex,nofollow,noarchive'));
+  assert.ok(updated.includes(raw));
   assert.ok(updated.includes('/kontakt#anfrage'));
   assert.ok(updated.includes('https://example.test/external.webp'));
   for(const row of report.manifest){
