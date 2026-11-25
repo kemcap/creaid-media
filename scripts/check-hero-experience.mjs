@@ -228,7 +228,7 @@ console.log('PASS: 87 original sitemap URLs mapped, 99 content pages, 20 archive
 // Phase 6: full page-specific semantic outline, rendered in HTML before JS.
 const headingPlan=JSON.parse(load('src/_data/headingPlan.json'));
 assert.equal(Object.keys(headingPlan).length,99);
-const decode=t=>t.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
+const decode=t=>t.replace(/(?:&#8288;|\u2060)?<span class="cm-heading-dot" aria-hidden="true">(\.?)<\/span>/g,'$1').replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
 const uniqueH1=new Set();
 for(const [key,plan] of Object.entries(headingPlan)){
  const html=load('dist/'+key+'.html'),main=html.match(/<main\b[^>]*>[\s\S]*?<\/main>/)?.[0];

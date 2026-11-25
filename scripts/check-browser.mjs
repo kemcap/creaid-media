@@ -86,6 +86,18 @@ async function interactionTests(browser){
   await p.setViewportSize({width:1440,height:900});const summary=p.locator('.cm-header__services summary');await summary.click();assert.equal(await p.locator('.cm-header__services').getAttribute('open'),'');await p.keyboard.press('Escape');assert.equal(await p.locator('.cm-header__services').getAttribute('open'),null);assert.ok(await summary.evaluate(e=>document.activeElement===e));
   await settle(p,base+'/kontakt?service=Webdesign%20%26%20Entwicklung');assert.equal(await p.locator('#agencyEnquiry [name=service]').inputValue(),'Webdesign & Entwicklung');
   assert.ok(await p.locator('#agencyEnquiry').isVisible()); // do not submit any enquiry
+  // Signature dot shares the homepage timing; reduced-motion disables it.
+  for(const route of ['/', '/webdesign','/webdesign/webdesign-fuer-aerzte','/creaid-blog','/kontakt','/google-ads-aber-keine-anfragen']){
+   await settle(p,base+route);
+   const dot=p.locator('main .hero-heading .pink-dot, main .cm-claim-h1 .cm-heading-dot, main h1 .cm-heading-dot').first();
+   assert.ok(await dot.count(),route+' missing signature dot');
+   assert.equal(await dot.evaluate(e=>getComputedStyle(e).animationName),'none',route+' reduced motion');
+   assert.equal(await dot.getAttribute('aria-hidden'),'true');
+  }
+  await p.emulateMedia({reducedMotion:'no-preference'});
+  await settle(p,base+'/webdesign');
+  assert.equal(await p.locator('main .cm-claim-h1 .cm-heading-dot').first().evaluate(e=>getComputedStyle(e).animationName),'cm-hero-ball-hop');
+  await p.emulateMedia({reducedMotion:'reduce'});
   await settle(p,base+'/creaid-blog');
   const search=p.locator('#jSearch');await search.fill('ZZZ-QA-NO-MATCH-987654');assert.equal(await p.locator('.j-card[data-cat]:visible').count(),0);await search.fill('');assert.ok(await p.locator('.j-card[data-cat]:visible').count()>0);
   await settle(p,base+'/google-ads-aber-keine-anfragen');

@@ -1,5 +1,6 @@
 import {readFileSync} from 'node:fs';
 import {basename} from 'node:path';
+import {decorateHeading} from './heading-dot.mjs';
 const plans=JSON.parse(readFileSync(new URL('../src/_data/headingPlan.json',import.meta.url),'utf8'));
 const esc=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const plain=s=>s.replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim();
@@ -10,7 +11,7 @@ function creative(level,attrs,body,label){
  const sem='<h'+level+' class="cm-semantic-heading cm-semantic-h'+level+'"'+(id?' id="'+id+'"':'')+'>'+esc(label)+'</h'+level+'>';
  // Existing topic label is replaced by the visible H1, not duplicated.
  if(level===1)body=body.replace(/<span class="sp-h1-topic">[\s\S]*?<\/span>/,'');
- return sem+'<div'+addClass(keep,'cm-claim-h'+level)+'>'+body+'</div>';
+ return sem+'<div'+addClass(keep,'cm-claim-h'+level)+'>'+decorateHeading(body)+'</div>';
 }
 export function transformHeadings(html,outputPath){
  if(!outputPath?.endsWith('.html'))return html;

@@ -53,13 +53,14 @@ assert(globalCSS.includes('Compact global footer'), 'Compact footer CSS missing'
 assert(globalCSS.includes('padding:38px 0 34px') &&
        globalCSS.includes('padding:29px 0 33px'),
        'Compact footer spacing missing');
-assert(html.includes('Ideen verdienen <em>Wirkung.</em>'),
+assert(html.includes('Ideen verdienen <em>Wirkung&#8288;<span class="cm-heading-dot" aria-hidden="true">.</span></em>'),
        'Compact footer heading must use natural wrapping');
 
 console.log('Homepage verified: time-staggered cards and mockups, one mask-based statement/contact section, separate global footer, fallback states.');
 
 assert(html.includes('<span class="pink-dot" aria-hidden="true"></span>'),'Decorative hero ball missing');
-assert(css.includes('animation:cm-hero-ball-hop 3s infinite'),'Hero ball needs a three-second loop');
-assert(css.includes('margin-left:.15em')&&css.includes('translateY(-.65em)')&&css.includes('translateY(-.20em)'),'Hero ball spacing and rebound must match approved prototype');
-assert(css.includes('animation:none!important;transform:none!important'),'Reduced-motion fallback missing');
+const signatureCSS=readFileSync('dist/assets/heading-semantics.css','utf8');
+assert(signatureCSS.includes('animation:cm-hero-ball-hop 3s infinite'),'Hero ball needs a three-second loop');
+assert(signatureCSS.includes('margin-left:.15em')&&signatureCSS.includes('translateY(-.65em)')&&signatureCSS.includes('translateY(-.20em)'),'Hero ball spacing and rebound must match approved prototype');
+assert(signatureCSS.includes('animation:none!important;transform:none!important'),'Reduced-motion fallback missing');
 console.log('PASS: decorative homepage ball, elastic rebound, spacing and reduced motion.');
