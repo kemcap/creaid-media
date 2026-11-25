@@ -15,7 +15,9 @@ jobs:
   synchronize:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    timeout-minutes: 50
+    env:
+      CREAID_PREVIEW_CACHE_MODE: ${{ vars.IONOS_PREVIEW_CACHE == 'disabled' && 'normal' || 'auto' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -55,7 +57,9 @@ jobs:
       - name: Prepare IONOS root paths, nested routing without MultiViews and noindex
         run: |
           mkdir -p "$REFERENCE_DIR/.github/scripts"
-          cp .github/scripts/prepare-ionos.mjs .github/scripts/upload-ionos.py .github/scripts/clean-upload-ionos.py "$REFERENCE_DIR/.github/scripts/"
+          cp .github/scripts/prepare-ionos.mjs .github/scripts/upload-ionos.py .github/scripts/clean-upload-ionos.py .github/scripts/prepare-preview-cache.mjs .github/scripts/preview_cache_activation.py .github/scripts/publish_cached_preview.py .github/scripts/test-cache-browser.sh "$REFERENCE_DIR/.github/scripts/"
+          mkdir -p "$REFERENCE_DIR/scripts/performance"
+          cp scripts/performance/prepare-candidate.mjs scripts/performance/engine.mjs scripts/performance/preview-hosting.mjs "$REFERENCE_DIR/scripts/performance/"
           cd "$REFERENCE_DIR"
           node .github/scripts/prepare-ionos.mjs
           node scripts/preview.mjs > "$RUNNER_TEMP/preview.log" 2>&1 &
@@ -66,6 +70,12 @@ jobs:
             sleep 1
           done
           node scripts/check-routes.mjs http://127.0.0.1:8080
+      - name: Prepare cache candidate after verifying the approved reference
+        if: env.CREAID_PREVIEW_CACHE_MODE == 'auto'
+        run: |
+          cd "$REFERENCE_DIR"
+          node .github/scripts/prepare-preview-cache.mjs
+          bash .github/scripts/test-cache-browser.sh
       - name: Install SFTP client
         run: |
           if ! /usr/bin/python3 -c 'import paramiko'; then
