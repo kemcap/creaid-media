@@ -38,6 +38,7 @@ jobs:
           "$RUNNER_TEMP/creaid-browser-tools/node_modules/.bin/playwright" install --with-deps chromium
       - run: node scripts/performance/test-browser-measurement.mjs "$RUNNER_TEMP/creaid-browser-tools"
       - run: node scripts/performance/test-studio-visual.mjs "$RUNNER_TEMP/creaid-browser-tools"
+      - run: node scripts/performance/test-studio-local.mjs "$RUNNER_TEMP/creaid-browser-tools"
       - run: npm run verify
       - run: npm run performance:preview -- dist performance-preview
       - run: npm run performance:audit -- dist performance-audit
