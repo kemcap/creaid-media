@@ -1,4 +1,4 @@
-# CreAid Performance Engine V1.2
+# CreAid Performance Engine V1.3
 
 Wiederverwendbarer, optionaler Node-22-Buildschritt für statische Websites mit Root-Assetpfaden /assets/. Kein WordPress-Plugin, kein Service Worker, keine Serverinstallation. Das Modul verändert weder Quelldateien noch den normalen Build oder das Deployment.
 
@@ -85,3 +85,47 @@ Der Vergleich berechnet Median, Spannweite und Delta für Performance-Score, LCP
 ### Bewusst offen
 
 Critical CSS und automatische JS-Verzögerung werden nicht ohne echte Browser-Coverage, Prüfung dynamischer Zustände und visuelle/interaktive Regression aktiviert. Das Dashboard ist eine lokale HTML-Auswertung, kein Server-Adminpanel. IONOS-Header, tatsächliche Kompression, Live-Caching, Lighthouse-Messungen der realen Website und Freigabe des produktiven Builds bleiben separate Abnahmen.
+
+## V1.3 – Zentrale Pipeline, Ressourcenhinweise und Browsermessungen
+
+Alle Transformationen bleiben explizit, optional und ausschließlich in einer isolierten Vorschau. Beispiel für die zentrale JSON-Konfiguration:
+
+```json
+{
+  "schemaVersion": 1,
+  "optimize": {"files":["assets/example.css","assets/example.js"]},
+  "responsive": {"images":["assets/example.jpg"],"widths":[320,640,1024],"quality":82},
+  "hints": {
+    "index.html": {
+      "deferScripts":["/assets/example.js"],
+      "preloadFonts":["/assets/example.woff2"],
+      "preloadImages":["/assets/hero.webp"]
+    }
+  },
+  "auditBudgets":{"html":153600,"css":204800,"js":307200,"image":409600}
+}
+```
+
+Dateinamen sind Beispiele; nur tatsächliche und geprüfte Ressourcen eintragen. Minimal: {"schemaVersion":1}. Fehlende Module sind deaktiviert. Der optionale Optimizer-Toolordner wird nur für die jeweiligen Bild-/Minify-Module benötigt.
+
+```sh
+npm run performance:pipeline -- dist performance-v13 config.json .performance-tools
+```
+
+Reihenfolge: optionale Minifizierung/Bildvarianten → gezielte Ressourcenhinweise → Fingerprinting und Preview-Cache-Policy → privater Audit. Ergebnis unter performance-v13/package/site; alle Berichte außerhalb dieses Site-Ordners. Kein Produktionsmodus in der Pipeline. Keine automatische srcset-Einbindung. Schrift-Preloads behalten die Original-URL, weil die CSS-internen Font-URLs nicht umgeschrieben werden. Prüfen, dass die exakt vorgeladene Fontdatei auch tatsächlich verwendet wird. Skript-defer verändert Ausführungszeitpunkt; nur nach Prüfung aller Abhängigkeiten, Inline-Skripte und Animationen freigeben. Kein pauschaler Delay bis zur Interaktion. Preload nur für bewusst ausgewählte LCP-Bilder (einfaches eager img) und Schriften.
+
+### Browser-Coverage und Lighthouse
+
+Separater Toolordner; eigene Lockdatei aufbewahren:
+```sh
+npm install --prefix .performance-browser-tools --save-exact playwright@1.56.1 lighthouse@12.8.2
+npx --prefix .performance-browser-tools playwright install chromium
+npm run performance:coverage -- dist coverage.json .performance-browser-tools /
+npm run performance:lighthouse -- dist lighthouse-before .performance-browser-tools lighthouse-config.json
+```
+
+Lighthouse-Konfiguration: {"routes":["/"],"runs":3,"formFactor":"mobile"}. Weitere Routen als lokale Pfade; der interne Server unterstützt direkte Dateien, .html- und index.html-Auflösung, nicht alle projektspezifischen Rewrite-Regeln. Für die Nachher-Messung denselben Aufruf mit dem erzeugten Site-Ordner, identischer Konfiguration und einem neuen Berichtsordner verwenden. Vergleiche anschließend die JSON-Messungen mit V1.2 compare-lighthouse. Messungen auf derselben Maschine ausführen. Nur synthetische Fixtures in CI messen; tatsächliche Website lokal und privat messen. Externe Ressourcen werden bei Coverage per Browser-Routing blockiert und bei Lighthouse durch einen absichtlich nicht erreichbaren Proxy eingeschränkt; das ist keine vollständige Netzisolation. Nur vertrauenswürdige statische Builds in isolierten Umgebungen ohne Zugangsdaten ausführen. Keine Rohberichte, Screenshots oder vertraulichen Daten veröffentlichen.
+
+CSS-Coverage erfasst initiale und gescrollte Zustände auf 390 und 1440 Pixeln, meldet verwendete Bereiche und nicht beobachtete Zeichen. Dies ist ein Prüfwerkzeug, keine sichere Critical-CSS-Extraktion. Hover, Fokus, Navigation, Dialoge, Media Queries und dynamische Animationen benötigen zusätzliche Tests. Kein automatisches Entfernen von CSS. Lighthouse läuft gegen einen no-store-Loopback-Server; weder produktive HTTP-Kompression noch IONOS-Warmcache werden damit nachgewiesen. CI testet eine synthetische Lighthouse-Messung; kein Score-Ziel und kein Nachweis realer Website-Verbesserungen.
+
+Verweise: https://playwright.dev/docs/api/class-coverage und https://github.com/GoogleChrome/lighthouse/blob/main/docs/readme.md.
