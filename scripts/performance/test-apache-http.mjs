@@ -90,7 +90,10 @@ async function scenario(profile,compression){
     assert.equal(page.body.toString(),readFileSync(join(site,'index.html'),'utf8'));
     assert.equal(page.headers['cache-control'],profile==='production'?'no-cache, must-revalidate':'no-store, no-cache, must-revalidate, max-age=0');
     const original=await get(port,'/assets/main.css');
-    assert.match(original.headers['cache-control'],/no-store/);
+    assert.equal(original.headers['cache-control'],profile==='production'?'no-cache, must-revalidate':'no-store, no-cache, must-revalidate, max-age=0');
+    const orig304=await get(port,'/assets/main.css',{'If-None-Match':original.headers.etag});
+    assert.equal(orig304.status,304);
+    assert.equal(orig304.headers['cache-control'],original.headers['cache-control']);
     const missing=await get(port,'/assets/missing.sha256-'+('0'.repeat(64))+'.css');
     assert.equal(missing.status,404);
     assert.match(missing.headers['cache-control'],/no-store/);
