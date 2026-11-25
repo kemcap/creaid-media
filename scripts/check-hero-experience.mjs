@@ -161,7 +161,7 @@ const serviceDepth=JSON.parse(load('src/_data/serviceDepth.json'));
 const previewDrafts=JSON.parse(load('src/_data/wordpressPreviewDrafts.json'));
 const previewArticles=JSON.parse(load('src/_data/wordpressPreviewArticles.json'));
 const importCount=Object.keys(previewDrafts).length+Object.keys(previewArticles).length;
-assert.equal(Object.keys(pageMeta).length,98+importCount);
+assert.equal(Object.keys(pageMeta).length,99+importCount);
 assert.equal(postIndex.length,39+importCount);
 assert.equal(Object.values(pageMeta).filter(p=>p.isPost).length,39+importCount);
 assert.equal(new Set(postIndex.map(p=>p.slug)).size,39+importCount);
@@ -223,11 +223,11 @@ assert.equal(new Set(legacyCoverage.map(row=>row.url)).size,87);
 for(const row of legacyCoverage){assert.ok(Object.values(routeMap).includes(row.target),'Missing target '+row.url);assert.ok(row.url===row.target||aliasMap[row.url]===row.target,'Missing legacy alias '+row.url);}
 for(const name of ['webdesign-aerzte','webdesign-immobilienmakler']){const html=load('dist/'+name+'.html');assert.ok(html.includes('sp-hero')&&html.includes('sp-story')&&html.includes('id="projektumfang"')&&html.includes('/assets/service-crosshair.js'));assert.ok(html.includes('/kontakt?service='));assert.ok(contact.includes('value="'+serviceDepth[name].topic+'"'));}
 for(const row of legacyCoverage.filter(x=>x.url.startsWith('/category/'))){const key=Object.keys(routeMap).find(k=>routeMap[k]===row.url);assert.ok(load('dist/'+key+'.html').includes('class="j-card"'));}
-console.log('PASS: 87 original sitemap URLs mapped, 98 content pages, 19 archives and 2 restored industry landing pages.');
+console.log('PASS: 87 original sitemap URLs mapped, 99 content pages, 20 archives and 2 restored industry landing pages.');
 
 // Phase 6: full page-specific semantic outline, rendered in HTML before JS.
 const headingPlan=JSON.parse(load('src/_data/headingPlan.json'));
-assert.equal(Object.keys(headingPlan).length,98);
+assert.equal(Object.keys(headingPlan).length,99);
 const decode=t=>t.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
 const uniqueH1=new Set();
 for(const [key,plan] of Object.entries(headingPlan)){
@@ -248,7 +248,7 @@ for(const [key,plan] of Object.entries(headingPlan)){
 assert.ok(load('dist/index.html').includes('ERSTE HILFE')&&load('dist/index.html').includes('hero-heading'));
 assert.ok(load('dist/assets/home-motion-v5.js').includes('.cap-intro .cm-claim-h2'));
 assert.ok(load('dist/assets/motion-v4.js').includes('.detail-top .cm-claim-h2'));
-console.log('PASS: all 98 pages have unique, visible H1 headings and no H1–H3 level jumps; creative claims and animation hooks preserved.');
+console.log('PASS: all 99 pages have unique, visible H1 headings and no H1–H3 level jumps; creative claims and animation hooks preserved.');
 
 
 // Phase 6 layout regression: explicit placements preserve the original heading

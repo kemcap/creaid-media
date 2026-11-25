@@ -1,0 +1,50 @@
+name: Optimization candidate QA (no deployment)
+on:
+  push:
+    branches: [optimization/full-website-ui-ux]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/optimization/full-website-ui-ux'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+      - run: node scripts/check-global-shell.mjs
+      - run: node scripts/check-home-motion.mjs
+      - run: node scripts/check-optimization-phase3.mjs
+      - run: node scripts/performance/test-prepare-candidate.mjs
+      - run: node scripts/performance/prepare-candidate.mjs dist performance-candidate
+      - name: Install isolated browser test tools
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1 pixelmatch@7.1.0 pngjs@7.0.0
+          npx playwright install --with-deps chromium firefox webkit
+      - name: Run local candidate browser and route checks
+        run: |
+          node scripts/preview.mjs > "$RUNNER_TEMP/optimization-preview.log" 2>&1 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:routes -- http://127.0.0.1:8080
+          npm run test:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: optimization-candidate-report
+          path: |
+            qa-results/
+            performance-candidate/report.json
+            performance-candidate/cache-policy.*.conf
+          if-no-files-found: warn
+          retention-days: 14

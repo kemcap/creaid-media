@@ -30,3 +30,7 @@
 .statement-contact-stage .statement-layout,.statement-contact-stage .contact-layout{height:auto;min-height:100vh}
 .statement-contact-stage .statement-mask-edge{display:none}
 .contact-scroll-anchor{top:100vh}
+
+/* Without JavaScript, mobile navigation remains accessible. */
+@media(max-width:860px){.cm-header .cm-header__nav{display:flex}.cm-header .cm-header__toggle{display:none}}
+

@@ -267,3 +267,12 @@ body :is(.cm-header__cta,.cm-footer__lead-cta,.button-primary,.cta,.a-btn:not(.a
   main > .sp-story .sp-art-panel[data-art="2"]{order:6}
   main > .sp-story .sp-demo-watermark{position:static;order:7;align-self:flex-end;color:#c6c1c6;font-size:10px}
 }
+
+/* Preserve the palette while using readable foregrounds in the homepage stories. */
+.capabilities-stage :is(.eyebrow-dark, .cap-intro > p, .stage-footer),
+.method-stage :is(.method-overline, .method-heading > p, .method-count, .method-card > p, .stage-footer) { color: #595256; }
+.capabilities-stage .chapter-next, .method-stage .chapter-next { color: #a02246; }
+.work-stage :is(.eyebrow-pink, .chapter-next) { color: #ff6b95; }
+.work-stage .stage-footer, .contact-progress { color: #a6a3a8; }
+.portfolio-entry { background-color: #b3284f; }
+.statement-footer { color: #241017; }

@@ -1,7 +1,17 @@
+import { editorialArticle } from './scripts/journal-editorial.mjs';
 import { redirect, routeFiles } from './scripts/routes.mjs';
 import { transformHeadings } from './scripts/heading-semantics.mjs';
 
 export default function (eleventyConfig) {
+  eleventyConfig.addFilter('editorialArticle', editorialArticle);
+  eleventyConfig.addFilter('previewArticleLinks', (html) => html.replace(
+    /(<a\b[^>]*?\shref=["'])https:\/\/creaid-media\.de(\/[^"']*)(?=["'])/gi,
+    (link, prefix, path) => {
+      const url = new URL(path.replaceAll('&amp;', '&'), 'https://creaid-media.de');
+      const target = redirect(url) ?? (Object.hasOwn(routeFiles, url.pathname) ? url.pathname + url.search : null);
+      return target ? prefix + target.replaceAll('&', '&amp;') + url.hash : link;
+    }
+  ));
   eleventyConfig.addPassthroughCopy({ 'public/assets': 'assets' });
   eleventyConfig.addPassthroughCopy({ 'public/robots.txt': 'robots.txt' });
   for (const subset of ['latin', 'latin-ext']) {
