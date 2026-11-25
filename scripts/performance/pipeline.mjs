@@ -5,6 +5,7 @@ import {tmpdir} from 'node:os';
 import {pathToFileURL} from 'node:url';
 import {optimizeInput} from './optimize-input.mjs';
 import {responsiveCandidates} from './responsive-images.mjs';
+import {integrateResponsive} from './integrate-responsive.mjs';
 import {applyHints} from './resource-hints.mjs';
 import {buildPerformance} from './engine.mjs';
 import {writeAudit} from './audit.mjs';
@@ -26,7 +27,7 @@ export async function runPipeline({source,output,config={},toolRoot}){
   const steps={};
   try{
     if(config.optimize){const out=join(work,'optimized');steps.optimize=await optimizeInput({source:current,output:out,config:config.optimize,toolRoot});current=join(out,'site');}
-    if(config.responsive){const out=join(work,'responsive');steps.responsive=await responsiveCandidates({source:current,output:out,config:config.responsive,toolRoot});current=join(out,'site');}
+    if(config.responsive){const out=join(work,'responsive');steps.responsive=await responsiveCandidates({source:current,output:out,config:config.responsive,toolRoot});current=join(out,'site');if(config.responsive.integrate!==undefined)steps.responsiveIntegration=integrateResponsive(current,steps.responsive,config.responsive.integrate);}
     if(config.hints&&Object.keys(config.hints).length){
       if(current===source){current=join(work,'hints');cpSync(source,current,{recursive:true,errorOnExist:true,force:false});}
       steps.hints=applyHints(current,config.hints);
