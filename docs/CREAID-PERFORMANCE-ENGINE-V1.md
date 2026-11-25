@@ -188,3 +188,25 @@ Im lokalen Modus (`npm run performance:studio`) erscheint der Bereich „Lokalen
 Der HTTP-Cache der Website wird dadurch nicht geleert: Inhaltsänderungen erzeugen bei der nächsten Paketierung neue SHA-256-Asset-URLs, HTML und unversionierte öffentliche Assets werden im Produktionsprofil revalidiert. Eine bereits auf Endgeräten gespeicherte unveränderte Immutable-Datei lässt sich nicht zentral löschen. Eine IONOS-/CDN-Purge-Funktion setzt eine tatsächlich vorhandene und autorisierte Cache-Schnittstelle voraus und ist nicht integriert. Die aktuelle Vorschau bleibt no-store. Kein `Clear-Site-Data` und kein Entfernen produktiver Alt-Assets. Keine Änderung der Live-Website.
 
 Die vorherige CreAid-SAFE-Abnahme (GitHub-Lauf 45700454647) bestätigte 122/122 kanonische Routen, 153 Asset-Fingerprints, 175 unveränderte Nicht-HTML-Dateien und 32/32 visuelle Stichproben ohne gemeldete Abweichungen. Die Cache-Bereinigung ist neu und besitzt einen zusätzlichen Browser-Test; deren Freigabe hängt vom erfolgreichen neuen CI-Lauf ab.
+
+## Cache Warmup und optionale Aufbewahrung
+
+### HTTP Warmup (CLI)
+
+```json
+{"origin":"https://example.com","paths":["/","/webdesign","/assets/example.css"],"passes":2,"delayMs":250}
+```
+
+Die Beispiel-URLs durch tatsächlich eigene, ausdrücklich freigegebene öffentliche statische Ressourcen ersetzen. Nicht für Logout-, API-, Formular-, Tracking- oder sonstige zustandsändernde URLs verwenden. Keine automatische Sitemap-Verfolgung. Lokale Loopback-Origins sind standardmäßig erlaubt; für öffentliche HTTPS-Origins muss der Bediener die Freigabe bewusst ergänzen:
+
+```sh
+npm run performance:warmup -- warmup-config.json warmup-report.json --approve-remote-public-get
+```
+
+Der CLI-Runner führt maximal 50 ausgewählte Pfade mit höchstens zwei sequentiellen Durchläufen aus. Keine Redirect-Verfolgung, keine Cookies/Anmeldedaten, Request-Timeout und Datenbudget, Abbruch bei 401/403/429/503 oder Transportfehler. Wertet Cache-Control, Age und ausgewählte Cache-Statusheader aus. Ein gemeldeter HIT ist eine Anbieter-Aussage; ein Cache-Control-Header allein ist kein Treffer. no-store/private/Set-Cookie-Antworten werden nicht als Shared-Cache-Warmup behandelt. Browser-Caches werden nicht gefüllt. Der lokale Vorschau-Server ist bewusst no-store und besitzt keinen Shared HTTP Cache. Nicht mit tatsächlicher Besucher-Performance oder Lighthouse gleichsetzen. Der CI-Test simuliert die HTTP-Header eines Cache-Anbieters. Keine öffentliche Website wurde damit automatisch aufgerufen. Ein tatsächlicher IONOS-/CDN-Warmup oder Purge erfordert die gesonderte Bestätigung der Hosting-Architektur und einer geeigneten Cache-Schnittstelle.
+
+### Optionale zeitgesteuerte lokale Build-Bereinigung
+
+Im lokalen Studio unter Cache-Verwaltung. Standardmäßig aus. Nach ausdrücklicher Aktivierung prüft der laufende Studio-Prozess einmal pro Minute, welche selbst erzeugten älteren erfolgreichen Testläufe dieser Sitzung zugleich außerhalb der Anzahl der aufzubewahrenden neuesten Läufe und älter als das eingestellte Mindestalter sind. Standardwerte: drei Läufe behalten, Mindestalter 24 Stunden. Einstellbar: 2–20 Läufe und 1–168 Stunden. Der letzte erfolgreiche Lauf wird nie automatisch entfernt; Originale, separate Backups, fremde Ordner und frühere Sitzungen bleiben unberührt. Läuft nicht während einer Optimierung oder manuellen Bereinigung. Keine Betriebssystem-Aufgabe, kein Hintergrunddienst nach Schließen des Studio-Prozesses, keine dauerhafte Aktivierung nach Neustart. Die Oberfläche zeigt den Status und das letzte Bereinigungsergebnis. Vor Löschung gewünschte Läufe außerhalb des generierten Cache-Ordners archivieren. Keine produktive Cache-Löschung.
+
+QA-Stand: Der vorherige lokale Studio-Start und die manuelle Cache-Bereinigung (inkl. Bestätigungsdialog und Erhalt des letzten Builds) wurden erfolgreich im Chromium-Test geprüft. Die neuen Warmup- und Retention-Tests müssen separat grün werden; die Retention-Logik wird mit synthetischen Zeitwerten und dem UI-Schalter geprüft, kein 24-Stunden-Dauertest.
