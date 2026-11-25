@@ -3,6 +3,14 @@
 DirectoryIndex index.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteCond %{THE_REQUEST} \s/+360-grad-rundgang-erstellen\.html(?:[?\s])
+RewriteRule ^360-grad-rundgang-erstellen\.html$ /360-grad-rundgang-erstellen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+360-grad-rundgang-erstellen/(?:[?\s])
+RewriteRule ^360-grad-rundgang-erstellen/$ /360-grad-rundgang-erstellen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+7-branding-fehler-bei-neugruendung\.html(?:[?\s])
+RewriteRule ^7-branding-fehler-bei-neugruendung\.html$ /7-branding-fehler-bei-neugruendung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+7-branding-fehler-bei-neugruendung/(?:[?\s])
+RewriteRule ^7-branding-fehler-bei-neugruendung/$ /7-branding-fehler-bei-neugruendung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+addon-theme-entwicklung\.html(?:[?\s])
 RewriteRule ^addon-theme-entwicklung\.html$ /addon-theme-entwicklung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+addon-theme-entwicklung/(?:[?\s])
@@ -453,6 +461,10 @@ RewriteCond %{THE_REQUEST} \s/+upgrades-wartung\.html(?:[?\s])
 RewriteRule ^upgrades-wartung\.html$ /upgrades-wartung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+upgrades-wartung/(?:[?\s])
 RewriteRule ^upgrades-wartung/$ /upgrades-wartung [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+wann-lohnt-sich-seo\.html(?:[?\s])
+RewriteRule ^wann-lohnt-sich-seo\.html$ /wann-lohnt-sich-seo [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+wann-lohnt-sich-seo/(?:[?\s])
+RewriteRule ^wann-lohnt-sich-seo/$ /wann-lohnt-sich-seo [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+warum-bringt-meine-website-keine-kunden\.html(?:[?\s])
 RewriteRule ^warum-bringt-meine-website-keine-kunden\.html$ /warum-bringt-meine-website-keine-kunden [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+warum-bringt-meine-website-keine-kunden/(?:[?\s])
@@ -539,6 +551,10 @@ RewriteCond %{THE_REQUEST} \s/+webseite-fuer-handwerker\.html(?:[?\s])
 RewriteRule ^webseite-fuer-handwerker\.html$ /webseite-fuer-handwerker [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webseite-fuer-handwerker/(?:[?\s])
 RewriteRule ^webseite-fuer-handwerker/$ /webseite-fuer-handwerker [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+website-audit-unternehmen\.html(?:[?\s])
+RewriteRule ^website-audit-unternehmen\.html$ /website-audit-unternehmen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+website-audit-unternehmen/(?:[?\s])
+RewriteRule ^website-audit-unternehmen/$ /website-audit-unternehmen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+website-wartung-fuer-firmen\.html(?:[?\s])
 RewriteRule ^website-wartung-fuer-firmen\.html$ /website-wartung-fuer-firmen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+website-wartung-fuer-firmen/(?:[?\s])
@@ -668,5 +684,9 @@ RewriteRule ^webdesign-fuer-unternehmen$ webdesign-fuer-unternehmen.html [END]
 RewriteRule ^webdesign-fuer-lokale-dienstleister$ webdesign-fuer-lokale-dienstleister.html [END]
 RewriteRule ^wordpress-website-erstellen-lassen$ wordpress-website-erstellen-lassen.html [END]
 RewriteRule ^leitfaden-website-relaunch-unternehmen$ leitfaden-website-relaunch-unternehmen.html [END]
+RewriteRule ^wann-lohnt-sich-seo$ wann-lohnt-sich-seo.html [END]
+RewriteRule ^7-branding-fehler-bei-neugruendung$ 7-branding-fehler-bei-neugruendung.html [END]
+RewriteRule ^website-audit-unternehmen$ website-audit-unternehmen.html [END]
+RewriteRule ^360-grad-rundgang-erstellen$ 360-grad-rundgang-erstellen.html [END]
 
 </IfModule>
