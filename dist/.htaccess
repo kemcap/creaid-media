@@ -39,6 +39,10 @@ RewriteCond %{THE_REQUEST} \s/+archiv-e-commerce(?:[?\s])
 RewriteRule ^archiv-e-commerce$ /category/e-commerce [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+archiv-e-commerce\.html(?:[?\s])
 RewriteRule ^archiv-e-commerce\.html$ /category/e-commerce [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+archiv-google-ads(?:[?\s])
+RewriteRule ^archiv-google-ads$ /category/google-ads [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+archiv-google-ads\.html(?:[?\s])
+RewriteRule ^archiv-google-ads\.html$ /category/google-ads [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+archiv-handwerk(?:[?\s])
 RewriteRule ^archiv-handwerk$ /category/handwerk [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+archiv-handwerk-handwerk-handwerk(?:[?\s])
@@ -133,6 +137,8 @@ RewriteCond %{THE_REQUEST} \s/+category/digitalisierung/(?:[?\s])
 RewriteRule ^category/digitalisierung/$ /category/digitalisierung [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+category/e-commerce/(?:[?\s])
 RewriteRule ^category/e-commerce/$ /category/e-commerce [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+category/google-ads/(?:[?\s])
+RewriteRule ^category/google-ads/$ /category/google-ads [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+category/handwerk/(?:[?\s])
 RewriteRule ^category/handwerk/$ /category/handwerk [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+category/handwerk/handwerk-handwerk/(?:[?\s])
@@ -688,5 +694,6 @@ RewriteRule ^wann-lohnt-sich-seo$ wann-lohnt-sich-seo.html [END]
 RewriteRule ^7-branding-fehler-bei-neugruendung$ 7-branding-fehler-bei-neugruendung.html [END]
 RewriteRule ^website-audit-unternehmen$ website-audit-unternehmen.html [END]
 RewriteRule ^360-grad-rundgang-erstellen$ 360-grad-rundgang-erstellen.html [END]
+RewriteRule ^category/google-ads$ archiv-google-ads.html [END]
 
 </IfModule>

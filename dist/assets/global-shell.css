@@ -99,9 +99,6 @@
  .cm-header *, .cm-footer *{transition:none!important;scroll-behavior:auto!important}
 }
 
-/* Without JavaScript, mobile navigation remains accessible. */
-@media(max-width:860px){.cm-header:not(.cm-header--ready) .cm-header__nav{display:flex}.cm-header:not(.cm-header--ready) .cm-header__toggle{display:none}}
-
 /* Compact global footer – approved preview, retaining the existing semantic links. */
 .cm-footer__lead{padding:38px 0 34px;align-items:center;gap:24px}
 .cm-footer__eyebrow{font-size:10px;letter-spacing:.15em}
@@ -136,3 +133,24 @@
   .cm-footer__contact>a,.cm-footer__legal>a,.cm-footer__contact address{font-size:11px}
   .cm-footer__bottom{padding:16px 0 18px;gap:6px;font-size:10px}
 }
+
+/* Keep navigation labels legible at compact widths. */
+.cm-header__dropdown a,
+.cm-footer__services .audit-links a,
+.cm-footer__contact > a,
+.cm-footer__legal > a,
+.cm-footer__contact address,
+.cm-footer__social { font-size: .875rem; }
+
+.cm-header__toggle-label, .cm-footer__bottom { font-size: .8125rem; }
+.cm-header__cta, .cm-footer__lead-cta { background: var(--cm-berry); }
+.cm-header__cta:hover, .cm-footer__lead-cta:hover { background: #8e2040; }
+
+/* Phase 3: distinct service and industry groups; preserve existing layout and motion. */
+.cm-header__dropdown-kicker.cm-header__specialty-label{margin-top:16px}
+.cm-header__dropdown .cm-header__branches a{font-size:.875rem}
+@media (min-width:861px){
+  .cm-header__dropdown{max-height:calc(100dvh - 120px);overflow-y:auto;overscroll-behavior:contain}
+}
+.cm-footer__services .cm-footer__all-services{display:inline-flex;min-height:44px;align-items:center;color:#eee;font-size:.875rem;text-decoration:underline;text-underline-offset:.2em}
+.cm-header__link[aria-current=location]{color:#ff5b86;opacity:1}
