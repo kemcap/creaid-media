@@ -1,0 +1,23 @@
+/* V2.0 pilot articles only; preserve existing layout and images. */
+main .j-prose.creaid-editorial-v2{font-size:clamp(16px,1.45vw,18px);line-height:1.7;min-width:0}
+main .creaid-editorial-v2 p{font-size:inherit;line-height:inherit;margin:0 0 clamp(16px,2vw,20px)}
+main .creaid-editorial-v2 h2{font-size:clamp(24px,2.5vw,32px);line-height:1.25;margin:clamp(40px,6vw,64px) 0 clamp(20px,2vw,24px);letter-spacing:-.025em;overflow-wrap:anywhere}
+main .creaid-editorial-v2 h3{font-size:clamp(20px,1.9vw,24px);line-height:1.3;margin:clamp(24px,3vw,32px) 0 clamp(12px,1.5vw,16px)}
+main .creaid-editorial-v2 figure{margin:clamp(24px,3.5vw,40px) 0}
+main .creaid-editorial-v2 .creaid-editorial-lead{font-size:clamp(18px,1.65vw,21px);line-height:1.65}
+main .creaid-editorial-v2 .creaid-editorial-note{border-left:3px solid #b3284f;padding:8px 0 8px clamp(16px,2.5vw,28px);margin:clamp(28px,4vw,48px) 0;background:transparent}
+main .creaid-editorial-v2 .creaid-editorial-label{font-size:12px;letter-spacing:.09em;font-weight:700;text-transform:uppercase;color:#982244;margin-bottom:12px}
+main .creaid-editorial-v2 .creaid-editorial-note p:last-child{margin-bottom:0}
+main .creaid-editorial-v2 .creaid-editorial-source{font-size:14px}
+main .creaid-editorial-v2 .creaid-editorial-comparison{margin:clamp(28px,4vw,48px) 0;max-width:100%}
+main .creaid-editorial-v2 .creaid-editorial-comparison table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:clamp(14px,1.3vw,16px);line-height:1.5}
+main .creaid-editorial-v2 .creaid-editorial-comparison :is(th,td){text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid #cfc7c7;overflow-wrap:anywhere}
+main .creaid-editorial-v2 .creaid-editorial-comparison caption{caption-side:bottom;text-align:left;font-size:13px;padding-top:12px}
+main .creaid-editorial-v2 .creaid-editorial-comparison thead{background:#f0ecea}
+main .creaid-editorial-v2 :is(.creaid-editorial-checklist,.creaid-editorial-process){padding-left:1.5em;margin:24px 0;list-style-position:outside}
+main .creaid-editorial-v2 :is(.creaid-editorial-checklist,.creaid-editorial-process) li{padding:10px 0;border-bottom:1px solid #d9d2d0}
+main .creaid-editorial-v2 .creaid-editorial-process li::marker{font-weight:700;color:#982244}
+main .creaid-editorial-v2 .creaid-editorial-faq details{border-bottom:1px solid #d9d2d0;padding:12px 0;background:none}
+main .creaid-editorial-v2 .creaid-editorial-faq summary{min-height:44px;cursor:pointer;font-weight:700;padding:10px 0}
+main .creaid-editorial-v2 :focus-visible{outline:2px solid #b3284f;outline-offset:4px}
+@media(max-width:600px){main .j-prose.creaid-editorial-v2{line-height:1.65}main .creaid-editorial-v2 .creaid-editorial-comparison :is(th,td){padding:8px}}

@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-25",
+  "scope": "Eleventy, Option 1. Existing images, original slugs, dates retained. WordPress unchanged; ID and GSC not retrieved. No new SERP review. Approximate word counts; changes to Maps justified by factual corrections.",
+  "records": [
+    {
+      "slug": "webdesign-fuer-handwerksbetriebe",
+      "originalTitle": "Handwerker-Website modernisieren: Relaunch-Checkliste",
+      "h1": "Handwerker-Website modernisieren: Relaunch-Checkliste",
+      "seoTitle": "Handwerker-Website modernisieren: Checkliste | CreAid-Media",
+      "description": "Handwerker-Website modernisieren: Prüfen Sie mobile Bedienung, Leistungsseiten, Referenzen und Kontaktwege. Planen Sie Ihren Relaunch mit klaren Prioritäten.",
+      "canonical": "https://creaid-media.de/webdesign-fuer-handwerksbetriebe",
+      "originalWords": 1266,
+      "newWords": 1235,
+      "minutes": 7,
+      "images": 1,
+      "mode": "Option 1",
+      "editorial": [
+        "E01",
+        "E05",
+        "E20"
+      ]
+    },
+    {
+      "slug": "warum-bringt-meine-website-keine-kunden",
+      "originalTitle": "Website bringt keine Anfragen: Ursachen finden",
+      "h1": "Warum bringt meine Website keine Anfragen?",
+      "seoTitle": "Website bringt keine Anfragen? Ursachen prüfen | CreAid-Media",
+      "description": "Ihre Website bringt keine Anfragen? Prüfen Sie Besucherquellen, Angebot, Vertrauen und Kontaktwege systematisch und finden Sie sinnvolle nächste Schritte.",
+      "canonical": "https://creaid-media.de/warum-bringt-meine-website-keine-kunden",
+      "originalWords": 2026,
+      "newWords": 1971,
+      "minutes": 10,
+      "images": 3,
+      "mode": "Option 1",
+      "editorial": [
+        "E09",
+        "E06",
+        "E01",
+        "E20"
+      ]
+    },
+    {
+      "slug": "google-maps-auffindbarkeit-verbessern",
+      "originalTitle": "Google Maps: Auffindbarkeit für Unternehmen verbessern",
+      "h1": "Google Maps: Auffindbarkeit für Unternehmen verbessern",
+      "seoTitle": "Google Maps Auffindbarkeit verbessern | CreAid-Media",
+      "description": "Verbessern Sie Ihre Auffindbarkeit bei Google Maps: Unternehmensprofil, Kategorien, Bewertungen und Website gezielt pflegen. Mit praktischer Checkliste.",
+      "canonical": "https://creaid-media.de/google-maps-auffindbarkeit-verbessern",
+      "originalWords": 1477,
+      "newWords": 1303,
+      "minutes": 7,
+      "images": 3,
+      "mode": "Option 1",
+      "editorial": [
+        "E16",
+        "E17",
+        "E05",
+        "E07",
+        "E20"
+      ]
+    }
+  ],
+  "sources": [
+    "https://support.google.com/business/answer/7091?hl=de",
+    "https://support.google.com/business/answer/3474122?hl=de"
+  ],
+  "status": "source edits, validation pending"
+}
