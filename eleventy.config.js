@@ -1,6 +1,7 @@
 import { editorialArticle } from './scripts/journal-editorial.mjs';
 import { redirect, routeFiles } from './scripts/routes.mjs';
 import { transformHeadings } from './scripts/heading-semantics.mjs';
+import { decoratePageHeadings } from './scripts/heading-dot.mjs';
 
 export default function (eleventyConfig) {
   eleventyConfig.addFilter('editorialArticle', editorialArticle);
@@ -41,7 +42,7 @@ export default function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.addTransform('semantic-headings',function(content){return transformHeadings(content,this.page.outputPath);});
+  eleventyConfig.addTransform('semantic-headings',function(content){return decoratePageHeadings(transformHeadings(content,this.page.outputPath),this.page.outputPath);});
   eleventyConfig.addWatchTarget('src/_data/');
   return {
     dir: { input: 'src', includes: '_includes', data: '_data', output: 'dist' },

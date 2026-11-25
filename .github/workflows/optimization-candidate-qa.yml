@@ -1,13 +1,13 @@
 name: Optimization candidate QA (no deployment)
 on:
   push:
-    branches: [optimization/full-website-ui-ux, optimization/pricing-components]
+    branches: [optimization/full-website-ui-ux, optimization/pricing-components, optimization/global-heading-dot]
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   verify:
-    if: github.ref == 'refs/heads/optimization/full-website-ui-ux' || github.ref == 'refs/heads/optimization/pricing-components'
+    if: github.ref == 'refs/heads/optimization/full-website-ui-ux' || github.ref == 'refs/heads/optimization/pricing-components' || github.ref == 'refs/heads/optimization/global-heading-dot'
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     steps:
@@ -22,6 +22,7 @@ jobs:
       - run: node scripts/check-home-motion.mjs
       - run: node scripts/check-optimization-phase3.mjs
       - run: node scripts/check-pricing.mjs
+      - run: node scripts/check-heading-dot.mjs
       - run: node scripts/performance/test-prepare-candidate.mjs
       - run: node scripts/performance/prepare-candidate.mjs dist performance-candidate
       - name: Install isolated browser test tools
