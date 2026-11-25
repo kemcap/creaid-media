@@ -438,6 +438,1078 @@
           "href": "/kontakt?service=Webdesign%20f%C3%BCr%20Immobilienmakler&paket=Immo-Premium#anfrage"
         }
       ]
+    },
+    "conversion": {
+      "heading": "Website-Optimierung / Conversion-Performance",
+      "service": "Anderes Anliegen",
+      "source": "Angebote-Gesamt.pdf",
+      "anchor": "pakete-conversion",
+      "titleId": "cm-pricing-title-conversion",
+      "note": "Nettopreise laut Angebotsvorlage. Ziel ist eine bessere Nutzerführung und Anfragewahrscheinlichkeit; keine Erfolgsgarantie.",
+      "review": true,
+      "featuredLabel": "BESTSELLER",
+      "packages": [
+        {
+          "name": "Conversion-Kompakt",
+          "price": 690,
+          "displayPrice": "690 €",
+          "interval": "einmalig · netto",
+          "featured": false,
+          "term": "",
+          "lead": "",
+          "highlights": [
+            "Analyse von zentralen Seiten: 1",
+            "CTA-Optimierung",
+            "Optimierung Kontaktbereich",
+            "WhatsApp-Button / Schnellkontakt"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Analyse von zentralen Seiten: 1",
+                "CTA-Optimierung",
+                "Optimierung Kontaktbereich",
+                "WhatsApp-Button / Schnellkontakt",
+                "Formular-Check / Anfrageweg optimieren",
+                "Platzierung von Vertrauenselementen: Siegel, Bewertungen, Logos, etc."
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Anderes%20Anliegen&paket=Conversion-Kompakt#anfrage"
+        },
+        {
+          "name": "Conversion-Plus",
+          "price": 1290,
+          "displayPrice": "1.290 €",
+          "interval": "einmalig · netto",
+          "featured": true,
+          "term": "",
+          "lead": "",
+          "highlights": [
+            "Analyse von zentralen Seiten: 3",
+            "CTA-Optimierung",
+            "Optimierung Kontaktbereich",
+            "WhatsApp-Button / Schnellkontakt"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Analyse von zentralen Seiten: 3",
+                "CTA-Optimierung",
+                "Optimierung Kontaktbereich",
+                "WhatsApp-Button / Schnellkontakt",
+                "Formular-Check / Anfrageweg optimieren",
+                "Platzierung von Vertrauenselementen: Siegel, Bewertungen, Logos, etc.",
+                "Hero-Bereich optimieren",
+                "Struktur-Optimierung zentraler Seiten",
+                "Mobile Nutzerführung verbessern",
+                "Stärkere Angebotskommunikation"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Anderes%20Anliegen&paket=Conversion-Plus#anfrage"
+        },
+        {
+          "name": "Conversion-Premium",
+          "price": 2190,
+          "displayPrice": "2.190 €",
+          "interval": "einmalig · netto",
+          "featured": false,
+          "term": "",
+          "lead": "",
+          "highlights": [
+            "Analyse von zentralen Seiten: 4",
+            "CTA-Optimierung",
+            "Optimierung Kontaktbereich",
+            "WhatsApp-Button / Schnellkontakt"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Analyse von zentralen Seiten: 4",
+                "CTA-Optimierung",
+                "Optimierung Kontaktbereich",
+                "WhatsApp-Button / Schnellkontakt",
+                "Formular-Check / Anfrageweg optimieren",
+                "Platzierung von Vertrauenselementen: Siegel, Bewertungen, Logos, etc.",
+                "Hero-Bereich optimieren",
+                "Struktur-Optimierung zentraler Seiten",
+                "Mobile Nutzerführung verbessern",
+                "Stärkere Angebotskommunikation",
+                "Strategische CTA-Platzierung über mehrere Seiten",
+                "Analyse kompletter Conversion-Strecken",
+                "Optimierung von Startseite, Leistungsseiten und Kontaktbereich",
+                "Strategisches Optimierungs-Dossier",
+                "Fokus auf messbar höhere Abschlusswahrscheinlichkeit"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Anderes%20Anliegen&paket=Conversion-Premium#anfrage"
+        }
+      ],
+      "comparison": [
+        {
+          "label": "Analyse von zentralen Seiten",
+          "values": [
+            "1",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "label": "CTA-Optimierung",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Optimierung Kontaktbereich",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "WhatsApp-Button / Schnellkontakt",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Formular-Check / Anfrageweg optimieren",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Platzierung von Vertrauenselementen: Siegel, Bewertungen, Logos, etc.",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Hero-Bereich optimieren",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Struktur-Optimierung zentraler Seiten",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Mobile Nutzerführung verbessern",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Stärkere Angebotskommunikation",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Strategische CTA-Platzierung über mehrere Seiten",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Analyse kompletter Conversion-Strecken",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Optimierung von Startseite, Leistungsseiten und Kontaktbereich",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Strategisches Optimierungs-Dossier",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Fokus auf messbar höhere Abschlusswahrscheinlichkeit",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        }
+      ]
+    },
+    "ads": {
+      "heading": "Meta/Google Ads + optimierte Zielseite",
+      "service": "Google Ads & Social Media",
+      "source": "Angebote-Gesamt.pdf",
+      "anchor": "pakete-ads",
+      "titleId": "cm-pricing-title-ads",
+      "note": "Nettopreise laut Angebotsvorlage. Werbebudget, Abrechnung und genaue Vertragsbedingungen werden im Angebot gesondert geklärt.",
+      "review": true,
+      "featuredLabel": "BESTSELLER",
+      "packages": [
+        {
+          "name": "Ads Basis",
+          "price": 890,
+          "displayPrice": "890 €",
+          "interval": "einmalig · netto",
+          "featured": false,
+          "term": "",
+          "lead": "",
+          "highlights": [
+            "Eine Landingpage",
+            "Klare Anfrageführung",
+            "Basis-Keyword-Auswahl",
+            "Anzeigentexte: Standard"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Eine Landingpage",
+                "Klare Anfrageführung",
+                "Basis-Keyword-Auswahl",
+                "Anzeigentexte: Standard",
+                "Kontaktformular / Anfrageweg",
+                "Technische Vorbereitung Kampagnenstart"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Google%20Ads%20%26%20Social%20Media&paket=Ads%20Basis#anfrage"
+        },
+        {
+          "name": "Ads Aktiv",
+          "price": 1390,
+          "displayPrice": "1.390 €",
+          "interval": "einmalig · netto",
+          "featured": true,
+          "term": "",
+          "lead": "",
+          "highlights": [
+            "Eine Landingpage",
+            "Klare Anfrageführung",
+            "Basis-Keyword-Auswahl",
+            "Anzeigentexte: Zielgruppen-fokussiert"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Eine Landingpage",
+                "Klare Anfrageführung",
+                "Basis-Keyword-Auswahl",
+                "Anzeigentexte: Zielgruppen-fokussiert",
+                "Kontaktformular / Anfrageweg",
+                "Technische Vorbereitung Kampagnenstart",
+                "Anfragen-Tracking aktivieren",
+                "Stärker ausgearbeitete Landingpage-Struktur",
+                "Präzisere Keyword-Gruppierung",
+                "Conversion-stärkere Seitenführung"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Google%20Ads%20%26%20Social%20Media&paket=Ads%20Aktiv#anfrage"
+        },
+        {
+          "name": "Ads Performance",
+          "price": 1990,
+          "displayPrice": "1.990 €",
+          "interval": "einmalig · netto",
+          "featured": false,
+          "term": "",
+          "lead": "",
+          "highlights": [
+            "Eine Landingpage",
+            "Klare Anfrageführung",
+            "Basis-Keyword-Auswahl",
+            "Anzeigentexte: Hochkonvertierend & A/B-Testlayout"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Eine Landingpage",
+                "Klare Anfrageführung",
+                "Basis-Keyword-Auswahl",
+                "Anzeigentexte: Hochkonvertierend & A/B-Testlayout",
+                "Kontaktformular / Anfrageweg",
+                "Technische Vorbereitung Kampagnenstart",
+                "Anfragen-Tracking aktivieren",
+                "Stärker ausgearbeitete Landingpage-Struktur",
+                "Präzisere Keyword-Gruppierung",
+                "Conversion-stärkere Seitenführung",
+                "Strategische Struktur für mehrere Leistungsansätze",
+                "Erweiterte Keyword-Planung",
+                "Aufteilung nach Suchintentionen",
+                "Stärkere Vorqualifizierung von Anfragen",
+                "Höherwertige Performance-Ausrichtung"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Google%20Ads%20%26%20Social%20Media&paket=Ads%20Performance#anfrage"
+        }
+      ],
+      "comparison": [
+        {
+          "label": "Eine Landingpage",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Klare Anfrageführung",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Basis-Keyword-Auswahl",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Anzeigentexte",
+          "values": [
+            "Standard",
+            "Zielgruppen-fokussiert",
+            "Hochkonvertierend & A/B-Testlayout"
+          ]
+        },
+        {
+          "label": "Kontaktformular / Anfrageweg",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Technische Vorbereitung Kampagnenstart",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Anfragen-Tracking aktivieren",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Stärker ausgearbeitete Landingpage-Struktur",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Präzisere Keyword-Gruppierung",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Conversion-stärkere Seitenführung",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Strategische Struktur für mehrere Leistungsansätze",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Erweiterte Keyword-Planung",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Aufteilung nach Suchintentionen",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Stärkere Vorqualifizierung von Anfragen",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Höherwertige Performance-Ausrichtung",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        }
+      ]
+    },
+    "monthlyAds": {
+      "heading": "Monatliche Meta/Google-Ads-Betreuung",
+      "service": "Google Ads & Social Media",
+      "source": "Angebote-Gesamt.pdf",
+      "anchor": "pakete-monthlyAds",
+      "titleId": "cm-pricing-title-monthlyAds",
+      "note": "Nettopreise pro Monat laut Angebotsvorlage. Werbebudget und Laufzeit werden im Angebot gesondert geklärt.",
+      "review": true,
+      "featuredLabel": "BESTSELLER",
+      "packages": [
+        {
+          "name": "Ads Start",
+          "price": 390,
+          "displayPrice": "390 €",
+          "interval": "pro Monat · netto",
+          "featured": false,
+          "term": "",
+          "lead": "",
+          "highlights": [
+            "Kampagnenüberwachung",
+            "Budgetkontrolle",
+            "Einfache Optimierungen",
+            "Laufende Performance-Verbesserung: Monatliche Optimierung + Bericht"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Kampagnenüberwachung",
+                "Budgetkontrolle",
+                "Einfache Optimierungen",
+                "Laufende Performance-Verbesserung: Monatliche Optimierung + Bericht"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Google%20Ads%20%26%20Social%20Media&paket=Ads%20Start#anfrage"
+        },
+        {
+          "name": "Ads Wachstum",
+          "price": 690,
+          "displayPrice": "690 €",
+          "interval": "pro Monat · netto",
+          "featured": true,
+          "term": "",
+          "lead": "",
+          "highlights": [
+            "Kampagnenüberwachung",
+            "Budgetkontrolle",
+            "Einfache Optimierungen",
+            "Laufende Performance-Verbesserung: Wöchentliche Optimierung + Bericht"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Kampagnenüberwachung",
+                "Budgetkontrolle",
+                "Einfache Optimierungen",
+                "Laufende Performance-Verbesserung: Wöchentliche Optimierung + Bericht",
+                "Kontinuierliche A/B-Tests",
+                "Anzeigentexte nachschärfen",
+                "Keyword-Anpassungen"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Google%20Ads%20%26%20Social%20Media&paket=Ads%20Wachstum#anfrage"
+        },
+        {
+          "name": "Ads Premium",
+          "price": 1090,
+          "displayPrice": "1.090 €",
+          "interval": "pro Monat · netto",
+          "featured": false,
+          "term": "",
+          "lead": "",
+          "highlights": [
+            "Kampagnenüberwachung",
+            "Budgetkontrolle",
+            "Einfache Optimierungen",
+            "Laufende Performance-Verbesserung: Wöchentliche Optimierung + Bericht + Strategie-Call"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Kampagnenüberwachung",
+                "Budgetkontrolle",
+                "Einfache Optimierungen",
+                "Laufende Performance-Verbesserung: Wöchentliche Optimierung + Bericht + Strategie-Call",
+                "Kontinuierliche A/B-Tests",
+                "Anzeigentexte nachschärfen",
+                "Keyword-Anpassungen",
+                "Engere Optimierung",
+                "Intensivere Weiterentwicklung"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Google%20Ads%20%26%20Social%20Media&paket=Ads%20Premium#anfrage"
+        }
+      ],
+      "comparison": [
+        {
+          "label": "Kampagnenüberwachung",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Budgetkontrolle",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Einfache Optimierungen",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Laufende Performance-Verbesserung",
+          "values": [
+            "Monatliche Optimierung + Bericht",
+            "Wöchentliche Optimierung + Bericht",
+            "Wöchentliche Optimierung + Bericht + Strategie-Call"
+          ]
+        },
+        {
+          "label": "Kontinuierliche A/B-Tests",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Anzeigentexte nachschärfen",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Keyword-Anpassungen",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Engere Optimierung",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Intensivere Weiterentwicklung",
+          "values": [
+            "Nicht enthalten",
+            "Nicht enthalten",
+            "Enthalten"
+          ]
+        }
+      ]
+    },
+    "webdesign": {
+      "heading": "Allgemeine Webdesign-Pakete",
+      "service": "Webdesign & Entwicklung",
+      "source": "Angebote-Gesamt.pdf",
+      "anchor": "pakete-webdesign",
+      "titleId": "cm-pricing-title-webdesign",
+      "note": "Nettopreise laut Angebotsvorlage. Zuzüglich laufender Hosting-Gebühren für Server, SSL und Domain. Die genaue Zahl der SEO-optimierten Seiten und der technische Wartungsumfang werden im Angebot bestätigt.",
+      "review": true,
+      "featuredLabel": "BESTSELLER",
+      "packages": [
+        {
+          "name": "Kompakt",
+          "price": 1490,
+          "displayPrice": "1.490 €",
+          "interval": "einmalig · netto",
+          "featured": false,
+          "term": "",
+          "lead": "Schnell online. Professionell & klar.",
+          "highlights": [
+            "Seitenumfang: Homepage + 3 Unterseiten",
+            "Design: Logo, Unternehmensfarben & vorhandene Fotos",
+            "Inhaltsbereiche: Startseite, Leistungen, Kontaktseite",
+            "Abstimmungsrunden: 1 Runde"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Seitenumfang: Homepage + 3 Unterseiten",
+                "Design: Logo, Unternehmensfarben & vorhandene Fotos",
+                "Inhaltsbereiche: Startseite, Leistungen, Kontaktseite",
+                "Abstimmungsrunden: 1 Runde",
+                "Technische Wartung (1 Jahr)",
+                "Mailadressen: 2",
+                "Plugin-Updates, Sicherheits-Updates & Backups",
+                "Hosting, SSL, DSGVO & Backups",
+                "DSGVO-konformes Kontaktformular",
+                "SEO-Optimierung: Alle 3 Seiten: Titel, Meta, Struktur"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=Kompakt#anfrage"
+        },
+        {
+          "name": "Plus",
+          "price": 2290,
+          "displayPrice": "2.290 €",
+          "interval": "einmalig · netto",
+          "featured": true,
+          "term": "",
+          "lead": "Vollständig positioniert. Mehr Vertrauen, mehr Anfragen.",
+          "highlights": [
+            "Seitenumfang: Homepage + 6 Unterseiten",
+            "Design: Individuelles Layout mit eigenem Erscheinungsbild",
+            "Inhaltsbereiche: Startseite, Leistungen, Über uns, Referenzen, Kontaktseite",
+            "Teamseite: Allgemeine Teamseite inklusive"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Seitenumfang: Homepage + 6 Unterseiten",
+                "Design: Individuelles Layout mit eigenem Erscheinungsbild",
+                "Inhaltsbereiche: Startseite, Leistungen, Über uns, Referenzen, Kontaktseite",
+                "Teamseite: Allgemeine Teamseite inklusive",
+                "Karriereseite",
+                "Abstimmungsrunden: 2 Runden",
+                "Technische Wartung (1 Jahr)",
+                "Mailadressen: 4",
+                "Plugin-Updates, Sicherheits-Updates & Backups",
+                "Hosting, SSL, DSGVO & Backups",
+                "DSGVO-konformes Kontaktformular",
+                "SEO-Optimierung: Alle 6 Seiten + Keywords & interne Verlinkung",
+                "WhatsApp-Button mit Direktverlinkung",
+                "Blogbereich: Einrichtung & Einpflege von bis zu 5 Artikeln"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=Plus#anfrage"
+        },
+        {
+          "name": "Premium",
+          "price": 3490,
+          "displayPrice": "3.490 €",
+          "interval": "einmalig · netto",
+          "featured": false,
+          "term": "",
+          "lead": "Marktführend auftreten. Maximum an Wirkung.",
+          "highlights": [
+            "Seitenumfang: Homepage + 10 Unterseiten",
+            "Design: Hochwertiges Design, das Ihr Unternehmen klar von Mitbewerbern abhebt",
+            "Inhaltsbereiche: Startseite, Leistungen, Team, Referenzen, Blog, Kontaktseite + 4 Seiten nach Wunsch",
+            "Teamseite: Teamseite mit Einzelprofilen inklusive"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Seitenumfang: Homepage + 10 Unterseiten",
+                "Design: Hochwertiges Design, das Ihr Unternehmen klar von Mitbewerbern abhebt",
+                "Inhaltsbereiche: Startseite, Leistungen, Team, Referenzen, Blog, Kontaktseite + 4 Seiten nach Wunsch",
+                "Teamseite: Teamseite mit Einzelprofilen inklusive",
+                "Karriereseite",
+                "Abstimmungsrunden: 3 Runden",
+                "Technische Wartung (1 Jahr)",
+                "Mailadressen: 5",
+                "Plugin-Updates, Sicherheits-Updates & Backups",
+                "Hosting, SSL, DSGVO & Backups",
+                "DSGVO-konformes Kontaktformular",
+                "SEO-Optimierung: Alle 10 Seiten + Keywords, Verlinkung & technisches SEO",
+                "WhatsApp-Button mit Direktverlinkung",
+                "Blogbereich: Einrichtung & Einpflege von bis zu 8 Artikeln"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=Premium#anfrage"
+        }
+      ],
+      "comparison": [
+        {
+          "label": "Seitenumfang",
+          "values": [
+            "Homepage + 3 Unterseiten",
+            "Homepage + 6 Unterseiten",
+            "Homepage + 10 Unterseiten"
+          ]
+        },
+        {
+          "label": "Design",
+          "values": [
+            "Logo, Unternehmensfarben & vorhandene Fotos",
+            "Individuelles Layout mit eigenem Erscheinungsbild",
+            "Hochwertiges Design, das Ihr Unternehmen klar von Mitbewerbern abhebt"
+          ]
+        },
+        {
+          "label": "Inhaltsbereiche",
+          "values": [
+            "Startseite, Leistungen, Kontaktseite",
+            "Startseite, Leistungen, Über uns, Referenzen, Kontaktseite",
+            "Startseite, Leistungen, Team, Referenzen, Blog, Kontaktseite + 4 Seiten nach Wunsch"
+          ]
+        },
+        {
+          "label": "Teamseite",
+          "values": [
+            "Nicht enthalten",
+            "Allgemeine Teamseite inklusive",
+            "Teamseite mit Einzelprofilen inklusive"
+          ]
+        },
+        {
+          "label": "Karriereseite",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Abstimmungsrunden",
+          "values": [
+            "1 Runde",
+            "2 Runden",
+            "3 Runden"
+          ]
+        },
+        {
+          "label": "Technische Wartung (1 Jahr)",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Mailadressen",
+          "values": [
+            "2",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "label": "Plugin-Updates, Sicherheits-Updates & Backups",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Hosting, SSL, DSGVO & Backups",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "DSGVO-konformes Kontaktformular",
+          "values": [
+            "Enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "SEO-Optimierung",
+          "values": [
+            "Alle 3 Seiten: Titel, Meta, Struktur",
+            "Alle 6 Seiten + Keywords & interne Verlinkung",
+            "Alle 10 Seiten + Keywords, Verlinkung & technisches SEO"
+          ]
+        },
+        {
+          "label": "WhatsApp-Button mit Direktverlinkung",
+          "values": [
+            "Nicht enthalten",
+            "Enthalten",
+            "Enthalten"
+          ]
+        },
+        {
+          "label": "Blogbereich",
+          "values": [
+            "Nicht enthalten",
+            "Einrichtung & Einpflege von bis zu 5 Artikeln",
+            "Einrichtung & Einpflege von bis zu 8 Artikeln"
+          ]
+        }
+      ]
+    },
+    "maintenance": {
+      "heading": "Wartungspakete",
+      "service": "Anderes Anliegen",
+      "source": "Angebote-Gesamt.pdf",
+      "anchor": "pakete-maintenance",
+      "titleId": "cm-pricing-title-maintenance",
+      "note": "Nettopreise laut Angebotsvorlage. Die Pakete beziehen sich auf WordPress-Updates, Sicherheits-Updates und Backups, nicht auf die Eleventy-Wartung.",
+      "review": true,
+      "featuredLabel": "BESTSELLER",
+      "packages": [
+        {
+          "name": "Einmalige Wartung",
+          "price": 99,
+          "displayPrice": "99 €",
+          "interval": "einmalig auf Abruf · netto",
+          "featured": false,
+          "term": "",
+          "lead": "",
+          "highlights": [
+            "Plugin-Updates, Sicherheits-Updates & Backups"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Plugin-Updates, Sicherheits-Updates & Backups"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Anderes%20Anliegen&paket=Einmalige%20Wartung#anfrage"
+        },
+        {
+          "name": "Jahreswartung",
+          "price": 299,
+          "displayPrice": "299 €",
+          "interval": "pro Jahr · netto",
+          "featured": false,
+          "term": "",
+          "lead": "",
+          "highlights": [
+            "Plugin-Updates, Sicherheits-Updates & Backups – 4x jährlich"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "Plugin-Updates, Sicherheits-Updates & Backups – 4x jährlich"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Anderes%20Anliegen&paket=Jahreswartung#anfrage"
+        }
+      ],
+      "comparison": []
     }
+  },
+  "modules": [
+    {
+      "category": "Kontakt & Kommunikation",
+      "items": [
+        {
+          "category": "Kontakt & Kommunikation",
+          "name": "WhatsApp-Button mit Direktverlinkung",
+          "description": "Direkter Kontaktbutton für WhatsApp-Anfragen; bei Plus & Premium bereits inklusive",
+          "price": 79,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "displayPrice": "79 €",
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=WhatsApp-Button%20mit%20Direktverlinkung#anfrage"
+        },
+        {
+          "category": "Kontakt & Kommunikation",
+          "name": "Hinweis-Popup",
+          "description": "Popup für Aktionen, Betriebsferien oder wichtige Ankündigungen",
+          "price": 79,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "displayPrice": "79 €",
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=Hinweis-Popup#anfrage"
+        },
+        {
+          "category": "Kontakt & Kommunikation",
+          "name": "Öffnungszeiten-/Verfügbarkeitsmodul",
+          "description": "Anzeige der Geschäftszeiten inkl. Jetzt geöffnet / geschlossen-Status",
+          "price": 129,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "displayPrice": "129 €",
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=%C3%96ffnungszeiten-%2FVerf%C3%BCgbarkeitsmodul#anfrage"
+        }
+      ]
+    },
+    {
+      "category": "Sichtbarkeit & SEO",
+      "items": [
+        {
+          "category": "Sichtbarkeit & SEO",
+          "name": "Google Maps-Einbindung",
+          "description": "Interaktive Standortkarte direkt auf Ihrer Website",
+          "price": 99,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "displayPrice": "99 €",
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=Google%20Maps-Einbindung#anfrage"
+        },
+        {
+          "category": "Sichtbarkeit & SEO",
+          "name": "Google Business Profil-Einrichtung",
+          "description": "Einrichtung & Optimierung des Google-Unternehmensprofils für bessere lokale Sichtbarkeit",
+          "price": 149,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "displayPrice": "149 €",
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=Google%20Business%20Profil-Einrichtung#anfrage"
+        }
+      ]
+    },
+    {
+      "category": "Seiten & Inhalte",
+      "items": [
+        {
+          "category": "Seiten & Inhalte",
+          "name": "FAQ-Bereich",
+          "description": "Häufig gestellte Fragen als aufklappbare Liste",
+          "price": 99,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "displayPrice": "99 €",
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=FAQ-Bereich#anfrage"
+        },
+        {
+          "category": "Seiten & Inhalte",
+          "name": "Teamseite (allgemein)",
+          "description": "Übersichtsseite mit Teamfoto und kurzer Vorstellung; nur für Kompakt-Kunden",
+          "price": 149,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "displayPrice": "149 €",
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=Teamseite%20(allgemein)#anfrage"
+        },
+        {
+          "category": "Seiten & Inhalte",
+          "name": "Teamseite-Upgrade auf Einzelprofile",
+          "description": "Bis zu 5 Einzelprofile mit Foto, Name, Position & Kontakt; jedes weitere Profil 29 €; nur für Plus-Kunden",
+          "price": 149,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "displayPrice": "149 €",
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=Teamseite-Upgrade%20auf%20Einzelprofile#anfrage"
+        },
+        {
+          "category": "Seiten & Inhalte",
+          "name": "Blogbereich",
+          "description": "Einrichtung & Einpflege von bis zu 3 Artikeln mit lizenzfreien Fotos",
+          "price": 199,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "displayPrice": "199 €",
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=Blogbereich#anfrage"
+        },
+        {
+          "category": "Seiten & Inhalte",
+          "name": "Blog-Erweiterung",
+          "description": "Jeder weitere Artikel zusätzlich zu den inkludierten; für Plus & Premium",
+          "price": 39,
+          "currency": "EUR",
+          "interval": "pro Artikel",
+          "displayPrice": "39 €",
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=Blog-Erweiterung#anfrage"
+        },
+        {
+          "category": "Seiten & Inhalte",
+          "name": "Mehrsprachigkeit",
+          "description": "Übersetzung & technische Einbindung weiterer Sprachen",
+          "price": null,
+          "currency": "EUR",
+          "interval": "auf Anfrage",
+          "displayPrice": "Auf Anfrage",
+          "href": "/kontakt?service=Webdesign%20%26%20Entwicklung&paket=Mehrsprachigkeit#anfrage"
+        }
+      ]
+    }
+  ],
+  "additionalSource": {
+    "file": "Angebote-Gesamt.pdf",
+    "status": "Vorschau zur Freigabe",
+    "reviewRequired": [
+      "Allgemeine Webdesign-Pakete nicht mit den abweichenden veröffentlichten Praxis-/Immo-Paketen vereinheitlichen.",
+      "Webdesign: zusätzliche laufende Hosting-Gebühren für Server, SSL und Domain laut Fußnote Seite 7. Keine stillschweigende Gleichsetzung mit den branchenspezifischen Angeboten.",
+      "Webdesign-Wartung umfasst WordPress-Plugin-Updates; nicht als Wartungsumfang für Eleventy übernehmen.",
+      "Unklarer Seitenumfang: Tabelle nennt Homepage plus Unterseiten, SEO-Zeile hingegen alle 3/6/10 Seiten. Vor Freigabe klären.",
+      "Werbebudget, Steuerhinweise und genaue Vertragsbedingungen nicht eigenständig ergänzen.",
+      "Zusatzmodule nur nach dokumentierter Paket-Zuordnung; die PDF-Zuordnungen sind nicht automatisch für Branchenpakete gültig.",
+      "Seite 9 formuliert «keine laufenden Kosten», Seite 7 nennt laufende Hosting-Gebühren. Vor Veröffentlichung Widerspruch bereinigen."
+    ],
+    "taxNote": "Steuerliche Behandlung wird im konkreten Angebot bestätigt."
   }
 }
