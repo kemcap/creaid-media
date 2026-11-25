@@ -15,7 +15,7 @@
       {% if pageKey == "freelancer-oder-full-service-agentur" %}
         {% set body = body | replace('<table', '<div class="j-table-scroll" tabindex="0" role="region" aria-label="Vergleichstabelle: Freelancer und Full-Service-Agentur"><table') | replace('</table>', '</table></div>') %}
       {% endif %}
-      {{ body | safe }}
+      {{ body | previewArticleLinks | safe }}
       <div class="j-article-actions"><a class="j-article-to-index" href="/creaid-blog#artikel">ALLE ARTIKEL ↗</a></div>
     </article>
   </div></section>

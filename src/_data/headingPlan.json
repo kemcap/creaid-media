@@ -851,5 +851,10 @@
     "mode": "archive",
     "h1": "Ratgeber zu Digitales Marketing",
     "topic": "Digitales Marketing"
+  },
+  "archiv-google-ads": {
+    "mode": "archive",
+    "h1": "Ratgeber zu Google Ads",
+    "topic": "Google Ads"
   }
 }

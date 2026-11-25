@@ -15,7 +15,7 @@
   </section>
   <section class="j-body" id="article-content"><div class="j-shell j-reading-grid">
     <article class="j-prose" aria-labelledby="article-title">
-      {{ article.html | safe }}
+      {{ article.html | previewArticleLinks | safe }}
       <div class="j-article-actions"><a class="j-article-to-index" href="/creaid-blog#artikel">ALLE ARTIKEL ↗</a></div>
     </article>
   </div></section>

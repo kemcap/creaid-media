@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+pageKey: archiv-google-ads
+permalink: /archiv-google-ads.html
+---
+{% include "partials/header-journal.njk" %}
+<main id="hauptinhalt">
+  <section class="j-listing cm-archive" id="artikel">
+    <div class="j-shell">
+      <div class="j-section-kicker">+ JOURNAL / THEMENARCHIV</div>
+      <nav aria-label="Brotkrumen"><a href="/creaid-blog">Journal ↗</a></nav>
+      <h1 class="cm-archive-title">Google Ads.</h1>
+      <p>Ratgeber zu Google Ads, Kampagnen und Anfragen für Unternehmen.</p>
+      <div class="j-articles">
+        {% for post in postsIndex %}
+          {% if post.slug == "google-ads-aber-keine-anfragen" %}
+            {% include "partials/journal-card.njk" %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <p><a class="j-button" href="/creaid-blog">Alle Beiträge entdecken ↗</a></p>
+    </div>
+  </section>
+</main>
+{% include "partials/footer-journal.njk" %}

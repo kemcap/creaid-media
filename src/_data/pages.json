@@ -1808,5 +1808,20 @@
     "shareImage": "https://creaid-media.de/assets/blog/wp-import/360-grad-rundgang-erstellen-lassen-oder-selbst-featured.webp",
     "ogType": "article",
     "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"360-Grad-Rundgang erstellen: Selbst machen oder beauftragen?\",\"description\":\"360-Grad-Rundgang erstellen: So entscheiden Handwerksbetriebe zwischen Eigenproduktion und Profi und planen Aufnahmen, Kosten und Website-Einbindung.\",\"url\":\"https://creaid-media.de/360-grad-rundgang-erstellen\",\"image\":\"https://creaid-media.de/assets/blog/wp-import/360-grad-rundgang-erstellen-lassen-oder-selbst-featured.webp\",\"inLanguage\":\"de-DE\"}"
+  },
+  "archiv-google-ads": {
+    "title": "Google Ads – Journalarchiv | CreAid-Media",
+    "description": "Ratgeber zu Google Ads, Kampagnen und Anfragen für Unternehmen.",
+    "robots": "noindex,nofollow,noarchive",
+    "themeColor": "#121315",
+    "canonical": "https://creaid-media.de/category/google-ads",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "bodyAttrs": "",
+    "family": "journal",
+    "url": "archiv-google-ads.html",
+    "isPost": false,
+    "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
+    "ogType": "website",
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Google Ads – Journalarchiv\",\"description\":\"Ratgeber zu Google Ads, Kampagnen und Anfragen für Unternehmen.\",\"url\":\"https://creaid-media.de/category/google-ads\",\"inLanguage\":\"de-DE\"}"
   }
 }
