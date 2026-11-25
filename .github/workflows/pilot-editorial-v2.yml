@@ -1,0 +1,74 @@
+name: Pilot editorial V2 and original hero quality gate
+on:
+  push:
+    branches: ['audit/editorial-ux-2026-11']
+    paths: ['.github/workflows/pilot-editorial-v2.yml','design/pilot-v2/**']
+permissions:
+  contents: write
+  statuses: write
+concurrency:
+  group: pilot-editorial-v2
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Report start
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state=pending -f context=audit/pilot-v2 -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+      - run: pip install Pillow==11.3.0
+      - run: python design/pilot-v2/import-hero.py
+      - run: npm ci
+      - run: npm run verify
+      - run: node scripts/check-global-shell.mjs && node scripts/check-home-motion.mjs && node scripts/check-editorial-seo-links.mjs
+      - run: npm install --no-save --package-lock=false playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - name: Browser checks
+        run: |
+          node scripts/preview.mjs > /tmp/creaid-preview.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:routes -- http://127.0.0.1:8080
+          node design/pilot-v2/check-pilots.mjs
+          node scripts/check-journal-pagination.mjs
+          node scripts/check-design-system.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pilot-editorial-screenshots
+          path: |
+            pilot-*.png
+            design-system-report/
+          if-no-files-found: warn
+      - name: Integrate checked original hero on audit branch only
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = refs/heads/audit/editorial-ux-2026-11
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/pages/index.njk public/assets/home-editorial.css public/assets/portfolio/creative-media-nurse-*.webp
+          git commit -m "Use verified original CreAid-Media hero motif after pilot quality gate"
+          git push origin HEAD:refs/heads/audit/editorial-ux-2026-11
+      - name: Record result
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          state=failure
+          if [ "$JOB_STATUS" = success ]; then state=success; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state="$state" -f context=audit/pilot-v2 -f target_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
