@@ -3,10 +3,15 @@ import {mkdtempSync,mkdirSync,writeFileSync,readFileSync,rmSync,existsSync} from
 import {join,resolve} from 'node:path';
 import {tmpdir} from 'node:os';
 import {createRequire} from 'node:module';
-import {startStudio} from './studio-local.mjs';
+import {startStudio,retentionCandidates} from './studio-local.mjs';
 const root=mkdtempSync(join(tmpdir(),'creaid-local-studio-'));
 let server,browser;
 try{
+  const now=10*3600000;
+  const entries=[['newest',now],['recent',now-1000],['old',now-5*3600000],['older',now-8*3600000]];
+  assert.deepEqual(retentionCandidates(entries,{enabled:false,keep:2,maxAgeHours:1},'newest',now),[]);
+  assert.deepEqual(retentionCandidates(entries,{enabled:true,keep:2,maxAgeHours:6},'newest',now),['older']);
+  assert.deepEqual(retentionCandidates(entries,{enabled:true,keep:3,maxAgeHours:1},'older',now),[]);
   const source=join(root,'dist'),out=join(root,'runs');
   mkdirSync(join(source,'assets'),{recursive:true});
   const original='<!doctype html><html><head><link rel="stylesheet" href="/assets/main.css"></head><body><h1>Studio fixture</h1></body></html>';
@@ -49,6 +54,13 @@ try{
   assert.ok(existsSync(join(olderSession,'keep.txt')));
   assert.equal(readFileSync(join(backup,'index.html'),'utf8'),original);
   assert.equal(readFileSync(join(source,'index.html'),'utf8'),original);
+  assert.match(await page.locator('#retentionStatus').textContent(),/Aus/);
+  await page.locator('#autoCleanup').check();
+  page.once('dialog',d=>d.accept());await page.locator('#saveRetention').click();
+  await page.waitForFunction(()=>document.querySelector('#retentionStatus').textContent==='Aktiv');
+  assert.ok(existsSync(newer.site));assert.ok(existsSync(olderSession));
+  await page.locator('#autoCleanup').uncheck();await page.locator('#saveRetention').click();
+  await page.waitForFunction(()=>document.querySelector('#retentionStatus').textContent==='Aus');
   assert.deepEqual(errors,[]);
   console.log('PASS: local Studio UI starts real safe pipeline, report opens, authorization, confirmed old-run cleanup and source/backup preservation');
 }finally{if(browser)await browser.close();if(server)await server.close();rmSync(root,{recursive:true,force:true});}
