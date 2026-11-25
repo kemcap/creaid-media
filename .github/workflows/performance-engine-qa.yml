@@ -1,0 +1,30 @@
+name: Performance Engine QA (no deployment)
+on:
+  pull_request:
+    paths:
+      - 'scripts/performance/**'
+      - 'package.json'
+      - '.github/workflows/performance-engine-qa.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run test:performance
+      - run: npm run verify
+      - run: npm run performance:preview -- dist performance-preview
+      - uses: actions/upload-artifact@v4
+        with:
+          name: performance-engine-report
+          path: |
+            performance-preview/report.json
+            performance-preview/cache-policy.active.conf
+          retention-days: 7
