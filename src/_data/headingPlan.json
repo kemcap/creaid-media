@@ -20,6 +20,8 @@
       "Leistungen für Ihre Unternehmenswebsite",
       null,
       null,
+      null,
+      null,
       "Webdesign-Projekt besprechen"
     ],
     "mode": "creative",
@@ -95,6 +97,8 @@
       "Conversion-Messung und Auswertung",
       "Leistungen für Google Ads und Social Media",
       "Ablauf der Kampagnenplanung",
+      null,
+      null,
       null,
       "Häufige Fragen zu Werbekampagnen",
       "Kampagnenberatung anfragen",
@@ -544,7 +548,8 @@
     "mode": "plain",
     "h1": "Performance-Optimierung für Websites",
     "h2": [
-      "Ladezeiten und technische Engpässe verbessern"
+      "Ladezeiten und technische Engpässe verbessern",
+      "Website-Optimierung / Conversion-Performance"
     ],
     "h3": [
       "Caching, Medien und Frontend",
@@ -592,7 +597,8 @@
     "mode": "plain",
     "h1": "Website-Upgrades und Wartung",
     "h2": [
-      "Updates und Kompatibilität planbar prüfen"
+      "Updates und Kompatibilität planbar prüfen",
+      "Wartungspakete"
     ],
     "h3": [
       "Versionen, Backups und Erweiterungen",

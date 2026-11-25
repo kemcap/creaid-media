@@ -1,13 +1,13 @@
 name: Optimization candidate QA (no deployment)
 on:
   push:
-    branches: [optimization/full-website-ui-ux, optimization/pricing-components, optimization/global-heading-dot]
+    branches: [optimization/full-website-ui-ux, optimization/pricing-components, optimization/global-heading-dot, optimization/integrate-additional-offers]
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   verify:
-    if: github.ref == 'refs/heads/optimization/full-website-ui-ux' || github.ref == 'refs/heads/optimization/pricing-components' || github.ref == 'refs/heads/optimization/global-heading-dot'
+    if: github.ref == 'refs/heads/optimization/full-website-ui-ux' || github.ref == 'refs/heads/optimization/pricing-components' || github.ref == 'refs/heads/optimization/global-heading-dot' || github.ref == 'refs/heads/optimization/integrate-additional-offers'
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     steps:

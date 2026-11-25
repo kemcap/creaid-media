@@ -1,12 +1,13 @@
-<section class="cm-pricing" id="pakete" aria-labelledby="cm-pricing-title">
+<section class="cm-pricing" id="{{ pricingGroup.anchor or 'pakete' }}" aria-labelledby="{{ pricingGroup.titleId or 'cm-pricing-title' }}">
   <div class="cm-pricing__inner">
     <p class="cm-pricing__kicker">+ CREAID / ANGEBOTE IM ÜBERBLICK</p>
-    <h2 id="cm-pricing-title">{{ pricingGroup.heading | escape }}</h2>
+    <h2 class="cm-pricing__title" id="{{ pricingGroup.titleId or 'cm-pricing-title' }}">{{ pricingGroup.heading | escape }}</h2>
+    {% if pricingGroup.review %}<p class="cm-pricing__review">Angebotsentwurf · Konditionen vor Beauftragung bestätigen</p>{% endif %}
     <p class="cm-pricing__intro">Vergleichen Sie die Leistungen und wählen Sie das Paket, das zu Ihrem Vorhaben passt.</p>
     <div class="cm-pricing__grid">
       {% for package in pricingGroup.packages %}
       <article class="cm-pricing__card{% if package.featured %} cm-pricing__card--featured{% endif %}">
-        <p class="cm-pricing__index">0{{ loop.index }} / PAKET{% if package.featured %} · EMPFOHLEN{% endif %}</p>
+        <p class="cm-pricing__index">0{{ loop.index }} / PAKET{% if package.featured %} · {{ pricingGroup.featuredLabel or "EMPFOHLEN" }}{% endif %}</p>
         <h3>{{ package.name | escape }}</h3>
         <p class="cm-pricing__price">{{ package.displayPrice | escape }}{% if package.interval %}<small>{{ package.interval | escape }}</small>{% endif %}</p>
         {% if package.term %}<p class="cm-pricing__term">{{ package.term | escape }}</p>{% endif %}
@@ -22,6 +23,16 @@
       </article>
       {% endfor %}
     </div>
-    <p class="cm-pricing__note">Preis und Leistungsumfang werden vor Beauftragung bestätigt.</p>
+    {% if pricingGroup.comparison and pricingGroup.comparison.length %}
+    <details class="cm-pricing__comparison"><summary>Pakete direkt vergleichen</summary>
+      <div class="cm-pricing__table-scroll" role="region" tabindex="0" aria-label="Paketvergleich {{ pricingGroup.heading | escape }}">
+        <table><caption>{{ pricingGroup.heading | escape }}</caption><thead><tr><th scope="col">Leistung</th>{% for package in pricingGroup.packages %}<th scope="col">{{ package.name | escape }}<br>{{ package.displayPrice | escape }}</th>{% endfor %}</tr></thead><tbody>
+          {% for item in pricingGroup.comparison %}<tr><th scope="row">{{ item.label | escape }}</th>{% for value in item.values %}<td{% if value == "Nicht enthalten" %} class="cm-pricing__excluded"{% endif %}>{{ value | escape }}</td>{% endfor %}</tr>{% endfor %}
+        </tbody></table>
+      </div>
+    </details>
+    {% endif %}
+    <p class="cm-pricing__note">{{ pricingGroup.note or "Preis und Leistungsumfang werden vor Beauftragung bestätigt." | escape }}</p>
+    {% if pricingGroup.review %}<p class="cm-pricing__note">{{ pricing.additionalSource.taxNote | escape }}</p>{% endif %}
   </div>
 </section>

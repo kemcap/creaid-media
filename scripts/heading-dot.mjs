@@ -18,7 +18,7 @@ export function decoratePageHeadings(html,outputPath){
  return html.replace(/<main\b[^>]*>[\s\S]*?<\/main>/,main=>main.replace(/<h([12])\b([^>]*)>([\s\S]*?)<\/h\1>/g,(all,level,attrs,body)=>{
   if(/\bcm-semantic-heading\b/.test(attrs))return all;
   // Real H1 titles on archives, legacy pages and editorial articles; selected large H2s.
-  if(level==='1'||/\bid="cm-pricing-title"/.test(attrs))return '<h'+level+attrs+'>'+decorateHeading(body)+'</h'+level+'>';
+  if(level==='1'||/\bid="cm-pricing-title(?:-[^"]+)?"/.test(attrs))return '<h'+level+attrs+'>'+decorateHeading(body)+'</h'+level+'>';
   return all;
  }));
 }
