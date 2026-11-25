@@ -1,7 +1,7 @@
 // Local-only Studio runner. No arbitrary shell commands, external URLs or deployment.
 import {createServer} from 'node:http';
 import {randomBytes,randomUUID} from 'node:crypto';
-import {existsSync,lstatSync,realpathSync,mkdirSync,readFileSync} from 'node:fs';
+import {existsSync,lstatSync,realpathSync,mkdirSync,readFileSync,rmSync,readdirSync} from 'node:fs';
 import {resolve,join,relative,sep} from 'node:path';
 import {pathToFileURL,fileURLToPath} from 'node:url';
 import {runPipeline} from './pipeline.mjs';
@@ -14,6 +14,17 @@ function localDirectory(p){
   if(st.isSymbolicLink()||!st.isDirectory())throw Error('Expected real local output directory');
   return realpathSync(p);
 }
+function generatedBytes(dir){
+  let bytes=0;
+  for(const entry of readdirSync(dir,{withFileTypes:true})){
+    const p=join(dir,entry.name);
+    if(entry.isSymbolicLink())throw Error('Symbolic link in generated run; manual review required');
+    if(entry.isDirectory())bytes+=generatedBytes(p);
+    else if(entry.isFile())bytes+=lstatSync(p).size;
+    else throw Error('Unexpected file type in generated run');
+  }
+  return bytes;
+}
 function json(res,status,data){res.writeHead(status,{'Content-Type':'application/json; charset=utf-8'}).end(JSON.stringify(data));}
 async function body(req){
   let length=0;const parts=[];
@@ -21,15 +32,15 @@ async function body(req){
   return JSON.parse(Buffer.concat(parts).toString('utf8'));
 }
 function localUI(token){
-  const section='<section id="localRunner"><h2>05 / Lokal optimieren</h2><p>Erstellt einen neuen isolierten Vorschau-Build aus dem bereits gebauten dist-Ordner. Keine Veröffentlichung.</p><div class="actions"><button id="runLocal" type="button">Optimierung starten</button><a id="localReport" hidden target="_blank" rel="noopener noreferrer">Analysebericht öffnen</a></div><p id="localStatus" role="status" aria-live="polite"></p><pre id="localResult" hidden></pre></section>';
+  const section='<section id="localRunner"><h2>05 / Lokal optimieren</h2><p>Erstellt einen neuen isolierten Vorschau-Build aus dem bereits gebauten dist-Ordner. Keine Veröffentlichung.</p><div class="actions"><button id="runLocal" type="button">Optimierung starten</button><a id="localReport" hidden target="_blank" rel="noopener noreferrer">Analysebericht öffnen</a></div><p id="localStatus" role="status" aria-live="polite"></p><pre id="localResult" hidden></pre></section><section id="cacheManagement"><h2>06 / Lokalen Build-Cache verwalten</h2><p>Entfernt nur ältere, in dieser Studio-Sitzung erzeugte Vorschau-Builds samt Berichten. Der neueste Lauf, dist, Sicherungen und frühere Sitzungen bleiben erhalten. Browser- und Hosting-Cache werden nicht geleert.</p><p id="cacheInfo" role="status"></p><button id="clearCache" type="button" class="secondary" disabled>Lokalen Build-Cache leeren</button><p id="cacheStatus" role="status" aria-live="polite"></p></section>';
   const js='<script>\n'+
     'const localToken='+JSON.stringify(token)+';\n'+
     'const localButton=document.getElementById("runLocal"),localStatus=document.getElementById("localStatus"),localResult=document.getElementById("localResult"),localReport=document.getElementById("localReport");\n'+
-    'let localBusy=false;\n'+
+    'const clearButton=document.getElementById("clearCache"),cacheInfo=document.getElementById("cacheInfo"),cacheStatus=document.getElementById("cacheStatus");let removable=0;let localBusy=false;\n'+
     'async function localAPI(path,options={}){const r=await fetch(path,{...options,headers:{"X-CreAid-Local":localToken,...options.headers},cache:"no-store"});const data=await r.json();if(!r.ok)throw Error(data.error||"Lokaler Serverfehler");return data;}\n'+
-    'function renderLocal(state){localBusy=state.state==="running";localButton.disabled=localBusy;localStatus.textContent=state.state==="running"?"Optimierung läuft …":state.state==="done"?"Vorschau erfolgreich erstellt.":state.state==="error"?"Optimierung fehlgeschlagen.":"Bereit.";localResult.hidden=!state.result&&!state.error;localResult.textContent=state.result?JSON.stringify(state.result,null,2):state.error||"";localReport.hidden=state.state!=="done";if(state.state==="done")localReport.href="/report?token="+encodeURIComponent(localToken);}\n'+
+    'function renderLocal(state){localBusy=state.state==="running"||state.state==="cleaning";localButton.disabled=localBusy;if(state.cache){removable=state.cache.removableRuns;cacheInfo.textContent=removable+" ältere Testläufe zur Bereinigung.";}clearButton.disabled=localBusy||removable===0;localStatus.textContent=state.state==="cleaning"?"Bereinigung läuft …":state.state==="running"?"Optimierung läuft …":state.state==="done"?"Vorschau erfolgreich erstellt.":state.state==="error"?"Optimierung fehlgeschlagen.":"Bereit.";localResult.hidden=!state.result&&!state.error;localResult.textContent=state.result?JSON.stringify(state.result,null,2):state.error||"";localReport.hidden=state.state!=="done";if(state.state==="done")localReport.href="/report?token="+encodeURIComponent(localToken);}\n'+
     'async function refreshLocal(){try{const state=await localAPI("/api/status");renderLocal(state);if(localBusy)setTimeout(refreshLocal,1000);}catch(e){localStatus.textContent=e.message;localButton.disabled=false;}}\n'+
-    'localButton.addEventListener("click",async()=>{if(localBusy)return;let config;try{config=build();}catch(e){localStatus.textContent=e.message;return;}localButton.disabled=true;localReport.hidden=true;localStatus.textContent="Starte …";try{renderLocal(await localAPI("/api/run",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(config)}));if(localBusy)setTimeout(refreshLocal,1000);}catch(e){localStatus.textContent=e.message;localButton.disabled=false;}});refreshLocal();\n</script>';
+    'localButton.addEventListener("click",async()=>{if(localBusy)return;let config;try{config=build();}catch(e){localStatus.textContent=e.message;return;}localButton.disabled=true;clearButton.disabled=true;localReport.hidden=true;localStatus.textContent="Starte …";try{renderLocal(await localAPI("/api/run",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(config)}));if(localBusy)setTimeout(refreshLocal,1000);}catch(e){localStatus.textContent=e.message;localButton.disabled=false;}});clearButton.addEventListener("click",async()=>{if(localBusy||!removable)return;if(!window.confirm("Ältere Vorschau-Builds dieser Sitzung samt Berichten wirklich löschen? Der neueste Lauf bleibt erhalten."))return;clearButton.disabled=true;localButton.disabled=true;try{const result=await localAPI("/api/cache/clear",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({confirm:"remove-previous-session-runs"})});cacheStatus.textContent=result.removed+" Testläufe entfernt · "+(result.bytes/1048576).toFixed(2)+" MiB freigegeben.";}catch(e){cacheStatus.textContent=e.message;}await refreshLocal();});refreshLocal();\n</script>';
   return readFileSync(studioFile,'utf8').replace("default-src 'none'; style-src","default-src 'none'; connect-src 'self'; style-src").replace('</main>',section+'</main>').replace('</body>',js+'</body>');
 }
 export async function startStudio({source,outputRoot,toolRoot,port=0}){
@@ -43,6 +54,9 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
   const token=randomBytes(32).toString('hex');
   const html=localUI(token);
   let state={state:'idle'},latest=null,origin;
+  const completedRuns=new Set();
+  function cleanupCandidates(){return [...completedRuns].filter(p=>p!==latest&&existsSync(p));}
+  function cacheInfo(){return {removableRuns:cleanupCandidates().length,latestPreserved:!!latest,scope:'current-session',browserCacheCleared:false,hostingCacheCleared:false};}
   const server=createServer(async(req,res)=>{
     res.setHeader('Cache-Control','no-store');
     res.setHeader('X-Content-Type-Options','nosniff');
@@ -57,10 +71,32 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
       res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'}).end(report);return;
     }
     if(req.headers['x-creaid-local']!==token){json(res,403,{error:'Local Studio authorization required'});return;}
-    if(req.method==='GET'&&u.pathname==='/api/status'){json(res,200,state);return;}
+    if(req.method==='GET'&&u.pathname==='/api/status'){json(res,200,{...state,cache:cacheInfo()});return;}
+    if(req.method==='POST'&&u.pathname==='/api/cache/clear'){
+      if(req.headers.origin!==origin||!/^application\/json(?:;|$)/i.test(req.headers['content-type']??'')){json(res,403,{error:'Invalid request origin or type'});return;}
+      if(state.state==='running'||state.state==='cleaning'){json(res,409,{error:'A run or cleanup is active'});return;}
+      const previous=state;
+      state={state:'cleaning'};
+      let removed=0,bytes=0;
+      try{
+        const config=await body(req);
+        if(config?.confirm!=='remove-previous-session-runs'||Object.keys(config).length!==1){json(res,400,{error:'Explicit cleanup confirmation required'});return;}
+        const plan=cleanupCandidates().map(p=>{
+          if(!/^run-[0-9a-f-]{36}$/.test(p.slice(outputRoot.length+1))||resolve(p,'..')!==outputRoot||realpathSync(outputRoot)!==outputRoot||lstatSync(p).isSymbolicLink()||!lstatSync(p).isDirectory()||realpathSync(p)!==p)throw Error('Unsafe generated run; cleanup aborted');
+          return {p,bytes:generatedBytes(p)};
+        });
+        for(const entry of plan){
+          rmSync(entry.p,{recursive:true,force:false});
+          completedRuns.delete(entry.p);removed++;bytes+=entry.bytes;
+        }
+        json(res,200,{removed,bytes,cache:cacheInfo(),deployment:'not performed'});
+      }catch(e){json(res,400,{error:String(e.message),removed,bytes,cache:cacheInfo()});}
+      finally{state=previous;}
+      return;
+    }
     if(req.method==='POST'&&u.pathname==='/api/run'){
       if(req.headers.origin!==origin||!/^application\/json(?:;|$)/i.test(req.headers['content-type']??'')){json(res,403,{error:'Invalid request origin or type'});return;}
-      if(state.state==='running'){json(res,409,{error:'A run is already active'});return;}
+      if(state.state==='running'||state.state==='cleaning'){json(res,409,{error:'A run is already active'});return;}
       // Reserve the run before awaiting the request body, preventing simultaneous starts.
       state={state:'running'};
       let config;
@@ -70,6 +106,7 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
       setImmediate(async()=>{
         try{
           const result=await runPipeline({source,output,config,toolRoot});
+          completedRuns.add(output);
           latest=output;
           state={state:'done',result:{output,site:join(output,'package','site'),audit:result.audit,packaging:result.packaging,deployment:result.deployment}};
         }catch(e){state={state:'error',error:String(e.message)};}
