@@ -22,6 +22,9 @@ export function apachePolicy(profile = 'preview') {
       '<FilesMatch "\\.html?$">',
       'Header always set Cache-Control "no-cache, must-revalidate" "' + okStatus + '"',
       '</FilesMatch>',
+      '<FilesMatch "\\.(css|js|mjs|webp|avif|png|jpg|jpeg|gif|svg|woff2|woff|ico)$">',
+      'Header always set Cache-Control "no-cache, must-revalidate" "' + okStatus + '"',
+      '</FilesMatch>',
       '<FilesMatch "' + immutablePattern + '">',
       'Header always set Cache-Control "public, max-age=31536000, immutable" "' + okStatus + '"',
       '</FilesMatch>'
@@ -77,6 +80,8 @@ function inspect(source, profile) {
       if (profile === 'production' && /noindex|noarchive|nofollow|AuthType|Require\s+valid-user/i.test(rules))
         throw Error('Protected/preview configuration: ' + file);
     }
+    if (profile === 'production' && /\.(?:php[0-9]*|phtml|phar|cgi|fcgi|pl|py|asp|aspx|jsp|sh|exe)$/i.test(name))
+      throw Error('Executable file in static production input: ' + file);
     if (profile === 'production' && /\.(?:html?|xml)$/i.test(name)) {
       const html = readFileSync(file,'utf8');
       if (/<meta\b[^>]*\b(?:noindex|noarchive|nofollow)\b[^>]*>/i.test(html))
