@@ -86,11 +86,6 @@
       "pageKey": "onlineshops-ecommerce"
     },
     {
-      "label": "Webdesign für Handwerker",
-      "href": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
-      "pageKey": "webdesign-handwerker"
-    },
-    {
       "label": "Google Ads & Social Media",
       "href": "/google-ads-social-media",
       "pageKey": "google-ads-social-media"
@@ -109,6 +104,13 @@
       "label": "KI-Workflows & CRM",
       "href": "/ki-workflows-crm",
       "pageKey": "ki-workflows-crm"
+    }
+  ],
+  "branchServices": [
+    {
+      "label": "Webdesign für Handwerker",
+      "href": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "pageKey": "webdesign-handwerker"
     },
     {
       "label": "Webdesign für Ärzte",

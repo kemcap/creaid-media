@@ -145,3 +145,12 @@
 .cm-header__toggle-label, .cm-footer__bottom { font-size: .8125rem; }
 .cm-header__cta, .cm-footer__lead-cta { background: var(--cm-berry); }
 .cm-header__cta:hover, .cm-footer__lead-cta:hover { background: #8e2040; }
+
+/* Phase 3: distinct service and industry groups; preserve existing layout and motion. */
+.cm-header__dropdown-kicker.cm-header__specialty-label{margin-top:16px}
+.cm-header__dropdown .cm-header__branches a{font-size:.875rem}
+@media (min-width:861px){
+  .cm-header__dropdown{max-height:calc(100dvh - 120px);overflow-y:auto;overscroll-behavior:contain}
+}
+.cm-footer__services .cm-footer__all-services{display:inline-flex;min-height:44px;align-items:center;color:#eee;font-size:.875rem;text-decoration:underline;text-underline-offset:.2em}
+.cm-header__link[aria-current=location]{color:#ff5b86;opacity:1}
