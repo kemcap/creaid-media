@@ -1,0 +1,19 @@
+{
+  "freelancer-oder-full-service-agentur": {
+    "profile": "vergleich",
+    "image": "/assets/blog/wp-original/freelancer-oder-full-service-agentur.webp",
+    "imageAlt": "freelancer oder full service agentur?",
+    "width": 1536,
+    "height": 1024
+  },
+  "google-maps-eintrag-optimieren": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/google-maps-eintrag-optimieren.webp",
+    "imageAlt": "Google Maps Eintrag optimieren in 9 Schritten",
+    "width": 1536,
+    "height": 1024
+  },
+  "website-audit-unternehmen": {
+    "profile": "audit"
+  }
+}

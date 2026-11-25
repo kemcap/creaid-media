@@ -1,7 +1,9 @@
+import { editorialArticle } from './scripts/journal-editorial.mjs';
 import { redirect, routeFiles } from './scripts/routes.mjs';
 import { transformHeadings } from './scripts/heading-semantics.mjs';
 
 export default function (eleventyConfig) {
+  eleventyConfig.addFilter('editorialArticle', editorialArticle);
   eleventyConfig.addFilter('previewArticleLinks', (html) => html.replace(
     /(<a\b[^>]*?\shref=["'])https:\/\/creaid-media\.de(\/[^"']*)(?=["'])/gi,
     (link, prefix, path) => {

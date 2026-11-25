@@ -1,3 +1,10 @@
+{% if journalEditorial[pageKey] %}
+{% set post = pages[pageKey] %}
+{% set article = journalEditorial[pageKey] %}
+{% set isDraft = true %}
+{% set sourceHtml = wordpressPreviewDrafts[pageKey] %}
+{% include "partials/journal-editorial.njk" %}
+{% else %}
 {% set draft = pages[pageKey] %}
 <a class="j-skip" href="#hauptinhalt">Zum Inhalt springen</a>
 {% include "partials/header-journal.njk" %}
@@ -20,3 +27,4 @@
     </article>
   </div></section>
 </main>
+{% endif %}

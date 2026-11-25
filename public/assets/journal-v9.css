@@ -32,3 +32,29 @@
 .j-feature-copy > .j-micro { color: #ff6b95; }
 
 .j-resultbar { color: #635a60; }
+
+/* Imported articles use the existing journal shell with article-specific emphasis. */
+.j-editorial .j-article-hero-v9,
+.j-editorial .j-article-hero-v9 .j-shell { height: auto; min-height: 0; }
+.j-editorial .j-article-hero-v9 .j-shell { padding-block: clamp(40px, 6vw, 96px); }
+.j-editorial .j-article-hero-v9 .j-article-desc { display: block; }
+.j-editorial .j-editorial-meta > p { color: #ded4d8 !important; margin: 1rem 0 0 !important; }
+.j-editorial .j-editorial-meta a { color: inherit; }
+.j-editorial .j-prose { font-size: clamp(16px, 1.5vw, 19px); }
+.j-editorial .j-prose :is(h2, h3)[id] { scroll-margin-top: calc(var(--cm-nav-height, 92px) + 1.25rem); }
+.j-editorial .j-prose > :is(p, ul, ol) { max-inline-size: 70ch; }
+.j-editorial .j-prose > h2 { margin-block-start: clamp(2.5rem, 5vw, 4.5rem); }
+.j-editorial .j-article-cover img { object-fit: contain; }
+.j-editorial--vergleich .j-table-scroll { margin-block: 2rem; border-block: 2px solid #b3284f; }
+.j-editorial--vergleich .j-table-scroll th { background: #420915; color: #fff; }
+.j-editorial--vergleich .j-table-scroll tbody tr:nth-child(even) { background: #eee8e6; }
+.j-editorial--ratgeber .j-toc a { font-variant-numeric: tabular-nums; }
+.j-editorial--audit .j-prose > figure { margin-block: clamp(2rem, 5vw, 4rem); }
+main.j-editorial > .j-article-hero .j-article-cover {
+  align-self: center;
+  inline-size: min(100%, 30rem);
+  block-size: auto;
+  max-block-size: none;
+  aspect-ratio: auto;
+}
+main.j-editorial > .j-article-hero .j-article-cover img { display: block; height: auto; }

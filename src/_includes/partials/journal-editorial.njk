@@ -1,0 +1,47 @@
+{% set layoutInfo = journalEditorial[pageKey] %}
+{% set editorial = sourceHtml | previewArticleLinks | editorialArticle %}
+<a class="j-skip" href="#hauptinhalt">Zum Inhalt springen</a>
+{% include "partials/header-journal.njk" %}
+<div class="j-readbar" aria-hidden="true"><i></i></div>
+<main id="hauptinhalt" class="j-editorial j-editorial--{{ layoutInfo.profile | escape }}">
+  <section class="j-article-hero j-article-hero-v9" aria-labelledby="article-title">
+    <div class="j-shell">
+      <div class="j-article-hcontent">
+        <nav class="j-breadcrumb" aria-label="Brotkrumen"><a href="/">START</a><span>/</span><a href="/creaid-blog">JOURNAL</a></nav>
+        {% if isDraft %}<div class="j-micro j-article-kicker">WORDPRESS-ENTWURF</div>{% endif %}
+        <h1 id="article-title">{{ post.heading | escape }}</h1>
+        {% if editorial.meta %}<div class="j-editorial-meta">{{ editorial.meta | safe }}</div>{% endif %}
+        <p class="j-article-desc">{{ post.description | escape }}</p>
+        <a class="j-article-scroll" href="#article-content">Artikel lesen <span aria-hidden="true">↓</span></a>
+      </div>
+      {% if article.image %}<div class="j-article-cover"><img src="{{ article.image | escape }}" alt="{{ article.imageAlt | escape }}" width="{{ article.width }}" height="{{ article.height }}" fetchpriority="high"></div>{% endif %}
+    </div>
+  </section>
+  <section class="j-body" id="article-content">
+    <div class="j-shell j-reading-grid">
+      <article class="j-prose" aria-labelledby="article-title">
+        {% if editorial.toc.length %}
+        <details class="j-toc-mobile"><summary>Inhaltsverzeichnis</summary>
+          <nav aria-label="Artikel-Inhaltsverzeichnis">
+            {% for item in editorial.toc %}<a href="#{{ item.id | escape }}">{{ item.label | safe }}</a>{% endfor %}
+          </nav>
+        </details>
+        {% endif %}
+        {% if layoutInfo.profile == "vergleich" %}
+          {{ editorial.body | replace('<table', '<div class="j-table-scroll" tabindex="0" role="region" aria-label="Vergleichstabelle: Freelancer und Full-Service-Agentur"><table') | replace('</table>', '</table></div>') | safe }}
+        {% else %}
+          {{ editorial.body | safe }}
+        {% endif %}
+        <div class="j-article-actions"><a class="j-article-to-index" href="/creaid-blog#artikel">Alle Artikel ↗</a></div>
+      </article>
+      {% if editorial.toc.length %}
+      <aside class="j-reading-sidebar" aria-label="Inhaltsverzeichnis">
+        <nav class="j-toc" aria-label="Artikel-Inhaltsverzeichnis">
+          <div class="j-toc-heading">In diesem Artikel</div>
+          <ol>{% for item in editorial.toc %}<li><a href="#{{ item.id | escape }}">{{ item.label | safe }}</a></li>{% endfor %}</ol>
+        </nav>
+      </aside>
+      {% endif %}
+    </div>
+  </section>
+</main>
