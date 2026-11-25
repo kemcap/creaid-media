@@ -1,0 +1,52 @@
+import assert from 'node:assert/strict';
+import {mkdtempSync,mkdirSync,writeFileSync,readFileSync,rmSync,existsSync} from 'node:fs';
+import {join,resolve} from 'node:path';
+import {tmpdir} from 'node:os';
+import {createRequire} from 'node:module';
+import {pathToFileURL,fileURLToPath} from 'node:url';
+import {compareVisual} from './visual-regression.mjs';
+const toolRoot=resolve(process.argv[2]??'.');
+const {chromium}=createRequire(join(toolRoot,'package.json'))('playwright');
+const root=mkdtempSync(join(tmpdir(),'creaid-studio-'));
+try{
+  const browser=await chromium.launch({headless:true});
+  try{
+    const context=await browser.newContext({acceptDownloads:true,viewport:{width:390,height:844}});
+    const page=await context.newPage(),errors=[];
+    page.on('pageerror',e=>errors.push(e.message));
+    await page.goto(new URL('./studio.html',import.meta.url).href);
+    const config=async()=>JSON.parse(await page.locator('#preview').textContent());
+    assert.equal((await config()).schemaVersion,1);
+    assert.equal((await config()).optimize,undefined);
+    await page.locator('input[value=balanced]').check();
+    assert.equal(await page.locator('#export').isDisabled(),true);
+    await page.locator('#files').fill('assets/main.css');
+    await page.locator('#images').fill('assets/photo.jpg');
+    assert.deepEqual((await config()).optimize.files,['assets/main.css']);
+    assert.equal((await config()).responsive.quality,82);
+    await page.locator('input[value=maximum]').check();
+    assert.equal(await page.locator('#export').isDisabled(),true);
+    await page.locator('#hintJSON').fill('{"index.html":{"deferScripts":["/assets/app.js"]}}');
+    assert.deepEqual((await config()).hints['index.html'].deferScripts,['/assets/app.js']);
+    const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#export').click()]);
+    const dest=join(root,'export.json');await download.saveAs(dest);
+    assert.deepEqual(JSON.parse(readFileSync(dest,'utf8')),await config());
+    await page.locator('#reset').click();
+    assert.equal((await config()).hints,undefined);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+    assert.deepEqual(errors,[]);
+    await context.close();
+  }finally{await browser.close();}
+  const a=join(root,'before'),b=join(root,'after');
+  mkdirSync(a);mkdirSync(b);
+  const html='<!doctype html><html><head><title>Fixture</title><meta name="viewport" content="width=device-width"><style>body{background:white;color:#222;font-family:sans-serif}</style></head><body><h1>CreAid</h1></body></html>';
+  writeFileSync(join(a,'index.html'),html);writeFileSync(join(b,'index.html'),html);
+  const same=await compareVisual({before:a,after:b,output:join(root,'same'),toolRoot,viewports:[390]});
+  assert.equal(same.passed,true);assert.equal(same.rows.length,2);
+  assert.ok(existsSync(join(root,'same',same.rows[0].screenshots.diff)));
+  writeFileSync(join(b,'index.html'),html.replace('background:white','background:#222'));
+  const changed=await compareVisual({before:a,after:b,output:join(root,'changed'),toolRoot,viewports:[390]});
+  assert.equal(changed.passed,false);
+  assert.ok(changed.rows.some(r=>r.findings.includes('pixel-difference')));
+  console.log('PASS: mobile control panel, preset validation, JSON download and visual diff detection');
+}finally{rmSync(root,{recursive:true,force:true});}
