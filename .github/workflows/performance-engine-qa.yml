@@ -34,9 +34,10 @@ jobs:
       - run: node scripts/performance/test-compare-lighthouse.mjs
       - name: Install isolated browser measurement tools
         run: |
-          npm install --prefix "$RUNNER_TEMP/creaid-browser-tools" --save-exact --no-audit --no-fund playwright@1.56.1 lighthouse@12.8.2
+          npm install --prefix "$RUNNER_TEMP/creaid-browser-tools" --save-exact --no-audit --no-fund playwright@1.56.1 lighthouse@12.8.2 pngjs@7.0.0 pixelmatch@7.1.0
           "$RUNNER_TEMP/creaid-browser-tools/node_modules/.bin/playwright" install --with-deps chromium
       - run: node scripts/performance/test-browser-measurement.mjs "$RUNNER_TEMP/creaid-browser-tools" --lighthouse
+      - run: node scripts/performance/test-studio-visual.mjs "$RUNNER_TEMP/creaid-browser-tools"
       - run: npm run verify
       - run: npm run performance:preview -- dist performance-preview
       - run: npm run performance:audit -- dist performance-audit
