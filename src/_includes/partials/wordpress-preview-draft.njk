@@ -11,7 +11,11 @@
   </section>
   <section class="j-body" id="article-content"><div class="j-shell j-reading-grid">
     <article class="j-prose" aria-labelledby="article-title">
-      {{ wordpressPreviewDrafts[pageKey] | safe }}
+      {% set body = wordpressPreviewDrafts[pageKey] %}
+      {% if pageKey == "freelancer-oder-full-service-agentur" %}
+        {% set body = body | replace('<table', '<div class="j-table-scroll" tabindex="0" role="region" aria-label="Vergleichstabelle: Freelancer und Full-Service-Agentur"><table') | replace('</table>', '</table></div>') %}
+      {% endif %}
+      {{ body | safe }}
       <div class="j-article-actions"><a class="j-article-to-index" href="/creaid-blog#artikel">ALLE ARTIKEL ↗</a></div>
     </article>
   </div></section>

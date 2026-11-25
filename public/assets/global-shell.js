@@ -11,7 +11,6 @@
   const close = (restoreFocus = false) => {
     nav.classList.remove('is-open');
     button.setAttribute('aria-expanded', 'false');
-    button.setAttribute('aria-label', 'Hauptmenü öffnen');
     header.classList.remove('cm-header--menu-open');
     if (details) details.open = false;
     if (restoreFocus) {
@@ -24,7 +23,6 @@
     const open = !nav.classList.contains('is-open');
     nav.classList.toggle('is-open', open);
     button.setAttribute('aria-expanded', String(open));
-    button.setAttribute('aria-label', open ? 'Hauptmenü schließen' : 'Hauptmenü öffnen');
     header.classList.toggle('cm-header--menu-open', open);
     if (!open && details) details.open = false;
   });
@@ -43,6 +41,4 @@
   window.addEventListener('resize', () => {
     if (!mobile() && nav.classList.contains('is-open')) close();
   }, { passive: true });
-  // Don't trap navigation when JavaScript is unavailable; global-shell.css
-  // keeps the mobile links readable until this class is added.
 })();
