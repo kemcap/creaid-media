@@ -15,5 +15,133 @@
   },
   "website-audit-unternehmen": {
     "profile": "audit"
+  },
+  "fehler-beim-online-shop-start-vermeiden": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/fehler-beim-online-shop-start-vermeiden.webp",
+    "imageAlt": "9 Fehler beim Online Shop Start vermeiden",
+    "width": 1536,
+    "height": 1024
+  },
+  "webdesign-trends-2026-fuer-unternehmen": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/webdesign-trends-2026-fuer-unternehmen.webp",
+    "imageAlt": "webdesign trends 2026 für unternehmen",
+    "width": 1536,
+    "height": 1024
+  },
+  "corporate-naming-fuer-startups": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/corporate-naming-fuer-startups.webp",
+    "imageAlt": "Corporate Naming für Startups richtig aufbauen",
+    "width": 1536,
+    "height": 1024
+  },
+  "print-design-fuer-unternehmen": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/print-design-fuer-unternehmen.webp",
+    "imageAlt": "Print Design für Unternehmen, das wirkt",
+    "width": 1536,
+    "height": 1024
+  },
+  "full-service-werbeagentur-b2b": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/full-service-werbeagentur-b2b.webp",
+    "imageAlt": "full-service werbeagentur b2b - wann sie sich lohnt",
+    "width": 1536,
+    "height": 1024
+  },
+  "guide-ui-ux-fuer-firmenwebsites": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/guide-ui-ux-fuer-firmenwebsites.webp",
+    "imageAlt": "guide ui ux für firmenwebsites richtig nutzen",
+    "width": 1536,
+    "height": 1024
+  },
+  "webdesign-fuer-immobilienmakler-berlin": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/webdesign-fuer-immobilienmakler-berlin.webp",
+    "imageAlt": "webdesign für immobilienmakler berlin",
+    "width": 1536,
+    "height": 1024
+  },
+  "beste-ecommerce-loesungen-mittelstand": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/beste-ecommerce-loesungen-mittelstand.webp",
+    "imageAlt": "Beste Ecommerce Lösungen Mittelstand 2026",
+    "width": 1536,
+    "height": 1024
+  },
+  "social-media-content-plan-mit-wirkung": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/social-media-content-plan-mit-wirkung.webp",
+    "imageAlt": "Social Media Content Plan mit Wirkung",
+    "width": 1536,
+    "height": 1024
+  },
+  "produktfotografie-fuer-onlineshop": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/produktfotografie-fuer-onlineshop.webp",
+    "imageAlt": "Produktfotografie für Onlineshop, die verkauft",
+    "width": 1536,
+    "height": 1024
+  },
+  "hosting-anbieter-fuer-firmenwebsites-waehlen": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/hosting-anbieter-fuer-firmenwebsites-waehlen.webp",
+    "imageAlt": "Hosting Anbieter für Firmenwebsites wählen",
+    "width": 1536,
+    "height": 1024
+  },
+  "webseite-fuer-handwerker": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/webseite-fuer-handwerker.webp",
+    "imageAlt": "Webseite für Handwerker, die Aufträge bringt",
+    "width": 1536,
+    "height": 1024
+  },
+  "barrierefreie-website-fuer-unternehmen": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/barrierefreie-website-fuer-unternehmen.webp",
+    "imageAlt": "Barrierefreie Website für Unternehmen umsetzen",
+    "width": 1536,
+    "height": 1024
+  },
+  "webdesign-fuer-unternehmen": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/webdesign-fuer-unternehmen.webp",
+    "imageAlt": "webdesign für unternehmen, das Anfragen bringt",
+    "width": 1536,
+    "height": 1024
+  },
+  "webdesign-fuer-lokale-dienstleister": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/webdesign-fuer-lokale-dienstleister.webp",
+    "imageAlt": "Webdesign für lokale Dienstleister, das anfragt",
+    "width": 1536,
+    "height": 1024
+  },
+  "wordpress-website-erstellen-lassen": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/wordpress-website-erstellen-lassen.webp",
+    "imageAlt": "WordPress Website erstellen lassen - lohnt es sich?",
+    "width": 1536,
+    "height": 1024
+  },
+  "leitfaden-website-relaunch-unternehmen": {
+    "profile": "ratgeber",
+    "image": "/assets/blog/wp-original/leitfaden-website-relaunch-unternehmen.webp",
+    "imageAlt": "Leitfaden Website Relaunch für Unternehmen",
+    "width": 1536,
+    "height": 1024
+  },
+  "wann-lohnt-sich-seo": {
+    "profile": "ratgeber"
+  },
+  "7-branding-fehler-bei-neugruendung": {
+    "profile": "ratgeber"
+  },
+  "360-grad-rundgang-erstellen": {
+    "profile": "ratgeber"
   }
 }

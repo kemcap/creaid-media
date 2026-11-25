@@ -1,30 +1,5 @@
-{% if journalEditorial[pageKey] %}
 {% set post = pages[pageKey] %}
 {% set article = wordpressPreviewArticles[pageKey] %}
 {% set isDraft = false %}
 {% set sourceHtml = article.html %}
 {% include "partials/journal-editorial.njk" %}
-{% else %}
-{% set post = pages[pageKey] %}
-{% set article = wordpressPreviewArticles[pageKey] %}
-<a class="j-skip" href="#hauptinhalt">Zum Inhalt springen</a>
-{% include "partials/header-journal.njk" %}
-<main id="hauptinhalt">
-  <section class="j-article-hero j-article-hero-v9" aria-labelledby="article-title">
-    <div class="j-shell">
-      <div class="j-article-hcontent">
-        <nav class="j-breadcrumb" aria-label="Brotkrumen"><a href="/">START</a><span>/</span><a href="/creaid-blog">JOURNAL</a></nav>
-        <h1 id="article-title">{{ post.heading | escape }}</h1>
-        <p class="j-article-desc">{{ post.description | escape }}</p>
-      </div>
-      <div class="j-article-cover"><img src="{{ article.image | escape }}" alt="{{ article.imageAlt | escape }}" width="{{ article.width }}" height="{{ article.height }}" fetchpriority="high"></div>
-    </div>
-  </section>
-  <section class="j-body" id="article-content"><div class="j-shell j-reading-grid">
-    <article class="j-prose" aria-labelledby="article-title">
-      {{ article.html | previewArticleLinks | safe }}
-      <div class="j-article-actions"><a class="j-article-to-index" href="/creaid-blog#artikel">ALLE ARTIKEL ↗</a></div>
-    </article>
-  </div></section>
-</main>
-{% endif %}

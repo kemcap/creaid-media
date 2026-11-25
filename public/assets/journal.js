@@ -29,7 +29,7 @@
  // Cards are already in the document. Filters only change their presentation.
  const cards=$$('.j-card[data-cat]'),filters=$$('.j-filter'),search=$('#jSearch'),pagination=$('#jPagination');
  const requested=new URLSearchParams(location.search).get('thema');
- let filter=filters.some(button=>button.dataset.filter===requested)?requested:'alle',term='',page=1;const pageSize=6;filters.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===filter)));
+ let filter=filters.some(button=>button.dataset.filter===requested)?requested:'alle',term='',page=1;const pageSize=9;filters.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===filter)));
  function update(){if(!cards.length)return;
   const matching=cards.filter(c=>(filter==='alle'||c.dataset.cat?.split(' ').includes(filter))&&(!term||((c.dataset.keywords||'')+' '+c.textContent).toLocaleLowerCase('de').includes(term)));
   const pages=Math.max(1,Math.ceil(matching.length/pageSize));page=Math.min(page,pages);
