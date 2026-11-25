@@ -14,6 +14,7 @@ on:
       - 'src/**'
       - 'public/**'
       - 'scripts/**'
+      - '!scripts/performance/**'
       - 'eleventy.config.js'
       - 'package.json'
       - 'package-lock.json'
