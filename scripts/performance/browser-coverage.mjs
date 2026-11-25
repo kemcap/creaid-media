@@ -14,17 +14,19 @@ function inventory(root){
     if(e.isDirectory())inventory(p);else if(!e.isFile())throw Error('Nonregular file: '+p);
   }
 }
-export async function localBuildServer(source){
+export async function localBuildServer(source,routeFiles={}){
   source=resolve(source);
   if(lstatSync(source).isSymbolicLink()||!existsSync(join(source,'index.html')))throw Error('Expected static build');
   inventory(source);
+  const mappings=new Map(Object.entries(routeFiles));
+  for(const [route,file] of mappings){if(!pathOK(route)||typeof file!=='string'||file.startsWith('/')||!pathOK('/'+file)||!file.endsWith('.html')||!existsSync(join(source,file))||!lstatSync(join(source,file)).isFile())throw Error('Invalid route mapping');}
   const server=createServer((req,res)=>{
     res.setHeader('Cache-Control','no-store');
     res.setHeader('X-Robots-Tag','noindex, nofollow, noarchive');
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405).end();return;}
     const path=req.url.split('?')[0];
     if(!pathOK(path)){res.writeHead(404).end();return;}
-    const candidates=path.endsWith('/')?[path+'index.html']:[path,path+'.html',path+'/index.html'];
+    const candidates=mappings.has(path)?['/'+mappings.get(path)]:path.endsWith('/')?[path+'index.html']:[path,path+'.html',path+'/index.html'];
     for(const p of candidates){
       const file=join(source,p.slice(1)),ext=extname(file);
       if(!Object.hasOwn(types,ext)||!existsSync(file)||!lstatSync(file).isFile())continue;
