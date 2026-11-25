@@ -8,6 +8,7 @@ import { request } from 'node:http';
 import { createServer } from 'node:net';
 import { brotliDecompressSync, gunzipSync } from 'node:zlib';
 import { buildPerformance } from './engine.mjs';
+import { packagePreviewHosting } from './preview-hosting.mjs';
 
 const root=mkdtempSync(join(tmpdir(),'creaid-apache-'));
 chmodSync(root,0o755);
@@ -42,7 +43,8 @@ function decoded(res){
 }
 async function scenario(profile,compression){
   const out=join(root,profile+'-'+compression);
-  const report=buildPerformance({source,output:out,profile,approved:profile==='production'});
+  const hosting=profile==='preview-hosting';
+  const report=hosting?packagePreviewHosting({source,output:out,approved:true}):buildPerformance({source,output:out,profile,approved:profile==='production'});
   const site=join(out,'site');chmodSync(out,0o755);chmodSync(site,0o755);
   const asset=report.manifest.find(x=>x.original==='/assets/main.css').fingerprinted;
   const port=await freePort();
@@ -89,6 +91,25 @@ async function scenario(profile,compression){
     assert.equal(page.status,200);
     assert.equal(page.body.toString(),readFileSync(join(site,'index.html'),'utf8'));
     assert.equal(page.headers['cache-control'],profile==='production'?'no-cache, must-revalidate':'no-store, no-cache, must-revalidate, max-age=0');
+    if(hosting){
+      const headers={Host:'vorschau.creaid-media.de','Accept-Encoding':'identity'};
+      const expected='private, max-age=3600, immutable';
+      const fingerprint=await get(port,asset,headers);
+      assert.equal(fingerprint.status,200);
+      assert.equal(fingerprint.headers['cache-control'],expected);
+      assert.match(fingerprint.headers['x-robots-tag'],/noindex/);
+      const conditional=await get(port,asset,{...headers,'If-None-Match':fingerprint.headers.etag});
+      assert.equal(conditional.status,304);assert.equal(conditional.headers['cache-control'],expected);
+      const hostedPage=await get(port,'/',headers);
+      assert.match(hostedPage.headers['cache-control'],/no-store/);
+      assert.match(hostedPage.headers['x-robots-tag'],/noindex/);
+      const otherHost=await get(port,asset,{...headers,Host:'creaid-media.de'});
+      assert.match(otherHost.headers['cache-control'],/no-store/);
+      const unversioned=await get(port,'/assets/main.css',headers);
+      assert.match(unversioned.headers['cache-control'],/no-store/);
+      const absent=await get(port,'/assets/absent.sha256-'+('0'.repeat(64))+'.css',headers);
+      assert.equal(absent.status,404);assert.match(absent.headers['cache-control'],/no-store/);
+    }
     const original=await get(port,'/assets/main.css');
     assert.equal(original.headers['cache-control'],profile==='production'?'no-cache, must-revalidate':'no-store, no-cache, must-revalidate, max-age=0');
     const orig304=await get(port,'/assets/main.css',{'If-None-Match':original.headers.etag});
@@ -110,6 +131,8 @@ async function scenario(profile,compression){
 }
 try{
   await scenario('preview','both');
+  assert.throws(()=>packagePreviewHosting({source,output:join(root,'unapproved')}),/Explicit approval/);
+  await scenario('preview-hosting','both');
   await scenario('production','both');
   await scenario('production','gzip');
   await scenario('production','br');
