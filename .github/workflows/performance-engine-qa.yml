@@ -11,7 +11,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -32,7 +32,16 @@ jobs:
       - run: node scripts/performance/test-optimize-input.mjs "$RUNNER_TEMP/creaid-opt-tools"
       - run: node scripts/performance/test-responsive-images.mjs "$RUNNER_TEMP/creaid-opt-tools"
       - run: node scripts/performance/test-compare-lighthouse.mjs
+      - name: Install isolated browser measurement tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/creaid-browser-tools" --save-exact --no-audit --no-fund playwright@1.56.1 lighthouse@12.8.2
+          "$RUNNER_TEMP/creaid-browser-tools/node_modules/.bin/playwright" install --with-deps chromium
+      - run: node scripts/performance/test-browser-measurement.mjs "$RUNNER_TEMP/creaid-browser-tools" --lighthouse
       - run: npm run verify
       - run: npm run performance:preview -- dist performance-preview
       - run: npm run performance:audit -- dist performance-audit
+      - name: Verify central preview pipeline on the full build
+        run: |
+          printf '{"schemaVersion":1}' > "$RUNNER_TEMP/creaid-pipeline-config.json"
+          npm run performance:pipeline -- dist performance-pipeline "$RUNNER_TEMP/creaid-pipeline-config.json"
       # Reports contain internal paths; keep them in the runner, not public artifacts.
