@@ -93,4 +93,4 @@ jobs:
             pages-reference-verification.json
             ionos-reference-verification.json
           if-no-files-found: warn
-# Synchronize the verified preview containing the WordPress editorial drafts.
+# Synchronize the verified preview containing the complete WordPress article inventory.
