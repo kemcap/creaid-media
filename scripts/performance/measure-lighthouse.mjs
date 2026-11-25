@@ -7,12 +7,13 @@ import {pathToFileURL} from 'node:url';
 import {localBuildServer} from './browser-coverage.mjs';
 const validRoute=p=>typeof p==='string'&&/^\/[A-Za-z0-9_./-]*$/.test(p)&&!p.split('/').some(x=>x.startsWith('.'));
 const future=p=>existsSync(p)?realpathSync(p):join(future(dirname(p)),relative(dirname(p),p));
-function exec(file,args,env){
+function exec(file,args,env,diagnosticFile){
   return new Promise((done,fail)=>{
-    const proc=spawn(file,args,{env,stdio:['ignore','ignore','ignore'],shell:false,windowsHide:true});
+    const proc=spawn(file,args,{env,stdio:['ignore','ignore','pipe'],shell:false,windowsHide:true});
+    let diagnostic='';proc.stderr.on('data',b=>{diagnostic=(diagnostic+b.toString()).slice(-16000);});
     const timeout=setTimeout(()=>{proc.kill();fail(Error('Lighthouse timed out'));},150000);
     proc.once('error',e=>{clearTimeout(timeout);fail(e);});
-    proc.once('exit',code=>{clearTimeout(timeout);if(code===0)done();else fail(Error('Lighthouse exited '+code));});
+    proc.once('close',code=>{clearTimeout(timeout);if(code===0)done();else{writeFileSync(diagnosticFile,diagnostic,{flag:'wx'});fail(Error('Lighthouse exited '+code+'; private diagnostic saved beside report'));}});
   });
 }
 export async function measureLighthouse({source,output,toolRoot,routes=['/'],runs=3,formFactor='mobile'}){
@@ -33,10 +34,11 @@ export async function measureLighthouse({source,output,toolRoot,routes=['/'],run
     const results=[];
     for(let i=0;i<routes.length;i++)for(let run=1;run<=runs;run++){
       const file='route-'+(i+1)+'-run-'+run+'.json',dest=join(output,file),url=server.origin+routes[i];
-      const flags='--headless --disable-background-networking --proxy-server=http://127.0.0.1:1 --proxy-bypass-list=127.0.0.1';
+      const fixtureOnly=process.env.CREAID_LIGHTHOUSE_CI_FIXTURE==='1'&&process.env.CI==='true';
+      const flags='--headless --disable-background-networking --proxy-server=http://127.0.0.1:1 --proxy-bypass-list=127.0.0.1'+(fixtureOnly?' --no-sandbox':'');
       const args=[cli,url,'--quiet','--only-categories=performance','--output=json','--output-path='+dest,'--chrome-flags='+flags];
       if(formFactor==='desktop')args.push('--preset=desktop');
-      await exec(process.execPath,args,{...process.env,CHROME_PATH:chromePath});
+      await exec(process.execPath,args,{...process.env,CHROME_PATH:chromePath},dest+'.stderr.txt');
       const lhr=JSON.parse(readFileSync(dest,'utf8'));
       if(lhr.runtimeError||!Number.isFinite(lhr.categories?.performance?.score)||!lhr.finalDisplayedUrl?.startsWith(server.origin+'/'))throw Error('Invalid Lighthouse result');
       results.push({route:routes[i],run,file,score:lhr.categories.performance.score*100});
