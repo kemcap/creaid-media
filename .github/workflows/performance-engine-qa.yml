@@ -43,6 +43,10 @@ jobs:
       - run: npm run verify
       - run: npm run performance:preview -- dist performance-preview
       - run: npm run performance:audit -- dist performance-audit
+      - name: Generate reviewable Balanced profile from real CreAid build
+        run: |
+          npm run performance:suggest-balanced -- performance-audit/audit.json "$RUNNER_TEMP/creaid-balanced-config.json"
+          node --input-type=module -e 'import {readFileSync} from "node:fs";const p=JSON.parse(readFileSync("performance-audit/priorities.json","utf8"));console.log(JSON.stringify({auditHints:p.occurrences,uniqueReviewItems:p.uniqueItems,highPriorityItems:p.high}));'
       - name: Verify central preview pipeline on the full build
         run: |
           printf '{"schemaVersion":1}' > "$RUNNER_TEMP/creaid-pipeline-config.json"
