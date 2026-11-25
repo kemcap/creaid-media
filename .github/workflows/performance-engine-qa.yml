@@ -26,6 +26,9 @@ jobs:
             sudo apt-get install -y apache2
           fi
       - run: node scripts/performance/test-apache-http.mjs
+      - name: Install isolated optional optimization tools
+        run: npm install --prefix "$RUNNER_TEMP/creaid-opt-tools" --save-exact --no-audit --no-fund esbuild@0.25.12 sharp@0.34.1
+      - run: node scripts/performance/test-optimize-input.mjs "$RUNNER_TEMP/creaid-opt-tools"
       - run: npm run verify
       - run: npm run performance:preview -- dist performance-preview
       - uses: actions/upload-artifact@v4
