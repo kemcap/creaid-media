@@ -9,7 +9,7 @@ Ausgangsstand: 946a6c5f7c64c4a36b927848863b97831f45fb01. Maßnahmen der vorherig
 - Nutzenversprechen der Startseite präzisiert, Hauptheadline und Scrollstory unverändert.
 
 ## Nicht geändert / Freigaben
-CRO-01: Echte Referenzen erst nach Inventar mit Quell- und Nutzungsfreigaben integrieren. Keine erfundenen Kunden.
+CRO-01: Inventar veröffentlichter Originalmedien in `docs/PORTFOLIO-INVENTAR.md` ergänzt; echte Referenzen erst nach Sichtung und Nutzungsfreigabe lokal integrieren. Keine erfundenen Kunden.
 CRO-03: Preise und Leistungsumfänge unverändert; Immo-Paketlogik separat entscheiden.
 PUB-01/GO-01: Entwurfszugriff, noindex, Rechtstexte und Veröffentlichungsregeln unverändert.
 CON-01: Endpoint, Zustellweg, Datenschutz, Empfänger, Spam-Schutz und HubSpot-Integration erst nach technischer und rechtlicher Freigabe.
@@ -18,3 +18,5 @@ UI-02: bestehende Design-DNA, Hero-Masken und Animationen beibehalten. Keine gen
 
 ## Abnahme
 Quellstand und Linkziele geprüft. Vollständiger Build, Browser-/axe-Tests und visuelle Abnahme dieser Änderungen stehen noch aus. Keine Freigabe zum Merge oder Deployment.
+
+Ergänzung: Foto- und Videoleistungen anhand der veröffentlichten WordPress-Startseite bestätigt und mit eigener Abschnitts-ID, Menüeintrag und Formular-Themenwahl ergänzt. Keine Preisänderung. Browserprüfung steht aus.
