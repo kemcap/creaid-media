@@ -162,3 +162,21 @@ npm run performance:accept -- dist performance-v14/package acceptance-report .pe
 ```
 
 Verwendet ausschließlich das SAFE-Paket ohne optionale Transformationen. Prüft die exakte HTML-Übereinstimmung nach Rückersetzung der generierten Fingerprint-URLs, unveränderte Original-Assets, die erwartete Dateiliste, Preview-no-store sowie alle kanonischen Routen aus der projektinternen Routing-Tabelle. Chromium vergleicht acht repräsentative Seiten (Startseite, Webdesign, Grafikdesign, Shopentwicklung, Kontakt, Blogübersicht, Blogartikel und Branchenlandingpage) bei 390 und 1440 Pixeln am oberen und mittleren Seitenabschnitt. Die 32 Bildvergleichspaare bleiben lokal/privat. Der neue Gate-Schritt ist separat im CI konfiguriert; erst ein erfolgreiches Ergebnis bestätigt die zusätzliche Abnahme. Keine IONOS-Rewrite-Prüfung, keine produktive Cache-Messung, keine Freigabe der optionalen Optimierungsprofile. Lighthouse-Smoke-Test ist keine Lighthouse-Messung der tatsächlichen Website. Vor einem produktiven Release separate echte Vorher-Nachher-Messungen und interaktive Funktionsprüfung durchführen.
+
+## Lokaler Studio-Modus – Optimierung per Mausklick
+
+Im Projektordner der Engine (Node.js 22, Git):
+```sh
+npm ci
+npm run build
+npm run performance:studio
+```
+Die im Terminal angezeigte Adresse http://127.0.0.1:<Port>/ im Browser öffnen. Safe auswählen und „Optimierung starten“ drücken. Der Server verarbeitet ausschließlich den aktuellen dist-Ordner. Im Ergebnis stehen der neue Website-Ordner und der Link zum lokalen Audit. Jeder Lauf verwendet einen eigenen Unterordner unter .creaid-performance-runs; bestehende Ausgaben und dist bleiben erhalten. Strg+C beendet den Server. Für Änderungen am Quellprojekt den regulären Build erneut ausführen; Studio selbst baut nicht neu.
+
+Für Balanced/Maximum die optionalen Werkzeuge einmal separat installieren:
+```sh
+npm install --prefix .performance-tools --save-exact esbuild@0.25.12 sharp@0.34.1
+```
+Die tatsächlich vorhandenen Asset-Pfade im Panel eintragen. Der Lauf verwendet dieselbe Preview-Pipeline wie das CLI; die Bildvarianten werden nicht automatisch in das HTML eingebunden. JSON-Export bleibt auch im Offline-Studio verfügbar.
+
+Der Server lauscht ausschließlich auf 127.0.0.1 und einem automatisch zugewiesenen Port, verwendet einen pro Start erzeugten Token für API-Zugriffe, prüft Host/Origin, beschränkt die Größe der Konfiguration und erlaubt nur einen Lauf gleichzeitig. Keine frei eingegebenen Shell-Befehle, keine externe URL, kein FTP oder Deployment, kein öffentlicher Server. Nicht für gemeinsam genutztes Hosting oder nicht vertrauenswürdige Projekte vorgesehen. Lokale Daten- und Werkzeugordner sind in .gitignore eingetragen. Der neue Browser-Test prüft den Klick bis zum echten Safe-Pipeline-Ergebnis; erst ein grüner CI-Lauf bestätigt die Funktion.
