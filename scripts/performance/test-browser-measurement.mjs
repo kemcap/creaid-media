@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {mkdtempSync,mkdirSync,writeFileSync,rmSync} from 'node:fs';
+import {mkdtempSync,mkdirSync,writeFileSync,rmSync,existsSync,readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {tmpdir} from 'node:os';
 import {measureCoverage,localBuildServer} from './browser-coverage.mjs';
@@ -26,7 +26,9 @@ try{
   }
   console.log('PASS: isolated browser coverage at mobile/desktop sizes');
   if(process.argv.includes('--lighthouse')){
-    const result=await measureLighthouse({source,output:join(root,'lighthouse'),toolRoot,runs:1});
+    const output=join(root,'lighthouse');
+    if(process.env.CI==='true')process.env.CREAID_LIGHTHOUSE_CI_FIXTURE='1';
+    let result;try{result=await measureLighthouse({source,output,toolRoot,runs:1});}catch(error){const diag=join(output,'route-1-run-1.json.stderr.txt');if(existsSync(diag))console.error(readFileSync(diag,'utf8'));throw error;}
     assert.equal(result.results.length,1);
     assert.ok(result.results[0].score>=0&&result.results[0].score<=100);
     console.log('PASS: real local Lighthouse smoke measurement');
