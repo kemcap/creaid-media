@@ -24,6 +24,12 @@ try{
     await page.locator('#images').fill('assets/photo.jpg');
     assert.deepEqual((await config()).optimize.files,['assets/main.css']);
     assert.equal((await config()).responsive.quality,82);
+    await page.locator('#integrateImages').check();
+    assert.equal(await page.locator('#export').isDisabled(),true);
+    await page.locator('#imageLayout').fill('{"index.html":{"/assets/photo.jpg":"(max-width: 640px) 100vw, 640px"}}');
+    assert.equal((await config()).responsive.integrate['index.html']['/assets/photo.jpg'],'(max-width: 640px) 100vw, 640px');
+    await page.locator('#integrateImages').uncheck();
+    assert.equal((await config()).responsive.integrate,undefined);
     await page.locator('input[value=maximum]').check();
     assert.equal(await page.locator('#export').isDisabled(),true);
     await page.locator('#hintJSON').fill('{"index.html":{"deferScripts":["/assets/app.js"]}}');
