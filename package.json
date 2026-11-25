@@ -14,12 +14,15 @@
     "verify": "npm run build && npm run test:structure && npm run test:quality",
     "test:quality": "node scripts/check-quality.mjs",
     "test:browser": "node scripts/check-browser.mjs",
-    "test:performance": "node scripts/performance/test-prepare-candidate.mjs && node scripts/performance/test-engine.mjs && node scripts/performance/test-audit.mjs && node scripts/performance/test-pipeline.mjs",
+    "test:performance": "node scripts/performance/test-prepare-candidate.mjs && node scripts/performance/test-engine.mjs && node scripts/performance/test-audit.mjs && node scripts/performance/test-pipeline.mjs && node scripts/performance/test-snapshot.mjs",
     "performance:preview": "node scripts/performance/engine.mjs",
     "performance:audit": "node scripts/performance/audit.mjs",
     "performance:pipeline": "node scripts/performance/pipeline.mjs",
     "performance:coverage": "node scripts/performance/browser-coverage.mjs",
-    "performance:lighthouse": "node scripts/performance/measure-lighthouse.mjs"
+    "performance:lighthouse": "node scripts/performance/measure-lighthouse.mjs",
+    "performance:visual": "node scripts/performance/visual-regression.mjs",
+    "performance:snapshot": "node scripts/performance/snapshot.mjs snapshot",
+    "performance:restore": "node scripts/performance/snapshot.mjs restore"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.8",
