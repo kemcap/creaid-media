@@ -12,9 +12,14 @@ try{
   const original='<!doctype html><html><head><link rel="stylesheet" href="/assets/main.css"></head><body><h1>Studio fixture</h1></body></html>';
   writeFileSync(join(source,'index.html'),original);
   writeFileSync(join(source,'assets/main.css'),'body{color:black}');
+  mkdirSync(out);
+  const olderSession=join(out,'run-00000000-0000-4000-8000-000000000000');
+  mkdirSync(olderSession);writeFileSync(join(olderSession,'keep.txt'),'old session');
+  const backup=join(root,'backup');mkdirSync(backup);writeFileSync(join(backup,'index.html'),original);
   server=await startStudio({source,outputRoot:out,port:0});
   assert.equal((await fetch(server.origin+'/api/status')).status,403);
   assert.equal((await fetch(server.origin+'/api/run',{method:'POST',headers:{'Content-Type':'application/json'},body:'{"schemaVersion":1}'})).status,403);
+  assert.equal((await fetch(server.origin+'/api/cache/clear',{method:'POST',headers:{'Content-Type':'application/json'},body:'{"confirm":"remove-previous-session-runs"}'})).status,403);
   const toolRoot=resolve(process.argv[2]??'.');
   const {chromium}=createRequire(join(toolRoot,'package.json'))('playwright');
   browser=await chromium.launch({headless:true});
@@ -29,7 +34,21 @@ try{
   assert.ok(existsSync(join(result.site,'index.html')));
   const report=await page.locator('#localReport').getAttribute('href');
   assert.equal((await fetch(server.origin+report)).status,200);
+  assert.equal(await page.locator('#clearCache').isDisabled(),true);
+  await page.locator('#runLocal').click();
+  await page.waitForFunction(old=>{try{return JSON.parse(document.querySelector('#localResult').textContent).output!==old&&document.querySelector('#localStatus').textContent.includes('erfolgreich');}catch{return false;}},result.output,{timeout:30000});
+  const newer=JSON.parse(await page.locator('#localResult').textContent());
+  assert.notEqual(newer.output,result.output);
+  assert.ok(existsSync(result.output));
+  assert.equal(await page.locator('#clearCache').isEnabled(),true);
+  page.once('dialog',d=>d.dismiss());await page.locator('#clearCache').click();
+  assert.ok(existsSync(result.output));
+  page.once('dialog',d=>d.accept());await page.locator('#clearCache').click();
+  await page.waitForFunction(()=>document.querySelector('#cacheStatus').textContent.includes('1 Testläufe entfernt'));
+  assert.ok(!existsSync(result.output));assert.ok(existsSync(newer.site));
+  assert.ok(existsSync(join(olderSession,'keep.txt')));
+  assert.equal(readFileSync(join(backup,'index.html'),'utf8'),original);
   assert.equal(readFileSync(join(source,'index.html'),'utf8'),original);
   assert.deepEqual(errors,[]);
-  console.log('PASS: local Studio UI starts real safe pipeline, report opens, authorization and source preservation');
+  console.log('PASS: local Studio UI starts real safe pipeline, report opens, authorization, confirmed old-run cleanup and source/backup preservation');
 }finally{if(browser)await browser.close();if(server)await server.close();rmSync(root,{recursive:true,force:true});}
