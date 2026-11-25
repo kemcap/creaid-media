@@ -49,10 +49,12 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
     res.setHeader('X-Frame-Options','DENY');
     res.setHeader('Referrer-Policy','no-referrer');
     if(req.headers.host!==new URL(origin).host){json(res,403,{error:'Invalid host'});return;}
-    const u=new URL(req.url,origin);
+    let u;try{u=new URL(req.url,origin);}catch{json(res,400,{error:'Invalid URL'});return;}
+    if(u.origin!==origin){json(res,403,{error:'Invalid URL origin'});return;}
     if(req.method==='GET'&&u.pathname==='/'){res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'}).end(html);return;}
     if(req.method==='GET'&&u.pathname==='/report'&&u.searchParams.get('token')===token&&latest&&state.state==='done'){
-      res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'}).end(readFileSync(join(latest,'audit','dashboard.html')));return;
+      let report;try{report=readFileSync(join(latest,'audit','dashboard.html'));}catch{json(res,404,{error:'Report no longer exists'});return;}
+      res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'}).end(report);return;
     }
     if(req.headers['x-creaid-local']!==token){json(res,403,{error:'Local Studio authorization required'});return;}
     if(req.method==='GET'&&u.pathname==='/api/status'){json(res,200,state);return;}
@@ -76,6 +78,8 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
     }
     json(res,404,{error:'Not found'});
   });
+  server.requestTimeout=30000;
+  server.headersTimeout=15000;
   await new Promise((done,fail)=>{server.once('error',fail);server.listen(port,'127.0.0.1',done);});
   origin='http://127.0.0.1:'+server.address().port;
   return {origin,close:()=>new Promise(done=>{server.close(done);server.closeAllConnections();})};
