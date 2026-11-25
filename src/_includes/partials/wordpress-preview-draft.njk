@@ -1,0 +1,18 @@
+{% set draft = pages[pageKey] %}
+<a class="j-skip" href="#hauptinhalt">Zum Inhalt springen</a>
+{% include "partials/header-journal.njk" %}
+<main id="hauptinhalt">
+  <section class="j-article-hero j-article-hero-v9" aria-labelledby="article-title">
+    <div class="j-shell"><div class="j-article-hcontent">
+      <nav class="j-breadcrumb" aria-label="Brotkrumen"><a href="/">START</a><span>/</span><a href="/creaid-blog">JOURNAL</a></nav>
+      <div class="j-micro j-article-kicker">WORDPRESS-ENTWURF</div>
+      <h1 id="article-title">{{ draft.heading | escape }}</h1>
+    </div></div>
+  </section>
+  <section class="j-body" id="article-content"><div class="j-shell j-reading-grid">
+    <article class="j-prose" aria-labelledby="article-title">
+      {{ wordpressPreviewDrafts[pageKey] | safe }}
+      <div class="j-article-actions"><a class="j-article-to-index" href="/creaid-blog#artikel">ALLE ARTIKEL ↗</a></div>
+    </article>
+  </div></section>
+</main>
