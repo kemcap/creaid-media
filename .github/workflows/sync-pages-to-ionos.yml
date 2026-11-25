@@ -76,6 +76,11 @@ jobs:
           cd "$REFERENCE_DIR"
           node .github/scripts/prepare-preview-cache.mjs
           bash .github/scripts/test-cache-browser.sh
+      - name: Reject stale Pages references if newer website sources exist on main
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git diff --quiet "$REFERENCE_SHA" origin/main -- src public scripts/preview.mjs scripts/routes.mjs scripts/optimize-preview-images.py eleventy.config.js package.json package-lock.json
       - name: Install SFTP client
         run: |
           if ! /usr/bin/python3 -c 'import paramiko'; then
