@@ -1,4 +1,4 @@
-// CreAid Performance Engine 1.1: opt-in, isolated static-site packaging.
+// CreAid Performance Engine 1.2: opt-in, isolated static-site packaging.
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync, readdirSync, lstatSync, realpathSync } from 'node:fs';
 import { join, resolve, dirname, relative, sep } from 'node:path';
@@ -128,12 +128,12 @@ export function buildPerformance({source, output, profile='preview', approved=fa
   const existing = existsSync(target) ? readFileSync(target,'utf8') : '';
   writeFileSync(target,existing+(existing&&!existing.endsWith('\n')?'\n':'')+rules);
   writeFileSync(join(output,'cache-policy.active.conf'),rules);
-  const result = {...report,engineVersion:'1.1.0',profile,verifiedAssets:verified,
+  const result = {...report,engineVersion:'1.2.0',profile,verifiedAssets:verified,
     stagedBytes:walk(join(output,'site')).reduce((n,p)=>n+lstatSync(p).size,0),
     deployment:'not performed', limitations:[
       'Only static directly referenced assets fingerprinted; originals retained for runtime dependencies.',
       'Compression estimates are not live HTTP measurements. Apache mod_brotli/mod_deflate/mod_headers/mod_filter must be verified.',
-      'No minification, responsive image generation or automatic deployment.',
+      'Packaging does not transform CSS/JS or generate image variants; use the separate opt-in stages before fingerprinting. No automatic deployment.',
       'Production approval and public-only source review are separate; heuristic preview checks are not a confidentiality audit.',
       'Run only after final path rewriting; never transform hashed files after packaging.'
     ]};
