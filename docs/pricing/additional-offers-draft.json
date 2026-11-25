@@ -1,0 +1,914 @@
+{
+  "status": "internal-draft-not-for-deployment",
+  "source": "Angebote-Gesamt.pdf",
+  "sourcePages": {
+    "conversion": [
+      1,
+      2
+    ],
+    "ads": [
+      3,
+      4
+    ],
+    "monthlyAds": [
+      5,
+      6
+    ],
+    "webdesign": [
+      7,
+      8
+    ],
+    "maintenance": [
+      7,
+      8
+    ],
+    "modules": [
+      9,
+      10
+    ]
+  },
+  "tax": "Quelle: Nettopreise. Steuerliche Behandlung (Reverse Charge, B2B) vor Veröffentlichung prüfen.",
+  "reviewRequired": [
+    "Allgemeine Webdesign-Pakete nicht mit den abweichenden veröffentlichten Praxis-/Immo-Paketen vereinheitlichen.",
+    "Webdesign: zusätzliche laufende Hosting-Gebühren für Server, SSL und Domain laut Fußnote Seite 7. Keine stillschweigende Gleichsetzung mit den branchenspezifischen Angeboten.",
+    "Webdesign-Wartung umfasst WordPress-Plugin-Updates; nicht als Wartungsumfang für Eleventy übernehmen.",
+    "Unklarer Seitenumfang: Tabelle nennt Homepage plus Unterseiten, SEO-Zeile hingegen alle 3/6/10 Seiten. Vor Freigabe klären.",
+    "Werbebudget, Steuerhinweise und genaue Vertragsbedingungen nicht eigenständig ergänzen.",
+    "Zusatzmodule nur nach dokumentierter Paket-Zuordnung; die PDF-Zuordnungen sind nicht automatisch für Branchenpakete gültig."
+  ],
+  "groups": {
+    "conversion": {
+      "title": "Website-Optimierung / Conversion-Performance",
+      "packages": [
+        {
+          "name": "Conversion-Kompakt",
+          "price": 690,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "featured": false,
+          "features": [
+            {
+              "label": "Analyse von zentralen Seiten",
+              "value": 1
+            },
+            {
+              "label": "CTA-Optimierung",
+              "value": true
+            },
+            {
+              "label": "Optimierung Kontaktbereich",
+              "value": true
+            },
+            {
+              "label": "WhatsApp-Button / Schnellkontakt",
+              "value": true
+            },
+            {
+              "label": "Formular-Check / Anfrageweg optimieren",
+              "value": true
+            },
+            {
+              "label": "Platzierung von Vertrauenselementen: Siegel, Bewertungen, Logos, etc.",
+              "value": true
+            },
+            {
+              "label": "Hero-Bereich optimieren",
+              "value": false
+            },
+            {
+              "label": "Struktur-Optimierung zentraler Seiten",
+              "value": false
+            },
+            {
+              "label": "Mobile Nutzerführung verbessern",
+              "value": false
+            },
+            {
+              "label": "Stärkere Angebotskommunikation",
+              "value": false
+            },
+            {
+              "label": "Strategische CTA-Platzierung über mehrere Seiten",
+              "value": false
+            },
+            {
+              "label": "Analyse kompletter Conversion-Strecken",
+              "value": false
+            },
+            {
+              "label": "Optimierung von Startseite, Leistungsseiten und Kontaktbereich",
+              "value": false
+            },
+            {
+              "label": "Strategisches Optimierungs-Dossier",
+              "value": false
+            },
+            {
+              "label": "Fokus auf messbar höhere Abschlusswahrscheinlichkeit",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Conversion-Plus",
+          "price": 1290,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "featured": true,
+          "features": [
+            {
+              "label": "Analyse von zentralen Seiten",
+              "value": 3
+            },
+            {
+              "label": "CTA-Optimierung",
+              "value": true
+            },
+            {
+              "label": "Optimierung Kontaktbereich",
+              "value": true
+            },
+            {
+              "label": "WhatsApp-Button / Schnellkontakt",
+              "value": true
+            },
+            {
+              "label": "Formular-Check / Anfrageweg optimieren",
+              "value": true
+            },
+            {
+              "label": "Platzierung von Vertrauenselementen: Siegel, Bewertungen, Logos, etc.",
+              "value": true
+            },
+            {
+              "label": "Hero-Bereich optimieren",
+              "value": true
+            },
+            {
+              "label": "Struktur-Optimierung zentraler Seiten",
+              "value": true
+            },
+            {
+              "label": "Mobile Nutzerführung verbessern",
+              "value": true
+            },
+            {
+              "label": "Stärkere Angebotskommunikation",
+              "value": true
+            },
+            {
+              "label": "Strategische CTA-Platzierung über mehrere Seiten",
+              "value": false
+            },
+            {
+              "label": "Analyse kompletter Conversion-Strecken",
+              "value": false
+            },
+            {
+              "label": "Optimierung von Startseite, Leistungsseiten und Kontaktbereich",
+              "value": false
+            },
+            {
+              "label": "Strategisches Optimierungs-Dossier",
+              "value": false
+            },
+            {
+              "label": "Fokus auf messbar höhere Abschlusswahrscheinlichkeit",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Conversion-Premium",
+          "price": 2190,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "featured": false,
+          "features": [
+            {
+              "label": "Analyse von zentralen Seiten",
+              "value": 4
+            },
+            {
+              "label": "CTA-Optimierung",
+              "value": true
+            },
+            {
+              "label": "Optimierung Kontaktbereich",
+              "value": true
+            },
+            {
+              "label": "WhatsApp-Button / Schnellkontakt",
+              "value": true
+            },
+            {
+              "label": "Formular-Check / Anfrageweg optimieren",
+              "value": true
+            },
+            {
+              "label": "Platzierung von Vertrauenselementen: Siegel, Bewertungen, Logos, etc.",
+              "value": true
+            },
+            {
+              "label": "Hero-Bereich optimieren",
+              "value": true
+            },
+            {
+              "label": "Struktur-Optimierung zentraler Seiten",
+              "value": true
+            },
+            {
+              "label": "Mobile Nutzerführung verbessern",
+              "value": true
+            },
+            {
+              "label": "Stärkere Angebotskommunikation",
+              "value": true
+            },
+            {
+              "label": "Strategische CTA-Platzierung über mehrere Seiten",
+              "value": true
+            },
+            {
+              "label": "Analyse kompletter Conversion-Strecken",
+              "value": true
+            },
+            {
+              "label": "Optimierung von Startseite, Leistungsseiten und Kontaktbereich",
+              "value": true
+            },
+            {
+              "label": "Strategisches Optimierungs-Dossier",
+              "value": true
+            },
+            {
+              "label": "Fokus auf messbar höhere Abschlusswahrscheinlichkeit",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    "ads": {
+      "title": "Meta/Google Ads + optimierte Zielseite",
+      "packages": [
+        {
+          "name": "Ads Basis",
+          "price": 890,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "featured": false,
+          "features": [
+            {
+              "label": "Eine Landingpage",
+              "value": true
+            },
+            {
+              "label": "Klare Anfrageführung",
+              "value": true
+            },
+            {
+              "label": "Basis-Keyword-Auswahl",
+              "value": true
+            },
+            {
+              "label": "Anzeigentexte",
+              "value": "Standard"
+            },
+            {
+              "label": "Kontaktformular / Anfrageweg",
+              "value": true
+            },
+            {
+              "label": "Technische Vorbereitung Kampagnenstart",
+              "value": true
+            },
+            {
+              "label": "Anfragen-Tracking aktivieren",
+              "value": false
+            },
+            {
+              "label": "Stärker ausgearbeitete Landingpage-Struktur",
+              "value": false
+            },
+            {
+              "label": "Präzisere Keyword-Gruppierung",
+              "value": false
+            },
+            {
+              "label": "Conversion-stärkere Seitenführung",
+              "value": false
+            },
+            {
+              "label": "Strategische Struktur für mehrere Leistungsansätze",
+              "value": false
+            },
+            {
+              "label": "Erweiterte Keyword-Planung",
+              "value": false
+            },
+            {
+              "label": "Aufteilung nach Suchintentionen",
+              "value": false
+            },
+            {
+              "label": "Stärkere Vorqualifizierung von Anfragen",
+              "value": false
+            },
+            {
+              "label": "Höherwertige Performance-Ausrichtung",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Ads Aktiv",
+          "price": 1390,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "featured": true,
+          "features": [
+            {
+              "label": "Eine Landingpage",
+              "value": true
+            },
+            {
+              "label": "Klare Anfrageführung",
+              "value": true
+            },
+            {
+              "label": "Basis-Keyword-Auswahl",
+              "value": true
+            },
+            {
+              "label": "Anzeigentexte",
+              "value": "Zielgruppen-fokussiert"
+            },
+            {
+              "label": "Kontaktformular / Anfrageweg",
+              "value": true
+            },
+            {
+              "label": "Technische Vorbereitung Kampagnenstart",
+              "value": true
+            },
+            {
+              "label": "Anfragen-Tracking aktivieren",
+              "value": true
+            },
+            {
+              "label": "Stärker ausgearbeitete Landingpage-Struktur",
+              "value": true
+            },
+            {
+              "label": "Präzisere Keyword-Gruppierung",
+              "value": true
+            },
+            {
+              "label": "Conversion-stärkere Seitenführung",
+              "value": true
+            },
+            {
+              "label": "Strategische Struktur für mehrere Leistungsansätze",
+              "value": false
+            },
+            {
+              "label": "Erweiterte Keyword-Planung",
+              "value": false
+            },
+            {
+              "label": "Aufteilung nach Suchintentionen",
+              "value": false
+            },
+            {
+              "label": "Stärkere Vorqualifizierung von Anfragen",
+              "value": false
+            },
+            {
+              "label": "Höherwertige Performance-Ausrichtung",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Ads Performance",
+          "price": 1990,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "featured": false,
+          "features": [
+            {
+              "label": "Eine Landingpage",
+              "value": true
+            },
+            {
+              "label": "Klare Anfrageführung",
+              "value": true
+            },
+            {
+              "label": "Basis-Keyword-Auswahl",
+              "value": true
+            },
+            {
+              "label": "Anzeigentexte",
+              "value": "Hochkonvertierend & A/B-Testlayout"
+            },
+            {
+              "label": "Kontaktformular / Anfrageweg",
+              "value": true
+            },
+            {
+              "label": "Technische Vorbereitung Kampagnenstart",
+              "value": true
+            },
+            {
+              "label": "Anfragen-Tracking aktivieren",
+              "value": true
+            },
+            {
+              "label": "Stärker ausgearbeitete Landingpage-Struktur",
+              "value": true
+            },
+            {
+              "label": "Präzisere Keyword-Gruppierung",
+              "value": true
+            },
+            {
+              "label": "Conversion-stärkere Seitenführung",
+              "value": true
+            },
+            {
+              "label": "Strategische Struktur für mehrere Leistungsansätze",
+              "value": true
+            },
+            {
+              "label": "Erweiterte Keyword-Planung",
+              "value": true
+            },
+            {
+              "label": "Aufteilung nach Suchintentionen",
+              "value": true
+            },
+            {
+              "label": "Stärkere Vorqualifizierung von Anfragen",
+              "value": true
+            },
+            {
+              "label": "Höherwertige Performance-Ausrichtung",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    "monthlyAds": {
+      "title": "Monatliche Meta/Google-Ads-Betreuung",
+      "packages": [
+        {
+          "name": "Ads Start",
+          "price": 390,
+          "currency": "EUR",
+          "interval": "pro Monat",
+          "featured": false,
+          "features": [
+            {
+              "label": "Kampagnenüberwachung",
+              "value": true
+            },
+            {
+              "label": "Budgetkontrolle",
+              "value": true
+            },
+            {
+              "label": "Einfache Optimierungen",
+              "value": true
+            },
+            {
+              "label": "Laufende Performance-Verbesserung",
+              "value": "Monatliche Optimierung + Bericht"
+            },
+            {
+              "label": "Kontinuierliche A/B-Tests",
+              "value": false
+            },
+            {
+              "label": "Anzeigentexte nachschärfen",
+              "value": false
+            },
+            {
+              "label": "Keyword-Anpassungen",
+              "value": false
+            },
+            {
+              "label": "Engere Optimierung",
+              "value": false
+            },
+            {
+              "label": "Intensivere Weiterentwicklung",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Ads Wachstum",
+          "price": 690,
+          "currency": "EUR",
+          "interval": "pro Monat",
+          "featured": true,
+          "features": [
+            {
+              "label": "Kampagnenüberwachung",
+              "value": true
+            },
+            {
+              "label": "Budgetkontrolle",
+              "value": true
+            },
+            {
+              "label": "Einfache Optimierungen",
+              "value": true
+            },
+            {
+              "label": "Laufende Performance-Verbesserung",
+              "value": "Wöchentliche Optimierung + Bericht"
+            },
+            {
+              "label": "Kontinuierliche A/B-Tests",
+              "value": true
+            },
+            {
+              "label": "Anzeigentexte nachschärfen",
+              "value": true
+            },
+            {
+              "label": "Keyword-Anpassungen",
+              "value": true
+            },
+            {
+              "label": "Engere Optimierung",
+              "value": false
+            },
+            {
+              "label": "Intensivere Weiterentwicklung",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Ads Premium",
+          "price": 1090,
+          "currency": "EUR",
+          "interval": "pro Monat",
+          "featured": false,
+          "features": [
+            {
+              "label": "Kampagnenüberwachung",
+              "value": true
+            },
+            {
+              "label": "Budgetkontrolle",
+              "value": true
+            },
+            {
+              "label": "Einfache Optimierungen",
+              "value": true
+            },
+            {
+              "label": "Laufende Performance-Verbesserung",
+              "value": "Wöchentliche Optimierung + Bericht + Strategie-Call"
+            },
+            {
+              "label": "Kontinuierliche A/B-Tests",
+              "value": true
+            },
+            {
+              "label": "Anzeigentexte nachschärfen",
+              "value": true
+            },
+            {
+              "label": "Keyword-Anpassungen",
+              "value": true
+            },
+            {
+              "label": "Engere Optimierung",
+              "value": true
+            },
+            {
+              "label": "Intensivere Weiterentwicklung",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    "webdesign": {
+      "title": "Allgemeine Webdesign-Pakete",
+      "packages": [
+        {
+          "name": "Kompakt",
+          "price": 1490,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "featured": false,
+          "features": [
+            {
+              "label": "Seitenumfang",
+              "value": "Homepage + 3 Unterseiten"
+            },
+            {
+              "label": "Design",
+              "value": "Logo, Unternehmensfarben & vorhandene Fotos"
+            },
+            {
+              "label": "Inhaltsbereiche",
+              "value": "Startseite, Leistungen, Kontaktseite"
+            },
+            {
+              "label": "Teamseite",
+              "value": false
+            },
+            {
+              "label": "Karriereseite",
+              "value": false
+            },
+            {
+              "label": "Abstimmungsrunden",
+              "value": "1 Runde"
+            },
+            {
+              "label": "Technische Wartung (1 Jahr)",
+              "value": true
+            },
+            {
+              "label": "Mailadressen",
+              "value": 2
+            },
+            {
+              "label": "Plugin-Updates, Sicherheits-Updates & Backups",
+              "value": true
+            },
+            {
+              "label": "Hosting, SSL, DSGVO & Backups",
+              "value": true
+            },
+            {
+              "label": "DSGVO-konformes Kontaktformular",
+              "value": true
+            },
+            {
+              "label": "SEO-Optimierung",
+              "value": "Alle 3 Seiten: Titel, Meta, Struktur"
+            },
+            {
+              "label": "WhatsApp-Button mit Direktverlinkung",
+              "value": false
+            },
+            {
+              "label": "Blogbereich",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "Plus",
+          "price": 2290,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "featured": true,
+          "features": [
+            {
+              "label": "Seitenumfang",
+              "value": "Homepage + 6 Unterseiten"
+            },
+            {
+              "label": "Design",
+              "value": "Individuelles Layout mit eigenem Erscheinungsbild"
+            },
+            {
+              "label": "Inhaltsbereiche",
+              "value": "Startseite, Leistungen, Über uns, Referenzen, Kontaktseite"
+            },
+            {
+              "label": "Teamseite",
+              "value": "Allgemeine Teamseite inklusive"
+            },
+            {
+              "label": "Karriereseite",
+              "value": true
+            },
+            {
+              "label": "Abstimmungsrunden",
+              "value": "2 Runden"
+            },
+            {
+              "label": "Technische Wartung (1 Jahr)",
+              "value": true
+            },
+            {
+              "label": "Mailadressen",
+              "value": 4
+            },
+            {
+              "label": "Plugin-Updates, Sicherheits-Updates & Backups",
+              "value": true
+            },
+            {
+              "label": "Hosting, SSL, DSGVO & Backups",
+              "value": true
+            },
+            {
+              "label": "DSGVO-konformes Kontaktformular",
+              "value": true
+            },
+            {
+              "label": "SEO-Optimierung",
+              "value": "Alle 6 Seiten + Keywords & interne Verlinkung"
+            },
+            {
+              "label": "WhatsApp-Button mit Direktverlinkung",
+              "value": true
+            },
+            {
+              "label": "Blogbereich",
+              "value": "Einrichtung & Einpflege von bis zu 5 Artikeln"
+            }
+          ]
+        },
+        {
+          "name": "Premium",
+          "price": 3490,
+          "currency": "EUR",
+          "interval": "einmalig",
+          "featured": false,
+          "features": [
+            {
+              "label": "Seitenumfang",
+              "value": "Homepage + 10 Unterseiten"
+            },
+            {
+              "label": "Design",
+              "value": "Hochwertiges Design, das Ihr Unternehmen klar von Mitbewerbern abhebt"
+            },
+            {
+              "label": "Inhaltsbereiche",
+              "value": "Startseite, Leistungen, Team, Referenzen, Blog, Kontaktseite + 4 Seiten nach Wunsch"
+            },
+            {
+              "label": "Teamseite",
+              "value": "Teamseite mit Einzelprofilen inklusive"
+            },
+            {
+              "label": "Karriereseite",
+              "value": true
+            },
+            {
+              "label": "Abstimmungsrunden",
+              "value": "3 Runden"
+            },
+            {
+              "label": "Technische Wartung (1 Jahr)",
+              "value": true
+            },
+            {
+              "label": "Mailadressen",
+              "value": 5
+            },
+            {
+              "label": "Plugin-Updates, Sicherheits-Updates & Backups",
+              "value": true
+            },
+            {
+              "label": "Hosting, SSL, DSGVO & Backups",
+              "value": true
+            },
+            {
+              "label": "DSGVO-konformes Kontaktformular",
+              "value": true
+            },
+            {
+              "label": "SEO-Optimierung",
+              "value": "Alle 10 Seiten + Keywords, Verlinkung & technisches SEO"
+            },
+            {
+              "label": "WhatsApp-Button mit Direktverlinkung",
+              "value": true
+            },
+            {
+              "label": "Blogbereich",
+              "value": "Einrichtung & Einpflege von bis zu 8 Artikeln"
+            }
+          ]
+        }
+      ]
+    },
+    "maintenance": {
+      "title": "Wartungspakete",
+      "packages": [
+        {
+          "name": "Einmalige Wartung",
+          "price": 99,
+          "currency": "EUR",
+          "interval": "einmalig auf Abruf",
+          "description": "Plugin-Updates, Sicherheits-Updates & Backups"
+        },
+        {
+          "name": "Jahreswartung",
+          "price": 299,
+          "currency": "EUR",
+          "interval": "pro Jahr",
+          "description": "Plugin-Updates, Sicherheits-Updates & Backups – 4x jährlich"
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "category": "Kontakt & Kommunikation",
+      "name": "WhatsApp-Button mit Direktverlinkung",
+      "description": "Direkter Kontaktbutton für WhatsApp-Anfragen; bei Plus & Premium bereits inklusive",
+      "price": 79,
+      "currency": "EUR",
+      "interval": "einmalig"
+    },
+    {
+      "category": "Kontakt & Kommunikation",
+      "name": "Hinweis-Popup",
+      "description": "Popup für Aktionen, Betriebsferien oder wichtige Ankündigungen",
+      "price": 79,
+      "currency": "EUR",
+      "interval": "einmalig"
+    },
+    {
+      "category": "Kontakt & Kommunikation",
+      "name": "Öffnungszeiten-/Verfügbarkeitsmodul",
+      "description": "Anzeige der Geschäftszeiten inkl. Jetzt geöffnet / geschlossen-Status",
+      "price": 129,
+      "currency": "EUR",
+      "interval": "einmalig"
+    },
+    {
+      "category": "Sichtbarkeit & SEO",
+      "name": "Google Maps-Einbindung",
+      "description": "Interaktive Standortkarte direkt auf Ihrer Website",
+      "price": 99,
+      "currency": "EUR",
+      "interval": "einmalig"
+    },
+    {
+      "category": "Sichtbarkeit & SEO",
+      "name": "Google Business Profil-Einrichtung",
+      "description": "Einrichtung & Optimierung des Google-Unternehmensprofils für bessere lokale Sichtbarkeit",
+      "price": 149,
+      "currency": "EUR",
+      "interval": "einmalig"
+    },
+    {
+      "category": "Seiten & Inhalte",
+      "name": "FAQ-Bereich",
+      "description": "Häufig gestellte Fragen als aufklappbare Liste",
+      "price": 99,
+      "currency": "EUR",
+      "interval": "einmalig"
+    },
+    {
+      "category": "Seiten & Inhalte",
+      "name": "Teamseite (allgemein)",
+      "description": "Übersichtsseite mit Teamfoto und kurzer Vorstellung; nur für Kompakt-Kunden",
+      "price": 149,
+      "currency": "EUR",
+      "interval": "einmalig"
+    },
+    {
+      "category": "Seiten & Inhalte",
+      "name": "Teamseite-Upgrade auf Einzelprofile",
+      "description": "Bis zu 5 Einzelprofile mit Foto, Name, Position & Kontakt; jedes weitere Profil 29 €; nur für Plus-Kunden",
+      "price": 149,
+      "currency": "EUR",
+      "interval": "einmalig"
+    },
+    {
+      "category": "Seiten & Inhalte",
+      "name": "Blogbereich",
+      "description": "Einrichtung & Einpflege von bis zu 3 Artikeln mit lizenzfreien Fotos",
+      "price": 199,
+      "currency": "EUR",
+      "interval": "einmalig"
+    },
+    {
+      "category": "Seiten & Inhalte",
+      "name": "Blog-Erweiterung",
+      "description": "Jeder weitere Artikel zusätzlich zu den inkludierten; für Plus & Premium",
+      "price": 39,
+      "currency": "EUR",
+      "interval": "pro Artikel"
+    },
+    {
+      "category": "Seiten & Inhalte",
+      "name": "Mehrsprachigkeit",
+      "description": "Übersetzung & technische Einbindung weiterer Sprachen",
+      "price": null,
+      "currency": "EUR",
+      "interval": "auf Anfrage"
+    }
+  ]
+}
