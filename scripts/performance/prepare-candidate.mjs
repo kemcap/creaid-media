@@ -60,9 +60,34 @@ export function prepareCandidate({source,output}) {
   for(const path of original.filter(p=>extname(p)==='.html')){
     const html=readFileSync(path,'utf8');
     // Only static resource attributes in known HTML tags. No dynamic JS or CSS rewrites.
-    const updated=html.replace(/<(?:link|script|img|source|video|audio|a)\b[^>]*>/gi,tag=>tag
-      .replace(/(\s(?:href|src|poster|data-src)\s*=\s*)(["'])(\/assets\/[^"']+)\2/g,(_,prefix,q,url)=>prefix+q+fingerprint(url)+q)
-      .replace(/(\ssrcset\s*=\s*)(["'])([^"']+)\2/g,(_,prefix,q,value)=>prefix+q+value.replace(/(^|,\s*)(\/assets\/[^\s,]+)/g,(_x,lead,url)=>lead+fingerprint(url))+q));
+    // Skip comments and raw-text bodies; inspect only actual resource start tags.
+    const tagPattern = /<!--[\s\S]*?(?:-->|$)|<(script|style|textarea|title|xmp|iframe|noembed|noframes|plaintext)\b(?:[^>"']|"[^"]*"|'[^']*')*>(?:[\s\S]*?<\/\1\s*>|[\s\S]*$)|<(?:link|img|source|video|audio|a)\b(?:[^>"']|"[^"]*"|'[^']*')*>/gi;
+    const rewriteTag = tag => {
+      const end = tag.match(/^<[\w-]+/)[0].length;
+      return tag.slice(0,end)+tag.slice(end).replace(/(\s+)([^\s=/>]+)(?:(\s*=\s*)(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g,
+        (whole,space,name,eq,double,single,unquoted)=>{
+          if(!eq)return whole;
+          const value=double??single??unquoted;
+          const attr=name.toLowerCase();
+          let next=value;
+          // Fonts referenced inside unchanged CSS keep the original URL: avoid a redundant hashed preload.
+          const fontPreload=attr==='href'&&/^<link\b/i.test(tag)&&/\bas\s*=\s*(?:"font"|'font'|font(?=\s|>))/i.test(tag)&&/\brel\s*=\s*(?:"preload"|'preload'|preload(?=\s|>))/i.test(tag);
+          if(['href','src','poster','data-src'].includes(attr)&&!fontPreload)next=fingerprint(value);
+          else if(attr==='srcset'&&!/\bdata:/i.test(value))next=value.replace(/(^|,\s*)(\/assets\/[^\s,]+)/g,(_x,lead,url)=>lead+fingerprint(url));
+          if(next===value)return whole;
+          const quote=double!==undefined?'"':single!==undefined?"'":'';
+          return space+name+eq+quote+next+quote;
+        });
+    };
+    const updated=html.replace(tagPattern,(match,raw)=>{
+      if(match.startsWith('<!--'))return match;
+      if(raw){
+        if(raw.toLowerCase()!=='script')return match;
+        const opening=match.match(/^<script\b(?:[^>"']|"[^"]*"|'[^']*')*>/i)[0];
+        return rewriteTag(opening)+match.slice(opening.length);
+      }
+      return rewriteTag(match);
+    });
     writeFileSync(join(staged,relative(source,path)),updated,'utf8');
     pages++;
   }
