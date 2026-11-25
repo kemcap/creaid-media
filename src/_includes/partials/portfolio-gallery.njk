@@ -1,0 +1,23 @@
+<section class="cm-portfolio-proof cm-portfolio" id="arbeitsproben" aria-labelledby="arbeitsproben-title">
+  <div class="cm-portfolio__heading"><div><span class="a-mini a-magenta">AUSGEWÄHLTE ARBEITEN / CREAID-MEDIA</span><h2 id="arbeitsproben-title">Gestaltung aus der Praxis&#8288;<span class="cm-heading-dot" aria-hidden="true">.</span></h2></div><p>Eine Auswahl aus dem bereits veröffentlichten CreAid-Media-Portfolio. Die Motive zeigen auch Mockup-Ansichten; Projektrollen und Ergebnisse werden hier nicht behauptet.</p></div>
+  <div class="cm-portfolio__filters" hidden role="group" aria-label="Arbeitsproben nach Kategorie filtern">
+    <button type="button" data-filter="all" aria-pressed="true">Alle <span>16</span></button>
+    {% for category in portfolio.categories %}<button type="button" data-filter="{{ category.id }}" aria-pressed="false">{{ category.label | escape }}</button>{% endfor %}
+  </div>
+  <p class="cm-portfolio__count" aria-live="polite">16 Arbeitsproben</p>
+  <div class="cm-portfolio__grid">
+  {% for item in portfolio.items %}
+    <article class="cm-portfolio__item" data-category="{{ item.category }}" data-portfolio-index="{{ loop.index0 }}">
+      <a class="cm-portfolio__image" href="{{ item.large }}" aria-label="{{ item.title | escape }} – Bild vergrößern">
+        <img src="{{ item.small }}" srcset="{{ item.small }} {{ item.smallWidth }}w, {{ item.large }} {{ item.largeWidth }}w" sizes="(max-width:600px) 100vw, (max-width:980px) 50vw, 33vw" width="{{ item.width }}" height="{{ item.height }}" loading="lazy" decoding="async" alt="{{ item.alt | escape }}">
+        <span class="cm-portfolio__expand" aria-hidden="true">↗</span>
+      </a>
+      <div class="cm-portfolio__caption"><div><span class="cm-portfolio__category">{{ item.label | escape }}</span><h3>{{ item.title | escape }}</h3></div><span class="cm-portfolio__number" aria-hidden="true">{{ loop.index }}</span></div>
+    </article>
+  {% endfor %}
+  </div>
+  <dialog class="cm-portfolio__dialog" aria-labelledby="portfolio-dialog-title">
+    <div class="cm-portfolio__dialog-head"><div id="portfolio-dialog-title" role="heading" aria-level="2">Arbeitsprobe</div><button type="button" data-portfolio-close aria-label="Bildansicht schließen">×</button></div>
+    <img class="cm-portfolio__dialog-image" src="{{ portfolio.items[0].large }}" width="{{ portfolio.items[0].width }}" height="{{ portfolio.items[0].height }}" alt="{{ portfolio.items[0].alt | escape }}"><div class="cm-portfolio__dialog-foot"><button type="button" data-portfolio-prev aria-label="Vorherige Arbeitsprobe">←</button><span data-portfolio-position></span><button type="button" data-portfolio-next aria-label="Nächste Arbeitsprobe">→</button></div>
+  </dialog>
+</section>

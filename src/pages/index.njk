@@ -98,18 +98,15 @@ permalink: /index.html
 <section aria-labelledby="work-title" class="motion-track track-work" id="arbeiten" style="--track:150vh">
 <div class="motion-stage work-stage" data-scene="work">
 <div class="shell work-layout">
-<div class="work-titleline"><div><div class="eyebrow-pink">03 / AUSGEWÄHLTE ARBEITEN</div><h2 id="work-title">ARBEIT, DIE<br/>BLEIBT.</h2></div><p>Ideen werden erst durch Gestaltung erlebbar. Hier zeigen wir vorläufige Designstudien.</p></div>
-<div class="work-gallery">
-<div aria-label="Editorial-Mockup als Designstudie" class="work-mock work-mag">
-<div class="magazine"><span>CREAID / EDITORIAL</span><strong>GOOD<br/>IDEAS<br/>LOOK<br/>BETTER<span class="pink-dot">.</span></strong><i></i></div>
-<div class="work-caption">01 / EDITORIAL &amp; PRINT <span>GESTALTUNGSSTUDIE</span></div>
+<div class="work-titleline"><div><div class="eyebrow-pink">03 / AUSGEWÄHLTE ARBEITEN</div><h2 id="work-title">ARBEIT, DIE<br/>BLEIBT.</h2></div><p>Ideen werden erst durch Gestaltung erlebbar. Entdecken Sie ausgewählte Motive aus unserem veröffentlichten Portfolio.</p></div>
+<div class="work-gallery cm-home-portfolio">
+{% for item in portfolio.items %}{% if loop.index <= 2 %}
+<a href="/referenzen#arbeitsproben" class="work-mock {% if loop.index == 1 %}work-mag{% else %}work-browser{% endif %}" aria-label="{{ item.title | escape }} – Portfolio ansehen">
+<img src="{{ item.small }}" srcset="{{ item.small }} {{ item.smallWidth }}w, {{ item.large }} {{ item.largeWidth }}w" sizes="(max-width:600px) 48vw, 50vw" width="{{ item.width }}" height="{{ item.height }}" alt="{{ item.alt | escape }}" loading="lazy" decoding="async">
+<div class="work-caption">{{ item.label | upper | escape }} <span>{{ item.title | escape }} ↗</span></div></a>
+{% endif %}{% endfor %}
 </div>
-<div aria-label="Webdesign-Mockup als Designstudie" class="work-mock work-browser">
-<div class="browser-frame"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-content"><small>DIGITAL EXPERIENCE</small><strong>LESS<br/>NOISE.<br/>MORE<br/>IMPACT.</strong><span></span></div></div>
-<div class="work-caption">02 / DIGITAL EXPERIENCE <span>GESTALTUNGSSTUDIE</span></div>
-</div>
-</div>
-<div class="work-disclaimer">DESIGNSTUDIEN · KEINE KUNDENREFERENZEN</div><a class="portfolio-entry" href="/referenzen">Portfolio &amp; Projektstudien ansehen ↗</a>
+<div class="work-disclaimer">AUSGEWÄHLTE MOTIVE AUS DEM VERÖFFENTLICHTEN PORTFOLIO</div><a class="portfolio-entry" href="/referenzen">Portfolio &amp; Projektstudien ansehen ↗</a>
 </div>
 <div class="stage-footer"><span>EDITORIAL / WEBDESIGN</span><span data-percent="work">00 %</span></div>
 <a aria-label="Weiter zum Markenprinzip" class="chapter-next" href="#markenprinzip">WEITER <span>↓</span></a>
