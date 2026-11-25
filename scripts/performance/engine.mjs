@@ -1,4 +1,4 @@
-// CreAid Performance Engine 1.0: opt-in, isolated static-site packaging.
+// CreAid Performance Engine 1.1: opt-in, isolated static-site packaging.
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync, readdirSync, lstatSync, realpathSync } from 'node:fs';
 import { join, resolve, dirname, relative, sep } from 'node:path';
@@ -27,10 +27,21 @@ export function apachePolicy(profile = 'preview') {
       '</FilesMatch>'
     ] : []),
     '</IfModule>',
-    '<IfModule mod_deflate.c>',
     '<IfModule mod_filter.c>',
+    '<IfModule mod_brotli.c>',
+    '<IfModule mod_deflate.c>',
+    'AddOutputFilterByType BROTLI_COMPRESS;DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/xml text/xml image/svg+xml',
+    '</IfModule>',
+    '<IfModule !mod_deflate.c>',
+    'AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/javascript application/javascript application/json application/xml text/xml image/svg+xml',
+    '</IfModule>',
+    '</IfModule>',
+    '<IfModule !mod_brotli.c>',
+    '<IfModule mod_deflate.c>',
     'AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/xml text/xml image/svg+xml',
-    '</IfModule>', '</IfModule>', end, ''
+    '</IfModule>',
+    '</IfModule>',
+    '</IfModule>', end, ''
   ].join('\n');
 }
 
@@ -112,11 +123,11 @@ export function buildPerformance({source, output, profile='preview', approved=fa
   const existing = existsSync(target) ? readFileSync(target,'utf8') : '';
   writeFileSync(target,existing+(existing&&!existing.endsWith('\n')?'\n':'')+rules);
   writeFileSync(join(output,'cache-policy.active.conf'),rules);
-  const result = {...report,engineVersion:'1.0.0',profile,verifiedAssets:verified,
+  const result = {...report,engineVersion:'1.1.0',profile,verifiedAssets:verified,
     stagedBytes:walk(join(output,'site')).reduce((n,p)=>n+lstatSync(p).size,0),
     deployment:'not performed', limitations:[
       'Only static directly referenced assets fingerprinted; originals retained for runtime dependencies.',
-      'Compression estimates are not live HTTP measurements. Apache mod_deflate/mod_headers/mod_filter must be verified.',
+      'Compression estimates are not live HTTP measurements. Apache mod_brotli/mod_deflate/mod_headers/mod_filter must be verified.',
       'No minification, responsive image generation or automatic deployment.',
       'Production approval and public-only source review are separate; heuristic preview checks are not a confidentiality audit.',
       'Run only after final path rewriting; never transform hashed files after packaging.'
