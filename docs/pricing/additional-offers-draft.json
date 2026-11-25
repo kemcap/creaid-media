@@ -34,7 +34,8 @@
     "Webdesign-Wartung umfasst WordPress-Plugin-Updates; nicht als Wartungsumfang für Eleventy übernehmen.",
     "Unklarer Seitenumfang: Tabelle nennt Homepage plus Unterseiten, SEO-Zeile hingegen alle 3/6/10 Seiten. Vor Freigabe klären.",
     "Werbebudget, Steuerhinweise und genaue Vertragsbedingungen nicht eigenständig ergänzen.",
-    "Zusatzmodule nur nach dokumentierter Paket-Zuordnung; die PDF-Zuordnungen sind nicht automatisch für Branchenpakete gültig."
+    "Zusatzmodule nur nach dokumentierter Paket-Zuordnung; die PDF-Zuordnungen sind nicht automatisch für Branchenpakete gültig.",
+    "Seite 9 formuliert «keine laufenden Kosten», Seite 7 nennt laufende Hosting-Gebühren. Vor Veröffentlichung Widerspruch bereinigen."
   ],
   "groups": {
     "conversion": {
@@ -667,7 +668,8 @@
               "label": "Blogbereich",
               "value": false
             }
-          ]
+          ],
+          "claim": "Schnell online. Professionell & klar."
         },
         {
           "name": "Plus",
@@ -732,7 +734,8 @@
               "label": "Blogbereich",
               "value": "Einrichtung & Einpflege von bis zu 5 Artikeln"
             }
-          ]
+          ],
+          "claim": "Vollständig positioniert. Mehr Vertrauen, mehr Anfragen."
         },
         {
           "name": "Premium",
@@ -797,7 +800,8 @@
               "label": "Blogbereich",
               "value": "Einrichtung & Einpflege von bis zu 8 Artikeln"
             }
-          ]
+          ],
+          "claim": "Marktführend auftreten. Maximum an Wirkung."
         }
       ]
     },
