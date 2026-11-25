@@ -19,6 +19,13 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run test:performance
+      - name: Install Apache HTTP test server
+        run: |
+          if ! test -f /usr/lib/apache2/modules/mod_brotli.so; then
+            sudo apt-get update
+            sudo apt-get install -y apache2
+          fi
+      - run: node scripts/performance/test-apache-http.mjs
       - run: npm run verify
       - run: npm run performance:preview -- dist performance-preview
       - uses: actions/upload-artifact@v4
