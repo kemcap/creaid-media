@@ -37,6 +37,7 @@ jobs:
           npm install --prefix "$RUNNER_TEMP/creaid-browser-tools" --save-exact --no-audit --no-fund playwright@1.56.1 lighthouse@12.8.2 pngjs@7.0.0 pixelmatch@7.1.0
           "$RUNNER_TEMP/creaid-browser-tools/node_modules/.bin/playwright" install --with-deps chromium
       - run: node scripts/performance/test-browser-measurement.mjs "$RUNNER_TEMP/creaid-browser-tools"
+      - run: node scripts/performance/test-responsive-browser.mjs "$RUNNER_TEMP/creaid-opt-tools" "$RUNNER_TEMP/creaid-browser-tools"
       - run: node scripts/performance/test-studio-visual.mjs "$RUNNER_TEMP/creaid-browser-tools"
       - run: node scripts/performance/test-studio-local.mjs "$RUNNER_TEMP/creaid-browser-tools" --benchmark
       - run: npm run verify
