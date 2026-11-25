@@ -1,0 +1,40 @@
+name: IONOS preview cache QA (no deployment)
+on:
+  pull_request:
+    paths:
+      - '.github/scripts/**'
+      - '.github/workflows/ionos-deploy.yml'
+      - '.github/workflows/ionos-preview-cache-qa.yml'
+      - 'scripts/performance/**'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m pip install --disable-pip-version-check Pillow==11.3.0
+          python scripts/optimize-preview-images.py
+      - run: node .github/scripts/prepare-ionos.mjs
+      - run: node scripts/performance/test-prepare-candidate.mjs
+      - run: node .github/scripts/prepare-preview-cache.mjs
+      - run: python .github/scripts/test_preview_cache_activation.py
+      - name: Install Apache test modules
+        run: |
+          if ! test -f /usr/lib/apache2/modules/mod_brotli.so; then
+            sudo apt-get update
+            sudo apt-get install -y apache2
+          fi
+      - run: node scripts/performance/test-apache-http.mjs
+      # No SFTP secrets, no public reports, no deployment.
