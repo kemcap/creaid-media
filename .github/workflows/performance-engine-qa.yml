@@ -4,6 +4,7 @@ on:
     paths:
       - 'scripts/performance/**'
       - 'package.json'
+      - 'package-lock.json'
       - '.github/workflows/performance-engine-qa.yml'
 permissions:
   contents: read
@@ -29,12 +30,9 @@ jobs:
       - name: Install isolated optional optimization tools
         run: npm install --prefix "$RUNNER_TEMP/creaid-opt-tools" --save-exact --no-audit --no-fund esbuild@0.25.12 sharp@0.34.1
       - run: node scripts/performance/test-optimize-input.mjs "$RUNNER_TEMP/creaid-opt-tools"
+      - run: node scripts/performance/test-responsive-images.mjs "$RUNNER_TEMP/creaid-opt-tools"
+      - run: node scripts/performance/test-compare-lighthouse.mjs
       - run: npm run verify
       - run: npm run performance:preview -- dist performance-preview
-      - uses: actions/upload-artifact@v4
-        with:
-          name: performance-engine-report
-          path: |
-            performance-preview/report.json
-            performance-preview/cache-policy.active.conf
-          retention-days: 7
+      - run: npm run performance:audit -- dist performance-audit
+      # Reports contain internal paths; keep them in the runner, not public artifacts.
