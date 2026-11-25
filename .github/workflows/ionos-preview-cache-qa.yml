@@ -11,7 +11,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -37,4 +37,32 @@ jobs:
             sudo apt-get install -y apache2
           fi
       - run: node scripts/performance/test-apache-http.mjs
+      - name: Install browser matrix tools
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1 pixelmatch@7.1.0 pngjs@7.0.0
+          npx playwright install --with-deps chromium firefox webkit
+      - name: Compare actual cache candidate with its exact unoptimized build
+        env:
+          CREAID_QA_URL: http://127.0.0.1:8080
+          CREAID_QA_BASELINE: http://127.0.0.1:8081
+          CREAID_QA_OUTPUT: cache-browser-qa
+        run: |
+          set -euo pipefail
+          baseline="$RUNNER_TEMP/creaid-cache-baseline"
+          mkdir -p "$baseline/scripts" "$baseline/src/_data"
+          cp scripts/preview.mjs scripts/routes.mjs "$baseline/scripts/"
+          cp src/_data/routes.json src/_data/aliases.json "$baseline/src/_data/"
+          mv dist "$baseline/dist"
+          mv preview-cache-package/site dist
+          node scripts/preview.mjs > "$RUNNER_TEMP/cache-candidate.log" 2>&1 &
+          candidate_pid=$!
+          CREAID_PREVIEW_PORT=8081 node "$baseline/scripts/preview.mjs" > "$RUNNER_TEMP/cache-baseline.log" 2>&1 &
+          baseline_pid=$!
+          trap 'kill "$candidate_pid" "$baseline_pid" 2>/dev/null || true' EXIT
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null && curl -fsS http://127.0.0.1:8081/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:routes -- http://127.0.0.1:8080
+          npm run test:browser
       # No SFTP secrets, no public reports, no deployment.
