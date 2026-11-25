@@ -1,0 +1,37 @@
+
+/* CreAid original work gallery: normal flow, no scroll pinning, no third-party media. */
+.cm-portfolio{scroll-margin-top:calc(var(--cm-nav-height,76px) + 16px)}
+.cm-portfolio__heading{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);align-items:end;gap:24px;margin-bottom:28px}
+.cm-portfolio__heading p{margin:0;color:#554b50;font-size:1rem}
+.cm-portfolio__filters{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 12px}
+.cm-portfolio__filters[hidden],.cm-portfolio__item[hidden]{display:none!important}
+.cm-portfolio__filters button{min-height:44px;border:1px solid #c4babe;background:transparent;color:#1a1a1b;padding:9px 16px;font:inherit;font-size:.875rem;font-weight:700;cursor:pointer}
+.cm-portfolio__filters button[aria-pressed="true"]{background:#1a1a1b;border-color:#1a1a1b;color:white}
+.cm-portfolio__filters button:hover{border-color:#b3284f}
+.cm-portfolio__count{font-size:.875rem;color:#625a5e;margin:0 0 20px}
+.cm-portfolio__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 18px}
+.cm-portfolio__item{min-width:0}
+.cm-portfolio__item .cm-portfolio__image{display:block;position:relative;overflow:hidden;background:#e6e1de;margin:0;min-height:0;text-decoration:none;aspect-ratio:4/3}
+.cm-portfolio__image img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .32s cubic-bezier(.2,.8,.2,1)}
+.cm-portfolio__image:hover img{transform:scale(1.035)}
+.cm-portfolio__expand{position:absolute;right:12px;bottom:12px;width:44px;height:44px;display:grid;place-items:center;background:#1a1a1b;color:#fff;font-size:1.3rem;line-height:1}
+.cm-portfolio__caption{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:14px 0;border-bottom:1px solid #ccc4c1}
+.cm-portfolio__category{display:block;font-size:.72rem;letter-spacing:.085em;text-transform:uppercase;font-weight:700;color:#8e2040}
+.cm-portfolio .cm-portfolio__caption h3{font-family:Ubuntu,Arial,sans-serif;color:#1a1a1b;font-size:clamp(1.05rem,1.65vw,1.45rem);line-height:1.2;letter-spacing:-.025em;margin:5px 0 0;overflow-wrap:anywhere}
+.cm-portfolio__number{font-size:.8rem;color:#625a5e;font-weight:700}
+.cm-portfolio button:focus-visible,.cm-portfolio a:focus-visible{outline:3px solid #b3284f;outline-offset:4px}
+.cm-portfolio__dialog{position:fixed;inset:0;margin:auto;padding:18px;border:1px solid #625a5e;background:#1a1a1b;color:#fff;width:min(1100px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;z-index:9999}
+.cm-portfolio__dialog:not([open]){display:none}
+.cm-portfolio__dialog::backdrop{background:rgba(0,0,0,.86)}
+.cm-portfolio__dialog-head,.cm-portfolio__dialog-foot{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cm-portfolio__dialog-head [role=heading]{font-size:clamp(1rem,2vw,1.4rem);font-weight:700}
+.cm-portfolio__dialog button{display:grid;place-items:center;min-width:44px;min-height:44px;border:1px solid #888;background:#28282a;color:#fff;font:inherit;font-size:1.35rem;cursor:pointer}
+.cm-portfolio__dialog-image{display:block;width:100%;height:auto;max-height:calc(100dvh - 170px);object-fit:contain;margin:12px 0;background:#242426}
+.cm-home-portfolio .work-mock{display:block;background:#e6e1de;position:relative;color:#1a1a1b}
+.cm-home-portfolio .work-mock img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:transform .32s ease}
+.cm-home-portfolio .work-mock:hover img{transform:scale(1.025)}
+.cm-home-portfolio .work-caption{background:rgba(26,26,27,.9);color:#fff;text-shadow:none;padding:8px;left:8px;right:8px;bottom:8px}
+.cm-home-portfolio .work-mock:focus-visible{outline:3px solid #fa225b;outline-offset:3px}
+@media(max-width:980px){.cm-portfolio__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cm-portfolio__heading{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.cm-portfolio__grid{grid-template-columns:minmax(0,1fr);gap:20px}.cm-portfolio__filters{gap:6px}.cm-portfolio__filters button{padding:9px 12px}.cm-home-portfolio .work-caption{font-size:8px;left:4px;right:4px;bottom:4px;padding:5px}}
+@media(prefers-reduced-motion:reduce){.cm-portfolio__image img,.cm-home-portfolio .work-mock img{transition:none!important;transform:none!important}}
