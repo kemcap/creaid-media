@@ -17,7 +17,7 @@ FINGERPRINTS = {
     "SHA256:psLDE8kfhoS9GWrc/GTrdlPvyKPcWcGZv2JxOCvwF3w",
     "SHA256:1gx2w8Rtv3wCgi7Jh8myf/KVd72cRQbow03UP8P095Q",
 }
-ASSET_SUFFIXES = {".css", ".js", ".webp", ".avif", ".jpg", ".jpeg", ".png", ".gif", ".svg", ".ico", ".woff", ".woff2", ".ttf", ".otf", ".txt", ".mp4", ".webm", ".pdf"}
+ASSET_SUFFIXES = {".css", ".js", ".mjs", ".webp", ".avif", ".jpg", ".jpeg", ".png", ".gif", ".svg", ".ico", ".woff", ".woff2", ".ttf", ".otf", ".txt", ".mp4", ".webm", ".pdf"}
 class PinnedIONOSKey(paramiko.MissingHostKeyPolicy):
     def missing_host_key(self, client, hostname, key):
         digest = "SHA256:" + base64.b64encode(hashlib.sha256(key.asbytes()).digest()).decode().rstrip("=")
