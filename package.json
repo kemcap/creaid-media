@@ -13,7 +13,9 @@
     "test:routes": "node scripts/check-routes.mjs",
     "verify": "npm run build && npm run test:structure && npm run test:quality",
     "test:quality": "node scripts/check-quality.mjs",
-    "test:browser": "node scripts/check-browser.mjs"
+    "test:browser": "node scripts/check-browser.mjs",
+    "test:performance": "node scripts/check-performance.mjs",
+    "prepare:launch": "node scripts/prepare-launch.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.8"

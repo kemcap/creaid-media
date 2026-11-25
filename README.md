@@ -1,6 +1,6 @@
 # CreAid-Media V10.1 – Eleventy-Projektkopie
 
-Stand 22.11.2026. Das Projekt enthält 59 HTML-Seiten, davon 38 Journalartikel, sowie die fertig gebaute lokale Vorschau. Alle Seiten tragen den Indexierungsschutz der Vorschau.
+Stand 24.11.2026. Das Projekt enthält 98 kanonische Inhaltsseiten, davon 39 Journalartikel, sowie die fertig gebaute lokale Vorschau. Alle Seiten tragen den Indexierungsschutz der Vorschau.
 
 ## Lokale Vorschau öffnen
 
@@ -40,6 +40,10 @@ node scripts/check-routes.mjs http://127.0.0.1:8080
 - `docs/` enthält Auditbericht, Matrizen, den Sitemap-Kandidaten und Testprotokolle.
 - `docs/V10-Ausgangsstand/` enthält die Migrationsnotizen und Testprotokolle aus dem beigefügten V10.
 
+## Performance und Launch-Vorbereitung
+
+`npm run test:performance` (Browserwerkzeuge aus dem QA-Workflow erforderlich) misst lokale Ladezeiten unter definierten Profilen. `npm run prepare:launch` erstellt ausschließlich interne Manifest- und Sitemap-Kandidaten. Details: docs/production-readiness.md.
+
 ## Status vor einer Veröffentlichungsentscheidung
 
-21 bestehende Seiten und 20 Kategoriearchive brauchen einen eigenen Inhalts- bzw. Migrationsentscheid. Die Rechtsseiten und der redaktionelle Ersatzartikel benötigen Freigabe. Das Kontaktformular öffnet einen lokalen E-Mail-Entwurf. Die dokumentierten Regeln sind für Apache 2.4 getestet. Hosting, serverseitige Zustellung und Google-Felddaten bleiben offene Produktionsaufgaben. Siehe Auditbericht und URL-Matrix.
+98 kanonische Seiten, darunter 19 Kategoriearchive, wurden im Qualitätslauf geprüft. Die Rechtsseiten benötigen weiterhin Freigabe. Das Kontaktformular öffnet einen lokalen E-Mail-Entwurf. Die dokumentierten Regeln sind für Apache 2.4 getestet. Hosting, serverseitige Zustellung und Google-Felddaten bleiben offene Produktionsaufgaben. Siehe Auditbericht und URL-Matrix.
