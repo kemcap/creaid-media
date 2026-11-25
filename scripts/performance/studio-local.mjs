@@ -1,12 +1,14 @@
 // Local-only Studio runner. No arbitrary shell commands, external URLs or deployment.
 import {createServer} from 'node:http';
 import {randomBytes,randomUUID} from 'node:crypto';
-import {existsSync,lstatSync,realpathSync,mkdirSync,readFileSync,rmSync,readdirSync} from 'node:fs';
+import {existsSync,lstatSync,realpathSync,mkdirSync,readFileSync,rmSync,readdirSync,renameSync} from 'node:fs';
 import {resolve,join,relative,sep} from 'node:path';
 import {pathToFileURL,fileURLToPath} from 'node:url';
 import {runPipeline} from './pipeline.mjs';
 import {localBuildServer} from './browser-coverage.mjs';
 import {warmCache} from './cache-warmup.mjs';
+import {benchmarkBuilds} from './benchmark.mjs';
+import {snapshotBuild} from './snapshot.mjs';
 
 const studioFile=fileURLToPath(new URL('./studio.html',import.meta.url));
 const inside=(a,b)=>{const r=relative(a,b);return r===''||(!r.startsWith('..'+sep)&&r!=='..'&&!r.startsWith(sep));};
@@ -34,15 +36,16 @@ async function body(req){
   return JSON.parse(Buffer.concat(parts).toString('utf8'));
 }
 function localUI(token){
-  const section='<section id="localRunner"><h2>05 / Lokal optimieren</h2><p>Erstellt einen neuen isolierten Vorschau-Build aus dem bereits gebauten dist-Ordner. Keine Veröffentlichung.</p><div class="actions"><button id="runLocal" type="button">Optimierung starten</button><a id="localReport" hidden target="_blank" rel="noopener noreferrer">Analysebericht öffnen</a></div><p id="localStatus" role="status" aria-live="polite"></p><pre id="localResult" hidden></pre></section><section id="cacheManagement"><h2>06 / Lokalen Build-Cache verwalten</h2><p>Entfernt nur ältere, in dieser Studio-Sitzung erzeugte Vorschau-Builds samt Berichten. Der neueste Lauf, dist, Sicherungen und frühere Sitzungen bleiben erhalten. Browser- und Hosting-Cache werden nicht geleert.</p><p id="cacheInfo" role="status"></p><button id="clearCache" type="button" class="secondary" disabled>Lokalen Build-Cache leeren</button><p id="cacheStatus" role="status" aria-live="polite"></p><h3>Automatische Aufbewahrung (nur diese Sitzung)</h3><label><input id="autoCleanup" type="checkbox">Automatische Bereinigung aktivieren</label><div class="grid"><label>Neueste Läufe behalten<input id="keepRuns" type="number" min="2" max="20" value="3"></label><label>Mindestalter in Stunden<input id="ageHours" type="number" min="1" max="168" value="24"></label></div><button id="saveRetention" class="secondary" type="button">Aufbewahrung übernehmen</button><p id="retentionStatus" role="status" aria-live="polite"></p><p class="small">Prüft jede Minute, solange Studio läuft. Nur ältere Läufe außerhalb der Aufbewahrungsgrenze werden gelöscht. Nach Neustart aus.</p><h3>HTTP-Cache-Diagnose (lokale Vorschau)</h3><p>Prüft den neuesten Vorschau-Build mit zwei GET-Durchläufen. Vorschau ist absichtlich no-store; kein echter CDN-Warmup.</p><button id="diagnoseCache" class="secondary" type="button" disabled>Cache-Diagnose starten</button><pre id="diagnosisResult" hidden></pre></section>';
+  const section='<section id="localRunner"><h2>05 / Lokal optimieren</h2><p>Erstellt einen neuen isolierten Vorschau-Build aus dem bereits gebauten dist-Ordner. Keine Veröffentlichung.</p><div class="actions"><button id="runLocal" type="button">Optimierung starten</button><a id="localReport" hidden target="_blank" rel="noopener noreferrer">Analysebericht öffnen</a></div><p id="localStatus" role="status" aria-live="polite"></p><pre id="localResult" hidden></pre></section><section id="cacheManagement"><h2>06 / Lokalen Build-Cache verwalten</h2><p>Entfernt nur ältere, in dieser Studio-Sitzung erzeugte Vorschau-Builds samt Berichten. Der neueste Lauf, dist, Sicherungen und frühere Sitzungen bleiben erhalten. Browser- und Hosting-Cache werden nicht geleert.</p><p id="cacheInfo" role="status"></p><button id="clearCache" type="button" class="secondary" disabled>Lokalen Build-Cache leeren</button><p id="cacheStatus" role="status" aria-live="polite"></p><h3>Automatische Aufbewahrung (nur diese Sitzung)</h3><label><input id="autoCleanup" type="checkbox">Automatische Bereinigung aktivieren</label><div class="grid"><label>Neueste Läufe behalten<input id="keepRuns" type="number" min="2" max="20" value="3"></label><label>Mindestalter in Stunden<input id="ageHours" type="number" min="1" max="168" value="24"></label></div><button id="saveRetention" class="secondary" type="button">Aufbewahrung übernehmen</button><p id="retentionStatus" role="status" aria-live="polite"></p><p class="small">Prüft jede Minute, solange Studio läuft. Nur ältere Läufe außerhalb der Aufbewahrungsgrenze werden gelöscht. Nach Neustart aus.</p><h3>HTTP-Cache-Diagnose (lokale Vorschau)</h3><p>Prüft den neuesten Vorschau-Build mit zwei GET-Durchläufen. Vorschau ist absichtlich no-store; kein echter CDN-Warmup.</p><button id="diagnoseCache" class="secondary" type="button" disabled>Cache-Diagnose starten</button><pre id="diagnosisResult" hidden></pre></section><section id="benchmarkPanel"><h2>07 / Vorher-Nachher-Messung</h2><p>Sechs Lighthouse-Labormessungen der Startseite (je drei pro Build). Kein IONOS-, CDN- oder Browser-Cache-Benchmark. Benötigt die optional installierten Browser-Werkzeuge.</p><label for="benchmarkDevice">Gerät</label><select id="benchmarkDevice"><option value="mobile">Mobil</option><option value="desktop">Desktop</option></select><button id="runBenchmark" type="button" class="secondary" disabled>Performance messen</button><p id="benchmarkStatus" role="status" aria-live="polite"></p><div style="overflow:auto"><table id="benchmarkTable" hidden><thead><tr><th>Kennzahl</th><th>Vorher</th><th>Nachher</th><th>Differenz</th></tr></thead><tbody></tbody></table></div></section>';
   const js='<script>\n'+
     'const localToken='+JSON.stringify(token)+';\n'+
     'const localButton=document.getElementById("runLocal"),localStatus=document.getElementById("localStatus"),localResult=document.getElementById("localResult"),localReport=document.getElementById("localReport");\n'+
-    'const clearButton=document.getElementById("clearCache"),cacheInfo=document.getElementById("cacheInfo"),cacheStatus=document.getElementById("cacheStatus");let removable=0;let localBusy=false;let retentionInitialized=false;let pollTimer;const diagnoseButton=document.getElementById("diagnoseCache"),diagnosisResult=document.getElementById("diagnosisResult");const retentionButton=document.getElementById("saveRetention"),retentionStatus=document.getElementById("retentionStatus");\n'+
+    'const clearButton=document.getElementById("clearCache"),cacheInfo=document.getElementById("cacheInfo"),cacheStatus=document.getElementById("cacheStatus");let removable=0;let localBusy=false;let retentionInitialized=false;let pollTimer;const diagnoseButton=document.getElementById("diagnoseCache"),diagnosisResult=document.getElementById("diagnosisResult");const benchmarkButton=document.getElementById("runBenchmark"),benchmarkStatus=document.getElementById("benchmarkStatus"),benchmarkTable=document.getElementById("benchmarkTable");const retentionButton=document.getElementById("saveRetention"),retentionStatus=document.getElementById("retentionStatus");\n'+
     'async function localAPI(path,options={}){const r=await fetch(path,{...options,headers:{"X-CreAid-Local":localToken,...options.headers},cache:"no-store"});const data=await r.json();if(!r.ok)throw Error(data.error||"Lokaler Serverfehler");return data;}\n'+
-    'function renderLocal(state){localBusy=state.state==="running"||state.state==="cleaning"||state.state==="diagnosing";localButton.disabled=localBusy;if(state.cache){removable=state.cache.removableRuns;cacheInfo.textContent=removable+" ältere Testläufe zur Bereinigung.";}clearButton.disabled=localBusy||removable===0;retentionButton.disabled=localBusy;diagnoseButton.disabled=localBusy||!state.cache?.latestPreserved;if(state.cache?.autoCleanup){const a=state.cache.autoCleanup;if(!retentionInitialized){document.getElementById("autoCleanup").checked=a.enabled;document.getElementById("keepRuns").value=a.keep;document.getElementById("ageHours").value=a.maxAgeHours;retentionInitialized=true;}retentionStatus.textContent=(a.enabled?"Aktiv":"Aus")+(a.lastResult?" · letzte Bereinigung: "+a.lastResult.removed+" Läufe"+(a.lastResult.error?" · Fehler: "+a.lastResult.error:""):"");}localStatus.textContent=state.state==="diagnosing"?"Cache-Diagnose läuft …":state.state==="cleaning"?"Bereinigung läuft …":state.state==="running"?"Optimierung läuft …":state.state==="done"?"Vorschau erfolgreich erstellt.":state.state==="error"?"Optimierung fehlgeschlagen.":"Bereit.";localResult.hidden=!state.result&&!state.error;localResult.textContent=state.result?JSON.stringify(state.result,null,2):state.error||"";localReport.hidden=state.state!=="done";if(state.state==="done")localReport.href="/report?token="+encodeURIComponent(localToken);}\n'+
+    'function renderLocal(state){localBusy=state.state==="running"||state.state==="cleaning"||state.state==="diagnosing"||state.state==="benchmarking";localButton.disabled=localBusy;if(state.cache){removable=state.cache.removableRuns;cacheInfo.textContent=removable+" ältere Testläufe zur Bereinigung.";}clearButton.disabled=localBusy||removable===0;retentionButton.disabled=localBusy;diagnoseButton.disabled=localBusy||!state.cache?.latestPreserved;benchmarkButton.disabled=localBusy||!state.benchmarkReady;renderBenchmark(state.benchmark);if(state.cache?.autoCleanup){const a=state.cache.autoCleanup;if(!retentionInitialized){document.getElementById("autoCleanup").checked=a.enabled;document.getElementById("keepRuns").value=a.keep;document.getElementById("ageHours").value=a.maxAgeHours;retentionInitialized=true;}retentionStatus.textContent=(a.enabled?"Aktiv":"Aus")+(a.lastResult?" · letzte Bereinigung: "+a.lastResult.removed+" Läufe"+(a.lastResult.error?" · Fehler: "+a.lastResult.error:""):"");}localStatus.textContent=state.state==="benchmarking"?"Performance-Messung läuft …":state.state==="diagnosing"?"Cache-Diagnose läuft …":state.state==="cleaning"?"Bereinigung läuft …":state.state==="running"?"Optimierung läuft …":state.state==="done"?"Vorschau erfolgreich erstellt.":state.state==="error"?"Optimierung fehlgeschlagen.":"Bereit.";localResult.hidden=!state.result&&!state.error;localResult.textContent=state.result?JSON.stringify(state.result,null,2):state.error||"";localReport.hidden=state.state!=="done";if(state.state==="done")localReport.href="/report?token="+encodeURIComponent(localToken);}\n'+
+    'function renderBenchmark(b){if(!b)return;benchmarkStatus.textContent=b.error?b.error:b.status==="running"?"Messungen: "+(b.progress?.completed??0)+" / 6":b.status==="done"?"Abgeschlossen · lokale Labordaten, keine Live-Cache-Messung.":"";benchmarkTable.hidden=!b.rows;const tbody=benchmarkTable.querySelector("tbody");tbody.replaceChildren();for(const row of b.rows??[]){const tr=document.createElement("tr");for(const value of [row.metric,...[row.before,row.after,row.delta].map(n=>n.toFixed(row.unit==="unitless"?3:1)+" "+row.unit)]){const td=document.createElement("td");td.textContent=value;tr.append(td);}tbody.append(tr);}}\n'+
     'async function refreshLocal(){clearTimeout(pollTimer);try{const state=await localAPI("/api/status");renderLocal(state);if(localBusy)pollTimer=setTimeout(refreshLocal,1000);else if(state.cache?.autoCleanup?.enabled)pollTimer=setTimeout(refreshLocal,60000);}catch(e){localStatus.textContent=e.message;localButton.disabled=false;}}\n'+
-    'localButton.addEventListener("click",async()=>{if(localBusy)return;let config;try{config=build();}catch(e){localStatus.textContent=e.message;return;}localButton.disabled=true;clearButton.disabled=true;localReport.hidden=true;localStatus.textContent="Starte …";try{renderLocal(await localAPI("/api/run",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(config)}));if(localBusy){clearTimeout(pollTimer);pollTimer=setTimeout(refreshLocal,1000);}}catch(e){localStatus.textContent=e.message;await refreshLocal();}});clearButton.addEventListener("click",async()=>{if(localBusy||!removable)return;if(!window.confirm("Ältere Vorschau-Builds dieser Sitzung samt Berichten wirklich löschen? Der neueste Lauf bleibt erhalten."))return;clearButton.disabled=true;localButton.disabled=true;try{const result=await localAPI("/api/cache/clear",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({confirm:"remove-previous-session-runs"})});cacheStatus.textContent=result.removed+" Testläufe entfernt · "+(result.bytes/1048576).toFixed(2)+" MiB freigegeben.";}catch(e){cacheStatus.textContent=e.message;}await refreshLocal();});retentionButton.addEventListener("click",async()=>{if(localBusy)return;const enabled=document.getElementById("autoCleanup").checked;if(enabled&&!window.confirm("Automatische Löschung älterer Testläufe dieser Sitzung aktivieren?"))return;try{await localAPI("/api/cache/schedule",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({enabled,keep:Number(document.getElementById("keepRuns").value),maxAgeHours:Number(document.getElementById("ageHours").value)})});await refreshLocal();}catch(e){retentionStatus.textContent=e.message;}});diagnoseButton.addEventListener("click",async()=>{if(localBusy)return;diagnoseButton.disabled=true;localButton.disabled=true;clearButton.disabled=true;retentionButton.disabled=true;diagnosisResult.hidden=false;diagnosisResult.textContent="Diagnose läuft …";try{const data=await localAPI("/api/cache/diagnose",{method:"POST",headers:{"Content-Type":"application/json"},body:"{}"});diagnosisResult.textContent=JSON.stringify(data,null,2);}catch(e){diagnosisResult.textContent=e.message;}await refreshLocal();});refreshLocal();\n</script>';
+    'localButton.addEventListener("click",async()=>{if(localBusy)return;let config;try{config=build();}catch(e){localStatus.textContent=e.message;return;}localButton.disabled=true;clearButton.disabled=true;localReport.hidden=true;localStatus.textContent="Starte …";try{renderLocal(await localAPI("/api/run",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(config)}));if(localBusy){clearTimeout(pollTimer);pollTimer=setTimeout(refreshLocal,1000);}}catch(e){localStatus.textContent=e.message;await refreshLocal();}});clearButton.addEventListener("click",async()=>{if(localBusy||!removable)return;if(!window.confirm("Ältere Vorschau-Builds dieser Sitzung samt Berichten wirklich löschen? Der neueste Lauf bleibt erhalten."))return;clearButton.disabled=true;localButton.disabled=true;try{const result=await localAPI("/api/cache/clear",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({confirm:"remove-previous-session-runs"})});cacheStatus.textContent=result.removed+" Testläufe entfernt · "+(result.bytes/1048576).toFixed(2)+" MiB freigegeben.";}catch(e){cacheStatus.textContent=e.message;}await refreshLocal();});retentionButton.addEventListener("click",async()=>{if(localBusy)return;const enabled=document.getElementById("autoCleanup").checked;if(enabled&&!window.confirm("Automatische Löschung älterer Testläufe dieser Sitzung aktivieren?"))return;try{await localAPI("/api/cache/schedule",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({enabled,keep:Number(document.getElementById("keepRuns").value),maxAgeHours:Number(document.getElementById("ageHours").value)})});await refreshLocal();}catch(e){retentionStatus.textContent=e.message;}});diagnoseButton.addEventListener("click",async()=>{if(localBusy)return;diagnoseButton.disabled=true;localButton.disabled=true;clearButton.disabled=true;retentionButton.disabled=true;diagnosisResult.hidden=false;diagnosisResult.textContent="Diagnose läuft …";try{const data=await localAPI("/api/cache/diagnose",{method:"POST",headers:{"Content-Type":"application/json"},body:"{}"});diagnosisResult.textContent=JSON.stringify(data,null,2);}catch(e){diagnosisResult.textContent=e.message;}await refreshLocal();});benchmarkButton.addEventListener("click",async()=>{if(localBusy)return;benchmarkButton.disabled=true;localButton.disabled=true;try{await localAPI("/api/benchmark",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({formFactor:document.getElementById("benchmarkDevice").value})});await refreshLocal();}catch(e){benchmarkStatus.textContent=e.message;benchmarkButton.disabled=false;localButton.disabled=false;}});refreshLocal();\n</script>';
   return readFileSync(studioFile,'utf8').replace("default-src 'none'; style-src","default-src 'none'; connect-src 'self'; style-src").replace('</main>',section+'</main>').replace('</body>',js+'</body>');
 }
 export function retentionCandidates(entries,{enabled,keep,maxAgeHours},latest,now=Date.now()){
@@ -50,7 +53,7 @@ export function retentionCandidates(entries,{enabled,keep,maxAgeHours},latest,no
   const cutoff=now-maxAgeHours*3600000;
   return [...entries].sort((a,b)=>b[1]-a[1]).slice(keep).filter(([p,created])=>p!==latest&&created<=cutoff).map(([p])=>p);
 }
-export async function startStudio({source,outputRoot,toolRoot,port=0}){
+export async function startStudio({source,outputRoot,toolRoot,browserToolRoot,port=0}){
   source=resolve(source);outputRoot=resolve(outputRoot);
   if(!existsSync(join(source,'index.html'))||lstatSync(source).isSymbolicLink())throw Error('Build dist first: npm run build');
   source=realpathSync(source);
@@ -60,7 +63,8 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
   if(inside(source,outputRoot)||inside(outputRoot,source))throw Error('Output must be outside build');
   const token=randomBytes(32).toString('hex');
   const html=localUI(token);
-  let state={state:'idle'},latest=null,origin;
+  let state={state:'idle'},latest=null,origin,benchmark=null;
+  let baseline=null;
   const completedRuns=new Map();
   let autoCleanup={enabled:false,keep:3,maxAgeHours:24,lastResult:null};
   function cleanupCandidates(){return [...completedRuns.keys()].filter(p=>p!==latest&&existsSync(p));}
@@ -81,7 +85,7 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
     }catch(error){return {removed,bytes,error:String(error.message)};}
   }
   function scheduledCleanup(){
-    if(!autoCleanup.enabled||state.state==='running'||state.state==='cleaning'||state.state==='diagnosing')return;
+    if(!autoCleanup.enabled||state.state==='running'||state.state==='cleaning'||state.state==='diagnosing'||state.state==='benchmarking')return;
     const candidates=retentionCandidates([...completedRuns.entries()].filter(([p])=>existsSync(p)),autoCleanup,latest);
     if(!candidates.length)return;
     autoCleanup.lastResult={...removeRuns(candidates),at:new Date().toISOString()};
@@ -100,10 +104,29 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
       res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'}).end(report);return;
     }
     if(req.headers['x-creaid-local']!==token){json(res,403,{error:'Local Studio authorization required'});return;}
-    if(req.method==='GET'&&u.pathname==='/api/status'){json(res,200,{...state,cache:cacheInfo()});return;}
+    if(req.method==='GET'&&u.pathname==='/api/status'){json(res,200,{...state,cache:cacheInfo(),benchmark,benchmarkReady:!!latest&&!!baseline});return;}
+    if(req.method==='POST'&&u.pathname==='/api/benchmark'){
+      if(req.headers.origin!==origin||!/^application\/json(?:;|$)/i.test(req.headers['content-type']??'')){json(res,403,{error:'Invalid request origin or type'});return;}
+      if(!latest||!baseline||state.state==='running'||state.state==='cleaning'||state.state==='diagnosing'||state.state==='benchmarking'){json(res,409,{error:'Completed build and idle studio required'});return;}
+      const previous=state;state={...state,state:'benchmarking'};
+      let cfg;
+      try{cfg=await body(req);if(!cfg||Object.keys(cfg).length!==1||!['mobile','desktop'].includes(cfg.formFactor))throw Error('Invalid benchmark configuration');}
+      catch(e){state=previous;json(res,400,{error:String(e.message)});return;}
+      benchmark={status:'running',progress:{completed:0,total:6}};
+      json(res,202,{state:'benchmarking'});
+      setImmediate(async()=>{
+        try{
+          const output=join(latest,'benchmark-'+randomUUID());
+          const result=await benchmarkBuilds({before:baseline,after:join(latest,'package','site'),output,toolRoot:browserToolRoot,formFactor:cfg.formFactor,onProgress:p=>{benchmark={status:'running',progress:p};}});
+          benchmark={status:'done',rows:result.rows,output,formFactor:cfg.formFactor};
+        }catch(e){benchmark={status:'error',error:String(e.message)};}
+        finally{state=previous;}
+      });
+      return;
+    }
     if(req.method==='POST'&&u.pathname==='/api/cache/diagnose'){
       if(req.headers.origin!==origin||!/^application\/json(?:;|$)/i.test(req.headers['content-type']??'')){json(res,403,{error:'Invalid request origin or type'});return;}
-      if(!latest||state.state==='running'||state.state==='cleaning'||state.state==='diagnosing'){json(res,409,{error:'A completed preview and idle studio are required'});return;}
+      if(!latest||state.state==='running'||state.state==='cleaning'||state.state==='diagnosing'||state.state==='benchmarking'){json(res,409,{error:'A completed preview and idle studio are required'});return;}
       const previous=state;state={state:'diagnosing'};
       let local;
       try{
@@ -119,7 +142,7 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
     }
     if(req.method==='POST'&&u.pathname==='/api/cache/schedule'){
       if(req.headers.origin!==origin||!/^application\/json(?:;|$)/i.test(req.headers['content-type']??'')){json(res,403,{error:'Invalid request origin or type'});return;}
-      if(state.state==='running'||state.state==='cleaning'||state.state==='diagnosing'){json(res,409,{error:'A run or cleanup is active'});return;}
+      if(state.state==='running'||state.state==='cleaning'||state.state==='diagnosing'||state.state==='benchmarking'){json(res,409,{error:'A run or cleanup is active'});return;}
       const previous=state;state={state:'cleaning'};
       try{
         const cfg=await body(req);
@@ -131,7 +154,7 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
     }
     if(req.method==='POST'&&u.pathname==='/api/cache/clear'){
       if(req.headers.origin!==origin||!/^application\/json(?:;|$)/i.test(req.headers['content-type']??'')){json(res,403,{error:'Invalid request origin or type'});return;}
-      if(state.state==='running'||state.state==='cleaning'||state.state==='diagnosing'){json(res,409,{error:'A run or cleanup is active'});return;}
+      if(state.state==='running'||state.state==='cleaning'||state.state==='diagnosing'||state.state==='benchmarking'){json(res,409,{error:'A run or cleanup is active'});return;}
       const previous=state;
       state={state:'cleaning'};
       let removed=0,bytes=0;
@@ -147,7 +170,7 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
     }
     if(req.method==='POST'&&u.pathname==='/api/run'){
       if(req.headers.origin!==origin||!/^application\/json(?:;|$)/i.test(req.headers['content-type']??'')){json(res,403,{error:'Invalid request origin or type'});return;}
-      if(state.state==='running'||state.state==='cleaning'||state.state==='diagnosing'){json(res,409,{error:'A run is already active'});return;}
+      if(state.state==='running'||state.state==='cleaning'||state.state==='diagnosing'||state.state==='benchmarking'){json(res,409,{error:'A run is already active'});return;}
       // Reserve the run before awaiting the request body, preventing simultaneous starts.
       state={state:'running'};
       let config;
@@ -155,12 +178,17 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
       const output=join(outputRoot,'run-'+randomUUID());
       json(res,202,state);
       setImmediate(async()=>{
+        const snapshot=output+'-baseline';
         try{
-          const result=await runPipeline({source,output,config,toolRoot});
+          snapshotBuild({source,output:snapshot});
+          const result=await runPipeline({source:join(snapshot,'site'),output,config,toolRoot});
+          renameSync(snapshot,join(output,'baseline'));
+          baseline=join(output,'baseline','site');
+          benchmark=null;
           completedRuns.set(output,Date.now());
           latest=output;
           state={state:'done',result:{output,site:join(output,'package','site'),audit:result.audit,packaging:result.packaging,deployment:result.deployment}};
-        }catch(e){state={state:'error',error:String(e.message)};}
+        }catch(e){if(existsSync(snapshot))rmSync(snapshot,{recursive:true,force:true});state={state:'error',error:String(e.message)};}
       });
       return;
     }
@@ -176,6 +204,6 @@ export async function startStudio({source,outputRoot,toolRoot,port=0}){
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){
   if(process.argv.length!==2)throw Error('Usage: npm run performance:studio');
   const root=fileURLToPath(new URL('../../',import.meta.url));
-  const server=await startStudio({source:join(root,'dist'),outputRoot:join(root,'.creaid-performance-runs'),toolRoot:join(root,'.performance-tools'),port:0});
+  const server=await startStudio({source:join(root,'dist'),outputRoot:join(root,'.creaid-performance-runs'),toolRoot:join(root,'.performance-tools'),browserToolRoot:join(root,'.performance-browser-tools'),port:0});
   console.log('CreAid Performance Studio: '+server.origin+' (im Browser öffnen; Strg+C beendet den Server)');
 }
