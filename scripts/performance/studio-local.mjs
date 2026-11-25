@@ -8,7 +8,7 @@ import {runPipeline} from './pipeline.mjs';
 import {localBuildServer} from './browser-coverage.mjs';
 import {warmCache} from './cache-warmup.mjs';
 import {benchmarkBuilds} from './benchmark.mjs';
-import {snapshotBuild} from './snapshot.mjs';
+import {snapshotBuild,verifySnapshot} from './snapshot.mjs';
 
 const studioFile=fileURLToPath(new URL('./studio.html',import.meta.url));
 const inside=(a,b)=>{const r=relative(a,b);return r===''||(!r.startsWith('..'+sep)&&r!=='..'&&!r.startsWith(sep));};
@@ -43,7 +43,7 @@ function localUI(token){
     'const clearButton=document.getElementById("clearCache"),cacheInfo=document.getElementById("cacheInfo"),cacheStatus=document.getElementById("cacheStatus");let removable=0;let localBusy=false;let retentionInitialized=false;let pollTimer;const diagnoseButton=document.getElementById("diagnoseCache"),diagnosisResult=document.getElementById("diagnosisResult");const benchmarkButton=document.getElementById("runBenchmark"),benchmarkStatus=document.getElementById("benchmarkStatus"),benchmarkTable=document.getElementById("benchmarkTable");const retentionButton=document.getElementById("saveRetention"),retentionStatus=document.getElementById("retentionStatus");\n'+
     'async function localAPI(path,options={}){const r=await fetch(path,{...options,headers:{"X-CreAid-Local":localToken,...options.headers},cache:"no-store"});const data=await r.json();if(!r.ok)throw Error(data.error||"Lokaler Serverfehler");return data;}\n'+
     'function renderLocal(state){localBusy=state.state==="running"||state.state==="cleaning"||state.state==="diagnosing"||state.state==="benchmarking";localButton.disabled=localBusy;if(state.cache){removable=state.cache.removableRuns;cacheInfo.textContent=removable+" ältere Testläufe zur Bereinigung.";}clearButton.disabled=localBusy||removable===0;retentionButton.disabled=localBusy;diagnoseButton.disabled=localBusy||!state.cache?.latestPreserved;benchmarkButton.disabled=localBusy||!state.benchmarkReady;renderBenchmark(state.benchmark);if(state.cache?.autoCleanup){const a=state.cache.autoCleanup;if(!retentionInitialized){document.getElementById("autoCleanup").checked=a.enabled;document.getElementById("keepRuns").value=a.keep;document.getElementById("ageHours").value=a.maxAgeHours;retentionInitialized=true;}retentionStatus.textContent=(a.enabled?"Aktiv":"Aus")+(a.lastResult?" · letzte Bereinigung: "+a.lastResult.removed+" Läufe"+(a.lastResult.error?" · Fehler: "+a.lastResult.error:""):"");}localStatus.textContent=state.state==="benchmarking"?"Performance-Messung läuft …":state.state==="diagnosing"?"Cache-Diagnose läuft …":state.state==="cleaning"?"Bereinigung läuft …":state.state==="running"?"Optimierung läuft …":state.state==="done"?"Vorschau erfolgreich erstellt.":state.state==="error"?"Optimierung fehlgeschlagen.":"Bereit.";localResult.hidden=!state.result&&!state.error;localResult.textContent=state.result?JSON.stringify(state.result,null,2):state.error||"";localReport.hidden=state.state!=="done";if(state.state==="done")localReport.href="/report?token="+encodeURIComponent(localToken);}\n'+
-    'function renderBenchmark(b){if(!b)return;benchmarkStatus.textContent=b.error?b.error:b.status==="running"?"Messungen: "+(b.progress?.completed??0)+" / 6":b.status==="done"?"Abgeschlossen · lokale Labordaten, keine Live-Cache-Messung.":"";benchmarkTable.hidden=!b.rows;const tbody=benchmarkTable.querySelector("tbody");tbody.replaceChildren();for(const row of b.rows??[]){const tr=document.createElement("tr");for(const value of [row.metric,...[row.before,row.after,row.delta].map(n=>n.toFixed(row.unit==="unitless"?3:1)+" "+row.unit)]){const td=document.createElement("td");td.textContent=value;tr.append(td);}tbody.append(tr);}}\n'+
+    'function renderBenchmark(b){if(!b){benchmarkStatus.textContent="";benchmarkTable.hidden=true;benchmarkTable.querySelector("tbody").replaceChildren();return;}benchmarkStatus.textContent=b.error?b.error:b.status==="running"?"Messungen: "+(b.progress?.completed??0)+" / 6":b.status==="done"?"Abgeschlossen · lokale Labordaten, keine Live-Cache-Messung.":"";benchmarkTable.hidden=!b.rows;const tbody=benchmarkTable.querySelector("tbody");tbody.replaceChildren();for(const row of b.rows??[]){const tr=document.createElement("tr");for(const value of [row.metric,...[row.before,row.after,row.delta].map(n=>n.toFixed(row.unit==="unitless"?3:1)+" "+row.unit)]){const td=document.createElement("td");td.textContent=value;tr.append(td);}tbody.append(tr);}}\n'+
     'async function refreshLocal(){clearTimeout(pollTimer);try{const state=await localAPI("/api/status");renderLocal(state);if(localBusy)pollTimer=setTimeout(refreshLocal,1000);else if(state.cache?.autoCleanup?.enabled)pollTimer=setTimeout(refreshLocal,60000);}catch(e){localStatus.textContent=e.message;localButton.disabled=false;}}\n'+
     'localButton.addEventListener("click",async()=>{if(localBusy)return;let config;try{config=build();}catch(e){localStatus.textContent=e.message;return;}localButton.disabled=true;clearButton.disabled=true;localReport.hidden=true;localStatus.textContent="Starte …";try{renderLocal(await localAPI("/api/run",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(config)}));if(localBusy){clearTimeout(pollTimer);pollTimer=setTimeout(refreshLocal,1000);}}catch(e){localStatus.textContent=e.message;await refreshLocal();}});clearButton.addEventListener("click",async()=>{if(localBusy||!removable)return;if(!window.confirm("Ältere Vorschau-Builds dieser Sitzung samt Berichten wirklich löschen? Der neueste Lauf bleibt erhalten."))return;clearButton.disabled=true;localButton.disabled=true;try{const result=await localAPI("/api/cache/clear",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({confirm:"remove-previous-session-runs"})});cacheStatus.textContent=result.removed+" Testläufe entfernt · "+(result.bytes/1048576).toFixed(2)+" MiB freigegeben.";}catch(e){cacheStatus.textContent=e.message;}await refreshLocal();});retentionButton.addEventListener("click",async()=>{if(localBusy)return;const enabled=document.getElementById("autoCleanup").checked;if(enabled&&!window.confirm("Automatische Löschung älterer Testläufe dieser Sitzung aktivieren?"))return;try{await localAPI("/api/cache/schedule",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({enabled,keep:Number(document.getElementById("keepRuns").value),maxAgeHours:Number(document.getElementById("ageHours").value)})});await refreshLocal();}catch(e){retentionStatus.textContent=e.message;}});diagnoseButton.addEventListener("click",async()=>{if(localBusy)return;diagnoseButton.disabled=true;localButton.disabled=true;clearButton.disabled=true;retentionButton.disabled=true;diagnosisResult.hidden=false;diagnosisResult.textContent="Diagnose läuft …";try{const data=await localAPI("/api/cache/diagnose",{method:"POST",headers:{"Content-Type":"application/json"},body:"{}"});diagnosisResult.textContent=JSON.stringify(data,null,2);}catch(e){diagnosisResult.textContent=e.message;}await refreshLocal();});benchmarkButton.addEventListener("click",async()=>{if(localBusy)return;benchmarkButton.disabled=true;localButton.disabled=true;try{await localAPI("/api/benchmark",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({formFactor:document.getElementById("benchmarkDevice").value})});await refreshLocal();}catch(e){benchmarkStatus.textContent=e.message;benchmarkButton.disabled=false;localButton.disabled=false;}});refreshLocal();\n</script>';
   return readFileSync(studioFile,'utf8').replace("default-src 'none'; style-src","default-src 'none'; connect-src 'self'; style-src").replace('</main>',section+'</main>').replace('</body>',js+'</body>');
@@ -104,9 +104,10 @@ export async function startStudio({source,outputRoot,toolRoot,browserToolRoot,po
       res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'}).end(report);return;
     }
     if(req.headers['x-creaid-local']!==token){json(res,403,{error:'Local Studio authorization required'});return;}
-    if(req.method==='GET'&&u.pathname==='/api/status'){json(res,200,{...state,cache:cacheInfo(),benchmark,benchmarkReady:!!latest&&!!baseline});return;}
+    if(req.method==='GET'&&u.pathname==='/api/status'){json(res,200,{...state,cache:cacheInfo(),benchmark,benchmarkReady:!!latest&&!!baseline&&!!browserToolRoot&&existsSync(join(browserToolRoot,'node_modules','lighthouse','package.json'))});return;}
     if(req.method==='POST'&&u.pathname==='/api/benchmark'){
       if(req.headers.origin!==origin||!/^application\/json(?:;|$)/i.test(req.headers['content-type']??'')){json(res,403,{error:'Invalid request origin or type'});return;}
+      if(!browserToolRoot){json(res,409,{error:'Install optional browser tools first'});return;}
       if(!latest||!baseline||state.state==='running'||state.state==='cleaning'||state.state==='diagnosing'||state.state==='benchmarking'){json(res,409,{error:'Completed build and idle studio required'});return;}
       const previous=state;state={...state,state:'benchmarking'};
       let cfg;
@@ -116,6 +117,7 @@ export async function startStudio({source,outputRoot,toolRoot,browserToolRoot,po
       json(res,202,{state:'benchmarking'});
       setImmediate(async()=>{
         try{
+          verifySnapshot(join(latest,'baseline'));
           const output=join(latest,'benchmark-'+randomUUID());
           const result=await benchmarkBuilds({before:baseline,after:join(latest,'package','site'),output,toolRoot:browserToolRoot,formFactor:cfg.formFactor,onProgress:p=>{benchmark={status:'running',progress:p};}});
           benchmark={status:'done',rows:result.rows,output,formFactor:cfg.formFactor};
@@ -179,16 +181,18 @@ export async function startStudio({source,outputRoot,toolRoot,browserToolRoot,po
       json(res,202,state);
       setImmediate(async()=>{
         const snapshot=output+'-baseline';
+        let generated=false;
         try{
           snapshotBuild({source,output:snapshot});
           const result=await runPipeline({source:join(snapshot,'site'),output,config,toolRoot});
+          generated=true;
           renameSync(snapshot,join(output,'baseline'));
           baseline=join(output,'baseline','site');
           benchmark=null;
           completedRuns.set(output,Date.now());
           latest=output;
           state={state:'done',result:{output,site:join(output,'package','site'),audit:result.audit,packaging:result.packaging,deployment:result.deployment}};
-        }catch(e){if(existsSync(snapshot))rmSync(snapshot,{recursive:true,force:true});state={state:'error',error:String(e.message)};}
+        }catch(e){if(existsSync(snapshot))rmSync(snapshot,{recursive:true,force:true});if(generated&&existsSync(output))rmSync(output,{recursive:true,force:true});state={state:'error',error:String(e.message)};}
       });
       return;
     }
