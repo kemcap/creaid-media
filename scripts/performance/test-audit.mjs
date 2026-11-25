@@ -3,6 +3,7 @@ import { mkdtempSync,mkdirSync,writeFileSync,readFileSync,rmSync } from 'node:fs
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { auditBuild,writeAudit,dashboard } from './audit.mjs';
+import {prioritizeAudit} from './prioritize-audit.mjs';
 const root=mkdtempSync(join(tmpdir(),'creaid-audit-'));
 try{
   const src=join(root,'dist');mkdirSync(join(src,'assets'),{recursive:true});
@@ -22,6 +23,13 @@ try{
   assert.equal(report.summary.counts['responsive-image'],2);
   assert.equal(report.summary.counts['image-dimensions'],2);
   const output=join(root,'audit');writeAudit({source:src,output,limits:{image:500}});
+  const review=JSON.parse(readFileSync(join(output,'priorities.json'),'utf8'));
+  assert.equal(review.occurrences,report.summary.findings);
+  assert.ok(review.uniqueItems<review.occurrences);
+  const repeated=prioritizeAudit({pages:[report.pages[0],{...report.pages[0],path:'/second.html'}]});
+  assert.equal(repeated.items.find(i=>i.id==='missing-local-asset').affectedPages,2);
+  assert.equal(repeated.items[0].priority,'high');
+  assert.match(readFileSync(join(output,'dashboard.html'),'utf8'),/Priorisierte Aufgaben/);
   assert.equal(readFileSync(join(src,'index.html'),'utf8'),html);
   assert.match(readFileSync(join(output,'dashboard.html'),'utf8'),/noindex,nofollow,noarchive/);
   assert.throws(()=>writeAudit({source:src,output:join(src,'inside')}),/outside/);
