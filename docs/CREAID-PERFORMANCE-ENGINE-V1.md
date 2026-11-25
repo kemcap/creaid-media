@@ -244,3 +244,26 @@ npm run performance:benchmark -- original-site optimized-site benchmark-report .
 ```
 
 Die neue GitHub-QA prüft den Start aus dem Studio mit sechs echten Lighthouse-Messungen einer synthetischen Testseite, nicht der echten CreAid-Website. Der vorherige QA-Lauf 45701738759 war vollständig erfolgreich, einschließlich Release-Plan, lokaler HTTP-Diagnose, Safe-Abnahme und Lighthouse-Smoke-Test. Der neue Benchmark und die priorisierte Audit-Ausgabe müssen im aktuellen CI-Lauf separat bestätigt werden.
+
+## Responsive HTML integration and Balanced proposal
+
+The responsive generation module now accepts an optional explicit layout map. Example:
+```json
+{
+  "schemaVersion":1,
+  "responsive":{
+    "images":["assets/photo.jpg"],
+    "widths":[320,640,1024],
+    "quality":82,
+    "integrate":{"index.html":{"/assets/photo.jpg":"(max-width: 640px) 100vw, 640px"}}
+  }
+}
+```
+Only use actual layout-reviewed values and existing source URLs. The integration checks exactly one matching image per page, declared dimensions matching the source aspect ratio, absence of existing picture/srcset/dynamic-loader attributes and competing preloads, and the generated variants' SHA-256 hashes. It inserts srcset and sizes only in the isolated staged HTML before fingerprinting. Images without smaller variants remain unchanged; conflicting markup requires manual review. The original source and fallback src remain. Variant selection is tested in Chromium with 320, 640 and 1440 CSS-pixel viewports and DPR 1. This is not a substitute for review of real photos, DPR, breakpoints and interactive states. The Studio adds an optional integration switch and layout JSON editor; Safe never activates it. Existing image generation remains candidate-only unless the integration map is provided.
+
+The Balanced proposal can be generated from the original build audit:
+```sh
+npm run performance:audit -- dist original-audit
+npm run performance:suggest-balanced -- original-audit/audit.json balanced-config.json
+```
+The candidate ranks directly referenced eligible assets by bytes multiplied by affected pages, excludes already optimized paths, limits selections to 30 minification/lossless assets and 20 responsive candidates, and never guesses sizes or script timing. These are heuristics, not real transfer savings or user traffic. Review the configuration before executing it. The CI creates a proposal for the real CreAid build, reports aggregate counts only and does not deploy or publish its reports. The actual site's responsive mapping remains to be reviewed separately.
