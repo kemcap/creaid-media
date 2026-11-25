@@ -70,7 +70,9 @@ export function prepareCandidate({source,output}) {
           const value=double??single??unquoted;
           const attr=name.toLowerCase();
           let next=value;
-          if(['href','src','poster','data-src'].includes(attr))next=fingerprint(value);
+          // Fonts referenced inside unchanged CSS keep the original URL: avoid a redundant hashed preload.
+          const fontPreload=attr==='href'&&/^<link\b/i.test(tag)&&/\bas\s*=\s*(?:"font"|'font'|font(?=\s|>))/i.test(tag)&&/\brel\s*=\s*(?:"preload"|'preload'|preload(?=\s|>))/i.test(tag);
+          if(['href','src','poster','data-src'].includes(attr)&&!fontPreload)next=fingerprint(value);
           else if(attr==='srcset'&&!/\bdata:/i.test(value))next=value.replace(/(^|,\s*)(\/assets\/[^\s,]+)/g,(_x,lead,url)=>lead+fingerprint(url));
           if(next===value)return whole;
           const quote=double!==undefined?'"':single!==undefined?"'":'';
