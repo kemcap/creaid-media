@@ -35,6 +35,8 @@ def main():
     require(user == EXPECTED_USER, "SFTP username differs from the dedicated account confirmed in IONOS.")
     require(os.environ["SFTP_PORT"] == "22" and host.endswith(".webspace-data.io"), "Unexpected IONOS host or port.")
     require(bool(password), "Missing SFTP password.")
+    cache_mode = os.environ.get("CREAID_PREVIEW_CACHE_MODE", "normal")
+    require(cache_mode in ("normal", "enabled", "disabled"), "Invalid preview cache mode.")
     dist = Path("dist")
     manifest = json.loads(Path("ionos-deploy-manifest.json").read_text())
     pages = [dist / name for name in manifest["pages"]]
@@ -64,10 +66,15 @@ def main():
                 with sftp.open(OWNER_FILE, "rb") as f:
                     require(f.read(len(OWNER)+1) == OWNER, "Deployment marker does not match.")
             else:
+                require(cache_mode == "normal", "Cache activation requires an existing dedicated deployment marker.")
                 require(not initial, "First upload requires an empty dedicated directory. No existing files changed.")
                 with sftp.open(OWNER_FILE, "wx") as f:
                     f.write(OWNER)
             print("Dedicated preview directory verified.")
+            if cache_mode != "normal":
+                from preview_cache_activation import toggle
+                toggle(sftp, cache_mode)
+                return
             checked_dirs = {"."}
             def ensure_dir(path):
                 if path in checked_dirs:
