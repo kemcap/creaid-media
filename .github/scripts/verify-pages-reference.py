@@ -13,7 +13,8 @@ root=Path(os.environ["REFERENCE_DIR"])
 is_ionos=os.environ.get("VERIFY_IONOS")=="true"
 origin="https://vorschau.creaid-media.de" if is_ionos else "https://kemcap.github.io/creaid-media"
 routes=json.loads((root/"src/_data/routes.json").read_text())
-staged=root/("dist" if is_ionos else "_site")
+cached=is_ionos and os.environ.get("CREAID_PREVIEW_CACHE_MODE")=="auto"
+staged=root/("preview-cache-package/site" if cached else "dist" if is_ionos else "_site")
 expected={}
 for key,route in routes.items():
     if is_ionos:
@@ -38,7 +39,13 @@ def compare(item):
             with urllib.request.urlopen(req,timeout=25) as res:
                 body=res.read()
                 actual=hashlib.sha256(body).hexdigest()
-                return {"path":path,"status":res.status,"expected":digest,"actual":actual,"expected_bytes":len(data),"actual_bytes":len(body),"equal":res.status==200 and digest==actual}
+                policy=res.headers.get("Cache-Control","").lower()
+                robots=res.headers.get("X-Robots-Tag","").lower()
+                policy_ok=True
+                if cached:
+                    fingerprinted=bool(re.search(r"\.sha256-[0-9a-f]{64}\.[a-z0-9]+$",path)) and path.startswith("/assets/")
+                    policy_ok="noindex" in robots and (("private" in policy and "max-age=3600" in policy and "immutable" in policy and "no-store" not in policy) if fingerprinted else "no-store" in policy)
+                return {"path":path,"status":res.status,"expected":digest,"actual":actual,"expected_bytes":len(data),"actual_bytes":len(body),"cache_control":policy,"cache_policy_ok":policy_ok,"equal":res.status==200 and digest==actual and policy_ok}
         except Exception as e:
             if attempt==2:return {"path":path,"error":str(e),"equal":False}
             time.sleep(attempt+1)
