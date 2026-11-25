@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import { mkdtempSync,mkdirSync,writeFileSync,readFileSync,rmSync } from 'node:fs';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { auditBuild,writeAudit,dashboard } from './audit.mjs';
+const root=mkdtempSync(join(tmpdir(),'creaid-audit-'));
+try{
+  const src=join(root,'dist');mkdirSync(join(src,'assets'),{recursive:true});
+  const html='<!doctype html><html><head><link rel="stylesheet" href="/assets/main.css"></head><body><img src="/assets/large.webp" loading="lazy" fetchpriority="high"><img src="/assets/large.webp" width="400" height="200"><script src="/assets/app.js"></script><script>const fake = "<img src=/missing.webp>";</script><!-- <img src="/missing.webp"> --><img src="/assets/missing.webp"><script src="https://example.org/a.js" defer></script></body></html>';
+  writeFileSync(join(src,'index.html'),html);
+  writeFileSync(join(src,'assets/main.css'),'body{}');
+  writeFileSync(join(src,'assets/app.js'),'void 0;');
+  writeFileSync(join(src,'assets/large.webp'),Buffer.alloc(600));
+  const report=auditBuild(src,{image:500});
+  assert.equal(report.summary.pages,1);
+  assert.equal(report.summary.uniqueReferencedAssets,3);
+  assert.equal(report.pages[0].directBytes.image,600);
+  assert.equal(report.pages[0].blockingScripts,1);
+  assert.deepEqual(report.pages[0].externalOrigins,['https://example.org']);
+  assert.equal(report.summary.counts['missing-local-asset'],1);
+  assert.equal(report.summary.counts['priority-conflict'],1);
+  assert.equal(report.summary.counts['responsive-image'],2);
+  assert.equal(report.summary.counts['image-dimensions'],2);
+  const output=join(root,'audit');writeAudit({source:src,output,limits:{image:500}});
+  assert.equal(readFileSync(join(src,'index.html'),'utf8'),html);
+  assert.match(readFileSync(join(output,'dashboard.html'),'utf8'),/noindex,nofollow,noarchive/);
+  assert.throws(()=>writeAudit({source:src,output:join(src,'inside')}),/outside/);
+  const escaped=dashboard({...report,pages:[{...report.pages[0],path:'<script>alert(1)</script>'}]});
+  assert.ok(escaped.includes('&lt;script&gt;'));
+  assert.ok(!escaped.includes('<script>alert(1)</script>'));
+  console.log('PASS: static audit, deduplication, HTML parser, image/script findings, isolated dashboard and escaping');
+}finally{rmSync(root,{recursive:true,force:true});}
