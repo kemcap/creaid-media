@@ -27,7 +27,8 @@
     "performance:studio": "node scripts/performance/studio-local.mjs",
     "performance:warmup": "node scripts/performance/cache-warmup.mjs",
     "performance:release-plan": "node scripts/performance/release-plan.mjs",
-    "performance:benchmark": "node scripts/performance/benchmark.mjs"
+    "performance:benchmark": "node scripts/performance/benchmark.mjs",
+    "performance:suggest-balanced": "node scripts/performance/suggest-balanced.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.8",
