@@ -61,6 +61,11 @@ try{
   assert.ok(existsSync(newer.site));assert.ok(existsSync(olderSession));
   await page.locator('#autoCleanup').uncheck();await page.locator('#saveRetention').click();
   await page.waitForFunction(()=>document.querySelector('#retentionStatus').textContent==='Aus');
+  await page.locator('#diagnoseCache').click();
+  await page.waitForFunction(()=>document.querySelector('#diagnosisResult').textContent.includes('local-preview-diagnostic'));
+  const diagnostic=JSON.parse(await page.locator('#diagnosisResult').textContent());
+  assert.equal(diagnostic.requests,2);assert.equal(diagnostic.reportedHits,0);
+  assert.ok(diagnostic.rows.every(r=>r.status===200&&r.cache==='not-suitable-for-shared-warmup'));
   assert.deepEqual(errors,[]);
   console.log('PASS: local Studio UI starts real safe pipeline, report opens, authorization, confirmed old-run cleanup and source/backup preservation');
 }finally{if(browser)await browser.close();if(server)await server.close();rmSync(root,{recursive:true,force:true});}
