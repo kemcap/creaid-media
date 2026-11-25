@@ -7,7 +7,7 @@ import {localBuildServer} from './browser-coverage.mjs';
 const inside=(a,b)=>{const r=relative(a,b);return r===''||(!r.startsWith('..'+sep)&&r!=='..'&&!r.startsWith(sep));};
 const future=p=>existsSync(p)?realpathSync(p):join(future(dirname(p)),relative(dirname(p),p));
 const validRoute=p=>typeof p==='string'&&/^\/[A-Za-z0-9_./-]*$/.test(p)&&!p.split('/').some(x=>x.startsWith('.'));
-export async function compareVisual({before,after,output,toolRoot,routes=['/'],viewports=[390,1440],maxDiffRatio=0.005}){
+export async function compareVisual({before,after,output,toolRoot,routes=['/'],viewports=[390,1440],maxDiffRatio=0.005,routeFiles={}}){
   before=realpathSync(before);after=realpathSync(after);output=resolve(output);toolRoot=resolve(toolRoot);
   if(existsSync(output)||[before,after].some(root=>inside(root,future(output))||inside(future(output),root)))throw Error('Use new isolated output');
   if(!Array.isArray(routes)||!routes.length||routes.length>20||new Set(routes).size!==routes.length||routes.some(p=>!validRoute(p))||!Array.isArray(viewports)||!viewports.length||viewports.length>5||new Set(viewports).size!==viewports.length||viewports.some(w=>!Number.isInteger(w)||w<320||w>2560)||!Number.isFinite(maxDiffRatio)||maxDiffRatio<0||maxDiffRatio>0.1)throw Error('Invalid comparison configuration');
@@ -18,7 +18,7 @@ export async function compareVisual({before,after,output,toolRoot,routes=['/'],v
   let a,b,browser,created=false;
   const rows=[];
   try{
-    a=await localBuildServer(before);b=await localBuildServer(after);
+    a=await localBuildServer(before,routeFiles);b=await localBuildServer(after,routeFiles);
     browser=await chromium.launch({headless:true});
     mkdirSync(output,{recursive:false});created=true;
     async function capture(server,route,width,position){
@@ -38,6 +38,7 @@ export async function compareVisual({before,after,output,toolRoot,routes=['/'],v
         await page.evaluate(()=>document.fonts.ready);
         if(position==='middle')await page.evaluate(()=>window.scrollTo(0,Math.max(0,(document.documentElement.scrollHeight-innerHeight)/2)));
         await page.waitForTimeout(350);
+        await page.evaluate(async()=>{const visible=[...document.images].filter(img=>{const r=img.getBoundingClientRect();return r.width>0&&r.height>0&&r.top<innerHeight&&r.bottom>0&&r.left<innerWidth&&r.right>0;});for(const img of visible)img.loading='eager';await Promise.all(visible.map(async img=>{try{await img.decode();}catch{}}));await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));});
         const info=await page.evaluate(()=>({title:document.title,h1:[...document.querySelectorAll('h1')].map(x=>x.textContent.trim()),scrollHeight:document.documentElement.scrollHeight,horizontalOverflow:document.documentElement.scrollWidth>innerWidth,brokenImages:[...document.images].filter(i=>i.complete&&i.naturalWidth===0&&(i.currentSrc||i.src)).length}));
         const bytes=await page.screenshot({animations:'disabled',caret:'hide',fullPage:false,timeout:15000});
         return {bytes,info,failures:[...failures].sort(),blockedOrigins:blocked.size};
