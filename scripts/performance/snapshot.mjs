@@ -39,11 +39,16 @@ export function snapshotBuild({source,output}){
     return {files:entries.filter(e=>e.type==='file').length,bytes:entries.reduce((n,e)=>n+(e.bytes??0),0)};
   }catch(error){rmSync(output,{recursive:true,force:true});throw error;}
 }
+export function verifySnapshot(snapshot){
+  snapshot=resolve(snapshot);
+  if(lstatSync(snapshot).isSymbolicLink()||lstatSync(join(snapshot,'manifest.json')).isSymbolicLink())throw Error('Symlink forbidden');
+  const manifest=JSON.parse(readFileSync(join(snapshot,'manifest.json'),'utf8'));
+  verify(join(snapshot,'site'),manifest);
+  return manifest;
+}
 export function restoreBuild({snapshot,output}){
   snapshot=resolve(snapshot);output=resolve(output);disjoint(snapshot,output);
-  if(lstatSync(snapshot).isSymbolicLink()||lstatSync(join(snapshot,'manifest.json')).isSymbolicLink())throw Error('Symlink forbidden');
-  const site=join(snapshot,'site'),manifest=JSON.parse(readFileSync(join(snapshot,'manifest.json'),'utf8'));
-  verify(site,manifest);
+  const site=join(snapshot,'site'),manifest=verifySnapshot(snapshot);
   mkdirSync(output,{recursive:false});
   try{
     cpSync(site,output,{recursive:true,errorOnExist:true,force:false});
