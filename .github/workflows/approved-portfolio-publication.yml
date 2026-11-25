@@ -1,0 +1,101 @@
+name: Approved portfolio preview publication
+on:
+  push:
+    branches: [optimization/portfolio-publication]
+    paths:
+      - 'src/_data/portfolio.json'
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: approved-portfolio-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/optimization/portfolio-publication'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 85
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Import only approved source images and verify against backup hashes
+        run: |
+          python -m pip install --disable-pip-version-check Pillow==11.3.0
+          python scripts/import-portfolio.py
+      - name: Build and verify
+        run: |
+          npm ci
+          npm run verify
+          node scripts/check-global-shell.mjs
+          node scripts/check-home-motion.mjs
+          node scripts/check-pricing.mjs
+          node scripts/check-heading-dot.mjs
+          node scripts/check-portfolio.mjs
+      - name: Browser validation
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1 pixelmatch@7.1.0 pngjs@7.0.0
+          npx playwright install --with-deps chromium firefox webkit
+          node scripts/preview.mjs > "$RUNNER_TEMP/portfolio-preview.log" 2>&1 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:routes -- http://127.0.0.1:8080
+          node scripts/check-portfolio-browser.mjs
+          npm run test:browser
+      - name: Prepare verified prebuilt preview and publish only via fast-forward
+        id: publish
+        run: |
+          set -euo pipefail
+          python scripts/optimize-preview-images.py
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/assets/portfolio dist
+          git commit -m 'Build tested preview with verified original portfolio assets'
+          git fetch origin main
+          expected=$(git show -s --format=%P "$GITHUB_SHA")
+          test "$(git rev-parse origin/main)" = "$expected"
+          git push origin HEAD:refs/heads/optimization/portfolio-publication
+          git push origin HEAD:refs/heads/main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Publish GitHub Pages and then verified IONOS preview
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ steps.publish.outputs.sha }}
+        run: |
+          set -euo pipefail
+          dispatch_and_verify() {
+            local workflow="$1" run=""
+            gh workflow run "$workflow" --ref main
+            for attempt in {1..60}; do
+              run=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/$workflow/runs?event=workflow_dispatch&head_sha=$TARGET_SHA&per_page=10" --jq '.workflow_runs[0].id // empty')
+              if [[ -n "$run" ]]; then break; fi
+              sleep 5
+            done
+            test -n "$run"
+            echo "Checking $workflow run $run for $TARGET_SHA"
+            gh run watch "$run" --exit-status --interval 15
+            test "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$run" --jq '.head_sha')" = "$TARGET_SHA"
+          }
+          dispatch_and_verify deploy-pages.yml
+          test "$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/deploy-pages.yml/runs?status=success&per_page=1" --jq '.workflow_runs[0].head_sha')" = "$TARGET_SHA"
+          test "$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq '.object.sha')" = "$TARGET_SHA"
+          dispatch_and_verify sync-pages-to-ionos.yml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portfolio-publication-qa
+          path: |
+            qa-results/
+          if-no-files-found: warn
+          retention-days: 14
