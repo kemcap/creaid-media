@@ -14,7 +14,7 @@
     "verify": "npm run build && npm run test:structure && npm run test:quality",
     "test:quality": "node scripts/check-quality.mjs",
     "test:browser": "node scripts/check-browser.mjs",
-    "test:performance": "node scripts/performance/test-prepare-candidate.mjs && node scripts/performance/test-engine.mjs && node scripts/performance/test-audit.mjs && node scripts/performance/test-pipeline.mjs && node scripts/performance/test-snapshot.mjs && node scripts/performance/test-accept-preview.mjs && node scripts/performance/test-cache-warmup.mjs && node scripts/performance/test-release-plan.mjs",
+    "test:performance": "node scripts/performance/test-prepare-candidate.mjs && node scripts/performance/test-engine.mjs && node scripts/performance/test-audit.mjs && node scripts/performance/test-pipeline.mjs && node scripts/performance/test-snapshot.mjs && node scripts/performance/test-accept-preview.mjs && node scripts/performance/test-cache-warmup.mjs && node scripts/performance/test-release-plan.mjs && node scripts/performance/test-suggest-balanced.mjs",
     "performance:preview": "node scripts/performance/engine.mjs",
     "performance:audit": "node scripts/performance/audit.mjs",
     "performance:pipeline": "node scripts/performance/pipeline.mjs",
