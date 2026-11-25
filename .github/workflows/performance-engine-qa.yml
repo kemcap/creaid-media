@@ -36,7 +36,7 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/creaid-browser-tools" --save-exact --no-audit --no-fund playwright@1.56.1 lighthouse@12.8.2 pngjs@7.0.0 pixelmatch@7.1.0
           "$RUNNER_TEMP/creaid-browser-tools/node_modules/.bin/playwright" install --with-deps chromium
-      - run: node scripts/performance/test-browser-measurement.mjs "$RUNNER_TEMP/creaid-browser-tools" --lighthouse
+      - run: node scripts/performance/test-browser-measurement.mjs "$RUNNER_TEMP/creaid-browser-tools"
       - run: node scripts/performance/test-studio-visual.mjs "$RUNNER_TEMP/creaid-browser-tools"
       - run: npm run verify
       - run: npm run performance:preview -- dist performance-preview
@@ -45,4 +45,6 @@ jobs:
         run: |
           printf '{"schemaVersion":1}' > "$RUNNER_TEMP/creaid-pipeline-config.json"
           npm run performance:pipeline -- dist performance-pipeline "$RUNNER_TEMP/creaid-pipeline-config.json"
+      - name: Lighthouse smoke test (synthetic fixture only)
+        run: node scripts/performance/test-browser-measurement.mjs "$RUNNER_TEMP/creaid-browser-tools" --lighthouse
       # Reports contain internal paths; keep them in the runner, not public artifacts.
