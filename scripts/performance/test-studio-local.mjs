@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import {mkdtempSync,mkdirSync,writeFileSync,readFileSync,rmSync,existsSync} from 'node:fs';
+import {join,resolve} from 'node:path';
+import {tmpdir} from 'node:os';
+import {createRequire} from 'node:module';
+import {startStudio} from './studio-local.mjs';
+const root=mkdtempSync(join(tmpdir(),'creaid-local-studio-'));
+let server,browser;
+try{
+  const source=join(root,'dist'),out=join(root,'runs');
+  mkdirSync(join(source,'assets'),{recursive:true});
+  const original='<!doctype html><html><head><link rel="stylesheet" href="/assets/main.css"></head><body><h1>Studio fixture</h1></body></html>';
+  writeFileSync(join(source,'index.html'),original);
+  writeFileSync(join(source,'assets/main.css'),'body{color:black}');
+  server=await startStudio({source,outputRoot:out,port:0});
+  assert.equal((await fetch(server.origin+'/api/status')).status,403);
+  assert.equal((await fetch(server.origin+'/api/run',{method:'POST',headers:{'Content-Type':'application/json'},body:'{"schemaVersion":1}'})).status,403);
+  const toolRoot=resolve(process.argv[2]??'.');
+  const {chromium}=createRequire(join(toolRoot,'package.json'))('playwright');
+  browser=await chromium.launch({headless:true});
+  const page=await browser.newPage();
+  const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(server.origin);
+  await page.locator('#runLocal').click();
+  await page.waitForFunction(()=>document.querySelector('#localStatus').textContent.includes('erfolgreich'),{},{timeout:30000});
+  const result=JSON.parse(await page.locator('#localResult').textContent());
+  assert.equal(result.deployment,'not performed');
+  assert.equal(result.packaging.pages,1);
+  assert.ok(existsSync(join(result.site,'index.html')));
+  const report=await page.locator('#localReport').getAttribute('href');
+  assert.equal((await fetch(server.origin+report)).status,200);
+  assert.equal(readFileSync(join(source,'index.html'),'utf8'),original);
+  assert.deepEqual(errors,[]);
+  console.log('PASS: local Studio UI starts real safe pipeline, report opens, authorization and source preservation');
+}finally{if(browser)await browser.close();if(server)await server.close();rmSync(root,{recursive:true,force:true});}
