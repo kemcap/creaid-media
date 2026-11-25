@@ -1,0 +1,27 @@
+<section class="cm-pricing" id="pakete" aria-labelledby="cm-pricing-title">
+  <div class="cm-pricing__inner">
+    <p class="cm-pricing__kicker">+ CREAID / ANGEBOTE IM ÜBERBLICK</p>
+    <h2 id="cm-pricing-title">{{ pricingGroup.heading | escape }}</h2>
+    <p class="cm-pricing__intro">Vergleichen Sie die Leistungen und wählen Sie das Paket, das zu Ihrem Vorhaben passt.</p>
+    <div class="cm-pricing__grid">
+      {% for package in pricingGroup.packages %}
+      <article class="cm-pricing__card{% if package.featured %} cm-pricing__card--featured{% endif %}">
+        <p class="cm-pricing__index">0{{ loop.index }} / PAKET{% if package.featured %} · EMPFOHLEN{% endif %}</p>
+        <h3>{{ package.name | escape }}</h3>
+        <p class="cm-pricing__price">{{ package.displayPrice | escape }}{% if package.interval %}<small>{{ package.interval | escape }}</small>{% endif %}</p>
+        {% if package.term %}<p class="cm-pricing__term">{{ package.term | escape }}</p>{% endif %}
+        {% if package.lead %}<p class="cm-pricing__lead">{{ package.lead | escape }}</p>{% endif %}
+        <ul class="cm-pricing__highlights">{% for item in package.highlights %}<li>{{ item | escape }}</li>{% endfor %}</ul>
+        <a class="cm-pricing__cta" href="{{ package.href | escape }}">Paket anfragen <span class="cm-pricing__sr">– {{ package.name | escape }}</span><span aria-hidden="true">↗</span></a>
+        <details class="cm-pricing__details"><summary>Alle Leistungsdetails <span class="cm-pricing__sr">für {{ package.name | escape }}</span></summary>
+        {% for block in package.blocks %}
+          <p class="cm-pricing__label">{{ block.title | escape }}</p>
+          <ul>{% for item in block.items %}<li>{{ item | escape }}</li>{% endfor %}</ul>
+        {% endfor %}
+        </details>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="cm-pricing__note">Preis und Leistungsumfang werden vor Beauftragung bestätigt.</p>
+  </div>
+</section>
