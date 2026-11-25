@@ -1146,5 +1146,396 @@
       "priority": "P1",
       "placement": "Weiterführende Links"
     }
+  ],
+  "wann-lohnt-sich-seo": [
+    {
+      "source": "wann-lohnt-sich-seo",
+      "target": "seo-content-marketing",
+      "url": "/seo-3",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "wann-lohnt-sich-seo",
+      "target": "seo-fuer-lokale-sichtbarkeit",
+      "url": "/seo-fuer-lokale-sichtbarkeit",
+      "anchor": "Lokale SEO-Strategie: Website und Google-Profil abstimmen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "7-branding-fehler-bei-neugruendung": [
+    {
+      "source": "7-branding-fehler-bei-neugruendung",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "7-branding-fehler-bei-neugruendung",
+      "target": "corporate-design-erstellen-lassen",
+      "url": "/corporate-design-erstellen-lassen",
+      "anchor": "Corporate Design erstellen lassen: Briefing, Umfang & Ablauf",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "website-audit-unternehmen": [
+    {
+      "source": "website-audit-unternehmen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "website-audit-unternehmen",
+      "target": "schlechte-website-verbessern",
+      "url": "/schlechte-website-verbessern",
+      "anchor": "Website verbessern: 7 Schritte für bestehende Seiten",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "360-grad-rundgang-erstellen": [
+    {
+      "source": "360-grad-rundgang-erstellen",
+      "target": "referenzen",
+      "url": "/referenzen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "360-grad-rundgang-erstellen",
+      "target": "was-kostet-ein-imagefilm",
+      "url": "/was-kostet-ein-imagefilm",
+      "anchor": "Was kostet ein Imagefilm? Budget und Kostenfaktoren",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "freelancer-oder-full-service-agentur": [
+    {
+      "source": "freelancer-oder-full-service-agentur",
+      "target": "leistungen",
+      "url": "/leistungen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "freelancer-oder-full-service-agentur",
+      "target": "webdesign-agentur-fuer-kleine-unternehmen",
+      "url": "/webdesign-agentur-fuer-kleine-unternehmen",
+      "anchor": "Webdesign-Agentur für KMU: Angebot und Ablauf prüfen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "fehler-beim-online-shop-start-vermeiden": [
+    {
+      "source": "fehler-beim-online-shop-start-vermeiden",
+      "target": "onlineshops-ecommerce",
+      "url": "/online-shop-entwicklung",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "fehler-beim-online-shop-start-vermeiden",
+      "target": "onlineshop-erfolgreich-aufbauen-anleitung",
+      "url": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "anchor": "Onlineshop aufbauen: Anleitung von Planung bis Start",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "google-maps-eintrag-optimieren": [
+    {
+      "source": "google-maps-eintrag-optimieren",
+      "target": "seo-content-marketing",
+      "url": "/seo-3",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "google-maps-eintrag-optimieren",
+      "target": "google-maps-auffindbarkeit-verbessern",
+      "url": "/google-maps-auffindbarkeit-verbessern",
+      "anchor": "Google Maps: Auffindbarkeit für Unternehmen verbessern",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-trends-2026-fuer-unternehmen": [
+    {
+      "source": "webdesign-trends-2026-fuer-unternehmen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-trends-2026-fuer-unternehmen",
+      "target": "schlechte-website-verbessern",
+      "url": "/schlechte-website-verbessern",
+      "anchor": "Website verbessern: 7 Schritte für bestehende Seiten",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "corporate-naming-fuer-startups": [
+    {
+      "source": "corporate-naming-fuer-startups",
+      "target": "branding",
+      "url": "/grafikdesign-2",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "corporate-naming-fuer-startups",
+      "target": "firmennamen-entwickeln-lassen",
+      "url": "/firmennamen-entwickeln-lassen",
+      "anchor": "Firmennamen entwickeln lassen: Vorgehen und Kriterien",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "print-design-fuer-unternehmen": [
+    {
+      "source": "print-design-fuer-unternehmen",
+      "target": "printdesign-editorial",
+      "url": "/print-design",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "print-design-fuer-unternehmen",
+      "target": "flyer-design-fuer-unternehmen",
+      "url": "/flyer-design-fuer-unternehmen",
+      "anchor": "Flyer-Design für Unternehmen: Aufbau und Gestaltung",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "full-service-werbeagentur-b2b": [
+    {
+      "source": "full-service-werbeagentur-b2b",
+      "target": "leistungen",
+      "url": "/leistungen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "full-service-werbeagentur-b2b",
+      "target": "markenauftritt-fuer-kleine-unternehmen",
+      "url": "/markenauftritt-fuer-kleine-unternehmen",
+      "anchor": "Markenauftritt für kleine Unternehmen: Grundlagen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "guide-ui-ux-fuer-firmenwebsites": [
+    {
+      "source": "guide-ui-ux-fuer-firmenwebsites",
+      "target": "ui-ux-entwicklung",
+      "url": "/ui-ux-entwicklung",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "guide-ui-ux-fuer-firmenwebsites",
+      "target": "warum-bringt-meine-website-keine-kunden",
+      "url": "/warum-bringt-meine-website-keine-kunden",
+      "anchor": "Website bringt keine Anfragen: Ursachen finden",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-fuer-immobilienmakler-berlin": [
+    {
+      "source": "webdesign-fuer-immobilienmakler-berlin",
+      "target": "webdesign-immobilienmakler",
+      "url": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-fuer-immobilienmakler-berlin",
+      "target": "webdesign-fuer-kleine-unternehmen",
+      "url": "/webdesign-fuer-kleine-unternehmen",
+      "anchor": "Webdesign für kleine Unternehmen: Website planen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "beste-ecommerce-loesungen-mittelstand": [
+    {
+      "source": "beste-ecommerce-loesungen-mittelstand",
+      "target": "onlineshops-ecommerce",
+      "url": "/online-shop-entwicklung",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "beste-ecommerce-loesungen-mittelstand",
+      "target": "shopware-vs-wordpress-shop",
+      "url": "/shopware-vs-wordpress-shop",
+      "anchor": "Shopware oder WooCommerce? Vergleich für Unternehmen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "social-media-content-plan-mit-wirkung": [
+    {
+      "source": "social-media-content-plan-mit-wirkung",
+      "target": "marketing",
+      "url": "/digitales-marketing",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "social-media-content-plan-mit-wirkung",
+      "target": "social-media-betreuung-unternehmen",
+      "url": "/social-media-betreuung-unternehmen",
+      "anchor": "Social-Media-Betreuung: Leistungen und Aufwand",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "produktfotografie-fuer-onlineshop": [
+    {
+      "source": "produktfotografie-fuer-onlineshop",
+      "target": "onlineshops-ecommerce",
+      "url": "/online-shop-entwicklung",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "produktfotografie-fuer-onlineshop",
+      "target": "onlineshop-erfolgreich-aufbauen-anleitung",
+      "url": "/onlineshop-erfolgreich-aufbauen-anleitung",
+      "anchor": "Onlineshop aufbauen: Anleitung von Planung bis Start",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "hosting-anbieter-fuer-firmenwebsites-waehlen": [
+    {
+      "source": "hosting-anbieter-fuer-firmenwebsites-waehlen",
+      "target": "cloud-hosting-3",
+      "url": "/cloud-hosting-3",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "hosting-anbieter-fuer-firmenwebsites-waehlen",
+      "target": "website-wartung-fuer-firmen",
+      "url": "/website-wartung-fuer-firmen",
+      "anchor": "Website-Wartung für Firmen: Aufgaben und Ablauf",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webseite-fuer-handwerker": [
+    {
+      "source": "webseite-fuer-handwerker",
+      "target": "webdesign-handwerker",
+      "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webseite-fuer-handwerker",
+      "target": "webdesign-fuer-handwerker",
+      "url": "/webdesign-fuer-handwerker",
+      "anchor": "Handwerker-Website: Inhalte für die erste eigene Website",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "barrierefreie-website-fuer-unternehmen": [
+    {
+      "source": "barrierefreie-website-fuer-unternehmen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "barrierefreie-website-fuer-unternehmen",
+      "target": "schlechte-website-verbessern",
+      "url": "/schlechte-website-verbessern",
+      "anchor": "Website verbessern: 7 Schritte für bestehende Seiten",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-fuer-unternehmen": [
+    {
+      "source": "webdesign-fuer-unternehmen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-fuer-unternehmen",
+      "target": "webdesign-fuer-kleine-unternehmen",
+      "url": "/webdesign-fuer-kleine-unternehmen",
+      "anchor": "Webdesign für kleine Unternehmen: Website planen",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "webdesign-fuer-lokale-dienstleister": [
+    {
+      "source": "webdesign-fuer-lokale-dienstleister",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "webdesign-fuer-lokale-dienstleister",
+      "target": "professionelle-website-fuer-lokale-dienstleister",
+      "url": "/professionelle-website-fuer-lokale-dienstleister",
+      "anchor": "Website für lokale Dienstleister: Aufbau und Inhalte",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "wordpress-website-erstellen-lassen": [
+    {
+      "source": "wordpress-website-erstellen-lassen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "wordpress-website-erstellen-lassen",
+      "target": "website-wartung-fuer-firmen",
+      "url": "/website-wartung-fuer-firmen",
+      "anchor": "Website-Wartung für Firmen: Aufgaben und Ablauf",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
+  ],
+  "leitfaden-website-relaunch-unternehmen": [
+    {
+      "source": "leitfaden-website-relaunch-unternehmen",
+      "target": "webdesign",
+      "url": "/webdesign",
+      "priority": "P1",
+      "placement": "Im Artikel: nächster Schritt"
+    },
+    {
+      "source": "leitfaden-website-relaunch-unternehmen",
+      "target": "schlechte-website-verbessern",
+      "url": "/schlechte-website-verbessern",
+      "anchor": "Website verbessern: 7 Schritte für bestehende Seiten",
+      "priority": "P2",
+      "placement": "Im Artikel: Vertiefung"
+    }
   ]
 }

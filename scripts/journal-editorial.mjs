@@ -1,4 +1,4 @@
-const headingPattern = /<h2\b([^>]*)>([\s\S]*?)<\/h2>/gi;
+const headingPattern = /<h([23])\b([^>]*)>([\s\S]*?)<\/h\1>/gi;
 const firstParagraph = /^\s*(<p\b[^>]*>([\s\S]*?)<\/p>)/i;
 
 export function editorialArticle(html) {
@@ -7,7 +7,7 @@ export function editorialArticle(html) {
   const meta = /^\s*Lesezeit:/.test(firstText) && /Themen:/.test(firstText) ? first[1] : '';
   const toc = [];
   const ids = new Set([...html.matchAll(/\sid="([^"]+)"/g)].map(match => match[1]));
-  const body = (meta ? html.slice(first[0].length) : html).replace(headingPattern, (heading, attributes, content) => {
+  const body = (meta ? html.slice(first[0].length) : html).replace(headingPattern, (heading, level, attributes, content) => {
     const label = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
     if (!label) return heading;
     let id = attributes.match(/\sid="([^"]+)"/)?.[1];
@@ -19,8 +19,8 @@ export function editorialArticle(html) {
       ids.add(id);
       attributes += ' id="' + id + '"';
     }
-    toc.push({ id, label });
-    return '<h2' + attributes + '>' + content + '</h2>';
+    toc.push({ id, label, level: Number(level) });
+    return '<h' + level + attributes + '>' + content + '</h' + level + '>';
   });
   return { body, meta, toc };
 }

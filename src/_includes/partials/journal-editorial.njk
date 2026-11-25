@@ -10,7 +10,7 @@
         <nav class="j-breadcrumb" aria-label="Brotkrumen"><a href="/">START</a><span>/</span><a href="/creaid-blog">JOURNAL</a></nav>
         {% if isDraft %}<div class="j-micro j-article-kicker">WORDPRESS-ENTWURF</div>{% endif %}
         <h1 id="article-title">{{ post.heading | escape }}</h1>
-        {% if editorial.meta %}<div class="j-editorial-meta">{{ editorial.meta | safe }}</div>{% endif %}
+        {% if editorial.meta %}<div class="j-editorial-meta">{{ editorial.meta | safe }}</div>{% else %}{% for entry in postsIndex %}{% if entry.slug == pageKey and entry.minutes %}<div class="j-editorial-meta"><p><strong>Lesezeit:</strong> ca. {{ entry.minutes }} Min.</p></div>{% endif %}{% endfor %}{% endif %}
         <p class="j-article-desc">{{ post.description | escape }}</p>
         <a class="j-article-scroll" href="#article-content">Artikel lesen <span aria-hidden="true">↓</span></a>
       </div>
@@ -27,11 +27,7 @@
           </nav>
         </details>
         {% endif %}
-        {% if layoutInfo.profile == "vergleich" %}
-          {{ editorial.body | replace('<table', '<div class="j-table-scroll" tabindex="0" role="region" aria-label="Vergleichstabelle: Freelancer und Full-Service-Agentur"><table') | replace('</table>', '</table></div>') | safe }}
-        {% else %}
-          {{ editorial.body | safe }}
-        {% endif %}
+        {{ editorial.body | replace('<table', '<div class="j-table-scroll" tabindex="0" role="region" aria-label="Tabelle im Artikel"><table') | replace('</table>', '</table></div>') | safe }}
         <div class="j-article-actions"><a class="j-article-to-index" href="/creaid-blog#artikel">Alle Artikel ↗</a></div>
       </article>
       {% if editorial.toc.length %}
@@ -44,4 +40,5 @@
       {% endif %}
     </div>
   </section>
+  {% include "partials/editorial-links.njk" %}
 </main>
