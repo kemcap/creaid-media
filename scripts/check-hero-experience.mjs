@@ -158,12 +158,14 @@ const pageMeta=JSON.parse(load('src/_data/pages.json'));
 const postIndex=JSON.parse(load('src/_data/postsIndex.json'));
 const routeMap=JSON.parse(load('src/_data/routes.json'));
 const serviceDepth=JSON.parse(load('src/_data/serviceDepth.json'));
-assert.equal(Object.keys(pageMeta).length,98);
-assert.equal(postIndex.length,39);
-assert.equal(Object.values(pageMeta).filter(p=>p.isPost).length,39);
-assert.equal(new Set(postIndex.map(p=>p.slug)).size,39);
+const previewDrafts=JSON.parse(load('src/_data/wordpressPreviewDrafts.json'));
+const draftCount=Object.keys(previewDrafts).length;
+assert.equal(Object.keys(pageMeta).length,98+draftCount);
+assert.equal(postIndex.length,39+draftCount);
+assert.equal(Object.values(pageMeta).filter(p=>p.isPost).length,39+draftCount);
+assert.equal(new Set(postIndex.map(p=>p.slug)).size,39+draftCount);
 const journal=load('dist/blog.html');
-assert.equal((journal.match(/class="j-card j-reveal"/g)||[]).length,39);
+assert.equal((journal.match(/class="j-card j-reveal"/g)||[]).length,39+draftCount);
 assert.ok(journal.includes('href="/ki-automatisierung-fuer-unternehmen"'));
 assert.equal(Object.keys(serviceDepth).length,12);
 for(const [key,info] of Object.entries(serviceDepth)){
@@ -182,9 +184,15 @@ for(const [key,p] of Object.entries(pageMeta)){
   const html=load('dist/'+key+'.html');
   assert.ok(html.includes('/assets/content-phase3.css'));
   if(p.structuredData){const schema=JSON.parse(p.structuredData);assert.ok(schema['@context']==='https://schema.org');}
-  if(p.isPost){assert.ok(postIndex.some(x=>x.slug===key));assert.equal(JSON.parse(p.structuredData)['@type'],'BlogPosting');}
+  if(p.isPost){
+    assert.ok(postIndex.some(x=>x.slug===key));
+    if(Object.hasOwn(previewDrafts,key)){
+      assert.ok(html.includes('WORDPRESS-ENTWURF')&&html.includes('<h2'));
+      assert.equal(p.structuredData,undefined);
+    }else assert.equal(JSON.parse(p.structuredData)['@type'],'BlogPosting');
+  }
 }
-console.log('PASS: Phase 3 content scope on 12 services, all 39 journal cards, unique metadata and stable URLs.');
+console.log('PASS: Phase 3 content scope on 12 services, all journal cards, unique metadata and stable URLs.');
 
  // Phase 4: keep legal status honest, avoid automatic third-party resources/storage.
 const privacy=load('dist/datenschutz.html'), imprint=load('dist/impressum.html'), cookies=load('dist/cookie-einstellungen.html'), legalJs=load('dist/assets/legal-pages.js');
