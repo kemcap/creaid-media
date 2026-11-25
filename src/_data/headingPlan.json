@@ -19,6 +19,7 @@
       "Kontaktwege und Landingpages",
       "Leistungen für Ihre Unternehmenswebsite",
       null,
+      null,
       "Webdesign-Projekt besprechen"
     ],
     "mode": "creative",
@@ -155,6 +156,7 @@
       "Leistungen für Handwerker-Websites",
       "Ablauf Ihrer Handwerker-Website",
       null,
+      null,
       "Häufige Fragen zum Webdesign für Handwerker",
       "Handwerker-Website besprechen",
       null
@@ -172,6 +174,7 @@
       "Terminbuchung und Kontaktwege",
       "Leistungen für Praxis-Websites",
       "Ablauf der Praxiswebsite-Erstellung",
+      null,
       null,
       "Häufige Fragen zum Webdesign für Ärzte",
       "Praxiswebsite besprechen",
@@ -192,17 +195,12 @@
       "Leistungen für Immobilien-Websites",
       "Ablauf Ihrer Makler-Website",
       null,
-      "Website-Pakete für Immobilienmakler",
+      null,
       "Häufige Fragen zu Makler-Websites",
       "Immobilienwebsite besprechen",
       null
     ],
-    "mode": "creative",
-    "h3Replacements": {
-      "1.490 €": "Immo-Kompakt – 1.490 €",
-      "2.290 €": "Immo-Plus – 2.290 €",
-      "3.490 €": "Immo-Premium – 3.490 €"
-    }
+    "mode": "creative"
   },
   "leistungen": {
     "h1": "Leistungen für Webdesign, Marketing, Design und KI",

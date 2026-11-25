@@ -1,0 +1,443 @@
+{
+  "sourceDate": "2026-11-25",
+  "groups": {
+    "seo": {
+      "heading": "SEO-Blogpakete für mehr Anfragen",
+      "service": "SEO & Content-Marketing",
+      "source": "https://creaid-media.de/webdesign",
+      "packages": [
+        {
+          "name": "Starter",
+          "price": 199,
+          "displayPrice": "199 €",
+          "interval": "pro Monat",
+          "term": "3 Monate Laufzeit",
+          "featured": false,
+          "lead": "",
+          "highlights": [
+            "6 SEO-Artikel pro Monat",
+            "ca. 33 € pro Artikel",
+            "Basis Keyword-Recherche"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "6 SEO-Artikel pro Monat",
+                "ca. 33 € pro Artikel",
+                "Basis Keyword-Recherche",
+                "Einpflege in WordPress",
+                "Erste organische Sichtbarkeit",
+                "Fokus: Grundlagen & Ranking-Aufbau"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=SEO%20%26%20Content-Marketing&paket=Starter#anfrage"
+        },
+        {
+          "name": "Wachstum",
+          "price": 349,
+          "displayPrice": "349 €",
+          "interval": "pro Monat",
+          "term": "3 Monate Laufzeit",
+          "featured": false,
+          "lead": "",
+          "highlights": [
+            "12 SEO-Artikel pro Monat",
+            "ca. 29 € pro Artikel",
+            "Erweiterte Keyword-Recherche"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "12 SEO-Artikel pro Monat",
+                "ca. 29 € pro Artikel",
+                "Erweiterte Keyword-Recherche",
+                "(inkl. Longtail)",
+                "Einpflege in WordPress",
+                "Schnellere Ranking-Ergebnisse",
+                "Mehr Sichtbarkeit & Anfragen",
+                "Fokus: Wachstum & Skalierung"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=SEO%20%26%20Content-Marketing&paket=Wachstum#anfrage"
+        },
+        {
+          "name": "Dominanz",
+          "price": 649,
+          "displayPrice": "649 €",
+          "interval": "pro Monat",
+          "term": "3 Monate Laufzeit",
+          "featured": false,
+          "lead": "",
+          "highlights": [
+            "24 SEO-Artikel pro Monat",
+            "ca. 27 € pro Artikel",
+            "priorisierte Umsetzung"
+          ],
+          "blocks": [
+            {
+              "title": "Leistungen",
+              "items": [
+                "24 SEO-Artikel pro Monat",
+                "ca. 27 € pro Artikel",
+                "priorisierte Umsetzung",
+                "strategische Keyword-Cluster",
+                "Content-Planung",
+                "Einpflege in WordPress",
+                "maximale Sichtbarkeit",
+                "kontinuierlicher Traffic-Aufbau",
+                "Fokus: Markt-Dominanz"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=SEO%20%26%20Content-Marketing&paket=Dominanz#anfrage"
+        }
+      ],
+      "sources": [
+        "https://creaid-media.de/webdesign",
+        "https://creaid-media.de/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen"
+      ]
+    },
+    "praxis": {
+      "heading": "Website-Pakete für Arztpraxen",
+      "service": "Webdesign für Ärzte",
+      "source": "https://creaid-media.de/webdesign/webdesign-fuer-aerzte",
+      "packages": [
+        {
+          "name": "Praxis-Kompakt",
+          "price": 1490,
+          "displayPrice": "1.490 €",
+          "interval": "",
+          "term": "",
+          "featured": false,
+          "lead": "Der kompakte Einstieg für Arztpraxen, die professionell online sichtbar sein und die wichtigsten Informationen klar und vertrauenswürdig präsentieren möchten.",
+          "highlights": [
+            "Homepage mit allen zentralen Praxisinformationen auf einer Seite",
+            "Gestaltung im Stil Ihrer Praxis; mit Ihrem Logo, Ihren Farben, Fotos und Inhalten",
+            "Einbindung von Impressum und Datenschutzerklärung"
+          ],
+          "blocks": [
+            {
+              "title": "Im Überblick",
+              "items": [
+                "Homepage mit allen zentralen Praxisinformationen auf einer Seite",
+                "Gestaltung im Stil Ihrer Praxis; mit Ihrem Logo, Ihren Farben, Fotos und Inhalten",
+                "Einbindung von Impressum und Datenschutzerklärung",
+                "DSGVO-konformes Kontaktformular mit direkter Weiterleitung eingehender Anfragen",
+                "Pflege und Aktualisierung der Inhalte",
+                "Strukturierte Gestaltung auf Basis eines bewährten Layoutsystems",
+                "Inklusive 2 Mailadressen"
+              ]
+            },
+            {
+              "title": "Hosting & DSGVO",
+              "items": [
+                "DSGVO-Basis mit Einbindung der rechtlich erforderlichen Seiten sowie technischer Grundabsicherung für einen professionellen Webauftritt.",
+                "Professionelles Hosting mit SSL-Verschlüsselung, sicherer Bereitstellung der Website und zuverlässigem Betrieb auf leistungsstarker Serverumgebung."
+              ]
+            },
+            {
+              "title": "Content",
+              "items": [
+                "Sie liefern die Informationen zu Ihrer Praxis; wir bereiten Texte und Bilder verständlich, sauber strukturiert und webgerecht für Ihre Website auf."
+              ]
+            },
+            {
+              "title": "Kontaktformular",
+              "items": [
+                "DSGVO-konformes Kontaktformular mit direkter Weiterleitung eingehender Anfragen an Ihre Praxis; auf Wunsch mit klarerer Patientenführung und gezielter Platzierung auf mehreren Seiten."
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Webdesign%20f%C3%BCr%20%C3%84rzte&paket=Praxis-Kompakt#anfrage"
+        },
+        {
+          "name": "Praxis-Plus",
+          "price": 2290,
+          "displayPrice": "2.290 €",
+          "interval": "",
+          "term": "",
+          "featured": false,
+          "lead": "Die ausgewogene Lösung für Arztpraxen, die ihre Leistungen, ihr Team und ihre Praxis professionell präsentieren und online mehr Vertrauen bei aufbauen möchten.",
+          "highlights": [
+            "Mehrseitige Website mit klar strukturierter Darstellung Ihrer Praxis",
+            "Individuelles Design abgestimmt auf Ihr Erscheinungsbild",
+            "Einbindung von Impressum und Datenschutzerklärung"
+          ],
+          "blocks": [
+            {
+              "title": "Im Überblick",
+              "items": [
+                "Mehrseitige Website mit klar strukturierter Darstellung Ihrer Praxis",
+                "Individuelles Design abgestimmt auf Ihr Erscheinungsbild",
+                "Einbindung von Impressum und Datenschutzerklärung",
+                "DSGVO-konformes Kontaktformular mit direkter Weiterleitung eingehender Anfragen",
+                "Erweiterte Inhaltsbereiche, z. B. Leistungen, Team, Sprechzeiten und Kontakt",
+                "Strukturierte Gestaltung mit stärkerer inhaltlicher und visueller Ausarbeitung",
+                "SEO-Basis für mehrere Leistungsseiten",
+                "WhatsApp -Icon mit direkter Kontaktverlinkung",
+                "Erweiterter Blogbereich mit Einrichtung und Einpflege von bis zu 5 Artikeln",
+                "Inklusive 4 Mailadressen"
+              ]
+            },
+            {
+              "title": "Zusatzmodule",
+              "items": [
+                "Online-Termin-Anfrage",
+                "Allgemeine Teamseite",
+                "Karriereseite",
+                "Downloadbereich für Formulare",
+                "Mehrsprachigkeit",
+                "Sprechzeiten-Modul",
+                "Hinweis-Pop-up für Urlaub oder Vertretung",
+                "lokale SEO-Erweiterung",
+                "News- oder Beitragsbereich",
+                "WhatsApp Kontaktmöglichkeit",
+                "Automatische Backups ihrer Seite",
+                "Google-Maps-Einbindung mit Anfahrt"
+              ]
+            },
+            {
+              "title": "Hosting & DSGVO",
+              "items": [
+                "DSGVO-Basis mit Einbindung der rechtlich erforderlichen Seiten sowie technischer Grundabsicherung für einen professionellen und vertrauenswürdigen Webauftritt.",
+                "Professionelles Hosting mit SSL-Verschlüsselung, sicherer Bereitstellung der Website und zuverlässigem Betrieb auf leistungsstarker Serverumgebung."
+              ]
+            },
+            {
+              "title": "Content",
+              "items": [
+                "Sie liefern die wichtigsten Informationen zu Ihrer Praxis; wir bereiten Texte und Bilder verständlich, sauber strukturiert und webgerecht für Ihre Website auf und gliedern die Inhalte passend auf mehrere Unterseiten."
+              ]
+            },
+            {
+              "title": "Kontaktformular",
+              "items": [
+                "DSGVO-konformes Kontaktformular mit direkter Weiterleitung eingehender Anfragen an Ihre Praxis; auf Wunsch mit klarerer Patientenführung und gezielter Platzierung auf mehreren Seiten."
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Webdesign%20f%C3%BCr%20%C3%84rzte&paket=Praxis-Plus#anfrage"
+        },
+        {
+          "name": "Praxis-Premium",
+          "price": 3490,
+          "displayPrice": "3.490 €",
+          "interval": "",
+          "term": "",
+          "featured": false,
+          "lead": "Die Premium-Lösung für Arztpraxen, die online auf besonders professionellem Niveau auftreten, ihre Praxis klar positionieren und mit einem starken digitalen Eindruck nachhaltig überzeugen möchten.",
+          "highlights": [
+            "Individuell ausgearbeitete Website mit hochwertiger Präsentation Ihrer Praxis",
+            "Premium-Design abgestimmt auf Ihr Erscheinungsbild und Ihre Positionierung",
+            "Einbindung von Impressum und Datenschutzerklärung"
+          ],
+          "blocks": [
+            {
+              "title": "Im Überblick",
+              "items": [
+                "Individuell ausgearbeitete Website mit hochwertiger Präsentation Ihrer Praxis",
+                "Premium-Design abgestimmt auf Ihr Erscheinungsbild und Ihre Positionierung",
+                "Einbindung von Impressum und Datenschutzerklärung",
+                "DSGVO-konformes Kontaktformular mit direkter Weiterleitung eingehender Anfragen",
+                "Erweiterte Inhaltsbereiche für Leistungen, Team, Praxisprofil, Sprechzeiten und Kontakt",
+                "Strukturierte Gestaltung mit besonders hoher inhaltlicher und visueller Ausarbeitung",
+                "SEO-Basis für mehrere Leistungsseiten",
+                "Hervorgehobene Präsentation von Team, Praxisphilosophie und Schwerpunkten",
+                "Mehr Abstimmung und zusätzliche Korrekturmöglichkeiten",
+                "WhatsApp -Icon mit direkter Kontaktverlinkung",
+                "Erweiterter Blogbereich mit Einrichtung und Einpflege von bis zu 8 Artikeln",
+                "Inklusive 4 Mailadressen"
+              ]
+            },
+            {
+              "title": "Zusatzmodule",
+              "items": [
+                "Online-Termin-Anfrage",
+                "Teamseite mit Einzelprofilen",
+                "Karriereseite",
+                "FAQ-Bereich",
+                "Downloadbereich für Formulare",
+                "Mehrsprachigkeit",
+                "Sprechzeiten-Modul",
+                "Hinweis-Pop-up für Urlaub oder Vertretung",
+                "lokale SEO-Erweiterung",
+                "News- oder Beitragsbereich",
+                "WhatsApp Kontaktmöglichkeit",
+                "Automatische Backups ihrer Seite",
+                "Google-Maps-Einbindung mit Anfahrt"
+              ]
+            },
+            {
+              "title": "Hosting & DSGVO",
+              "items": [
+                "DSGVO-Basis mit Einbindung der rechtlich erforderlichen Seiten sowie technischer Grundabsicherung für einen professionellen und vertrauenswürdigen Webauftritt.",
+                "Professionelles Hosting mit SSL-Verschlüsselung, sicherer Bereitstellung der Website und zuverlässigem Betrieb auf leistungsstarker Serverumgebung."
+              ]
+            },
+            {
+              "title": "Content",
+              "items": [
+                "Sie liefern die wichtigsten Informationen zu Ihrer Praxis; wir bereiten Texte und Bilder verständlich, hochwertig und webgerecht auf, strukturieren die Inhalte strategisch und sorgen für eine besonders überzeugende Präsentation."
+              ]
+            },
+            {
+              "title": "Kontaktformular",
+              "items": [
+                "DSGVO-konformes Kontaktformular mit direkter Weiterleitung eingehender Anfragen an Ihre Praxis; auf Wunsch mit gezielter Patientenführung und stärkeren Kontaktpunkten über die gesamte Website hinweg."
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Webdesign%20f%C3%BCr%20%C3%84rzte&paket=Praxis-Premium#anfrage"
+        }
+      ]
+    },
+    "immo": {
+      "heading": "Website-Pakete für Immobilienmakler",
+      "service": "Webdesign für Immobilienmakler",
+      "source": "https://creaid-media.de/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+      "packages": [
+        {
+          "name": "Immo-Kompakt",
+          "price": 1490,
+          "displayPrice": "1.490 €",
+          "interval": "",
+          "term": "",
+          "featured": false,
+          "lead": "Der kompakte Einstieg für Immobilienmakler, die professionell online sichtbar sein und ihre wichtigsten Immobilien sowie Leistungen klar und vertrauenswürdig präsentieren möchten.",
+          "highlights": [
+            "Homepage mit allen zentralen Informationen zu Ihrem Unternehmen und Ihren Immobilien auf einer Seite",
+            "Gestaltung im Stil Ihres Unternehmens; mit Ihrem Logo, Ihren Farben, Fotos und Inhalten",
+            "Einbindung von Impressum und Datenschutzerklärung"
+          ],
+          "blocks": [
+            {
+              "title": "Im Überblick",
+              "items": [
+                "Homepage mit allen zentralen Informationen zu Ihrem Unternehmen und Ihren Immobilien auf einer Seite",
+                "Gestaltung im Stil Ihres Unternehmens; mit Ihrem Logo, Ihren Farben, Fotos und Inhalten",
+                "Einbindung von Impressum und Datenschutzerklärung",
+                "DSGVO-konformes Kontaktformular mit direkter Weiterleitung eingehender Anfragen",
+                "Einfache Immobilien-Darstellung (z. B. Kauf / Miete)",
+                "Strukturierte Gestaltung auf Basis eines bewährten Layoutsystems",
+                "Pflege und Aktualisierung der Inhalte",
+                "Inklusive 2 Mailadressen"
+              ]
+            },
+            {
+              "title": "Hosting & DSGVO",
+              "items": [
+                "DSGVO-Basis mit Einbindung der rechtlich erforderlichen Seiten sowie technischer Grundabsicherung für einen professionellen Webauftritt.",
+                "Professionelles Hosting mit SSL-Verschlüsselung, sicherer Bereitstellung der Website und zuverlässigem Betrieb auf leistungsstarker Serverumgebung."
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Webdesign%20f%C3%BCr%20Immobilienmakler&paket=Immo-Kompakt#anfrage"
+        },
+        {
+          "name": "Immo-Plus",
+          "price": 2290,
+          "displayPrice": "2.290 €",
+          "interval": "",
+          "term": "",
+          "featured": true,
+          "lead": "Die ideale Lösung für Ihre Immobilienmaklerei, um sich, Ihr Portfolio und Ihre Arbeitsweise professionell zu präsentieren und online mehr Vertrauen bei Käufern und Verkäufern aufzubauen.",
+          "highlights": [
+            "Mehrseitige Website mit klar strukturierter Darstellung Ihres Unternehmens und Ihrer Immobilien",
+            "Individuelles Design abgestimmt auf Ihr Erscheinungsbild",
+            "Einbindung von Impressum und Datenschutzerklärung"
+          ],
+          "blocks": [
+            {
+              "title": "Im Überblick",
+              "items": [
+                "Mehrseitige Website mit klar strukturierter Darstellung Ihres Unternehmens und Ihrer Immobilien",
+                "Individuelles Design abgestimmt auf Ihr Erscheinungsbild",
+                "Einbindung von Impressum und Datenschutzerklärung",
+                "DSGVO-konformes Kontaktformular mit direkter Weiterleitung eingehender Anfragen",
+                "Erweiterte Inhaltsbereiche wie z. B. Leistungen, Über uns, Immobilien, Kontakt",
+                "Strukturierte Immobilienübersicht (Kauf / Miete / Referenzen)",
+                "SEO-Basis für mehrere Seiten",
+                "WhatsApp-Icon mit direkter Kontaktverlinkung",
+                "Erweiterter Blogbereich mit Einrichtung und Einpflege von bis zu 5 Artikeln",
+                "Inklusive 4 Mailadressen"
+              ]
+            },
+            {
+              "title": "Zusatzmodule",
+              "items": [
+                "Online-Anfrage für Immobilien",
+                "Allgemeine Teamseite",
+                "Karriereseite",
+                "Downloadbereich für Exposés oder Unterlagen",
+                "Mehrsprachigkeit",
+                "Öffnungszeiten -/Verfügbarkeitsmodul",
+                "Hinweis-Pop-up",
+                "Lokale SEO -Erweiterung",
+                "News- oder Blogbereich",
+                "WhatsApp -Kontaktfunktion",
+                "Automatische Backups Ihrer Website",
+                "Google-Maps -Einbindung mit Standort"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Webdesign%20f%C3%BCr%20Immobilienmakler&paket=Immo-Plus#anfrage"
+        },
+        {
+          "name": "Immo-Premium",
+          "price": 3490,
+          "displayPrice": "3.490 €",
+          "interval": "",
+          "term": "",
+          "featured": false,
+          "lead": "Die Premium-Lösung für Immobilienmakler, die online auf höchstem Niveau auftreten, ihre Marke klar positionieren und mit einem starken digitalen Auftritt nachhaltig mehr qualifizierte Anfragen gewinnen möchten.",
+          "highlights": [
+            "Individuell ausgearbeitete Website mit hochwertiger Präsentation Ihres Unternehmens",
+            "Premium-Design abgestimmt auf Ihre Marke und Ihre Positionierung",
+            "Einbindung von Impressum und Datenschutzerklärung"
+          ],
+          "blocks": [
+            {
+              "title": "Im Überblick",
+              "items": [
+                "Individuell ausgearbeitete Website mit hochwertiger Präsentation Ihres Unternehmens",
+                "Premium-Design abgestimmt auf Ihre Marke und Ihre Positionierung",
+                "Einbindung von Impressum und Datenschutzerklärung",
+                "DSGVO-konformes Kontaktformular mit direkter Weiterleitung eingehender Anfragen",
+                "Erweiterte Inhaltsbereiche für Leistungen, Team, Immobilien, Referenzen und Kontakt",
+                "Strukturierte Gestaltung mit besonders hoher inhaltlicher und visueller Qualität",
+                "SEO-Basis für mehrere Leistungs- und Immobilienseiten",
+                "Hervorgehobene Präsentation Ihrer Immobilien und Referenzen",
+                "Mehr Abstimmung und zusätzliche Korrekturmöglichkeiten WhatsApp-Integration mit direkter Kontaktverlinkung",
+                "Erweiterter Blogbereich mit Einrichtung und Einpflege von bis zu 8 Artikeln",
+                "Inklusive 4 Mailadressen"
+              ]
+            },
+            {
+              "title": "Zusatzmodule",
+              "items": [
+                "Online-Anfrage für Immobilien",
+                "Teamseite mit Einzelprofilen",
+                "Karriereseite",
+                "FAQ -Bereich",
+                "Downloadbereich für Exposés",
+                "Mehrsprachigkeit",
+                "Öffnungszeiten -/Verfügbarkeitsmodul",
+                "Hinweis- Pop-up",
+                "Lokale SEO -Erweiterung",
+                "News- oder Blogbereich",
+                "WhatsApp -Kontaktfunktion",
+                "Automatische Backups Ihrer Website",
+                "Google-Maps -Einbindung mit Anfahrt"
+              ]
+            }
+          ],
+          "href": "/kontakt?service=Webdesign%20f%C3%BCr%20Immobilienmakler&paket=Immo-Premium#anfrage"
+        }
+      ]
+    }
+  }
+}
