@@ -163,6 +163,8 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
         checks=dict(zip(uncertain,pool.map(lambda p:public_matches(p,digests[p],route_urls),uncertain)))
     for rel in uncertain:
         if not checks[rel] and sha(read(sftp,rel))!=digests[rel]:changed.append(rel)
+    immutable_assets={rel for rel in expected if cached and rel.startswith('assets/') and FINGERPRINTED_ASSET.search(rel)}
+    require(not immutable_assets.intersection(rows,changed),'Existing fingerprint differs; no changes.')
     changed.sort(key=lambda p:(2 if p=='.htaccess' else 1 if p.endswith('.html') else 0,p=='index.html',p))
     total_bytes=sum(expected[p].stat().st_size for p in expected)
     changed_bytes=sum(expected[p].stat().st_size for p in changed)
@@ -177,6 +179,7 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
         require(code==403,'Deployment state not denied over HTTPS.')
     backup={}
     applied=[]
+    verified_new_assets=set()
     planning_done=perf_counter()
     try:
         for rel in changed:
@@ -186,6 +189,7 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
             backup[rel]=(read(sftp,rel),stat.S_IMODE(a.st_mode)) if a is not None else None
             applied.append(rel)
             put(sftp,rel,path.read_bytes(),a is not None,backup[rel][1] if a is not None else 0o644)
+            if rel in immutable_assets:verified_new_assets.add(rel)
         writes_done=perf_counter()
         # Check every changed public URL plus security-critical contact/home/privacy files.
         verify_paths=set(changed).union(critical)-{'.htaccess'}
@@ -207,6 +211,7 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
     except Exception:
         for rel in reversed(applied):
             old=backup[rel]
+            if rel in verified_new_assets:continue
             if old is None:
                 try:sftp.remove(rel)
                 except FileNotFoundError:pass
