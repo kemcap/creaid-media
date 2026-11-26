@@ -88,3 +88,10 @@ html{scroll-behavior:smooth}body.agency-body{margin:0;background:var(--a-ink);co
   #agencyEnquiry .a-submit-slot.is-protected.is-verified{width:100%;height:39px}
 }
 @media(prefers-reduced-motion:reduce){#agencyEnquiry .a-submit-slot.is-protected.is-verified{transition:none!important}}
+
+/* Compact postal contact details, kept out of the global footer. */
+#anfrage .cm-business-contact{margin-top:24px;padding-top:15px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;line-height:1.55;color:#d3cdd4;overflow-wrap:anywhere}
+#anfrage .cm-business-contact strong{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:7px}
+#anfrage .cm-business-contact address{font-style:normal}
+#anfrage .cm-business-contact a{display:inline-block;margin-top:8px;color:#f67a9d;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:570px){#anfrage .cm-business-contact{margin-top:16px;padding-top:10px;font-size:12px}}

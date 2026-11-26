@@ -15,6 +15,12 @@ assert.ok(imprint.includes('Doruk Apt. No: 1, İç Kapı No: 6'), 'Registered bu
 assert.ok(imprint.includes('Muratpaşa / Antalya'), 'Registered business locality missing from imprint');
 assert.ok(!imprint.includes('Yeniköy Mahallesi'), 'Previous address must not remain in the imprint');
 const contact=readFileSync('dist/kontakt.html','utf8');
+const privacy=readFileSync('dist/datenschutz.html','utf8');
+const {business,contact:details}=JSON.parse(readFileSync('src/_data/site.json','utf8'));
+for(const html of [imprint,privacy,contact]){
+ for(const line of details.addressLines)assert.ok(html.includes(line));
+ assert.ok(html.includes(business.owner));
+}
 assert.ok(contact.includes('* Pflichtfelder · <a href="/datenschutz">Datenschutz</a>'));
 assert.ok(!contact.includes('>Direkt per E-Mail ↗</a>'));
 console.log('CONTACT_CLEANUP_OK '+names.length+' pages');

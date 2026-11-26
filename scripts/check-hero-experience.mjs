@@ -201,6 +201,14 @@ assert.ok(!privacy.includes('{placeholder('),'Unrendered legal placeholders');
 assert.ok(privacy.includes('GitHub Pages')&&privacy.includes('GitHub-Datenschutzerklärung'));
 assert.ok(privacy.includes('keine neue Cookie-Präferenz')&&privacy.includes('direkte HubSpot-Übermittlung ist nicht eingerichtet'));
 assert.ok(imprint.includes('ENTWURF')&&imprint.includes('Geschäftsanschrift laut türkischer Steuerbescheinigung')&&imprint.includes('Muratpaşa / Antalya'));
+const company=JSON.parse(load('src/_data/site.json'));
+for(const [name,html] of [['impressum',imprint],['datenschutz',privacy],['kontakt',contact]]){
+ for(const line of company.contact.addressLines)assert.ok(html.includes(line),name+' missing registered address: '+line);
+ assert.ok(html.includes(company.business.owner),name+' missing legal owner');
+ assert.ok(!html.includes('Yeniköy Mahallesi'),name+' contains old contact address');
+}
+for(const name of files)assert.ok(!load('dist/'+name).includes('Yeniköy Mahallesi, 71. Sokak No: 19'),name+' contains outdated address');
+assert.ok(imprint.includes(company.business.taxNumber)&&imprint.includes(company.business.taxOffice)&&imprint.includes(company.business.startDate),'Incomplete tax details');
 assert.ok(!cookies.includes('id="lSaveConsent"')&&!legalJs.includes('localStorage.setItem'));
 assert.ok(legalJs.includes("localStorage.removeItem('creaid-prototype-consent-v1')"));
 for(const name of files){

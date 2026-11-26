@@ -67,9 +67,10 @@
     "email": "info@creaid-media.de",
     "whatsappUrl": "https://wa.me/4915678451152",
     "addressLines": [
-      "Yeniköy Mahallesi, 71. Sokak No: 19",
-      "07190 Döşemealtı / Antalya",
-      "Türkei"
+      "Çağlayan Mah. 2043 Sk.",
+      "Doruk Apt. No: 1, İç Kapı No: 6",
+      "Muratpaşa / Antalya",
+      "Türkiye"
     ]
   },
   "social": {
@@ -127,5 +128,17 @@
       "href": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
       "pageKey": "webdesign-immobilienmakler"
     }
-  ]
+  ],
+  "business": {
+    "contractName": "Kemal Çapacı – CreAid-Media",
+    "owner": "Kemal Çapacı",
+    "legalForm": "Einzelunternehmen (Şahıs Şirketi)",
+    "taxNumber": "2290804297",
+    "taxOffice": "Kalekapı Vergi Dairesi, Antalya",
+    "nace": "621000",
+    "activity": "Computerprogrammierung, Webentwicklung und kundenspezifische Softwareentwicklung einschließlich Desktop- und mobiler Anwendungen",
+    "startDate": "01.12.2025",
+    "location": "Muratpaşa / Antalya",
+    "country": "Türkiye"
+  }
 }
