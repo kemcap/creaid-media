@@ -36,7 +36,9 @@ def read(sftp,path,limit=None):
     require(stat.S_ISREG(a.st_mode),'Unsafe remote file: '+path)
     if limit is not None:require(a.st_size<=limit,'Remote file too large: '+path)
     with sftp.open(path,'rb') as f:
-        if a.st_size>32768:f.prefetch(a.st_size, max_concurrent_requests=32)
+        if a.st_size>32768:
+            try:f.prefetch(a.st_size, max_concurrent_requests=32)
+            except TypeError:f.prefetch(a.st_size)
         data=f.read(a.st_size+1)
     require(len(data)==a.st_size,'Remote file changed during read: '+path)
     return data

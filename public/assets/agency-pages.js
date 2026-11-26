@@ -68,23 +68,54 @@
     let pending=false;
     const captcha=form.querySelector('#aTurnstile');
     const sitekey=direct?captcha?.dataset.sitekey:'';
-    let captchaToken='',widgetId=null,captchaFailed=false;
+    let captchaToken='',widgetId=null,captchaFailed=false,challengeWait=null;
+    function settleCaptcha(ok){
+      if(challengeWait){const finish=challengeWait;challengeWait=null;finish(ok);}
+    }
+    function failCaptcha(text){
+      captchaToken='';captchaFailed=true;settleCaptcha(false);
+      status.textContent=text;
+    }
+    // Render only after the parent form is visible. Give the visitor real feedback.
+    form.hidden=false;
     if(sitekey){
       captcha.hidden=false;
+      captcha.style.minHeight='66px';
+      captcha.style.minWidth='0';
       const script=document.createElement('script');
       script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
       script.async=true;
+      const loadTimer=setTimeout(()=>failCaptcha('Die Sicherheitsprüfung konnte nicht geladen werden. Bitte versuchen Sie es erneut oder nutzen Sie E-Mail.'),20000);
       script.onload=()=>{
-        window.turnstile.ready(()=>{
-          widgetId=window.turnstile.render(captcha,{sitekey,action:'contact',theme:'auto',size:'flexible',appearance:'interaction-only',
-            callback:token=>{captchaToken=token;captchaFailed=false;},
-            'expired-callback':()=>{captchaToken='';},
-            'error-callback':()=>{captchaToken='';captchaFailed=true;status.textContent='Die Sicherheitsprüfung ist momentan nicht verfügbar. Bitte laden Sie die Seite neu oder schreiben Sie uns direkt per E-Mail.';}
+        clearTimeout(loadTimer);
+        try{
+          window.turnstile.ready(()=>{
+            try{
+              const compact=captcha.getBoundingClientRect().width<300;
+              widgetId=window.turnstile.render(captcha,{sitekey,action:'contact',theme:'dark',language:'de',size:compact?'compact':'flexible',appearance:'always',
+                callback:token=>{captchaToken=token;captchaFailed=false;settleCaptcha(true);},
+                'expired-callback':()=>{captchaToken='';},
+                'timeout-callback':()=>failCaptcha('Die Sicherheitsprüfung ist abgelaufen. Bitte erneut versuchen.'),
+                'error-callback':code=>{console.warn('Turnstile challenge error:',String(code));failCaptcha('Die Sicherheitsprüfung ist momentan nicht verfügbar. Bitte erneut versuchen oder E-Mail nutzen.');}
+              });
+            }catch{failCaptcha('Die Sicherheitsprüfung konnte nicht gestartet werden. Bitte laden Sie die Seite neu.');}
           });
-        });
+        }catch{failCaptcha('Die Sicherheitsprüfung konnte nicht gestartet werden. Bitte laden Sie die Seite neu.');}
       };
-      script.onerror=()=>{captchaFailed=true;status.textContent='Die Sicherheitsprüfung konnte nicht geladen werden. Bitte laden Sie die Seite neu oder schreiben Sie uns direkt per E-Mail.';};
+      script.onerror=()=>{clearTimeout(loadTimer);failCaptcha('Die Sicherheitsprüfung konnte nicht geladen werden. Bitte prüfen Sie Ihren Browser oder nutzen Sie E-Mail.');};
       document.head.appendChild(script);
+    }
+    async function awaitCaptcha(){
+      if(!sitekey||captchaToken)return true;
+      if(captchaFailed&&widgetId!==null){
+        captchaFailed=false;
+        try{window.turnstile.reset(widgetId);}catch{return false;}
+      }
+      if(captchaFailed)return false;
+      return new Promise(resolve=>{
+        const timer=setTimeout(()=>{challengeWait=null;resolve(false);},20000);
+        challengeWait=ok=>{clearTimeout(timer);resolve(ok);};
+      });
     }
     function mailto(data){
       const subject='Projektanfrage CreAid-Media: '+String(data.get('service')||'Allgemein').slice(0,80);
@@ -103,8 +134,16 @@
         status.textContent='Ihr E-Mail-Programm wird geöffnet. Bitte die Nachricht dort noch selbst absenden.';
         window.location.href=mailto(data);return;
       }
-      if(sitekey&&!captchaToken){status.textContent=captchaFailed?'Die Sicherheitsprüfung ist derzeit nicht verfügbar. Sie können alternativ eine E-Mail vorbereiten.':'Bitte warten Sie, bis die Sicherheitsprüfung abgeschlossen ist.';if(captchaFailed){fallback.href=mailto(data);fallback.hidden=false;}return;}
       pending=true;submit.disabled=true;form.setAttribute('aria-busy','true');
+      if(sitekey&&!captchaToken){
+        status.textContent='Sicherheitsprüfung läuft … Bitte bestätigen Sie gegebenenfalls das sichtbare Prüfkästchen.';
+        if(!await awaitCaptcha()||!captchaToken){
+          status.textContent='Die Sicherheitsprüfung konnte nicht abgeschlossen werden. Bitte erneut versuchen oder E-Mail nutzen.';
+          fallback.href=mailto(data);fallback.hidden=false;
+          pending=false;submit.disabled=false;form.removeAttribute('aria-busy');
+          return;
+        }
+      }
       fallback.hidden=true;fallback.removeAttribute('href');
       status.textContent='Ihre Anfrage wird übermittelt …';
       const controller=new AbortController();
