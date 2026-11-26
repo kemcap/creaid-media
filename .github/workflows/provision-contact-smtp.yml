@@ -1,0 +1,36 @@
+name: Configure and test preview contact SMTP
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/provision-contact-smtp.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ionos-preview-deployment
+  cancel-in-progress: false
+jobs:
+  provision:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate scripts
+        run: python3 -m py_compile .github/scripts/provision-contact-smtp.py .github/scripts/verify-contact-protection.py
+      - name: Install SFTP client
+        run: |
+          if ! /usr/bin/python3 -c 'import paramiko'; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends python3-paramiko
+          fi
+      - name: Provision only private preview config and perform one internal test
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          CONTACT_SMTP_PASSWORD: ${{ secrets.CONTACT_SMTP_PASSWORD }}
+        run: /usr/bin/python3 .github/scripts/provision-contact-smtp.py
