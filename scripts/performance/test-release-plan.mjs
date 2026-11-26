@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import {mkdtempSync,mkdirSync,writeFileSync,rmSync,readFileSync} from 'node:fs';
+import {join} from 'node:path';
+import {tmpdir} from 'node:os';
+import {createHash} from 'node:crypto';
+import {planRelease} from './release-plan.mjs';
+const root=mkdtempSync(join(tmpdir(),'creaid-release-'));
+const before=join(root,'before'),after=join(root,'after');
+const hashed=bytes=>'assets/app.sha256-'+createHash('sha256').update(bytes).digest('hex')+'.js';
+try{
+  for(const p of [before,after])mkdirSync(join(p,'assets'),{recursive:true});
+  const old=hashed('old'),next=hashed('new');
+  writeFileSync(join(before,old),'old');
+  writeFileSync(join(after,next),'new');
+  writeFileSync(join(before,'index.html'),'<h1>Before</h1>');
+  writeFileSync(join(after,'index.html'),'<h1>After</h1>');
+  writeFileSync(join(before,'assets/base.css'),'old css');
+  writeFileSync(join(after,'assets/base.css'),'new css');
+  writeFileSync(join(before,'removed.html'),'old page');
+  writeFileSync(join(after,'.htaccess'),'# rules');
+  const result=planRelease({before,after});
+  assert.equal(result.deployment,'not performed');assert.equal(result.automaticDeletion,false);
+  assert.equal(result.phases.immutableAssets[0].path,next);
+  assert.equal(result.phases.html[0].path,'index.html');
+  assert.ok(result.retained.some(r=>r.path===old));
+  assert.ok(result.blocked.some(r=>r.path==='removed.html'));
+  assert.ok(result.blocked.some(r=>r.reason.includes('Mutable assets')));
+  assert.equal(readFileSync(join(before,old),'utf8'),'old');
+  writeFileSync(join(after,'index.html'),'<meta name="robots" content="noindex">');
+  assert.equal(planRelease({before,after}).previewMarkers,true);
+  writeFileSync(join(after,next),'tampered');
+  assert.throws(()=>planRelease({before,after}),/Invalid fingerprint/);
+  console.log('PASS: release plan, hash verification, retained old assets, mutable/stale file blockers and preview guard');
+}finally{rmSync(root,{recursive:true,force:true});}

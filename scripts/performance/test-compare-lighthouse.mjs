@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import { compareLighthouse } from './compare-lighthouse.mjs';
+const fixture=(score,lcp,formFactor='mobile')=>({lighthouseVersion:'12.0.0',configSettings:{formFactor,throttlingMethod:'simulate'},categories:{performance:{score}},audits:{'largest-contentful-paint':{numericValue:lcp},'first-contentful-paint':{numericValue:1000},'cumulative-layout-shift':{numericValue:0.02},'total-blocking-time':{numericValue:100},'speed-index':{numericValue:2000}}});
+const before=[fixture(.7,3000),fixture(.6,4000),fixture(.8,2000)];
+const after=[fixture(.9,1800),fixture(.8,2000),fixture(.95,1500)];
+const result=compareLighthouse(before,after);
+assert.equal(result.runsPerGroup,3);
+assert.equal(result.rows.find(x=>x.metric==='lcp').delta,-1200);
+assert.equal(result.rows.find(x=>x.metric==='performance').delta,20);
+assert.throws(()=>compareLighthouse(before,after.slice(1)),/equally sized/);
+assert.throws(()=>compareLighthouse(before,[...after.slice(0,2),fixture(.9,1800,'desktop')]),/differ/);
+assert.throws(()=>compareLighthouse(before,[...after.slice(0,2),{...after[2],runtimeError:{code:'ERROR'}}]),/runtime error/);
+console.log('PASS: Lighthouse medians, range, configuration and error guards');

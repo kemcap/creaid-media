@@ -13,10 +13,27 @@
     "test:routes": "node scripts/check-routes.mjs",
     "verify": "npm run build && npm run test:structure && npm run test:quality",
     "test:quality": "node scripts/check-quality.mjs",
-    "test:browser": "node scripts/check-browser.mjs"
+    "test:browser": "node scripts/check-browser.mjs",
+    "test:performance": "node scripts/performance/test-prepare-candidate.mjs && node scripts/performance/test-engine.mjs && node scripts/performance/test-audit.mjs && node scripts/performance/test-pipeline.mjs && node scripts/performance/test-snapshot.mjs && node scripts/performance/test-accept-preview.mjs && node scripts/performance/test-cache-warmup.mjs && node scripts/performance/test-release-plan.mjs && node scripts/performance/test-suggest-balanced.mjs",
+    "performance:preview": "node scripts/performance/engine.mjs",
+    "performance:audit": "node scripts/performance/audit.mjs",
+    "performance:pipeline": "node scripts/performance/pipeline.mjs",
+    "performance:coverage": "node scripts/performance/browser-coverage.mjs",
+    "performance:lighthouse": "node scripts/performance/measure-lighthouse.mjs",
+    "performance:visual": "node scripts/performance/visual-regression.mjs",
+    "performance:snapshot": "node scripts/performance/snapshot.mjs snapshot",
+    "performance:restore": "node scripts/performance/snapshot.mjs restore",
+    "performance:accept": "node scripts/performance/accept-preview.mjs",
+    "performance:studio": "node scripts/performance/studio-local.mjs",
+    "performance:warmup": "node scripts/performance/cache-warmup.mjs",
+    "performance:release-plan": "node scripts/performance/release-plan.mjs",
+    "performance:benchmark": "node scripts/performance/benchmark.mjs",
+    "performance:suggest-balanced": "node scripts/performance/suggest-balanced.mjs",
+    "performance:preview-hosting": "node scripts/performance/preview-hosting.mjs"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.1.8"
+    "@11ty/eleventy": "3.1.8",
+    "htmlparser2": "7.2.0"
   },
   "dependencies": {
     "@fontsource/ubuntu": "5.3.0",

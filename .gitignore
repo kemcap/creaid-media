@@ -1,3 +1,8 @@
 node_modules/
 .DS_Store
 .cache/
+
+# Local Performance Studio data (never commit reports or tool installations)
+.creaid-performance-runs/
+.performance-tools/
+.performance-browser-tools/

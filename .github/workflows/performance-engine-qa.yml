@@ -1,0 +1,60 @@
+name: Performance Engine QA (no deployment)
+on:
+  pull_request:
+    paths:
+      - 'scripts/performance/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/performance-engine-qa.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run test:performance
+      - name: Install Apache HTTP test server
+        run: |
+          if ! test -f /usr/lib/apache2/modules/mod_brotli.so; then
+            sudo apt-get update
+            sudo apt-get install -y apache2
+          fi
+      - run: node scripts/performance/test-apache-http.mjs
+      - name: Install isolated optional optimization tools
+        run: npm install --prefix "$RUNNER_TEMP/creaid-opt-tools" --save-exact --no-audit --no-fund esbuild@0.25.12 sharp@0.34.1
+      - run: node scripts/performance/test-optimize-input.mjs "$RUNNER_TEMP/creaid-opt-tools"
+      - run: node scripts/performance/test-responsive-images.mjs "$RUNNER_TEMP/creaid-opt-tools"
+      - run: node scripts/performance/test-compare-lighthouse.mjs
+      - name: Install isolated browser measurement tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/creaid-browser-tools" --save-exact --no-audit --no-fund playwright@1.56.1 lighthouse@12.8.2 pngjs@7.0.0 pixelmatch@7.1.0
+          "$RUNNER_TEMP/creaid-browser-tools/node_modules/.bin/playwright" install --with-deps chromium
+      - run: node scripts/performance/test-browser-measurement.mjs "$RUNNER_TEMP/creaid-browser-tools"
+      - run: node scripts/performance/test-responsive-browser.mjs "$RUNNER_TEMP/creaid-opt-tools" "$RUNNER_TEMP/creaid-browser-tools"
+      - run: node scripts/performance/test-studio-visual.mjs "$RUNNER_TEMP/creaid-browser-tools"
+      - run: node scripts/performance/test-studio-local.mjs "$RUNNER_TEMP/creaid-browser-tools" --benchmark
+      - run: npm run verify
+      - run: npm run performance:preview -- dist performance-preview
+      - run: npm run performance:audit -- dist performance-audit
+      - name: Generate reviewable Balanced profile from real CreAid build
+        run: |
+          npm run performance:suggest-balanced -- performance-audit/audit.json "$RUNNER_TEMP/creaid-balanced-config.json"
+          node --input-type=module -e 'import {readFileSync} from "node:fs";const p=JSON.parse(readFileSync("performance-audit/priorities.json","utf8"));console.log(JSON.stringify({auditHints:p.occurrences,uniqueReviewItems:p.uniqueItems,highPriorityItems:p.high}));'
+      - name: Verify central preview pipeline on the full build
+        run: |
+          printf '{"schemaVersion":1}' > "$RUNNER_TEMP/creaid-pipeline-config.json"
+          npm run performance:pipeline -- dist performance-pipeline "$RUNNER_TEMP/creaid-pipeline-config.json"
+      - name: Real CreAid safe preview acceptance (no deployment)
+        run: npm run performance:accept -- dist performance-pipeline/package performance-acceptance "$RUNNER_TEMP/creaid-browser-tools"
+      - name: Evaluate actual CreAid Balanced candidate (no deployment)
+        run: node scripts/performance/evaluate-balanced.mjs dist performance-balanced "$RUNNER_TEMP/creaid-opt-tools" "$RUNNER_TEMP/creaid-browser-tools"
+      - name: Lighthouse smoke test (synthetic fixture only)
+        run: node scripts/performance/test-browser-measurement.mjs "$RUNNER_TEMP/creaid-browser-tools" --lighthouse
+      # Reports contain internal paths; keep them in the runner, not public artifacts.
