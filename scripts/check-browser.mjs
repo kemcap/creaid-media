@@ -35,6 +35,41 @@ async function readyForScreenshot(page){
   await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
  });
 }
+// Replay reviewed copy edits in the older reference so the whole layout is still compared.
+async function updateEditorialReference(page,route){
+ if(route==='/wann-lohnt-sich-seo'){
+  await page.evaluate(()=>{
+   const meta=document.querySelector('.j-editorial-meta p');
+   if(meta?.textContent==='Lesezeit: ca. 6 Min.'){
+    meta.classList.add('creaid-editorial-v21-meta');
+    const label=document.createElement('strong');label.textContent='Themen:';
+    meta.append(' | ',label,' Lokale Suche, Handwerk, Google Ads, SEO-Budget');
+   }
+   const corrections=new Map([
+    ['wann lohnt sich seo für handwerksbetriebe?','Wann lohnt sich SEO für Handwerksbetriebe?'],
+    ['woran sie erkennen, ob sich seo für ihren betrieb rechnet','Woran Sie erkennen, ob sich SEO für Ihren Betrieb rechnet'],
+   ]);
+   for(const node of document.querySelectorAll('.j-prose h2,.j-toc a,.j-toc-mobile a')){
+    const updated=corrections.get(node.textContent.trim());
+    if(updated)node.textContent=updated;
+   }
+  });
+ }
+ if(route==='/webdesign-agentur-fuer-handwerker'){
+  await page.evaluate(()=>{
+   const heading=document.getElementById('beitrag-als-podcast-anhoren');
+   if(heading?.textContent!=='Beitrag als Podcast anhören:')return;
+   const previous=heading.previousElementSibling;
+   if(previous?.textContent.trim()==='🕐 Lesezeit: ca. 7 Min.')previous.remove();
+   heading.textContent='Wie Kunden heute Handwerksbetriebe finden';
+   for(const link of document.querySelectorAll('a[href="#beitrag-als-podcast-anhoren"]')){
+    for(const child of link.childNodes){
+     if(child.nodeType===Node.TEXT_NODE&&child.textContent.trim()==='Beitrag als Podcast anhören:')child.textContent=heading.textContent;
+    }
+   }
+  });
+ }
+}
 async function inspect(page,route,viewport,engine,compare){
  const localErrors=[];
  const onError=e=>localErrors.push('JS: '+e.message);
@@ -66,6 +101,7 @@ async function inspect(page,route,viewport,engine,compare){
    const refPage=await page.context().newPage();
    try{
     await settle(refPage,reference+route);
+    await updateEditorialReference(refPage,route);
     await readyForScreenshot(refPage);
     const expected=await refPage.screenshot({animations:'disabled',caret:'hide',path:join(out,id+'-baseline.png')});
     const a=PNG.sync.read(actual),b=PNG.sync.read(expected);const diff=new PNG({width:a.width,height:a.height});
@@ -123,6 +159,11 @@ async function interactionTests(browser){
   await p.waitForFunction(id=>[...document.querySelectorAll('.j-toc a,.j-toc-mobile a')].some(a=>a.getAttribute('href')==='#'+id&&a.getAttribute('aria-current')==='location'),faqId);
   await settle(p,base+'/category/seo');
   assert.ok(await p.locator('.j-card:visible').count()>0);
+  await settle(p,base+'/wann-lohnt-sich-seo');
+  assert.match(await p.locator('.j-editorial-meta').innerText(),/Lesezeit:.*Themen:.*SEO-Budget/s);
+  await settle(p,base+'/webdesign-agentur-fuer-handwerker');
+  assert.equal(await p.locator('#beitrag-als-podcast-anhoren').innerText(),'Wie Kunden heute Handwerksbetriebe finden');
+  assert.equal(await p.getByText('Lesezeit:',{exact:true}).count(),1);
   await p.setViewportSize({width:390,height:600});
   await settle(p,base+'/online-shop-entwicklung');
   assert.equal(await p.locator('.sp-story .sp-art-panel:visible').count(),3);

@@ -17,7 +17,7 @@ try{
     $stream=fopen('php://input','rb');
     $body=stream_get_contents($stream,\CreAid\Contact\MAX_BODY+1);
     fclose($stream);
-    $send=static function(array $data,array $c):bool{
+    $send=static function(array $data,array $c) use ($private):bool{
         $m=new \PHPMailer\PHPMailer\PHPMailer(true);
         $m->isSMTP();$m->Host=$c['smtp_host'];$m->Port=$c['smtp_port'];
         $m->SMTPAuth=true;$m->Username=$c['smtp_username'];$m->Password=$c['smtp_password'];
@@ -27,7 +27,17 @@ try{
         $m->addAddress($c['recipient']);$m->addReplyTo($data['email'],$data['name']);
         $m->Subject='Projektanfrage CreAid-Media: '.$data['service'];
         $m->isHTML(false);$m->Body=\CreAid\Contact\messageBody($data);
-        return $m->send();
+        if (!$m->send()) return false;
+        if (($c['hubspot_enabled'] ?? false) === true) {
+            try {
+                require_once $private.'/hubspot.php';
+                $crm = \CreAid\Contact\recordHubSpotContact($data, $c, \CreAid\Contact\postHubSpotContact(...));
+                if (!in_array($crm, ['created', 'existing'], true)) error_log('CreAid contact CRM: '.$crm);
+            } catch (Throwable) {
+                error_log('CreAid contact CRM: unavailable');
+            }
+        }
+        return true;
     };
     echo json_encode(\CreAid\Contact\handle($_SERVER,$body,$config,$private.'/rate.json',$send,time(),\CreAid\Contact\verifyTurnstile(...)),JSON_THROW_ON_ERROR);
 }catch(\CreAid\Contact\Rejection $e){
