@@ -1,0 +1,32 @@
+name: Contact PHP backend QA (no deployment)
+on:
+  push:
+    branches: [optimization/contact-php-backend]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  qa:
+    strategy:
+      matrix:
+        php: ['8.4','8.5']
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring, openssl
+          tools: composer:v2
+          coverage: none
+      - name: Install pinned SMTP library and audit dependencies
+        working-directory: backend/contact
+        run: |
+          composer install --no-dev --no-interaction --prefer-dist
+          composer audit --no-interaction
+      - name: Lint and test without sending emails
+        run: |
+          php -l backend/contact-public/contact.php
+          php -l backend/contact/core.php
+          php -l backend/contact/config.example.php
+          php backend/contact/test.php
