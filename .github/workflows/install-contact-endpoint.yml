@@ -1,0 +1,41 @@
+name: Install preview contact endpoint
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/install-contact-endpoint.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ionos-preview-deployment
+  cancel-in-progress: false
+jobs:
+  install:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+      - name: Validate public PHP and upload script
+        run: |
+          php -l backend/contact-public/contact.php
+          python3 -m py_compile .github/scripts/install-contact-endpoint.py .github/scripts/clean-upload-ionos.py
+      - name: Install SFTP client
+        run: |
+          if ! /usr/bin/python3 -c 'import paramiko'; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends python3-paramiko
+          fi
+      - name: Install and verify only the public endpoint
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: /usr/bin/python3 .github/scripts/install-contact-endpoint.py

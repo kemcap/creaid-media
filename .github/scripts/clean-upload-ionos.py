@@ -59,6 +59,12 @@ def main():
             old=[]
             for name,a in initial.items():
                 if name in (u.OWNER_FILE,".htaccess"):continue
+                # Contact endpoint has its own restricted deployment lifecycle.
+                if name=="api":
+                    require(stat.S_ISDIR(a.st_mode),"Unsafe contact API directory.")
+                    api_entries=s.listdir_attr("api")
+                    require(len(api_entries)==1 and api_entries[0].filename=="contact.php" and stat.S_ISREG(api_entries[0].st_mode),"Unknown API files; stop.")
+                    continue
                 if re.fullmatch(r"\.creaid-(?:stage|backup)-[a-f0-9]{32}",name) and stat.S_ISDIR(a.st_mode):
                     with s.open(name+"/.htaccess","rb") as f:require(f.read(len(DENY)+1)==DENY,"Unprotected prior backup. Stop.")
                     continue
