@@ -92,7 +92,7 @@
     else grant();
     if(root && choice)root.getElementById('panel').hidden=true;
   });
-  window.addEventListener('pageshow',check);
+  window.addEventListener('pageshow',()=>{const current=read();if(choice?.analytics&&!current?.analytics){choice=current;stop();if(started){location.reload();return;}}check();});
   function mount(){
     const host=document.createElement('div');host.id='creaid-consent-host';document.body.appendChild(host);
     root=host.attachShadow({mode:'open'});
