@@ -1,0 +1,58 @@
+name: Bootstrap incremental IONOS deployment
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/ionos-incremental-qa.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ionos-preview-deployment
+  cancel-in-progress: false
+jobs:
+  audit:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests and exact current build
+        run: |
+          python .github/scripts/test-incremental-ionos.py
+          python -m py_compile .github/scripts/incremental-ionos.py .github/scripts/upload-ionos.py .github/scripts/clean-upload-ionos.py
+          npm ci
+          npm run verify
+          python -m pip install --disable-pip-version-check Pillow==11.3.0
+          python scripts/optimize-preview-images.py
+          node .github/scripts/prepare-ionos.mjs
+      - name: Install SFTP client
+        run: |
+          if ! /usr/bin/python3 -c 'import paramiko'; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends python3-paramiko
+          fi
+      - name: Audit deployed files without uploading any website files
+        env:
+          CREAID_INCREMENTAL_MODE: audit
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: /usr/bin/python3 .github/scripts/upload-ionos.py
+      - name: Repeat audit using new protected deployment state
+        env:
+          CREAID_INCREMENTAL_MODE: audit
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: /usr/bin/python3 .github/scripts/upload-ionos.py

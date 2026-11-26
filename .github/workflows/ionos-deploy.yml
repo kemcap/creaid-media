@@ -66,7 +66,7 @@ jobs:
             sudo apt-get update -qq
             sudo apt-get install -y --no-install-recommends python3-paramiko
           fi
-      - name: Upload only to dedicated IONOS preview directory
+      - name: Incremental deployment to dedicated IONOS preview
         env:
           CREAID_PREVIEW_CACHE_MODE: ${{ inputs.preview_cache || 'normal' }}
           SFTP_HOST: ${{ secrets.SFTP_HOST }}

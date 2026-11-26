@@ -31,6 +31,7 @@ def main():
     manifest=json.loads(Path("ionos-deploy-manifest.json").read_text())
     pages=set(manifest["pages"])
     require("index.html" in pages and all(re.fullmatch(r"[a-z0-9-]+\.html",p) for p in pages),"Invalid page manifest.")
+    require(b'data-sitekey="0x4AAAAAAGUfI4b2efonPTdb"' in (dist/"kontakt.html").read_bytes() and b"turnstile_token" in (dist/"assets/agency-pages.js").read_bytes(),"Build would remove Turnstile.")
     top=pages|{"robots.txt","assets"}
     files=[]
     for p in (dist/"assets").rglob("*"):
@@ -58,6 +59,10 @@ def main():
             old=[]
             for name,a in initial.items():
                 if name in (u.OWNER_FILE,".htaccess"):continue
+                if name==".creaid-deploy-state.json":
+                    require(stat.S_ISREG(a.st_mode),"Unsafe deployment state.")
+                    old.append(name)
+                    continue
                 # Contact endpoint has its own restricted deployment lifecycle.
                 if name=="api":
                     require(stat.S_ISDIR(a.st_mode),"Unsafe contact API directory.")
@@ -91,6 +96,7 @@ def main():
                 s.mkdir(d)
                 with s.open(d+"/.htaccess","wb") as f:f.write(DENY)
             with s.open(".htaccess","rb") as f:old_config=f.read()
+            require(b"BEGIN CREAID PERFORMANCE ENGINE" not in old_config and b"BEGIN CREAID PREVIEW HOST CACHE" not in old_config,"Active cache policy; clean release refused.")
             with s.open(backup+"/previous-root-config","wb") as f:f.write(old_config)
             dirs={stage}
             def ensure_dir(p):

@@ -85,46 +85,11 @@ def main():
                 from preview_cache_activation import toggle
                 toggle(sftp, cache_mode)
                 return
-            checked_dirs = {"."}
-            def ensure_dir(path):
-                if path in checked_dirs:
-                    return
-                ensure_dir(posixpath.dirname(path) or ".")
-                try:
-                    attrs = sftp.lstat(path)
-                except FileNotFoundError:
-                    sftp.mkdir(path)
-                    attrs = sftp.lstat(path)
-                require(stat.S_ISDIR(attrs.st_mode), "Remote directory is not a real directory.")
-                checked_dirs.add(path)
-            uploaded = 0
-            for path in files:
-                target = path.relative_to(dist).as_posix()
-                ensure_dir(posixpath.dirname(target) or ".")
-                exists = False
-                try:
-                    attrs = sftp.lstat(target)
-                    exists = True
-                    require(stat.S_ISREG(attrs.st_mode), "Unsafe existing remote target.")
-                except FileNotFoundError:
-                    pass
-                temp = posixpath.join(posixpath.dirname(target), ".creaid-upload-" + uuid.uuid4().hex)
-                try:
-                    sftp.put(str(path), temp, confirm=True)
-                    if exists:
-                        # Never delete an old file to replace it. Fail safely if atomic overwrite is unavailable.
-                        sftp.posix_rename(temp, target)
-                    else:
-                        sftp.rename(temp, target)
-                    require(sftp.lstat(target).st_size == path.stat().st_size, "Remote size verification failed.")
-                    uploaded += 1
-                except Exception:
-                    try:
-                        sftp.remove(temp)
-                    except OSError:
-                        pass
-                    raise
-            print(f"Uploaded and size-verified {uploaded} files, including {len(pages)} pages. No unrelated files deleted. Preview remains noindex.")
+            from importlib.util import spec_from_file_location, module_from_spec
+            spec = spec_from_file_location("incremental", Path(__file__).with_name("incremental-ionos.py"))
+            incremental = module_from_spec(spec)
+            spec.loader.exec_module(incremental)
+            incremental.deploy(sftp, files, dist, manifest, os.environ.get("CREAID_INCREMENTAL_MODE", "apply"))
     finally:
         client.close()
 if __name__ == "__main__":
