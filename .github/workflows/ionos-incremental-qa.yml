@@ -34,6 +34,7 @@ jobs:
           python -m pip install --disable-pip-version-check Pillow==11.3.0
           python scripts/optimize-preview-images.py
           node .github/scripts/prepare-ionos.mjs
+          node scripts/check-contact-cleanup.mjs
       - name: Install browser diagnostic
         run: |
           npm install --no-save --package-lock=false playwright@1.56.1
@@ -78,3 +79,5 @@ jobs:
 # Collapse the challenge after success; restore it on expiry, failure and token reset.
 
 # Stable 350ms transition: local UI simulation must pass before any website file upload.
+
+# Contact contrast, phone, footer cleanup and delayed verified-button contraction.

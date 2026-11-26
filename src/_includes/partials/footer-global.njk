@@ -35,9 +35,6 @@
         <h2 id="cm-footer-contact-heading">Kontakt</h2>
         <a href="tel:{{ site.contact.phoneHref | escape }}">{{ site.contact.phoneDisplay | escape }}</a>
         <a href="mailto:{{ site.contact.email | escape }}">{{ site.contact.email | escape }}</a>
-        <address>
-          {% for line in site.contact.addressLines %}{{ line | escape }}{% if not loop.last %}<br>{% endif %}{% endfor %}
-        </address>
       </section>
       <nav class="cm-footer__legal" aria-label="Rechtliche Informationen">
         <h2>Informationen</h2>

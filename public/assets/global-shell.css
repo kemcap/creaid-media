@@ -154,3 +154,8 @@
 }
 .cm-footer__services .cm-footer__all-services{display:inline-flex;min-height:44px;align-items:center;color:#eee;font-size:.875rem;text-decoration:underline;text-underline-offset:.2em}
 .cm-header__link[aria-current=location]{color:#ff5b86;opacity:1}
+
+/* Compact global project CTAs, retain a comfortable target height. */
+.cm-header__cta,.cm-footer__lead-cta{min-width:0;padding:10px 16px;gap:12px;font-size:12px;min-height:44px;box-sizing:border-box;width:fit-content;max-width:100%}
+.cm-footer__lead-cta span{font-size:16px}
+@media(max-width:700px){.cm-footer__lead-cta{width:auto;align-self:flex-start}}
