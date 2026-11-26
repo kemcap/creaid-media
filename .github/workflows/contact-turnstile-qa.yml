@@ -1,0 +1,22 @@
+name: Turnstile candidate QA
+on:
+  push:
+    branches: ['optimization/contact-turnstile']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, openssl
+          coverage: none
+      - run: php -l backend/contact/turnstile.php && php -l backend/contact-public/contact.php && php backend/contact/test.php && php backend/contact/test-turnstile.php
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci && node --check public/assets/agency-pages.js && npm run verify
