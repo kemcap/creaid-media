@@ -1,0 +1,33 @@
+name: Verify contact private web access protection
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-contact-protection.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ionos-preview-deployment
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install SFTP client
+        run: |
+          if ! /usr/bin/python3 -c 'import paramiko'; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends python3-paramiko
+          fi
+      - name: Test public reachability of harmless marker only
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+        run: /usr/bin/python3 .github/scripts/verify-contact-protection.py
