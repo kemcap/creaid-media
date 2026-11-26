@@ -67,6 +67,11 @@ def main():
                 if re.fullmatch(r"\.creaid-(?:stage|backup)-[a-f0-9]{32}",name) and stat.S_ISDIR(a.st_mode):
                     with s.open(name+"/.htaccess","rb") as f:require(f.read(len(DENY)+1)==DENY,"Unprotected prior backup. Stop.")
                     continue
+                if re.fullmatch(r"\.creaid-upload-[a-f0-9]{32}",name):
+                    require(stat.S_ISREG(a.st_mode),"Unsafe interrupted root upload.")
+                    print("Recognized interrupted root upload; will quarantine: "+name,flush=True)
+                    old.append(name)
+                    continue
                 require(name in top or re.fullmatch(r"[a-z0-9-]+\.html",name),"Unknown root file; refusing to touch: "+name)
                 require(stat.S_ISDIR(a.st_mode) if name=="assets" else stat.S_ISREG(a.st_mode),"Unsafe existing path: "+name)
                 old.append(name)
@@ -75,6 +80,10 @@ def main():
                     require(a.filename not in (".","..") and "/" not in a.filename,"Unsafe asset entry.")
                     p=path+"/"+a.filename
                     if stat.S_ISDIR(a.st_mode):audit_assets(p)
+                    elif stat.S_ISREG(a.st_mode) and re.fullmatch(r"\.creaid-upload-[a-f0-9]{32}",a.filename):
+                        # Interrupted atomic uploads leave this exact generated filename.
+                        # Keep it in the old assets tree, which is moved to the denied backup.
+                        print("Recognized interrupted upload; will quarantine: "+p,flush=True)
                     else:require(stat.S_ISREG(a.st_mode) and Path(a.filename).suffix.lower() in u.ASSET_SUFFIXES,"Unrecognized existing asset: "+p)
             if "assets" in old:audit_assets("assets")
             # Both private folders are protected before any files enter them.
