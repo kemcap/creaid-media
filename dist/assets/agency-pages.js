@@ -133,7 +133,7 @@
     fallback.addEventListener('click',()=>{fallback.href=mailto(new FormData(form));});
     if(direct){
       submit.textContent='Anfrage senden ↗';
-      hint.firstChild.textContent='* Pflichtfelder. Ihre Angaben werden direkt an CreAid-Media übermittelt. ';
+      // The concise required-fields and privacy line is shared by both form modes.
       intro.textContent='Ein paar Angaben genügen für den Einstieg. Beschreiben Sie kurz Ihr Vorhaben. Alternativ erreichen Sie uns telefonisch oder per E-Mail.';
     }
     form.addEventListener('submit',async e=>{

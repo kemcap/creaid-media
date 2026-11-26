@@ -154,3 +154,30 @@
 }
 .cm-footer__services .cm-footer__all-services{display:inline-flex;min-height:44px;align-items:center;color:#eee;font-size:.875rem;text-decoration:underline;text-underline-offset:.2em}
 .cm-header__link[aria-current=location]{color:#ff5b86;opacity:1}
+
+/* Compact global project CTAs, retain a comfortable target height. */
+.cm-header__cta,.cm-footer__lead-cta{min-width:0;padding:10px 16px;gap:12px;font-size:12px;min-height:44px;box-sizing:border-box;width:fit-content;max-width:100%}
+.cm-footer__lead-cta span{font-size:16px}
+@media(max-width:700px){.cm-footer__lead-cta{width:auto;align-self:flex-start}}
+
+/* Slim non-sticky contact strip above the sticky main navigation. Native scroll removes it. */
+.cm-contactbar{box-sizing:border-box;background:#1a1a1b;color:#e1dce0;font:400 12px/1.25 "Ubuntu",Arial,sans-serif;border-bottom:1px solid rgba(255,255,255,.1);position:relative;z-index:1}
+.cm-contactbar *{box-sizing:border-box}
+.cm-contactbar__inner{width:min(1380px,calc(100% - 76px));min-height:30px;margin:auto;display:flex;align-items:center;justify-content:flex-end;gap:0}
+.cm-contactbar__link{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:0 13px;min-height:28px;white-space:nowrap;color:inherit;text-decoration:none;transition:color .2s}
+.cm-contactbar__link+ .cm-contactbar__link{border-left:1px solid rgba(255,255,255,.13)}
+.cm-contactbar__link:first-child{padding-left:0}
+.cm-contactbar__link:last-child{padding-right:0}
+.cm-contactbar__link svg{flex:none;color:#ff7698}
+.cm-contactbar__link:hover,.cm-contactbar__link:focus-visible{color:#fff}
+.cm-contactbar__link:focus-visible{outline:2px solid #ff83a1;outline-offset:-2px}
+@media(max-width:1120px){.cm-contactbar__inner{width:calc(100% - 44px)}}
+@media(max-width:570px){
+ .cm-contactbar__inner{width:calc(100% - 34px);min-height:34px;justify-content:space-between}
+ .cm-contactbar__link{min-height:32px;padding:0 10px;gap:6px}
+ .cm-contactbar__link:not(.cm-contactbar__phone){min-width:34px}
+ .cm-contactbar__link:not(.cm-contactbar__phone) span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .cm-contactbar__link svg{width:16px;height:16px}
+ .cm-contactbar__phone{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.cm-contactbar__link{transition:none}}
