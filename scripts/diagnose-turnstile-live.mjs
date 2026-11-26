@@ -11,7 +11,7 @@ try{
  await form.waitFor({state:'visible',timeout:15000});
  await form.scrollIntoViewIfNeeded();
  const widget=page.locator('#aTurnstile');
- await widget.waitFor({state:'visible',timeout:15000});
+ await widget.waitFor({state:'attached',timeout:15000});
  await page.waitForFunction(()=>!!window.turnstile,{},{timeout:20000});
  await page.waitForFunction(()=>document.querySelector('#aTurnstile iframe'),{},{timeout:25000});
  await page.waitForTimeout(4000);
