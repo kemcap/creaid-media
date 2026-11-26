@@ -18,6 +18,7 @@ on:
       - 'eleventy.config.js'
       - 'package.json'
       - 'package-lock.json'
+      - '.github/workflows/ionos-deploy.yml'
 permissions:
   contents: read
 concurrency:
@@ -25,7 +26,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || vars.IONOS_AUTO_DEPLOY == 'true')
+    # Main is the approved preview branch; verification must pass before SFTP upload.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:
