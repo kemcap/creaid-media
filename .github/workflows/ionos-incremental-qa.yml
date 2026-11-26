@@ -70,3 +70,5 @@ jobs:
           name: turnstile-live-diagnostic
           path: turnstile-live.png
           if-no-files-found: ignore
+
+# Use documented Cloudflare API onload callback; require a real widget iframe in browser QA.

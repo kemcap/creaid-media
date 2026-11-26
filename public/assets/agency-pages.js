@@ -83,24 +83,21 @@
       captcha.style.minHeight='66px';
       captcha.style.minWidth='0';
       const script=document.createElement('script');
-      script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=creaidTurnstileLoaded';
       script.async=true;
       const loadTimer=setTimeout(()=>failCaptcha('Die Sicherheitsprüfung konnte nicht geladen werden. Bitte versuchen Sie es erneut oder nutzen Sie E-Mail.'),20000);
-      script.onload=()=>{
+      window.creaidTurnstileLoaded=()=>{
         clearTimeout(loadTimer);
         try{
-          window.turnstile.ready(()=>{
-            try{
-              const compact=captcha.getBoundingClientRect().width<300;
-              widgetId=window.turnstile.render(captcha,{sitekey,action:'contact',theme:'dark',language:'de',size:compact?'compact':'flexible',appearance:'always',
-                callback:token=>{captchaToken=token;captchaFailed=false;settleCaptcha(true);},
-                'expired-callback':()=>{captchaToken='';},
-                'timeout-callback':()=>failCaptcha('Die Sicherheitsprüfung ist abgelaufen. Bitte erneut versuchen.'),
-                'error-callback':code=>{console.warn('Turnstile challenge error:',String(code));failCaptcha('Die Sicherheitsprüfung ist momentan nicht verfügbar. Bitte erneut versuchen oder E-Mail nutzen.');}
-              });
-            }catch{failCaptcha('Die Sicherheitsprüfung konnte nicht gestartet werden. Bitte laden Sie die Seite neu.');}
+          if(widgetId!==null)return;
+          const compact=captcha.getBoundingClientRect().width<300;
+          widgetId=window.turnstile.render('#aTurnstile',{sitekey,action:'contact',theme:'dark',language:'de',size:compact?'compact':'flexible',appearance:'always',
+            callback:token=>{captchaToken=token;captchaFailed=false;settleCaptcha(true);},
+            'expired-callback':()=>{captchaToken='';},
+            'timeout-callback':()=>failCaptcha('Die Sicherheitsprüfung ist abgelaufen. Bitte erneut versuchen.'),
+            'error-callback':code=>{console.warn('Turnstile challenge error:',String(code));failCaptcha('Die Sicherheitsprüfung ist momentan nicht verfügbar. Bitte erneut versuchen oder E-Mail nutzen.');}
           });
-        }catch{failCaptcha('Die Sicherheitsprüfung konnte nicht gestartet werden. Bitte laden Sie die Seite neu.');}
+        }catch(error){console.warn('Turnstile render failed:',error?.message||'unknown');failCaptcha('Die Sicherheitsprüfung konnte nicht gestartet werden. Bitte laden Sie die Seite neu.');}
       };
       script.onerror=()=>{clearTimeout(loadTimer);failCaptcha('Die Sicherheitsprüfung konnte nicht geladen werden. Bitte prüfen Sie Ihren Browser oder nutzen Sie E-Mail.');};
       document.head.appendChild(script);
