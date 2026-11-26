@@ -18,6 +18,12 @@ FINGERPRINTS = {
     "SHA256:1gx2w8Rtv3wCgi7Jh8myf/KVd72cRQbow03UP8P095Q",
 }
 ASSET_SUFFIXES = {".css", ".js", ".webp", ".avif", ".jpg", ".jpeg", ".png", ".gif", ".svg", ".ico", ".woff", ".woff2", ".ttf", ".otf", ".txt", ".mp4", ".webm", ".pdf"}
+# Only this reviewed, non-indexable design demo may be deployed as HTML under assets.
+PREVIEW_HTML_ASSETS = frozenset({"assets/demos/cookie-consent-v4.html"})
+def allowed_asset(relative):
+    path = Path(relative)
+    return path.suffix.lower() in ASSET_SUFFIXES or path.as_posix() in PREVIEW_HTML_ASSETS
+
 class PinnedIONOSKey(paramiko.MissingHostKeyPolicy):
     def missing_host_key(self, client, hostname, key):
         digest = "SHA256:" + base64.b64encode(hashlib.sha256(key.asbytes()).digest()).decode().rstrip("=")
@@ -57,7 +63,7 @@ def main():
         require(not path.is_symlink(), "Symlink in local assets.")
         if path.is_dir():
             continue
-        require(path.is_file() and path.suffix.lower() in ASSET_SUFFIXES, "Unexpected asset type: " + path.name)
+        require(path.is_file() and allowed_asset(path.relative_to(dist)), "Unexpected asset type: " + path.name)
         assets.append(path)
     files = [dist / ".htaccess", dist / "robots.txt"] + sorted(assets) + sorted(p for p in pages if p.name != "index.html") + [dist / "index.html"]
     for path in files:

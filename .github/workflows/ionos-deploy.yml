@@ -22,6 +22,7 @@ on:
       - '.github/scripts/incremental-ionos.py'
       - '.github/scripts/upload-ionos.py'
       - '.github/scripts/test-incremental-ionos.py'
+      - '.github/scripts/prepare-ionos.mjs'
 permissions:
   contents: read
 concurrency:

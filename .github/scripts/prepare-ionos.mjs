@@ -18,6 +18,13 @@ for(const [url,file] of files){
 }
 lines.push('</IfModule>','<IfModule mod_headers.c>','Header always set X-Robots-Tag "noindex, nofollow, noarchive"','Header onsuccess unset Cache-Control','Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"','</IfModule>','<FilesMatch "^\\.creaid-">','Require all denied','</FilesMatch>','');
 assert.ok(existsSync('dist/assets')&&existsSync('dist/robots.txt'));
+const consentDemo='dist/assets/demos/cookie-consent-v4.html';
+if(existsSync(consentDemo)){
+ const demo=readFileSync(consentDemo,'utf8');
+ assert.ok(demo.includes('name="robots" content="noindex,nofollow,noarchive"'),'Cookie demo missing preview protection');
+ assert.ok(demo.includes('keine Tracking-Dienste geladen'),'Cookie demo must be explicitly marked as a simulation');
+ assert.ok(!/<(?:script|iframe|img|link)\b[^>]*\b(?:src|href)=["'](?:https?:)?\/\//i.test(demo),'Unexpected external resource in cookie demo');
+}
 writeFileSync('dist/.htaccess',lines.join('\n'));
 writeFileSync('ionos-deploy-manifest.json',JSON.stringify({pages:files.map(([,f])=>f),redirects:redirects.length},null,2));
 console.log('Prepared '+files.length+' pages and '+redirects.length+' redirects; noindex preserved.');
