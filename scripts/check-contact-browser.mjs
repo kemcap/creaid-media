@@ -7,6 +7,16 @@ let calls=0, mode='unavailable', last;
 try{
  await context.route('**/*',async route=>{
   const url=new URL(route.request().url());
+  if(url.hostname==='challenges.cloudflare.com'){
+   await route.fulfill({contentType:'application/javascript',body:`
+    window.turnstile={render:(_selector,options)=>{
+     window.verifyTestChallenge=()=>options.callback('local-browser-test-token');
+     return 'local-browser-test-widget';
+    },reset:()=>{}};
+    window.creaidTurnstileLoaded();
+   `});
+   return;
+  }
   if(url.origin!==origin){await route.abort();return;}
   if(url.pathname==='/api/contact.php'){
    calls++;last=route.request().postDataJSON();
@@ -20,6 +30,8 @@ try{
  });
  const page=await context.newPage();
  await page.goto(origin+'/kontakt?service=Webdesign%20%26%20Entwicklung');
+ await page.waitForFunction(()=>typeof window.verifyTestChallenge==='function');
+ const verifyChallenge=()=>page.evaluate(()=>window.verifyTestChallenge());
  const form=page.locator('#agencyEnquiry'),status=page.locator('#aFormMessage'),fallback=page.locator('#aFormFallback'),submit=form.locator('button[type=submit]');
  await form.waitFor({state:'visible'});
  assert.equal(await form.locator('[name=service]').inputValue(),'Webdesign & Entwicklung');
@@ -27,6 +39,9 @@ try{
  await form.locator('[name=name]').fill('QA Kontakt');
  await form.locator('[name=email]').fill('qa@example.invalid');
  await form.locator('[name=message]').fill('Isolierter Test ohne E-Mail-Versand');
+ assert.equal(await submit.isDisabled(),true);
+ assert.equal(calls,0);
+ await verifyChallenge();
  await form.evaluate(el=>el.requestSubmit());
  await form.evaluate(el=>el.dispatchEvent(new Event('submit',{cancelable:true})));
  assert.equal(await submit.isDisabled(),true);
@@ -34,22 +49,27 @@ try{
  assert.equal(calls,1);
  assert.equal(last.website,'');
  assert.equal(last.service,'Webdesign & Entwicklung');
+ assert.equal(last.turnstile_token,'local-browser-test-token');
  assert.equal(await fallback.isVisible(),true);
  assert.match(await fallback.getAttribute('href'),/^mailto:info@creaid-media\.de/);
  assert.equal(await form.locator('[name=message]').inputValue(),'Isolierter Test ohne E-Mail-Versand');
  mode='invalid';
+ await verifyChallenge();
  await form.evaluate(el=>el.requestSubmit());
  await page.waitForFunction(()=>document.querySelector('#aFormMessage').textContent.includes('Angaben'));
  assert.equal(await fallback.isVisible(),false);
  mode='limit';
+ await verifyChallenge();
  await form.evaluate(el=>el.requestSubmit());
  await page.waitForFunction(()=>document.querySelector('#aFormMessage').textContent.includes('Zu viele'));
  assert.equal(await fallback.isVisible(),true);
  mode='network';
+ await verifyChallenge();
  await form.evaluate(el=>el.requestSubmit());
  await page.waitForFunction(()=>document.querySelector('#aFormMessage').textContent.includes('doppelte'));
  assert.equal(await fallback.isVisible(),true);
  mode='accepted';
+ await verifyChallenge();
  await form.evaluate(el=>el.requestSubmit());
  await page.waitForFunction(()=>document.querySelector('#aFormMessage').textContent.includes('erfolgreich'));
  assert.equal(await form.locator('[name=message]').inputValue(),'');
