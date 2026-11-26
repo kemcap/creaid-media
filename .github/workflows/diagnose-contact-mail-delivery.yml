@@ -1,0 +1,30 @@
+name: Diagnose contact mail delivery
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/diagnose-contact-mail-delivery.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install read-only diagnostic dependencies
+        run: |
+          if ! /usr/bin/python3 -c 'import paramiko' || ! command -v dig >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends python3-paramiko dnsutils
+          fi
+      - name: Inspect MX, configured recipient and sender delivery notices
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          CONTACT_SMTP_PASSWORD: ${{ secrets.CONTACT_SMTP_PASSWORD }}
+        run: /usr/bin/python3 .github/scripts/diagnose-contact-mail-delivery.py
