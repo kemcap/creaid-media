@@ -17,7 +17,7 @@ FINGERPRINTS = {
     "SHA256:psLDE8kfhoS9GWrc/GTrdlPvyKPcWcGZv2JxOCvwF3w",
     "SHA256:1gx2w8Rtv3wCgi7Jh8myf/KVd72cRQbow03UP8P095Q",
 }
-ASSET_SUFFIXES = {".css", ".js", ".webp", ".avif", ".jpg", ".jpeg", ".png", ".gif", ".svg", ".ico", ".woff", ".woff2", ".ttf", ".otf", ".txt", ".mp4", ".webm", ".pdf"}
+ASSET_SUFFIXES = {".css", ".js", ".mjs", ".webp", ".avif", ".jpg", ".jpeg", ".png", ".gif", ".svg", ".ico", ".woff", ".woff2", ".ttf", ".otf", ".txt", ".mp4", ".webm", ".pdf"}
 class PinnedIONOSKey(paramiko.MissingHostKeyPolicy):
     def missing_host_key(self, client, hostname, key):
         digest = "SHA256:" + base64.b64encode(hashlib.sha256(key.asbytes()).digest()).decode().rstrip("=")
@@ -47,7 +47,7 @@ def main():
     require(os.environ["SFTP_PORT"] == "22" and host.endswith(".webspace-data.io"), "Unexpected IONOS host or port.")
     require(bool(password), "Missing SFTP password.")
     cache_mode = os.environ.get("CREAID_PREVIEW_CACHE_MODE", "normal")
-    require(cache_mode in ("normal", "enabled", "disabled"), "Invalid preview cache mode.")
+    require(cache_mode in ("auto", "normal", "enabled", "disabled"), "Invalid preview cache mode.")
     dist = Path("dist")
     manifest = json.loads(Path("ionos-deploy-manifest.json").read_text())
     pages = [dist / name for name in manifest["pages"]]
@@ -76,11 +76,15 @@ def main():
                 with sftp.open(OWNER_FILE, "rb") as f:
                     require(f.read(len(OWNER)+1) == OWNER, "Deployment marker does not match.")
             else:
-                require(cache_mode == "normal", "Cache activation requires an existing dedicated deployment marker.")
+                require(cache_mode in ("normal", "auto"), "Cache activation requires an existing dedicated deployment marker.")
                 require(not initial, "First upload requires an empty dedicated directory. No existing files changed.")
                 with sftp.open(OWNER_FILE, "wx") as f:
                     f.write(OWNER)
             print("Dedicated preview directory verified.")
+            if cache_mode == "auto":
+                from publish_cached_preview import publish_cached
+                publish_cached(sftp)
+                return
             if cache_mode != "normal":
                 from preview_cache_activation import toggle
                 toggle(sftp, cache_mode)

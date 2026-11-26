@@ -3,10 +3,10 @@ on:
   workflow_dispatch:
     inputs:
       preview_cache:
-        description: "Normaler Upload / Vorschau-Cache aktivieren / deaktivieren"
+        description: "Auto: Build mit Cache / normal: ohne Cache / Cache umschalten"
         type: choice
-        options: [normal, enabled, disabled]
-        default: normal
+        options: [auto, normal, enabled, disabled]
+        default: auto
         required: true
   push:
     branches: [main]
@@ -25,9 +25,11 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || vars.IONOS_AUTO_DEPLOY == 'true')
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || vars.IONOS_AUTO_DEPLOY != 'false')
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 45
+    env:
+      CREAID_PREVIEW_CACHE_MODE: ${{ (inputs.preview_cache == 'normal' || inputs.preview_cache == 'enabled' || inputs.preview_cache == 'disabled') && inputs.preview_cache || (vars.IONOS_PREVIEW_CACHE == 'disabled' && 'normal' || 'auto') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -56,10 +58,19 @@ jobs:
       - name: Prepare protected preview and Apache routing
         run: node .github/scripts/prepare-ionos.mjs
       - name: Prepare isolated cache-only candidate
-        if: github.event_name == 'workflow_dispatch' && inputs.preview_cache != 'normal'
+        if: env.CREAID_PREVIEW_CACHE_MODE != 'normal'
         run: |
           node scripts/performance/test-prepare-candidate.mjs
           node .github/scripts/prepare-preview-cache.mjs
+          python .github/scripts/test_preview_cache_activation.py
+          python .github/scripts/test_publish_cached_preview.py
+      - name: Validate candidate browser rendering against current unmodified build
+        if: env.CREAID_PREVIEW_CACHE_MODE == 'auto'
+        run: bash .github/scripts/test-cache-browser.sh
+      - name: Ensure this is still the latest main revision
+        run: |
+          set -euo pipefail
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$GITHUB_SHA"
       - name: Install SFTP client
         run: |
           if ! /usr/bin/python3 -c 'import paramiko'; then
@@ -68,7 +79,6 @@ jobs:
           fi
       - name: Upload only to dedicated IONOS preview directory
         env:
-          CREAID_PREVIEW_CACHE_MODE: ${{ inputs.preview_cache || 'normal' }}
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
