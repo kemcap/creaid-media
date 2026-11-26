@@ -73,7 +73,7 @@
       if(challengeWait){const finish=challengeWait;challengeWait=null;finish(ok);}
     }
     function failCaptcha(text){
-      captchaToken='';captchaFailed=true;settleCaptcha(false);
+      captchaToken='';captchaFailed=true;if(captcha)captcha.hidden=false;settleCaptcha(false);
       status.textContent=text;
     }
     // Render only after the parent form is visible. Give the visitor real feedback.
@@ -92,8 +92,8 @@
           if(widgetId!==null)return;
           const compact=captcha.getBoundingClientRect().width<300;
           widgetId=window.turnstile.render('#aTurnstile',{sitekey,action:'contact',theme:'dark',language:'de',size:compact?'compact':'flexible',appearance:'always',
-            callback:token=>{captchaToken=token;captchaFailed=false;settleCaptcha(true);},
-            'expired-callback':()=>{captchaToken='';},
+            callback:token=>{captchaToken=token;captchaFailed=false;captcha.hidden=true;settleCaptcha(true);},
+            'expired-callback':()=>{captchaToken='';captcha.hidden=false;},
             'timeout-callback':()=>failCaptcha('Die Sicherheitsprüfung ist abgelaufen. Bitte erneut versuchen.'),
             'error-callback':code=>{console.warn('Turnstile challenge error:',String(code));failCaptcha('Die Sicherheitsprüfung ist momentan nicht verfügbar. Bitte erneut versuchen oder E-Mail nutzen.');}
           });
@@ -104,6 +104,7 @@
     }
     async function awaitCaptcha(){
       if(!sitekey||captchaToken)return true;
+      if(captcha)captcha.hidden=false;
       if(captchaFailed&&widgetId!==null){
         captchaFailed=false;
         try{window.turnstile.reset(widgetId);}catch{return false;}
@@ -169,7 +170,7 @@
         status.textContent='Der Versand konnte nicht bestätigt werden. Bitte nicht sofort erneut senden, um doppelte Nachrichten zu vermeiden. Ihre Angaben bleiben erhalten.';
         fallback.href=mailto(data);fallback.hidden=false;
       }finally{
-        if(sitekey){captchaToken='';if(widgetId!==null){try{window.turnstile?.reset(widgetId);}catch{captchaFailed=true;}}}
+        if(sitekey){captchaToken='';captcha.hidden=false;if(widgetId!==null){try{window.turnstile?.reset(widgetId);}catch{captchaFailed=true;}}}
         clearTimeout(timer);pending=false;submit.disabled=false;form.removeAttribute('aria-busy');
       }
     });

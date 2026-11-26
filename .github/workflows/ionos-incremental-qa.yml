@@ -72,3 +72,5 @@ jobs:
           if-no-files-found: ignore
 
 # Use documented Cloudflare API onload callback; require a real widget iframe in browser QA.
+
+# Collapse the challenge after success; restore it on expiry, failure and token reset.
