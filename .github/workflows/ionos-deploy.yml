@@ -19,6 +19,9 @@ on:
       - 'package.json'
       - 'package-lock.json'
       - '.github/workflows/ionos-deploy.yml'
+      - '.github/scripts/incremental-ionos.py'
+      - '.github/scripts/upload-ionos.py'
+      - '.github/scripts/test-incremental-ionos.py'
 permissions:
   contents: read
 concurrency:
@@ -41,10 +44,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Apply the same image optimization as GitHub Pages
+          cache: pip
+          cache-dependency-path: .github/workflows/ionos-deploy.yml
+      - name: Install cached preview dependencies and test uploader
         run: |
-          python -m pip install --disable-pip-version-check Pillow==11.3.0
-          python scripts/optimize-preview-images.py
+          python -m pip install --disable-pip-version-check Pillow==11.3.0 paramiko==3.5.1
+          python -m py_compile .github/scripts/incremental-ionos.py .github/scripts/upload-ionos.py
+          python .github/scripts/test-incremental-ionos.py
+      - name: Apply the same image optimization as GitHub Pages
+        run: python scripts/optimize-preview-images.py
       - name: Check canonical routes
         run: |
           node scripts/preview.mjs > "$RUNNER_TEMP/preview.log" 2>&1 &
@@ -62,12 +70,6 @@ jobs:
         run: |
           node scripts/performance/test-prepare-candidate.mjs
           node .github/scripts/prepare-preview-cache.mjs
-      - name: Install SFTP client
-        run: |
-          if ! /usr/bin/python3 -c 'import paramiko'; then
-            sudo apt-get update -qq
-            sudo apt-get install -y --no-install-recommends python3-paramiko
-          fi
       - name: Incremental deployment to dedicated IONOS preview
         env:
           CREAID_PREVIEW_CACHE_MODE: ${{ inputs.preview_cache || 'normal' }}
@@ -75,4 +77,4 @@ jobs:
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
-        run: /usr/bin/python3 .github/scripts/upload-ionos.py
+        run: python .github/scripts/upload-ionos.py
