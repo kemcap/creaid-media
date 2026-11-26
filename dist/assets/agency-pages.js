@@ -68,20 +68,29 @@
     let pending=false;
     const captcha=form.querySelector('#aTurnstile');
     const sitekey=direct?captcha?.dataset.sitekey:'';
+    const slot=form.querySelector('#aSubmitSlot');
     let captchaToken='',widgetId=null,captchaFailed=false,challengeWait=null;
+    function showVerified(verified){
+      if(!sitekey)return;
+      slot.classList.toggle('is-verified',verified);
+      captcha.inert=verified;
+      submit.disabled=pending||!verified;
+    }
     function settleCaptcha(ok){
       if(challengeWait){const finish=challengeWait;challengeWait=null;finish(ok);}
     }
     function failCaptcha(text){
-      captchaToken='';captchaFailed=true;if(captcha)captcha.hidden=false;settleCaptcha(false);
+      captchaToken='';captchaFailed=true;showVerified(false);settleCaptcha(false);
+      fallback.href=mailto(new FormData(form));fallback.hidden=false;
       status.textContent=text;
     }
     // Render only after the parent form is visible. Give the visitor real feedback.
     form.hidden=false;
     if(sitekey){
+      slot.classList.add('is-protected');
       captcha.hidden=false;
-      captcha.style.minHeight='66px';
-      captcha.style.minWidth='0';
+      slot.classList.toggle('is-compact',slot.getBoundingClientRect().width<300);
+      showVerified(false);
       const script=document.createElement('script');
       script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=creaidTurnstileLoaded';
       script.async=true;
@@ -90,10 +99,11 @@
         clearTimeout(loadTimer);
         try{
           if(widgetId!==null)return;
-          const compact=captcha.getBoundingClientRect().width<300;
+          const compact=slot.getBoundingClientRect().width<300;
+          slot.classList.toggle('is-compact',compact);
           widgetId=window.turnstile.render('#aTurnstile',{sitekey,action:'contact',theme:'dark',language:'de',size:compact?'compact':'flexible',appearance:'always',
-            callback:token=>{captchaToken=token;captchaFailed=false;captcha.hidden=true;settleCaptcha(true);},
-            'expired-callback':()=>{captchaToken='';captcha.hidden=false;},
+            callback:token=>{const wasFailed=captchaFailed;captchaToken=token;captchaFailed=false;showVerified(true);if(wasFailed&&!pending){status.textContent='';fallback.hidden=true;}settleCaptcha(true);},
+            'expired-callback':()=>{captchaToken='';showVerified(false);},
             'timeout-callback':()=>failCaptcha('Die Sicherheitsprüfung ist abgelaufen. Bitte erneut versuchen.'),
             'error-callback':code=>{console.warn('Turnstile challenge error:',String(code));failCaptcha('Die Sicherheitsprüfung ist momentan nicht verfügbar. Bitte erneut versuchen oder E-Mail nutzen.');}
           });
@@ -104,7 +114,7 @@
     }
     async function awaitCaptcha(){
       if(!sitekey||captchaToken)return true;
-      if(captcha)captcha.hidden=false;
+      showVerified(false);
       if(captchaFailed&&widgetId!==null){
         captchaFailed=false;
         try{window.turnstile.reset(widgetId);}catch{return false;}
@@ -120,6 +130,7 @@
       const body='Name: '+data.get('name')+'\nE-Mail: '+data.get('email')+'\nUnternehmen: '+(data.get('company')||'–')+'\nTelefon: '+(data.get('phone')||'–')+'\nLeistung: '+data.get('service')+'\n\nProjektbeschreibung:\n'+data.get('message');
       return 'mailto:info@creaid-media.de?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     }
+    fallback.addEventListener('click',()=>{fallback.href=mailto(new FormData(form));});
     if(direct){
       submit.textContent='Anfrage senden ↗';
       hint.firstChild.textContent='* Pflichtfelder. Ihre Angaben werden direkt an CreAid-Media übermittelt. ';
@@ -138,7 +149,7 @@
         if(!await awaitCaptcha()||!captchaToken){
           status.textContent='Die Sicherheitsprüfung konnte nicht abgeschlossen werden. Bitte erneut versuchen oder E-Mail nutzen.';
           fallback.href=mailto(data);fallback.hidden=false;
-          pending=false;submit.disabled=false;form.removeAttribute('aria-busy');
+          pending=false;showVerified(!!captchaToken);form.removeAttribute('aria-busy');
           return;
         }
       }
@@ -170,8 +181,9 @@
         status.textContent='Der Versand konnte nicht bestätigt werden. Bitte nicht sofort erneut senden, um doppelte Nachrichten zu vermeiden. Ihre Angaben bleiben erhalten.';
         fallback.href=mailto(data);fallback.hidden=false;
       }finally{
-        if(sitekey){captchaToken='';captcha.hidden=false;if(widgetId!==null){try{window.turnstile?.reset(widgetId);}catch{captchaFailed=true;}}}
-        clearTimeout(timer);pending=false;submit.disabled=false;form.removeAttribute('aria-busy');
+        clearTimeout(timer);pending=false;
+        if(sitekey){captchaToken='';showVerified(false);if(widgetId!==null){try{window.turnstile?.reset(widgetId);}catch{failCaptcha('Die Sicherheitsprüfung konnte nicht neu gestartet werden. Bitte nutzen Sie E-Mail.');}}}else submit.disabled=false;
+        form.removeAttribute('aria-busy');
       }
     });
     form.hidden=false;

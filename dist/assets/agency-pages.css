@@ -53,3 +53,19 @@ html{scroll-behavior:smooth}body.agency-body{margin:0;background:var(--a-ink);co
 
 /* The fallback must remain invisible until explicitly offered after a failed submission. */
 #agencyEnquiry[hidden],#agencyEnquiry [hidden]{display:none!important}
+
+/* Contact action: a single stable rectangle for the real challenge and submit action. */
+#agencyEnquiry .a-form-actions{flex-wrap:wrap}
+#agencyEnquiry .a-submit-slot{position:relative;min-width:0;max-width:100%;margin-left:auto;flex-shrink:0}
+#agencyEnquiry .a-submit-slot.is-protected{display:grid;grid-template:1fr / minmax(0,1fr);width:min(100%,300px);height:65px;flex:0 1 300px}
+#agencyEnquiry .a-submit-slot.is-compact{height:140px}
+#agencyEnquiry .a-submit-slot.is-protected > .a-btn,
+#agencyEnquiry .a-submit-slot.is-protected > #aTurnstile{grid-area:1/1;box-sizing:border-box;min-width:0;width:100%;height:100%;margin:0;transition:opacity .35s ease,visibility .35s step-end}
+#agencyEnquiry .a-submit-slot.is-protected > .a-btn{justify-content:center;gap:14px;opacity:0;visibility:hidden;pointer-events:none}
+#agencyEnquiry .a-submit-slot.is-protected > #aTurnstile{display:flex;align-items:center;justify-content:center;opacity:1;visibility:visible;transition:opacity .35s ease,visibility .35s step-start;z-index:1}
+#agencyEnquiry .a-submit-slot.is-verified > .a-btn{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .35s ease,visibility .35s step-start}
+#agencyEnquiry .a-submit-slot.is-verified > #aTurnstile{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s ease,visibility .35s step-end}
+#agencyEnquiry .a-submit-slot.is-protected > .a-btn:hover{transform:none}
+#agencyEnquiry .a-submit-slot.is-protected > .a-btn:disabled{cursor:wait}
+@media(max-width:700px){#agencyEnquiry .a-submit-slot{margin-left:0;width:100%}#agencyEnquiry .a-submit-slot.is-protected{width:100%;flex-basis:auto}}
+@media(prefers-reduced-motion:reduce){#agencyEnquiry .a-submit-slot > .a-btn,#agencyEnquiry .a-submit-slot > #aTurnstile{transition:none!important}}
