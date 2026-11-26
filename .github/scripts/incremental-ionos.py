@@ -9,6 +9,7 @@ import os
 import posixpath
 import re
 import stat
+from time import perf_counter
 import uuid
 from pathlib import Path
 from urllib.request import Request,build_opener,HTTPRedirectHandler
@@ -71,18 +72,23 @@ def ensure_dirs(sftp,relative,dirs):
     dirs.add(relative)
 def put(sftp,path,data,exists,mode=None):
     temp=posixpath.join(posixpath.dirname(path),'.creaid-upload-'+uuid.uuid4().hex)
+    renamed=False
     try:
         with sftp.open(temp,'wx') as f:
             if mode is not None:sftp.chmod(temp,mode)
+            if hasattr(f,'set_pipelined'):f.set_pipelined(True)
             f.write(data);f.flush()
         require(sha(read(sftp,temp))==sha(data),'Temporary upload content differs: '+path)
         if exists:sftp.posix_rename(temp,path)
         else:sftp.rename(temp,path)
+        renamed=True
         require(sha(read(sftp,path))==sha(data),'Installed bytes differ: '+path)
     finally:
-        try:sftp.remove(temp)
-        except OSError:pass
+        if not renamed:
+            try:sftp.remove(temp)
+            except OSError:pass
 def deploy(sftp,files,dist,manifest,mode='apply'):
+    started=perf_counter()
     require(mode in ('apply','audit'),'Invalid incremental mode.')
     expected={p.relative_to(dist).as_posix():p for p in files}
     for rel in expected:
@@ -155,6 +161,7 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
         require(code==403,'Deployment state not denied over HTTPS.')
     backup={}
     applied=[]
+    planning_done=perf_counter()
     try:
         for rel in changed:
             path=expected[rel]
@@ -163,6 +170,7 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
             backup[rel]=(read(sftp,rel),stat.S_IMODE(a.st_mode)) if a is not None else None
             applied.append(rel)
             put(sftp,rel,path.read_bytes(),a is not None,backup[rel][1] if a is not None else 0o644)
+        writes_done=perf_counter()
         # Check every changed public URL plus security-critical contact/home/privacy files.
         verify_paths=set(changed).union(critical)-{'.htaccess'}
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
@@ -172,9 +180,11 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
         require(code==405 and json.loads(body)=={'ok':False,'status':'method'} and 'no-store' in headers.get('Cache-Control',''),'Contact endpoint or cache policy changed.')
         if changed:
             for rel in changed:rows[rel]=sftp.lstat(rel)
-        state=json.dumps({'version':1,'files':{p:{**fingerprint(rows[p]),'sha256':digests[p]} for p in expected}},sort_keys=True,separators=(',',':')).encode()
+        current={p:{**fingerprint(rows[p]),'sha256':digests[p]} for p in expected}
+        state=json.dumps({'version':1,'files':current},sort_keys=True,separators=(',',':')).encode()
         require(len(state)<MAX_STATE,'State too large.')
-        put(sftp,STATE,state,STATE in root,0o600)
+        if STATE not in root or current!=prior:
+            put(sftp,STATE,state,STATE in root,0o600)
         code,_,_=get(ORIGIN+'/'+STATE)
         require(code==403,'Deployment state not denied.')
     except Exception:
@@ -186,4 +196,5 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
             else:put(sftp,rel,old[0],True,old[1])
         print('INCREMENTAL_ROLLBACK_COMPLETE',flush=True)
         raise
+    print('INCREMENTAL_TIMING '+json.dumps({'planningSeconds':round(planning_done-started,2),'writeSeconds':round(writes_done-planning_done,2),'verificationSeconds':round(perf_counter()-writes_done,2),'totalSeconds':round(perf_counter()-started,2)}),flush=True)
     print('INCREMENTAL_SUCCESS '+json.dumps({**summary,'httpsVerified':True,'contactEndpointPreserved':True,'productionChanged':False}),flush=True)
