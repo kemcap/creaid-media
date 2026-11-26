@@ -30,9 +30,21 @@ jobs:
       - name: Identify successful GitHub Pages reference
         env:
           GH_TOKEN: ${{ github.token }}
+          EXPECTED_CONTACT_REFERENCE: ${{ github.event_name == 'push' && '42fa5bb5a04513f099929aa36093034eead4ca08' || '' }}
         run: |
           set -euo pipefail
-          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/deploy-pages.yml/runs?status=success&per_page=1" --jq '.workflow_runs[0] | {id,head_sha,head_branch,html_url}' | tee "$RUNNER_TEMP/pages-run.json"
+          if [[ -n "$EXPECTED_CONTACT_REFERENCE" ]]; then
+            [[ "$EXPECTED_CONTACT_REFERENCE" =~ ^[0-9a-f]{40}$ ]]
+            for attempt in {1..60}; do
+              gh api "repos/$GITHUB_REPOSITORY/actions/workflows/deploy-pages.yml/runs?head_sha=$EXPECTED_CONTACT_REFERENCE&status=success&per_page=1" --jq '.workflow_runs[0] | {id,head_sha,head_branch,html_url}' > "$RUNNER_TEMP/pages-run.json"
+              if jq -e --arg sha "$EXPECTED_CONTACT_REFERENCE" '.head_sha == $sha and .head_branch == "main"' "$RUNNER_TEMP/pages-run.json" >/dev/null; then break; fi
+              sleep 10
+            done
+            jq -e --arg sha "$EXPECTED_CONTACT_REFERENCE" '.head_sha == $sha and .head_branch == "main"' "$RUNNER_TEMP/pages-run.json" >/dev/null
+            cat "$RUNNER_TEMP/pages-run.json"
+          else
+            gh api "repos/$GITHUB_REPOSITORY/actions/workflows/deploy-pages.yml/runs?status=success&per_page=1" --jq '.workflow_runs[0] | {id,head_sha,head_branch,html_url}' | tee "$RUNNER_TEMP/pages-run.json"
+          fi
           sha=$(jq -er '.head_sha' "$RUNNER_TEMP/pages-run.json")
           [[ "$sha" =~ ^[0-9a-f]{40}$ ]]
           git cat-file -e "$sha^{commit}"
@@ -98,3 +110,5 @@ jobs:
 # Approved synchronization of pricing preview reference 662d7da (PR #5; Pages run 45697345183).
 # Approved synchronization of global headline signature reference 298b543 (PR #7; Pages run 45700004683).
 # Approved synchronization of complete pricing preview reference 3979113 (PR #9; Pages run 45703904713).
+
+# Explicitly approved synchronization of SMTP contact form reference 42fa5bb5a04513f099929aa36093034eead4ca08.
