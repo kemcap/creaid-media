@@ -10,7 +10,10 @@ for(const name of names){
 }
 assert.deepEqual(failures,[]);
 const imprint=readFileSync('dist/impressum.html','utf8');
-assert.ok(imprint.includes('Yeniköy Mahallesi'));
+assert.ok(imprint.includes('Çağlayan Mah. 2043 Sk.'), 'Registered business street missing from imprint');
+assert.ok(imprint.includes('Doruk Apt. No: 1, İç Kapı No: 6'), 'Registered business unit missing from imprint');
+assert.ok(imprint.includes('Muratpaşa / Antalya'), 'Registered business locality missing from imprint');
+assert.ok(!imprint.includes('Yeniköy Mahallesi'), 'Previous address must not remain in the imprint');
 const contact=readFileSync('dist/kontakt.html','utf8');
 assert.ok(contact.includes('* Pflichtfelder · <a href="/datenschutz">Datenschutz</a>'));
 assert.ok(!contact.includes('>Direkt per E-Mail ↗</a>'));

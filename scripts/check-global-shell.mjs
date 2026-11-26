@@ -12,6 +12,7 @@ const expectedLinks = [
   '/leistungen/ki-automatisierung',
   '/kontakt'
 ];
+const { contact } = JSON.parse(file('src/_data/site.json'));
 const expectedText = [
   'Leistungen im Überblick',
   'Webdesign und Entwicklung',
@@ -19,9 +20,8 @@ const expectedText = [
   'Branding und Grafikdesign',
   'KI und Automatisierung',
   'Projekt besprechen',
-  '+49 1567 8451152',
-  'info@creaid-media.de',
-  'Yeniköy Mahallesi',
+  contact.phoneDisplay,
+  contact.email,
   'Impressum',
   'Datenschutz'
 ];
@@ -34,7 +34,12 @@ for (const name of pages) {
   assert(html.includes('href="/assets/global-shell.css"'), name + ': global CSS missing');
   assert(html.includes('src="/assets/global-shell.js"'), name + ': global JS missing');
   for (const link of expectedLinks) assert(html.includes('href="' + link + '"'), name + ': missing link ' + link);
-  for (const phrase of expectedText) assert(html.includes(phrase), name + ': missing footer text ' + phrase);
+  const footer = html.match(/<footer\b[^>]*\bid="cm-global-footer"[^>]*>[\s\S]*?<\/footer>/)?.[0];
+  assert(footer, name + ': global footer missing');
+  for (const phrase of expectedText) assert(footer.includes(phrase), name + ': missing footer text ' + phrase);
+  assert(footer.includes('href="tel:' + contact.phoneHref + '"'), name + ': incorrect footer phone link');
+  assert(footer.includes('href="mailto:' + contact.email + '"'), name + ': incorrect footer email link');
+  assert(!/<address\b/i.test(footer), name + ': address should remain on the imprint, not in the footer');
 }
 assert(existsSync('dist/assets/global-shell.css'), 'global CSS not built');
 assert(existsSync('dist/assets/global-shell.js'), 'global JS not built');
