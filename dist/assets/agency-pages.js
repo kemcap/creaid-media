@@ -59,12 +59,58 @@
   const form=document.querySelector('#agencyEnquiry');
   if(form){const params=new URLSearchParams(location.search);if(params.get('service')){const sel=form.querySelector('[name="service"]');const requested=params.get('service');const legacy={'Marketing & Branding':'Digitales Marketing'};const option=[...sel.options].find(x=>x.value===(legacy[requested]||requested));if(option)sel.value=option.value;}
     const packageName=params.get('paket');const allowedPackages=["Starter","Wachstum","Dominanz","Praxis-Kompakt","Praxis-Plus","Praxis-Premium","Immo-Kompakt","Immo-Plus","Immo-Premium","Conversion-Kompakt","Conversion-Plus","Conversion-Premium","Ads Basis","Ads Aktiv","Ads Performance","Ads Start","Ads Wachstum","Ads Premium","Kompakt","Plus","Premium","Einmalige Wartung","Jahreswartung","WhatsApp-Button mit Direktverlinkung","Hinweis-Popup","Öffnungszeiten-/Verfügbarkeitsmodul","Google Maps-Einbindung","Google Business Profil-Einrichtung","FAQ-Bereich","Teamseite (allgemein)","Teamseite-Upgrade auf Einzelprofile","Blogbereich","Blog-Erweiterung","Mehrsprachigkeit"];const message=form.querySelector('[name="message"]');if(allowedPackages.includes(packageName)&&message&&!message.value)message.value='Ich interessiere mich für das Paket '+packageName+'.\n\n';
-    form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;
+    const direct=location.origin==='https://vorschau.creaid-media.de';
+    const submit=form.querySelector('button[type="submit"]');
+    const status=document.querySelector('#aFormMessage');
+    const fallback=document.querySelector('#aFormFallback');
+    const hint=document.querySelector('#aFormHint');
+    const intro=document.querySelector('#aFormIntro');
+    let pending=false;
+    function mailto(data){
+      const subject='Projektanfrage CreAid-Media: '+String(data.get('service')||'Allgemein').slice(0,80);
+      const body='Name: '+data.get('name')+'\nE-Mail: '+data.get('email')+'\nUnternehmen: '+(data.get('company')||'–')+'\nTelefon: '+(data.get('phone')||'–')+'\nLeistung: '+data.get('service')+'\n\nProjektbeschreibung:\n'+data.get('message');
+      return 'mailto:info@creaid-media.de?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    }
+    if(direct){
+      submit.textContent='Anfrage senden ↗';
+      hint.firstChild.textContent='* Pflichtfelder. Ihre Angaben werden direkt an CreAid-Media übermittelt. ';
+      intro.textContent='Ein paar Angaben genügen für den Einstieg. Beschreiben Sie kurz Ihr Vorhaben. Alternativ erreichen Sie uns telefonisch oder per E-Mail.';
+    }
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();if(pending||!form.reportValidity())return;
       const data=new FormData(form);
-      const subject=`Projektanfrage CreAid-Media: ${String(data.get('service')||'Allgemein').slice(0,80)}`;
-      const body=`Name: ${data.get('name')}\nE-Mail: ${data.get('email')}\nUnternehmen: ${data.get('company')||'–'}\nTelefon: ${data.get('phone')||'–'}\nLeistung: ${data.get('service')}\n\nProjektbeschreibung:\n${data.get('message')}`;
-      document.querySelector('#aFormMessage').textContent='Ihr E-Mail-Programm wird geöffnet. Bitte die Nachricht dort noch selbst absenden.';
-      window.location.href='mailto:info@creaid-media.de?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+      if(!direct){
+        status.textContent='Ihr E-Mail-Programm wird geöffnet. Bitte die Nachricht dort noch selbst absenden.';
+        window.location.href=mailto(data);return;
+      }
+      pending=true;submit.disabled=true;form.setAttribute('aria-busy','true');
+      fallback.hidden=true;fallback.removeAttribute('href');
+      status.textContent='Ihre Anfrage wird übermittelt …';
+      const controller=new AbortController();
+      const timer=setTimeout(()=>controller.abort(),25000);
+      try{
+        const fields=['name','email','company','phone','service','message','website'];
+        const payload=Object.fromEntries(fields.map(key=>[key,String(data.get(key)||'')]));
+        const response=await fetch('/api/contact.php',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},credentials:'same-origin',cache:'no-store',redirect:'error',signal:controller.signal,body:JSON.stringify(payload)});
+        const result=await response.json();
+        if(response.ok&&result.ok===true&&result.status==='accepted'){
+          status.textContent='Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt.';
+          form.reset();
+        }else if(response.status===422){
+          status.textContent='Bitte prüfen Sie Ihre Angaben. Ihre Nachricht wurde nicht versendet.';
+        }else if(response.status===429){
+          status.textContent='Zu viele Anfragen. Bitte warten Sie einige Minuten oder nutzen Sie die E-Mail-Alternative.';
+          fallback.href=mailto(data);fallback.hidden=false;
+        }else{
+          status.textContent='Der Versand konnte nicht bestätigt werden. Ihre Angaben bleiben erhalten. Alternativ können Sie eine E-Mail vorbereiten.';
+          fallback.href=mailto(data);fallback.hidden=false;
+        }
+      }catch{
+        status.textContent='Der Versand konnte nicht bestätigt werden. Bitte nicht sofort erneut senden, um doppelte Nachrichten zu vermeiden. Ihre Angaben bleiben erhalten.';
+        fallback.href=mailto(data);fallback.hidden=false;
+      }finally{
+        clearTimeout(timer);pending=false;submit.disabled=false;form.removeAttribute('aria-busy');
+      }
     });
     form.hidden=false;
   }
