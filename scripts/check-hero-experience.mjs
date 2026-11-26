@@ -200,7 +200,7 @@ const privacy=load('dist/datenschutz.html'), imprint=load('dist/impressum.html')
 assert.ok(!privacy.includes('{placeholder('),'Unrendered legal placeholders');
 assert.ok(privacy.includes('GitHub Pages')&&privacy.includes('GitHub-Datenschutzerklärung'));
 assert.ok(privacy.includes('keine neue Cookie-Präferenz')&&privacy.includes('direkte HubSpot-Übermittlung ist nicht eingerichtet'));
-assert.ok(imprint.includes('ENTWURF')&&imprint.includes('amtliche Geschäftsanschrift'));
+assert.ok(imprint.includes('ENTWURF')&&imprint.includes('Geschäftsanschrift laut türkischer Steuerbescheinigung')&&imprint.includes('Muratpaşa / Antalya'));
 assert.ok(!cookies.includes('id="lSaveConsent"')&&!legalJs.includes('localStorage.setItem'));
 assert.ok(legalJs.includes("localStorage.removeItem('creaid-prototype-consent-v1')"));
 for(const name of files){

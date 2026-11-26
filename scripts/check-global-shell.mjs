@@ -12,7 +12,7 @@ const expectedLinks = [
   '/leistungen/ki-automatisierung',
   '/kontakt'
 ];
-const { contact } = JSON.parse(file('src/_data/site.json'));
+const { contact, social } = JSON.parse(file('src/_data/site.json'));
 const expectedText = [
   'Leistungen im Überblick',
   'Webdesign und Entwicklung',
@@ -34,6 +34,11 @@ for (const name of pages) {
   assert(html.includes('href="/assets/global-shell.css"'), name + ': global CSS missing');
   assert(html.includes('src="/assets/global-shell.js"'), name + ': global JS missing');
   for (const link of expectedLinks) assert(html.includes('href="' + link + '"'), name + ': missing link ' + link);
+  const bar = html.match(/<div\b[^>]*\bid="cm-contactbar"[^>]*>[\s\S]*?(?=<header\b[^>]*\bid="cm-global-header")/)?.[0];
+  assert(bar, name + ': contact strip must precede sticky header');
+  assert((html.match(/id="cm-contactbar"/g)||[]).length === 1, name + ': duplicate contact strip');
+  for (const href of ['tel:' + contact.phoneHref, 'mailto:' + contact.email, contact.whatsappUrl, social.linkedin]) assert(href && bar.includes('href="' + href + '"'), name + ': missing contact strip link ' + href);
+  assert(html.includes('class="cm-header__link cm-header__contact-link" href="/kontakt"'), name + ': plain contact navigation missing');
   const footer = html.match(/<footer\b[^>]*\bid="cm-global-footer"[^>]*>[\s\S]*?<\/footer>/)?.[0];
   assert(footer, name + ': global footer missing');
   for (const phrase of expectedText) assert(footer.includes(phrase), name + ': missing footer text ' + phrase);

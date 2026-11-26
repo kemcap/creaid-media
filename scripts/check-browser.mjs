@@ -82,6 +82,20 @@ async function interactionTests(browser){
  const p=await context.newPage();
  try{
   await settle(p,base+'/');
+  for(const width of [320,390,1440]){
+   await p.setViewportSize({width,height:844});
+   await p.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+   const strip=p.locator('#cm-contactbar');
+   assert.equal(await strip.locator('a').count(),4,'Four direct contact links required');
+   const initial=await strip.boundingBox();
+   assert.ok(initial && initial.height>=28 && initial.height<=36 && initial.y>=-1,'Slim contact strip at page top');
+   assert.ok(await strip.evaluate(e=>[...e.querySelectorAll('a')].every(a=>{const r=a.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1;})),'Contact links overflow');
+   await p.evaluate(()=>window.scrollTo({top:200,behavior:'instant'}));
+   await p.waitForFunction(()=>{const bar=document.querySelector('#cm-contactbar').getBoundingClientRect();const header=document.querySelector('#cm-global-header').getBoundingClientRect();return bar.bottom<=1&&Math.abs(header.top)<=2;});
+   await p.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+   await p.waitForFunction(()=>document.querySelector('#cm-contactbar').getBoundingClientRect().top>=-1);
+  }
+  await p.setViewportSize({width:390,height:844});
   const toggle=p.locator('#cm-menu-toggle');await toggle.click();assert.equal(await toggle.getAttribute('aria-expanded'),'true');await p.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');assert.equal(await p.evaluate(()=>document.activeElement.id),'cm-menu-toggle');
   await p.setViewportSize({width:1440,height:900});const summary=p.locator('.cm-header__services summary');await summary.click();assert.equal(await p.locator('.cm-header__services').getAttribute('open'),'');await p.keyboard.press('Escape');assert.equal(await p.locator('.cm-header__services').getAttribute('open'),null);assert.ok(await summary.evaluate(e=>document.activeElement===e));
   await settle(p,base+'/kontakt?service=Webdesign%20%26%20Entwicklung');assert.equal(await p.locator('#agencyEnquiry [name=service]').inputValue(),'Webdesign & Entwicklung');
