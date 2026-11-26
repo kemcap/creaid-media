@@ -48,8 +48,16 @@ async function updateEditorialReference(page,route){
    const corrections=new Map([
     ['wann lohnt sich seo für handwerksbetriebe?','Wann lohnt sich SEO für Handwerksbetriebe?'],
     ['woran sie erkennen, ob sich seo für ihren betrieb rechnet','Woran Sie erkennen, ob sich SEO für Ihren Betrieb rechnet'],
+    ["wann sich seo eher nicht lohnt","Wann sich SEO eher nicht lohnt"],
+    ["was SEO im Handwerk wirklich bringt","Was SEO im Handwerk wirklich bringt"],
+    ["was vor SEO stimmen muss","Was vor SEO stimmen muss"],
+    ["häufige fragen","Häufige Fragen"],
+    ["wie lange dauert es, bis seo sich lohnt?","Wie lange dauert es, bis SEO sich lohnt?"],
+    ["lohnt sich seo auch ohne großen marketingetat?","Lohnt sich SEO auch ohne großen Marketingetat?"],
+    ["seo oder google ads – was ist besser?","SEO oder Google Ads – was ist besser?"],
+    ["das wichtigste auf einen blick","Das Wichtigste auf einen Blick"],
    ]);
-   for(const node of document.querySelectorAll('.j-prose h2,.j-toc a,.j-toc-mobile a')){
+   for(const node of document.querySelectorAll('.j-prose h2,.j-prose h3,.j-toc a,.j-toc-mobile a')){
     const updated=corrections.get(node.textContent.trim());
     if(updated)node.textContent=updated;
    }
