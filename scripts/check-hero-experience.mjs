@@ -199,7 +199,7 @@ console.log('PASS: Phase 3 content scope on 12 services, all journal cards, uniq
 const privacy=load('dist/datenschutz.html'), imprint=load('dist/impressum.html'), cookies=load('dist/cookie-einstellungen.html'), legalJs=load('dist/assets/legal-pages.js');
 assert.ok(!privacy.includes('{placeholder('),'Unrendered legal placeholders');
 assert.ok(privacy.includes('GitHub Pages')&&privacy.includes('GitHub-Datenschutzerklärung'));
-assert.ok(privacy.includes('keine neue Cookie-Präferenz')&&privacy.includes('direkte HubSpot-Übermittlung ist nicht eingerichtet'));
+assert.ok(privacy.includes('Die Datenschutzauswahl wird lokal für höchstens 180 Tage gespeichert')&&privacy.includes('direkte HubSpot-Übermittlung ist nicht eingerichtet'));
 assert.ok(imprint.includes('ENTWURF')&&imprint.includes('Geschäftsanschrift laut türkischer Steuerbescheinigung')&&imprint.includes('Muratpaşa / Antalya'));
 const company=JSON.parse(load('src/_data/site.json'));
 for(const [name,html] of [['impressum',imprint],['datenschutz',privacy],['kontakt',contact]]){
@@ -209,7 +209,7 @@ for(const [name,html] of [['impressum',imprint],['datenschutz',privacy],['kontak
 }
 for(const name of files)assert.ok(!load('dist/'+name).includes('Yeniköy Mahallesi, 71. Sokak No: 19'),name+' contains outdated address');
 assert.ok(imprint.includes(company.business.taxNumber)&&imprint.includes(company.business.taxOffice)&&imprint.includes(company.business.startDate),'Incomplete tax details');
-assert.ok(!cookies.includes('id="lSaveConsent"')&&!legalJs.includes('localStorage.setItem'));
+assert.ok(cookies.includes('data-creaid-consent-open')&&cookies.includes('data-creaid-consent-status')&&!legalJs.includes('localStorage.setItem'));
 assert.ok(legalJs.includes("localStorage.removeItem('creaid-prototype-consent-v1')"));
 for(const name of files){
  const html=load('dist/'+name);
@@ -221,7 +221,7 @@ for(const name of files){
   if(/\brel=["'](?:stylesheet|preload|preconnect|prefetch|dns-prefetch)["']/i.test(match[0]))assert.ok(!/\bhref=["'](?:https?:)?\/\//i.test(match[0]),'Unexpected external link resource '+name);
  }
 }
-console.log('PASS: Phase 4 legal draft integrity, no automatic external HTML resources and no new preference storage.');
+console.log('PASS: Phase 4 legal draft integrity, no automatic external HTML resources and consent controls and no automatic external HTML resources.');
 
 // Phase 5: original sitemap coverage, no accidental URL loss.
 const legacyCoverage=JSON.parse(load('src/_data/legacySitemapCoverage.json'));

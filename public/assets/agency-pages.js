@@ -164,6 +164,7 @@
         const response=await fetch('/api/contact.php',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},credentials:'same-origin',cache:'no-store',redirect:'error',signal:controller.signal,body:JSON.stringify(payload)});
         const result=await response.json();
         if(response.ok&&result.ok===true&&result.status==='accepted'){
+          window.CreAidTracking?.trackLead();
           status.textContent='Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt.';
           form.reset();
         }else if(result.status==='captcha_required'||result.status==='captcha_invalid'){

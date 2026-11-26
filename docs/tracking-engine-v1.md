@@ -1,0 +1,7 @@
+# Tracking Engine V1.0
+
+- Preview and all other hosts: local UI only, no Google network loading. Production: HTTPS exact apex/www host only; GTM loads after analytics grant. No noscript GTM iframe. Consent default denied; ad signals remain denied. GTM container GTM-KZDHN3XK, GA4 G-Q508SZ02YF.
+- Existing WP production remains unchanged. Before cutover remove duplicate old tracking from the replacement site; verify only one Google Analytics tag. No production GTM publish in this PR.
+- Local storage key creaid-consent-v1, version 1, 180 days. Revoke via footer Cookie-Einstellungen; GA disable flag, denied consent, GA cookie cleanup and reload. Other future tools require separate categories and version bump.
+- GTM tag: custom event creaid_analytics_granted, hostname regex ^(www\\.)?creaid-media\\.de$, additional consent analytics_storage. Conversion signal creaid_lead_submitted only after API accepted; no personal fields. Later create GA4 event tag generate_lead with the same hostname/consent guards. Do not mark email drafts or clicks as confirmed leads.
+- Before live: verify Tag Assistant in controlled environment (separate test stream/container or production test after explicit approval), network before decision/reject, after grant, reload, revoke, cross-tab, expired/blocked storage, successful/failed contact. Verify no preview traffic and no duplicate pageviews. Review URL/query redaction, retention, privacy notice, provider/transfer terms and visual balance of reject/accept before production. No assertion of legal compliance.

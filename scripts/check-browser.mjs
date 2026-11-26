@@ -36,7 +36,18 @@ async function readyForScreenshot(page){
  });
 }
 // Replay reviewed copy edits in the older reference so the whole layout is still compared.
-async function updateEditorialReference(page,route){
+async function updateCopyReference(page,route){
+ if(route==='/cookie-einstellungen'){
+  await page.evaluate(()=>{
+   if(!document.getElementById('lResetConsent'))return;
+   document.querySelector('.l-hero-bottom p').textContent='Sie entscheiden über die optionale Statistik. Ihre Auswahl können Sie jederzeit ändern oder widerrufen.';
+   document.querySelector('#status .l-intro').textContent='In der Vorschau wird die Auswahl nur lokal getestet. Google Analytics ist ausschließlich für die Hauptdomain und nach Einwilligung vorgesehen.';
+   const [necessary,analytics]=document.querySelectorAll('#status .l-status-list > div');
+   necessary.querySelector('p').textContent='Die Auswahl für Statistik wird lokal für höchstens 180 Tage gespeichert.';
+   analytics.querySelector('p').textContent='Google Analytics wird auf der Hauptdomain nur mit Ihrer Statistik-Einwilligung geladen. Auf der Vorschau werden keine Google-Tags geladen.';
+   analytics.querySelector('.l-status').textContent='EINWILLIGUNGSABHÄNGIG';
+  });
+ }
  if(route==='/wann-lohnt-sich-seo'){
   await page.evaluate(()=>{
    const meta=document.querySelector('.j-editorial-meta p');
@@ -109,7 +120,7 @@ async function inspect(page,route,viewport,engine,compare){
    const refPage=await page.context().newPage();
    try{
     await settle(refPage,reference+route);
-    await updateEditorialReference(refPage,route);
+    await updateCopyReference(refPage,route);
     await readyForScreenshot(refPage);
     const expected=await refPage.screenshot({animations:'disabled',caret:'hide',path:join(out,id+'-baseline.png')});
     const a=PNG.sync.read(actual),b=PNG.sync.read(expected);const diff=new PNG({width:a.width,height:a.height});
@@ -121,8 +132,28 @@ async function inspect(page,route,viewport,engine,compare){
  finally{page.off('pageerror',onError);page.off('response',onResponse);page.off('requestfailed',onRequestFailed);page.off('request',onRequest);}
  if(localErrors.length)errors.push({id,issues:[...new Set(localErrors)]});
 }
+async function seedConsent(context){
+ await context.addInitScript(()=>{try{if(!localStorage.getItem('creaid-consent-v1'))localStorage.setItem('creaid-consent-v1',JSON.stringify({version:1,analytics:false,time:Date.now()}));}catch{}});
+}
+async function consentTests(browser){
+ const context=await browser.newContext({viewport:{width:390,height:844}});
+ const page=await context.newPage();const external=[];
+ await context.route('**/*',async route=>{if(/google-analytics|googletagmanager|doubleclick/.test(route.request().url())){external.push(route.request().url());await route.abort();}else await route.continue();});
+ try{
+  await settle(page,base+'/');const panel=page.locator('#creaid-consent-host #panel');
+  await panel.waitFor({state:'visible'});
+  await panel.getByRole('button',{name:'Akzeptieren und weiter'}).click();await panel.waitFor({state:'hidden'});
+  assert.deepEqual(await page.evaluate(()=>window.CreAidTracking.getConsent()),{analytics:true,decided:true,live:false});
+  await page.reload();await panel.waitFor({state:'hidden'});
+  await settle(page,base+'/cookie-einstellungen');await page.locator('[data-creaid-consent-open]').click();
+  await panel.getByRole('button',{name:'Nur notwendige',exact:true}).click();await panel.waitFor({state:'hidden'});
+  assert.equal(await page.evaluate(()=>window.CreAidTracking.getConsent().analytics),false);
+  assert.equal(external.length,0,'Preview must never contact Google tracking services');
+ }catch(e){errors.push({id:'consent',issues:[String(e.message||e)]});}finally{await context.close();}
+}
 async function interactionTests(browser){
  const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
+ await seedConsent(context);
  const p=await context.newPage();
  try{
   await settle(p,base+'/');
@@ -184,6 +215,7 @@ for(const [engine,launcher] of Object.entries({chromium,firefox,webkit})){
   const widths=engine==='chromium'?sizes:[sizes[0],sizes[2]];
   for(const viewport of widths){
    const context=await browser.newContext({viewport,reducedMotion:'reduce',deviceScaleFactor:1});
+   await seedConsent(context);
    await context.addInitScript(()=>{
     window.__qaMetrics={lcp:null,cls:0};try{new PerformanceObserver(l=>{const e=l.getEntries().at(-1);if(e)window.__qaMetrics.lcp=e.startTime;}).observe({type:'largest-contentful-paint',buffered:true});}catch{}
     try{new PerformanceObserver(l=>{for(const e of l.getEntries())if(!e.hadRecentInput)window.__qaMetrics.cls+=e.value;}).observe({type:'layout-shift',buffered:true});}catch{}
@@ -194,11 +226,12 @@ for(const [engine,launcher] of Object.entries({chromium,firefox,webkit})){
   }
   if(engine==='chromium'){
    for(const viewport of breakpoints){
-    const c=await browser.newContext({viewport,reducedMotion:'no-preference',deviceScaleFactor:1});const p=await c.newPage();
+    const c=await browser.newContext({viewport,reducedMotion:'no-preference',deviceScaleFactor:1});await seedConsent(c);const p=await c.newPage();
     for(const route of ['/', '/webdesign','/creaid-blog','/online-shop-entwicklung'])await inspect(p,route,viewport,engine,false);
     await c.close();
    }
    await interactionTests(browser);
+   await consentTests(browser);
   }
  }finally{await browser.close();}
 }
