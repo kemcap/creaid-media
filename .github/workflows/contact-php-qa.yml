@@ -30,3 +30,22 @@ jobs:
           php -l backend/contact/core.php
           php -l backend/contact/config.example.php
           php backend/contact/test.php
+      - name: Package disabled private backend for manual IONOS installation
+        if: matrix.php == '8.4'
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/creaid-private
+          cp backend/contact/core.php backend/contact/config.example.php /tmp/creaid-private/
+          cp -R backend/contact/vendor /tmp/creaid-private/
+          printf 'Require all denied\n' > /tmp/creaid-private/.htaccess
+          (cd /tmp/creaid-private && zip -qr "$GITHUB_WORKSPACE/creaid-contact-private.zip" .)
+          unzip -t creaid-contact-private.zip
+          unzip -Z1 creaid-contact-private.zip | grep -Fx '.htaccess'
+          unzip -Z1 creaid-contact-private.zip | grep -Fx 'vendor/autoload.php'
+      - uses: actions/upload-artifact@v4
+        if: matrix.php == '8.4'
+        with:
+          name: creaid-contact-private-install
+          path: creaid-contact-private.zip
+          if-no-files-found: error
+          retention-days: 14
