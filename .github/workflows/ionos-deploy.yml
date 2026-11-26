@@ -70,8 +70,10 @@ jobs:
         run: |
           node scripts/performance/test-prepare-candidate.mjs
           node .github/scripts/prepare-preview-cache.mjs
-      - name: Confirm main still points at this deployment
-        run: test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$GITHUB_SHA"
+      - name: Confirm main has the same preview sources
+        run: |
+          git fetch --no-tags origin main
+          git diff --exit-code "$GITHUB_SHA" FETCH_HEAD -- . ':(exclude)dist'
       - name: Incremental deployment to dedicated IONOS preview
         env:
           CREAID_PREVIEW_CACHE_MODE: ${{ inputs.preview_cache || 'normal' }}
