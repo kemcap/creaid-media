@@ -38,6 +38,7 @@ jobs:
       - name: Browser matrix and reference comparison
         env:
           CREAID_QA_BASELINE: http://127.0.0.1:8081
+          CREAID_QA_BASELINE_ROUTES: ${{ runner.temp }}/creaid-baseline/src/_data/routes.json
         run: npm run test:browser
       - uses: actions/upload-artifact@v4
         if: always()
