@@ -1,0 +1,37 @@
+name: Verify contact SMTP credentials
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-contact-smtp.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Check SMTP secret and authenticate without sending
+        env:
+          CONTACT_SMTP_PASSWORD: ${{ secrets.CONTACT_SMTP_PASSWORD }}
+        run: |
+          python3 - <<'PY'
+          import os, ssl, smtplib, sys
+          password=os.environ.get("CONTACT_SMTP_PASSWORD","")
+          if not password:
+              print("SMTP_SECRET_MISSING: CONTACT_SMTP_PASSWORD")
+              sys.exit(1)
+          print("SMTP_SECRET_PRESENT")
+          try:
+              with smtplib.SMTP_SSL("smtp.ionos.de",465,timeout=20,context=ssl.create_default_context()) as smtp:
+                  smtp.ehlo()
+                  smtp.login("formular@creaid-media.de",password)
+              print("SMTP_AUTH_VERIFIED: no mail sent; no server files changed.")
+          except smtplib.SMTPAuthenticationError:
+              print("SMTP_AUTH_REJECTED")
+              sys.exit(1)
+          except Exception as e:
+              print("SMTP_AUTH_UNVERIFIED: "+type(e).__name__)
+              sys.exit(1)
+          PY
