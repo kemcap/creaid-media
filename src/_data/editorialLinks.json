@@ -1152,6 +1152,7 @@
       "source": "wann-lohnt-sich-seo",
       "target": "seo-content-marketing",
       "url": "/seo-3",
+      "anchor": "SEO und Content-Marketing für lokale Betriebe",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1169,6 +1170,7 @@
       "source": "7-branding-fehler-bei-neugruendung",
       "target": "branding",
       "url": "/grafikdesign-2",
+      "anchor": "Branding und Corporate Design für den Unternehmensstart",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1186,6 +1188,7 @@
       "source": "website-audit-unternehmen",
       "target": "webdesign",
       "url": "/webdesign",
+      "anchor": "Webdesign und technische Umsetzung",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1203,6 +1206,7 @@
       "source": "360-grad-rundgang-erstellen",
       "target": "referenzen",
       "url": "/referenzen",
+      "anchor": "Arbeitsproben im Portfolio ansehen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1220,6 +1224,7 @@
       "source": "freelancer-oder-full-service-agentur",
       "target": "leistungen",
       "url": "/leistungen",
+      "anchor": "Leistungen der Agentur im Überblick",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1237,6 +1242,7 @@
       "source": "fehler-beim-online-shop-start-vermeiden",
       "target": "onlineshops-ecommerce",
       "url": "/online-shop-entwicklung",
+      "anchor": "Unterstützung beim Aufbau eines Onlineshops",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1254,6 +1260,7 @@
       "source": "google-maps-eintrag-optimieren",
       "target": "seo-content-marketing",
       "url": "/seo-3",
+      "anchor": "Professionelle Unterstützung bei lokaler SEO",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1271,6 +1278,7 @@
       "source": "webdesign-trends-2026-fuer-unternehmen",
       "target": "webdesign",
       "url": "/webdesign",
+      "anchor": "Webdesign und Entwicklung für Unternehmen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1288,6 +1296,7 @@
       "source": "corporate-naming-fuer-startups",
       "target": "branding",
       "url": "/grafikdesign-2",
+      "anchor": "Markenentwicklung und Corporate Design",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1305,6 +1314,7 @@
       "source": "print-design-fuer-unternehmen",
       "target": "printdesign-editorial",
       "url": "/print-design",
+      "anchor": "Printdesign und Editorial",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1322,6 +1332,7 @@
       "source": "full-service-werbeagentur-b2b",
       "target": "leistungen",
       "url": "/leistungen",
+      "anchor": "Agenturleistungen für B2B-Unternehmen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1339,6 +1350,7 @@
       "source": "guide-ui-ux-fuer-firmenwebsites",
       "target": "ui-ux-entwicklung",
       "url": "/ui-ux-entwicklung",
+      "anchor": "UI- und UX-Entwicklung für Websites",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1356,6 +1368,7 @@
       "source": "webdesign-fuer-immobilienmakler-berlin",
       "target": "webdesign-immobilienmakler",
       "url": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+      "anchor": "Webdesign speziell für Immobilienmakler",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1373,6 +1386,7 @@
       "source": "beste-ecommerce-loesungen-mittelstand",
       "target": "onlineshops-ecommerce",
       "url": "/online-shop-entwicklung",
+      "anchor": "E-Commerce und Onlineshop-Entwicklung",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1390,6 +1404,7 @@
       "source": "social-media-content-plan-mit-wirkung",
       "target": "marketing",
       "url": "/digitales-marketing",
+      "anchor": "Digitales Marketing für Unternehmen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1407,6 +1422,7 @@
       "source": "produktfotografie-fuer-onlineshop",
       "target": "onlineshops-ecommerce",
       "url": "/online-shop-entwicklung",
+      "anchor": "Onlineshop entwickeln und Produktseiten planen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1424,6 +1440,7 @@
       "source": "hosting-anbieter-fuer-firmenwebsites-waehlen",
       "target": "cloud-hosting-3",
       "url": "/cloud-hosting-3",
+      "anchor": "Cloud-Hosting für Firmenwebsites",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1441,6 +1458,7 @@
       "source": "webseite-fuer-handwerker",
       "target": "webdesign-handwerker",
       "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+      "anchor": "Webdesign für Handwerksbetriebe",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1458,6 +1476,7 @@
       "source": "barrierefreie-website-fuer-unternehmen",
       "target": "webdesign",
       "url": "/webdesign",
+      "anchor": "Webdesign und Entwicklung für barrierearme Websites",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1475,6 +1494,7 @@
       "source": "webdesign-fuer-unternehmen",
       "target": "webdesign",
       "url": "/webdesign",
+      "anchor": "Webdesign für Unternehmen im Überblick",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1492,6 +1512,7 @@
       "source": "webdesign-fuer-lokale-dienstleister",
       "target": "webdesign",
       "url": "/webdesign",
+      "anchor": "Websites für lokale Dienstleister entwickeln",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1509,6 +1530,7 @@
       "source": "wordpress-website-erstellen-lassen",
       "target": "webdesign",
       "url": "/webdesign",
+      "anchor": "Website-Entwicklung für Unternehmen",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },
@@ -1526,6 +1548,7 @@
       "source": "leitfaden-website-relaunch-unternehmen",
       "target": "webdesign",
       "url": "/webdesign",
+      "anchor": "Webdesign für den Website-Relaunch",
       "priority": "P1",
       "placement": "Im Artikel: nächster Schritt"
     },

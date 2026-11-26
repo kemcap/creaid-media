@@ -4,6 +4,7 @@ import {routeFiles,redirects} from './routes.mjs';
 const read=p=>readFileSync(p,'utf8');
 const data=JSON.parse(read('src/_data/pages.json'));
 const previewDrafts=JSON.parse(read('src/_data/wordpressPreviewDrafts.json'));
+const editorialLinks=JSON.parse(read('src/_data/editorialLinks.json'));
 const aliases=new Map(redirects);
 const routes=new Map(Object.entries(routeFiles));
 const load=key=>read('dist/'+key);
@@ -19,6 +20,9 @@ for(const [url,html] of htmlByRoute){
  if(new Set(ids).size!==ids.length)issues.push(url+': duplicate IDs');
  if(!html.includes('rel="canonical" href="https://creaid-media.de'+url+'"'))issues.push(url+': canonical mismatch');
  if(!html.includes('name="robots" content="noindex,nofollow,noarchive"'))issues.push(url+': preview indexation');
+ for(const link of editorialLinks[key]??[]){
+  if(!link.anchor?.trim())issues.push(url+': missing editorial link text for '+link.url);
+ }
  const meta=data[key];
  const schemas=[...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)].flatMap(([,value])=>{
   try{return [JSON.parse(value)];}catch{issues.push(url+': invalid JSON-LD');return [];}
