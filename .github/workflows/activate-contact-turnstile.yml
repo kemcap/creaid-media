@@ -1,0 +1,62 @@
+name: Activate Turnstile on dedicated IONOS preview
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/activate-contact-turnstile.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ionos-preview-deployment
+  cancel-in-progress: false
+jobs:
+  activate:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, openssl
+          coverage: none
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test candidate and build exact prior reference
+        run: |
+          set -euo pipefail
+          php -l backend/contact-public/contact.php
+          php backend/contact/test.php
+          php backend/contact/test-turnstile.php
+          node --check public/assets/agency-pages.js
+          npm ci
+          npm run verify
+          python -m pip install --disable-pip-version-check Pillow==11.3.0
+          python scripts/optimize-preview-images.py
+          git worktree add --detach "$RUNNER_TEMP/contact-baseline" 42fa5bb5a04513f099929aa36093034eead4ca08
+          git cat-file -e 70ff9ce8f1df2f8a69bc7df760ab227f9bfd4334^{commit} || git fetch origin optimization/contact-php-backend
+          cd "$RUNNER_TEMP/contact-baseline"
+          npm ci
+          npm run build
+          python scripts/optimize-preview-images.py
+          echo "BASELINE_DIR=$RUNNER_TEMP/contact-baseline" >> "$GITHUB_ENV"
+      - name: Install SFTP dependency
+        run: |
+          if ! /usr/bin/python3 -c 'import paramiko'; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends python3-paramiko
+          fi
+      - name: Activate only changed files and verify live bot rejection
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          TURNSTILE_SITE_KEY: ${{ secrets.TURNSTILE_SITE_KEY }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+        run: /usr/bin/python3 .github/scripts/activate-contact-turnstile.py

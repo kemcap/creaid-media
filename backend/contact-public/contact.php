@@ -11,6 +11,7 @@ try{
     if(($_SERVER['REQUEST_METHOD']??'')!=='POST'){header('Allow: POST');http_response_code(405);echo '{"ok":false,"status":"method"}';exit;}
     if(!is_file($private.'/core.php')||!is_file($private.'/config.php')||!is_file($private.'/vendor/autoload.php'))throw new RuntimeException('Not configured');
     require $private.'/core.php';
+    require $private.'/turnstile.php';
     require $private.'/vendor/autoload.php';
     $config=require $private.'/config.php';
     $stream=fopen('php://input','rb');
@@ -28,7 +29,7 @@ try{
         $m->isHTML(false);$m->Body=\CreAid\Contact\messageBody($data);
         return $m->send();
     };
-    echo json_encode(\CreAid\Contact\handle($_SERVER,$body,$config,$private.'/rate.json',$send,time()),JSON_THROW_ON_ERROR);
+    echo json_encode(\CreAid\Contact\handle($_SERVER,$body,$config,$private.'/rate.json',$send,time(),\CreAid\Contact\verifyTurnstile(...)),JSON_THROW_ON_ERROR);
 }catch(\CreAid\Contact\Rejection $e){
     http_response_code($e->status);
     if($e->status===429)header('Retry-After: 600');

@@ -66,6 +66,26 @@
     const hint=document.querySelector('#aFormHint');
     const intro=document.querySelector('#aFormIntro');
     let pending=false;
+    const captcha=form.querySelector('#aTurnstile');
+    const sitekey=direct?captcha?.dataset.sitekey:'';
+    let captchaToken='',widgetId=null,captchaFailed=false;
+    if(sitekey){
+      captcha.hidden=false;
+      const script=document.createElement('script');
+      script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.async=true;
+      script.onload=()=>{
+        window.turnstile.ready(()=>{
+          widgetId=window.turnstile.render(captcha,{sitekey,action:'contact',theme:'auto',size:'flexible',appearance:'interaction-only',
+            callback:token=>{captchaToken=token;captchaFailed=false;},
+            'expired-callback':()=>{captchaToken='';},
+            'error-callback':()=>{captchaToken='';captchaFailed=true;status.textContent='Die Sicherheitsprüfung ist momentan nicht verfügbar. Bitte laden Sie die Seite neu oder schreiben Sie uns direkt per E-Mail.';}
+          });
+        });
+      };
+      script.onerror=()=>{captchaFailed=true;status.textContent='Die Sicherheitsprüfung konnte nicht geladen werden. Bitte laden Sie die Seite neu oder schreiben Sie uns direkt per E-Mail.';};
+      document.head.appendChild(script);
+    }
     function mailto(data){
       const subject='Projektanfrage CreAid-Media: '+String(data.get('service')||'Allgemein').slice(0,80);
       const body='Name: '+data.get('name')+'\nE-Mail: '+data.get('email')+'\nUnternehmen: '+(data.get('company')||'–')+'\nTelefon: '+(data.get('phone')||'–')+'\nLeistung: '+data.get('service')+'\n\nProjektbeschreibung:\n'+data.get('message');
@@ -83,19 +103,23 @@
         status.textContent='Ihr E-Mail-Programm wird geöffnet. Bitte die Nachricht dort noch selbst absenden.';
         window.location.href=mailto(data);return;
       }
+      if(sitekey&&!captchaToken){status.textContent=captchaFailed?'Die Sicherheitsprüfung ist derzeit nicht verfügbar. Sie können alternativ eine E-Mail vorbereiten.':'Bitte warten Sie, bis die Sicherheitsprüfung abgeschlossen ist.';if(captchaFailed){fallback.href=mailto(data);fallback.hidden=false;}return;}
       pending=true;submit.disabled=true;form.setAttribute('aria-busy','true');
       fallback.hidden=true;fallback.removeAttribute('href');
       status.textContent='Ihre Anfrage wird übermittelt …';
       const controller=new AbortController();
-      const timer=setTimeout(()=>controller.abort(),25000);
+      const timer=setTimeout(()=>controller.abort(),40000);
       try{
         const fields=['name','email','company','phone','service','message','website'];
         const payload=Object.fromEntries(fields.map(key=>[key,String(data.get(key)||'')]));
+        if(sitekey)payload.turnstile_token=captchaToken;
         const response=await fetch('/api/contact.php',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},credentials:'same-origin',cache:'no-store',redirect:'error',signal:controller.signal,body:JSON.stringify(payload)});
         const result=await response.json();
         if(response.ok&&result.ok===true&&result.status==='accepted'){
           status.textContent='Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt.';
           form.reset();
+        }else if(result.status==='captcha_required'||result.status==='captcha_invalid'){
+          status.textContent='Die Sicherheitsprüfung ist abgelaufen oder fehlgeschlagen. Bitte erneut bestätigen.';
         }else if(response.status===422){
           status.textContent='Bitte prüfen Sie Ihre Angaben. Ihre Nachricht wurde nicht versendet.';
         }else if(response.status===429){
@@ -109,6 +133,7 @@
         status.textContent='Der Versand konnte nicht bestätigt werden. Bitte nicht sofort erneut senden, um doppelte Nachrichten zu vermeiden. Ihre Angaben bleiben erhalten.';
         fallback.href=mailto(data);fallback.hidden=false;
       }finally{
+        if(sitekey){captchaToken='';if(widgetId!==null){try{window.turnstile?.reset(widgetId);}catch{captchaFailed=true;}}}
         clearTimeout(timer);pending=false;submit.disabled=false;form.removeAttribute('aria-busy');
       }
     });
