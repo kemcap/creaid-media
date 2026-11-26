@@ -66,11 +66,12 @@ jobs:
           npm run test:routes -- http://127.0.0.1:8080
       - name: Prepare protected preview and Apache routing
         run: node .github/scripts/prepare-ionos.mjs
-      - name: Prepare isolated cache-only candidate
-        if: github.event_name == 'workflow_dispatch' && inputs.preview_cache != 'normal'
+      - name: Prepare isolated candidate to preserve the active preview cache mode
         run: |
           node scripts/performance/test-prepare-candidate.mjs
           node .github/scripts/prepare-preview-cache.mjs
+      - name: Confirm main still points at this deployment
+        run: test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$GITHUB_SHA"
       - name: Incremental deployment to dedicated IONOS preview
         env:
           CREAID_PREVIEW_CACHE_MODE: ${{ inputs.preview_cache || 'normal' }}
