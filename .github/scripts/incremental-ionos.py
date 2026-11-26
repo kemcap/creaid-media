@@ -19,10 +19,16 @@ from urllib.parse import quote
 STATE='.creaid-deploy-state.json'
 ORIGIN='https://vorschau.creaid-media.de'
 MAX_STATE=2*1024*1024
+CACHE_MARKERS=(b'BEGIN CREAID PERFORMANCE ENGINE',b'BEGIN CREAID PREVIEW HOST CACHE')
+FINGERPRINTED_ASSET=re.compile(r'\.sha256-[a-f0-9]{64}\.(?:css|js|mjs|webp|avif|png|jpg|jpeg|gif|svg|woff2|woff|ico)$')
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self,*args,**kwargs):return None
 def require(ok,msg):
     if not ok:raise RuntimeError(msg)
+def cache_enabled(rules):
+    engine,hosting=(marker in rules for marker in CACHE_MARKERS)
+    require(engine==hosting,'Incomplete preview cache policy; no changes.')
+    return engine
 def sha(data):return hashlib.sha256(data).hexdigest()
 def safe_path(path):
     require(isinstance(path,str) and not path.startswith('/') and all(p not in ('','.','..') and not p.startswith('.') for p in path.split('/')),'Invalid managed path.')
@@ -63,6 +69,16 @@ def public_matches(path,digest,route_urls):
         code,headers,body=get(ORIGIN+public_path(path,route_urls))
         return code==200 and 'noindex' in headers.get('X-Robots-Tag','').lower() and sha(body)==digest
     except Exception:return False
+def verify_cache_policy(expected):
+    asset=next((name for name in expected if name.startswith('assets/') and FINGERPRINTED_ASSET.search(name)),None)
+    require(asset is not None,'Missing fingerprinted preview asset.')
+    code,headers,body=get(ORIGIN+public_path(asset,{}))
+    policy={part.strip().lower() for part in headers.get('Cache-Control','').split(',')}
+    require(code==200 and sha(body)==sha(expected[asset].read_bytes()) and 'noindex' in headers.get('X-Robots-Tag','').lower()
+            and {'private','max-age=3600','immutable'}<=policy and not {'no-store','public'}&policy,
+            'Preview fingerprint or private cache policy verification failed.')
+    code,headers,_=get(ORIGIN+'/')
+    require(code==200 and 'no-store' in headers.get('Cache-Control','').lower(),'Preview HTML lost no-store.')
 def ensure_dirs(sftp,relative,dirs):
     if relative in dirs:return
     ensure_dirs(sftp,posixpath.dirname(relative) or '.',dirs)
@@ -103,9 +119,9 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
     require(len(api)==1 and api[0].filename=='contact.php' and stat.S_ISREG(api[0].st_mode),'Unexpected API contents.')
     old_pages={n for n in root if re.fullmatch(r'[a-z0-9-]+\.html',n)}
     require(not old_pages-set(manifest['pages']),'Obsolete HTML routes: explicit clean release required.')
-    # Never silently remove a separately activated performance/cache policy.
     rules=read(sftp,'.htaccess',1024*1024)
-    require(b'BEGIN CREAID PERFORMANCE ENGINE' not in rules and b'BEGIN CREAID PREVIEW HOST CACHE' not in rules,'Active cache policy requires a cache-aware release; no changes.')
+    cached=cache_enabled(rules)
+    require(cached==cache_enabled(expected['.htaccess'].read_bytes()),'Candidate would change the active preview cache mode; no changes.')
     require(rules.startswith(b'# Generated from scripts/routes.mjs; preview only') and b'AuthType' not in rules and b'AuthUserFile' not in rules,'Unexpected existing routing policy; no changes.')
     rows={}
     dirs={'.'}
@@ -147,6 +163,8 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
         checks=dict(zip(uncertain,pool.map(lambda p:public_matches(p,digests[p],route_urls),uncertain)))
     for rel in uncertain:
         if not checks[rel] and sha(read(sftp,rel))!=digests[rel]:changed.append(rel)
+    immutable_assets={rel for rel in expected if cached and rel.startswith('assets/') and FINGERPRINTED_ASSET.search(rel)}
+    require(not immutable_assets.intersection(rows,changed),'Existing fingerprint differs; no changes.')
     changed.sort(key=lambda p:(2 if p=='.htaccess' else 1 if p.endswith('.html') else 0,p=='index.html',p))
     total_bytes=sum(expected[p].stat().st_size for p in expected)
     changed_bytes=sum(expected[p].stat().st_size for p in changed)
@@ -161,6 +179,7 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
         require(code==403,'Deployment state not denied over HTTPS.')
     backup={}
     applied=[]
+    verified_new_assets=set()
     planning_done=perf_counter()
     try:
         for rel in changed:
@@ -170,12 +189,14 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
             backup[rel]=(read(sftp,rel),stat.S_IMODE(a.st_mode)) if a is not None else None
             applied.append(rel)
             put(sftp,rel,path.read_bytes(),a is not None,backup[rel][1] if a is not None else 0o644)
+            if rel in immutable_assets:verified_new_assets.add(rel)
         writes_done=perf_counter()
         # Check every changed public URL plus security-critical contact/home/privacy files.
         verify_paths=set(changed).union(critical)-{'.htaccess'}
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
             results=list(pool.map(lambda p:(p,public_matches(p,digests[p],route_urls)),sorted(verify_paths)))
         require(all(ok for _,ok in results),'HTTPS mismatch: '+', '.join(p for p,ok in results if not ok))
+        if cached:verify_cache_policy(expected)
         code,headers,body=get(ORIGIN+'/api/contact.php')
         require(code==405 and json.loads(body)=={'ok':False,'status':'method'} and 'no-store' in headers.get('Cache-Control',''),'Contact endpoint or cache policy changed.')
         if changed:
@@ -190,6 +211,7 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
     except Exception:
         for rel in reversed(applied):
             old=backup[rel]
+            if rel in verified_new_assets:continue
             if old is None:
                 try:sftp.remove(rel)
                 except FileNotFoundError:pass
@@ -197,4 +219,4 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
         print('INCREMENTAL_ROLLBACK_COMPLETE',flush=True)
         raise
     print('INCREMENTAL_TIMING '+json.dumps({'planningSeconds':round(planning_done-started,2),'writeSeconds':round(writes_done-planning_done,2),'verificationSeconds':round(perf_counter()-writes_done,2),'totalSeconds':round(perf_counter()-started,2)}),flush=True)
-    print('INCREMENTAL_SUCCESS '+json.dumps({**summary,'httpsVerified':True,'contactEndpointPreserved':True,'productionChanged':False}),flush=True)
+    print('INCREMENTAL_SUCCESS '+json.dumps({**summary,'httpsVerified':True,'contactEndpointPreserved':True,'previewCacheEnabled':cached,'productionChanged':False}),flush=True)

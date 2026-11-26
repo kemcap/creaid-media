@@ -11,7 +11,7 @@
     "preview": "node scripts/preview.mjs",
     "test:structure": "node scripts/check-hero-experience.mjs",
     "test:routes": "node scripts/check-routes.mjs",
-    "verify": "npm run build && npm run test:structure && npm run test:quality",
+    "verify": "npm run build && npm run test:structure && npm run test:quality && node scripts/check-tracking-engine.mjs",
     "test:quality": "node scripts/check-quality.mjs",
     "test:browser": "node scripts/check-browser.mjs"
   },

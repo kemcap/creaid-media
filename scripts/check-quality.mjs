@@ -3,6 +3,8 @@ import {readFileSync,readdirSync,existsSync,statSync} from 'node:fs';
 import {routeFiles,redirects} from './routes.mjs';
 const read=p=>readFileSync(p,'utf8');
 const data=JSON.parse(read('src/_data/pages.json'));
+const previewDrafts=JSON.parse(read('src/_data/wordpressPreviewDrafts.json'));
+const editorialLinks=JSON.parse(read('src/_data/editorialLinks.json'));
 const aliases=new Map(redirects);
 const routes=new Map(Object.entries(routeFiles));
 const load=key=>read('dist/'+key);
@@ -18,6 +20,24 @@ for(const [url,html] of htmlByRoute){
  if(new Set(ids).size!==ids.length)issues.push(url+': duplicate IDs');
  if(!html.includes('rel="canonical" href="https://creaid-media.de'+url+'"'))issues.push(url+': canonical mismatch');
  if(!html.includes('name="robots" content="noindex,nofollow,noarchive"'))issues.push(url+': preview indexation');
+ for(const link of editorialLinks[key]??[]){
+  if(!link.anchor?.trim())issues.push(url+': missing editorial link text for '+link.url);
+ }
+ const meta=data[key];
+ const schemas=[...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)].flatMap(([,value])=>{
+  try{return [JSON.parse(value)];}catch{issues.push(url+': invalid JSON-LD');return [];}
+ });
+ if(meta.isPost&&!Object.hasOwn(previewDrafts,key)){
+  const posts=schemas.filter(schema=>schema?.['@type']==='BlogPosting');
+  const post=posts[0];
+  if(posts.length!==1||!post.headline?.trim()||post.description!==meta.description||post.url!==meta.canonical||post.image!==meta.shareImage){
+   issues.push(url+': missing or inconsistent BlogPosting metadata');
+  }
+ }
+ const shareImage=new URL(meta.shareImage,meta.canonical);
+ if(shareImage.host==='creaid-media.de'&&shareImage.pathname.startsWith('/assets/')&&!existsSync('dist'+shareImage.pathname)){
+  issues.push(url+': missing share image '+shareImage.pathname);
+ }
  for(const match of html.matchAll(/<(?:img|script|link|source)\b[^>]*>/gi)){
   const loc=match[0].match(/\b(?:src|href)="(\/assets\/[^"#?]+)"/i)?.[1];
   if(loc){assetCount++;if(!existsSync('dist'+loc))issues.push(url+': missing asset '+loc);}
@@ -25,10 +45,12 @@ for(const [url,html] of htmlByRoute){
  }
  for(const m of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)){
   const href=m[1].replaceAll('&amp;','&');
-  if(!href.startsWith('/')&&!href.startsWith('#'))continue;
-  if(href.startsWith('//')||href==='#')continue;
+  if(!/^(?:\/|#|https:\/\/(?:www\.)?creaid-media\.de\/)/i.test(href)||href.startsWith('//')||href==='#')continue;
   const target=new URL(href,'https://creaid-media.de'+url);
-  if(target.pathname.startsWith('/assets/'))continue;
+  if(target.pathname.startsWith('/assets/')){
+   if(!existsSync('dist'+target.pathname))issues.push(url+': unresolved linked asset '+href);
+   continue;
+  }
   const path=aliases.get(target.pathname)||target.pathname;
   linkCount++;
   const dest=htmlByRoute.get(path);

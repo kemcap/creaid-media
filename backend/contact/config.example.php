@@ -12,5 +12,7 @@ return [
     'turnstile_required' => false,
     'turnstile_secret' => '',
     'turnstile_hostname' => 'vorschau.creaid-media.de',
+    'hubspot_enabled' => false,
+    'hubspot_token' => '', // private app token with crm.objects.contacts.write only
     'rate_secret' => '', // locally generate 32 random bytes as hex; never commit
 ];

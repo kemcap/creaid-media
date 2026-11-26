@@ -45,17 +45,7 @@ def enter_preview(sftp):
         require(f.read(len(OWNER)+1) == OWNER, "Wrong preview ownership marker.")
     require(not any(n in sftp.listdir(".") for n in ("wp-admin", "wp-content", "wp-includes", "wp-config.php")), "WordPress detected.")
 
-def main():
-    host = os.environ["SFTP_HOST"].strip()
-    user = os.environ["SFTP_USERNAME"]
-    password = os.environ["SFTP_PASSWORD"]
-    require(user == EXPECTED_USER, "SFTP username differs from the dedicated account confirmed in IONOS.")
-    require(os.environ["SFTP_PORT"] == "22" and host.endswith(".webspace-data.io"), "Unexpected IONOS host or port.")
-    require(bool(password), "Missing SFTP password.")
-    cache_mode = os.environ.get("CREAID_PREVIEW_CACHE_MODE", "normal")
-    require(cache_mode in ("normal", "enabled", "disabled"), "Invalid preview cache mode.")
-    dist = Path("dist")
-    manifest = json.loads(Path("ionos-deploy-manifest.json").read_text())
+def release_files(dist, manifest):
     pages = [dist / name for name in manifest["pages"]]
     require(len(pages) == len(set(pages)) and dist / "index.html" in pages, "Invalid manifest.")
     assets = []
@@ -68,6 +58,18 @@ def main():
     files = [dist / ".htaccess", dist / "robots.txt"] + sorted(assets) + sorted(p for p in pages if p.name != "index.html") + [dist / "index.html"]
     for path in files:
         require(path.is_file() and not path.is_symlink() and path.is_relative_to(dist), "Missing or unsafe local file.")
+    return files
+
+def main():
+    host = os.environ["SFTP_HOST"].strip()
+    user = os.environ["SFTP_USERNAME"]
+    password = os.environ["SFTP_PASSWORD"]
+    require(user == EXPECTED_USER, "SFTP username differs from the dedicated account confirmed in IONOS.")
+    require(os.environ["SFTP_PORT"] == "22" and host.endswith(".webspace-data.io"), "Unexpected IONOS host or port.")
+    require(bool(password), "Missing SFTP password.")
+    cache_mode = os.environ.get("CREAID_PREVIEW_CACHE_MODE", "normal")
+    require(cache_mode in ("normal", "enabled", "disabled"), "Invalid preview cache mode.")
+    manifest = json.loads(Path("ionos-deploy-manifest.json").read_text())
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(PinnedIONOSKey())
     try:
@@ -95,6 +97,9 @@ def main():
             spec = spec_from_file_location("incremental", Path(__file__).with_name("incremental-ionos.py"))
             incremental = module_from_spec(spec)
             spec.loader.exec_module(incremental)
+            rules = incremental.read(sftp, ".htaccess", 1024 * 1024)
+            dist = Path("preview-cache-package/site") if incremental.cache_enabled(rules) else Path("dist")
+            files = release_files(dist, manifest)
             incremental.deploy(sftp, files, dist, manifest, os.environ.get("CREAID_INCREMENTAL_MODE", "apply"))
     finally:
         client.close()

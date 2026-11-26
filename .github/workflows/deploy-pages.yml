@@ -24,6 +24,8 @@ concurrency:
 
 jobs:
   deploy:
+    # Explicit IONOS-only releases must not update the GitHub Pages mirror.
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[ionos-preview-only]')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
