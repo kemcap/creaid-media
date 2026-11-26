@@ -1,0 +1,33 @@
+name: Verify private contact SFTP access
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-contact-sftp.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ionos-contact-private
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install SFTP client
+        run: |
+          if ! /usr/bin/python3 -c 'import paramiko'; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends python3-paramiko
+          fi
+      - name: Read-only private access verification
+        env:
+          CONTACT_SFTP_HOST: ${{ secrets.CONTACT_SFTP_HOST }}
+          CONTACT_SFTP_USERNAME: ${{ secrets.CONTACT_SFTP_USERNAME }}
+          CONTACT_SFTP_PASSWORD: ${{ secrets.CONTACT_SFTP_PASSWORD }}
+          CONTACT_SFTP_PORT: ${{ secrets.CONTACT_SFTP_PORT }}
+        run: /usr/bin/python3 .github/scripts/verify-contact-sftp.py
