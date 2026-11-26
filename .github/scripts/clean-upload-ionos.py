@@ -37,7 +37,7 @@ def main():
     for p in (dist/"assets").rglob("*"):
         require(not p.is_symlink(),"Local symlink refused.")
         if p.is_dir():continue
-        require(p.is_file() and p.suffix.lower() in u.ASSET_SUFFIXES,"Unexpected asset.")
+        require(p.is_file() and u.allowed_asset(p.relative_to(dist)),"Unexpected asset.")
         files.append(p)
     files.extend(dist/name for name in sorted(pages|{"robots.txt",".htaccess"}))
     for p in files:require(p.is_file() and not p.is_symlink(),"Missing local file.")
@@ -89,7 +89,7 @@ def main():
                         # Interrupted atomic uploads leave this exact generated filename.
                         # Keep it in the old assets tree, which is moved to the denied backup.
                         print("Recognized interrupted upload; will quarantine: "+p,flush=True)
-                    else:require(stat.S_ISREG(a.st_mode) and Path(a.filename).suffix.lower() in u.ASSET_SUFFIXES,"Unrecognized existing asset: "+p)
+                    else:require(stat.S_ISREG(a.st_mode) and u.allowed_asset(p),"Unrecognized existing asset: "+p)
             if "assets" in old:audit_assets("assets")
             # Both private folders are protected before any files enter them.
             for d in (stage,backup):
