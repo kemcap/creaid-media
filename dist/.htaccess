@@ -495,6 +495,8 @@ RewriteCond %{THE_REQUEST} \s/+webdesign-agentur-fuer-kleine-unternehmen\.html(?
 RewriteRule ^webdesign-agentur-fuer-kleine-unternehmen\.html$ /webdesign-agentur-fuer-kleine-unternehmen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-agentur-fuer-kleine-unternehmen/(?:[?\s])
 RewriteRule ^webdesign-agentur-fuer-kleine-unternehmen/$ /webdesign-agentur-fuer-kleine-unternehmen [R=301,END,NE]
+RewriteCond %{THE_REQUEST} \s/+webdesign-conversion(?:[?\s])
+RewriteRule ^webdesign-conversion$ /category/webdesign-conversion [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-fuer-arztpraxen\.html(?:[?\s])
 RewriteRule ^webdesign-fuer-arztpraxen\.html$ /webdesign-fuer-arztpraxen [R=301,END,NE]
 RewriteCond %{THE_REQUEST} \s/+webdesign-fuer-arztpraxen/(?:[?\s])
