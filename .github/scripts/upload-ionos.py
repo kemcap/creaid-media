@@ -28,6 +28,17 @@ def require(condition, message):
     if not condition:
         raise RuntimeError(message)
 
+def enter_preview(sftp):
+    # Account may see the entire webspace. Never write in the login root.
+    target = "/creaid-v11"
+    require(stat.S_ISDIR(sftp.lstat(target).st_mode), "Preview path missing or not a real directory.")
+    sftp.chdir(target)
+    require(sftp.normalize(".") == sftp.normalize(target), "Unexpected preview directory.")
+    require(stat.S_ISREG(sftp.lstat(OWNER_FILE).st_mode), "Existing preview ownership marker required.")
+    with sftp.open(OWNER_FILE, "rb") as f:
+        require(f.read(len(OWNER)+1) == OWNER, "Wrong preview ownership marker.")
+    require(not any(n in sftp.listdir(".") for n in ("wp-admin", "wp-content", "wp-includes", "wp-config.php")), "WordPress detected.")
+
 def main():
     host = os.environ["SFTP_HOST"].strip()
     user = os.environ["SFTP_USERNAME"]
@@ -57,8 +68,7 @@ def main():
         client.connect(host, port=22, username=user, password=password, look_for_keys=False, allow_agent=False, timeout=20, banner_timeout=20, auth_timeout=20)
         with client.open_sftp() as sftp:
             sftp.get_channel().settimeout(120)
-            root = sftp.normalize(".")
-            require(root == "/" or root.rstrip("/").endswith("/creaid-v11"), "Unexpected SFTP login directory; no upload performed.")
+            enter_preview(sftp)
             initial = {a.filename: a for a in sftp.listdir_attr(".") if a.filename not in (".", "..")}
             require(not any(n in initial for n in ("wp-admin", "wp-content", "wp-includes", "wp-config.php")), "WordPress directory detected; no upload performed.")
             if OWNER_FILE in initial:

@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: ionos-contact-private
+  group: ionos-preview-deployment
   cancel-in-progress: false
 jobs:
   verify:
@@ -24,10 +24,12 @@ jobs:
             sudo apt-get update -qq
             sudo apt-get install -y --no-install-recommends python3-paramiko
           fi
+      - name: Validate scripts
+        run: python3 -m py_compile .github/scripts/upload-ionos.py .github/scripts/clean-upload-ionos.py .github/scripts/install-contact-endpoint.py .github/scripts/verify-contact-sftp.py
       - name: Read-only private access verification
         env:
-          CONTACT_SFTP_HOST: ${{ secrets.CONTACT_SFTP_HOST }}
-          CONTACT_SFTP_USERNAME: ${{ secrets.CONTACT_SFTP_USERNAME }}
-          CONTACT_SFTP_PASSWORD: ${{ secrets.CONTACT_SFTP_PASSWORD }}
-          CONTACT_SFTP_PORT: ${{ secrets.CONTACT_SFTP_PORT }}
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
         run: /usr/bin/python3 .github/scripts/verify-contact-sftp.py

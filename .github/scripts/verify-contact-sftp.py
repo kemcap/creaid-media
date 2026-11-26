@@ -8,15 +8,15 @@ spec=importlib.util.spec_from_file_location("preview_uploader",Path(__file__).wi
 u=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(u)
 def main():
-    names=("CONTACT_SFTP_HOST","CONTACT_SFTP_USERNAME","CONTACT_SFTP_PASSWORD","CONTACT_SFTP_PORT")
+    names=("SFTP_HOST","SFTP_USERNAME","SFTP_PASSWORD","SFTP_PORT")
     missing=[k for k in names if not os.environ.get(k)]
     if missing:
         print("Missing GitHub secret names: "+", ".join(missing))
         return 1
     host=os.environ[names[0]].strip()
     user=os.environ[names[1]]
-    if not host.endswith(".webspace-data.io") or os.environ[names[3]]!="22" or user==u.EXPECTED_USER:
-        print("Connection settings do not match a separate IONOS SFTP account.")
+    if not host.endswith(".webspace-data.io") or os.environ[names[3]]!="22" or user!=u.EXPECTED_USER:
+        print("Connection settings do not match the confirmed IONOS SFTP account.")
         return 1
     client=paramiko.SSHClient()
     client.set_missing_host_key_policy(u.PinnedIONOSKey())
@@ -24,9 +24,15 @@ def main():
         client.connect(host,port=22,username=user,password=os.environ[names[2]],look_for_keys=False,allow_agent=False,timeout=20,banner_timeout=20,auth_timeout=20)
         with client.open_sftp() as s:
             s.get_channel().settimeout(30)
-            root=s.normalize(".")
-            if root!="/" and not root.rstrip("/").endswith("/creaid-contact-private"):
-                print("Unexpected SFTP login directory. No changes made.")
+            u.enter_preview(s)
+            print("PREVIEW_TARGET_VERIFIED: /creaid-v11 ownership marker confirmed.")
+            target="/creaid-contact-private"
+            if not stat.S_ISDIR(s.lstat(target).st_mode):
+                print("Private backend path is not a real directory.")
+                return 1
+            s.chdir(target)
+            if s.normalize(".")!=s.normalize(target):
+                print("Unexpected private backend directory.")
                 return 1
             entries={a.filename:a for a in s.listdir_attr(".")}
             if {"wp-admin","wp-content","wp-includes","wp-config.php","creaid-v11","clickandbuilds","index.html"}.intersection(entries):

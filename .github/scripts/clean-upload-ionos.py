@@ -49,8 +49,7 @@ def main():
         client.connect(host,port=22,username=user,password=password,look_for_keys=False,allow_agent=False,timeout=20,banner_timeout=20,auth_timeout=20)
         with client.open_sftp() as s:
             s.get_channel().settimeout(120)
-            root=s.normalize(".")
-            require(root=="/" or root.rstrip("/").endswith("/creaid-v11"),"Wrong SFTP directory.")
+            u.enter_preview(s)
             initial={a.filename:a for a in s.listdir_attr(".")}
             require(not any(n in initial for n in ("wp-admin","wp-content","wp-includes","wp-config.php")),"WordPress detected. No changes.")
             require(u.OWNER_FILE in initial and stat.S_ISREG(initial[u.OWNER_FILE].st_mode),"Existing preview ownership marker required.")

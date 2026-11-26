@@ -38,8 +38,7 @@ client.set_missing_host_key_policy(u.PinnedIONOSKey())
 try:
     client.connect(os.environ["SFTP_HOST"].strip(),port=22,username=os.environ["SFTP_USERNAME"],password=os.environ["SFTP_PASSWORD"],look_for_keys=False,allow_agent=False,timeout=20,banner_timeout=20,auth_timeout=20)
     with client.open_sftp() as s:
-        root=s.normalize(".")
-        require(root=="/" or root.rstrip("/").endswith("/creaid-v11"),"Unexpected preview root.")
+        u.enter_preview(s)
         initial={a.filename:a for a in s.listdir_attr(".")}
         require(not {"wp-admin","wp-content","wp-includes","wp-config.php"}.intersection(initial),"WordPress detected.")
         require(u.OWNER_FILE in initial and stat.S_ISREG(initial[u.OWNER_FILE].st_mode),"Preview marker missing.")
