@@ -93,6 +93,27 @@ jobs:
           php backend/contact/test-turnstile.php
           php backend/contact/test-hubspot.php
           python -m py_compile .github/scripts/update-preview-contact-core.py
+      - name: Validate and activate protected production contact origin
+        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[ionos-live-contact]')
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring
+          coverage: none
+      - name: Test and migrate the private production contact configuration
+        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[ionos-live-contact]')
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: |
+          php -l backend/contact/core.php
+          php backend/contact/test.php
+          php backend/contact/test-turnstile.php
+          php backend/contact/test-hubspot.php
+          python .github/scripts/activate-live-contact.py --self-test
+          python .github/scripts/activate-live-contact.py
       - name: Incremental deployment to dedicated IONOS production directory
         id: static_preview
         env:
