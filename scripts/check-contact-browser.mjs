@@ -91,10 +91,10 @@ try{
  assert.equal(await loader.isVisible(),true);
  assert.equal(await loader.locator('.cm-bounce-motion').evaluate(e=>getComputedStyle(e).animationName),'cm-bounce-jump');
  await page.waitForFunction(()=>document.querySelector('#aFormMessage').textContent.includes('erfolgreich'));
- assert.ok(await page.evaluate(()=>performance.now()-window.contactFeedbackStart)>=1490,'Successful feedback lasts at least 1.5s');
+ assert.ok(await page.evaluate(()=>performance.now()-window.contactFeedbackStart) >=2990,'Successful feedback lasts at least 3s');
  assert.equal(await feedback.getAttribute('data-state'),'success');
  assert.equal(await loader.isVisible(),false);
- assert.match(await status.textContent(),/Anfrage erfolgreich versendet/);
+ assert.equal(await status.textContent(),'Anfrage erfolgreich versendet.');
  assert.equal(await form.locator('[name=message]').inputValue(),'');
  assert.equal(await fallback.isVisible(),false);
  assert.equal(calls,5);
