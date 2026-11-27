@@ -9,7 +9,7 @@
       <article><span aria-hidden="true">0{{ loop.index }}</span><h3>{{ group.title | escape }}</h3><p>{{ group.copy | escape }}</p></article>
       {% endfor %}
     </div>
-    <div class="cm-depth-actions"><a class="cm-depth-primary" href="{{ info.contact | escape }}">Projekt besprechen ↗</a><a href="{{ info.link.href | escape }}">{{ info.link.label | escape }} ↗</a></div>
+    <div class="cm-depth-actions"><a class="cm-depth-primary" href="{{ info.contact | escape }}">Projekt besprechen ↗</a><a href="{{ info.link.href | escape }}">{{ info.link.label | escape }} ↗</a>{% for item in info.related %}<a href="{{ item.href | escape }}">{{ item.label | escape }} ↗</a>{% endfor %}</div>
   </div>
 </section>
 {% endif %}
