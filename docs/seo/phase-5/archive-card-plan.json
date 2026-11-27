@@ -1,0 +1,126 @@
+{
+  "archiv-branding": {
+    "before": [
+      "/logo-design-agentur",
+      "/logo-und-slogan-entwickeln",
+      "/firmennamen-entwickeln-lassen",
+      "/corporate-design-erstellen-lassen",
+      "/markenauftritt-fuer-kleine-unternehmen"
+    ],
+    "after": [
+      "/7-branding-fehler-bei-neugruendung",
+      "/logo-design-agentur",
+      "/logo-und-slogan-entwickeln",
+      "/firmennamen-entwickeln-lassen",
+      "/corporate-design-erstellen-lassen",
+      "/markenauftritt-fuer-kleine-unternehmen"
+    ],
+    "added": [
+      "/7-branding-fehler-bei-neugruendung"
+    ]
+  },
+  "archiv-seo": {
+    "before": [
+      "/seo-fuer-lokale-sichtbarkeit",
+      "/seo-grundlagen-lokale-dienstleister",
+      "/google-maps-auffindbarkeit-verbessern",
+      "/schlechte-website-verbessern"
+    ],
+    "after": [
+      "/website-audit-unternehmen",
+      "/seo-fuer-lokale-sichtbarkeit",
+      "/seo-grundlagen-lokale-dienstleister",
+      "/google-maps-auffindbarkeit-verbessern",
+      "/schlechte-website-verbessern"
+    ],
+    "added": [
+      "/website-audit-unternehmen"
+    ]
+  },
+  "archiv-lokal": {
+    "before": [
+      "/professionelle-website-fuer-lokale-dienstleister",
+      "/seo-grundlagen-lokale-dienstleister",
+      "/webdesign-fuer-arztpraxen"
+    ],
+    "after": [
+      "/360-grad-rundgang-erstellen",
+      "/professionelle-website-fuer-lokale-dienstleister",
+      "/seo-grundlagen-lokale-dienstleister",
+      "/webdesign-fuer-arztpraxen"
+    ],
+    "added": [
+      "/360-grad-rundgang-erstellen"
+    ]
+  },
+  "archiv-handwerk": {
+    "before": [
+      "/webdesign-fuer-handwerker",
+      "/webdesign-fuer-handwerksbetriebe",
+      "/webdesign-agentur-fuer-handwerker",
+      "/webdesign-fuer-dachdecker-firma",
+      "/seo-fuer-lokale-sichtbarkeit"
+    ],
+    "after": [
+      "/wann-lohnt-sich-seo",
+      "/7-branding-fehler-bei-neugruendung",
+      "/webdesign-fuer-handwerker",
+      "/webdesign-fuer-handwerksbetriebe",
+      "/webdesign-agentur-fuer-handwerker",
+      "/webdesign-fuer-dachdecker-firma",
+      "/seo-fuer-lokale-sichtbarkeit"
+    ],
+    "added": [
+      "/wann-lohnt-sich-seo",
+      "/7-branding-fehler-bei-neugruendung"
+    ]
+  },
+  "archiv-handwerk-seo-handwerk": {
+    "before": [
+      "/seo-fuer-lokale-sichtbarkeit",
+      "/seo-grundlagen-lokale-dienstleister",
+      "/google-maps-auffindbarkeit-verbessern",
+      "/webdesign-fuer-dachdecker-firma"
+    ],
+    "after": [
+      "/wann-lohnt-sich-seo",
+      "/seo-fuer-lokale-sichtbarkeit",
+      "/seo-grundlagen-lokale-dienstleister",
+      "/google-maps-auffindbarkeit-verbessern",
+      "/webdesign-fuer-dachdecker-firma"
+    ],
+    "added": [
+      "/wann-lohnt-sich-seo"
+    ]
+  },
+  "archiv-handwerk-handwerk-handwerk": {
+    "before": [
+      "/webdesign-fuer-handwerksbetriebe",
+      "/webdesign-fuer-handwerker",
+      "/webdesign-fuer-dachdecker-firma"
+    ],
+    "after": [
+      "/7-branding-fehler-bei-neugruendung",
+      "/website-wartung-fuer-firmen",
+      "/webdesign-fuer-handwerksbetriebe",
+      "/webdesign-fuer-handwerker",
+      "/webdesign-fuer-dachdecker-firma"
+    ],
+    "added": [
+      "/7-branding-fehler-bei-neugruendung",
+      "/website-wartung-fuer-firmen"
+    ]
+  },
+  "archiv-google-ads": {
+    "before": [
+      "/google-ads-aber-keine-anfragen"
+    ],
+    "after": [
+      "/beste-landingpage-elemente-fuer-kampagnen",
+      "/google-ads-aber-keine-anfragen"
+    ],
+    "added": [
+      "/beste-landingpage-elemente-fuer-kampagnen"
+    ]
+  }
+}

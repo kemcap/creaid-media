@@ -49,8 +49,17 @@ jobs:
               assert x['key']==y['key'] and x['draftLabelRendered']==y['draftLabelRendered']
               assert x['source']==y['source']
               assert x['schemaTypes']==y['schemaTypes']
+          archive_plan=json.loads(Path('docs/seo/phase-5/archive-card-plan.json').read_text())
           for x,y in zip(a['archives'],b['archives']):
-              assert x['key']==y['key'] and x['cards']==y['cards']
+              assert x['key']==y['key']
+              plan=archive_plan.get(x['key'])
+              if plan:
+                  assert x['cards'] in (plan['before'],plan['after']), (x['key'],x['cards'])
+                  assert y['cards']==plan['after'], (y['key'],y['cards'])
+                  assert set(x['cards'])<=set(y['cards'])
+              else:
+                  assert x['cards']==y['cards']
+              assert not y['draftCards'] and not y['unknownCards']
           pages=json.loads(Path('src/_data/pages.json').read_text())
           posts=json.loads(Path('src/_data/postsIndex.json').read_text())
           for p in posts:
