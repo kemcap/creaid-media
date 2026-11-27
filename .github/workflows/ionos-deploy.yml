@@ -74,9 +74,42 @@ jobs:
         run: |
           git fetch --no-tags origin main
           git diff --exit-code "$GITHUB_SHA" FETCH_HEAD -- . ':(exclude)dist'
+      - name: Install PHP for the private contact update
+        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[ionos-preview-contact-core]')
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring
+          coverage: none
+      - name: Verify the private contact update without delivery
+        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[ionos-preview-contact-core]')
+        run: |
+          php -l backend/contact/core.php
+          php backend/contact/test.php
+          php backend/contact/test-turnstile.php
+          php backend/contact/test-hubspot.php
+          python -m py_compile .github/scripts/update-preview-contact-core.py
       - name: Incremental deployment to dedicated IONOS preview
+        id: static_preview
         env:
           CREAID_PREVIEW_CACHE_MODE: ${{ inputs.preview_cache || 'normal' }}
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: python .github/scripts/upload-ionos.py
+      - name: Update the private contact core on IONOS preview
+        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[ionos-preview-contact-core]')
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: python .github/scripts/update-preview-contact-core.py
+      - name: Activate and verify cache on IONOS preview
+        if: ${{ !cancelled() && steps.static_preview.outcome == 'success' && github.event_name == 'push' && contains(github.event.head_commit.message, '[ionos-preview-cache-enable]') }}
+        env:
+          CREAID_PREVIEW_CACHE_MODE: enabled
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}

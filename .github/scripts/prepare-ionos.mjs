@@ -16,7 +16,7 @@ for(const [url,file] of files){
  assert.ok(html.includes('name="robots" content="noindex,nofollow,noarchive"'),'Missing preview protection: '+url);
  if(url!=='/')lines.push('RewriteRule ^'+esc(url.slice(1))+'$ /'+file+' [END]');
 }
-lines.push('</IfModule>','<IfModule mod_headers.c>','Header always set X-Robots-Tag "noindex, nofollow, noarchive"','Header onsuccess unset Cache-Control','Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"','</IfModule>','<FilesMatch "^\\.creaid-">','Require all denied','</FilesMatch>','');
+lines.push('</IfModule>','<IfModule mod_headers.c>','Header always set X-Robots-Tag "noindex, nofollow, noarchive"','Header always set X-Content-Type-Options "nosniff"','Header always set Referrer-Policy "strict-origin-when-cross-origin"','Header onsuccess unset Cache-Control','Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"','</IfModule>','<FilesMatch "^\\.creaid-">','Require all denied','</FilesMatch>','');
 assert.ok(existsSync('dist/assets')&&existsSync('dist/robots.txt'));
 const consentDemo='dist/assets/demos/cookie-consent-v4.html';
 if(existsSync(consentDemo)){

@@ -92,6 +92,8 @@ try {
     '</IfModule>',
     '<IfModule mod_headers.c>',
     'Header always set X-Robots-Tag "noindex, nofollow, noarchive"',
+    'Header always set X-Content-Type-Options "nosniff"',
+    'Header always set Referrer-Policy "strict-origin-when-cross-origin"',
     'Header always set Cache-Control "no-store"',
     '</IfModule>',
     '',

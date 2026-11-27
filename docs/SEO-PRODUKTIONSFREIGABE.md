@@ -24,6 +24,6 @@ Impressum, Datenschutz und Cookie-Einstellungen bleiben für die Prüfung erreic
 - Handwerker: Inhalte der ersten Website / Relaunch-Checkliste / Agenturauswahl / kommerzielle Leistungsseite.
 - Corporate Design: Projektplanung und Umfang / Nutzen / Qualitätsprüfung.
 - Local SEO: übergreifende Strategie / operative Checkliste.
-- Ubersuggest, Deutschland, Abfrage 24.11.2026: ein Datensatz für die Domain, keine belastbaren Belege für Kannibalisierung. Keine Löschungen oder Zusammenlegungen.
+- Ubersuggest-Rank-Tracking, Deutschland, Desktop, 28.10.–27.11.2026: 92 überwachte Begriffe. „creaid“ stand auf Position 4 mit `/creaid-blog` als Ziel. Die übrigen 91 Begriffe lagen außerhalb der erfassten Top 100. Der Bericht liefert keine ausreichenden Seiten-Suchanfragen für eine Kannibalisierungsanalyse. Keine Löschungen oder Zusammenlegungen aus diesen Daten ableiten.
 
 Keine Produktionsfreigabe durch diesen Commit. Keine Garantie, dass Google die Inhalte indexiert oder bestimmte Positionen erreicht.
