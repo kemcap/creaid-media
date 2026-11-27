@@ -34,4 +34,4 @@ try{
  $r=handle($s,json_encode($d+['turnstile_token'=>'valid']),$c,$file,$send,1000,$v);
  if(!$r['ok']||$sent!==1)throw new RuntimeException('Valid challenge not accepted');
  echo "TURNSTILE_QA_OK: missing, forged, expired/replayed, hostname/action mismatch, upstream errors and fail-closed mailer checked; no real network or mail.\n";
-}finally{unlink($file);}
+}finally{foreach(glob($file.'*') as $testFile)unlink($testFile);}

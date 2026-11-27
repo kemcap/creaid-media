@@ -177,13 +177,17 @@
         if(response.ok&&result.ok===true&&result.status==='accepted'){
           accepted=true;
           clearTimeout(timer);
-          try{window.CreAidTracking?.trackLead();}catch{/* analytics cannot change accepted result */}
+          if(result.duplicate!==true){
+            try{window.CreAidTracking?.trackLead();}catch{/* analytics cannot change accepted result */}
+          }
           const remaining=Math.max(0,MIN_CONTACT_FEEDBACK_MS-(performance.now()-feedbackStarted));
           if(remaining>0)await new Promise(resolve=>setTimeout(resolve,remaining));
           form.reset();
           setFeedback('success','Anfrage erfolgreich versendet.\nVielen Dank für Ihre Nachricht. Wir melden uns schnellstmöglich bei Ihnen.');
         }else if(result.status==='captcha_required'||result.status==='captcha_invalid'){
           status.textContent='Die Sicherheitsprüfung ist abgelaufen oder fehlgeschlagen. Bitte erneut bestätigen.';
+        }else if(response.status===409&&result.status==='in_progress'){
+          status.textContent='Ihre Anfrage wird bereits verarbeitet. Bitte warten Sie kurz, bevor Sie es erneut versuchen.';
         }else if(response.status===422){
           status.textContent='Bitte prüfen Sie Ihre Angaben. Ihre Nachricht wurde nicht versendet.';
         }else if(response.status===429){

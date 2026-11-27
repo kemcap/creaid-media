@@ -22,7 +22,14 @@ try{
    calls++;last=route.request().postDataJSON();
    await new Promise(r=>setTimeout(r,400));
    if(mode==='network'){await route.abort();return;}
-   const response=mode==='accepted'?{code:200,body:{ok:true,status:'accepted'}}:mode==='limit'?{code:429,body:{ok:false,status:'rate_limit'}}:mode==='invalid'?{code:422,body:{ok:false,status:'invalid_fields'}}:{code:503,body:{ok:false,status:'unavailable'}};
+   const responses={
+    accepted:{code:200,body:{ok:true,status:'accepted'}},
+    duplicate:{code:200,body:{ok:true,status:'accepted',duplicate:true}},
+    pending:{code:409,body:{ok:false,status:'in_progress'}},
+    limit:{code:429,body:{ok:false,status:'rate_limit'}},
+    invalid:{code:422,body:{ok:false,status:'invalid_fields'}}
+   };
+   const response=responses[mode]??{code:503,body:{ok:false,status:'unavailable'}};
    await route.fulfill({status:response.code,contentType:'application/json',body:JSON.stringify(response.body)});return;
   }
   const res=await route.fetch({url:base+url.pathname+url.search,maxRedirects:0});
@@ -30,6 +37,10 @@ try{
  });
  const page=await context.newPage();
  await page.goto(origin+'/kontakt?service=Webdesign%20%26%20Entwicklung');
+ await page.evaluate(()=>{
+  window.testLeads=0;
+  window.CreAidTracking={...window.CreAidTracking,trackLead:()=>window.testLeads++};
+ });
  await page.waitForFunction(()=>typeof window.verifyTestChallenge==='function');
  const verifyChallenge=()=>page.evaluate(()=>window.verifyTestChallenge());
  const form=page.locator('#agencyEnquiry'),status=page.locator('#aFormMessage'),fallback=page.locator('#aFormFallback'),submit=form.locator('button[type=submit]');
@@ -87,5 +98,21 @@ try{
  assert.equal(await form.locator('[name=message]').inputValue(),'');
  assert.equal(await fallback.isVisible(),false);
  assert.equal(calls,5);
+ assert.equal(await page.evaluate(()=>window.testLeads),1);
+ await form.locator('[name=name]').fill('QA Kontakt');
+ await form.locator('[name=email]').fill('qa@example.invalid');
+ await form.locator('[name=message]').fill('Isolierter Test ohne E-Mail-Versand');
+ mode='pending';
+ await verifyChallenge();
+ await form.evaluate(el=>el.requestSubmit());
+ await page.waitForFunction(()=>document.querySelector('#aFormMessage').textContent.includes('bereits verarbeitet'));
+ assert.equal(await form.locator('[name=message]').inputValue(),'Isolierter Test ohne E-Mail-Versand');
+ assert.equal(await fallback.isVisible(),false);
+ mode='duplicate';
+ await verifyChallenge();
+ await form.evaluate(el=>el.requestSubmit());
+ await page.waitForFunction(()=>document.querySelector('#aFormMessage').textContent.includes('erfolgreich'));
+ assert.equal(await page.evaluate(()=>window.testLeads),1);
+ assert.equal(calls,7);
  console.log('Contact submission browser scenarios passed. Every endpoint response was mocked; no live requests or email sent.');
 }finally{await context.close();await browser.close();}
