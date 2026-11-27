@@ -55,7 +55,7 @@ def release_files(dist, manifest):
             continue
         require(path.is_file() and allowed_asset(path.relative_to(dist)), "Unexpected asset type: " + path.name)
         assets.append(path)
-    files = [dist / ".htaccess", dist / "robots.txt"] + sorted(assets) + sorted(p for p in pages if p.name != "index.html") + [dist / "index.html"]
+    files = [dist / ".htaccess", dist / "robots.txt"] + ([dist / "sitemap.xml"] if os.environ.get("CREAID_IONOS_PRODUCTION") == "1" else []) + sorted(assets) + sorted(p for p in pages if p.name != "index.html") + [dist / "index.html"]
     for path in files:
         require(path.is_file() and not path.is_symlink() and path.is_relative_to(dist), "Missing or unsafe local file.")
     return files
@@ -90,6 +90,9 @@ def main():
                     f.write(OWNER)
             print("Dedicated preview directory verified.")
             if cache_mode != "normal":
+                require(os.environ.get("CREAID_IONOS_PRODUCTION") != "1", "Production cache changes require a separate reviewed workflow.")
+                with sftp.open('.htaccess', 'rb') as f:
+                    require(b'CREAID PRODUCTION INDEXING' not in f.read(1024*1024), 'Production indexing policy active; preview toggle refused.')
                 from preview_cache_activation import toggle
                 toggle(sftp, cache_mode)
                 return
