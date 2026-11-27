@@ -18,7 +18,7 @@ Der [Website-Finalization-Tracker](WEBSITE-FINALIZATION-TRACKER.md#4--journal) u
 | [360-Grad-Rundgang erstellen](https://vorschau.creaid-media.de/360-grad-rundgang-erstellen) | 244827 · 24.11. 23:59 | 3 / 0 / 0 | E03, E06, E12, E07 | Eigenproduktion vergleichen, Aufnahmereihenfolge und laufende Kosten ausweisen. Ein Orientierungsbild zur Stationsplanung ergänzen. |
 | [Webdesign für kleine Unternehmen](https://vorschau.creaid-media.de/webdesign-fuer-kleine-unternehmen) | 244849 · 05.07. 21:43 | 3 / 0 / 0 | E01, E06, E05, E07 | Seitenarchitektur, Leistungsseiten und mobiler Kontakttest. Ein Motiv zu Navigation und Anfrage ergänzen. |
 | [Landingpage für Kampagnen](https://vorschau.creaid-media.de/beste-landingpage-elemente-fuer-kampagnen) | 244837 · 05.07. 17:38 | 4 / 0 / 0 | E04, E03, E07, E05 | Kanalmatrix, Formularbeispiel und Startcheck und Prüfablauf für Testanfragen. Ein zum Cover nahezu identisches Motiv entfernt. Bildsoll mit vorhandenen Mockups erreicht. |
-| [Was kostet ein Imagefilm?](https://vorschau.creaid-media.de/was-kostet-ein-imagefilm) | 244674 · 05.05. 04:57 | 1 / 3 / 0 | E08, E12, E05, E11 | Unbelegte Marktspannen durch drei datierte Anbieterangaben ersetzt. Motive zu Planung, Dreh und Postproduktion integriert. Bildsoll erreicht. |
+| [Was kostet ein Imagefilm?](https://vorschau.creaid-media.de/was-kostet-ein-imagefilm) | 244674 · 05.05. 04:57 | 3 / 2 / 0 | E08, E12, E05, E11 | Unbelegte Marktspannen durch drei datierte Anbieterangaben ersetzt. Zwei WordPress-Motive zu Planung und Ton sowie neue Fotos zu Dreh und Schnitt integriert. Bildsoll erreicht. |
 | [Onlineshop selbst bauen oder erstellen lassen?](https://vorschau.creaid-media.de/onlineshop-erstellen-lassen) | 244672 · 03.05. 04:45 | 3 / 0 / 0 | E03, E06, E12, E20 | Eigenbau gegen Beauftragung, kompletter Probekauf, Kosten des ersten Betriebsjahrs. Zwei vorhandene WordPress-Bilder übernommen. Ein Motiv zu den Schnittstellen ergänzen. |
 | [Website-Wartung für Firmen](https://vorschau.creaid-media.de/website-wartung-fuer-firmen) | 244670 · 01.05. 04:45 | 3 / 0 / 0 | E06, E09, E19, E17, E20 | Updateprüfung, Wiederherstellung, Prioritäten und Zuständigkeiten. Zwei vorhandene WordPress-Bilder übernommen. Ein Motiv zur Rückkehr auf den gesicherten Stand ergänzen. |
 | [Shopware oder WooCommerce?](https://vorschau.creaid-media.de/shopware-vs-wordpress-shop) | 244668 · 29.04. 04:42 | 3 / 0 / 0 (+1 Pilot) | E03, E12, E10 | Systemvergleich anhand eigener Bestellfälle, Gesamtkosten, geprüfte Herstellerquellen. Zwei vorhandene WordPress-Bilder übernommen. Pilot 06 abnehmen. |
@@ -33,7 +33,7 @@ Der [Website-Finalization-Tracker](WEBSITE-FINALIZATION-TRACKER.md#4--journal) u
 | 360-Grad-Rundgang erstellen · Eigenproduktion, Beauftragung, Einbindung | [Webdesign für Handwerksbetriebe](https://vorschau.creaid-media.de/webdesign-fuer-handwerksbetriebe) hat den breiteren Website-Kontext. Der Ratgeber konzentriert sich auf Aufnahme und Betrieb der Tour. | 1.327 → 1.236 |
 | Webdesign für kleine Unternehmen · Planung, Seitenstruktur, Kontakt | [Webdesign](https://vorschau.creaid-media.de/webdesign) bedient Leistungsinteresse. Der Ratgeber richtet sich an Personen, die Seiten und Aufgaben zunächst planen. | 1.513 → 1.398 |
 | Landingpage für Kampagnen · Elemente, Anzeigenbezug, Tests | [Google Ads ohne Anfragen](https://vorschau.creaid-media.de/google-ads-aber-keine-anfragen) sucht Ursachen in der Werbekette. Der Ratgeber behandelt Aufbau und Abnahme der Zielseite. | 1.284 → 1.122 |
-| Was kostet ein Imagefilm? · Produktionsumfang, Budget, Lizenzen | [Produktfilm](https://vorschau.creaid-media.de/produktfim-erstellen-lassen) behandelt einen anderen Filmzweck. Hier sind Angebote für den Unternehmensfilm das Ziel. | 1.332 → 953 |
+| Was kostet ein Imagefilm? · Produktionsumfang, Budget, Lizenzen | [Produktfilm](https://vorschau.creaid-media.de/produktfim-erstellen-lassen) behandelt einen anderen Filmzweck. Hier sind Angebote für den Unternehmensfilm das Ziel. | 1.332 → 1002 |
 | Onlineshop erstellen lassen · Eigenbau gegen Beauftragung | [Online-Shop-Entwicklung](https://vorschau.creaid-media.de/online-shop-entwicklung) erklärt die Leistung. Der Ratgeber hilft bei der Wahl der Umsetzung. | 1.381 → 791 |
 | Website-Wartung für Firmen · Aufgaben, Rhythmus, Zuständigkeiten | [Upgrades und Wartung](https://vorschau.creaid-media.de/upgrades-wartung) dient einer Beauftragung. Der Ratgeber behandelt den internen Wartungsplan. | 1.179 → 992 |
 | Shopware vs. WooCommerce · Systemwahl, Vertrieb, Pflege | [Onlineshop aufbauen](https://vorschau.creaid-media.de/onlineshop-erfolgreich-aufbauen-anleitung) führt durch den Projektstart. Der Vergleich behandelt die Plattformwahl. | 1.329 → 929 |
@@ -93,11 +93,10 @@ Sculptural minimalism about a recoverable baseline. Two long shallow ceramic tra
 
 | WebP (1200 × 800) | Alt-Text | Einfügeposition |
 | --- | --- | --- |
-| `imagefilm-storyboard-drehplanung.webp` | Storyboard-Skizzen und gezeichnete Kamerapositionen auf dem Tisch einer Filmproduktion. | Nach Konzept und Vorbereitung |
 | `imagefilm-drehtag-kamera-und-licht.webp` | Zwei Mitglieder eines Filmteams bedienen Kamera und Ton in einer Holzwerkstatt. | Nach Drehtag und Teamgröße |
 | `imagefilm-schnitt-hoch-und-querformat.webp` | Monitor im Schnittraum zeigt dieselbe Werkstattszene im Quer- und Hochformat. | Nach Schnitt und Postproduktion |
 
-Aufträge für die drei Bildmotive im Imagefilm waren eine redaktionelle Nahaufnahme von Storyboard und Kameraaufstellungsplan, eine dokumentarisch inszenierte Zweiercrew beim Werkstattdreh und ein Schnittplatz mit derselben Arbeitsszene im Quer- und Hochformat. Die Motive verwenden verschiedene Blickdistanzen und erhalten eine kleinere WebP-Auflösung für mobile Geräte.
+Die neuen Motive zeigen eine Zweiercrew beim Werkstattdreh und einen Schnittplatz mit derselben Arbeitsszene im Quer- und Hochformat. Sie erhalten eine kleinere WebP-Auflösung für mobile Geräte. Die Storyboard-Szene `filmproduktion-planen.webp` und die Aufnahme des Interviewmikrofons `tonaufnahme-beim-imagefilm.webp` stammen aus dem veröffentlichten WordPress-Artikel. Das eigens erzeugte Storyboard-Motiv bleibt eine Reserve.
 
 ## Quality Gates und Veröffentlichung
 
@@ -107,7 +106,7 @@ Der Eleventy-Build und die Projektprüfungen für Struktur, Routen, Metadaten, L
 | --- | --- |
 | Inhalt und Technik | Im Eleventy-Kandidaten sind die redaktionellen Elemente aller zehn Artikel sichtbar. H1, Inhaltsverzeichnis, Alt-Texte, Canonicals und BlogPosting wurden anhand der gerenderten Ausgabe geprüft. |
 | Visual Editorial Quality Gate | Visuelle Prüfansichten für Einstieg, Informationsdesign und mobile Darstellung vorhanden. Endabnahme der Bildsprache und die Prüfung des fertig bestückten Zielartikels stehen aus. |
-| Image Quality Gate | Vorhandene Medien einzeln gesichtet. Drei neue Imagefilm-WebPs und drei Pilot-WebPs visuell kontrolliert. Die Pilotbilder brauchen Stilfreigabe und fünf weitere Motive stehen aus. |
+| Image Quality Gate | Vorhandene Medien einzeln gesichtet. Zwei neue Imagefilm-WebPs und drei Pilot-WebPs visuell kontrolliert. Die Pilotbilder brauchen Stilfreigabe und fünf weitere Motive stehen aus. |
 | Status Vorschau | Die zehn Zielrouten sind erreichbar und zeigen den bestehenden Stand. Der Entwurf ist erst nach Abnahme zur Veröffentlichung vorgesehen. |
 
 Die Piloten verwenden die vorhandenen Eleventy-Templates und werden mit Desktop-/Mobilansichten zur Freigabe vorgelegt. Nach Auswahl der Stilrichtungen sind die fünf ausstehenden Motive zu erzeugen und jeder Artikel erneut im vorgesehenen Zielsystem zu prüfen.
@@ -123,7 +122,7 @@ Editorial pilot image for a CreAid-Media website audit article about isolating t
 **Shopware und WooCommerce · 06**
 Editorial pilot illustration for a CreAid-Media decision article comparing Shopware and WooCommerce, style 06 Swiss conceptual graphic design, flat editorial print. One compact black rectilinear system branches into TWO unmistakably different viable paths within a precise off-white Swiss grid, upper path long straight parallel tracks, lower path a compact sequence of modular right-angle turns. Both reach the same open right-hand boundary with equivalent visual weight. A single crisp faceless signal-pink #FA225B disc sits exactly on the junction, functioning as the point of decision. Subtle movement in the elegant two-path geometry, clear spacing and controlled line weight, sparse berry-only secondary accents if meaningful, negative space within the graphic and safe on all edges. Strong central silhouette at thumbnail scale, uncompromisingly flat print aesthetic, no texture except faint paper stock. One landscape 3:2 artwork, no labels, typography, arrows, diagrams of actual technology, fake logos, shadows, gradients, neon or watermark.
 
-**Imagefilm · Drehplanung**
+**Imagefilm · zusätzliche Drehplanung als Reserve**
 Single authentic documentary editorial photograph for a German business journal about image film production costs, scene at preproduction: an overhead angled detail of several unlettered pencil storyboard panels and a floor plan sketch laid out on a large warm grey production table, a cinematographer's hand with pencil in one corner mapping a camera position, muted deep burgundy pencil, camera-lens cap, natural side light from tall industrial windows, simple legible visual hierarchy. The sketches clearly show visual frames not text, no fake client material. This is a commissioned-looking illustrative photograph, deliberate and unglamorous, not a stock photo or a computer mockup. Cool graphite with warm paper and restrained colour, no logos, legible text, watermark or headline. One landscape 3:2 shot. Crop-safe edges, sharp focal plane.
 
 **Imagefilm · Drehtag**
