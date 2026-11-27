@@ -1,0 +1,49 @@
+name: SEO phase 4 OnPage QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'docs/seo/phase-4/**'
+      - '.github/workflows/seo-phase-4-qa.yml'
+      - 'package.json'
+permissions:
+  contents: read
+jobs:
+  onpage:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: npm run verify
+      - name: Build immutable reference and audit all metadata
+        env:
+          BASELINE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          [[ "$BASELINE_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git worktree add --detach "$RUNNER_TEMP/onpage-baseline" "$BASELINE_SHA"
+          (cd "$RUNNER_TEMP/onpage-baseline" && npm ci && npm run build)
+          python scripts/check-onpage-seo.py --baseline --dist "$RUNNER_TEMP/onpage-baseline/dist" --output seo-phase4-report/baseline.json
+      - run: python scripts/check-onpage-seo.py --output seo-phase4-report/candidate.json
+      - name: Verify route and content scope
+        env:
+          BASELINE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git diff --exit-code "$BASELINE_SHA" -- src/_data/routes.json src/_data/aliases.json src/_data/headingPlan.json src/_data/pricing.json src/_data/postsIndex.json src/_data/wordpressPreviewDrafts.json src/posts/ public/assets/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seo-phase4-onpage-audit
+          path: seo-phase4-report/
+          retention-days: 30
