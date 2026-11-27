@@ -3,6 +3,7 @@ declare(strict_types=1);
 namespace CreAid\Contact;
 
 const MAX_BODY = 16384;
+const RECEIPT_TTL = 600;
 const SERVICES = [
  'Allgemeine Projektanfrage','Webdesign & Entwicklung','Digitales Marketing','Branding & Grafikdesign','KI & Automatisierung','Onlineshop & E-Commerce','Google Ads & Social Media','SEO & Content-Marketing','Printdesign & Editorial','KI-Workflows & CRM','Webdesign für Handwerker','Webdesign für Ärzte','Webdesign für Immobilienmakler','Foto & Video','Anderes Anliegen'
 ];
@@ -60,6 +61,72 @@ function messageBody(array $d): string {
 function checkConfig(array $c): void {
     if(($c['enabled']??false)!==true||!is_array($c['allowed_origins']??null)||!filter_var($c['smtp_username']??'',FILTER_VALIDATE_EMAIL)||!filter_var($c['recipient']??'',FILTER_VALIDATE_EMAIL)||!is_string($c['smtp_password']??null)||$c['smtp_password']===''||!is_string($c['rate_secret']??null)||strlen($c['rate_secret'])<64||!is_string($c['smtp_host']??null)||!preg_match('/^[a-z0-9.-]+$/iD',$c['smtp_host'])||($c['smtp_port']??0)!==465)throw new Rejection(503,'unavailable');
 }
+
+// Reserve and record deliveries without holding a shared lock during SMTP.
+function updateReceipts(string $file, int $now, callable $update): mixed {
+    $lock = @fopen($file.'.lock', 'c+b');
+    if ($lock === false) throw new Rejection(503, 'unavailable');
+    @chmod($file.'.lock', 0600);
+    $temporary = null;
+    try {
+        if (!flock($lock, LOCK_EX)) throw new Rejection(503, 'unavailable');
+        $stored = is_file($file) ? @file_get_contents($file, false, null, 0, 65537) : '{}';
+        if ($stored === false || strlen($stored) > 65536) throw new Rejection(503, 'unavailable');
+        $receipts = json_decode($stored, true);
+        if (!is_array($receipts)) throw new Rejection(503, 'unavailable');
+        $receipts = array_filter($receipts, static fn(array $entry): bool => $entry['expires'] > $now);
+        $before = $receipts;
+        $result = $update($receipts);
+        if ($receipts !== $before) {
+            $json = json_encode($receipts, JSON_THROW_ON_ERROR);
+            $temporary = @tempnam(dirname($file), 'receipt-');
+            if ($temporary === false || !chmod($temporary, 0600) ||
+                @file_put_contents($temporary, $json) !== strlen($json) || !@rename($temporary, $file)) {
+                throw new Rejection(503, 'unavailable');
+            }
+        }
+        return $result;
+    } finally {
+        if (is_string($temporary) && is_file($temporary)) @unlink($temporary);
+        flock($lock, LOCK_UN);
+        fclose($lock);
+    }
+}
+
+function sendOnce(array $data, array $config, string $file, callable $send, int $now): bool {
+    $normalized = $data;
+    $normalized['email'] = strtolower($data['email']);
+    $normalized['message'] = str_replace(["\r\n", "\r"], "\n", $data['message']);
+    $key = hash_hmac('sha256', json_encode($normalized, JSON_THROW_ON_ERROR), $config['rate_secret']);
+    $state = updateReceipts($file, $now, static function (array &$receipts) use ($key, $now): ?string {
+        if (isset($receipts[$key])) return $receipts[$key]['status'];
+        $receipts[$key] = ['status' => 'pending', 'expires' => $now + RECEIPT_TTL];
+        return null;
+    });
+    if ($state === 'accepted') return false;
+    if ($state === 'pending') throw new Rejection(409, 'in_progress');
+
+    try {
+        $accepted = $send($data, $config) === true;
+    } catch (\Throwable) {
+        $accepted = false;
+    }
+    try {
+        updateReceipts($file, $now, static function (array &$receipts) use ($accepted, $key, $now): void {
+            if ($accepted) {
+                $receipts[$key] = ['status' => 'accepted', 'expires' => $now + RECEIPT_TTL];
+            } else {
+                unset($receipts[$key]);
+            }
+        });
+    } catch (\Throwable) {
+        // Preserve the confirmed SMTP result even if the receipt update fails.
+        error_log('CreAid contact: delivery receipt update failed');
+    }
+    if (!$accepted) throw new Rejection(502, 'send_failed');
+    return true;
+}
+
 function handle(array $server,string $body,array $config,string $rateFile,callable $send,int $now,?callable $verify=null): array {
     if(($server['REQUEST_METHOD']??'')!=='POST')throw new Rejection(405,'method');
     checkConfig($config);
@@ -82,7 +149,8 @@ function handle(array $server,string $body,array $config,string $rateFile,callab
         unset($raw['turnstile_token']);
         $data=validate($raw);
     }
-    try{if($send($data,$config)!==true)throw new \RuntimeException('SMTP not accepted');}
-    catch(\Throwable){throw new Rejection(502,'send_failed');}
-    return ['ok'=>true,'status'=>'accepted'];
+    $sent = sendOnce($data, $config, $rateFile.'.receipts', $send, $now);
+    $result = ['ok' => true, 'status' => 'accepted'];
+    if (!$sent) $result['duplicate'] = true;
+    return $result;
 }

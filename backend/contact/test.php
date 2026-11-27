@@ -22,10 +22,22 @@ try{
  expect(429,fn()=>$call($s,$d,$c,$send));
  if($sent!==0)throw new RuntimeException('Invalid submissions reached mailer');
  $r=$call($s,$d,$c,$send,1601);if($r!==['ok'=>true,'status'=>'accepted']||$sent!==1)throw new RuntimeException('Valid submit');
- expect(502,fn()=>$call($s,$d,$c,fn()=>false,1601));
- expect(502,fn()=>$call($s,$d,$c,function(){throw new RuntimeException('private detail');},1601));
+ $retryServer=array_replace($s,['REMOTE_ADDR'=>'192.0.2.2']);
+ $retryData=array_replace($d,['email'=>'TEST@example.invalid','message'=>"Test\r\nZeile"]);
+ $retry=$call($retryServer,$retryData,$c,$send,1602);
+ if($retry!==['ok'=>true,'status'=>'accepted','duplicate'=>true]||$sent!==1)throw new RuntimeException('Retry repeated a delivery');
+ $failedData=array_replace($d,['message'=>'Failed SMTP request']);
+ expect(502,fn()=>$call($s,$failedData,$c,fn()=>false,1601));
+ expect(502,fn()=>$call($s,$failedData,$c,function(){throw new RuntimeException('private detail');},1601));
  expect(429,fn()=>$call($s,$d,$c,$send,1601));
+ $concurrentServer=array_replace($s,['REMOTE_ADDR'=>'192.0.2.3']);
+ $delivery=function($data,$config)use($call,$concurrentServer,$send){
+   expect(409,fn()=>$call($concurrentServer,$data,$config,$send,1604));
+   return $send($data,$config);
+ };
+ $r=$call($retryServer,$failedData,$c,$delivery,1603);
+ if(!$r['ok']||$sent!==2)throw new RuntimeException('Retry after failure or concurrent prevention');
  $r=$call(array_replace($s,['HTTP_ORIGIN'=>'https://creaid-media.de']),$d,array_replace($c,['allowed_origins'=>['https://creaid-media.de']]),$send,2202);
- if(!$r['ok']||$sent!==2)throw new RuntimeException('Domain migration');
- echo "PASS: validation, method, origin, size, honeypot, rate limit, SMTP failures, domain migration; no real email sent.\n";
-}finally{if(is_file($dir.'/rate.json'))unlink($dir.'/rate.json');rmdir($dir);}
+ if(!$r['ok']||$sent!==3)throw new RuntimeException('Domain migration or receipt expiry');
+ echo "PASS: validation, rate limit, SMTP failures, overlapping delivery, duplicate receipt and expiry; no real email sent.\n";
+}finally{foreach(glob($dir.'/*') as $file)unlink($file);rmdir($dir);}
