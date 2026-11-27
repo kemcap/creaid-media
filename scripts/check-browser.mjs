@@ -181,6 +181,11 @@ async function interactionTests(browser){
   const items=p.locator('#cm-primary-nav > *');assert.equal(await items.count(),6);
   assert.equal(await items.first().evaluate(e=>getComputedStyle(e).animationName),'cm-mobile-menu-enter');
   assert.equal(await items.last().evaluate(e=>getComputedStyle(e).animationDelay),'0.11s');
+  const mobileServices=p.locator('.cm-header__services summary');await mobileServices.click();
+  const sub=p.locator('.cm-header__dropdown a');assert.ok(await sub.count()>5);
+  assert.equal(await sub.first().evaluate(e=>getComputedStyle(e).animationName),'cm-mobile-menu-enter');
+  assert.equal(await sub.last().evaluate(e=>getComputedStyle(e).animationDelay),'0.11s');
+  await p.emulateMedia({reducedMotion:'reduce'});assert.equal(await sub.first().evaluate(e=>getComputedStyle(e).animationName),'none');
   await p.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');
   await p.emulateMedia({reducedMotion:'reduce'});
   await p.setViewportSize({width:1440,height:900});const summary=p.locator('.cm-header__services summary');await summary.click();assert.equal(await p.locator('.cm-header__services').getAttribute('open'),'');await p.keyboard.press('Escape');assert.equal(await p.locator('.cm-header__services').getAttribute('open'),null);assert.ok(await summary.evaluate(e=>document.activeElement===e));

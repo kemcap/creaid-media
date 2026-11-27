@@ -47,3 +47,10 @@
 .cm-menu-motion-preview.is-open > :nth-child(6){--cm-menu-item-delay:110ms}
 .cm-menu-motion-preview.is-open > :focus-within{animation:none}
 @media(prefers-reduced-motion:reduce){.cm-header__nav.is-open > *,.cm-menu-motion-preview.is-open > *{animation:none!important}}
+/* Mobile services submenu: same short entrance, capped even for long service lists. */
+@media(max-width:860px){
+ .cm-header__nav.is-open .cm-header__services[open] .cm-header__dropdown :is(.cm-header__dropdown-kicker,a){animation:cm-mobile-menu-enter 145ms cubic-bezier(.2,.75,.25,1) both;animation-delay:var(--cm-submenu-item-delay,0ms)}
+ .cm-header__nav.is-open .cm-header__services[open] .cm-header__dropdown :is(.cm-header__dropdown-kicker,a):focus-visible{animation:none}
+}
+.cm-submenu-motion-preview[open] .cm-submenu-demo-item{animation:cm-mobile-menu-enter 145ms cubic-bezier(.2,.75,.25,1) both;animation-delay:var(--cm-submenu-item-delay,0ms)}
+@media(prefers-reduced-motion:reduce){.cm-header__nav.is-open .cm-header__services[open] .cm-header__dropdown :is(.cm-header__dropdown-kicker,a),.cm-submenu-motion-preview[open] .cm-submenu-demo-item{animation:none!important}}

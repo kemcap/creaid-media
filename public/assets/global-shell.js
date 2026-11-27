@@ -8,6 +8,8 @@
   if (!button || !nav) return;
   const details = header.querySelector('.cm-header__services');
   const mobile = () => window.matchMedia('(max-width: 860px)').matches;
+  // Cap stagger at 110ms so even long nested service lists remain immediately usable.
+  details?.querySelectorAll('.cm-header__dropdown-kicker,.cm-header__dropdown a').forEach((item,index)=>item.style.setProperty('--cm-submenu-item-delay',`${Math.min(index,5)*22}ms`));
   const close = (restoreFocus = false) => {
     nav.classList.remove('is-open');
     button.setAttribute('aria-expanded', 'false');

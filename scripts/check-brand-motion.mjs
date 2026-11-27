@@ -22,5 +22,7 @@ assert.ok(read('dist/kontakt.html').includes('id="aContactFeedback"'));
 assert.ok(read('public/assets/agency-pages.js').includes('MIN_CONTACT_FEEDBACK_MS=1500'));
 assert.equal(registry.layout.mobileMenuMotion.staggerMs,22);
 assert.equal(registry.layout.mobileMenuMotion.totalMsForSixItems,255);
+assert.equal(registry.layout.mobileMenuMotion.submenu.maxTotalMs,255);
+assert.ok(read('public/assets/global-shell.js').includes('Math.min(index,5)*22'));
 assert.ok(css.includes('cm-mobile-menu-enter')&&css.includes('max-width:860px'));
 console.log('PASS: Brand guide, motion tokens, shared CSS, hero sizing and circular reveal.');
