@@ -18,8 +18,8 @@ FINGERPRINTS = {
     "SHA256:1gx2w8Rtv3wCgi7Jh8myf/KVd72cRQbow03UP8P095Q",
 }
 ASSET_SUFFIXES = {".css", ".js", ".webp", ".avif", ".jpg", ".jpeg", ".png", ".gif", ".svg", ".ico", ".woff", ".woff2", ".ttf", ".otf", ".txt", ".mp4", ".webm", ".pdf"}
-# Only this reviewed, non-indexable design demo may be deployed as HTML under assets.
-PREVIEW_HTML_ASSETS = frozenset({"assets/demos/cookie-consent-v4.html"})
+# Only reviewed, non-indexable standalone design demos may be deployed as HTML under assets.
+PREVIEW_HTML_ASSETS = frozenset({"assets/demos/cookie-consent-v4.html", "assets/demos/creaid-style-guide.html"})
 def allowed_asset(relative):
     path = Path(relative)
     return path.suffix.lower() in ASSET_SUFFIXES or path.as_posix() in PREVIEW_HTML_ASSETS
