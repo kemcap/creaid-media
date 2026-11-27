@@ -4,13 +4,13 @@
 {% include "partials/header-journal.njk" %}
 <div class="j-readbar" aria-hidden="true"><i></i></div>
 <main id="hauptinhalt" class="j-editorial j-editorial--{{ layoutInfo.profile | escape }}">
-  <section class="j-article-hero j-article-hero-v9" aria-labelledby="article-title">
+  <section class="j-article-hero j-article-hero-v9{% if journalBatch %} batch-article-hero{% endif %}" aria-labelledby="article-title">
     <div class="j-shell">
       <div class="j-article-hcontent">
         <nav class="j-breadcrumb" aria-label="Brotkrumen"><a href="/">START</a><span>/</span><a href="/creaid-blog">JOURNAL</a></nav>
         {% if isDraft %}<div class="j-micro j-article-kicker">WORDPRESS-ENTWURF</div>{% endif %}
         <h1 id="article-title">{{ post.heading | escape }}</h1>
-        {% if editorial.meta %}<div class="j-editorial-meta">{{ editorial.meta | safe }}</div>{% else %}{% for entry in postsIndex %}{% if entry.slug == pageKey and entry.minutes %}<div class="j-editorial-meta"><p><strong>Lesezeit:</strong> ca. {{ entry.minutes }} Min.</p></div>{% endif %}{% endfor %}{% endif %}
+        {% if editorial.meta %}<div class="j-editorial-meta">{{ editorial.meta | safe }}</div>{% else %}{% for entry in postsIndex %}{% if entry.slug == pageKey and entry.minutes %}<div class="j-editorial-meta"><p><strong>Lesezeit:</strong> ca. {{ entry.minutes }} Min.</p></div>{% endif %}{% endfor %}{% endif %}{% if journalBatch and article.publishedIso %}<div class="j-editorial-meta"><p><time datetime="{{ article.publishedIso | escape }}">{{ article.publishedDisplay | escape }}</time></p></div>{% endif %}
         <p class="j-article-desc">{{ post.description | escape }}</p>
         <a class="j-article-scroll" href="#article-content">Artikel lesen <span aria-hidden="true">↓</span></a>
       </div>
@@ -19,7 +19,7 @@
   </section>
   <section class="j-body" id="article-content">
     <div class="j-shell j-reading-grid">
-      <article class="j-prose" aria-labelledby="article-title">
+      <article class="j-prose{% if journalBatch %} batch-editorial{% endif %}" aria-labelledby="article-title">
         {% if editorial.toc.length %}
         <details class="j-toc-mobile"><summary>Inhaltsverzeichnis</summary>
           <nav aria-label="Artikel-Inhaltsverzeichnis">
@@ -27,7 +27,7 @@
           </nav>
         </details>
         {% endif %}
-        {{ editorial.body | replace('<table', '<div class="j-table-scroll" tabindex="0" role="region" aria-label="Tabelle im Artikel"><table') | replace('</table>', '</table></div>') | safe }}
+        {% if journalBatch %}{{ editorial.body | safe }}{% else %}{{ editorial.body | replace('<table', '<div class="j-table-scroll" tabindex="0" role="region" aria-label="Tabelle im Artikel"><table') | replace('</table>', '</table></div>') | safe }}{% endif %}
         <div class="j-article-actions"><a class="j-article-to-index" href="/creaid-blog#artikel">Alle Artikel ↗</a></div>
       </article>
       {% if editorial.toc.length %}
