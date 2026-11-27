@@ -1,20 +1,20 @@
 {
   "webdesign": {
-    "title": "Websites, die Ihr Team selbst pflegen kann",
+    "title": "Website-Erstellung, Relaunch und Übergabe",
     "topic": "Webdesign & Entwicklung",
     "contact": "/kontakt?service=Webdesign%20%26%20Entwicklung#anfrage",
     "groups": [
       {
-        "title": "Projektumfang und CMS",
-        "copy": "Wir klären Seitenzahl, Zielgruppen, Inhalte und benötigte Funktionen. WordPress eignet sich für viele redaktionell gepflegte Unternehmensseiten; individuelle Anwendungen werden nach Bedarf geplant."
+        "title": "Projektumfang und WordPress",
+        "copy": "Planung von Seitenzahl, Zielgruppen, Funktionen und CMS: WordPress eignet sich für viele selbst gepflegte Unternehmensseiten. Bei einem Relaunch werden bestehende Inhalte, relevante URLs und Kontaktwege vorab erfasst. Die passenden Webdesign-Pakete finden Sie weiter unten."
       },
       {
-        "title": "Umsetzung und Übergabe",
-        "copy": "Zum vereinbarten Umfang gehören responsive Gestaltung, Navigation, Kontaktwege und ein nachvollziehbarer Abnahmetest. Zugänge, Pflegeanleitung und mögliche Wartungsleistungen werden separat abgestimmt."
+        "title": "Umsetzung und Abnahme",
+        "copy": "Wir stimmen responsive Gestaltung, Navigation, Inhaltsstruktur und Kontaktwege auf Ihre Anforderungen ab. Vor dem Livegang werden die vereinbarten Funktionen und die Darstellung geprüft; redaktionelle Pflege, Zugangsdaten und mögliche Wartungsleistungen gehören in die Übergabe."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "Bestehende URL, wichtigste Leistungen, vorhandene Texte und Bilder sowie gewünschte Kontaktwege."
+        "title": "Ihre Anfrage vorbereiten",
+        "copy": "Nennen Sie vorhandene Website, wichtigste Leistungen, gewünschte Seiten und Funktionen, vorhandene Texte und Bilder sowie Zeitrahmen und Budget."
       }
     ],
     "link": {
@@ -37,21 +37,21 @@
     ]
   },
   "marketing": {
-    "title": "Marketing mit nachvollziehbaren Zielen",
+    "title": "Digitales Marketing passend zum Geschäftsmodell",
     "topic": "Digitales Marketing",
     "contact": "/kontakt?service=Digitales%20Marketing#anfrage",
     "groups": [
       {
-        "title": "Kanäle und Budget",
-        "copy": "Wir priorisieren Suchmaschinen, Anzeigen und Inhalte nach Zielgruppe, Angebot und verfügbarem Budget. Werbebudget und Agenturleistung werden getrennt betrachtet."
+        "title": "Kanäle und Ziele",
+        "copy": "Bei lokaler Kundengewinnung, B2B-Anfragen und Onlineshop-Verkäufen unterscheiden sich Zielgruppen und Messgrößen. SEO, Inhalte, Anzeigen und Social Media werden anhand von Angebot, Nachfrage, Zielregion und Budget priorisiert."
       },
       {
-        "title": "Auswertung und Optimierung",
-        "copy": "Vor dem Start werden relevante Anfragen, Käufe oder andere Zielhandlungen definiert. Auswertungen dienen der Anpassung von Anzeigen, Zielseiten und Inhalten; Ergebnisse sind nicht garantiert."
+        "title": "Budget und Erfolgskontrolle",
+        "copy": "Werbebudget und Agenturleistung werden getrennt betrachtet. Vor dem Start klären wir relevante Zielhandlungen und technische Messmöglichkeiten. Auswertungen helfen, Anzeigen, Zielseiten und Inhalte gezielt anzupassen; Ergebnisse werden nicht garantiert."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "Bisherige Kanäle, Einzugsgebiet, Zielkunden, Kampagnenbudget und verfügbare Leistungsdaten."
+        "title": "Ihr Marketing-Briefing",
+        "copy": "Nennen Sie Angebot, Zielkunden, Regionen, bisherige Kanäle, monatliches Budget und vorhandene Leistungsdaten."
       }
     ],
     "link": {
@@ -70,21 +70,21 @@
     ]
   },
   "branding": {
-    "title": "Ein Erscheinungsbild für alle Medien",
+    "title": "Logo und Corporate Design als zusammenhängendes System",
     "topic": "Branding & Grafikdesign",
     "contact": "/kontakt?service=Branding%20%26%20Grafikdesign#anfrage",
     "groups": [
       {
-        "title": "Designsystem",
-        "copy": "Logo, Farben, Schriften und Gestaltungsregeln werden auf Einsatzbereiche und Zielgruppe abgestimmt. Varianten für kleine Formate und unterschiedliche Hintergründe gehören in die Abstimmung."
+        "title": "Corporate Design entwickeln",
+        "copy": "Logo, Farben, Typografie und Gestaltungsregeln sollen zum Angebot, zur Zielgruppe und zu den wichtigsten Anwendungen passen. Varianten für kleine Formate, Druck und digitale Medien sowie unterschiedliche Hintergründe werden im Projekt abgestimmt."
       },
       {
-        "title": "Dateien und Nutzungsumfang",
-        "copy": "Wir vereinbaren benötigte Druck- und Digitalformate, offene Dateien, Schriften und Nutzungsrechte. Druckproduktion und Fremdlizenzen werden bei Bedarf gesondert kalkuliert."
+        "title": "Anwendungen und Übergabe",
+        "copy": "Wir klären benötigte Logo- und Layoutdateien, offene Dateien, Schriften, Nutzungsrechte und Gestaltungsrichtlinien. Druckproduktion und Fremdlizenzen werden bei Bedarf gesondert kalkuliert. So bleibt der Markenauftritt in späteren Anwendungen nachvollziehbar."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "Bestehendes Logo, Zielgruppen, gewünschte Markenwirkung und wichtigste Medien."
+        "title": "Ihr Design-Briefing",
+        "copy": "Nennen Sie bisheriges Erscheinungsbild, Zielgruppen, gewünschte Markenwirkung und Medien, etwa Website, Geschäftsausstattung, Broschüre oder Social Media."
       }
     ],
     "link": {
@@ -103,21 +103,21 @@
     ]
   },
   "ki-automatisierung": {
-    "title": "Automatisierung mit klaren Freigaben",
+    "title": "KI-Automatisierung mit klaren Freigaben",
     "topic": "KI & Automatisierung",
     "contact": "/kontakt?service=KI%20%26%20Automatisierung#anfrage",
     "groups": [
       {
-        "title": "Geeignete Prozesse",
-        "copy": "Wiederkehrende Anfragen, Dokumente oder Datenübertragungen lassen sich als Pilot untersuchen. Wir definieren Auslöser, Datenquellen, gewünschte Ausgabe und Ausnahmen."
+        "title": "Geeignete Prozesse auswählen",
+        "copy": "Wiederkehrende Anfragen, Dokumente und Datenübertragungen lassen sich als begrenzter Pilot untersuchen. Definieren Sie Auslöser, Datenquellen, gewünschte Ergebnisse und Ausnahmen. Nicht jeder manuelle Schritt muss durch KI ersetzt werden."
       },
       {
         "title": "Kontrolle und Betrieb",
-        "copy": "Integrationen werden anhand konkreter Schnittstellen geprüft. Zugriffsrechte, Fehlerbehandlung, menschliche Freigaben und laufende Kosten werden vor einer produktiven Nutzung abgestimmt."
+        "copy": "Die konkrete Integration hängt von verfügbaren Schnittstellen ab. Zugriffsrechte, Fehlerbehandlung, menschliche Freigaben, Testfälle und laufende Kosten werden vor dem produktiven Einsatz abgestimmt."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "Ein konkreter Ablauf, verwendete Programme, Beispieldaten ohne sensible Inhalte und gewünschte Zeitersparnis."
+        "title": "Ihr Automatisierungs-Briefing",
+        "copy": "Beschreiben Sie einen konkreten Ablauf, eingesetzte Programme, gewünschte Zeitersparnis und anonymisierte Beispieldaten."
       }
     ],
     "link": {
@@ -136,44 +136,54 @@
     ]
   },
   "onlineshops-ecommerce": {
-    "title": "Ein Shop, der zum Sortiment passt",
+    "title": "Onlineshop erstellen lassen: Sortiment, Checkout und Pflege",
     "topic": "Onlineshop & E-Commerce",
     "contact": "/kontakt?service=Onlineshop%20%26%20E-Commerce#anfrage",
     "groups": [
       {
-        "title": "Shopaufbau und Kaufprozess",
-        "copy": "Bei WooCommerce planen wir Kategorien, Varianten, Produktdaten, Zahlungsarten, Versandregeln und den mobilen Checkout passend zum Geschäftsmodell. Schnittstellen und laufende Gebühren werden vorab geklärt."
+        "title": "WooCommerce und Kaufprozess",
+        "copy": "Bei einem WooCommerce-Shop planen wir Kategorien, Produktvarianten, Produktinformationen, Zahlungsarten und Versandregeln passend zum Geschäftsmodell. Schnittstellen, Erweiterungen und laufende Gebühren werden vorab geklärt. Mobile Produktansicht, Warenkorb und Checkout erhalten besondere Aufmerksamkeit."
       },
       {
-        "title": "Pflege und Abnahme",
-        "copy": "Testbestellungen prüfen Warenkorb, Zahlung, Bestellbestätigung und Bestandsänderungen. Bei der Übergabe stehen Produktpflege und Bestellverwaltung im Mittelpunkt; rechtliche Texte liefert oder prüft der Betreiber."
+        "title": "Shop-Abnahme und Übergabe",
+        "copy": "Testbestellungen prüfen Warenkorb, Zahlung, Bestellbestätigung und Bestandsänderungen. Bei der Übergabe stehen Produktpflege und Bestellverwaltung im Mittelpunkt. Rechtliche Texte und steuerliche Anforderungen liefert oder prüft der Betreiber fachlich."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "Sortiment, Produktzahl, Lieferländer, Währung, gewünschte Zahlungsarten und vorhandene Produktbilder."
+        "title": "Ihr Shop-Briefing",
+        "copy": "Nennen Sie Sortiment, Produktzahl, Varianten, Lieferländer, Währung, Zahlungsarten, vorhandene Produktbilder und geplante Warenwirtschaft."
       }
     ],
     "link": {
       "href": "/onlineshop-erfolgreich-aufbauen-anleitung",
       "label": "Onlineshop vorbereiten"
-    }
+    },
+    "related": [
+      {
+        "href": "/shopware-vs-wordpress-shop",
+        "label": "Shopsysteme vergleichen"
+      },
+      {
+        "href": "/referenzen",
+        "label": "Arbeitsproben entdecken"
+      }
+    ]
   },
   "google-ads-social-media": {
-    "title": "Von der Anzeige zur passenden Anfrage",
+    "title": "Google Ads und Social Media auf Ihre Ziele ausrichten",
     "topic": "Google Ads & Social Media",
     "contact": "/kontakt?service=Google%20Ads%20%26%20Social%20Media#anfrage",
     "groups": [
       {
-        "title": "Kampagnenkonzept",
-        "copy": "Wir definieren Suchbegriffe oder Zielgruppen, Anzeigenformate und Zielseiten. Werbebudget, Plattformzugänge und Betreuungsumfang werden vorab abgestimmt."
+        "title": "Kampagnen und Zielseiten",
+        "copy": "Für Suchanzeigen werden relevante Suchbegriffe und passende Zielseiten definiert; bei Social Media stehen Zielgruppen und Anzeigenformate im Vordergrund. Werbebudget, Plattformzugänge und Umfang der Betreuung werden vorab getrennt abgestimmt."
       },
       {
-        "title": "Messung und Betreuung",
-        "copy": "Conversion-Tracking wird nur mit den erforderlichen technischen und datenschutzrechtlichen Voraussetzungen eingerichtet. Auswertungen von Suchanfragen, Anzeigen und Zielseiten helfen, Budget gezielt einzusetzen."
+        "title": "Messung und Optimierung",
+        "copy": "Conversion-Tracking wird nur mit den erforderlichen technischen und datenschutzrechtlichen Voraussetzungen eingerichtet. Die Auswertung von Suchanfragen, Anzeigen und Zielseiten hilft, Budget und Kampagnen gezielt anzupassen. Eine bestimmte Anzahl an Leads wird nicht garantiert."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "Angebot, Zielregion, gewünschte Anfragen, vorhandene Werbekonten und monatliches Budget."
+        "title": "Ihr Kampagnen-Briefing",
+        "copy": "Nennen Sie Angebot, Zielregion, gewünschte Anfragen, vorhandene Werbekonten, bisherige Ergebnisse und monatliches Werbebudget."
       }
     ],
     "link": {
@@ -182,44 +192,54 @@
     }
   },
   "seo-content-marketing": {
-    "title": "Relevante Suchanfragen gezielt beantworten",
+    "title": "SEO-Strategie für relevante Suchanfragen und lokale Sichtbarkeit",
     "topic": "SEO & Content-Marketing",
     "contact": "/kontakt?service=SEO%20%26%20Content-Marketing#anfrage",
     "groups": [
       {
-        "title": "Recherche und Struktur",
-        "copy": "Keyword-Recherche und Suchintention bestimmen, welche Leistungsseiten und Ratgeber benötigt werden. Bestehende URLs, interne Links, technische Grundlagen und lokale Sichtbarkeit fließen in die Planung ein."
+        "title": "Recherche und technische Grundlage",
+        "copy": "Keyword-Recherche und Suchintention bestimmen die Zuständigkeit von Leistungsseiten und Ratgebern. Bei bestehenden Websites gehören URL-Bestand, Indexierbarkeit, technische Grundlagen und interne Verlinkung zur Planung. Bei lokalen Unternehmen wird auch das Google-Unternehmensprofil betrachtet."
       },
       {
-        "title": "Redaktion und Kontrolle",
-        "copy": "Themenplanung, Textüberarbeitung und regelmäßige Auswertung werden vereinbart. Daten aus der Search Console können helfen, Impressionen, Klicks und konkurrierende Seiten zu erkennen. Rankings werden nicht garantiert."
+        "title": "SEO für Handwerker und kleine Unternehmen",
+        "copy": "Für Handwerksbetriebe zählen verständliche Leistungsseiten, reale Einsatzgebiete, geeignete Projektbilder und kurze Kontaktwege. Lokale Suchthemen und hilfreiche Ratgeber können mit der Website verbunden werden. Welche Maßnahmen und SEO-Blogpakete sinnvoll sind, hängt von Angebot, Wettbewerb und Ausgangslage ab; Rankings werden nicht garantiert."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "Website, wichtige Angebote, Regionen, vorhandene Inhalte und verfügbare Search-Console-Daten."
+        "title": "Ihr SEO-Briefing",
+        "copy": "Nennen Sie Website, wichtige Angebote, Zielregionen, vorhandene Inhalte und verfügbare Search-Console-Daten. Klären Sie, welche Anfragen oder Aufträge Sie erreichen möchten."
       }
     ],
     "link": {
       "href": "/seo-grundlagen-lokale-dienstleister",
       "label": "Lokale SEO-Checkliste"
-    }
+    },
+    "related": [
+      {
+        "href": "/wann-lohnt-sich-seo",
+        "label": "Wann lohnt sich SEO für Handwerker?"
+      },
+      {
+        "href": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+        "label": "Webdesign für Handwerker"
+      }
+    ]
   },
   "printdesign-editorial": {
-    "title": "Vom Manuskript zur druckfähigen Gestaltung",
+    "title": "Printdesign und Editorial: vom Manuskript zur Druckdatei",
     "topic": "Printdesign & Editorial",
     "contact": "/kontakt?service=Printdesign%20%26%20Editorial#anfrage",
     "groups": [
       {
         "title": "Satz und Layout",
-        "copy": "Für Magazine, Kataloge, Ratgeber und Broschüren planen wir Raster, Typografie, Bildsprache und Seitenlogik. Wiederkehrende Publikationen profitieren von konsistenten Absatz- und Objektformaten."
+        "copy": "Für Magazine, Kataloge, Ratgeber und Broschüren planen wir Raster, Typografie, Bildsprache und Seitenlogik. Bei wiederkehrenden Publikationen helfen konsistente Absatz- und Objektformate, redaktionelle Korrekturen und spätere Ausgaben effizienter zu organisieren."
       },
       {
-        "title": "Druckdaten und Abstimmung",
-        "copy": "Beschnitt, Farbprofile, Bildauflösung und PDF-Vorgaben richten sich nach der Druckerei. Korrekturschleifen, offene Dateien und Druckfreigabe werden im Angebot festgelegt."
+        "title": "Druckdaten und Freigabe",
+        "copy": "Beschnitt, Farbprofile, Bildauflösung und PDF-Vorgaben richten sich nach der Druckerei. Korrekturschleifen, offene Dateien, Nutzungsrechte und Druckfreigabe werden im Angebot geklärt; Druckproduktion wird separat abgestimmt."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "Format, Seitenzahl, Manuskript, Bildmaterial, Druckvorgaben und Terminplan."
+        "title": "Ihr Print-Briefing",
+        "copy": "Nennen Sie Format, Seitenzahl, Manuskript, Bildmaterial, Druckvorgaben, Auflage und Terminplan."
       }
     ],
     "link": {
@@ -228,21 +248,21 @@
     }
   },
   "ki-workflows-crm": {
-    "title": "Leads strukturiert weiterbearbeiten",
+    "title": "CRM-Automatisierung vom Erstkontakt zur Bearbeitung",
     "topic": "KI-Workflows & CRM",
     "contact": "/kontakt?service=KI-Workflows%20%26%20CRM#anfrage",
     "groups": [
       {
-        "title": "CRM und Schnittstellen",
-        "copy": "Anfragen lassen sich nach vereinbarten Regeln erfassen, zuordnen und zur Bearbeitung vorbereiten. Wir prüfen verfügbare Schnittstellen, Datenfelder, Berechtigungen und Dublettenregeln."
+        "title": "Anfragen und Schnittstellen",
+        "copy": "Anfragen lassen sich anhand vereinbarter Regeln erfassen, zuordnen und zur Bearbeitung vorbereiten. Datenfelder, Berechtigungen, führende Systeme und Dublettenregeln werden vorab geklärt. Die Umsetzung hängt von verfügbaren CRM-Schnittstellen ab."
       },
       {
         "title": "Nachfassen mit Kontrolle",
-        "copy": "Aufgaben, Erinnerungen und Entwürfe können wiederkehrende Arbeit reduzieren. Automatische Nachrichten benötigen klare Freigaben; Fehlerprotokoll, Testfälle und manuelle Alternativen werden eingeplant."
+        "copy": "Aufgaben, Erinnerungen und Entwürfe können wiederkehrende Arbeit reduzieren. Automatische Nachrichten benötigen klare Freigaben; Fehlerprotokoll, Testfälle und manuelle Alternativen werden eingeplant. Nicht jede Anfrage sollte ohne Prüfung automatisiert beantwortet werden."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "CRM, Leadquellen, gewünschte Pipeline-Schritte und heutige Nachfassprozesse."
+        "title": "Ihr CRM-Briefing",
+        "copy": "Nennen Sie CRM, Leadquellen, gewünschte Pipeline-Schritte, heutige Nachfassprozesse und vorhandene Schnittstellen. Keine personenbezogenen Beispieldaten oder Zugangsdaten übermitteln."
       }
     ],
     "link": {
@@ -251,44 +271,54 @@
     }
   },
   "webdesign-handwerker": {
-    "title": "Leistungen vor Ort verständlich zeigen",
+    "title": "Handwerker-Website: Leistungen, Einsatzgebiete und Anfragen",
     "topic": "Webdesign für Handwerker",
     "contact": "/kontakt?service=Webdesign%20f%C3%BCr%20Handwerker#anfrage",
     "groups": [
       {
-        "title": "Lokale Kundenführung",
-        "copy": "Leistungsseiten, Einsatzgebiete, Projektbilder und einfache Kontaktwege werden an den Betrieb angepasst. Eine mobil gut bedienbare Seite unterstützt Interessenten bei der schnellen Orientierung."
+        "title": "Webdesign für Ihren Handwerksbetrieb",
+        "copy": "Ob Maler, Dachdecker, Elektriker oder SHK-Betrieb: Interessenten wollen Leistungen, Einsatzgebiet und passende Projektbeispiele schnell verstehen. Eine mobil gut bedienbare Website verbindet diese Informationen mit klaren Telefon- und Anfragewegen. Die Struktur richtet sich nach Ihren tatsächlichen Gewerken."
       },
       {
-        "title": "Pflege und lokale Sichtbarkeit",
-        "copy": "Wir stimmen den Aufbau auf relevante Suchanfragen und das Google-Unternehmensprofil ab. Referenzen werden nur mit geeignetem Bildmaterial und Freigaben verwendet; Pflege und Wartung werden separat vereinbart."
+        "title": "Lokale Sichtbarkeit und Relaunch",
+        "copy": "Wir stimmen den Aufbau auf relevante regionale Suchanfragen und das Google-Unternehmensprofil ab. Bei einem Relaunch werden bestehende Inhalte und relevante URLs geprüft; Referenzen erscheinen nur mit geeignetem Bildmaterial und Freigaben. Pflege und Wartung werden gesondert vereinbart."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "Gewerke, Einsatzgebiet, typische Kundenfragen, Projektbilder und gewünschte Kontaktwege."
+        "title": "Ihr Handwerker-Briefing",
+        "copy": "Nennen Sie Gewerke, Einsatzgebiet, typische Aufträge, vorhandene Website, Projektbilder und gewünschte Kontaktwege. Die passende Website- und SEO-Planung wird anhand Ihres Betriebs abgestimmt."
       }
     ],
     "link": {
       "href": "/webdesign-fuer-handwerksbetriebe",
       "label": "Relaunch-Checkliste für Handwerker"
-    }
+    },
+    "related": [
+      {
+        "href": "/seo-3",
+        "label": "SEO & Content-Marketing für Handwerker"
+      },
+      {
+        "href": "/webdesign-fuer-handwerker",
+        "label": "Inhalte für die Handwerker-Website"
+      }
+    ]
   },
   "webdesign-aerzte": {
-    "title": "Eine Praxiswebsite mit klaren Patientenwegen",
+    "title": "Praxiswebsite für Ärzte: Informationen und Terminwege",
     "topic": "Webdesign für Ärzte",
     "contact": "/kontakt?service=Webdesign%20f%C3%BCr%20%C3%84rzte#anfrage",
     "groups": [
       {
-        "title": "Praxis und Leistungen",
-        "copy": "Fachgebiete, Behandlungsangebote, Team, Sprechzeiten und Anfahrt verständlich aufbereiten. Medizinische Aussagen und Bilder müssen von der Praxis freigegeben werden."
+        "title": "Fachgebiete und Praxis vorstellen",
+        "copy": "Eine Praxiswebsite sollte Patienten helfen, Fachgebiete, Behandlungsangebote, Team, Sprechzeiten und Anfahrt schnell zu finden. Medizinische Aussagen, Qualifikationen und Fotos werden von der Praxis geprüft und freigegeben. Die Gestaltung richtet sich nach den tatsächlichen Angeboten und Patientenfragen."
       },
       {
-        "title": "Kontakt und Terminoptionen",
-        "copy": "Telefon, allgemeine Kontaktinformationen und optional eine geprüfte Terminlösung. Sensible Gesundheitsdaten gehören nicht in ein gewöhnliches Kontaktformular."
+        "title": "Terminoptionen und Datenschutz",
+        "copy": "Telefon, allgemeine Kontaktinformationen und optional eine geeignete externe Terminlösung werden verständlich voneinander getrennt. Sensible Gesundheitsdaten gehören nicht in ein gewöhnliches Kontaktformular. Anbieter, technische Integration und rechtliche Anforderungen werden vorab geklärt."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "Fachrichtung, Standort, bestehende Website, Praxisfotos, Sprechzeiten und bevorzugtes Terminsystem."
+        "title": "Ihr Praxis-Briefing",
+        "copy": "Nennen Sie Fachrichtung, Standort, bestehende Website, Praxisfotos, Sprechzeiten und bevorzugtes Terminsystem. Die Praxis-Website-Pakete dienen als Grundlage für die Abstimmung."
       }
     ],
     "link": {
@@ -297,26 +327,32 @@
     }
   },
   "webdesign-immobilienmakler": {
-    "title": "Ein digitaler Auftritt für Käufer und Eigentümer",
+    "title": "Makler-Website: Immobilien, Exposés und Eigentümeranfragen",
     "topic": "Webdesign für Immobilienmakler",
     "contact": "/kontakt?service=Webdesign%20f%C3%BCr%20Immobilienmakler#anfrage",
     "groups": [
       {
-        "title": "Objekte und Exposés",
-        "copy": "Kauf- und Mietobjekte, Eckdaten, Bilder und Exposé-Downloads strukturiert darstellen. Filter und Objektfeeds werden nach Datenquelle geplant."
+        "title": "Objektpräsentation und Suche",
+        "copy": "Kauf- und Mietobjekte benötigen verständliche Eckdaten, Bilder, Objektseiten und gegebenenfalls Exposé-Downloads. Kategorien, Filter und Objektfeeds werden anhand der vorhandenen Datenquelle und Maklersoftware geplant. Schnittstellen werden vor einem Angebot auf Machbarkeit geprüft."
       },
       {
-        "title": "Lokale Sichtbarkeit und Anfragewege",
-        "copy": "Standortbezogene Inhalte, Team, Verkaufsberatung und Objektanfragen logisch verbinden. Externe Karten oder WhatsApp nur nach abgestimmter Integration."
+        "title": "Lokale Sichtbarkeit und Kontaktwege",
+        "copy": "Käufer, Mieter und Eigentümer haben unterschiedliche Fragen. Standortbezogene Inhalte, Team, Verkaufsberatung und objektbezogene Anfragen werden logisch verbunden. Externe Karten oder WhatsApp werden nur nach abgestimmter Integration eingesetzt."
       },
       {
-        "title": "Für das Briefing",
-        "copy": "Objektarten, Anzahl der Angebote, Maklersoftware, vorhandene Bilder, Exposé-Daten und gewünschte Kontaktwege."
+        "title": "Ihr Makler-Briefing",
+        "copy": "Nennen Sie Objektarten, Anzahl der Angebote, Maklersoftware, vorhandene Bilder, Exposé-Daten und gewünschte Kontaktwege. Klären Sie, ob Objekte manuell gepflegt oder aus einem bestehenden System übernommen werden sollen."
       }
     ],
     "link": {
       "href": "/professionelle-website-fuer-lokale-dienstleister",
       "label": "Ratgeber für lokale Dienstleister lesen"
-    }
+    },
+    "related": [
+      {
+        "href": "/webdesign-fuer-immobilienmakler-berlin",
+        "label": "Ratgeber zur Planung von Immobilien-Objektseiten"
+      }
+    ]
   }
 }
