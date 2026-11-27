@@ -38,22 +38,22 @@
   "footerServices": [
     {
       "label": "Webdesign und Entwicklung",
-      "href": "/leistungen/webdesign",
+      "href": "/webdesign",
       "pageKey": "webdesign"
     },
     {
       "label": "Digitales Marketing",
-      "href": "/leistungen/marketing",
+      "href": "/digitales-marketing",
       "pageKey": "marketing"
     },
     {
       "label": "Branding und Grafikdesign",
-      "href": "/leistungen/branding",
+      "href": "/grafikdesign-2",
       "pageKey": "branding"
     },
     {
       "label": "KI und Automatisierung",
-      "href": "/leistungen/ki-automatisierung",
+      "href": "/ki-automatisierung",
       "pageKey": "ki-automatisierung"
     },
     {
