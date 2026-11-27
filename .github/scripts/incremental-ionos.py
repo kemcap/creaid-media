@@ -17,7 +17,12 @@ from urllib.error import HTTPError
 from urllib.parse import quote
 
 STATE='.creaid-deploy-state.json'
-ORIGIN='https://vorschau.creaid-media.de'
+PRODUCTION=os.environ.get('CREAID_IONOS_PRODUCTION')=='1'
+ORIGIN='https://creaid-media.de' if PRODUCTION else 'https://vorschau.creaid-media.de'
+
+def robots_header_ok(headers):
+    blocked='noindex' in headers.get('X-Robots-Tag','').lower()
+    return not blocked if PRODUCTION else blocked
 MAX_STATE=2*1024*1024
 CACHE_MARKERS=(b'BEGIN CREAID PERFORMANCE ENGINE',b'BEGIN CREAID PREVIEW HOST CACHE')
 FINGERPRINTED_ASSET=re.compile(r'\.sha256-[a-f0-9]{64}\.(?:css|js|mjs|webp|avif|png|jpg|jpeg|gif|svg|woff2|woff|ico)$')
@@ -32,7 +37,7 @@ def cache_enabled(rules):
 def sha(data):return hashlib.sha256(data).hexdigest()
 def safe_path(path):
     require(isinstance(path,str) and not path.startswith('/') and all(p not in ('','.','..') and not p.startswith('.') for p in path.split('/')),'Invalid managed path.')
-    require(path in ('robots.txt','index.html') or re.fullmatch(r'[a-z0-9-]+\.html',path) or path.startswith('assets/'),'Unmanaged path.')
+    require(path in ('robots.txt','index.html','sitemap.xml') or re.fullmatch(r'[a-z0-9-]+\.html',path) or path.startswith('assets/'),'Unmanaged path.')
     return path
 def fingerprint(a):
     return {'size':a.st_size,'mtime':a.st_mtime}
@@ -67,14 +72,14 @@ def public_path(path,route_urls):
 def public_matches(path,digest,route_urls):
     try:
         code,headers,body=get(ORIGIN+public_path(path,route_urls))
-        return code==200 and 'noindex' in headers.get('X-Robots-Tag','').lower() and sha(body)==digest
+        return code==200 and robots_header_ok(headers) and sha(body)==digest
     except Exception:return False
 def verify_cache_policy(expected):
     asset=next((name for name in expected if name.startswith('assets/') and FINGERPRINTED_ASSET.search(name)),None)
     require(asset is not None,'Missing fingerprinted preview asset.')
     code,headers,body=get(ORIGIN+public_path(asset,{}))
     policy={part.strip().lower() for part in headers.get('Cache-Control','').split(',')}
-    require(code==200 and sha(body)==sha(expected[asset].read_bytes()) and 'noindex' in headers.get('X-Robots-Tag','').lower()
+    require(code==200 and sha(body)==sha(expected[asset].read_bytes()) and robots_header_ok(headers)
             and {'private','max-age=3600','immutable'}<=policy and not {'no-store','public'}&policy,
             'Preview fingerprint or private cache policy verification failed.')
     code,headers,_=get(ORIGIN+'/')
@@ -121,6 +126,11 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
     require(not old_pages-set(manifest['pages']),'Obsolete HTML routes: explicit clean release required.')
     rules=read(sftp,'.htaccess',1024*1024)
     cached=cache_enabled(rules)
+    require(PRODUCTION or b'CREAID PRODUCTION INDEXING' not in rules,'Production policy active; preview deployment forbidden.')
+    if PRODUCTION:
+        require(b'CREAID PRODUCTION INDEXING' in expected['.htaccess'].read_bytes(),'Missing production candidate policy.')
+        code,_,body=get(ORIGIN+'/')
+        require(code==200 and sha(body)==sha(read(sftp,'index.html')),'Main domain does not serve this dedicated installation; no writes.')
     require(cached==cache_enabled(expected['.htaccess'].read_bytes()),'Candidate would change the active preview cache mode; no changes.')
     require(rules.startswith(b'# Generated from scripts/routes.mjs; preview only') and b'AuthType' not in rules and b'AuthUserFile' not in rules,'Unexpected existing routing policy; no changes.')
     rows={}
@@ -197,6 +207,16 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
             results=list(pool.map(lambda p:(p,public_matches(p,digests[p],route_urls)),sorted(verify_paths)))
         require(all(ok for _,ok in results),'HTTPS mismatch: '+', '.join(p for p,ok in results if not ok))
         if cached:verify_cache_policy(expected)
+        if PRODUCTION:
+            try:
+                preview_code,preview_headers,preview_body=get('https://vorschau.creaid-media.de/')
+            except Exception:
+                preview_code,preview_headers,preview_body=0,{},b''
+            if preview_code==200 and sha(preview_body)==digests['index.html']:
+                require('noindex' in preview_headers.get('X-Robots-Tag','').lower(),'Preview alias lost noindex.')
+                print('PREVIEW_ALIAS_NOINDEX_VERIFIED',flush=True)
+            else:
+                print('PREVIEW_SEPARATE_INSTALLATION_NOT_MANAGED',flush=True)
         code,headers,body=get(ORIGIN+'/api/contact.php')
         require(code==405 and json.loads(body)=={'ok':False,'status':'method'} and 'no-store' in headers.get('Cache-Control',''),'Contact endpoint or cache policy changed.')
         if changed:
@@ -219,4 +239,4 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
         print('INCREMENTAL_ROLLBACK_COMPLETE',flush=True)
         raise
     print('INCREMENTAL_TIMING '+json.dumps({'planningSeconds':round(planning_done-started,2),'writeSeconds':round(writes_done-planning_done,2),'verificationSeconds':round(perf_counter()-writes_done,2),'totalSeconds':round(perf_counter()-started,2)}),flush=True)
-    print('INCREMENTAL_SUCCESS '+json.dumps({**summary,'httpsVerified':True,'contactEndpointPreserved':True,'previewCacheEnabled':cached,'productionChanged':False}),flush=True)
+    print('INCREMENTAL_SUCCESS '+json.dumps({**summary,'httpsVerified':True,'contactEndpointPreserved':True,'previewCacheEnabled':cached,'productionChanged':PRODUCTION}),flush=True)
