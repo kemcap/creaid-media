@@ -1,0 +1,50 @@
+name: Production contact QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'backend/contact/**'
+      - 'public/assets/agency-pages.js'
+      - 'scripts/check-contact-browser.mjs'
+      - '.github/scripts/activate-live-contact.py'
+      - '.github/workflows/contact-production-qa.yml'
+permissions:
+  contents: read
+jobs:
+  contact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring
+          coverage: none
+      - run: |
+          php -l backend/contact/core.php
+          php backend/contact/test.php
+          php backend/contact/test-turnstile.php
+          php backend/contact/test-hubspot.php
+          python -m pip install paramiko==3.5.1
+          python .github/scripts/activate-live-contact.py --self-test
+      - run: |
+          npm ci
+          npm run verify
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+      - name: Browser submission tests for both approved hosts
+        run: |
+          node scripts/preview.mjs > "$RUNNER_TEMP/preview.log" 2>&1 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/check-contact-browser.mjs
+          CREAID_CONTACT_TEST_ORIGIN=https://creaid-media.de node scripts/check-contact-browser.mjs
