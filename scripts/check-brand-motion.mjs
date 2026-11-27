@@ -15,4 +15,9 @@ assert.ok(page.includes('/assets/brand-motion.css')&&page.includes('cm-focus-pul
 assert.ok(read('public/assets/ux-phase1.css').includes('100svh - var(--cm-nav-height) - var(--cm-contactbar-height)'));
 assert.ok(read('public/assets/ux-phase1.js').includes('contactbar.getBoundingClientRect().height'));
 assert.ok(read('public/assets/home-motion-v5.js').includes('at 50% 50%'));
+const contact=registry.components.find(c=>c.id==='CM-MOTION-002').contactSubmission;
+assert.equal(contact.minimumSuccessFeedbackMs,1500);
+assert.equal(contact.delayNetwork,false);
+assert.ok(read('dist/kontakt.html').includes('id="aContactFeedback"'));
+assert.ok(read('public/assets/agency-pages.js').includes('MIN_CONTACT_FEEDBACK_MS=1500'));
 console.log('PASS: Brand guide, motion tokens, shared CSS, hero sizing and circular reveal.');
