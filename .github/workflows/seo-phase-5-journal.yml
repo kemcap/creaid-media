@@ -40,10 +40,22 @@ jobs:
         env:
           BASELINE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
-          git diff --exit-code "$BASELINE_SHA" -- src/_data/routes.json src/_data/aliases.json src/_data/wordpressPreviewDrafts.json src/_data/headingPlan.json docs/sitemap-kandidat-nach-freigabe.xml .github/scripts/prepare-production-indexing.mjs
+          git diff --exit-code "$BASELINE_SHA" -- src/_data/routes.json src/_data/aliases.json src/_data/wordpressPreviewDrafts.json docs/sitemap-kandidat-nach-freigabe.xml .github/scripts/prepare-production-indexing.mjs
           python - <<'PY'
           import json
           from pathlib import Path
+          import subprocess
+          base_headings=json.loads(subprocess.check_output(['git','show',__import__('os').environ['BASELINE_SHA']+':src/_data/headingPlan.json'],text=True))
+          candidate_headings=json.loads(Path('src/_data/headingPlan.json').read_text())
+          heading_plan=json.loads(Path('docs/seo/phase-5/archive-heading-plan.json').read_text())
+          assert set(base_headings)==set(candidate_headings)
+          for k,old in base_headings.items():
+              if k in heading_plan:
+                  change=heading_plan[k]
+                  assert old in (change['before'],change['after']) and old['mode']=='archive'
+                  assert candidate_headings[k]==change['after'], k
+              else:
+                  assert candidate_headings[k]==old, k
           a,b=[json.loads(Path('seo-phase5-report/'+x+'.json').read_text()) for x in ('baseline','candidate')]
           for x,y in zip(a['articles'],b['articles']):
               assert x['key']==y['key'] and x['draftLabelRendered']==y['draftLabelRendered']

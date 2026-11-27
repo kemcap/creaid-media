@@ -1,0 +1,62 @@
+{
+  "archiv-lokales-marketing": {
+    "before": {
+      "mode": "archive",
+      "h1": "Ratgeber zu Lokales Marketing",
+      "topic": "Lokales Marketing"
+    },
+    "after": {
+      "mode": "archive",
+      "h1": "Ratgeber zu lokalem Marketing",
+      "topic": "lokalem Marketing"
+    }
+  },
+  "archiv-lokal": {
+    "before": {
+      "mode": "archive",
+      "h1": "Ratgeber zu Lokale Unternehmen",
+      "topic": "Lokale Unternehmen"
+    },
+    "after": {
+      "mode": "archive",
+      "h1": "Ratgeber für lokale Unternehmen",
+      "topic": "lokalen Unternehmen"
+    }
+  },
+  "archiv-handwerk-handwerk-handwerk": {
+    "before": {
+      "mode": "archive",
+      "h1": "Ratgeber zu Handwerksbetriebe digital",
+      "topic": "Handwerksbetriebe digital"
+    },
+    "after": {
+      "mode": "archive",
+      "h1": "Handwerksbetriebe digital aufstellen",
+      "topic": "Digitalisierung im Handwerk"
+    }
+  },
+  "archiv-digitales-marketing": {
+    "before": {
+      "mode": "archive",
+      "h1": "Ratgeber zu Digitales Marketing",
+      "topic": "Digitales Marketing"
+    },
+    "after": {
+      "mode": "archive",
+      "h1": "Ratgeber zu digitalem Marketing",
+      "topic": "digitalem Marketing"
+    }
+  },
+  "archiv-suchmaschinenoptimierung": {
+    "before": {
+      "mode": "archive",
+      "h1": "Ratgeber zu Suchmaschinenoptimierung",
+      "topic": "Suchmaschinenoptimierung"
+    },
+    "after": {
+      "mode": "archive",
+      "h1": "SEO-Grundlagen für lokale Betriebe",
+      "topic": "lokaler Suchmaschinenoptimierung"
+    }
+  }
+}
