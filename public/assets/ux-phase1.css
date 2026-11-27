@@ -276,3 +276,11 @@ body :is(.cm-header__cta,.cm-footer__lead-cta,.button-primary,.cta,.a-btn:not(.a
 .work-stage .stage-footer, .contact-progress { color: #a6a3a8; }
 .portfolio-entry { background-color: #b3284f; }
 .statement-footer { color: #241017; }
+
+/* Only the first viewport includes the non-sticky contact strip. Sticky header offsets elsewhere stay unchanged. */
+:root{--cm-contactbar-height:31px;--cm-first-viewport:calc(100vh - var(--cm-nav-height) - var(--cm-contactbar-height))}
+@media(max-width:570px){:root{--cm-contactbar-height:35px}}
+@supports(height:100svh){:root{--cm-first-viewport:calc(100svh - var(--cm-nav-height) - var(--cm-contactbar-height))}}
+main > .track-hero .hero-stage{min-height:max(0px,var(--cm-first-viewport))!important}
+main > .track-hero .hero-content{padding-block:clamp(18px,3.1vh,48px) clamp(44px,7vh,76px)}
+@media(max-height:620px),(max-width:900px) and (max-height:700px){main > .track-hero .hero-content{padding-block:24px 40px}}

@@ -181,3 +181,9 @@
  .cm-contactbar__phone{font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){.cm-contactbar__link{transition:none}}
+
+/* Brand layout V1: centered, evenly spaced contact strip; DOM order = visual order. */
+.cm-contactbar__inner{justify-content:space-evenly;gap:clamp(6px,2.5vw,36px);max-width:1020px}
+.cm-contactbar__link,.cm-contactbar__link:first-child,.cm-contactbar__link:last-child{padding-inline:clamp(4px,1vw,13px)}
+.cm-contactbar__link+.cm-contactbar__link{border-left:0}
+@media(max-width:570px){.cm-contactbar__inner{gap:4px;justify-content:space-evenly}.cm-contactbar__link,.cm-contactbar__link:first-child,.cm-contactbar__link:last-child{padding-inline:5px}}

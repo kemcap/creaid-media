@@ -19,9 +19,9 @@ assert(html.indexOf('id="cm-global-footer"') > html.indexOf('</main>'), 'Global 
 assert((html.match(/id="cm-global-footer"/g)||[]).length===1, 'Expected exactly one footer');
 assert(css.includes('.statement-contact-stage .statement-panel') && css.includes('background:var(--pink)'), 'Fuchsia statement background missing');
 assert(css.includes('.statement-contact-stage .contact-panel') && css.includes('background:#17181a'), 'Dark contact background missing');
-assert(css.includes('clip-path:inset(0 0 0 100%)'), 'Mask initial state missing');
+assert(css.includes('clip-path:circle(0px at 50% 50%)'), 'Mask initial state missing');
 assert(js.includes('show(p, .32, .82)'), 'Mask scroll window missing');
-assert(js.includes('contact.style.clipPath'), 'Scroll-bound mask update missing');
+assert(js.includes('contact.style.clipPath') && js.includes('Math.hypot(n.contact.clientWidth, n.contact.clientHeight)') && js.includes('at 50% 50%'), 'Scroll-bound circular reveal missing');
 assert(!js.includes('function updateContact('), 'Old scroll-dependent contact text animation must be removed');
 
 assert(css.includes('nth-child(4){animation-delay:.7s}'), 'Last service card must start at 0.7 seconds');

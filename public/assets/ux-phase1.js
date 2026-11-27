@@ -1,15 +1,16 @@
 /* Phase 1: measure the closed shared header; stagger natural-flow content. */
 (()=>{
   'use strict';
-  const root=document.documentElement,header=document.querySelector('#cm-global-header');
+  const root=document.documentElement,header=document.querySelector('#cm-global-header'),contactbar=document.querySelector('#cm-contactbar');
   const reduced=window.CreAidMotion?.reduced || matchMedia('(prefers-reduced-motion: reduce)');
   const staticStory=window.CreAidMotion?.staticStory || matchMedia('(max-height:620px),(max-width:900px) and (max-height:700px),(prefers-reduced-motion:reduce)');
   function measure(){
     if(!header||header.classList.contains('cm-header--menu-open'))return;
-    root.style.setProperty('--cm-nav-height',Math.ceil(header.getBoundingClientRect().height)+'px');
+    root.style.setProperty('--cm-nav-height',header.getBoundingClientRect().height+'px');
+    if(contactbar)root.style.setProperty('--cm-contactbar-height',contactbar.getBoundingClientRect().height+'px');
   }
   measure();
-  if(header&&'ResizeObserver' in window)new ResizeObserver(measure).observe(header);
+  if(header&&'ResizeObserver' in window){const observer=new ResizeObserver(measure);observer.observe(header);if(contactbar)observer.observe(contactbar);}
   addEventListener('resize',measure,{passive:true});
   const finalCTA=document.querySelector('main .contact-panel a.button-primary,main .service-closing a.cta,main .sp-closer a,main #kontakt-abschluss a,main .j-bottom-cta a.j-button,main .l-final a.l-button,main .a-track:last-of-type a.a-btn');
   const mainSections=[...document.querySelectorAll('main > section:not(.audit-related)')];

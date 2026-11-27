@@ -165,13 +165,29 @@ async function interactionTests(browser){
    const initial=await strip.boundingBox();
    assert.ok(initial && initial.height>=28 && initial.height<=36 && initial.y>=-1,'Slim contact strip at page top');
    assert.ok(await strip.evaluate(e=>[...e.querySelectorAll('a')].every(a=>{const r=a.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1;})),'Contact links overflow');
+   assert.ok(await strip.evaluate(e=>{const a=[...e.querySelectorAll('a')];return a[0].href.includes('linkedin')&&a[1].href.startsWith('mailto:')&&a[2].getAttribute('aria-label').includes('WhatsApp')&&a[3].href.startsWith('tel:');}),'Contact order');
+   const ticker=await p.locator('.cm-hero-ticker').boundingBox();
+   assert.ok(ticker && Math.abs(ticker.y+ticker.height-844)<=2,'Ticker must end at viewport bottom on standard viewport');
    await p.evaluate(()=>window.scrollTo({top:200,behavior:'instant'}));
    await p.waitForFunction(()=>{const bar=document.querySelector('#cm-contactbar').getBoundingClientRect();const header=document.querySelector('#cm-global-header').getBoundingClientRect();return bar.bottom<=1&&Math.abs(header.top)<=2;});
    await p.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
    await p.waitForFunction(()=>document.querySelector('#cm-contactbar').getBoundingClientRect().top>=-1);
   }
   await p.setViewportSize({width:390,height:844});
-  const toggle=p.locator('#cm-menu-toggle');await toggle.click();assert.equal(await toggle.getAttribute('aria-expanded'),'true');await p.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');assert.equal(await p.evaluate(()=>document.activeElement.id),'cm-menu-toggle');
+  const toggle=p.locator('#cm-menu-toggle');await toggle.click();assert.equal(await toggle.getAttribute('aria-expanded'),'true');
+  assert.equal(await p.locator('#cm-primary-nav > *').first().evaluate(e=>getComputedStyle(e).animationName),'none','Mobile navigation reduced motion');
+  await p.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');assert.equal(await p.evaluate(()=>document.activeElement.id),'cm-menu-toggle');
+  await p.emulateMedia({reducedMotion:'no-preference'});await toggle.click();
+  const items=p.locator('#cm-primary-nav > *');assert.equal(await items.count(),6);
+  assert.equal(await items.first().evaluate(e=>getComputedStyle(e).animationName),'cm-mobile-menu-enter');
+  assert.equal(await items.last().evaluate(e=>getComputedStyle(e).animationDelay),'0.11s');
+  const mobileServices=p.locator('.cm-header__services summary');await mobileServices.click();
+  const sub=p.locator('.cm-header__dropdown a');assert.ok(await sub.count()>5);
+  assert.equal(await sub.first().evaluate(e=>getComputedStyle(e).animationName),'cm-mobile-menu-enter');
+  assert.equal(await sub.last().evaluate(e=>getComputedStyle(e).animationDelay),'0.11s');
+  await p.emulateMedia({reducedMotion:'reduce'});assert.equal(await sub.first().evaluate(e=>getComputedStyle(e).animationName),'none');
+  await p.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');
+  await p.emulateMedia({reducedMotion:'reduce'});
   await p.setViewportSize({width:1440,height:900});const summary=p.locator('.cm-header__services summary');await summary.click();assert.equal(await p.locator('.cm-header__services').getAttribute('open'),'');await p.keyboard.press('Escape');assert.equal(await p.locator('.cm-header__services').getAttribute('open'),null);assert.ok(await summary.evaluate(e=>document.activeElement===e));
   await settle(p,base+'/kontakt?service=Webdesign%20%26%20Entwicklung');assert.equal(await p.locator('#agencyEnquiry [name=service]').inputValue(),'Webdesign & Entwicklung');
   assert.ok(await p.locator('#agencyEnquiry').isVisible()); // do not submit any enquiry

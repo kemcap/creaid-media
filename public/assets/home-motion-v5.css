@@ -92,7 +92,7 @@ html.cm-enhanced .work-gallery.is-revealed .work-browser {
   z-index:2;
   background:#17181a;
   color:#fff;
-  clip-path:inset(0 0 0 100%);
+  clip-path:circle(0px at 50% 50%);
   will-change:clip-path;
 }
 .statement-contact-stage .contact-panel .contact-layout,
@@ -200,3 +200,6 @@ html.cm-enhanced .work-gallery.is-revealed .work-browser {
   .statement-contact-stage .statement-mask-edge {display:none}
   .contact-scroll-anchor {top:100dvh}
 }
+
+/* Circular Reveal: no blurred edge, no glow. */
+.statement-contact-stage .statement-mask-edge{display:none}

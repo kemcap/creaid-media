@@ -33,6 +33,7 @@ try{
  await page.waitForFunction(()=>typeof window.verifyTestChallenge==='function');
  const verifyChallenge=()=>page.evaluate(()=>window.verifyTestChallenge());
  const form=page.locator('#agencyEnquiry'),status=page.locator('#aFormMessage'),fallback=page.locator('#aFormFallback'),submit=form.locator('button[type=submit]');
+ const feedback=page.locator('#aContactFeedback'),loader=feedback.locator('.cm-contact-loader');
  await form.waitFor({state:'visible'});
  assert.equal(await form.locator('[name=service]').inputValue(),'Webdesign & Entwicklung');
  assert.equal(await fallback.isVisible(),false);
@@ -45,7 +46,11 @@ try{
  await form.evaluate(el=>el.requestSubmit());
  await form.evaluate(el=>el.dispatchEvent(new Event('submit',{cancelable:true})));
  assert.equal(await submit.isDisabled(),true);
+ assert.equal(await loader.isVisible(),true);
+ assert.equal(await status.textContent(),'Anfrage wird gesendet\nIhre Daten werden sicher übermittelt.');
+ assert.equal(await loader.locator('.cm-bounce-motion').evaluate(e=>getComputedStyle(e).animationName),'none');
  await page.waitForFunction(()=>document.querySelector('#aFormMessage').textContent.includes('nicht bestätigt'));
+ assert.equal(await loader.isVisible(),false);
  assert.equal(calls,1);
  assert.equal(last.website,'');
  assert.equal(last.service,'Webdesign & Entwicklung');
@@ -70,8 +75,15 @@ try{
  assert.equal(await fallback.isVisible(),true);
  mode='accepted';
  await verifyChallenge();
- await form.evaluate(el=>el.requestSubmit());
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ await form.evaluate(el=>{window.contactFeedbackStart=performance.now();el.requestSubmit()});
+ assert.equal(await loader.isVisible(),true);
+ assert.equal(await loader.locator('.cm-bounce-motion').evaluate(e=>getComputedStyle(e).animationName),'cm-bounce-jump');
  await page.waitForFunction(()=>document.querySelector('#aFormMessage').textContent.includes('erfolgreich'));
+ assert.ok(await page.evaluate(()=>performance.now()-window.contactFeedbackStart)>=1490,'Successful feedback lasts at least 1.5s');
+ assert.equal(await feedback.getAttribute('data-state'),'success');
+ assert.equal(await loader.isVisible(),false);
+ assert.match(await status.textContent(),/Anfrage erfolgreich versendet/);
  assert.equal(await form.locator('[name=message]').inputValue(),'');
  assert.equal(await fallback.isVisible(),false);
  assert.equal(calls,5);
