@@ -1,0 +1,2203 @@
+{
+  "sourceBase": "faf1f54c7bf76646f1ee57e49fb33397c8612fae",
+  "before": [
+    {
+      "key": "b2b-portal-entwickeln-lassen",
+      "url": "b2b-portal-entwickeln-lassen.html",
+      "title": "B2B-Portal entwickeln lassen: Funktionen und Aufwand | CreAid-Media",
+      "description": "B2B-Portal planen: Welche Funktionen, Schnittstellen und Freigaben Sie vor der Entwicklung klären sollten und wie Sie den Aufwand abschätzen.",
+      "titleLength": 67,
+      "descriptionLength": 141,
+      "role": "journal"
+    },
+    {
+      "key": "beste-landingpage-elemente-fuer-kampagnen",
+      "url": "beste-landingpage-elemente-fuer-kampagnen.html",
+      "title": "Landingpage für Kampagnen: Aufbau und Checkliste | CreAid",
+      "description": "Welche Elemente braucht Ihre Kampagnen-Landingpage? Planen und prüfen Sie Überschrift, Belege, Anfrageformular und mobile Nutzung vor dem Werbestart.",
+      "titleLength": 57,
+      "descriptionLength": 149,
+      "role": "journal"
+    },
+    {
+      "key": "blog",
+      "url": "blog.html",
+      "title": "Journal für Webdesign, SEO, Branding & KI | CreAid-Media",
+      "description": "Ratgeber zu Websites, E-Commerce, lokaler Sichtbarkeit, Markenauftritt und KI-Workflows. Finden Sie die passenden Beiträge für Ihr Projekt.",
+      "titleLength": 56,
+      "descriptionLength": 139,
+      "role": "phase4"
+    },
+    {
+      "key": "branding",
+      "url": "branding.html",
+      "title": "Branding & Grafikdesign für Unternehmen | CreAid-Media",
+      "description": "Corporate Design, Logoentwicklung und Printdesign für einen einheitlichen Markenauftritt. Lernen Sie die Leistungen von CreAid-Media kennen.",
+      "titleLength": 54,
+      "descriptionLength": 140,
+      "role": "phase4"
+    },
+    {
+      "key": "cookie-einstellungen",
+      "url": "cookie-einstellungen.html",
+      "title": "Cookie-Einstellungen (Entwurf) | CreAid-Media",
+      "description": "Lokale Einstellung zu technischen Präferenzen in der Vorschau von CreAid-Media. Angaben zu Diensten bleiben bis zur Freigabe unter Prüfung.",
+      "titleLength": 45,
+      "descriptionLength": 139,
+      "role": "excluded"
+    },
+    {
+      "key": "corporate-design-erstellen-lassen",
+      "url": "corporate-design-erstellen-lassen.html",
+      "title": "Corporate Design erstellen lassen: Briefing, Umfang & Ablauf | CreAid-Media",
+      "description": "Planen Sie Ihr Corporate-Design-Projekt: Briefing, Logo, Gestaltungsregeln, Medien, Übergabe und Faktoren für den Aufwand.",
+      "titleLength": 75,
+      "descriptionLength": 122,
+      "role": "journal"
+    },
+    {
+      "key": "datenschutz",
+      "url": "datenschutz.html",
+      "title": "Datenschutzerklärung (Entwurf) | CreAid-Media",
+      "description": "Prüfpflichtiger Entwurf der Datenschutzhinweise zu Kontakt, technischen Daten und Betroffenenrechten bei CreAid-Media.",
+      "titleLength": 45,
+      "descriptionLength": 118,
+      "role": "excluded"
+    },
+    {
+      "key": "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "url": "deutschsprachige-agentur-in-der-tuerkei-finden.html",
+      "title": "Deutschsprachige Agentur in der Türkei: Auswahlkriterien | CreAid-Media",
+      "description": "Was bei der Wahl einer deutschsprachigen Agentur in der Türkei zählt: Ansprechpartner, Abstimmung, Übergabe und Zusammenarbeit.",
+      "titleLength": 71,
+      "descriptionLength": 127,
+      "role": "journal"
+    },
+    {
+      "key": "firmennamen-entwickeln-lassen",
+      "url": "firmennamen-entwickeln-lassen.html",
+      "title": "Firmennamen entwickeln lassen: Vorgehen und Kriterien | CreAid-Media",
+      "description": "Wie entsteht ein passender Firmenname? Prüfen Sie Auswahlkriterien, Namensrichtungen und die Schritte, die vor der Entscheidung anstehen.",
+      "titleLength": 68,
+      "descriptionLength": 137,
+      "role": "journal"
+    },
+    {
+      "key": "flyer-design-fuer-unternehmen",
+      "url": "flyer-design-fuer-unternehmen.html",
+      "title": "Flyer-Design für Unternehmen: Aufbau und Gestaltung | CreAid-Media",
+      "description": "So planen Sie einen Unternehmensflyer: Angebot, Aufbau, Bildsprache, Kontakt und Druckformat – mit einem klaren Ziel für jedes Exemplar.",
+      "titleLength": 66,
+      "descriptionLength": 136,
+      "role": "journal"
+    },
+    {
+      "key": "google-ads-aber-keine-anfragen",
+      "url": "google-ads-aber-keine-anfragen.html",
+      "title": "Google Ads: Klicks, aber keine Anfragen? Ursachen prüfen | CreAid-Media",
+      "description": "Viele Klicks, wenige Leads? Prüfen Sie Suchbegriffe, Conversion-Tracking und Landingpage, bevor Sie Budget oder Gebote verändern.",
+      "titleLength": 71,
+      "descriptionLength": 129,
+      "role": "journal"
+    },
+    {
+      "key": "google-ads-social-media",
+      "url": "google-ads-social-media.html",
+      "title": "Google Ads & Social-Media-Kampagnen für Unternehmen | CreAid-Media",
+      "description": "Planen Sie mit CreAid-Media Google Ads und Social-Media-Kampagnen. Wir stimmen Zielgruppe, Anzeigen, Landingpage und Auswertung aufeinander ab.",
+      "titleLength": 66,
+      "descriptionLength": 143,
+      "role": "phase4"
+    },
+    {
+      "key": "google-maps-auffindbarkeit-verbessern",
+      "url": "google-maps-auffindbarkeit-verbessern.html",
+      "title": "Google Maps: Auffindbarkeit für Unternehmen verbessern | CreAid-Media",
+      "description": "Verbessern Sie Ihr Google-Unternehmensprofil mit passenden Kategorien, konsistenten Angaben, Bewertungen und einer klar verlinkten Website.",
+      "titleLength": 69,
+      "descriptionLength": 139,
+      "role": "journal"
+    },
+    {
+      "key": "guenstige-webdesign-agentur-europa-finden",
+      "url": "guenstige-webdesign-agentur-europa-finden.html",
+      "title": "Webdesign-Agenturen in Europa: Angebote vergleichen | CreAid-Media",
+      "description": "Prüfen Sie Leistungen, Folgekosten und Übergabe bei Webdesign-Angeboten aus Europa. Mit Kriterien für einen fairen Preisvergleich.",
+      "titleLength": 66,
+      "descriptionLength": 130,
+      "role": "journal"
+    },
+    {
+      "key": "impressum",
+      "url": "impressum.html",
+      "title": "Impressum (Entwurf) | CreAid-Media",
+      "description": "Prüfpflichtiger Entwurf zum Impressum von CreAid-Media. Verbindliche Angaben zur verantwortlichen Firma sind vor Veröffentlichung zu ergänzen.",
+      "titleLength": 34,
+      "descriptionLength": 142,
+      "role": "excluded"
+    },
+    {
+      "key": "index",
+      "url": "index.html",
+      "title": "Werbeagentur für Webdesign, Branding & SEO | CreAid-Media",
+      "description": "CreAid-Media verbindet Webdesign, Branding, digitales Marketing und KI-Automatisierung. Lernen Sie unsere Leistungen kennen und besprechen Sie Ihr Projekt.",
+      "titleLength": 57,
+      "descriptionLength": 155,
+      "role": "phase4"
+    },
+    {
+      "key": "individuelle-webentwicklung-fuer-unternehmen",
+      "url": "individuelle-webentwicklung-fuer-unternehmen.html",
+      "title": "Individuelle Webentwicklung: Standard oder Maßarbeit? | CreAid-Media",
+      "description": "Wann lohnt sich eine individuelle Webentwicklung? Vergleichen Sie Standardlösungen, Schnittstellen, Erweiterbarkeit und laufenden Betrieb.",
+      "titleLength": 68,
+      "descriptionLength": 138,
+      "role": "journal"
+    },
+    {
+      "key": "kampagne-fuer-lokale-unternehmen",
+      "url": "kampagne-fuer-lokale-unternehmen.html",
+      "title": "Lokale Werbekampagne planen: Ziele, Kanäle und Messung | CreAid-Media",
+      "description": "So planen lokale Unternehmen eine Kampagne: Ziel und Einzugsgebiet festlegen, passende Kanäle wählen und Ergebnisse nachvollziehbar messen.",
+      "titleLength": 69,
+      "descriptionLength": 139,
+      "role": "journal"
+    },
+    {
+      "key": "ki-automatisierung-fuer-unternehmen",
+      "url": "ki-automatisierung-fuer-unternehmen.html",
+      "title": "KI-Automatisierung für kleine Unternehmen: Einstieg | CreAid-Media",
+      "description": "Welche Abläufe eignen sich für KI? Planen Sie einen kleinen Pilot mit klaren Prüfregeln, menschlicher Freigabe und messbaren Zielen.",
+      "titleLength": 66,
+      "descriptionLength": 132,
+      "role": "journal"
+    },
+    {
+      "key": "ki-automatisierung",
+      "url": "ki-automatisierung.html",
+      "title": "KI-Automatisierung für Unternehmen | CreAid-Media",
+      "description": "Wiederkehrende Aufgaben und Schnittstellen mit CreAid-Media prüfen. Erfahren Sie, wie ein KI-Pilot mit Freigabe und klaren Zuständigkeiten startet.",
+      "titleLength": 49,
+      "descriptionLength": 147,
+      "role": "phase4"
+    },
+    {
+      "key": "ki-workflows-crm",
+      "url": "ki-workflows-crm.html",
+      "title": "KI-Workflows & CRM-Automatisierung | CreAid-Media",
+      "description": "Automatisieren Sie wiederkehrende Anfrage- und Übergabeprozesse. CreAid-Media plant CRM-Anbindungen, Freigaben und nachvollziehbare Abläufe.",
+      "titleLength": 49,
+      "descriptionLength": 140,
+      "role": "phase4"
+    },
+    {
+      "key": "kontakt",
+      "url": "kontakt.html",
+      "title": "Kontakt & Projektanfrage bei CreAid-Media | CreAid-Media",
+      "description": "Besprechen Sie Ihr Projekt mit CreAid-Media. Wählen Sie eine Leistung und bereiten Sie Ihre Anfrage für Ihr E-Mail-Programm vor.",
+      "titleLength": 56,
+      "descriptionLength": 128,
+      "role": "phase4"
+    },
+    {
+      "key": "leistungen",
+      "url": "leistungen.html",
+      "title": "Spezialleistungen für Web, Marketing, Design & KI | CreAid-Media",
+      "description": "SEO, Onlineshops, Handwerker-Webdesign, Editorial, Kampagnen und KI-Workflows: Finden Sie die passende Leistung für Ihr Vorhaben.",
+      "titleLength": 64,
+      "descriptionLength": 129,
+      "role": "phase4"
+    },
+    {
+      "key": "logo-design-agentur",
+      "url": "logo-design-agentur.html",
+      "title": "Logo-Design-Agentur: Auswahl, Ablauf und Leistung | CreAid-Media",
+      "description": "Woran erkennen Sie eine passende Logo-Design-Agentur? Prüfen Sie Arbeitsproben, Varianten, Nutzungsrechte und Dateiformate vor der Beauftragung.",
+      "titleLength": 64,
+      "descriptionLength": 144,
+      "role": "journal"
+    },
+    {
+      "key": "logo-und-slogan-entwickeln",
+      "url": "logo-und-slogan-entwickeln.html",
+      "title": "Logo und Slogan entwickeln: Briefing und Praxistest | CreAid-Media",
+      "description": "Wie Logo und Slogan zusammenpassen: Legen Sie Botschaft, Zielgruppe und Ton fest und testen Sie beide an konkreten Anwendungen.",
+      "titleLength": 66,
+      "descriptionLength": 127,
+      "role": "journal"
+    },
+    {
+      "key": "markenauftritt-fuer-kleine-unternehmen",
+      "url": "markenauftritt-fuer-kleine-unternehmen.html",
+      "title": "Markenauftritt für kleine Unternehmen: Grundlagen | CreAid-Media",
+      "description": "Wie Sie Positionierung, Gestaltung und Sprache für kleine Unternehmen abstimmen – vom ersten Kundenkontakt bis zu Website und Print.",
+      "titleLength": 64,
+      "descriptionLength": 132,
+      "role": "journal"
+    },
+    {
+      "key": "marketing",
+      "url": "marketing.html",
+      "title": "Digitales Marketing für Unternehmen | CreAid-Media",
+      "description": "CreAid-Media unterstützt Unternehmen mit SEO, Content, Google Ads und Social Media. Finden Sie die passenden Maßnahmen für Ihr Ziel.",
+      "titleLength": 50,
+      "descriptionLength": 132,
+      "role": "phase4"
+    },
+    {
+      "key": "marktplatz-plattform-entwickeln",
+      "url": "marktplatz-plattform-entwickeln.html",
+      "title": "Online-Marktplatz entwickeln: MVP, Rollen und Betrieb | CreAid-Media",
+      "description": "So planen Sie einen Mehranbieter-Marktplatz: Geschäftsmodell, Anbieterrollen, Kernfunktionen und Betrieb für die erste Version festlegen.",
+      "titleLength": 68,
+      "descriptionLength": 137,
+      "role": "journal"
+    },
+    {
+      "key": "messeauftritt-gestalten-lassen",
+      "url": "messeauftritt-gestalten-lassen.html",
+      "title": "Messeauftritt gestalten lassen: Konzept und Aufwand | CreAid-Media",
+      "description": "Planen Sie Ihren Messeauftritt vom Ziel über Standgrafik und Materialien bis zur Nachbereitung. Darauf kommt es bei der Beauftragung an.",
+      "titleLength": 66,
+      "descriptionLength": 136,
+      "role": "journal"
+    },
+    {
+      "key": "onlineshop-erfolgreich-aufbauen-anleitung",
+      "url": "onlineshop-erfolgreich-aufbauen-anleitung.html",
+      "title": "Onlineshop aufbauen: Anleitung von Planung bis Start | CreAid-Media",
+      "description": "Eine Schritt-für-Schritt-Anleitung für Ihren Onlineshop: Sortiment, Shopsystem, Produktseiten, Checkout und Start vorbereiten.",
+      "titleLength": 67,
+      "descriptionLength": 126,
+      "role": "journal"
+    },
+    {
+      "key": "onlineshop-erstellen-lassen",
+      "url": "onlineshop-erstellen-lassen.html",
+      "title": "Onlineshop erstellen lassen oder selbst bauen? | CreAid",
+      "description": "Onlineshop erstellen lassen oder selbst starten? Vergleichen Sie Eigenbau und Agentur nach Sortiment, Schnittstellen, laufenden Kosten und Zuständigkeiten.",
+      "titleLength": 55,
+      "descriptionLength": 155,
+      "role": "journal"
+    },
+    {
+      "key": "onlineshops-ecommerce",
+      "url": "onlineshops-ecommerce.html",
+      "title": "Onlineshop erstellen lassen – E-Commerce für Unternehmen | CreAid-Media",
+      "description": "Planen Sie Ihren Onlineshop mit CreAid-Media: Produktseiten, mobile Bestellung und die Abläufe für Ihren Betrieb gemeinsam abstimmen.",
+      "titleLength": 71,
+      "descriptionLength": 133,
+      "role": "phase4"
+    },
+    {
+      "key": "printdesign-editorial",
+      "url": "printdesign-editorial.html",
+      "title": "Printdesign & Editorial Design für Unternehmen | CreAid-Media",
+      "description": "Lassen Sie Broschüren, Magazine, Kataloge und Anzeigen gestalten. CreAid-Media verbindet klares Layout mit druckfertiger Aufbereitung.",
+      "titleLength": 61,
+      "descriptionLength": 134,
+      "role": "phase4"
+    },
+    {
+      "key": "produktfim-erstellen-lassen",
+      "url": "produktfim-erstellen-lassen.html",
+      "title": "Produktfilm erstellen lassen: Briefing und Formate | CreAid-Media",
+      "description": "Planen Sie einen Produktfilm für Shop, Social Media oder Anzeigen. Klären Sie Story, Formate und Produktionsaufwand vor dem Briefing.",
+      "titleLength": 65,
+      "descriptionLength": 133,
+      "role": "journal"
+    },
+    {
+      "key": "professionelle-website-fuer-lokale-dienstleister",
+      "url": "professionelle-website-fuer-lokale-dienstleister.html",
+      "title": "Website für lokale Dienstleister: Aufbau und Inhalte | CreAid-Media",
+      "description": "Welche Seiten braucht ein lokaler Dienstleister? Planen Sie Leistungen, Einzugsgebiet, Vertrauenssignale und mobile Kontaktmöglichkeiten.",
+      "titleLength": 67,
+      "descriptionLength": 137,
+      "role": "journal"
+    },
+    {
+      "key": "projekt-detail",
+      "url": "projekt-detail.html",
+      "title": "Webdesign-Studie: von der Struktur zur Nutzerführung | CreAid-Media",
+      "description": "Eine Designstudie zu Wireframes, responsivem Webdesign und klaren Kontaktwegen. Entdecken Sie die konzeptionellen Schritte von CreAid-Media.",
+      "titleLength": 67,
+      "descriptionLength": 140,
+      "role": "excluded"
+    },
+    {
+      "key": "referenzen",
+      "url": "referenzen.html",
+      "title": "Portfolio & Designstudien von CreAid-Media | CreAid-Media",
+      "description": "Sehen Sie Designstudien von CreAid-Media zu Webdesign, Editorial und Automatisierung. Die Konzepte zeigen Gestaltung und Arbeitsweise.",
+      "titleLength": 57,
+      "descriptionLength": 134,
+      "role": "phase4"
+    },
+    {
+      "key": "schlechte-website-verbessern",
+      "url": "schlechte-website-verbessern.html",
+      "title": "Website verbessern: 7 Schritte für bestehende Seiten | CreAid-Media",
+      "description": "Verbessern Sie eine bestehende Website in sieben Schritten: Startseite, Inhalte, mobile Nutzung, Ladezeit, SEO und Kontaktweg prüfen.",
+      "titleLength": 67,
+      "descriptionLength": 133,
+      "role": "journal"
+    },
+    {
+      "key": "seo-content-marketing",
+      "url": "seo-content-marketing.html",
+      "title": "SEO & Content-Marketing für Unternehmen | CreAid-Media",
+      "description": "CreAid-Media unterstützt bei technischer SEO, Themenplanung, verständlichen Inhalten und interner Verlinkung für Ihre Website.",
+      "titleLength": 54,
+      "descriptionLength": 126,
+      "role": "phase4"
+    },
+    {
+      "key": "seo-fuer-lokale-sichtbarkeit",
+      "url": "seo-fuer-lokale-sichtbarkeit.html",
+      "title": "Lokale SEO-Strategie: Website und Google-Profil abstimmen | CreAid-Media",
+      "description": "Planen Sie die lokale Sichtbarkeit Ihres Unternehmens mit Suchintention, Leistungsseiten, Google-Unternehmensprofil und Erfolgskontrolle.",
+      "titleLength": 72,
+      "descriptionLength": 137,
+      "role": "journal"
+    },
+    {
+      "key": "seo-grundlagen-lokale-dienstleister",
+      "url": "seo-grundlagen-lokale-dienstleister.html",
+      "title": "Local SEO Checkliste: Grundlagen für lokale Dienstleister | CreAid-Media",
+      "description": "Konkrete Prüfschritte für lokale Dienstleister: Unternehmensdaten, Leistungsseiten, Google-Profil und technische Grundlagen.",
+      "titleLength": 72,
+      "descriptionLength": 124,
+      "role": "journal"
+    },
+    {
+      "key": "shopware-vs-wordpress-shop",
+      "url": "shopware-vs-wordpress-shop.html",
+      "title": "Shopware vs. WooCommerce: Shopsysteme im Vergleich | CreAid",
+      "description": "Shopware oder WordPress mit WooCommerce? Vergleichen Sie Sortiment, Verkaufskanäle, Pflege, Schnittstellen und Gesamtkosten anhand konkreter Tests.",
+      "titleLength": 59,
+      "descriptionLength": 147,
+      "role": "journal"
+    },
+    {
+      "key": "social-media-betreuung-unternehmen",
+      "url": "social-media-betreuung-unternehmen.html",
+      "title": "Social-Media-Betreuung: Leistungen und Aufwand | CreAid-Media",
+      "description": "Welche Aufgaben gehören zur Social-Media-Betreuung? Vergleichen Sie redaktionelle Planung, Produktion, Freigabe und Auswertung für Ihr Unternehmen.",
+      "titleLength": 61,
+      "descriptionLength": 147,
+      "role": "journal"
+    },
+    {
+      "key": "ueber-uns",
+      "url": "ueber-uns.html",
+      "title": "Über CreAid-Media: Arbeitsweise und Zusammenarbeit | CreAid-Media",
+      "description": "Lernen Sie CreAid-Media kennen: Wie wir Webdesign, Marketing, Branding und Automatisierung planen und mit Unternehmen zusammenarbeiten.",
+      "titleLength": 65,
+      "descriptionLength": 135,
+      "role": "phase4"
+    },
+    {
+      "key": "warum-bringt-meine-website-keine-kunden",
+      "url": "warum-bringt-meine-website-keine-kunden.html",
+      "title": "Website bringt keine Anfragen: Ursachen finden | CreAid-Media",
+      "description": "Warum bleiben Anfragen auf Ihrer Website aus? Prüfen Sie Besucherquellen, Angebot, Vertrauen und Kontaktweg, bevor Sie Änderungen priorisieren.",
+      "titleLength": 61,
+      "descriptionLength": 143,
+      "role": "journal"
+    },
+    {
+      "key": "warum-corporate-design-wichtig-ist",
+      "url": "warum-corporate-design-wichtig-ist.html",
+      "title": "Warum Corporate Design wichtig ist: Nutzen im Unternehmen | CreAid-Media",
+      "description": "Verstehen Sie, wie einheitliche Gestaltung Wiedererkennung und Zusammenarbeit unterstützt und wann eine Überarbeitung sinnvoll ist.",
+      "titleLength": 72,
+      "descriptionLength": 131,
+      "role": "journal"
+    },
+    {
+      "key": "was-kostet-ein-imagefilm",
+      "url": "was-kostet-ein-imagefilm.html",
+      "title": "Was kostet ein Imagefilm? Preise und Leistungen | CreAid",
+      "description": "Was kostet ein Imagefilm? Öffentliche Preisbeispiele und eine Checkliste helfen, Angebote für Konzept, Drehtage, Schnitt und Nutzungsrechte zu vergleichen.",
+      "titleLength": 56,
+      "descriptionLength": 155,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-agentur-fuer-handwerker",
+      "url": "webdesign-agentur-fuer-handwerker.html",
+      "title": "Webdesign-Agentur für Handwerker auswählen: Briefing & Angebot | CreAid-Media",
+      "description": "Welche Fragen sollten Handwerksbetriebe einer Webdesign-Agentur stellen? Kriterien für Briefing, Angebot, Übergabe und Zusammenarbeit.",
+      "titleLength": 77,
+      "descriptionLength": 134,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-agentur-fuer-kleine-unternehmen",
+      "url": "webdesign-agentur-fuer-kleine-unternehmen.html",
+      "title": "Webdesign-Agentur für KMU: Angebot und Ablauf prüfen | CreAid-Media",
+      "description": "Welche Leistungen brauchen kleine Unternehmen? Prüfen Sie Briefing, Kosten, Pflege und Übergabe, bevor Sie eine Webdesign-Agentur beauftragen.",
+      "titleLength": 67,
+      "descriptionLength": 142,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-fuer-arztpraxen",
+      "url": "webdesign-fuer-arztpraxen.html",
+      "title": "Website für Arztpraxen: Inhalte und Terminwege | CreAid-Media",
+      "description": "Planen Sie eine Praxiswebsite mit klaren Patienteninformationen, verständlichen Kontaktwegen und einem gut auffindbaren Terminangebot.",
+      "titleLength": 61,
+      "descriptionLength": 134,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-fuer-dachdecker-firma",
+      "url": "webdesign-fuer-dachdecker-firma.html",
+      "title": "Website für Dachdecker: Leistungen, Bilder und Anfragen | CreAid-Media",
+      "description": "So zeigen Dachdeckerbetriebe Leistungen, Baustellenbilder und Einsatzgebiete auf ihrer Website und erleichtern die Kontaktaufnahme.",
+      "titleLength": 70,
+      "descriptionLength": 131,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-fuer-handwerker",
+      "url": "webdesign-fuer-handwerker.html",
+      "title": "Handwerker-Website: Inhalte für die erste eigene Website | CreAid-Media",
+      "description": "Welche Leistungen, Einsatzgebiete, Projektbilder und Kontaktwege gehören auf die erste Website eines Handwerksbetriebs? Eine Orientierung für den Aufbau.",
+      "titleLength": 71,
+      "descriptionLength": 153,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-fuer-handwerksbetriebe",
+      "url": "webdesign-fuer-handwerksbetriebe.html",
+      "title": "Handwerker-Website modernisieren: Relaunch-Checkliste | CreAid-Media",
+      "description": "Bestehende Handwerker-Website erneuern: Prüfen Sie Inhalte, mobile Bedienung, bisherige URLs und Kontaktwege vor dem Relaunch.",
+      "titleLength": 68,
+      "descriptionLength": 126,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-fuer-kleine-unternehmen",
+      "url": "webdesign-fuer-kleine-unternehmen.html",
+      "title": "Webdesign für kleine Unternehmen: Planung und Inhalte | CreAid",
+      "description": "Webdesign für kleine Unternehmen planen: Welche Seiten, Referenzen und Kontaktwege braucht Ihre Website? Mit Prüfplan für den Start und den mobilen Auftritt.",
+      "titleLength": 62,
+      "descriptionLength": 157,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-handwerker",
+      "url": "webdesign-handwerker.html",
+      "title": "Webdesign für Handwerker: Websites für Ihren Betrieb | CreAid-Media",
+      "description": "Professionelles Webdesign für Handwerksbetriebe: Leistungsseiten, Einsatzgebiete, Referenzen und klare Kontaktwege. Projekt besprechen.",
+      "titleLength": 67,
+      "descriptionLength": 135,
+      "role": "phase4"
+    },
+    {
+      "key": "webdesign-outsourcing-deutschland",
+      "url": "webdesign-outsourcing-deutschland.html",
+      "title": "Webdesign-Outsourcing: Briefing, Abnahme und Übergabe | CreAid-Media",
+      "description": "So lagern deutsche Unternehmen Webdesign planbar aus: Rollen, Briefing, Meilensteine und Übergabe vor Projektstart festlegen.",
+      "titleLength": 68,
+      "descriptionLength": 125,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign",
+      "url": "webdesign.html",
+      "title": "Webdesign & Webentwicklung für Unternehmen | CreAid-Media",
+      "description": "Individuelle Websites und Webentwicklung für Unternehmen. Lernen Sie Leistungen, Ablauf und Ratgeber kennen und besprechen Sie Ihr Website-Projekt.",
+      "titleLength": 57,
+      "descriptionLength": 147,
+      "role": "phase4"
+    },
+    {
+      "key": "website-wartung-fuer-firmen",
+      "url": "website-wartung-fuer-firmen.html",
+      "title": "Website-Wartung für Firmen: Aufgaben und Ablauf | CreAid",
+      "description": "Website-Wartung für Firmen planen: Legen Sie fest, wer sich um Updates, Backups und Funktionstests kümmert und wie Ihr Team auf Störungen reagiert.",
+      "titleLength": 56,
+      "descriptionLength": 147,
+      "role": "journal"
+    },
+    {
+      "key": "wie-wirkt-corporate-design",
+      "url": "wie-wirkt-corporate-design.html",
+      "title": "Corporate Design prüfen: Kriterien für einen konsistenten Auftritt | CreAid-Media",
+      "description": "Bewerten Sie Ihr vorhandenes Corporate Design anhand von Wiedererkennung, Lesbarkeit, Medienkonsistenz und Alltagstauglichkeit.",
+      "titleLength": 81,
+      "descriptionLength": 127,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-aerzte",
+      "url": "webdesign-aerzte.html",
+      "title": "Webdesign für Ärzte und Praxen: Patienten gezielt informieren | CreAid-Media",
+      "description": "Individuelle Praxis-Websites mit verständlichen Leistungen, Sprechzeiten, mobiler Bedienung und klaren Terminwegen. Projekt besprechen.",
+      "titleLength": 76,
+      "descriptionLength": 135,
+      "role": "phase4"
+    },
+    {
+      "key": "webdesign-immobilienmakler",
+      "url": "webdesign-immobilienmakler.html",
+      "title": "Webdesign für Immobilienmakler: moderne Immobilien-Websites | CreAid-Media",
+      "description": "Immobilien-Websites mit Objektübersichten, Exposés, mobiler Nutzerführung und klaren Anfragewegen für Makler, Käufer und Verkäufer.",
+      "titleLength": 74,
+      "descriptionLength": 131,
+      "role": "phase4"
+    },
+    {
+      "key": "performance-optimization-3",
+      "url": "performance-optimization-3.html",
+      "title": "Performance-Optimierung – Projektplanung und Beratung | CreAid-Media",
+      "description": "Caching, Medien, Frontend-Code und serverseitige Engpässe untersuchen – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 68,
+      "descriptionLength": 117,
+      "role": "phase4"
+    },
+    {
+      "key": "load-testing-3",
+      "url": "load-testing-3.html",
+      "title": "Load Testing – Projektplanung und Beratung | CreAid-Media",
+      "description": "Repräsentative Nutzerabläufe und zulässige Testlast definieren – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 57,
+      "descriptionLength": 110,
+      "role": "phase4"
+    },
+    {
+      "key": "performance-audit-3",
+      "url": "performance-audit-3.html",
+      "title": "Performance-Audit – Projektplanung und Beratung | CreAid-Media",
+      "description": "Ladezeiten, Ressourcen, Skripte, Serverantworten und typische Interaktionen untersuchen – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 62,
+      "descriptionLength": 135,
+      "role": "phase4"
+    },
+    {
+      "key": "code-ueberpruefung",
+      "url": "code-ueberpruefung.html",
+      "title": "Code-Überprüfung – Projektplanung und Beratung | CreAid-Media",
+      "description": "Relevante Codebereiche, Abhängigkeiten, Fehlerbehandlung und Wartbarkeit prüfen – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 61,
+      "descriptionLength": 127,
+      "role": "phase4"
+    },
+    {
+      "key": "upgrades-wartung",
+      "url": "upgrades-wartung.html",
+      "title": "Upgrades & Wartung – Projektplanung und Beratung | CreAid-Media",
+      "description": "Versionen, Erweiterungen, Backups und Kompatibilität prüfen; Updates zuerst in einer geeigneten Testumgebung erproben – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 63,
+      "descriptionLength": 165,
+      "role": "phase4"
+    },
+    {
+      "key": "server-wartung",
+      "url": "server-wartung.html",
+      "title": "Server-Wartung – Projektplanung und Beratung | CreAid-Media",
+      "description": "Betriebssystem, Dienste, Zugriffsrechte, Backups und Monitoring inventarisieren – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 59,
+      "descriptionLength": 127,
+      "role": "phase4"
+    },
+    {
+      "key": "cloud-hosting-3",
+      "url": "cloud-hosting-3.html",
+      "title": "Cloud-Hosting – Projektplanung und Beratung | CreAid-Media",
+      "description": "Ressourcenbedarf, Standort, Skalierung, Backups und Verantwortlichkeiten vergleichen – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 58,
+      "descriptionLength": 132,
+      "role": "phase4"
+    },
+    {
+      "key": "systemintegration",
+      "url": "systemintegration.html",
+      "title": "Systemintegration – Projektplanung und Beratung | CreAid-Media",
+      "description": "Datenfelder, Schnittstellen, Authentifizierung, Fehlerbehandlung und Zuständigkeiten definieren – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 62,
+      "descriptionLength": 143,
+      "role": "phase4"
+    },
+    {
+      "key": "cs-cart-lizenz-reseller",
+      "url": "cs-cart-lizenz-reseller.html",
+      "title": "CS-Cart Lizenz-Reseller – Projektplanung und Beratung | CreAid-Media",
+      "description": "Die frühere Website führte diese Lizenzleistung – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 68,
+      "descriptionLength": 95,
+      "role": "phase4"
+    },
+    {
+      "key": "cs-cart-konfiguration-einrichtung",
+      "url": "cs-cart-konfiguration-einrichtung.html",
+      "title": "CS-Cart-Konfiguration & Einrichtung – Projektplanung und Beratung | CreAid-Media",
+      "description": "Bestehende oder geplante CS-Cart-Installation, Edition, Produkte, Zahlungs- und Versandanforderungen prüfen – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 80,
+      "descriptionLength": 155,
+      "role": "phase4"
+    },
+    {
+      "key": "store-builder-standardlizenzen",
+      "url": "store-builder-standardlizenzen.html",
+      "title": "Store Builder & Standardlizenzen – Projektplanung und Beratung | CreAid-Media",
+      "description": "Die frühere Website führte Store Builder und Standardlizenzen – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 77,
+      "descriptionLength": 109,
+      "role": "phase4"
+    },
+    {
+      "key": "b2b-portal-entwicklung",
+      "url": "b2b-portal-entwicklung.html",
+      "title": "B2B-Portal-Entwicklung – Projektplanung und Beratung | CreAid-Media",
+      "description": "Rollen, kundenspezifische Konditionen, Freigaben, Dokumente und Schnittstellen als Anforderungen erfassen – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 67,
+      "descriptionLength": 153,
+      "role": "phase4"
+    },
+    {
+      "key": "marktplatz-entwicklung",
+      "url": "marktplatz-entwicklung.html",
+      "title": "Marktplatz-Entwicklung – Projektplanung und Beratung | CreAid-Media",
+      "description": "Anbieterrollen, Produktfreigaben, Bestellungen, Zahlungsflüsse und Moderation definieren – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 67,
+      "descriptionLength": 136,
+      "role": "phase4"
+    },
+    {
+      "key": "e-commerce",
+      "url": "e-commerce.html",
+      "title": "E-Commerce – Projektplanung und Beratung | CreAid-Media",
+      "description": "Onlineshop, B2B-Portal und Marktplatz unterscheiden sich in Sortiment, Rollen, Bestellprozessen und Integrationen – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 55,
+      "descriptionLength": 161,
+      "role": "phase4"
+    },
+    {
+      "key": "kundenspezifische-entwicklung",
+      "url": "kundenspezifische-entwicklung.html",
+      "title": "Kundenspezifische Entwicklung – Projektplanung und Beratung | CreAid-Media",
+      "description": "Bestehende Abläufe, Nutzerrollen, Datenmodelle und technische Abhängigkeiten erfassen – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 74,
+      "descriptionLength": 133,
+      "role": "phase4"
+    },
+    {
+      "key": "addon-theme-entwicklung",
+      "url": "addon-theme-entwicklung.html",
+      "title": "Add-on- & Theme-Entwicklung – Projektplanung und Beratung | CreAid-Media",
+      "description": "Gewünschte Zusatzfunktionen und Gestaltung mit der bestehenden Plattformversion abgleichen – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 72,
+      "descriptionLength": 138,
+      "role": "phase4"
+    },
+    {
+      "key": "ui-ux-entwicklung",
+      "url": "ui-ux-entwicklung.html",
+      "title": "UI/UX-Entwicklung – Projektplanung und Beratung | CreAid-Media",
+      "description": "Nutzeraufgaben, Informationsarchitektur, Prototypen und responsive Interaktionen planen – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 62,
+      "descriptionLength": 135,
+      "role": "phase4"
+    },
+    {
+      "key": "animation",
+      "url": "animation.html",
+      "title": "Animation – Projektplanung und Beratung | CreAid-Media",
+      "description": "Ziel, Medienformat, Dauer und Bildsprache klären; Animationen für digitale Präsentationen, Markenkommunikation oder Website-Interaktionen nach Bedarf konzipieren – Projektumfang und Voraussetzungen besprechen.",
+      "titleLength": 54,
+      "descriptionLength": 209,
+      "role": "phase4"
+    },
+    {
+      "key": "archiv-corporate-design",
+      "url": "archiv-corporate-design.html",
+      "title": "Corporate Design – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Corporate Design. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 47,
+      "descriptionLength": 114,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-branding",
+      "url": "archiv-branding.html",
+      "title": "Branding – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Branding. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 39,
+      "descriptionLength": 106,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-seo",
+      "url": "archiv-seo.html",
+      "title": "SEO – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu SEO. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 34,
+      "descriptionLength": 101,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-lokales-marketing",
+      "url": "archiv-lokales-marketing.html",
+      "title": "Lokales Marketing – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Lokales Marketing. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 48,
+      "descriptionLength": 115,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-kundengewinnung",
+      "url": "archiv-kundengewinnung.html",
+      "title": "Kundengewinnung – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Kundengewinnung. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 46,
+      "descriptionLength": 113,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-lokal",
+      "url": "archiv-lokal.html",
+      "title": "Lokale Unternehmen – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Lokale Unternehmen. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 49,
+      "descriptionLength": 116,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-marketing",
+      "url": "archiv-marketing.html",
+      "title": "Marketing – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Marketing. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 40,
+      "descriptionLength": 107,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-webdesign",
+      "url": "archiv-webdesign.html",
+      "title": "Webdesign – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 40,
+      "descriptionLength": 107,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-handwerk",
+      "url": "archiv-handwerk.html",
+      "title": "Handwerk – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Handwerk. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 39,
+      "descriptionLength": 106,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-handwerk-webdesign-handwerk",
+      "url": "archiv-handwerk-webdesign-handwerk.html",
+      "title": "Webdesign im Handwerk – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign im Handwerk. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 52,
+      "descriptionLength": 119,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-handwerk-seo-handwerk",
+      "url": "archiv-handwerk-seo-handwerk.html",
+      "title": "SEO im Handwerk – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu SEO im Handwerk. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 46,
+      "descriptionLength": 113,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-handwerk-handwerk-handwerk",
+      "url": "archiv-handwerk-handwerk-handwerk.html",
+      "title": "Handwerksbetriebe digital – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Handwerksbetriebe digital. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 56,
+      "descriptionLength": 123,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-webdesign-conversion",
+      "url": "archiv-webdesign-conversion.html",
+      "title": "Webdesign & Conversion – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign & Conversion. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 53,
+      "descriptionLength": 120,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-digitalisierung",
+      "url": "archiv-digitalisierung.html",
+      "title": "Digitalisierung – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Digitalisierung. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 46,
+      "descriptionLength": 113,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-suchmaschinenoptimierung",
+      "url": "archiv-suchmaschinenoptimierung.html",
+      "title": "Suchmaschinenoptimierung – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Suchmaschinenoptimierung. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 55,
+      "descriptionLength": 122,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-plattform-konzeption",
+      "url": "archiv-plattform-konzeption.html",
+      "title": "Plattform-Konzeption – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Plattform-Konzeption. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 51,
+      "descriptionLength": 118,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-e-commerce",
+      "url": "archiv-e-commerce.html",
+      "title": "E-Commerce – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu E-Commerce. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 41,
+      "descriptionLength": 108,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-online-shop",
+      "url": "archiv-online-shop.html",
+      "title": "Onlineshop – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Onlineshop. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 41,
+      "descriptionLength": 108,
+      "role": "archive"
+    },
+    {
+      "key": "archiv-digitales-marketing",
+      "url": "archiv-digitales-marketing.html",
+      "title": "Digitales Marketing – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Digitales Marketing. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 50,
+      "descriptionLength": 117,
+      "role": "archive"
+    },
+    {
+      "key": "freelancer-oder-full-service-agentur",
+      "url": "freelancer-oder-full-service-agentur.html",
+      "title": "Freelancer oder Full-Service-Agentur? Eine Entscheidungshilfe | CreAid-Media",
+      "description": "Freelancer oder Full-Service-Agentur? Vergleichen Sie Koordination, Fachwissen, Gesamtkosten und Zuständigkeiten anhand Ihres konkreten Projekts.",
+      "titleLength": 76,
+      "descriptionLength": 145,
+      "role": "journal"
+    },
+    {
+      "key": "fehler-beim-online-shop-start-vermeiden",
+      "url": "fehler-beim-online-shop-start-vermeiden.html",
+      "title": "9 Fehler beim Onlineshop-Start vermeiden: Prüfliste vor dem Launch | CreAid-Media",
+      "description": "Vermeiden Sie 9 typische Fehler beim Onlineshop-Start. Prüfen Sie Sortiment, Produktseiten, Checkout, Technik, Versand und Freigabe vor dem Launch.",
+      "titleLength": 81,
+      "descriptionLength": 147,
+      "role": "journal"
+    },
+    {
+      "key": "google-maps-eintrag-optimieren",
+      "url": "google-maps-eintrag-optimieren.html",
+      "title": "Google-Maps-Eintrag optimieren in 9 Schritten | CreAid-Media",
+      "description": "Google-Maps-Eintrag optimieren: Mit 9 konkreten Schritten Ihr Unternehmensprofil pflegen, Rezensionen organisieren und passende Anfragen besser messen.",
+      "titleLength": 60,
+      "descriptionLength": 151,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-trends-2026-fuer-unternehmen",
+      "url": "webdesign-trends-2026-fuer-unternehmen.html",
+      "title": "Webdesign-Trends 2026 für Unternehmen: Was wirklich sinnvoll ist | CreAid-Media",
+      "description": "Welche Webdesign-Ansätze sind 2026 für Unternehmen sinnvoll? Bewerten Sie mobile Nutzung, Bewegung, KI, Barrierefreiheit und Markenführung nach Nutzen.",
+      "titleLength": 79,
+      "descriptionLength": 151,
+      "role": "journal"
+    },
+    {
+      "key": "corporate-naming-fuer-startups",
+      "url": "corporate-naming-fuer-startups.html",
+      "title": "Corporate Naming für Startups: Namen entwickeln und prüfen | CreAid-Media",
+      "description": "Entwickeln Sie einen Startup-Namen anhand von Positionierung, Verständlichkeit, Sprachraum, Domain und Markenrecherche. Mit konkreten Prüfkriterien.",
+      "titleLength": 73,
+      "descriptionLength": 148,
+      "role": "journal"
+    },
+    {
+      "key": "print-design-fuer-unternehmen",
+      "url": "print-design-fuer-unternehmen.html",
+      "title": "Printdesign für Unternehmen: Werbemittel sinnvoll auswählen | CreAid-Media",
+      "description": "Wählen Sie passende Printmedien für Ihren Betrieb. Vergleichen Sie Einsatzorte, Lesbarkeit, Corporate Design, Druckdaten und die Verbindung zur Website.",
+      "titleLength": 74,
+      "descriptionLength": 152,
+      "role": "journal"
+    },
+    {
+      "key": "full-service-werbeagentur-b2b",
+      "url": "full-service-werbeagentur-b2b.html",
+      "title": "Full-Service-Werbeagentur für B2B: Wann lohnt sich die Zusammenarbeit? | CreAid-Media",
+      "description": "Wann ist eine Full-Service-Werbeagentur für B2B sinnvoll? Prüfen Sie Schnittstellen, Zuständigkeiten, Leistungsumfang und Ziele vor der Beauftragung.",
+      "titleLength": 85,
+      "descriptionLength": 149,
+      "role": "journal"
+    },
+    {
+      "key": "guide-ui-ux-fuer-firmenwebsites",
+      "url": "guide-ui-ux-fuer-firmenwebsites.html",
+      "title": "UI/UX für Firmenwebsites: Leitfaden zur Nutzerführung | CreAid-Media",
+      "description": "UI und UX für Firmenwebsites verständlich erklärt: Prüfen Sie Navigation, mobile Bedienung, Inhalte und Kontaktwege mit konkreten Nutzeraufgaben.",
+      "titleLength": 68,
+      "descriptionLength": 145,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-fuer-immobilienmakler-berlin",
+      "url": "webdesign-fuer-immobilienmakler-berlin.html",
+      "title": "Webdesign für Immobilienmakler in Berlin: Objektseiten und Anfragen planen | CreAid-Media",
+      "description": "Webdesign für Immobilienmakler in Berlin: Strukturieren Sie Objektinformationen, Exposés, regionale Inhalte und Kontaktwege für Interessenten.",
+      "titleLength": 89,
+      "descriptionLength": 142,
+      "role": "journal"
+    },
+    {
+      "key": "beste-ecommerce-loesungen-mittelstand",
+      "url": "beste-ecommerce-loesungen-mittelstand.html",
+      "title": "E-Commerce-Lösungen für den Mittelstand: Systeme 2026 vergleichen | CreAid-Media",
+      "description": "Vergleichen Sie E-Commerce-Lösungen für den Mittelstand anhand von Sortiment, B2B-Prozessen, Schnittstellen, Betriebsaufwand und Erweiterbarkeit.",
+      "titleLength": 80,
+      "descriptionLength": 145,
+      "role": "journal"
+    },
+    {
+      "key": "social-media-content-plan-mit-wirkung",
+      "url": "social-media-content-plan-mit-wirkung.html",
+      "title": "Social-Media-Content-Plan: Inhalte, Termine und Zuständigkeiten | CreAid-Media",
+      "description": "Erstellen Sie einen umsetzbaren Social-Media-Content-Plan mit Zielen, Themen, Formaten, Zuständigkeiten, Freigaben und passenden Kennzahlen.",
+      "titleLength": 78,
+      "descriptionLength": 140,
+      "role": "journal"
+    },
+    {
+      "key": "produktfotografie-fuer-onlineshop",
+      "url": "produktfotografie-fuer-onlineshop.html",
+      "title": "Produktfotografie für Onlineshops: Motive und Bildstrategie planen | CreAid-Media",
+      "description": "Planen Sie Produktfotos für Ihren Onlineshop: Freisteller, Details, Anwendungsszenen, einheitliche Bildsprache und webgerechte Dateien.",
+      "titleLength": 81,
+      "descriptionLength": 135,
+      "role": "journal"
+    },
+    {
+      "key": "hosting-anbieter-fuer-firmenwebsites-waehlen",
+      "url": "hosting-anbieter-fuer-firmenwebsites-waehlen.html",
+      "title": "Hosting-Anbieter für Firmenwebsites: Auswahl und Prüfkriterien | CreAid-Media",
+      "description": "Vergleichen Sie Hosting-Anbieter für Firmenwebsites nach Leistung, Backups, Sicherheit, Support und Wechselmöglichkeiten. Mit konkreten Auswahlkriterien.",
+      "titleLength": 77,
+      "descriptionLength": 153,
+      "role": "journal"
+    },
+    {
+      "key": "webseite-fuer-handwerker",
+      "url": "webseite-fuer-handwerker.html",
+      "title": "Webseite für Handwerker: Projektanfragen gezielt qualifizieren | CreAid-Media",
+      "description": "Eine Handwerker-Webseite soll passende Anfragen vorbereiten. Welche Leistungsangaben, Referenzen und Kontaktinformationen helfen, Rückfragen zu reduzieren?",
+      "titleLength": 77,
+      "descriptionLength": 155,
+      "role": "journal"
+    },
+    {
+      "key": "barrierefreie-website-fuer-unternehmen",
+      "url": "barrierefreie-website-fuer-unternehmen.html",
+      "title": "Barrierefreie Website für Unternehmen: prüfen und umsetzen | CreAid-Media",
+      "description": "Prüfen Sie Tastaturbedienung, Kontraste, Formulare und verständliche Inhalte. Erfahren Sie, wann das BFSG für Unternehmen relevant sein kann.",
+      "titleLength": 73,
+      "descriptionLength": 141,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-fuer-unternehmen",
+      "url": "webdesign-fuer-unternehmen.html",
+      "title": "Webdesign für Unternehmen: Anforderungen an eine wirksame Website | CreAid-Media",
+      "description": "Planen Sie eine Unternehmenswebsite mit klaren Anforderungen an Inhalte, Nutzerführung, Technik und Abnahme. Mit praktischen Prüfkriterien.",
+      "titleLength": 80,
+      "descriptionLength": 139,
+      "role": "journal"
+    },
+    {
+      "key": "webdesign-fuer-lokale-dienstleister",
+      "url": "webdesign-fuer-lokale-dienstleister.html",
+      "title": "Webdesign für lokale Dienstleister: Leistungen und Einsatzgebiete planen | CreAid-Media",
+      "description": "Planen Sie eine Website für lokale Dienstleister mit verständlichen Leistungen, realen Einsatzgebieten, Vertrauenssignalen und einfachen Kontaktwegen.",
+      "titleLength": 87,
+      "descriptionLength": 150,
+      "role": "journal"
+    },
+    {
+      "key": "wordpress-website-erstellen-lassen",
+      "url": "wordpress-website-erstellen-lassen.html",
+      "title": "WordPress-Website erstellen lassen: Angebote richtig vergleichen | CreAid-Media",
+      "description": "WordPress-Website erstellen lassen: Vergleichen Sie Angebote nach Design, Inhalten, Funktionen, Wartung und Übergabe statt nur nach dem Einstiegspreis.",
+      "titleLength": 79,
+      "descriptionLength": 151,
+      "role": "journal"
+    },
+    {
+      "key": "leitfaden-website-relaunch-unternehmen",
+      "url": "leitfaden-website-relaunch-unternehmen.html",
+      "title": "Website-Relaunch für Unternehmen: Leitfaden von Analyse bis Abnahme | CreAid-Media",
+      "description": "Planen Sie Ihren Website-Relaunch mit Bestandsaufnahme, Inhaltskonzept, URL-Mapping, technischen Tests und kontrolliertem Livegang.",
+      "titleLength": 82,
+      "descriptionLength": 131,
+      "role": "journal"
+    },
+    {
+      "key": "wann-lohnt-sich-seo",
+      "url": "wann-lohnt-sich-seo.html",
+      "title": "Wann lohnt sich SEO für Handwerker? | CreAid-Media",
+      "description": "Wann rechnet sich SEO für Handwerksbetriebe? Prüfen Sie lokale Nachfrage, Website und Auftragswert und berechnen Sie, wie viele neue Aufträge nötig sind.",
+      "titleLength": 50,
+      "descriptionLength": 153,
+      "role": "journal"
+    },
+    {
+      "key": "7-branding-fehler-bei-neugruendung",
+      "url": "7-branding-fehler-bei-neugruendung.html",
+      "title": "7 Branding-Fehler bei Neugründung vermeiden | CreAid",
+      "description": "So vermeiden Handwerksbetriebe sieben Branding-Fehler bei der Gründung. Planen Sie Positionierung, Logo, Website und Werbemittel in der richtigen Reihenfolge.",
+      "titleLength": 52,
+      "descriptionLength": 158,
+      "role": "journal"
+    },
+    {
+      "key": "website-audit-unternehmen",
+      "url": "website-audit-unternehmen.html",
+      "title": "Website-Audit für Unternehmen: Check und Prioritäten | CreAid",
+      "description": "Ein Website-Audit für Unternehmen zeigt, wo Anfragen verloren gehen. Prüfen Sie Sichtbarkeit, Technik, Inhalte und Kontaktwege und setzen Sie Prioritäten.",
+      "titleLength": 61,
+      "descriptionLength": 154,
+      "role": "journal"
+    },
+    {
+      "key": "360-grad-rundgang-erstellen",
+      "url": "360-grad-rundgang-erstellen.html",
+      "title": "360-Grad-Rundgang erstellen: Aufwand und Kosten | CreAid",
+      "description": "360-Grad-Rundgang erstellen oder beauftragen? Vergleichen Sie Aufwand und Kosten und erfahren Sie, wie Sie eine virtuelle Tour für Ihre Website vorbereiten.",
+      "titleLength": 56,
+      "descriptionLength": 156,
+      "role": "journal"
+    },
+    {
+      "key": "archiv-google-ads",
+      "url": "archiv-google-ads.html",
+      "title": "Google Ads – Journalarchiv | CreAid-Media",
+      "description": "Ratgeber zu Google Ads, Kampagnen und Anfragen für Unternehmen.",
+      "titleLength": 41,
+      "descriptionLength": 63,
+      "role": "archive"
+    }
+  ],
+  "after": [
+    {
+      "key": "b2b-portal-entwickeln-lassen",
+      "title": "B2B-Portal entwickeln lassen: Funktionen und Aufwand | CreAid-Media",
+      "description": "B2B-Portal planen: Welche Funktionen, Schnittstellen und Freigaben Sie vor der Entwicklung klären sollten und wie Sie den Aufwand abschätzen.",
+      "titleLength": 67,
+      "descriptionLength": 141,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "beste-landingpage-elemente-fuer-kampagnen",
+      "title": "Landingpage für Kampagnen: Aufbau und Checkliste | CreAid",
+      "description": "Welche Elemente braucht Ihre Kampagnen-Landingpage? Planen und prüfen Sie Überschrift, Belege, Anfrageformular und mobile Nutzung vor dem Werbestart.",
+      "titleLength": 57,
+      "descriptionLength": 149,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "blog",
+      "title": "Journal: Webdesign, SEO, Branding & KI | CreAid-Media",
+      "description": "Lesen Sie praktische Ratgeber zu Websites, E-Commerce, lokaler Sichtbarkeit, Markenführung und KI. Finden Sie passende Beiträge für Ihr Unternehmen.",
+      "titleLength": 53,
+      "descriptionLength": 148,
+      "changed": true,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "branding",
+      "title": "Branding-Agentur für Logo & Corporate Design | CreAid-Media",
+      "description": "Entwickeln Sie einen einheitlichen Markenauftritt mit CreAid-Media: Logo, Corporate Design, Farben, Typografie und passende Print- und Digitalmedien.",
+      "titleLength": 59,
+      "descriptionLength": 149,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "cookie-einstellungen",
+      "title": "Cookie-Einstellungen (Entwurf) | CreAid-Media",
+      "description": "Lokale Einstellung zu technischen Präferenzen in der Vorschau von CreAid-Media. Angaben zu Diensten bleiben bis zur Freigabe unter Prüfung.",
+      "titleLength": 45,
+      "descriptionLength": 139,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "corporate-design-erstellen-lassen",
+      "title": "Corporate Design erstellen lassen: Briefing, Umfang & Ablauf | CreAid-Media",
+      "description": "Planen Sie Ihr Corporate-Design-Projekt: Briefing, Logo, Gestaltungsregeln, Medien, Übergabe und Faktoren für den Aufwand.",
+      "titleLength": 75,
+      "descriptionLength": 122,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "datenschutz",
+      "title": "Datenschutzerklärung (Entwurf) | CreAid-Media",
+      "description": "Prüfpflichtiger Entwurf der Datenschutzhinweise zu Kontakt, technischen Daten und Betroffenenrechten bei CreAid-Media.",
+      "titleLength": 45,
+      "descriptionLength": 118,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "title": "Deutschsprachige Agentur in der Türkei: Auswahlkriterien | CreAid-Media",
+      "description": "Was bei der Wahl einer deutschsprachigen Agentur in der Türkei zählt: Ansprechpartner, Abstimmung, Übergabe und Zusammenarbeit.",
+      "titleLength": 71,
+      "descriptionLength": 127,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "firmennamen-entwickeln-lassen",
+      "title": "Firmennamen entwickeln lassen: Vorgehen und Kriterien | CreAid-Media",
+      "description": "Wie entsteht ein passender Firmenname? Prüfen Sie Auswahlkriterien, Namensrichtungen und die Schritte, die vor der Entscheidung anstehen.",
+      "titleLength": 68,
+      "descriptionLength": 137,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "flyer-design-fuer-unternehmen",
+      "title": "Flyer-Design für Unternehmen: Aufbau und Gestaltung | CreAid-Media",
+      "description": "So planen Sie einen Unternehmensflyer: Angebot, Aufbau, Bildsprache, Kontakt und Druckformat – mit einem klaren Ziel für jedes Exemplar.",
+      "titleLength": 66,
+      "descriptionLength": 136,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "google-ads-aber-keine-anfragen",
+      "title": "Google Ads: Klicks, aber keine Anfragen? Ursachen prüfen | CreAid-Media",
+      "description": "Viele Klicks, wenige Leads? Prüfen Sie Suchbegriffe, Conversion-Tracking und Landingpage, bevor Sie Budget oder Gebote verändern.",
+      "titleLength": 71,
+      "descriptionLength": 129,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "google-ads-social-media",
+      "title": "Google Ads-Agentur & Social-Media-Kampagnen | CreAid-Media",
+      "description": "Planen Sie Google Ads und Social-Media-Kampagnen mit CreAid-Media. Anzeigen, Zielseiten, Werbebudget und Auswertung auf Ihre Ziele abstimmen.",
+      "titleLength": 58,
+      "descriptionLength": 141,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "google-maps-auffindbarkeit-verbessern",
+      "title": "Google Maps: Auffindbarkeit für Unternehmen verbessern | CreAid-Media",
+      "description": "Verbessern Sie Ihr Google-Unternehmensprofil mit passenden Kategorien, konsistenten Angaben, Bewertungen und einer klar verlinkten Website.",
+      "titleLength": 69,
+      "descriptionLength": 139,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "guenstige-webdesign-agentur-europa-finden",
+      "title": "Webdesign-Agenturen in Europa: Angebote vergleichen | CreAid-Media",
+      "description": "Prüfen Sie Leistungen, Folgekosten und Übergabe bei Webdesign-Angeboten aus Europa. Mit Kriterien für einen fairen Preisvergleich.",
+      "titleLength": 66,
+      "descriptionLength": 130,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "impressum",
+      "title": "Impressum (Entwurf) | CreAid-Media",
+      "description": "Prüfpflichtiger Entwurf zum Impressum von CreAid-Media. Verbindliche Angaben zur verantwortlichen Firma sind vor Veröffentlichung zu ergänzen.",
+      "titleLength": 34,
+      "descriptionLength": 142,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "index",
+      "title": "Werbeagentur für Webdesign, SEO & Branding | CreAid-Media",
+      "description": "Webdesign, SEO, Branding und KI-Automatisierung für Unternehmen. CreAid-Media verbindet Gestaltung, Technik und persönliche Projektabstimmung.",
+      "titleLength": 57,
+      "descriptionLength": 142,
+      "changed": true,
+      "schemaType": "Organization"
+    },
+    {
+      "key": "individuelle-webentwicklung-fuer-unternehmen",
+      "title": "Individuelle Webentwicklung: Standard oder Maßarbeit? | CreAid-Media",
+      "description": "Wann lohnt sich eine individuelle Webentwicklung? Vergleichen Sie Standardlösungen, Schnittstellen, Erweiterbarkeit und laufenden Betrieb.",
+      "titleLength": 68,
+      "descriptionLength": 138,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "kampagne-fuer-lokale-unternehmen",
+      "title": "Lokale Werbekampagne planen: Ziele, Kanäle und Messung | CreAid-Media",
+      "description": "So planen lokale Unternehmen eine Kampagne: Ziel und Einzugsgebiet festlegen, passende Kanäle wählen und Ergebnisse nachvollziehbar messen.",
+      "titleLength": 69,
+      "descriptionLength": 139,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "ki-automatisierung-fuer-unternehmen",
+      "title": "KI-Automatisierung für kleine Unternehmen: Einstieg | CreAid-Media",
+      "description": "Welche Abläufe eignen sich für KI? Planen Sie einen kleinen Pilot mit klaren Prüfregeln, menschlicher Freigabe und messbaren Zielen.",
+      "titleLength": 66,
+      "descriptionLength": 132,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "ki-automatisierung",
+      "title": "KI-Automatisierung für Unternehmen | CreAid-Media",
+      "description": "Wiederkehrende Prozesse mit KI und Schnittstellen vereinfachen. CreAid-Media plant geeignete Workflows, Pilotprojekte und klare menschliche Freigaben.",
+      "titleLength": 49,
+      "descriptionLength": 150,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "ki-workflows-crm",
+      "title": "CRM-Automatisierung & KI-Workflows | CreAid-Media",
+      "description": "Anfragen strukturiert erfassen und weiterbearbeiten: CreAid-Media plant CRM-Schnittstellen, Aufgaben, Freigaben und nachvollziehbare Automatisierungen.",
+      "titleLength": 49,
+      "descriptionLength": 151,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "kontakt",
+      "title": "Kontakt & Projektanfrage | CreAid-Media",
+      "description": "Besprechen Sie Ihr Website-, Design-, Marketing- oder KI-Projekt mit CreAid-Media. Senden Sie Ihre Anfrage direkt über das Kontaktformular.",
+      "titleLength": 39,
+      "descriptionLength": 139,
+      "changed": true,
+      "schemaType": "ContactPage"
+    },
+    {
+      "key": "leistungen",
+      "title": "Leistungen: Webdesign, SEO, Design & KI | CreAid-Media",
+      "description": "Entdecken Sie unsere Webdesign-, Marketing-, Design- und KI-Leistungen, Branchen-Websites sowie technische Spezialleistungen für Ihr Unternehmen.",
+      "titleLength": 54,
+      "descriptionLength": 145,
+      "changed": true,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "logo-design-agentur",
+      "title": "Logo-Design-Agentur: Auswahl, Ablauf und Leistung | CreAid-Media",
+      "description": "Woran erkennen Sie eine passende Logo-Design-Agentur? Prüfen Sie Arbeitsproben, Varianten, Nutzungsrechte und Dateiformate vor der Beauftragung.",
+      "titleLength": 64,
+      "descriptionLength": 144,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "logo-und-slogan-entwickeln",
+      "title": "Logo und Slogan entwickeln: Briefing und Praxistest | CreAid-Media",
+      "description": "Wie Logo und Slogan zusammenpassen: Legen Sie Botschaft, Zielgruppe und Ton fest und testen Sie beide an konkreten Anwendungen.",
+      "titleLength": 66,
+      "descriptionLength": 127,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "markenauftritt-fuer-kleine-unternehmen",
+      "title": "Markenauftritt für kleine Unternehmen: Grundlagen | CreAid-Media",
+      "description": "Wie Sie Positionierung, Gestaltung und Sprache für kleine Unternehmen abstimmen – vom ersten Kundenkontakt bis zu Website und Print.",
+      "titleLength": 64,
+      "descriptionLength": 132,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "marketing",
+      "title": "Digitales Marketing für Unternehmen | CreAid-Media",
+      "description": "Planen Sie SEO, Content, Google Ads und Social Media passend zu Ihrem Angebot. CreAid-Media stimmt Zielgruppe, Kanäle, Budget und Auswertung ab.",
+      "titleLength": 50,
+      "descriptionLength": 144,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "marktplatz-plattform-entwickeln",
+      "title": "Online-Marktplatz entwickeln: MVP, Rollen und Betrieb | CreAid-Media",
+      "description": "So planen Sie einen Mehranbieter-Marktplatz: Geschäftsmodell, Anbieterrollen, Kernfunktionen und Betrieb für die erste Version festlegen.",
+      "titleLength": 68,
+      "descriptionLength": 137,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "messeauftritt-gestalten-lassen",
+      "title": "Messeauftritt gestalten lassen: Konzept und Aufwand | CreAid-Media",
+      "description": "Planen Sie Ihren Messeauftritt vom Ziel über Standgrafik und Materialien bis zur Nachbereitung. Darauf kommt es bei der Beauftragung an.",
+      "titleLength": 66,
+      "descriptionLength": 136,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "onlineshop-erfolgreich-aufbauen-anleitung",
+      "title": "Onlineshop aufbauen: Anleitung von Planung bis Start | CreAid-Media",
+      "description": "Eine Schritt-für-Schritt-Anleitung für Ihren Onlineshop: Sortiment, Shopsystem, Produktseiten, Checkout und Start vorbereiten.",
+      "titleLength": 67,
+      "descriptionLength": 126,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "onlineshop-erstellen-lassen",
+      "title": "Onlineshop erstellen lassen oder selbst bauen? | CreAid",
+      "description": "Onlineshop erstellen lassen oder selbst starten? Vergleichen Sie Eigenbau und Agentur nach Sortiment, Schnittstellen, laufenden Kosten und Zuständigkeiten.",
+      "titleLength": 55,
+      "descriptionLength": 155,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "onlineshops-ecommerce",
+      "title": "Onlineshop erstellen lassen | Onlineshop-Agentur | CreAid-Media",
+      "description": "Planen Sie Ihren WooCommerce-Shop mit CreAid-Media: Kategorien, Varianten, Zahlungen, Versand, mobilen Checkout und Produktpflege gemeinsam abstimmen.",
+      "titleLength": 63,
+      "descriptionLength": 150,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "printdesign-editorial",
+      "title": "Printdesign-Agentur & Editorial Design | CreAid-Media",
+      "description": "Broschüren, Magazine, Kataloge und Anzeigen professionell gestalten lassen. CreAid-Media plant Layout, Typografie, Korrekturen und druckfähige Dateien.",
+      "titleLength": 53,
+      "descriptionLength": 151,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "produktfim-erstellen-lassen",
+      "title": "Produktfilm erstellen lassen: Briefing und Formate | CreAid-Media",
+      "description": "Planen Sie einen Produktfilm für Shop, Social Media oder Anzeigen. Klären Sie Story, Formate und Produktionsaufwand vor dem Briefing.",
+      "titleLength": 65,
+      "descriptionLength": 133,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "professionelle-website-fuer-lokale-dienstleister",
+      "title": "Website für lokale Dienstleister: Aufbau und Inhalte | CreAid-Media",
+      "description": "Welche Seiten braucht ein lokaler Dienstleister? Planen Sie Leistungen, Einzugsgebiet, Vertrauenssignale und mobile Kontaktmöglichkeiten.",
+      "titleLength": 67,
+      "descriptionLength": 137,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "projekt-detail",
+      "title": "Webdesign-Studie: von der Struktur zur Nutzerführung | CreAid-Media",
+      "description": "Eine Designstudie zu Wireframes, responsivem Webdesign und klaren Kontaktwegen. Entdecken Sie die konzeptionellen Schritte von CreAid-Media.",
+      "titleLength": 67,
+      "descriptionLength": 140,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "referenzen",
+      "title": "Portfolio & Referenzen | CreAid-Media",
+      "description": "Entdecken Sie veröffentlichte Arbeitsproben aus Webdesign, Branding, Editorial, Fotografie und Werbung sowie gekennzeichnete Konzeptstudien.",
+      "titleLength": 37,
+      "descriptionLength": 140,
+      "changed": true,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "schlechte-website-verbessern",
+      "title": "Website verbessern: 7 Schritte für bestehende Seiten | CreAid-Media",
+      "description": "Verbessern Sie eine bestehende Website in sieben Schritten: Startseite, Inhalte, mobile Nutzung, Ladezeit, SEO und Kontaktweg prüfen.",
+      "titleLength": 67,
+      "descriptionLength": 133,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "seo-content-marketing",
+      "title": "SEO-Agentur für Unternehmen & Content-Marketing | CreAid-Media",
+      "description": "Keyword-Recherche, technisches SEO, lokale Sichtbarkeit und Content-Marketing für Unternehmen. Lassen Sie Ihre Website und passenden Maßnahmen besprechen.",
+      "titleLength": 62,
+      "descriptionLength": 154,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "seo-fuer-lokale-sichtbarkeit",
+      "title": "Lokale SEO-Strategie: Website und Google-Profil abstimmen | CreAid-Media",
+      "description": "Planen Sie die lokale Sichtbarkeit Ihres Unternehmens mit Suchintention, Leistungsseiten, Google-Unternehmensprofil und Erfolgskontrolle.",
+      "titleLength": 72,
+      "descriptionLength": 137,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "seo-grundlagen-lokale-dienstleister",
+      "title": "Local SEO Checkliste: Grundlagen für lokale Dienstleister | CreAid-Media",
+      "description": "Konkrete Prüfschritte für lokale Dienstleister: Unternehmensdaten, Leistungsseiten, Google-Profil und technische Grundlagen.",
+      "titleLength": 72,
+      "descriptionLength": 124,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "shopware-vs-wordpress-shop",
+      "title": "Shopware vs. WooCommerce: Shopsysteme im Vergleich | CreAid",
+      "description": "Shopware oder WordPress mit WooCommerce? Vergleichen Sie Sortiment, Verkaufskanäle, Pflege, Schnittstellen und Gesamtkosten anhand konkreter Tests.",
+      "titleLength": 59,
+      "descriptionLength": 147,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "social-media-betreuung-unternehmen",
+      "title": "Social-Media-Betreuung: Leistungen und Aufwand | CreAid-Media",
+      "description": "Welche Aufgaben gehören zur Social-Media-Betreuung? Vergleichen Sie redaktionelle Planung, Produktion, Freigabe und Auswertung für Ihr Unternehmen.",
+      "titleLength": 61,
+      "descriptionLength": 147,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "ueber-uns",
+      "title": "Über uns: Agentur & Arbeitsweise | CreAid-Media",
+      "description": "Lernen Sie CreAid-Media und unsere Arbeitsweise kennen: von der Projektabstimmung über Gestaltung und technische Umsetzung bis zur Übergabe.",
+      "titleLength": 47,
+      "descriptionLength": 140,
+      "changed": true,
+      "schemaType": "AboutPage"
+    },
+    {
+      "key": "warum-bringt-meine-website-keine-kunden",
+      "title": "Website bringt keine Anfragen: Ursachen finden | CreAid-Media",
+      "description": "Warum bleiben Anfragen auf Ihrer Website aus? Prüfen Sie Besucherquellen, Angebot, Vertrauen und Kontaktweg, bevor Sie Änderungen priorisieren.",
+      "titleLength": 61,
+      "descriptionLength": 143,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "warum-corporate-design-wichtig-ist",
+      "title": "Warum Corporate Design wichtig ist: Nutzen im Unternehmen | CreAid-Media",
+      "description": "Verstehen Sie, wie einheitliche Gestaltung Wiedererkennung und Zusammenarbeit unterstützt und wann eine Überarbeitung sinnvoll ist.",
+      "titleLength": 72,
+      "descriptionLength": 131,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "was-kostet-ein-imagefilm",
+      "title": "Was kostet ein Imagefilm? Preise und Leistungen | CreAid",
+      "description": "Was kostet ein Imagefilm? Öffentliche Preisbeispiele und eine Checkliste helfen, Angebote für Konzept, Drehtage, Schnitt und Nutzungsrechte zu vergleichen.",
+      "titleLength": 56,
+      "descriptionLength": 155,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "webdesign-agentur-fuer-handwerker",
+      "title": "Webdesign-Agentur für Handwerker auswählen: Briefing & Angebot | CreAid-Media",
+      "description": "Welche Fragen sollten Handwerksbetriebe einer Webdesign-Agentur stellen? Kriterien für Briefing, Angebot, Übergabe und Zusammenarbeit.",
+      "titleLength": 77,
+      "descriptionLength": 134,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "webdesign-agentur-fuer-kleine-unternehmen",
+      "title": "Webdesign-Agentur für KMU: Angebot und Ablauf prüfen | CreAid-Media",
+      "description": "Welche Leistungen brauchen kleine Unternehmen? Prüfen Sie Briefing, Kosten, Pflege und Übergabe, bevor Sie eine Webdesign-Agentur beauftragen.",
+      "titleLength": 67,
+      "descriptionLength": 142,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "webdesign-fuer-arztpraxen",
+      "title": "Website für Arztpraxen: Inhalte und Terminwege | CreAid-Media",
+      "description": "Planen Sie eine Praxiswebsite mit klaren Patienteninformationen, verständlichen Kontaktwegen und einem gut auffindbaren Terminangebot.",
+      "titleLength": 61,
+      "descriptionLength": 134,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "webdesign-fuer-dachdecker-firma",
+      "title": "Website für Dachdecker: Leistungen, Bilder und Anfragen | CreAid-Media",
+      "description": "So zeigen Dachdeckerbetriebe Leistungen, Baustellenbilder und Einsatzgebiete auf ihrer Website und erleichtern die Kontaktaufnahme.",
+      "titleLength": 70,
+      "descriptionLength": 131,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "webdesign-fuer-handwerker",
+      "title": "Handwerker-Website: Inhalte für die erste eigene Website | CreAid-Media",
+      "description": "Welche Leistungen, Einsatzgebiete, Projektbilder und Kontaktwege gehören auf die erste Website eines Handwerksbetriebs? Eine Orientierung für den Aufbau.",
+      "titleLength": 71,
+      "descriptionLength": 153,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "webdesign-fuer-handwerksbetriebe",
+      "title": "Handwerker-Website modernisieren: Relaunch-Checkliste | CreAid-Media",
+      "description": "Bestehende Handwerker-Website erneuern: Prüfen Sie Inhalte, mobile Bedienung, bisherige URLs und Kontaktwege vor dem Relaunch.",
+      "titleLength": 68,
+      "descriptionLength": 126,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "webdesign-fuer-kleine-unternehmen",
+      "title": "Webdesign für kleine Unternehmen: Planung und Inhalte | CreAid",
+      "description": "Webdesign für kleine Unternehmen planen: Welche Seiten, Referenzen und Kontaktwege braucht Ihre Website? Mit Prüfplan für den Start und den mobilen Auftritt.",
+      "titleLength": 62,
+      "descriptionLength": 157,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "webdesign-handwerker",
+      "title": "Webdesign für Handwerker: Website erstellen lassen | CreAid-Media",
+      "description": "Ihre Handwerker-Website mit klaren Leistungen, Einsatzgebieten, Projektbildern und einfachen Kontaktwegen. Webdesign-Pakete und Projektumfang entdecken.",
+      "titleLength": 65,
+      "descriptionLength": 152,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "webdesign-outsourcing-deutschland",
+      "title": "Webdesign-Outsourcing: Briefing, Abnahme und Übergabe | CreAid-Media",
+      "description": "So lagern deutsche Unternehmen Webdesign planbar aus: Rollen, Briefing, Meilensteine und Übergabe vor Projektstart festlegen.",
+      "titleLength": 68,
+      "descriptionLength": 125,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "webdesign",
+      "title": "Webdesign-Agentur: Website erstellen lassen | CreAid-Media",
+      "description": "Lassen Sie Ihre Unternehmenswebsite individuell gestalten und entwickeln. Vergleichen Sie Webdesign-Pakete, klären Sie Inhalte, CMS und Projektumfang.",
+      "titleLength": 58,
+      "descriptionLength": 150,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "website-wartung-fuer-firmen",
+      "title": "Website-Wartung für Firmen: Aufgaben und Ablauf | CreAid",
+      "description": "Website-Wartung für Firmen planen: Legen Sie fest, wer sich um Updates, Backups und Funktionstests kümmert und wie Ihr Team auf Störungen reagiert.",
+      "titleLength": 56,
+      "descriptionLength": 147,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "wie-wirkt-corporate-design",
+      "title": "Corporate Design prüfen: Kriterien für einen konsistenten Auftritt | CreAid-Media",
+      "description": "Bewerten Sie Ihr vorhandenes Corporate Design anhand von Wiedererkennung, Lesbarkeit, Medienkonsistenz und Alltagstauglichkeit.",
+      "titleLength": 81,
+      "descriptionLength": 127,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "webdesign-aerzte",
+      "title": "Webdesign für Ärzte & Arztpraxen | CreAid-Media",
+      "description": "Lassen Sie eine individuelle Praxiswebsite planen: Fachgebiete, Team, Sprechzeiten und mobile Terminwege. Vergleichen Sie Pakete für Ihre Arztpraxis.",
+      "titleLength": 47,
+      "descriptionLength": 149,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "webdesign-immobilienmakler",
+      "title": "Webdesign für Immobilienmakler | CreAid-Media",
+      "description": "Planen Sie Ihre Makler-Website mit Objektübersichten, Exposés, Filtern und klaren Anfragewegen. Schnittstellen und Webdesign-Pakete individuell abstimmen.",
+      "titleLength": 45,
+      "descriptionLength": 154,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "performance-optimization-3",
+      "title": "Website-Performance optimieren | CreAid-Media",
+      "description": "Ladezeiten gezielt verbessern: Caching, Bilder, Skripte und Serverantworten prüfen. Messziele und Optimierungsumfang für Ihre Website abstimmen.",
+      "titleLength": 45,
+      "descriptionLength": 144,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "load-testing-3",
+      "title": "Load Testing für Websites & Anwendungen | CreAid-Media",
+      "description": "Lasttests für Websites und Anwendungen planen. Nutzerabläufe, zulässige Testlast, Antwortzeiten und Fehlerraten in einer Testumgebung prüfen.",
+      "titleLength": 54,
+      "descriptionLength": 141,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "performance-audit-3",
+      "title": "Technisches Performance-Audit für Websites | CreAid-Media",
+      "description": "Ladezeiten, Ressourcen, Skripte und Serverantworten analysieren. Technische Schwachstellen Ihrer Website nach Wirkung und Aufwand priorisieren.",
+      "titleLength": 57,
+      "descriptionLength": 143,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "code-ueberpruefung",
+      "title": "Code-Überprüfung für Webanwendungen | CreAid-Media",
+      "description": "Codequalität, Abhängigkeiten, Fehlerbehandlung und Wartbarkeit Ihrer Webanwendung prüfen lassen. Umfang und Freigaben vor Projektbeginn klären.",
+      "titleLength": 50,
+      "descriptionLength": 143,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "upgrades-wartung",
+      "title": "Website-Wartung & WordPress-Updates | CreAid-Media",
+      "description": "WordPress-Wartung mit Plugin- und Sicherheits-Updates sowie Backups. Wartungspakete vergleichen und den passenden Umfang für Ihre Website klären.",
+      "titleLength": 50,
+      "descriptionLength": 145,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "server-wartung",
+      "title": "Server-Wartung: Bedarf & Verfügbarkeit klären | CreAid-Media",
+      "description": "Serverbetrieb, Zugriffsrechte, Backups und Monitoring besprechen. Verfügbarkeit und konkreten Betreuungsumfang für Ihre Hostingumgebung vorab klären.",
+      "titleLength": 60,
+      "descriptionLength": 149,
+      "changed": true,
+      "schemaType": "WebPage"
+    },
+    {
+      "key": "cloud-hosting-3",
+      "title": "Cloud-Hosting: Beratung & Anforderungen | CreAid-Media",
+      "description": "Cloud-Hosting nach Ressourcen, Standort, Backups und Skalierung bewerten. Anbieter, Verfügbarkeit und Konditionen für Ihr Vorhaben vorab klären.",
+      "titleLength": 54,
+      "descriptionLength": 144,
+      "changed": true,
+      "schemaType": "WebPage"
+    },
+    {
+      "key": "systemintegration",
+      "title": "Systemintegration für Unternehmen | CreAid-Media",
+      "description": "Schnittstellen zwischen Anwendungen und Geschäftsprozessen planen. Datenfelder, Berechtigungen, Fehlerbehandlung und Testfälle gemeinsam klären.",
+      "titleLength": 48,
+      "descriptionLength": 144,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "cs-cart-lizenz-reseller",
+      "title": "CS-Cart-Lizenzen: Anfrage & Lizenzberatung | CreAid-Media",
+      "description": "Lizenzbedarf für CS-Cart klären. Aktuellen Resellerstatus, verfügbare Editionen und Konditionen vor einem Angebot prüfen. Kein direkter Lizenzverkauf.",
+      "titleLength": 57,
+      "descriptionLength": 150,
+      "changed": true,
+      "schemaType": "WebPage"
+    },
+    {
+      "key": "cs-cart-konfiguration-einrichtung",
+      "title": "CS-Cart-Konfiguration & Einrichtung | CreAid-Media",
+      "description": "CS-Cart-Shop, Produkte, Zahlung und Versand vorbereiten. Kompatibilität, Lizenzen, Verfügbarkeit und konkreten Betreuungsumfang vorab klären.",
+      "titleLength": 50,
+      "descriptionLength": 141,
+      "changed": true,
+      "schemaType": "WebPage"
+    },
+    {
+      "key": "store-builder-standardlizenzen",
+      "title": "Store Builder & Standardlizenzen: Beratung | CreAid-Media",
+      "description": "Store-Builder-Editionen und Lizenzumfang vergleichen. Verfügbarkeit, Verlängerung und aktuelle Herstellerbedingungen vor einem Angebot klären.",
+      "titleLength": 57,
+      "descriptionLength": 142,
+      "changed": true,
+      "schemaType": "WebPage"
+    },
+    {
+      "key": "b2b-portal-entwicklung",
+      "title": "B2B-Portal entwickeln lassen | CreAid-Media",
+      "description": "Ein B2B-Portal für Geschäftskunden planen: Rollen, Konditionen, Freigaben, Dokumente und Schnittstellen. Projektumfang und Machbarkeit besprechen.",
+      "titleLength": 43,
+      "descriptionLength": 146,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "marktplatz-entwicklung",
+      "title": "Online-Marktplatz entwickeln lassen | CreAid-Media",
+      "description": "Planen Sie einen Mehranbieter-Marktplatz: Anbieterrollen, Produktfreigaben, Bestellabläufe und Zahlungsflüsse. Anforderungen für den MVP klären.",
+      "titleLength": 50,
+      "descriptionLength": 144,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "e-commerce",
+      "title": "E-Commerce-Beratung & Handelsarchitektur | CreAid-Media",
+      "description": "Onlineshop, B2B-Portal oder Marktplatz? Vergleichen Sie Geschäftsmodell, Rollen, Bestellprozesse und Integrationen vor der Wahl Ihrer Handelsarchitektur.",
+      "titleLength": 55,
+      "descriptionLength": 153,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "kundenspezifische-entwicklung",
+      "title": "Kundenspezifische Webentwicklung | CreAid-Media",
+      "description": "Individuelle Webanwendungen anhand Ihrer Prozesse, Nutzerrollen und Datenmodelle planen. Standardlösungen und Erweiterungen vorab vergleichen.",
+      "titleLength": 47,
+      "descriptionLength": 142,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "addon-theme-entwicklung",
+      "title": "Add-on- & Theme-Entwicklung | CreAid-Media",
+      "description": "Erweiterungen und Themes für bestehende Webplattformen planen. Funktionen, Kompatibilität, Schnittstellen und Updatefähigkeit im Projekt klären.",
+      "titleLength": 42,
+      "descriptionLength": 144,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "ui-ux-entwicklung",
+      "title": "UI/UX-Design & Entwicklung | CreAid-Media",
+      "description": "Digitale Oberflächen nutzerfreundlich gestalten: Informationsarchitektur, Prototypen, responsive Interaktionen und konkrete Nutzeraufgaben planen.",
+      "titleLength": 41,
+      "descriptionLength": 146,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "animation",
+      "title": "Animation für Unternehmen & Websites | CreAid-Media",
+      "description": "Animationen für digitale Präsentationen, Markenkommunikation oder Websites konzipieren. Ziel, Bildsprache, Dauer, Formate und Nutzungsrechte klären.",
+      "titleLength": 51,
+      "descriptionLength": 148,
+      "changed": true,
+      "schemaType": "Service"
+    },
+    {
+      "key": "archiv-corporate-design",
+      "title": "Corporate Design – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Corporate Design. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 47,
+      "descriptionLength": 114,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-branding",
+      "title": "Branding – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Branding. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 39,
+      "descriptionLength": 106,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-seo",
+      "title": "SEO – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu SEO. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 34,
+      "descriptionLength": 101,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-lokales-marketing",
+      "title": "Lokales Marketing – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Lokales Marketing. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 48,
+      "descriptionLength": 115,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-kundengewinnung",
+      "title": "Kundengewinnung – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Kundengewinnung. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 46,
+      "descriptionLength": 113,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-lokal",
+      "title": "Lokale Unternehmen – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Lokale Unternehmen. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 49,
+      "descriptionLength": 116,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-marketing",
+      "title": "Marketing – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Marketing. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 40,
+      "descriptionLength": 107,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-webdesign",
+      "title": "Webdesign – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 40,
+      "descriptionLength": 107,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-handwerk",
+      "title": "Handwerk – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Handwerk. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 39,
+      "descriptionLength": 106,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-handwerk-webdesign-handwerk",
+      "title": "Webdesign im Handwerk – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign im Handwerk. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 52,
+      "descriptionLength": 119,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-handwerk-seo-handwerk",
+      "title": "SEO im Handwerk – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu SEO im Handwerk. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 46,
+      "descriptionLength": 113,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-handwerk-handwerk-handwerk",
+      "title": "Handwerksbetriebe digital – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Handwerksbetriebe digital. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 56,
+      "descriptionLength": 123,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-webdesign-conversion",
+      "title": "Webdesign & Conversion – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign & Conversion. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 53,
+      "descriptionLength": 120,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-digitalisierung",
+      "title": "Digitalisierung – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Digitalisierung. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 46,
+      "descriptionLength": 113,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-suchmaschinenoptimierung",
+      "title": "Suchmaschinenoptimierung – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Suchmaschinenoptimierung. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 55,
+      "descriptionLength": 122,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-plattform-konzeption",
+      "title": "Plattform-Konzeption – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Plattform-Konzeption. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 51,
+      "descriptionLength": 118,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-e-commerce",
+      "title": "E-Commerce – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu E-Commerce. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 41,
+      "descriptionLength": 108,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-online-shop",
+      "title": "Onlineshop – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Onlineshop. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 41,
+      "descriptionLength": 108,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "archiv-digitales-marketing",
+      "title": "Digitales Marketing – Journalarchiv | CreAid-Media",
+      "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Digitales Marketing. Beiträge entdecken und zum Journal zurückkehren.",
+      "titleLength": 50,
+      "descriptionLength": 117,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    },
+    {
+      "key": "freelancer-oder-full-service-agentur",
+      "title": "Freelancer oder Full-Service-Agentur? Eine Entscheidungshilfe | CreAid-Media",
+      "description": "Freelancer oder Full-Service-Agentur? Vergleichen Sie Koordination, Fachwissen, Gesamtkosten und Zuständigkeiten anhand Ihres konkreten Projekts.",
+      "titleLength": 76,
+      "descriptionLength": 145,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "fehler-beim-online-shop-start-vermeiden",
+      "title": "9 Fehler beim Onlineshop-Start vermeiden: Prüfliste vor dem Launch | CreAid-Media",
+      "description": "Vermeiden Sie 9 typische Fehler beim Onlineshop-Start. Prüfen Sie Sortiment, Produktseiten, Checkout, Technik, Versand und Freigabe vor dem Launch.",
+      "titleLength": 81,
+      "descriptionLength": 147,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "google-maps-eintrag-optimieren",
+      "title": "Google-Maps-Eintrag optimieren in 9 Schritten | CreAid-Media",
+      "description": "Google-Maps-Eintrag optimieren: Mit 9 konkreten Schritten Ihr Unternehmensprofil pflegen, Rezensionen organisieren und passende Anfragen besser messen.",
+      "titleLength": 60,
+      "descriptionLength": 151,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "webdesign-trends-2026-fuer-unternehmen",
+      "title": "Webdesign-Trends 2026 für Unternehmen: Was wirklich sinnvoll ist | CreAid-Media",
+      "description": "Welche Webdesign-Ansätze sind 2026 für Unternehmen sinnvoll? Bewerten Sie mobile Nutzung, Bewegung, KI, Barrierefreiheit und Markenführung nach Nutzen.",
+      "titleLength": 79,
+      "descriptionLength": 151,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "corporate-naming-fuer-startups",
+      "title": "Corporate Naming für Startups: Namen entwickeln und prüfen | CreAid-Media",
+      "description": "Entwickeln Sie einen Startup-Namen anhand von Positionierung, Verständlichkeit, Sprachraum, Domain und Markenrecherche. Mit konkreten Prüfkriterien.",
+      "titleLength": 73,
+      "descriptionLength": 148,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "print-design-fuer-unternehmen",
+      "title": "Printdesign für Unternehmen: Werbemittel sinnvoll auswählen | CreAid-Media",
+      "description": "Wählen Sie passende Printmedien für Ihren Betrieb. Vergleichen Sie Einsatzorte, Lesbarkeit, Corporate Design, Druckdaten und die Verbindung zur Website.",
+      "titleLength": 74,
+      "descriptionLength": 152,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "full-service-werbeagentur-b2b",
+      "title": "Full-Service-Werbeagentur für B2B: Wann lohnt sich die Zusammenarbeit? | CreAid-Media",
+      "description": "Wann ist eine Full-Service-Werbeagentur für B2B sinnvoll? Prüfen Sie Schnittstellen, Zuständigkeiten, Leistungsumfang und Ziele vor der Beauftragung.",
+      "titleLength": 85,
+      "descriptionLength": 149,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "guide-ui-ux-fuer-firmenwebsites",
+      "title": "UI/UX für Firmenwebsites: Leitfaden zur Nutzerführung | CreAid-Media",
+      "description": "UI und UX für Firmenwebsites verständlich erklärt: Prüfen Sie Navigation, mobile Bedienung, Inhalte und Kontaktwege mit konkreten Nutzeraufgaben.",
+      "titleLength": 68,
+      "descriptionLength": 145,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "webdesign-fuer-immobilienmakler-berlin",
+      "title": "Webdesign für Immobilienmakler in Berlin: Objektseiten und Anfragen planen | CreAid-Media",
+      "description": "Webdesign für Immobilienmakler in Berlin: Strukturieren Sie Objektinformationen, Exposés, regionale Inhalte und Kontaktwege für Interessenten.",
+      "titleLength": 89,
+      "descriptionLength": 142,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "beste-ecommerce-loesungen-mittelstand",
+      "title": "E-Commerce-Lösungen für den Mittelstand: Systeme 2026 vergleichen | CreAid-Media",
+      "description": "Vergleichen Sie E-Commerce-Lösungen für den Mittelstand anhand von Sortiment, B2B-Prozessen, Schnittstellen, Betriebsaufwand und Erweiterbarkeit.",
+      "titleLength": 80,
+      "descriptionLength": 145,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "social-media-content-plan-mit-wirkung",
+      "title": "Social-Media-Content-Plan: Inhalte, Termine und Zuständigkeiten | CreAid-Media",
+      "description": "Erstellen Sie einen umsetzbaren Social-Media-Content-Plan mit Zielen, Themen, Formaten, Zuständigkeiten, Freigaben und passenden Kennzahlen.",
+      "titleLength": 78,
+      "descriptionLength": 140,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "produktfotografie-fuer-onlineshop",
+      "title": "Produktfotografie für Onlineshops: Motive und Bildstrategie planen | CreAid-Media",
+      "description": "Planen Sie Produktfotos für Ihren Onlineshop: Freisteller, Details, Anwendungsszenen, einheitliche Bildsprache und webgerechte Dateien.",
+      "titleLength": 81,
+      "descriptionLength": 135,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "hosting-anbieter-fuer-firmenwebsites-waehlen",
+      "title": "Hosting-Anbieter für Firmenwebsites: Auswahl und Prüfkriterien | CreAid-Media",
+      "description": "Vergleichen Sie Hosting-Anbieter für Firmenwebsites nach Leistung, Backups, Sicherheit, Support und Wechselmöglichkeiten. Mit konkreten Auswahlkriterien.",
+      "titleLength": 77,
+      "descriptionLength": 153,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "webseite-fuer-handwerker",
+      "title": "Webseite für Handwerker: Projektanfragen gezielt qualifizieren | CreAid-Media",
+      "description": "Eine Handwerker-Webseite soll passende Anfragen vorbereiten. Welche Leistungsangaben, Referenzen und Kontaktinformationen helfen, Rückfragen zu reduzieren?",
+      "titleLength": 77,
+      "descriptionLength": 155,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "barrierefreie-website-fuer-unternehmen",
+      "title": "Barrierefreie Website für Unternehmen: prüfen und umsetzen | CreAid-Media",
+      "description": "Prüfen Sie Tastaturbedienung, Kontraste, Formulare und verständliche Inhalte. Erfahren Sie, wann das BFSG für Unternehmen relevant sein kann.",
+      "titleLength": 73,
+      "descriptionLength": 141,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "webdesign-fuer-unternehmen",
+      "title": "Webdesign für Unternehmen: Anforderungen an eine wirksame Website | CreAid-Media",
+      "description": "Planen Sie eine Unternehmenswebsite mit klaren Anforderungen an Inhalte, Nutzerführung, Technik und Abnahme. Mit praktischen Prüfkriterien.",
+      "titleLength": 80,
+      "descriptionLength": 139,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "webdesign-fuer-lokale-dienstleister",
+      "title": "Webdesign für lokale Dienstleister: Leistungen und Einsatzgebiete planen | CreAid-Media",
+      "description": "Planen Sie eine Website für lokale Dienstleister mit verständlichen Leistungen, realen Einsatzgebieten, Vertrauenssignalen und einfachen Kontaktwegen.",
+      "titleLength": 87,
+      "descriptionLength": 150,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "wordpress-website-erstellen-lassen",
+      "title": "WordPress-Website erstellen lassen: Angebote richtig vergleichen | CreAid-Media",
+      "description": "WordPress-Website erstellen lassen: Vergleichen Sie Angebote nach Design, Inhalten, Funktionen, Wartung und Übergabe statt nur nach dem Einstiegspreis.",
+      "titleLength": 79,
+      "descriptionLength": 151,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "leitfaden-website-relaunch-unternehmen",
+      "title": "Website-Relaunch für Unternehmen: Leitfaden von Analyse bis Abnahme | CreAid-Media",
+      "description": "Planen Sie Ihren Website-Relaunch mit Bestandsaufnahme, Inhaltskonzept, URL-Mapping, technischen Tests und kontrolliertem Livegang.",
+      "titleLength": 82,
+      "descriptionLength": 131,
+      "changed": false,
+      "schemaType": null
+    },
+    {
+      "key": "wann-lohnt-sich-seo",
+      "title": "Wann lohnt sich SEO für Handwerker? | CreAid-Media",
+      "description": "Wann rechnet sich SEO für Handwerksbetriebe? Prüfen Sie lokale Nachfrage, Website und Auftragswert und berechnen Sie, wie viele neue Aufträge nötig sind.",
+      "titleLength": 50,
+      "descriptionLength": 153,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "7-branding-fehler-bei-neugruendung",
+      "title": "7 Branding-Fehler bei Neugründung vermeiden | CreAid",
+      "description": "So vermeiden Handwerksbetriebe sieben Branding-Fehler bei der Gründung. Planen Sie Positionierung, Logo, Website und Werbemittel in der richtigen Reihenfolge.",
+      "titleLength": 52,
+      "descriptionLength": 158,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "website-audit-unternehmen",
+      "title": "Website-Audit für Unternehmen: Check und Prioritäten | CreAid",
+      "description": "Ein Website-Audit für Unternehmen zeigt, wo Anfragen verloren gehen. Prüfen Sie Sichtbarkeit, Technik, Inhalte und Kontaktwege und setzen Sie Prioritäten.",
+      "titleLength": 61,
+      "descriptionLength": 154,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "360-grad-rundgang-erstellen",
+      "title": "360-Grad-Rundgang erstellen: Aufwand und Kosten | CreAid",
+      "description": "360-Grad-Rundgang erstellen oder beauftragen? Vergleichen Sie Aufwand und Kosten und erfahren Sie, wie Sie eine virtuelle Tour für Ihre Website vorbereiten.",
+      "titleLength": 56,
+      "descriptionLength": 156,
+      "changed": false,
+      "schemaType": "BlogPosting"
+    },
+    {
+      "key": "archiv-google-ads",
+      "title": "Google Ads – Journalarchiv | CreAid-Media",
+      "description": "Ratgeber zu Google Ads, Kampagnen und Anfragen für Unternehmen.",
+      "titleLength": 41,
+      "descriptionLength": 63,
+      "changed": false,
+      "schemaType": "CollectionPage"
+    }
+  ]
+}
