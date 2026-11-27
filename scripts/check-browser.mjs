@@ -174,7 +174,15 @@ async function interactionTests(browser){
    await p.waitForFunction(()=>document.querySelector('#cm-contactbar').getBoundingClientRect().top>=-1);
   }
   await p.setViewportSize({width:390,height:844});
-  const toggle=p.locator('#cm-menu-toggle');await toggle.click();assert.equal(await toggle.getAttribute('aria-expanded'),'true');await p.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');assert.equal(await p.evaluate(()=>document.activeElement.id),'cm-menu-toggle');
+  const toggle=p.locator('#cm-menu-toggle');await toggle.click();assert.equal(await toggle.getAttribute('aria-expanded'),'true');
+  assert.equal(await p.locator('#cm-primary-nav > *').first().evaluate(e=>getComputedStyle(e).animationName),'none','Mobile navigation reduced motion');
+  await p.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');assert.equal(await p.evaluate(()=>document.activeElement.id),'cm-menu-toggle');
+  await p.emulateMedia({reducedMotion:'no-preference'});await toggle.click();
+  const items=p.locator('#cm-primary-nav > *');assert.equal(await items.count(),6);
+  assert.equal(await items.first().evaluate(e=>getComputedStyle(e).animationName),'cm-mobile-menu-enter');
+  assert.equal(await items.last().evaluate(e=>getComputedStyle(e).animationDelay),'0.11s');
+  await p.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');
+  await p.emulateMedia({reducedMotion:'reduce'});
   await p.setViewportSize({width:1440,height:900});const summary=p.locator('.cm-header__services summary');await summary.click();assert.equal(await p.locator('.cm-header__services').getAttribute('open'),'');await p.keyboard.press('Escape');assert.equal(await p.locator('.cm-header__services').getAttribute('open'),null);assert.ok(await summary.evaluate(e=>document.activeElement===e));
   await settle(p,base+'/kontakt?service=Webdesign%20%26%20Entwicklung');assert.equal(await p.locator('#agencyEnquiry [name=service]').inputValue(),'Webdesign & Entwicklung');
   assert.ok(await p.locator('#agencyEnquiry').isVisible()); // do not submit any enquiry

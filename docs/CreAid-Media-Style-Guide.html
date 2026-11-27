@@ -32,10 +32,29 @@
 .cm-contact-loader{flex:0 0 55px;width:55px;height:65px;position:relative;overflow:hidden}
 .cm-contact-loader[hidden]{display:none!important}
 .cm-contact-loader .cm-bounce-stage{position:absolute;top:0;left:0;width:110px;height:130px;transform:scale(.5);transform-origin:top left}
+/* Mobile hamburger: immediate access, short staggered visual entrance only. */
+@keyframes cm-mobile-menu-enter{from{opacity:.35;translate:0 -5px}to{opacity:1;translate:0 0}}
+@media(max-width:860px){
+ .cm-header__nav.is-open > *{animation:cm-mobile-menu-enter 145ms cubic-bezier(.2,.75,.25,1) both;animation-delay:var(--cm-menu-item-delay,0ms)}
+ .cm-header__nav.is-open > :nth-child(2){--cm-menu-item-delay:22ms}
+.cm-header__nav.is-open > :nth-child(3){--cm-menu-item-delay:44ms}
+.cm-header__nav.is-open > :nth-child(4){--cm-menu-item-delay:66ms}
+.cm-header__nav.is-open > :nth-child(5){--cm-menu-item-delay:88ms}
+.cm-header__nav.is-open > :nth-child(6){--cm-menu-item-delay:110ms}
+ .cm-header__nav.is-open > :focus-within{animation:none}
+}
+.cm-menu-motion-preview.is-open > *{animation:cm-mobile-menu-enter 145ms cubic-bezier(.2,.75,.25,1) both;animation-delay:var(--cm-menu-item-delay,0ms)}
+.cm-menu-motion-preview.is-open > :nth-child(2){--cm-menu-item-delay:22ms}
+.cm-menu-motion-preview.is-open > :nth-child(3){--cm-menu-item-delay:44ms}
+.cm-menu-motion-preview.is-open > :nth-child(4){--cm-menu-item-delay:66ms}
+.cm-menu-motion-preview.is-open > :nth-child(5){--cm-menu-item-delay:88ms}
+.cm-menu-motion-preview.is-open > :nth-child(6){--cm-menu-item-delay:110ms}
+.cm-menu-motion-preview.is-open > :focus-within{animation:none}
+@media(prefers-reduced-motion:reduce){.cm-header__nav.is-open > *,.cm-menu-motion-preview.is-open > *{animation:none!important}}
 </style></head><body><header><div class="meta">CREAID-MEDIA / BRAND SYSTEM / 27.11.2026</div><h1>Gestaltung mit<br>einem Punkt<span style="color:#FA225B">.</span></h1><p>Erste Hilfe für Ihre Werbung. Verbindliche visuelle Referenz für die eigene Marke. The Plus strukturiert. The Living Dot erzählt. The Focus Pulse betont. Circular Reveal verbindet.</p><small>V1.0 · Komponentenstand: Focus Compact / Bounce V6</small></header>
 <nav><a href="#fundament">Grundlagen</a><a href="#layout">Layout</a><a href="#visual">Visual Identity</a><a href="#motion">Motion</a><a href="#editorial">Editorial</a><a href="#matrix">Einsatzmatrix</a><a href="#ki">KI-Regeln & Code</a></nav><main>
 <section id="fundament"><h2>01 / Grundlagen</h2><p>CreAid-Media: Erste-Hilfe-Gedanke, Klarheit, Fokus und Wirkung. Fuchsia als Signatur, nicht als vollflächiger Zwang.</p><div class="swatches"><div class="swatch" style="background:#FA225B;color:#fff">#FA225B<br><small>pink</small></div><div class="swatch" style="background:#B3284F;color:#fff">#B3284F<br><small>berry</small></div><div class="swatch" style="background:#420915;color:#fff">#420915<br><small>wine</small></div><div class="swatch" style="background:#1A1A1B;color:#fff">#1A1A1B<br><small>ink</small></div><div class="swatch" style="background:#F5F2ED;color:#1a1a1b">#F5F2ED<br><small>lightDemo</small></div></div><p>Typografie: Ubuntu für die bestehende Web-UI; vorhandene Headline- und Akzentschriftregeln der jeweiligen Seitentemplates bewahren. Keine neue Schrift, Logoform, Grid- oder Typografieskala ohne visuelle Freigabe. Die neutrale helle Demo-Fläche ist eine Referenz, kein neuer globaler Farbtoken-Zwang.</p></section>
-<section id="layout"><h2>02 / Layout</h2><div class="hero-diagram" aria-label="Erste Bildschirmansicht"><div>LinkedIn · E-Mail · WhatsApp · Telefon</div><div>Navigation</div><div>Hero · verbleibender Platz</div><div>Ticker · vollständig sichtbar</div></div><p>Kontaktleiste zentriert, gleichmäßige Abstände, vorhandene Kontaktdaten erhalten. Mobil Icons mit zugänglichen Bezeichnungen. Kontaktleiste + Navigation + Hero + Ticker = 100svh, 100vh Fallback. Wenn der Inhalt nicht hineinpasst, natürlich wachsen lassen. Navigation bleibt sticky, Kontaktleiste scrollt weg.</p></section>
+<section id="layout"><h2>02 / Layout</h2><div class="hero-diagram" aria-label="Erste Bildschirmansicht"><div>LinkedIn · E-Mail · WhatsApp · Telefon</div><div>Navigation</div><div>Hero · verbleibender Platz</div><div>Ticker · vollständig sichtbar</div></div><p>Kontaktleiste zentriert, gleichmäßige Abstände, vorhandene Kontaktdaten erhalten. Mobil Icons mit zugänglichen Bezeichnungen. Kontaktleiste + Navigation + Hero + Ticker = 100svh, 100vh Fallback. Wenn der Inhalt nicht hineinpasst, natürlich wachsen lassen. Navigation bleibt sticky, Kontaktleiste scrollt weg.</p><h3>Mobile Navigation · Soft Stagger</h3><div style="max-width:390px;background:#1a1a1b;color:#fff;padding:18px;border-radius:4px"><button type="button" id="guide-menu-toggle" aria-controls="guide-mobile-menu" aria-expanded="false">Menü ☰</button><div id="guide-mobile-menu" class="cm-menu-motion-preview" hidden><div style="border-bottom:1px solid #ffffff22;padding:10px 0">Startseite</div><div style="border-bottom:1px solid #ffffff22;padding:10px 0">Leistungen</div><div style="border-bottom:1px solid #ffffff22;padding:10px 0">Referenzen</div><div style="border-bottom:1px solid #ffffff22;padding:10px 0">Über uns</div><div style="border-bottom:1px solid #ffffff22;padding:10px 0">Journal</div><div style="border-bottom:1px solid #ffffff22;padding:10px 0">Kontakt</div></div></div><p>Beim Öffnen erscheinen die Menüpunkte von oben nach unten mit 22 ms Abstand, je 145 ms Einblendung und 5 px Bewegung. Bei sechs Menüpunkten ist der Aufbau nach 255 ms abgeschlossen. Kein verzögerter Zugriff, keine Verzögerung beim Schließen. Bei Tastaturfokus und reduzierter Bewegung keine Animation. Desktop unverändert.</p></section>
 <section id="visual"><h2>03 / Visual Identity</h2><h3>The Plus · CM-VISUAL-001</h3><div class="pair"><div class="demo"><span class="cm-brand-plus" aria-hidden="true">+</span></div><div class="demo dark"><span class="cm-brand-plus" aria-hidden="true">+</span></div></div><p>Statisch für Rubriken, Kompetenz- und Leistungskennzeichnungen. Bestehende Pluszeichen behalten.</p><h3>The Living Dot · CM-VISUAL-002</h3><div class="pair"><div class="demo"><span class="cm-living-dot" aria-hidden="true"></span></div><div class="demo dark"><span class="cm-living-dot" aria-hidden="true"></span></div></div><p>Imaginäres Objekt ohne Gesicht. Es erzählt die jeweilige Bildidee, z. B. Zieltreffer bei Ads, Aufstieg bei SEO. Nicht als aufgezwungene Dekoration. Die finale Illustrations-Art-Direction und Bildreferenzen sind noch nicht abgenommen. Keine Serienänderung vorhandener Bilder ohne Bildauftrag. Die bestehende 3-Sekunden-Headline-Punktsignatur bleibt getrennt erhalten.</p></section>
 <section id="motion"><h2>04 / Motion Identity</h2><h3>The Focus Pulse · Compact</h3><div class="pair"><div class="demo"><span class="cm-focus-pulse" aria-hidden="true"></span></div><div class="demo dark"><span class="cm-focus-pulse" aria-hidden="true"></span></div></div><p>40 BPM, zwei Wellen je 1,5 s mit Pause. 0,65 px Kontur, 12 px Punktradius, 26/21 px Pulsradien. Punkt bleibt statisch. Maximal zwei gleichzeitig sichtbar. Kleine UI-Variante proportional; Kontur konstant.</p><h3>The Living Dot · Natural Bounce V6</h3><div class="pair"><div class="demo"><div class="cm-bounce-stage" aria-hidden="true"><div class="cm-bounce-shadow"></div><div class="cm-bounce-motion"><span class="cm-living-dot"></span></div></div></div><div class="demo dark"><div class="cm-bounce-stage cm-bounce-stage--dark" aria-hidden="true"><div class="cm-bounce-shadow"></div><div class="cm-bounce-motion"><span class="cm-living-dot"></span></div></div></div></div><p>64 px Kugel, 32 px Sprunghöhe, 1.100 ms Zyklus, 66 ms Bodenkontakt, 6 % Stauchung, dezente Streckung. Schatten wächst synchron und bleibt sichtbar: Blur 0,5–2,4 px, Deckkraft 62–34 %. Verbindlich freigegeben: ausschließlich Preloader und tatsächliche Ladezustände. Sobald der Inhalt bzw. Vorgang bereit ist, sofort beenden; keine künstliche Ladezeit. Einzige ausdrücklich freigegebene Ausnahme: Kontaktformular – bei erfolgreichem Versand mindestens 1,5 s sichtbarer Versandzustand insgesamt, die Anfrage sofort übertragen. Fehler sofort anzeigen. Kein Bounce in Hero, 404, Social Media oder als dekorative Dauerschleife. Statische Living-Dot-Motive bleiben davon unberührt.</p><h3>Kontaktformular · Versandfeedback</h3><div style="background:#1f1c21;color:#fff;padding:18px;border-radius:4px"><div id="guide-contact-feedback" class="cm-contact-feedback" data-state="idle"><div class="cm-contact-loader" aria-hidden="true" hidden><div class="cm-bounce-stage cm-bounce-stage--dark"><div class="cm-bounce-shadow"></div><div class="cm-bounce-motion"><span class="cm-living-dot"></span></div></div></div><p role="status" aria-live="polite" class="a-form-message"></p></div><button type="button" id="guide-contact-send">Versand simulieren</button></div><p>32 px Kugel, Original-V6-Bewegung proportional skaliert. Anfrage sofort übertragen; bei Erfolg frühestens nach 1,5 Sekunden insgesamt die bestätigte Versandmeldung zeigen. Bei Fehler sofort informieren, Angaben erhalten. Kein Preloader für normalen Seitenwechsel. Demo ohne echten Versand.</p><h3>The Circular Reveal</h3><div class="reveal-stage">04 / CREAID-PRINZIP<div class="reveal-next" id="reveal-next">05 / KONTAKT</div></div><button type="button" id="replay">Kreisblende abspielen</button><p>Harte Kreisgrenze vom Mittelpunkt bis zur entferntesten Ecke. Keine Unschärfe, kein Glow. 1,1 s bei zeitbasiertem Einsatz; auf der Startseite bleibt der bestehende Scrollfortschritt maßgeblich. Kleine Displays und reduzierte Bewegung: lesbare natürliche Reihenfolge.</p></section>
 <section id="editorial"><h2>05 / Editorial</h2><aside class="cm-editorial-point"><div class="cm-pulse-label"><span class="cm-focus-pulse cm-focus-pulse--small" aria-hidden="true"></span>Der springende Punkt</div><p>Eine prägnante, artikelbezogene Kernaussage.</p></aside><p>Als gezieltes redaktionelles Highlight einsetzen, nicht als Standard für jede Überschrift. Bestehende E01–E20-Bibliothek, SEO/GEO und Bildoptionen des Blog-Optimizers bleiben gültig. Nur bei tatsächlich freigegebener Bildgenerierung den Living Dot thematisch integrieren. Keine Bildtexte, keine erfundenen Referenzen, keine generischen KI-Motive als Zwang.</p></section>
@@ -70,6 +89,25 @@
 .cm-contact-loader{flex:0 0 55px;width:55px;height:65px;position:relative;overflow:hidden}
 .cm-contact-loader[hidden]{display:none!important}
 .cm-contact-loader .cm-bounce-stage{position:absolute;top:0;left:0;width:110px;height:130px;transform:scale(.5);transform-origin:top left}
+/* Mobile hamburger: immediate access, short staggered visual entrance only. */
+@keyframes cm-mobile-menu-enter{from{opacity:.35;translate:0 -5px}to{opacity:1;translate:0 0}}
+@media(max-width:860px){
+ .cm-header__nav.is-open &gt; *{animation:cm-mobile-menu-enter 145ms cubic-bezier(.2,.75,.25,1) both;animation-delay:var(--cm-menu-item-delay,0ms)}
+ .cm-header__nav.is-open &gt; :nth-child(2){--cm-menu-item-delay:22ms}
+.cm-header__nav.is-open &gt; :nth-child(3){--cm-menu-item-delay:44ms}
+.cm-header__nav.is-open &gt; :nth-child(4){--cm-menu-item-delay:66ms}
+.cm-header__nav.is-open &gt; :nth-child(5){--cm-menu-item-delay:88ms}
+.cm-header__nav.is-open &gt; :nth-child(6){--cm-menu-item-delay:110ms}
+ .cm-header__nav.is-open &gt; :focus-within{animation:none}
+}
+.cm-menu-motion-preview.is-open &gt; *{animation:cm-mobile-menu-enter 145ms cubic-bezier(.2,.75,.25,1) both;animation-delay:var(--cm-menu-item-delay,0ms)}
+.cm-menu-motion-preview.is-open &gt; :nth-child(2){--cm-menu-item-delay:22ms}
+.cm-menu-motion-preview.is-open &gt; :nth-child(3){--cm-menu-item-delay:44ms}
+.cm-menu-motion-preview.is-open &gt; :nth-child(4){--cm-menu-item-delay:66ms}
+.cm-menu-motion-preview.is-open &gt; :nth-child(5){--cm-menu-item-delay:88ms}
+.cm-menu-motion-preview.is-open &gt; :nth-child(6){--cm-menu-item-delay:110ms}
+.cm-menu-motion-preview.is-open &gt; :focus-within{animation:none}
+@media(prefers-reduced-motion:reduce){.cm-header__nav.is-open &gt; *,.cm-menu-motion-preview.is-open &gt; *{animation:none!important}}
 </pre></details><details><summary>Maschinenlesbare Regeln (JSON)</summary><pre>{
   "version": "1.0",
   "date": "2026-11-27",
@@ -229,7 +267,23 @@
       "WhatsApp",
       "Telefon"
     ],
-    "firstViewport": "contactbar + nav + hero + ticker = 100svh, 100vh fallback; grow if content needs space"
+    "firstViewport": "contactbar + nav + hero + ticker = 100svh, 100vh fallback; grow if content needs space",
+    "mobileMenuMotion": {
+      "id": "CM-MOTION-004",
+      "status": "implemented-pending-visual-review",
+      "maxViewportWidthPx": 860,
+      "trigger": "open",
+      "itemDurationMs": 145,
+      "staggerMs": 22,
+      "totalMsForSixItems": 255,
+      "offsetYPx": -5,
+      "startOpacity": 0.35,
+      "easing": "cubic-bezier(.2,.75,.25,1)",
+      "access": "immediate",
+      "close": "immediate",
+      "reducedMotion": "disabled",
+      "keyboardFocus": "immediate-no-animation"
+    }
   },
   "rules": {
     "reducedMotion": true,
@@ -239,7 +293,7 @@
     "publication": "preview and production approvals separate"
   }
 }</pre></details></section>
-<section><h2>08 / Versionshistorie</h2><p>27.11.2026 · V1.0: Plus, Living Dot, Compact Focus Pulse, Bounce V6, Circular Reveal, Kontaktleiste, erster Viewport, Editorial-Modul und KI-Governance. Illustrationsstil bleibt offen. Entscheidung 27.11.2026: Bounce V6 ausschließlich für Preloader und tatsächliche Ladezustände freigegeben; übrige Einsatzorte ausgeschlossen. Kontaktformular: sofortiger Netzwerkversand, mindestens 1,5 s Feedback bei Erfolg, bestätigte Erfolgsmeldung, Fehler unverzögert. Die konkreten Website-Änderungen benötigen den Browser-/Build-Check vor dem Merge.</p></section></main><footer>CreAid-Media · Living Style Guide · V1.0</footer>
+<section><h2>08 / Versionshistorie</h2><p>27.11.2026 · V1.0: Plus, Living Dot, Compact Focus Pulse, Bounce V6, Circular Reveal, Kontaktleiste, erster Viewport, Editorial-Modul und KI-Governance. Illustrationsstil bleibt offen. Entscheidung 27.11.2026: Bounce V6 ausschließlich für Preloader und tatsächliche Ladezustände freigegeben; übrige Einsatzorte ausgeschlossen. Kontaktformular: sofortiger Netzwerkversand, mindestens 1,5 s Feedback bei Erfolg, bestätigte Erfolgsmeldung, Fehler unverzögert. Mobile Navigation: Soft Stagger 145 ms, 22 ms Versatz, 255 ms Gesamtdauer bei sechs Einträgen. Die konkreten Website-Änderungen benötigen den Browser-/Build-Check vor dem Merge.</p></section></main><footer>CreAid-Media · Living Style Guide · V1.0</footer>
 <script type="application/json" id="cm-design-registry">{
   "version": "1.0",
   "date": "2026-11-27",
@@ -399,7 +453,23 @@
       "WhatsApp",
       "Telefon"
     ],
-    "firstViewport": "contactbar + nav + hero + ticker = 100svh, 100vh fallback; grow if content needs space"
+    "firstViewport": "contactbar + nav + hero + ticker = 100svh, 100vh fallback; grow if content needs space",
+    "mobileMenuMotion": {
+      "id": "CM-MOTION-004",
+      "status": "implemented-pending-visual-review",
+      "maxViewportWidthPx": 860,
+      "trigger": "open",
+      "itemDurationMs": 145,
+      "staggerMs": 22,
+      "totalMsForSixItems": 255,
+      "offsetYPx": -5,
+      "startOpacity": 0.35,
+      "easing": "cubic-bezier(.2,.75,.25,1)",
+      "access": "immediate",
+      "close": "immediate",
+      "reducedMotion": "disabled",
+      "keyboardFocus": "immediate-no-animation"
+    }
   },
   "rules": {
     "reducedMotion": true,
@@ -409,4 +479,4 @@
     "publication": "preview and production approvals separate"
   }
 }</script>
-<script>const demoSend=document.getElementById('guide-contact-send');demoSend.addEventListener('click',()=>{const box=document.getElementById('guide-contact-feedback'),dot=box.querySelector('.cm-contact-loader'),status=box.querySelector('p');demoSend.disabled=true;box.dataset.state='sending';dot.hidden=false;status.textContent='Anfrage wird gesendet\nIhre Daten werden sicher übermittelt.';setTimeout(()=>{dot.hidden=true;box.dataset.state='success';status.textContent='Anfrage erfolgreich versendet.\nVielen Dank für Ihre Nachricht. Wir melden uns schnellstmöglich bei Ihnen.';demoSend.disabled=false},1500)});const reveal=document.getElementById('reveal-next');document.getElementById('replay').addEventListener('click',()=>{reveal.classList.remove('run');void reveal.offsetWidth;reveal.classList.add('run')});document.getElementById('copy-css').addEventListener('click',async e=>{try{await navigator.clipboard.writeText(document.getElementById('css-source').textContent);e.target.textContent='Kopiert'}catch{const range=document.createRange();range.selectNodeContents(document.getElementById('css-source'));const sel=window.getSelection();sel.removeAllRanges();sel.addRange(range);e.target.textContent='Text markiert – Strg+C'}});</script></body></html>
+<script>const menuToggle=document.getElementById("guide-menu-toggle"),menuPreview=document.getElementById("guide-mobile-menu");menuToggle.addEventListener("click",()=>{const open=menuPreview.hidden;menuPreview.hidden=!open;menuPreview.classList.toggle("is-open",open);menuToggle.setAttribute("aria-expanded",String(open));menuToggle.textContent=open?"Menü ✕":"Menü ☰"});const demoSend=document.getElementById('guide-contact-send');demoSend.addEventListener('click',()=>{const box=document.getElementById('guide-contact-feedback'),dot=box.querySelector('.cm-contact-loader'),status=box.querySelector('p');demoSend.disabled=true;box.dataset.state='sending';dot.hidden=false;status.textContent='Anfrage wird gesendet\nIhre Daten werden sicher übermittelt.';setTimeout(()=>{dot.hidden=true;box.dataset.state='success';status.textContent='Anfrage erfolgreich versendet.\nVielen Dank für Ihre Nachricht. Wir melden uns schnellstmöglich bei Ihnen.';demoSend.disabled=false},1500)});const reveal=document.getElementById('reveal-next');document.getElementById('replay').addEventListener('click',()=>{reveal.classList.remove('run');void reveal.offsetWidth;reveal.classList.add('run')});document.getElementById('copy-css').addEventListener('click',async e=>{try{await navigator.clipboard.writeText(document.getElementById('css-source').textContent);e.target.textContent='Kopiert'}catch{const range=document.createRange();range.selectNodeContents(document.getElementById('css-source'));const sel=window.getSelection();sel.removeAllRanges();sel.addRange(range);e.target.textContent='Text markiert – Strg+C'}});</script></body></html>
