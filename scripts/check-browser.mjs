@@ -189,12 +189,12 @@ async function captureJournalReview(browser){
       const elements=[...main.querySelectorAll('.j-prose [data-editorial]')];
       return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,
        missingImages:[...main.querySelectorAll('img')].filter(i=>!i.naturalWidth).map(i=>i.currentSrc||i.src),
-       modules:elements.map(el=>({id:el.dataset.editorial,width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height,overflow:el.scrollWidth>el.clientWidth+2})),
+       modules:elements.map(el=>({id:el.dataset.editorial,width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height,overflow:el.scrollWidth>el.clientWidth+2,allowedLocalScroll:el.matches('.ed-table')&&el.tabIndex===0&&['auto','scroll'].includes(getComputedStyle(el).overflowX)})),
        tables:[...main.querySelectorAll('.ed-table')].map(el=>({focusable:el.tabIndex===0,scrollable:el.scrollWidth>el.clientWidth+2})),
        h1:main.querySelector('h1')?.innerText};
      });
      review.push({id,route,...metrics});
-     if(metrics.scrollWidth>metrics.width+2||metrics.missingImages.length||metrics.modules.some(m=>m.height<=0||m.width<=0||(m.overflow&&!metrics.tables.some(t=>t.scrollable&&t.focusable))))throw Error('Review evidence: overflow, missing media or invisible editorial module');
+     if(metrics.scrollWidth>metrics.width+2||metrics.missingImages.length||metrics.modules.some(m=>m.height<=0||m.width<=0||(m.overflow&&!m.allowedLocalScroll)))throw Error('Review evidence: overflow, missing media or invisible editorial module');
      await page.screenshot({animations:'disabled',caret:'hide',path:join(dir,id+'-full.png'),fullPage:true});
      const article=page.locator('main .j-prose');if(await article.count()){
       const modules=article.locator('[data-editorial]');

@@ -43,6 +43,7 @@ jobs:
         env:
           CREAID_QA_BASELINE: http://127.0.0.1:8081
           CREAID_QA_EDGE: '1'
+          CREAID_QA_JOURNAL_REVIEW: ${{ startsWith(github.head_ref, 'seo/phase-5-') && '1' || '0' }}
         run: npm run test:browser
       - uses: actions/upload-artifact@v4
         if: always()
