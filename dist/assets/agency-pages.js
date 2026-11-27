@@ -59,7 +59,7 @@
   const form=document.querySelector('#agencyEnquiry');
   if(form){const params=new URLSearchParams(location.search);if(params.get('service')){const sel=form.querySelector('[name="service"]');const requested=params.get('service');const legacy={'Marketing & Branding':'Digitales Marketing'};const option=[...sel.options].find(x=>x.value===(legacy[requested]||requested));if(option)sel.value=option.value;}
     const packageName=params.get('paket');const allowedPackages=["Starter","Wachstum","Dominanz","Praxis-Kompakt","Praxis-Plus","Praxis-Premium","Immo-Kompakt","Immo-Plus","Immo-Premium","Conversion-Kompakt","Conversion-Plus","Conversion-Premium","Ads Basis","Ads Aktiv","Ads Performance","Ads Start","Ads Wachstum","Ads Premium","Kompakt","Plus","Premium","Einmalige Wartung","Jahreswartung","WhatsApp-Button mit Direktverlinkung","Hinweis-Popup","Öffnungszeiten-/Verfügbarkeitsmodul","Google Maps-Einbindung","Google Business Profil-Einrichtung","FAQ-Bereich","Teamseite (allgemein)","Teamseite-Upgrade auf Einzelprofile","Blogbereich","Blog-Erweiterung","Mehrsprachigkeit"];const message=form.querySelector('[name="message"]');if(allowedPackages.includes(packageName)&&message&&!message.value)message.value='Ich interessiere mich für das Paket '+packageName+'.\n\n';
-    const direct=location.origin==='https://vorschau.creaid-media.de';
+    const direct=['https://creaid-media.de','https://vorschau.creaid-media.de'].includes(location.origin);
     const submit=form.querySelector('button[type="submit"]');
     const status=document.querySelector('#aFormMessage');
     const feedback=document.querySelector('#aContactFeedback');
