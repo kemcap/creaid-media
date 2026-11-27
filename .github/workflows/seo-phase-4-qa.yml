@@ -36,7 +36,8 @@ jobs:
           (cd "$RUNNER_TEMP/onpage-baseline" && npm ci && npm run build)
           python scripts/check-onpage-seo.py --baseline --dist "$RUNNER_TEMP/onpage-baseline/dist" --output seo-phase4-report/baseline.json
       - run: python scripts/check-onpage-seo.py --output seo-phase4-report/candidate.json
-      - name: Verify route and content scope
+      - name: Verify route and content scope (phase 4 release only)
+        if: startsWith(github.head_ref, 'seo/phase-4-')
         env:
           BASELINE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
