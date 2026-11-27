@@ -1,9 +1,19 @@
+import { readFileSync } from 'node:fs';
 import { editorialArticle } from './scripts/journal-editorial.mjs';
 import { redirect, routeFiles } from './scripts/routes.mjs';
 import { transformHeadings } from './scripts/heading-semantics.mjs';
 import { decoratePageHeadings } from './scripts/heading-dot.mjs';
 
 export default function (eleventyConfig) {
+  const releaseReview = process.env.CREAID_RELEASE_REVIEW === '1';
+  const draftKeys = releaseReview
+    ? new Set(Object.keys(JSON.parse(readFileSync(new URL('./src/_data/wordpressPreviewDrafts.json', import.meta.url), 'utf8'))))
+    : new Set();
+  eleventyConfig.addGlobalData('releaseReview', releaseReview);
+  eleventyConfig.addFilter('releaseJournal', (posts) => releaseReview ? posts.filter((post) => !draftKeys.has(post.slug)) : posts);
+  eleventyConfig.addFilter('releaseLinks', (links) => releaseReview && links
+    ? links.filter((link) => !draftKeys.has(link.target) && link.target !== 'projekt-detail')
+    : links);
   eleventyConfig.addFilter('editorialArticle', editorialArticle);
   eleventyConfig.addFilter('previewArticleLinks', (html) => html.replace(
     /(<a\b[^>]*?\shref=["'])https:\/\/creaid-media\.de(\/[^"']*)(?=["'])/gi,
@@ -15,7 +25,9 @@ export default function (eleventyConfig) {
   ));
   eleventyConfig.addPassthroughCopy({ 'public/assets': 'assets' });
   eleventyConfig.addPassthroughCopy({ 'public/robots.txt': 'robots.txt' });
-  eleventyConfig.addPassthroughCopy({ 'docs/CreAid-Media-Style-Guide.html': 'assets/demos/creaid-style-guide.html' });
+  if (!releaseReview) {
+    eleventyConfig.addPassthroughCopy({ 'docs/CreAid-Media-Style-Guide.html': 'assets/demos/creaid-style-guide.html' });
+  }
   for (const subset of ['latin', 'latin-ext']) {
     for (const weight of [300, 400, 500, 700]) {
       const file = `ubuntu-${subset}-${weight}-normal.woff2`;

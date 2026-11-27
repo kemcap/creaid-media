@@ -12,7 +12,7 @@ permalink: /archiv-google-ads.html
       <h1 class="cm-archive-title">Google Ads.</h1>
       <p>Ratgeber zu Google Ads, Kampagnen und Anfragen für Unternehmen.</p>
       <div class="j-articles">
-        {% for post in postsIndex %}
+        {% for post in postsIndex | releaseJournal %}
           {% if post.slug == "google-ads-aber-keine-anfragen" %}
             {% include "partials/journal-card.njk" %}
           {% endif %}
