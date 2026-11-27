@@ -20,7 +20,21 @@
     "link": {
       "href": "/website-wartung-fuer-firmen",
       "label": "Website-Wartung verstehen"
-    }
+    },
+    "related": [
+      {
+        "href": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+        "label": "Webdesign für Handwerker"
+      },
+      {
+        "href": "/webdesign/webdesign-fuer-aerzte",
+        "label": "Webdesign für Arztpraxen"
+      },
+      {
+        "href": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+        "label": "Webdesign für Immobilienmakler"
+      }
+    ]
   },
   "marketing": {
     "title": "Marketing mit nachvollziehbaren Zielen",
@@ -43,7 +57,17 @@
     "link": {
       "href": "/google-ads-aber-keine-anfragen",
       "label": "Kampagnenprobleme einordnen"
-    }
+    },
+    "related": [
+      {
+        "href": "/seo-3",
+        "label": "SEO & Content-Marketing"
+      },
+      {
+        "href": "/google-ads-social-media",
+        "label": "Google Ads & Social Media"
+      }
+    ]
   },
   "branding": {
     "title": "Ein Erscheinungsbild für alle Medien",
@@ -66,7 +90,17 @@
     "link": {
       "href": "/corporate-design-erstellen-lassen",
       "label": "Corporate Design planen"
-    }
+    },
+    "related": [
+      {
+        "href": "/print-design",
+        "label": "Printdesign & Editorial"
+      },
+      {
+        "href": "/logo-design-agentur",
+        "label": "Logo-Design-Agentur auswählen"
+      }
+    ]
   },
   "ki-automatisierung": {
     "title": "Automatisierung mit klaren Freigaben",
@@ -89,7 +123,17 @@
     "link": {
       "href": "/ki-automatisierung-fuer-unternehmen",
       "label": "KI-Pilot Schritt für Schritt"
-    }
+    },
+    "related": [
+      {
+        "href": "/ki-workflows-crm",
+        "label": "KI-Workflows & CRM"
+      },
+      {
+        "href": "/systemintegration",
+        "label": "Systemintegration planen"
+      }
+    ]
   },
   "onlineshops-ecommerce": {
     "title": "Ein Shop, der zum Sortiment passt",
