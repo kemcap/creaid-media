@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 const browser=await chromium.launch({headless:true});
-const base='http://127.0.0.1:8080',origin='https://vorschau.creaid-media.de';
+const base='http://127.0.0.1:8080',origin=process.env.CREAID_CONTACT_TEST_ORIGIN||'https://vorschau.creaid-media.de';
 const context=await browser.newContext({reducedMotion:'reduce',viewport:{width:1440,height:900}});
 let calls=0, mode='unavailable', last;
 try{
