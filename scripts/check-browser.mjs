@@ -161,11 +161,12 @@ async function interactionTests(browser){
    await p.setViewportSize({width,height:844});
    await p.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
    const strip=p.locator('#cm-contactbar');
-   assert.equal(await strip.locator('a').count(),4,'Four direct contact links required');
+   assert.equal(await strip.locator('a').count(),6,'Six direct contact links required');
    const initial=await strip.boundingBox();
    assert.ok(initial && initial.height>=28 && initial.height<=36 && initial.y>=-1,'Slim contact strip at page top');
    assert.ok(await strip.evaluate(e=>[...e.querySelectorAll('a')].every(a=>{const r=a.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1;})),'Contact links overflow');
-   assert.ok(await strip.evaluate(e=>{const a=[...e.querySelectorAll('a')];return a[0].href.includes('linkedin')&&a[1].href.startsWith('mailto:')&&a[2].getAttribute('aria-label').includes('WhatsApp')&&a[3].href.startsWith('tel:');}),'Contact order');
+   assert.ok(await strip.evaluate(e=>{const a=[...e.querySelectorAll('a')];return a[0].href.includes('linkedin')&&a[1].href==='https://www.instagram.com/creaid.media/'&&a[2].href==='https://www.facebook.com/p/CreAid-Media-61585200856940/'&&a[3].href.startsWith('mailto:')&&a[4].getAttribute('aria-label').includes('WhatsApp')&&a[5].href.startsWith('tel:');}),'Contact order');
+   assert.deepEqual(await p.locator('.cm-footer__social a').evaluateAll(a=>a.map(x=>x.href)),['https://www.linkedin.com/company/creaid-media','https://www.instagram.com/creaid.media/','https://www.facebook.com/p/CreAid-Media-61585200856940/'],'Footer social order and destinations');
    const ticker=await p.locator('.cm-hero-ticker').boundingBox();
    assert.ok(ticker && Math.abs(ticker.y+ticker.height-844)<=2,'Ticker must end at viewport bottom on standard viewport');
    await p.evaluate(()=>window.scrollTo({top:200,behavior:'instant'}));
