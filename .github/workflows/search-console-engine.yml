@@ -1,0 +1,55 @@
+name: CreAid SEO Engine
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/search-console-engine.yml'
+      - '.github/scripts/search-console-engine.py'
+  workflow_run:
+    workflows: ['IONOS - Website hochladen (Produktion)']
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '23 5 * * *'
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: creaid-search-console
+  cancel-in-progress: false
+jobs:
+  inspect:
+    if: github.ref == 'refs/heads/main' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m py_compile .github/scripts/search-console-engine.py
+      - name: Authenticate using GitHub OIDC
+        id: auth
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: projects/46336472546/locations/global/workloadIdentityPools/creaid-github/providers/github-actions
+          service_account: creaid-seo-engine@creaid-seo-engine.iam.gserviceaccount.com
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/webmasters
+          create_credentials_file: false
+          export_environment_variables: false
+      - name: Submit sitemap and inspect indexed URL status
+        env:
+          GSC_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+          SUBMIT_SITEMAP: ${{ github.event_name != 'schedule' }}
+        run: python .github/scripts/search-console-engine.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: creaid-search-console-report
+          path: seo-report/
+          if-no-files-found: ignore
+          retention-days: 30
