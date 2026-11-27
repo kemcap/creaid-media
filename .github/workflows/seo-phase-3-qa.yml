@@ -1,0 +1,35 @@
+name: SEO phase 3 keyword strategy QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/seo/phase-3/**'
+      - 'scripts/check-keyword-strategy.mjs'
+      - '.github/scripts/search_console_performance.py'
+      - '.github/scripts/test-search-console-performance.py'
+      - '.github/scripts/search-console-engine.py'
+      - '.github/workflows/seo-phase-3-qa.yml'
+      - 'src/_data/**'
+      - 'package.json'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: node scripts/check-keyword-strategy.mjs --export
+      - run: python -m py_compile .github/scripts/search-console-engine.py .github/scripts/search_console_performance.py
+      - run: python .github/scripts/test-search-console-performance.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: seo-phase3-keyword-matrix
+          path: seo-phase3-report/
+          retention-days: 30
