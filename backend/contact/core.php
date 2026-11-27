@@ -130,7 +130,14 @@ function sendOnce(array $data, array $config, string $file, callable $send, int 
 function handle(array $server,string $body,array $config,string $rateFile,callable $send,int $now,?callable $verify=null): array {
     if(($server['REQUEST_METHOD']??'')!=='POST')throw new Rejection(405,'method');
     checkConfig($config);
-    if(!in_array($server['HTTP_ORIGIN']??'', $config['allowed_origins'],true))throw new Rejection(403,'origin');
+    $origin=$server['HTTP_ORIGIN']??'';
+    if(!in_array($origin, $config['allowed_origins'],true))throw new Rejection(403,'origin');
+    // Match the challenge to the actual allowed request origin, not another trusted host.
+    if(isset($config['turnstile_hostnames'])){
+        $hostname=parse_url($origin,PHP_URL_HOST);
+        if(!is_array($config['turnstile_hostnames'])||!is_string($hostname)||!in_array($hostname,$config['turnstile_hostnames'],true))throw new Rejection(503,'captcha_unavailable');
+        $config['turnstile_hostname']=$hostname;
+    }
     if(!preg_match('~^application/json(?:\s*;|$)~i',$server['CONTENT_TYPE']??''))throw new Rejection(415,'content_type');
     if((int)($server['CONTENT_LENGTH']??0)>MAX_BODY||strlen($body)>MAX_BODY)throw new Rejection(413,'too_large');
     rateLimit($rateFile,(string)($server['REMOTE_ADDR']??''),$config['rate_secret'],$now);

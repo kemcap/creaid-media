@@ -33,5 +33,13 @@ try{
  if($sent!==0)throw new RuntimeException('Invalid challenge reached mailer');
  $r=handle($s,json_encode($d+['turnstile_token'=>'valid']),$c,$file,$send,1000,$v);
  if(!$r['ok']||$sent!==1)throw new RuntimeException('Valid challenge not accepted');
+ $live=array_replace($s,['HTTP_ORIGIN'=>'https://creaid-media.de','REMOTE_ADDR'=>'192.0.2.11']);
+ $liveData=array_replace($d,['message'=>'Production host isolated test']);
+ expectReject(422,'captcha_invalid',fn()=>handle($live,json_encode($liveData+['turnstile_token'=>'valid']),$c,$file,$send,1000,$v));
+ if($sent!==1)throw new RuntimeException('Preview token accepted on production');
+ $liveVerifier=fn($token,$cfg)=>verifyTurnstile($token,$cfg,fn()=>array_replace($ok,['hostname'=>'creaid-media.de']));
+ $result=handle($live,json_encode($liveData+['turnstile_token'=>'valid']),$c,$file,$send,1000,$liveVerifier);
+ if(!$result['ok']||$sent!==2)throw new RuntimeException('Production challenge not accepted');
+ expectReject(403,'origin',fn()=>handle(array_replace($live,['HTTP_ORIGIN'=>'https://evil.example']),json_encode($liveData+['turnstile_token'=>'valid']),$c,$file,$send,1000,$liveVerifier));
  echo "TURNSTILE_QA_OK: missing, forged, expired/replayed, hostname/action mismatch, upstream errors and fail-closed mailer checked; no real network or mail.\n";
 }finally{foreach(glob($file.'*') as $testFile)unlink($testFile);}
