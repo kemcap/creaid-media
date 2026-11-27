@@ -15,6 +15,14 @@
       "anchor": "Standardsoftware und individuelle Entwicklung vergleichen",
       "priority": "P2",
       "placement": "Im Artikel: Vertiefung"
+    },
+    {
+      "source": "b2b-portal-entwickeln-lassen",
+      "target": "b2b-portal-entwicklung",
+      "url": "/b2b-portal-entwicklung",
+      "anchor": "B2B-Portal-Entwicklung: Projektumfang klären",
+      "priority": "P2",
+      "placement": "Passende Leistungen und Ratgeber"
     }
   ],
   "beste-landingpage-elemente-fuer-kampagnen": [
@@ -267,6 +275,14 @@
       "anchor": "B2B-Portal als anderes Plattformmodell prüfen",
       "priority": "P2",
       "placement": "Im Artikel: Vertiefung"
+    },
+    {
+      "source": "marktplatz-plattform-entwickeln",
+      "target": "marktplatz-entwicklung",
+      "url": "/marktplatz-entwicklung",
+      "anchor": "Marktplatz-Entwicklung: Anforderungen besprechen",
+      "priority": "P2",
+      "placement": "Passende Leistungen und Ratgeber"
     }
   ],
   "messeauftritt-gestalten-lassen": [
@@ -671,6 +687,14 @@
       "anchor": "Bestehende Website auf Schwachstellen prüfen",
       "priority": "P2",
       "placement": "Im Artikel: Vertiefung"
+    },
+    {
+      "source": "website-wartung-fuer-firmen",
+      "target": "upgrades-wartung",
+      "url": "/upgrades-wartung",
+      "anchor": "Website-Wartung und Updates beauftragen",
+      "priority": "P2",
+      "placement": "Passende Leistungen und Ratgeber"
     }
   ],
   "wie-wirkt-corporate-design": [
@@ -1199,6 +1223,14 @@
       "anchor": "Website verbessern: 7 Schritte für bestehende Seiten",
       "priority": "P2",
       "placement": "Im Artikel: Vertiefung"
+    },
+    {
+      "source": "website-audit-unternehmen",
+      "target": "performance-audit-3",
+      "url": "/performance-audit-3",
+      "anchor": "Technisches Performance-Audit für Ihre Website",
+      "priority": "P2",
+      "placement": "Passende Leistungen und Ratgeber"
     }
   ],
   "360-grad-rundgang-erstellen": [

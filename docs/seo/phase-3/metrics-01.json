@@ -1,0 +1,247 @@
+{
+  "requested": [
+    "webdesign für immobilienmakler",
+    "webdesign arzt",
+    "webdesign agentur hamburg",
+    "webdesign für immobilienfirmen",
+    "aussenauftritt von marken",
+    "website für ärzte",
+    "webdesign für dachdecker firma",
+    "immobilien webdesign agentur",
+    "webdesign outsourcing deutschland",
+    "webdesigner für ärzte",
+    "webdesign agentur für handwerker",
+    "website erstellen lassen nrw",
+    "websites für ärzte",
+    "webdesign für medizinische praxen",
+    "website erstellen lassen berlin",
+    "professionelle website für lokale dienstleister",
+    "website conversion verbessern",
+    "webdesign für immobilien",
+    "webservice für ärzte",
+    "textiler markenauftritt unternehmen",
+    "webdesign für unternehmen die wachsen wollen",
+    "corporate design erstellen lassen",
+    "homepage für immobilienmakler erstellen",
+    "google maps verbessern"
+  ],
+  "rows": [
+    {
+      "keyword": "webdesign für immobilienmakler",
+      "search_intent": "Commercial",
+      "volume": 170,
+      "cpc": 15.12,
+      "sd": 9,
+      "pd": 53,
+      "competition": 0.53
+    },
+    {
+      "keyword": "webdesign arzt",
+      "search_intent": "Commercial",
+      "volume": 390,
+      "cpc": 9.44,
+      "sd": 35,
+      "pd": 45,
+      "competition": 0.45
+    },
+    {
+      "keyword": "webdesign agentur hamburg",
+      "search_intent": "Commercial",
+      "volume": 210,
+      "cpc": 15.61,
+      "sd": 29,
+      "pd": 68,
+      "competition": 0.68
+    },
+    {
+      "keyword": "webdesign für immobilienfirmen",
+      "search_intent": null,
+      "volume": 20,
+      "cpc": 0,
+      "sd": 11,
+      "pd": 31,
+      "competition": 0.31
+    },
+    {
+      "keyword": "aussenauftritt von marken",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 8,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "website für ärzte",
+      "search_intent": "Navigational",
+      "volume": 390,
+      "cpc": 7.42,
+      "sd": 33,
+      "pd": 47,
+      "competition": 0.47
+    },
+    {
+      "keyword": "webdesign für dachdecker firma",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 8,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "immobilien webdesign agentur",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 12,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "webdesign outsourcing deutschland",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 27,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "webdesigner für ärzte",
+      "search_intent": "Commercial",
+      "volume": 480,
+      "cpc": 11.22,
+      "sd": 28,
+      "pd": 59,
+      "competition": 0.59
+    },
+    {
+      "keyword": "webdesign agentur für handwerker",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 9,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "website erstellen lassen nrw",
+      "search_intent": null,
+      "volume": 10,
+      "cpc": 0,
+      "sd": 35,
+      "pd": 5,
+      "competition": 0.05
+    },
+    {
+      "keyword": "websites für ärzte",
+      "search_intent": null,
+      "volume": 880,
+      "cpc": 10.37,
+      "sd": 32,
+      "pd": 30,
+      "competition": 0.3
+    },
+    {
+      "keyword": "webdesign für medizinische praxen",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 36,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "website erstellen lassen berlin",
+      "search_intent": "Commercial",
+      "volume": 720,
+      "cpc": 16.18,
+      "sd": 27,
+      "pd": 56,
+      "competition": 0.56
+    },
+    {
+      "keyword": "professionelle website für lokale dienstleister",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 15,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "website conversion verbessern",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 12,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "webdesign für immobilien",
+      "search_intent": null,
+      "volume": 20,
+      "cpc": 0,
+      "sd": 19,
+      "pd": 18,
+      "competition": 0.18
+    },
+    {
+      "keyword": "webservice für ärzte",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 31,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "textiler markenauftritt unternehmen",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 10,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "webdesign für unternehmen die wachsen wollen",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 10,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "corporate design erstellen lassen",
+      "search_intent": "Transactional",
+      "volume": 90,
+      "cpc": 10.42,
+      "sd": 20,
+      "pd": 44,
+      "competition": 0.44
+    },
+    {
+      "keyword": "homepage für immobilienmakler erstellen",
+      "search_intent": "Commercial",
+      "volume": 70,
+      "cpc": 8.25,
+      "sd": 18,
+      "pd": 6,
+      "competition": 0.06
+    },
+    {
+      "keyword": "google maps verbessern",
+      "search_intent": null,
+      "volume": 20,
+      "cpc": 0,
+      "sd": 39,
+      "pd": 4,
+      "competition": 0.04
+    }
+  ],
+  "errors": []
+}

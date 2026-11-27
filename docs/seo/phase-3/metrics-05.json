@@ -1,0 +1,222 @@
+{
+  "requested": [
+    "website audit",
+    "onlineshop erstellen lassen",
+    "ki automatisierung unternehmen",
+    "wordpress website erstellen lassen",
+    "logo design agentur",
+    "seo agentur für kleine unternehmen",
+    "seo agentur",
+    "branding agentur",
+    "werbeagentur für unternehmen",
+    "webdesign für unternehmen",
+    "webdesign für kleine unternehmen",
+    "crm automatisierung",
+    "google ads agentur",
+    "social media agentur",
+    "printdesign agentur",
+    "website wartung für firmen",
+    "performance optimierung website",
+    "b2b portal entwickeln lassen",
+    "marktplatz entwickeln lassen",
+    "google maps eintrag optimieren",
+    "lokale seo",
+    "barrierefreie website",
+    "website audit unternehmen",
+    "website modernisieren"
+  ],
+  "rows": [
+    {
+      "keyword": "website audit",
+      "search_intent": "Commercial",
+      "volume": 720,
+      "cpc": 16.62,
+      "sd": 67,
+      "pd": 60,
+      "competition": 0.6
+    },
+    {
+      "keyword": "onlineshop erstellen lassen",
+      "search_intent": "Transactional",
+      "volume": 320,
+      "cpc": 22.85,
+      "sd": 21,
+      "pd": 62,
+      "competition": 0.62
+    },
+    {
+      "keyword": "ki automatisierung unternehmen",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 12,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "wordpress website erstellen lassen",
+      "search_intent": "Commercial",
+      "volume": 480,
+      "cpc": 16.25,
+      "sd": 30,
+      "pd": 56,
+      "competition": 0.56
+    },
+    {
+      "keyword": "logo design agentur",
+      "search_intent": "Commercial",
+      "volume": 110,
+      "cpc": 8.08,
+      "sd": 14,
+      "pd": 49,
+      "competition": 0.49
+    },
+    {
+      "keyword": "seo agentur für kleine unternehmen",
+      "search_intent": "Commercial",
+      "volume": 50,
+      "cpc": 30.75,
+      "sd": 30,
+      "pd": 12,
+      "competition": 0.12
+    },
+    {
+      "keyword": "seo agentur",
+      "search_intent": "Commercial",
+      "volume": 3600,
+      "cpc": 29.97,
+      "sd": 11,
+      "pd": 57,
+      "competition": 0.58
+    },
+    {
+      "keyword": "branding agentur",
+      "search_intent": "Commercial",
+      "volume": 880,
+      "cpc": 10.12,
+      "sd": 11,
+      "pd": 49,
+      "competition": 0.49
+    },
+    {
+      "keyword": "werbeagentur für unternehmen",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 12,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "webdesign für unternehmen",
+      "search_intent": "Commercial",
+      "volume": 110,
+      "cpc": 21.15,
+      "sd": 19,
+      "pd": 30,
+      "competition": 0.3
+    },
+    {
+      "keyword": "webdesign für kleine unternehmen",
+      "search_intent": "Commercial",
+      "volume": 70,
+      "cpc": 8.29,
+      "sd": 16,
+      "pd": 27,
+      "competition": 0.27
+    },
+    {
+      "keyword": "crm automatisierung",
+      "search_intent": null,
+      "volume": 20,
+      "cpc": 3.965,
+      "sd": 26,
+      "pd": 24,
+      "competition": 0.24
+    },
+    {
+      "keyword": "google ads agentur",
+      "search_intent": "Commercial",
+      "volume": 1300,
+      "cpc": 71.32,
+      "sd": 36,
+      "pd": 65,
+      "competition": 0.65
+    },
+    {
+      "keyword": "social media agentur",
+      "search_intent": "Commercial",
+      "volume": 3600,
+      "cpc": 9.89,
+      "sd": 15,
+      "pd": 54,
+      "competition": 0.54
+    },
+    {
+      "keyword": "printdesign agentur",
+      "search_intent": "Commercial",
+      "volume": 70,
+      "cpc": 0,
+      "sd": 9,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "website wartung für firmen",
+      "search_intent": null
+    },
+    {
+      "keyword": "performance optimierung website",
+      "search_intent": null
+    },
+    {
+      "keyword": "b2b portal entwickeln lassen",
+      "search_intent": null
+    },
+    {
+      "keyword": "marktplatz entwickeln lassen",
+      "search_intent": null
+    },
+    {
+      "keyword": "google maps eintrag optimieren",
+      "search_intent": "Navigational",
+      "volume": 10,
+      "cpc": 12.97,
+      "sd": 31,
+      "pd": 75,
+      "competition": 0.75
+    },
+    {
+      "keyword": "lokale seo",
+      "search_intent": "Commercial",
+      "volume": 260,
+      "cpc": 11.47,
+      "sd": 39,
+      "pd": 26,
+      "competition": 0.26
+    },
+    {
+      "keyword": "barrierefreie website",
+      "search_intent": "Informational",
+      "volume": 1000,
+      "cpc": 7.6,
+      "sd": 11,
+      "pd": 70,
+      "competition": 0.7
+    },
+    {
+      "keyword": "website audit unternehmen",
+      "search_intent": null
+    },
+    {
+      "keyword": "website modernisieren",
+      "search_intent": "Informational",
+      "volume": 70,
+      "cpc": 13.28,
+      "sd": 13,
+      "pd": 74,
+      "competition": 0.74
+    }
+  ],
+  "errors": []
+}

@@ -5,6 +5,7 @@ import json
 import os
 import time
 from collections import Counter
+from search_console_performance import performance_report
 from pathlib import Path
 from urllib.parse import quote, urlsplit
 from urllib.request import Request, urlopen
@@ -77,6 +78,17 @@ def main():
     if os.environ.get("SUBMIT_SITEMAP", "true") == "true":
         request(API + "/sites/" + quote(property_url, safe="") + "/sitemaps/" + quote(SITEMAP, safe=""), "PUT")
         print("Sitemap submission accepted", flush=True)
+    try:
+        performance = performance_report(request, API, property_url, OUT)
+        print("Search performance summary:", json.dumps(performance), flush=True)
+        with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
+            f.write("## Read-only DE search performance / query-page overlap\n\n")
+            for item in performance:
+                f.write(f"- {item['days']} days: {item['queryPageRows']} query/page rows, {item['reviewSignals']} review signals, truncated={item['truncated']}\n")
+            f.write("\nReview signals are not proof of cannibalization. See artifact.\n\n")
+    except Exception as error:
+        (OUT / "performance-error.json").write_text(json.dumps({"status":"error","message":str(error)[:1000]},indent=2),encoding="utf-8")
+        print("Search performance report unavailable; index inspection continues.",flush=True)
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
         results = list(pool.map(lambda u: inspect(u, property_url), urls))
     counts = Counter(r["status"] for r in results)

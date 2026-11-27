@@ -1,0 +1,1931 @@
+[
+  {
+    "pageKey": "b2b-portal-entwickeln-lassen",
+    "url": "/b2b-portal-entwickeln-lassen",
+    "role": "journal",
+    "focusKeyword": "b2b portal funktionen und aufwand",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/b2b-portal-entwicklung",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "beste-landingpage-elemente-fuer-kampagnen",
+    "url": "/beste-landingpage-elemente-fuer-kampagnen",
+    "role": "journal",
+    "focusKeyword": "landingpage aufbau für kampagnen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/google-ads-social-media",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "blog",
+    "url": "/creaid-blog",
+    "role": "navigation",
+    "focusKeyword": "journal webdesign seo branding ki",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Navigation/Marke",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Navigation, Orientierung und Markenidentität; keine anderen Leistungsseiten verdrängen."
+  },
+  {
+    "pageKey": "branding",
+    "url": "/grafikdesign-2",
+    "role": "service",
+    "focusKeyword": "branding agentur",
+    "focusMetrics": {
+      "volume": 880,
+      "cpcUSD": 10.12,
+      "seoDifficulty": 11,
+      "businessScore": 132.48
+    },
+    "ownedKeywords": [
+      "aussenauftritt von marken",
+      "corporate design erstellen lassen",
+      "markenauftritt optimieren",
+      "branding agentur für startups",
+      "firmenauftritt erstellen lassen",
+      "corporate design für arztpraxis",
+      "corporate design social media",
+      "markenauftritt",
+      "branding für handwerksbetriebe",
+      "branding agentur"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "cookie-einstellungen",
+    "url": "/cookie-einstellungen",
+    "role": "excluded",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "nicht zur Indexierung vorgesehen",
+    "publicationReview": null,
+    "phase": null,
+    "scope": "Keine Ranking-Zielsetzung; Indexierungsstatus beibehalten."
+  },
+  {
+    "pageKey": "corporate-design-erstellen-lassen",
+    "url": "/corporate-design-erstellen-lassen",
+    "role": "journal",
+    "focusKeyword": "corporate design briefing und ablauf",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/grafikdesign-2",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "datenschutz",
+    "url": "/datenschutz",
+    "role": "excluded",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "nicht zur Indexierung vorgesehen",
+    "publicationReview": null,
+    "phase": null,
+    "scope": "Keine Ranking-Zielsetzung; Indexierungsstatus beibehalten."
+  },
+  {
+    "pageKey": "deutschsprachige-agentur-in-der-tuerkei-finden",
+    "url": "/deutschsprachige-agentur-in-der-tuerkei-finden",
+    "role": "journal",
+    "focusKeyword": "deutschsprachige agentur in der türkei finden",
+    "focusMetrics": null,
+    "ownedKeywords": [
+      "agentur in der türkei deutschsprachig"
+    ],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "firmennamen-entwickeln-lassen",
+    "url": "/firmennamen-entwickeln-lassen",
+    "role": "journal",
+    "focusKeyword": "firmennamen entwickeln lassen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/grafikdesign-2",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "flyer-design-fuer-unternehmen",
+    "url": "/flyer-design-fuer-unternehmen",
+    "role": "journal",
+    "focusKeyword": "flyer design für unternehmen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/print-design",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "google-ads-aber-keine-anfragen",
+    "url": "/google-ads-aber-keine-anfragen",
+    "role": "journal",
+    "focusKeyword": "google ads aber keine anfragen",
+    "focusMetrics": {
+      "volume": 0,
+      "cpcUSD": 0,
+      "seoDifficulty": 12,
+      "businessScore": 0
+    },
+    "ownedKeywords": [
+      "google ads aber keine anfragen"
+    ],
+    "commercialParent": "/google-ads-social-media",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "google-ads-social-media",
+    "url": "/google-ads-social-media",
+    "role": "service",
+    "focusKeyword": "google ads agentur",
+    "focusMetrics": {
+      "volume": 1300,
+      "cpcUSD": 71.32,
+      "seoDifficulty": 36,
+      "businessScore": 103.01777777777775
+    },
+    "ownedKeywords": [
+      "google ads agentur",
+      "social media agentur"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "google-maps-auffindbarkeit-verbessern",
+    "url": "/google-maps-auffindbarkeit-verbessern",
+    "role": "journal",
+    "focusKeyword": "google maps auffindbarkeit verbessern",
+    "focusMetrics": null,
+    "ownedKeywords": [
+      "google maps verbessern"
+    ],
+    "commercialParent": "/seo-3",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "guenstige-webdesign-agentur-europa-finden",
+    "url": "/guenstige-webdesign-agentur-europa-finden",
+    "role": "journal",
+    "focusKeyword": "günstige webdesign agentur europa",
+    "focusMetrics": {
+      "volume": 0,
+      "cpcUSD": 0,
+      "seoDifficulty": 20,
+      "businessScore": 0
+    },
+    "ownedKeywords": [
+      "günstige webdesign agentur europa"
+    ],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "impressum",
+    "url": "/impressum",
+    "role": "excluded",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "nicht zur Indexierung vorgesehen",
+    "publicationReview": null,
+    "phase": null,
+    "scope": "Keine Ranking-Zielsetzung; Indexierungsstatus beibehalten."
+  },
+  {
+    "pageKey": "index",
+    "url": "/",
+    "role": "navigation",
+    "focusKeyword": "werbeagentur deutschland",
+    "focusMetrics": {
+      "volume": 320,
+      "cpcUSD": 4.58,
+      "seoDifficulty": 14,
+      "businessScore": 10.767673469387754
+    },
+    "ownedKeywords": [
+      "werbeagentur deutschland",
+      "creaid",
+      "werbeagentur für unternehmen"
+    ],
+    "commercialParent": null,
+    "intent": "Navigation/Marke",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Navigation, Orientierung und Markenidentität; keine anderen Leistungsseiten verdrängen."
+  },
+  {
+    "pageKey": "individuelle-webentwicklung-fuer-unternehmen",
+    "url": "/individuelle-webentwicklung-fuer-unternehmen",
+    "role": "journal",
+    "focusKeyword": "individuelle webentwicklung oder standardsoftware",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "kampagne-fuer-lokale-unternehmen",
+    "url": "/kampagne-fuer-lokale-unternehmen",
+    "role": "journal",
+    "focusKeyword": "lokale werbekampagne planen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "ki-automatisierung-fuer-unternehmen",
+    "url": "/ki-automatisierung-fuer-unternehmen",
+    "role": "journal",
+    "focusKeyword": "ki automatisierung für kleine unternehmen",
+    "focusMetrics": {
+      "volume": 0,
+      "cpcUSD": 0,
+      "seoDifficulty": 4,
+      "businessScore": 0
+    },
+    "ownedKeywords": [
+      "ki automatisierung für kleine unternehmen"
+    ],
+    "commercialParent": "/ki-automatisierung",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "ki-automatisierung",
+    "url": "/ki-automatisierung",
+    "role": "service",
+    "focusKeyword": "ki automatisierung unternehmen",
+    "focusMetrics": {
+      "volume": 0,
+      "cpcUSD": 0,
+      "seoDifficulty": 12,
+      "businessScore": 0
+    },
+    "ownedKeywords": [
+      "ki automatisierung unternehmen"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "ki-workflows-crm",
+    "url": "/ki-workflows-crm",
+    "role": "service",
+    "focusKeyword": "crm automatisierung",
+    "focusMetrics": {
+      "volume": 20,
+      "cpcUSD": 3.965,
+      "seoDifficulty": 26,
+      "businessScore": 0.21115384615384614
+    },
+    "ownedKeywords": [
+      "crm automatisierung"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "kontakt",
+    "url": "/kontakt",
+    "role": "navigation",
+    "focusKeyword": "creaid-media kontakt",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Navigation/Marke",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Navigation, Orientierung und Markenidentität; keine anderen Leistungsseiten verdrängen."
+  },
+  {
+    "pageKey": "leistungen",
+    "url": "/leistungen",
+    "role": "navigation",
+    "focusKeyword": "spezialleistungen werbeagentur",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Navigation/Marke",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Navigation, Orientierung und Markenidentität; keine anderen Leistungsseiten verdrängen."
+  },
+  {
+    "pageKey": "logo-design-agentur",
+    "url": "/logo-design-agentur",
+    "role": "journal",
+    "focusKeyword": "logo design agentur auswählen",
+    "focusMetrics": null,
+    "ownedKeywords": [
+      "logo design agentur deutschland",
+      "logo design agentur"
+    ],
+    "commercialParent": "/grafikdesign-2",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "logo-und-slogan-entwickeln",
+    "url": "/logo-und-slogan-entwickeln",
+    "role": "journal",
+    "focusKeyword": "slogan entwickeln",
+    "focusMetrics": {
+      "volume": 50,
+      "cpcUSD": 0,
+      "seoDifficulty": 21,
+      "businessScore": 0
+    },
+    "ownedKeywords": [
+      "slogan entwicklung",
+      "slogan entwickeln"
+    ],
+    "commercialParent": "/grafikdesign-2",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "markenauftritt-fuer-kleine-unternehmen",
+    "url": "/markenauftritt-fuer-kleine-unternehmen",
+    "role": "journal",
+    "focusKeyword": "markenauftritt für kleine unternehmen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/grafikdesign-2",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "marketing",
+    "url": "/digitales-marketing",
+    "role": "service",
+    "focusKeyword": "digitales marketing für unternehmen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "marktplatz-plattform-entwickeln",
+    "url": "/marktplatz-plattform-entwickeln",
+    "role": "journal",
+    "focusKeyword": "online marktplatz mvp planen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/marktplatz-entwicklung",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "messeauftritt-gestalten-lassen",
+    "url": "/messeauftritt-gestalten-lassen",
+    "role": "journal",
+    "focusKeyword": "messeauftritt gestalten lassen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "onlineshop-erfolgreich-aufbauen-anleitung",
+    "url": "/onlineshop-erfolgreich-aufbauen-anleitung",
+    "role": "journal",
+    "focusKeyword": "onlineshop aufbauen anleitung",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/online-shop-entwicklung",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "onlineshop-erstellen-lassen",
+    "url": "/onlineshop-erstellen-lassen",
+    "role": "journal",
+    "focusKeyword": "onlineshop selbst erstellen oder agentur",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/online-shop-entwicklung",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "onlineshops-ecommerce",
+    "url": "/online-shop-entwicklung",
+    "role": "service",
+    "focusKeyword": "onlineshop erstellen lassen",
+    "focusMetrics": {
+      "volume": 320,
+      "cpcUSD": 22.85,
+      "seoDifficulty": 21,
+      "businessScore": 29.844897959183672
+    },
+    "ownedKeywords": [
+      "onlineshop erstellen lassen",
+      "onlineshop agentur"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "printdesign-editorial",
+    "url": "/print-design",
+    "role": "service",
+    "focusKeyword": "printdesign agentur",
+    "focusMetrics": {
+      "volume": 70,
+      "cpcUSD": 0,
+      "seoDifficulty": 9,
+      "businessScore": 0
+    },
+    "ownedKeywords": [
+      "printdesign agentur"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "produktfim-erstellen-lassen",
+    "url": "/produktfim-erstellen-lassen",
+    "role": "journal",
+    "focusKeyword": "produktfilm erstellen lassen briefing",
+    "focusMetrics": null,
+    "ownedKeywords": [
+      "produktfilm erstellen lassen"
+    ],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "professionelle-website-fuer-lokale-dienstleister",
+    "url": "/professionelle-website-fuer-lokale-dienstleister",
+    "role": "journal",
+    "focusKeyword": "website aufbau für lokale dienstleister",
+    "focusMetrics": null,
+    "ownedKeywords": [
+      "professionelle website für lokale dienstleister"
+    ],
+    "commercialParent": "/webdesign",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "projekt-detail",
+    "url": "/projekt-detail",
+    "role": "excluded",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "nicht zur Indexierung vorgesehen",
+    "publicationReview": null,
+    "phase": null,
+    "scope": "Keine Ranking-Zielsetzung; Indexierungsstatus beibehalten."
+  },
+  {
+    "pageKey": "referenzen",
+    "url": "/referenzen",
+    "role": "navigation",
+    "focusKeyword": "creaid-media portfolio",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Navigation/Marke",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Navigation, Orientierung und Markenidentität; keine anderen Leistungsseiten verdrängen."
+  },
+  {
+    "pageKey": "schlechte-website-verbessern",
+    "url": "/schlechte-website-verbessern",
+    "role": "journal",
+    "focusKeyword": "website modernisieren",
+    "focusMetrics": {
+      "volume": 70,
+      "cpcUSD": 13.28,
+      "seoDifficulty": 13,
+      "businessScore": 8.250887573964496
+    },
+    "ownedKeywords": [
+      "website conversion verbessern",
+      "schlechte website verbessern",
+      "website modernisieren"
+    ],
+    "commercialParent": "/webdesign",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "seo-content-marketing",
+    "url": "/seo-3",
+    "role": "service",
+    "focusKeyword": "seo agentur",
+    "focusMetrics": {
+      "volume": 3600,
+      "cpcUSD": 29.97,
+      "seoDifficulty": 11,
+      "businessScore": 1284.0039669421487
+    },
+    "ownedKeywords": [
+      "seo agentur für kleine unternehmen",
+      "seo agentur",
+      "seo für kleine unternehmen"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "seo-fuer-lokale-sichtbarkeit",
+    "url": "/seo-fuer-lokale-sichtbarkeit",
+    "role": "journal",
+    "focusKeyword": "lokale seo strategie",
+    "focusMetrics": null,
+    "ownedKeywords": [
+      "lokale seo"
+    ],
+    "commercialParent": "/seo-3",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "seo-grundlagen-lokale-dienstleister",
+    "url": "/seo-grundlagen-lokale-dienstleister",
+    "role": "journal",
+    "focusKeyword": "local seo checkliste",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/seo-3",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "shopware-vs-wordpress-shop",
+    "url": "/shopware-vs-wordpress-shop",
+    "role": "journal",
+    "focusKeyword": "shopware vs woocommerce",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/online-shop-entwicklung",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "social-media-betreuung-unternehmen",
+    "url": "/social-media-betreuung-unternehmen",
+    "role": "journal",
+    "focusKeyword": "social media betreuung leistungen und aufwand",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/google-ads-social-media",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "ueber-uns",
+    "url": "/ueber-uns",
+    "role": "navigation",
+    "focusKeyword": "creaid-media arbeitsweise",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Navigation/Marke",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Navigation, Orientierung und Markenidentität; keine anderen Leistungsseiten verdrängen."
+  },
+  {
+    "pageKey": "warum-bringt-meine-website-keine-kunden",
+    "url": "/warum-bringt-meine-website-keine-kunden",
+    "role": "journal",
+    "focusKeyword": "warum bringt meine website keine kunden",
+    "focusMetrics": {
+      "volume": 0,
+      "cpcUSD": 0,
+      "seoDifficulty": 11,
+      "businessScore": 0
+    },
+    "ownedKeywords": [
+      "wie bekomme ich mehr kunden über meine website",
+      "warum bringt meine website keine kunden"
+    ],
+    "commercialParent": "/webdesign",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "warum-corporate-design-wichtig-ist",
+    "url": "/warum-corporate-design-wichtig-ist",
+    "role": "journal",
+    "focusKeyword": "warum corporate design wichtig ist",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/grafikdesign-2",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "was-kostet-ein-imagefilm",
+    "url": "/was-kostet-ein-imagefilm",
+    "role": "journal",
+    "focusKeyword": "imagefilm kosten",
+    "focusMetrics": {
+      "volume": 170,
+      "cpcUSD": 8.18,
+      "seoDifficulty": 10,
+      "businessScore": 16.687199999999997
+    },
+    "ownedKeywords": [
+      "imagefilm kosten"
+    ],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-agentur-fuer-handwerker",
+    "url": "/webdesign-agentur-fuer-handwerker",
+    "role": "journal",
+    "focusKeyword": "webdesign agentur für handwerker auswählen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-agentur-fuer-kleine-unternehmen",
+    "url": "/webdesign-agentur-fuer-kleine-unternehmen",
+    "role": "journal",
+    "focusKeyword": "webdesign agentur für kmu angebote vergleichen",
+    "focusMetrics": null,
+    "ownedKeywords": [
+      "webdesign agentur deutschland günstig"
+    ],
+    "commercialParent": "/webdesign",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-fuer-arztpraxen",
+    "url": "/webdesign-fuer-arztpraxen",
+    "role": "journal",
+    "focusKeyword": "praxiswebsite inhalte und terminwege",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/webdesign/webdesign-fuer-aerzte",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-fuer-dachdecker-firma",
+    "url": "/webdesign-fuer-dachdecker-firma",
+    "role": "journal",
+    "focusKeyword": "website für dachdecker",
+    "focusMetrics": {
+      "volume": 0,
+      "cpcUSD": 0,
+      "seoDifficulty": 12,
+      "businessScore": 0
+    },
+    "ownedKeywords": [
+      "webdesign für dachdecker firma",
+      "website für dachdecker"
+    ],
+    "commercialParent": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-fuer-handwerker",
+    "url": "/webdesign-fuer-handwerker",
+    "role": "journal",
+    "focusKeyword": "handwerker website inhalte",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-fuer-handwerksbetriebe",
+    "url": "/webdesign-fuer-handwerksbetriebe",
+    "role": "journal",
+    "focusKeyword": "handwerker website modernisieren",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-fuer-kleine-unternehmen",
+    "url": "/webdesign-fuer-kleine-unternehmen",
+    "role": "journal",
+    "focusKeyword": "website für kleine unternehmen planen",
+    "focusMetrics": null,
+    "ownedKeywords": [
+      "wie wichtig ist eine professionelle website",
+      "homepage erstellen lassen wie läuft das ab"
+    ],
+    "commercialParent": "/webdesign",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-handwerker",
+    "url": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+    "role": "service",
+    "focusKeyword": "webdesign für handwerker",
+    "focusMetrics": {
+      "volume": 480,
+      "cpcUSD": 9.37,
+      "seoDifficulty": 9,
+      "businessScore": 124.93333333333331
+    },
+    "ownedKeywords": [
+      "webdesign agentur für handwerker",
+      "website für sanitärbetrieb erstellen lassen",
+      "webdesigner für handwerker",
+      "website für handwerker die kunden bringt",
+      "webdesign für handwerker",
+      "website für handwerker",
+      "homepage für handwerker",
+      "webdesign für handwerksbetriebe"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "webdesign-outsourcing-deutschland",
+    "url": "/webdesign-outsourcing-deutschland",
+    "role": "journal",
+    "focusKeyword": "webdesign outsourcing deutschland",
+    "focusMetrics": {
+      "volume": 0,
+      "cpcUSD": 0,
+      "seoDifficulty": 27,
+      "businessScore": 0
+    },
+    "ownedKeywords": [
+      "webdesign outsourcing deutschland"
+    ],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign",
+    "url": "/webdesign",
+    "role": "service",
+    "focusKeyword": "webdesign agentur",
+    "focusMetrics": {
+      "volume": 3600,
+      "cpcUSD": 9.41,
+      "seoDifficulty": 27,
+      "businessScore": 83.64444444444443
+    },
+    "ownedKeywords": [
+      "webdesign für unternehmen die wachsen wollen",
+      "was kostet eine website für ein unternehmen",
+      "moderne website für mehr anfragen",
+      "conversion optimierte website erstellen lassen",
+      "moderne website erstellen lassen",
+      "website erstellen lassen für unternehmen",
+      "professionelle website erstellen lassen kosten",
+      "webdesign agentur für kleine unternehmen",
+      "webdesign für unternehmen",
+      "webdesign für kleine unternehmen",
+      "webdesign agentur",
+      "website erstellen lassen",
+      "website kosten unternehmen"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "website-wartung-fuer-firmen",
+    "url": "/website-wartung-fuer-firmen",
+    "role": "journal",
+    "focusKeyword": "website wartung aufgaben und ablauf",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/upgrades-wartung",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "wie-wirkt-corporate-design",
+    "url": "/wie-wirkt-corporate-design",
+    "role": "journal",
+    "focusKeyword": "corporate design prüfen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/grafikdesign-2",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-aerzte",
+    "url": "/webdesign/webdesign-fuer-aerzte",
+    "role": "service",
+    "focusKeyword": "webdesign für ärzte",
+    "focusMetrics": {
+      "volume": 590,
+      "cpcUSD": 11.59,
+      "seoDifficulty": 27,
+      "businessScore": 21.10524691358025
+    },
+    "ownedKeywords": [
+      "webdesign arzt",
+      "website für ärzte",
+      "webdesigner für ärzte",
+      "websites für ärzte",
+      "webdesign für medizinische praxen",
+      "webservice für ärzte",
+      "professionelle website für ärzte",
+      "webdesign für gesundheitsdienste",
+      "webdesign arztpraxen",
+      "webdesign für ärzte",
+      "webdesign arztpraxis",
+      "webseiten für arztpraxen",
+      "arzt website design",
+      "webdesign medizin",
+      "webdesign für arztpraxis",
+      "homepages für ärzte",
+      "webseite praxis design",
+      "arzt-website erstellen",
+      "webdesign für arztpraxen",
+      "website für arztpraxis"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "webdesign-immobilienmakler",
+    "url": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+    "role": "service",
+    "focusKeyword": "webdesign für immobilienmakler",
+    "focusMetrics": {
+      "volume": 170,
+      "cpcUSD": 15.12,
+      "seoDifficulty": 9,
+      "businessScore": 71.4
+    },
+    "ownedKeywords": [
+      "webdesign für immobilienmakler",
+      "webdesign für immobilienfirmen",
+      "immobilien webdesign agentur",
+      "webdesign für immobilien",
+      "homepage für immobilienmakler erstellen",
+      "webdesign makler",
+      "immobilien webdesign",
+      "makler webdesign agentur",
+      "immobilien website design",
+      "webdesigner für makler",
+      "webdesign immobilien",
+      "immobilienmakler webdesign",
+      "makler webdesign",
+      "webseitenerstellung immobilien",
+      "immobilien website anpassungen",
+      "webdesign für makler",
+      "webdesign immobilienmakler",
+      "immobilien webseite design möglichkeiten",
+      "webdesigner für immobilienmakler",
+      "weberstellung immobilien",
+      "design immobilienmakler",
+      "website für immobilienmakler"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "performance-optimization-3",
+    "url": "/performance-optimization-3",
+    "role": "service",
+    "focusKeyword": "performance optimierung website",
+    "focusMetrics": {
+      "volume": null,
+      "cpcUSD": null,
+      "seoDifficulty": null,
+      "businessScore": null
+    },
+    "ownedKeywords": [
+      "performance optimierung website",
+      "website ladezeit optimieren"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "load-testing-3",
+    "url": "/load-testing-3",
+    "role": "service",
+    "focusKeyword": "load testing website",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "performance-audit-3",
+    "url": "/performance-audit-3",
+    "role": "service",
+    "focusKeyword": "technischer performance audit",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "code-ueberpruefung",
+    "url": "/code-ueberpruefung",
+    "role": "service",
+    "focusKeyword": "code überprüfung website",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "upgrades-wartung",
+    "url": "/upgrades-wartung",
+    "role": "service",
+    "focusKeyword": "website wartung",
+    "focusMetrics": {
+      "volume": 590,
+      "cpcUSD": 4.16,
+      "seoDifficulty": 8,
+      "businessScore": 69.03
+    },
+    "ownedKeywords": [
+      "website wartung für firmen",
+      "website wartung"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "server-wartung",
+    "url": "/server-wartung",
+    "role": "service",
+    "focusKeyword": "server wartung",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "cloud-hosting-3",
+    "url": "/cloud-hosting-3",
+    "role": "service",
+    "focusKeyword": "cloud hosting beratung",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "systemintegration",
+    "url": "/systemintegration",
+    "role": "service",
+    "focusKeyword": "systemintegration unternehmen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "cs-cart-lizenz-reseller",
+    "url": "/cs-cart-lizenz-reseller",
+    "role": "service",
+    "focusKeyword": "cs-cart lizenzberatung",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "cs-cart-konfiguration-einrichtung",
+    "url": "/cs-cart-konfiguration-einrichtung",
+    "role": "service",
+    "focusKeyword": "cs-cart konfiguration",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "store-builder-standardlizenzen",
+    "url": "/store-builder-standardlizenzen",
+    "role": "service",
+    "focusKeyword": "store builder standardlizenzen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "b2b-portal-entwicklung",
+    "url": "/b2b-portal-entwicklung",
+    "role": "service",
+    "focusKeyword": "b2b portal entwickeln lassen",
+    "focusMetrics": {
+      "volume": null,
+      "cpcUSD": null,
+      "seoDifficulty": null,
+      "businessScore": null
+    },
+    "ownedKeywords": [
+      "b2b portal entwickeln lassen"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "marktplatz-entwicklung",
+    "url": "/marktplatz-entwicklung",
+    "role": "service",
+    "focusKeyword": "marktplatz entwickeln lassen",
+    "focusMetrics": {
+      "volume": null,
+      "cpcUSD": null,
+      "seoDifficulty": null,
+      "businessScore": null
+    },
+    "ownedKeywords": [
+      "marktplatz entwickeln lassen"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "e-commerce",
+    "url": "/e-commerce",
+    "role": "service",
+    "focusKeyword": "e-commerce architektur beratung",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "kundenspezifische-entwicklung",
+    "url": "/kundenspezifische-entwicklung",
+    "role": "service",
+    "focusKeyword": "kundenspezifische entwicklung",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "addon-theme-entwicklung",
+    "url": "/addon-theme-entwicklung",
+    "role": "service",
+    "focusKeyword": "addon und theme entwicklung",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "ui-ux-entwicklung",
+    "url": "/ui-ux-entwicklung",
+    "role": "service",
+    "focusKeyword": "ui ux design agentur",
+    "focusMetrics": {
+      "volume": 20,
+      "cpcUSD": 5.75,
+      "seoDifficulty": 22,
+      "businessScore": 0.42768595041322316
+    },
+    "ownedKeywords": [
+      "ui ux design agentur"
+    ],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "animation",
+    "url": "/animation",
+    "role": "service",
+    "focusKeyword": "animation für unternehmen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Kauf/Vergleich",
+    "publicationReview": null,
+    "phase": 4,
+    "scope": "Kommerzielle Suchabsicht bündeln; tatsächliche Leistung und Verfügbarkeit belegen."
+  },
+  {
+    "pageKey": "archiv-corporate-design",
+    "url": "/category/corporate-design",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-branding",
+    "url": "/category/branding",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-seo",
+    "url": "/category/seo",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-lokales-marketing",
+    "url": "/category/lokales-marketing",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-kundengewinnung",
+    "url": "/category/kundengewinnung",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-lokal",
+    "url": "/category/lokal",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-marketing",
+    "url": "/category/marketing",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-webdesign",
+    "url": "/category/webdesign",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-handwerk",
+    "url": "/category/handwerk",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-handwerk-webdesign-handwerk",
+    "url": "/category/handwerk/webdesign-handwerk",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-handwerk-seo-handwerk",
+    "url": "/category/handwerk/seo-handwerk",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-handwerk-handwerk-handwerk",
+    "url": "/category/handwerk/handwerk-handwerk",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-webdesign-conversion",
+    "url": "/category/webdesign-conversion",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-digitalisierung",
+    "url": "/category/digitalisierung",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-suchmaschinenoptimierung",
+    "url": "/category/suchmaschinenoptimierung",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-plattform-konzeption",
+    "url": "/category/plattform-konzeption",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-e-commerce",
+    "url": "/category/e-commerce",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-online-shop",
+    "url": "/category/online-shop",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "archiv-digitales-marketing",
+    "url": "/category/digitales-marketing",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  },
+  {
+    "pageKey": "freelancer-oder-full-service-agentur",
+    "url": "/freelancer-oder-full-service-agentur",
+    "role": "journal",
+    "focusKeyword": "freelancer oder full service agentur",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "fehler-beim-online-shop-start-vermeiden",
+    "url": "/fehler-beim-online-shop-start-vermeiden",
+    "role": "journal",
+    "focusKeyword": "onlineshop start fehler vermeiden",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/online-shop-entwicklung",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "google-maps-eintrag-optimieren",
+    "url": "/google-maps-eintrag-optimieren",
+    "role": "journal",
+    "focusKeyword": "google maps eintrag optimieren",
+    "focusMetrics": {
+      "volume": 10,
+      "cpcUSD": 12.97,
+      "seoDifficulty": 31,
+      "businessScore": 0.20244536940686786
+    },
+    "ownedKeywords": [
+      "google maps eintrag optimieren"
+    ],
+    "commercialParent": "/seo-3",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-trends-2026-fuer-unternehmen",
+    "url": "/webdesign-trends-2026-fuer-unternehmen",
+    "role": "journal",
+    "focusKeyword": "webdesign trends 2026",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "corporate-naming-fuer-startups",
+    "url": "/corporate-naming-fuer-startups",
+    "role": "journal",
+    "focusKeyword": "corporate naming",
+    "focusMetrics": {
+      "volume": null,
+      "cpcUSD": null,
+      "seoDifficulty": null,
+      "businessScore": null
+    },
+    "ownedKeywords": [
+      "corporate naming"
+    ],
+    "commercialParent": "/grafikdesign-2",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "print-design-fuer-unternehmen",
+    "url": "/print-design-fuer-unternehmen",
+    "role": "journal",
+    "focusKeyword": "print werbemittel für unternehmen auswählen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/print-design",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "full-service-werbeagentur-b2b",
+    "url": "/full-service-werbeagentur-b2b",
+    "role": "journal",
+    "focusKeyword": "full service werbeagentur b2b entscheidungshilfe",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "guide-ui-ux-fuer-firmenwebsites",
+    "url": "/guide-ui-ux-fuer-firmenwebsites",
+    "role": "journal",
+    "focusKeyword": "ui ux nutzerführung firmenwebsites",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-fuer-immobilienmakler-berlin",
+    "url": "/webdesign-fuer-immobilienmakler-berlin",
+    "role": "journal",
+    "focusKeyword": "objektseiten für immobilienmakler berlin planen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "beste-ecommerce-loesungen-mittelstand",
+    "url": "/beste-ecommerce-loesungen-mittelstand",
+    "role": "journal",
+    "focusKeyword": "e-commerce lösungen mittelstand vergleichen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/online-shop-entwicklung",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "social-media-content-plan-mit-wirkung",
+    "url": "/social-media-content-plan-mit-wirkung",
+    "role": "journal",
+    "focusKeyword": "social media content plan",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/google-ads-social-media",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "produktfotografie-fuer-onlineshop",
+    "url": "/produktfotografie-fuer-onlineshop",
+    "role": "journal",
+    "focusKeyword": "produktfotografie onlineshop",
+    "focusMetrics": {
+      "volume": 70,
+      "cpcUSD": 6.75,
+      "seoDifficulty": 26,
+      "businessScore": 1.006508875739645
+    },
+    "ownedKeywords": [
+      "produktfotografie onlineshop"
+    ],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "hosting-anbieter-fuer-firmenwebsites-waehlen",
+    "url": "/hosting-anbieter-fuer-firmenwebsites-waehlen",
+    "role": "journal",
+    "focusKeyword": "hosting anbieter firmenwebsites vergleichen",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webseite-fuer-handwerker",
+    "url": "/webseite-fuer-handwerker",
+    "role": "journal",
+    "focusKeyword": "handwerker website projektanfragen qualifizieren",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "barrierefreie-website-fuer-unternehmen",
+    "url": "/barrierefreie-website-fuer-unternehmen",
+    "role": "journal",
+    "focusKeyword": "barrierefreie website",
+    "focusMetrics": {
+      "volume": 1000,
+      "cpcUSD": 7.6,
+      "seoDifficulty": 11,
+      "businessScore": 75.37190082644628
+    },
+    "ownedKeywords": [
+      "barrierefreie website"
+    ],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-fuer-unternehmen",
+    "url": "/webdesign-fuer-unternehmen",
+    "role": "journal",
+    "focusKeyword": "anforderungen firmenwebsite",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/webdesign",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "webdesign-fuer-lokale-dienstleister",
+    "url": "/webdesign-fuer-lokale-dienstleister",
+    "role": "journal",
+    "focusKeyword": "webdesign für lokale dienstleister",
+    "focusMetrics": {
+      "volume": 0,
+      "cpcUSD": 0,
+      "seoDifficulty": 23,
+      "businessScore": 0
+    },
+    "ownedKeywords": [
+      "webdesign für lokale dienstleister"
+    ],
+    "commercialParent": "/webdesign",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "wordpress-website-erstellen-lassen",
+    "url": "/wordpress-website-erstellen-lassen",
+    "role": "journal",
+    "focusKeyword": "wordpress website erstellen lassen angebote vergleichen",
+    "focusMetrics": null,
+    "ownedKeywords": [
+      "website erstellen lassen mit wordpress",
+      "wordpress agentur deutschland",
+      "günstige wordpress agentur deutschland",
+      "wordpress website erstellen lassen"
+    ],
+    "commercialParent": "/webdesign",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "leitfaden-website-relaunch-unternehmen",
+    "url": "/leitfaden-website-relaunch-unternehmen",
+    "role": "journal",
+    "focusKeyword": "website relaunch",
+    "focusMetrics": {
+      "volume": 480,
+      "cpcUSD": 16.6,
+      "seoDifficulty": 12,
+      "businessScore": 83.00000000000001
+    },
+    "ownedKeywords": [
+      "website relaunch"
+    ],
+    "commercialParent": "/webdesign",
+    "intent": "Information/Vergleich",
+    "publicationReview": "draft_source_review_required",
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "wann-lohnt-sich-seo",
+    "url": "/wann-lohnt-sich-seo",
+    "role": "journal",
+    "focusKeyword": "wann lohnt sich seo für handwerker",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/seo-3",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "7-branding-fehler-bei-neugruendung",
+    "url": "/7-branding-fehler-bei-neugruendung",
+    "role": "journal",
+    "focusKeyword": "branding fehler bei neugründung",
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": "/grafikdesign-2",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "website-audit-unternehmen",
+    "url": "/website-audit-unternehmen",
+    "role": "journal",
+    "focusKeyword": "website audit",
+    "focusMetrics": {
+      "volume": 720,
+      "cpcUSD": 16.62,
+      "seoDifficulty": 67,
+      "businessScore": 3.838631321006906
+    },
+    "ownedKeywords": [
+      "website audit",
+      "website audit unternehmen"
+    ],
+    "commercialParent": "/webdesign",
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "360-grad-rundgang-erstellen",
+    "url": "/360-grad-rundgang-erstellen",
+    "role": "journal",
+    "focusKeyword": "360 grad rundgang erstellen",
+    "focusMetrics": {
+      "volume": 90,
+      "cpcUSD": 4.4,
+      "seoDifficulty": 21,
+      "businessScore": 1.0775510204081633
+    },
+    "ownedKeywords": [
+      "360 grad rundgang erstellen"
+    ],
+    "commercialParent": null,
+    "intent": "Information/Vergleich",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Eigenständige Informations- oder Vergleichsfrage; kommerzielle Leistungsseite nicht duplizieren."
+  },
+  {
+    "pageKey": "archiv-google-ads",
+    "url": "/category/google-ads",
+    "role": "archive",
+    "focusKeyword": null,
+    "focusMetrics": null,
+    "ownedKeywords": [],
+    "commercialParent": null,
+    "intent": "Themen-Navigation",
+    "publicationReview": null,
+    "phase": 5,
+    "scope": "Thematische Übersicht; keine kommerziellen Hauptkeywords übernehmen."
+  }
+]

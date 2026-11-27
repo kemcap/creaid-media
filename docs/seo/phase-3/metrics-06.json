@@ -1,0 +1,192 @@
+{
+  "requested": [
+    "webdesign agentur",
+    "website erstellen lassen",
+    "homepage für handwerker",
+    "seo für kleine unternehmen",
+    "website kosten unternehmen",
+    "website für dachdecker",
+    "website für arztpraxis",
+    "website für immobilienmakler",
+    "webdesign für handwerksbetriebe",
+    "ki automatisierung für kleine unternehmen",
+    "onlineshop agentur",
+    "website wartung",
+    "website ladezeit optimieren",
+    "ui ux design agentur",
+    "corporate naming",
+    "produktfilm erstellen lassen",
+    "imagefilm kosten",
+    "produktfotografie onlineshop",
+    "360 grad rundgang erstellen"
+  ],
+  "rows": [
+    {
+      "keyword": "webdesign agentur",
+      "search_intent": "Commercial",
+      "volume": 3600,
+      "cpc": 9.41,
+      "sd": 27,
+      "pd": 45,
+      "competition": 0.45
+    },
+    {
+      "keyword": "website erstellen lassen",
+      "search_intent": "Commercial",
+      "volume": 2900,
+      "cpc": 18.06,
+      "sd": 31,
+      "pd": 70,
+      "competition": 0.7
+    },
+    {
+      "keyword": "homepage für handwerker",
+      "search_intent": "Navigational",
+      "volume": 110,
+      "cpc": 10.72,
+      "sd": 14,
+      "pd": 55,
+      "competition": 0.55
+    },
+    {
+      "keyword": "seo für kleine unternehmen",
+      "search_intent": "Commercial",
+      "volume": 140,
+      "cpc": 9.81,
+      "sd": 20,
+      "pd": 22,
+      "competition": 0.22
+    },
+    {
+      "keyword": "website kosten unternehmen",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 12,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "website für dachdecker",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 12,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "website für arztpraxis",
+      "search_intent": "Commercial",
+      "volume": 320,
+      "cpc": 12.49,
+      "sd": 35,
+      "pd": 51,
+      "competition": 0.51
+    },
+    {
+      "keyword": "website für immobilienmakler",
+      "search_intent": "Commercial",
+      "volume": 110,
+      "cpc": 16.06,
+      "sd": 12,
+      "pd": 71,
+      "competition": 0.71
+    },
+    {
+      "keyword": "webdesign für handwerksbetriebe",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 9,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "ki automatisierung für kleine unternehmen",
+      "search_intent": null,
+      "volume": 0,
+      "cpc": 0,
+      "sd": 4,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "onlineshop agentur",
+      "search_intent": "Commercial",
+      "volume": 390,
+      "cpc": 39.21,
+      "sd": 12,
+      "pd": 36,
+      "competition": 0.36
+    },
+    {
+      "keyword": "website wartung",
+      "search_intent": "Informational",
+      "volume": 590,
+      "cpc": 4.16,
+      "sd": 8,
+      "pd": 25,
+      "competition": 0.25
+    },
+    {
+      "keyword": "website ladezeit optimieren",
+      "search_intent": null,
+      "volume": 20,
+      "cpc": 0,
+      "sd": 22,
+      "pd": 28,
+      "competition": 0.29
+    },
+    {
+      "keyword": "ui ux design agentur",
+      "search_intent": null,
+      "volume": 20,
+      "cpc": 5.75,
+      "sd": 22,
+      "pd": 55,
+      "competition": 0.55
+    },
+    {
+      "keyword": "corporate naming",
+      "search_intent": null
+    },
+    {
+      "keyword": "produktfilm erstellen lassen",
+      "search_intent": "Transactional",
+      "volume": 10,
+      "cpc": 0,
+      "sd": 13,
+      "pd": 1,
+      "competition": 0
+    },
+    {
+      "keyword": "imagefilm kosten",
+      "search_intent": "Informational",
+      "volume": 170,
+      "cpc": 8.18,
+      "sd": 10,
+      "pd": 51,
+      "competition": 0.51
+    },
+    {
+      "keyword": "produktfotografie onlineshop",
+      "search_intent": "Transactional",
+      "volume": 70,
+      "cpc": 6.75,
+      "sd": 26,
+      "pd": 28,
+      "competition": 0.29
+    },
+    {
+      "keyword": "360 grad rundgang erstellen",
+      "search_intent": "Informational",
+      "volume": 90,
+      "cpc": 4.4,
+      "sd": 21,
+      "pd": 63,
+      "competition": 0.63
+    }
+  ],
+  "errors": []
+}
