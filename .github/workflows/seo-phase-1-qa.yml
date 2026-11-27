@@ -33,6 +33,13 @@ jobs:
       - run: node .github/scripts/prepare-preview-cache.mjs
       - run: node .github/scripts/prepare-production-indexing.mjs
       - run: node scripts/check-production-seo.mjs
+      - name: Test actual production host rules on isolated Apache HTTP and TLS
+        run: |
+          if ! test -f /usr/lib/apache2/modules/mod_ssl.so; then
+            sudo apt-get update
+            sudo apt-get install -y apache2 openssl
+          fi
+          python scripts/test-production-hosts.py
   live-baseline:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
