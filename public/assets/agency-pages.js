@@ -64,7 +64,7 @@
     const status=document.querySelector('#aFormMessage');
     const feedback=document.querySelector('#aContactFeedback');
     const loader=feedback?.querySelector('.cm-contact-loader');
-    const MIN_CONTACT_FEEDBACK_MS=1500;
+    const MIN_CONTACT_FEEDBACK_MS=3000;
     function setFeedback(state,text){
       if(feedback)feedback.dataset.state=state;
       if(loader)loader.hidden=state!=='sending';
@@ -183,7 +183,7 @@
           const remaining=Math.max(0,MIN_CONTACT_FEEDBACK_MS-(performance.now()-feedbackStarted));
           if(remaining>0)await new Promise(resolve=>setTimeout(resolve,remaining));
           form.reset();
-          setFeedback('success','Anfrage erfolgreich versendet.\nVielen Dank für Ihre Nachricht. Wir melden uns schnellstmöglich bei Ihnen.');
+          setFeedback('success','Anfrage erfolgreich versendet.');
         }else if(result.status==='captcha_required'||result.status==='captcha_invalid'){
           status.textContent='Die Sicherheitsprüfung ist abgelaufen oder fehlgeschlagen. Bitte erneut bestätigen.';
         }else if(response.status===409&&result.status==='in_progress'){
