@@ -20,6 +20,9 @@ for(const [url,html] of htmlByRoute){
  if(new Set(ids).size!==ids.length)issues.push(url+': duplicate IDs');
  if(!html.includes('rel="canonical" href="https://creaid-media.de'+url+'"'))issues.push(url+': canonical mismatch');
  if(!html.includes('name="robots" content="noindex,nofollow,noarchive"'))issues.push(url+': preview indexation');
+ if(!html.includes('<span data-creaid-preview-notice>Designvorschau · Nicht die veröffentlichte Unternehmenswebsite</span>'))issues.push(url+': missing preview notice');
+ const footer=html.match(/<footer class="cm-footer"[\s\S]*?<\/footer>/)?.[0]||'';
+ if(/href="\/leistungen\/(?:webdesign|marketing|branding|ki-automatisierung)"/.test(footer))issues.push(url+': footer links to legacy alias');
  for(const link of editorialLinks[key]??[]){
   if(!link.anchor?.trim())issues.push(url+': missing editorial link text for '+link.url);
  }
