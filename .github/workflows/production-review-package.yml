@@ -1,0 +1,33 @@
+name: Protected production review package
+on:
+  push:
+    branches: ['release/production-review-20261127']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    if: github.ref == 'refs/heads/release/production-review-20261127'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+      - name: Build protected production review
+        run: node scripts/prepare-production-review.mjs "$RUNNER_TEMP/creaid-production-review"
+      - name: Record review provenance
+        run: |
+          printf 'Source commit: %s\nIndexing: disabled\nScope: existing approved review allowlist; not a live deployment\n' "$GITHUB_SHA" > "$RUNNER_TEMP/creaid-production-review/REVIEW.txt"
+          (cd "$RUNNER_TEMP/creaid-production-review" && find site -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: creaid-protected-production-review
+          path: ${{ runner.temp }}/creaid-production-review/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
