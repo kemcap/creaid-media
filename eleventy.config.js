@@ -15,6 +15,7 @@ export default function (eleventyConfig) {
   ));
   eleventyConfig.addPassthroughCopy({ 'public/assets': 'assets' });
   eleventyConfig.addPassthroughCopy({ 'public/robots.txt': 'robots.txt' });
+  eleventyConfig.addPassthroughCopy({ 'docs/CreAid-Media-Style-Guide.html': 'assets/demos/creaid-style-guide.html' });
   for (const subset of ['latin', 'latin-ext']) {
     for (const weight of [300, 400, 500, 700]) {
       const file = `ubuntu-${subset}-${weight}-normal.woff2`;

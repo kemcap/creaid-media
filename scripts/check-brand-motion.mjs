@@ -3,6 +3,8 @@ import {readFileSync} from 'node:fs';
 const read=p=>readFileSync(p,'utf8');
 const guide=read('docs/CreAid-Media-Style-Guide.html');
 const css=read('public/assets/brand-motion.css');
+assert.equal(read('dist/assets/demos/creaid-style-guide.html'),guide,'Published preview demo must use the canonical source');
+assert.ok(guide.includes('name="robots" content="noindex,nofollow,noarchive"'));
 const canonical=guide.match(/<style id="cm-brand-components">\n([\s\S]*?)<\/style>/)?.[1];
 assert.equal(canonical,css,'Guide and runtime component CSS must match byte-for-byte');
 const registry=JSON.parse(guide.match(/<script type="application\/json" id="cm-design-registry">([\s\S]*?)<\/script>/)[1]);

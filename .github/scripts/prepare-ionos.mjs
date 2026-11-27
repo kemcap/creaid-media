@@ -25,6 +25,12 @@ if(existsSync(consentDemo)){
  assert.ok(demo.includes('keine Tracking-Dienste geladen'),'Cookie demo must be explicitly marked as a simulation');
  assert.ok(!/<(?:script|iframe|img|link)\b[^>]*\b(?:src|href)=["'](?:https?:)?\/\//i.test(demo),'Unexpected external resource in cookie demo');
 }
+const styleGuide='dist/assets/demos/creaid-style-guide.html';
+assert.ok(existsSync(styleGuide),'Missing standalone style guide');
+const guide=readFileSync(styleGuide,'utf8');
+assert.equal(guide,readFileSync('docs/CreAid-Media-Style-Guide.html','utf8'),'Style guide must match canonical source');
+assert.ok(guide.includes('name="robots" content="noindex,nofollow,noarchive"'),'Style guide missing noindex');
+assert.ok(!/<(?:script|iframe|img|link)\b[^>]*\b(?:src|href)=["'](?:https?:)?\/\//i.test(guide),'Unexpected external resource in style guide');
 writeFileSync('dist/.htaccess',lines.join('\n'));
 writeFileSync('ionos-deploy-manifest.json',JSON.stringify({pages:files.map(([,f])=>f),redirects:redirects.length},null,2));
 console.log('Prepared '+files.length+' pages and '+redirects.length+' redirects; noindex preserved.');
