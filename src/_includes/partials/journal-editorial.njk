@@ -10,7 +10,21 @@
         <nav class="j-breadcrumb" aria-label="Brotkrumen"><a href="/">START</a><span>/</span><a href="/creaid-blog">JOURNAL</a></nav>
         {% if isDraft %}<div class="j-micro j-article-kicker">WORDPRESS-ENTWURF</div>{% endif %}
         <h1 id="article-title">{{ post.heading | escape }}</h1>
-        {% if editorial.meta %}<div class="j-editorial-meta">{{ editorial.meta | safe }}</div>{% else %}{% for entry in postsIndex %}{% if entry.slug == pageKey and entry.minutes %}<div class="j-editorial-meta"><p><strong>Lesezeit:</strong> ca. {{ entry.minutes }} Min.</p></div>{% endif %}{% endfor %}{% endif %}{% if journalBatch and article.publishedIso %}<div class="j-editorial-meta"><p><time datetime="{{ article.publishedIso | escape }}">{{ article.publishedDisplay | escape }}</time></p></div>{% endif %}
+        {% set articleMeta -%}
+          {%- if editorial.meta -%}
+            {{ editorial.meta | safe }}
+          {%- else -%}
+            {%- for entry in postsIndex -%}
+              {%- if entry.slug == pageKey and entry.minutes -%}
+                <p><strong>Lesezeit:</strong> ca. {{ entry.minutes }} Min.</p>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+          {%- if journalBatch and article.publishedIso -%}
+            <p><time datetime="{{ article.publishedIso | escape }}">{{ article.publishedDisplay | escape }}</time></p>
+          {%- endif -%}
+        {%- endset -%}
+        {% if articleMeta %}<div class="j-editorial-meta">{{ articleMeta | safe }}</div>{% endif %}
         <p class="j-article-desc">{{ post.description | escape }}</p>
         <a class="j-article-scroll" href="#article-content">Artikel lesen <span aria-hidden="true">↓</span></a>
       </div>
