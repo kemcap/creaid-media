@@ -66,15 +66,13 @@
     if (!n.contact || !n.statement) return;
     const noWipe = reduced.matches || window.matchMedia('(max-width:640px),(max-height:620px),(max-width:900px) and (max-height:700px)').matches;
     const reveal = noWipe ? 1 : show(p, .32, .82);
-    // Nur die fuchsiafarbene Statement-Maske gibt den fertig aufgebauten Kontakt frei.
-    n.contact.style.clipPath = `inset(0 0 0 ${(1-reveal)*100}%)`;
+    // Sharp center-out circular reveal. The farthest corner determines the full radius.
+    const radius = Math.hypot(n.contact.clientWidth, n.contact.clientHeight) / 2 + 1;
+    n.contact.style.clipPath = noWipe || reveal >= 1 ? 'none' : `circle(${reveal*radius}px at 50% 50%)`;
     n.contact.inert = !noWipe && reveal < .95;
     n.contact.setAttribute('aria-hidden', String(!noWipe && reveal < .95));
     n.statement.setAttribute('aria-hidden', String(!noWipe && reveal >= .95));
-    if (n.edge) {
-      n.edge.style.left = `${(1-reveal)*100}%`;
-      n.edge.style.opacity = String(!noWipe && reveal > .005 && reveal < .995 ? 1 : 0);
-    }
+    if (n.edge) n.edge.style.opacity = '0';
   }
   const updaters={hero:updateHero,capabilities:updateCapabilities,method:updateMethod,work:updateWork,statementContact:updateStatementContact};
   function setupTimedReveals() {

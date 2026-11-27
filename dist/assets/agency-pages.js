@@ -62,6 +62,14 @@
     const direct=location.origin==='https://vorschau.creaid-media.de';
     const submit=form.querySelector('button[type="submit"]');
     const status=document.querySelector('#aFormMessage');
+    const feedback=document.querySelector('#aContactFeedback');
+    const loader=feedback?.querySelector('.cm-contact-loader');
+    const MIN_CONTACT_FEEDBACK_MS=1500;
+    function setFeedback(state,text){
+      if(feedback)feedback.dataset.state=state;
+      if(loader)loader.hidden=state!=='sending';
+      status.textContent=text;
+    }
     const fallback=document.querySelector('#aFormFallback');
     const hint=document.querySelector('#aFormHint');
     const intro=document.querySelector('#aFormIntro');
@@ -143,18 +151,21 @@
         status.textContent='Ihr E-Mail-Programm wird geöffnet. Bitte die Nachricht dort noch selbst absenden.';
         window.location.href=mailto(data);return;
       }
-      pending=true;submit.disabled=true;form.setAttribute('aria-busy','true');
+      pending=true;submit.disabled=true;slot.setAttribute('aria-busy','true');
+      setFeedback('idle','');
       if(sitekey&&!captchaToken){
         status.textContent='Sicherheitsprüfung läuft … Bitte bestätigen Sie gegebenenfalls das sichtbare Prüfkästchen.';
         if(!await awaitCaptcha()||!captchaToken){
           status.textContent='Die Sicherheitsprüfung konnte nicht abgeschlossen werden. Bitte erneut versuchen oder E-Mail nutzen.';
           fallback.href=mailto(data);fallback.hidden=false;
-          pending=false;showVerified(!!captchaToken);form.removeAttribute('aria-busy');
+          pending=false;showVerified(!!captchaToken);slot.removeAttribute('aria-busy');
           return;
         }
       }
       fallback.hidden=true;fallback.removeAttribute('href');
-      status.textContent='Ihre Anfrage wird übermittelt …';
+      setFeedback('sending','Anfrage wird gesendet\nIhre Daten werden sicher übermittelt.');
+      const feedbackStarted=performance.now();
+      let accepted=false;
       const controller=new AbortController();
       const timer=setTimeout(()=>controller.abort(),40000);
       try{
@@ -164,9 +175,13 @@
         const response=await fetch('/api/contact.php',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},credentials:'same-origin',cache:'no-store',redirect:'error',signal:controller.signal,body:JSON.stringify(payload)});
         const result=await response.json();
         if(response.ok&&result.ok===true&&result.status==='accepted'){
-          window.CreAidTracking?.trackLead();
-          status.textContent='Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt.';
+          accepted=true;
+          clearTimeout(timer);
+          try{window.CreAidTracking?.trackLead();}catch{/* analytics cannot change accepted result */}
+          const remaining=Math.max(0,MIN_CONTACT_FEEDBACK_MS-(performance.now()-feedbackStarted));
+          if(remaining>0)await new Promise(resolve=>setTimeout(resolve,remaining));
           form.reset();
+          setFeedback('success','Anfrage erfolgreich versendet.\nVielen Dank für Ihre Nachricht. Wir melden uns schnellstmöglich bei Ihnen.');
         }else if(result.status==='captcha_required'||result.status==='captcha_invalid'){
           status.textContent='Die Sicherheitsprüfung ist abgelaufen oder fehlgeschlagen. Bitte erneut bestätigen.';
         }else if(response.status===422){
@@ -183,8 +198,9 @@
         fallback.href=mailto(data);fallback.hidden=false;
       }finally{
         clearTimeout(timer);pending=false;
-        if(sitekey){captchaToken='';showVerified(false);if(widgetId!==null){try{window.turnstile?.reset(widgetId);}catch{failCaptcha('Die Sicherheitsprüfung konnte nicht neu gestartet werden. Bitte nutzen Sie E-Mail.');}}}else submit.disabled=false;
-        form.removeAttribute('aria-busy');
+        if(!accepted){if(loader)loader.hidden=true;if(feedback)feedback.dataset.state='idle';}
+        if(sitekey){captchaToken='';showVerified(false);if(widgetId!==null){try{window.turnstile?.reset(widgetId);}catch{if(!accepted)failCaptcha('Die Sicherheitsprüfung konnte nicht neu gestartet werden. Bitte nutzen Sie E-Mail.');else captchaFailed=true;}}}else submit.disabled=false;
+        slot.removeAttribute('aria-busy');
       }
     });
     form.hidden=false;
