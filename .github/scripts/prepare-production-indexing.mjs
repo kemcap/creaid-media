@@ -25,7 +25,10 @@ for(const dir of ['dist','preview-cache-package/site']){
     const file=join(dir,key+'.html');const html=readFileSync(file,'utf8');
     assert.equal(html.split(tag).length,2,'Expected exactly one protected robots meta '+path);
     assert.ok(html.includes('rel="canonical" href="'+origin+path+'"'),'Canonical mismatch '+path);
-    if(indexable.has(path))writeFileSync(file,html.replace(tag,replacement));
+    const previewNotice='<span data-creaid-preview-notice>Designvorschau · Nicht die veröffentlichte Unternehmenswebsite</span>';
+    assert.equal(html.split(previewNotice).length,2,'Expected exactly one preview notice '+path);
+    const productionHTML=html.replace(previewNotice,'<span data-creaid-preview-notice hidden></span>');
+    writeFileSync(file,indexable.has(path)?productionHTML.replace(tag,replacement):productionHTML);
   }
   const file=join(dir,'.htaccess');let rules=readFileSync(file,'utf8');
   assert.ok(rules.includes(oldHeader)&&!rules.includes('CREAID PRODUCTION INDEXING'));
