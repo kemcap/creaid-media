@@ -3,7 +3,8 @@ Vor jeder Änderung an der eigenen CreAid-Media-Marke zuerst [Living Style Guide
 
 ## Operative Workflows
 - Website-Redesign-Masterworkflow V4.3: separate Projektquelle für neue Websites und grundlegende Kunden-Redesigns; für die laufende Pflege der eigenen Website nicht erforderlich. Keine erneute Moduswahl oder Hero-Konzeption bei kleinen Änderungen.
-- Blog-Optimizer V2.1 mit Design-System-Ergänzung: Projektdatei, separat; SEO/GEO, Bildoptionen, E01–E20 und Freigaben bleiben unverändert.
+- Blog-Optimizer V2.2: separate Projektdatei für Redaktion, SEO/GEO und E01–E20. Die eigenständige Living-Dot-Illustrationssprache bleibt bis zur Freigabe ein eigener Arbeitsschritt.
+- [Website-Finalization-Tracker](docs/WEBSITE-FINALIZATION-TRACKER.md): aktueller Bearbeitungsstand, Prüfungen und Freigaben. Der [interaktive Styleguide](https://vorschau.creaid-media.de/assets/demos/creaid-style-guide.html) lässt sich auf der Vorschauseite öffnen.
 - Keine privaten Projektdateien ungefragt in diesem öffentlichen Repository veröffentlichen.
 - Bei CreAid-Media-Aufträgen gelten die komponentenspezifischen Designparameter und Einsatzregeln des Guides. Bestehende operative Freigaben werden dadurch nicht aufgehoben.
 - Bei nicht vorliegendem Workflow oder fehlender Referenz den konkreten Mangel dokumentieren, nicht raten.

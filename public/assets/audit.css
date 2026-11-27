@@ -51,6 +51,7 @@
   color: #87203c;
   text-decoration: underline;
   text-underline-offset: .2em;
+  overflow-wrap: anywhere;
 }
 .audit-links a:hover { color: #420915; }
 .audit-links a:focus-visible { outline: 2px solid #87203c; outline-offset: 3px; }

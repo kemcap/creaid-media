@@ -1,5 +1,19 @@
 # CreAid-Media · Produktionsfreigabe
 
+## Isolierter Build zur technischen Endabnahme
+
+Nach `npm ci` erzeugt `node scripts/prepare-production-review.mjs ../creaid-release-review` die prüfbare Ausgabe in einem neuen Verzeichnis. `site/` enthält den vorgesehenen Seitenumfang und die passenden Apache-Weiterleitungen. Entwurfsartikel, die Beispiel-Projektstudie und die Vorschau-Demos sind aus der Ausgabe ausgeschlossen. Die Sitemap liegt neben `site/` und der gesamte Build bleibt durch Robots-Meta und Header vor Indexierung geschützt. Die Veröffentlichung benötigt einen eigenen, genehmigten Schritt.
+
+## Backup und Wiederherstellung
+
+1. Den aktuellen IONOS-Webroot und die zugehörige WordPress-Datenbank identifizieren. Die Domain-Zuordnung und DNS-/HTTPS-Konfiguration dokumentieren. Backup-Ziel und Wiederherstellungsberechtigung festhalten.
+2. SQL-Export und vollständige Kopie des WordPress-Webroots einschließlich Medien, Plugins, Themes, `.htaccess` und privater Konfiguration erstellen. Backup außerhalb des Webroots geschützt speichern. Zum Datensatz gehören Zeitstempel, Dateigröße, Prüfsummen und Datenbankbezug.
+3. Beides in einem separaten, vor Indexierung und Zugriff geschützten Testziel wiederherstellen. Startseite, Anmeldung, Medien, Legacy-URLs und Datenbankzugriff abnehmen. Das vorhandene statische CreAid-Archiv dient als Medien- und URL-Referenz.
+4. Den Eleventy-Build in einem separaten Zielverzeichnis vorbereiten. Alten WordPress-Webroot, Datenbank und Domain-Mapping bis zum Ende des Rollback-Fensters erhalten. Die bisherige Sitemap, Weiterleitungen, Kontaktfunktion und HTTP-Status vor dem Wechsel erfassen.
+5. Bei externer Nichterreichbarkeit, defekten geschäftskritischen Routen, nicht bestätigter Kontaktzustellung oder falschem Indexierungsschutz die Hauptdomain auf den zuvor verifizierten WordPress-Webroot zurückschalten. Danach Startseite, Sitemap, mehrere Leistungs- und Journal-URLs und die Kontaktfunktion erneut prüfen.
+
+Ein verifizierter Backup-Satz, freigegebene Domain- und Formularparameter sowie die fachliche und rechtliche Endabnahme sind vor dem Wechsel zu protokollieren.
+
 ## Rechtliche Punkte zur Bestätigung
 
 - Impressum, Datenschutz und Kontakt verwenden den gemeinsamen Unternehmensdatensatz. Abgleichen, welche Register-, Aufsichts-, Steuer- und redaktionellen Angaben für das türkische Einzelunternehmen und seine Angebote in Deutschland erforderlich sind. [§ 5 DDG](https://www.gesetze-im-internet.de/ddg/__5.html)

@@ -225,8 +225,11 @@ async function interactionTests(browser){
   await p.screenshot({animations:'disabled',path:join(out,'mobile-story.png'),fullPage:true});
  }catch(e){errors.push({id:'interactions',issues:[String(e.message||e)]});}finally{await context.close();}
 }
-for(const [engine,launcher] of Object.entries({chromium,firefox,webkit})){
- const browser=await launcher.launch({headless:true});
+const browsers={chromium,firefox,webkit};
+if(process.env.CREAID_QA_EDGE==='1')browsers.edge=chromium;
+for(const [engine,launcher] of Object.entries(browsers)){
+ const options=engine==='edge'?{headless:true,channel:'msedge'}:{headless:true};
+ const browser=await launcher.launch(options);
  try{
   const widths=engine==='chromium'?sizes:[sizes[0],sizes[2]];
   for(const viewport of widths){
@@ -246,6 +249,15 @@ for(const [engine,launcher] of Object.entries({chromium,firefox,webkit})){
     for(const route of ['/', '/webdesign','/creaid-blog','/online-shop-entwicklung'])await inspect(p,route,viewport,engine,false);
     await c.close();
    }
+   const viewport = {width: 320, height: 800};
+   const enlargedText = await browser.newContext({viewport, reducedMotion: 'reduce'});
+   await seedConsent(enlargedText);
+   await enlargedText.addInitScript(() => {
+    document.addEventListener('DOMContentLoaded', () => { document.documentElement.style.fontSize = '200%'; });
+   });
+   const page = await enlargedText.newPage();
+   for (const route of all) await inspect(page, route, viewport, 'chromium-enlarged-text', false);
+   await enlargedText.close();
    await interactionTests(browser);
    await consentTests(browser);
   }
