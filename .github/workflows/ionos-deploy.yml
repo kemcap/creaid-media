@@ -1,4 +1,4 @@
-name: IONOS - Website hochladen (Vorschau)
+name: IONOS - Website hochladen (Produktion)
 on:
   workflow_dispatch:
     inputs:
@@ -23,6 +23,8 @@ on:
       - '.github/scripts/upload-ionos.py'
       - '.github/scripts/test-incremental-ionos.py'
       - '.github/scripts/prepare-ionos.mjs'
+      - '.github/scripts/prepare-production-indexing.mjs'
+      - 'docs/sitemap-kandidat-nach-freigabe.xml'
 permissions:
   contents: read
 concurrency:
@@ -70,6 +72,8 @@ jobs:
         run: |
           node scripts/performance/test-prepare-candidate.mjs
           node .github/scripts/prepare-preview-cache.mjs
+      - name: Set production index policy and sitemap (IONOS only)
+        run: node .github/scripts/prepare-production-indexing.mjs
       - name: Confirm main has the same preview sources
         run: |
           git fetch --no-tags origin main
@@ -89,9 +93,10 @@ jobs:
           php backend/contact/test-turnstile.php
           php backend/contact/test-hubspot.php
           python -m py_compile .github/scripts/update-preview-contact-core.py
-      - name: Incremental deployment to dedicated IONOS preview
+      - name: Incremental deployment to dedicated IONOS production directory
         id: static_preview
         env:
+          CREAID_IONOS_PRODUCTION: '1'
           CREAID_PREVIEW_CACHE_MODE: ${{ inputs.preview_cache || 'normal' }}
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
@@ -107,7 +112,7 @@ jobs:
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
         run: python .github/scripts/update-preview-contact-core.py
       - name: Activate and verify cache on IONOS preview
-        if: ${{ !cancelled() && steps.static_preview.outcome == 'success' && github.event_name == 'push' && contains(github.event.head_commit.message, '[ionos-preview-cache-enable]') }}
+        if: ${{ false }}
         env:
           CREAID_PREVIEW_CACHE_MODE: enabled
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
