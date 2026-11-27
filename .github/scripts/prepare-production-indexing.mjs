@@ -33,6 +33,19 @@ for(const dir of ['dist','preview-cache-package/site']){
   const file=join(dir,'.htaccess');let rules=readFileSync(file,'utf8');
   assert.ok(rules.includes(oldHeader)&&!rules.includes('CREAID PRODUCTION INDEXING'));
   rules=rules.replaceAll(oldHeader,conditional).replaceAll("%{HTTP_HOST} == 'vorschau.creaid-media.de'","%{HTTP_HOST} == '"+host+"'");
+  // Only the real domain variants; never redirect preview or unknown hosts.
+  const hostRules=[
+    '# BEGIN CREAID CANONICAL HOST',
+    'RewriteCond %{HTTP_HOST} ^www\\.creaid-media\\.de(?::(?:80|443))?$ [NC]',
+    'RewriteRule ^ https://creaid-media.de%{REQUEST_URI} [R=301,END,NE]',
+    'RewriteCond %{HTTP_HOST} ^creaid-media\\.de(?::(?:80|443))?$ [NC]',
+    'RewriteCond %{HTTPS} !=on',
+    'RewriteRule ^ https://creaid-media.de%{REQUEST_URI} [R=301,END,NE]',
+    '# END CREAID CANONICAL HOST'
+  ].join('\n');
+  const insert='RewriteRule ^\\.creaid- [F,END]';
+  assert.equal(rules.split(insert).length,2,'Expected protected route marker');
+  rules=rules.replace(insert,insert+'\n'+hostRules);
   rules+='\n# CREAID PRODUCTION INDEXING — non-production hosts stay noindex\n';
   writeFileSync(file,rules);
   writeFileSync(join(dir,'sitemap.xml'),sitemapXML);
