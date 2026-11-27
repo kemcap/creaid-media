@@ -4,6 +4,8 @@ require __DIR__.'/hubspot.php';
 use function CreAid\Contact\recordHubSpotContact;
 
 $config = require __DIR__.'/config.example.php';
+// CRM is intentionally preview-only until separately approved for production.
+$config['allowed_origins'] = ['https://vorschau.creaid-media.de'];
 $config['hubspot_token'] = 'test-private-app-token';
 $data = [
     'name' => 'Deniz Yılmaz', 'email' => 'deniz@example.invalid',
@@ -26,6 +28,7 @@ same(recordHubSpotContact($data, $config, $post), 'configuration_error');
 $config['turnstile_required'] = true;
 same(recordHubSpotContact($data, array_replace($config, ['hubspot_token' => "bad\r\nvalue"]), $post), 'configuration_error');
 same(recordHubSpotContact($data, array_replace($config, ['allowed_origins' => ['https://creaid-media.de']]), $post), 'configuration_error');
+same(recordHubSpotContact($data, array_replace($config, ['allowed_origins' => ['https://vorschau.creaid-media.de', 'https://creaid-media.de']]), $post), 'configuration_error');
 same($payloads, []);
 same(recordHubSpotContact($data, $config, $post), 'created');
 same(recordHubSpotContact($data, $config, $post), 'existing');
