@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {mkdirSync,writeFileSync} from 'node:fs';
+import {mkdirSync,writeFileSync,readFileSync,existsSync} from 'node:fs';
 import {join} from 'node:path';
 import {chromium,firefox,webkit} from 'playwright';
 import pixelmatch from 'pixelmatch';
@@ -11,6 +11,8 @@ const reference=process.env.CREAID_QA_BASELINE||'';
 const out=process.env.CREAID_QA_OUTPUT||'qa-results';
 const all=Object.keys(routeFiles);
 const representative=['/','/webdesign','/grafikdesign-2','/digitales-marketing','/ki-automatisierung','/leistungen','/online-shop-entwicklung','/webdesign/webdesign-fuer-aerzte','/kontakt','/referenzen','/ueber-uns','/creaid-blog','/google-ads-aber-keine-anfragen','/category/seo','/impressum','/performance-audit-3'].filter(r=>all.includes(r));
+const copyPath=new URL('../docs/seo/phase-4/visual-copy-reference.json',import.meta.url);
+const phase4Copy=existsSync(copyPath)?JSON.parse(readFileSync(copyPath,'utf8')):{};
 const errors=[],results=[],differences=[];
 mkdirSync(out,{recursive:true});
 const sizes=[{width:390,height:844},{width:768,height:1024},{width:1440,height:900}];
@@ -37,6 +39,20 @@ async function readyForScreenshot(page){
 }
 // Replay reviewed copy edits in the older reference so the whole layout is still compared.
 async function updateCopyReference(page,route){
+ // Only replay explicitly enumerated, exact old/new paragraphs. No masks,
+ // skipped routes, changed pixel threshold, or candidate-derived reference.
+ if(phase4Copy[route]){
+  await page.evaluate(entries=>{
+   for(const {selector,before,after} of entries){
+    const nodes=document.querySelectorAll(selector);
+    if(nodes.length!==1)throw Error('Unexpected reference selector '+selector);
+    const p=nodes[0];
+    if(p.childElementCount!==0)throw Error('Reference paragraph contains markup '+selector);
+    if(p.textContent===before)p.textContent=after;
+    else if(p.textContent!==after)throw Error('Unexpected reference copy '+selector);
+   }
+  },phase4Copy[route]);
+ }
  if(route==='/cookie-einstellungen'){
   await page.evaluate(()=>{
    if(!document.getElementById('lResetConsent'))return;
@@ -114,6 +130,15 @@ async function inspect(page,route,viewport,engine,compare){
   if(info.width>info.viewport+2)localErrors.push('Horizontal overflow '+(info.width-info.viewport)+' px');
   if(info.canonical!=='https://creaid-media.de'+route||info.robots!=='noindex,nofollow,noarchive')localErrors.push('SEO metadata mismatch');
   if(info.badImages.length)localErrors.push('Broken images: '+info.badImages.join(', '));
+  if(phase4Copy[route]){
+   const copyCheck=await page.evaluate(entries=>entries.map(({selector,after})=>{
+    const nodes=document.querySelectorAll(selector),p=nodes[0];
+    if(nodes.length!==1||p.textContent!==after||p.childElementCount!==0)return 'Unexpected candidate copy '+selector;
+    if(p.scrollWidth>p.clientWidth+2||p.scrollHeight>p.clientHeight+2)return 'Clipped or overflowing copy '+selector;
+    return null;
+   }).filter(Boolean),phase4Copy[route]);
+   localErrors.push(...copyCheck);
+  }
   if(compare){
    await readyForScreenshot(page);
    const actual=await page.screenshot({animations:'disabled',caret:'hide',path:join(out,id+'-current.png')});

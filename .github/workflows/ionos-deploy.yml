@@ -80,6 +80,10 @@ jobs:
         run: |
           node scripts/test-canonical-page-links.mjs
           python scripts/check-technical-seo.py --output seo-phase2-report/candidate.json
+      - name: Verify rendered OnPage SEO before upload
+        run: |
+          python scripts/check-onpage-seo.py --output seo-phase4-report/candidate.json
+          python scripts/check-onpage-seo.py --dist preview-cache-package/site --output seo-phase4-report/cache-candidate.json
       - name: Confirm main has the same preview sources
         run: |
           git fetch --no-tags origin main
@@ -139,6 +143,15 @@ jobs:
         with:
           name: seo-phase2-production-report
           path: seo-phase2-report/
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Verify deployed OnPage SEO
+        run: python scripts/check-onpage-seo.py --live --output seo-phase4-report/live.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seo-phase4-production-report
+          path: seo-phase4-report/
           if-no-files-found: ignore
           retention-days: 30
       - name: Update the private contact core on IONOS preview

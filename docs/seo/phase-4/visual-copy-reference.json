@@ -1,0 +1,218 @@
+{
+  "/performance-optimization-3": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Vor der Optimierung sind ein reproduzierbarer Ausgangswert und die wichtigsten Seiten festzulegen. Große Bilder, blockierende Ressourcen oder unpassende Cache-Regeln werden nach Einfluss und Änderungsrisiko bewertet. Die Abnahme vergleicht dieselben Testbedingungen vor und nach der Umsetzung; ein bestimmter Performance-Score wird nicht versprochen."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie die betroffene URL, besonders langsame Seiten, das eingesetzte CMS oder Framework, bekannte Probleme und vorhandene Messberichte. Welche Nutzerwege sind geschäftlich wichtig? Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/load-testing-3": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Ein Lasttest sollte einen realistischen Normalbetrieb und vereinbarte Lastspitzen abbilden. Vorab sind Abbruchkriterien, Testdaten, zulässige Anfrageraten und die Zustimmung des Hostingbetreibers zu klären. Tests auf produktiven Systemen erfolgen nicht ohne ausdrückliche Freigabe."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Beschreiben Sie Anwendung, typische Besucherzahl, Spitzenzeiten und die wichtigsten Vorgänge, etwa Suche oder Bestellablauf. Benennen Sie die verfügbare Testumgebung und bekannte Kapazitätsgrenzen. Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/performance-audit-3": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Ein Audit unterscheidet beispielsweise langsame Serverantworten von großen Medien, blockierenden Skripten oder instabilen Layouts. Messungen sollten repräsentative Mobil- und Desktop-Seiten umfassen. Eine priorisierte Befundliste dient als Grundlage für ein gesondert abgestimmtes Optimierungsprojekt."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Übermitteln Sie die Website-Adresse, besonders betroffene Seitentypen und das Ziel der Prüfung. Vorhandene Lighthouse- oder Search-Console-Berichte sind hilfreich; reale Nutzerdaten und Labormessungen werden getrennt betrachtet. Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/code-ueberpruefung": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Die Prüfung sollte auf einen definierten Codebestand und konkrete Fragestellungen begrenzt sein: etwa Fehleranfälligkeit, Abhängigkeiten, Wiederverwendung oder Testbarkeit. Ein Befund ist noch keine freigegebene Codeänderung; Korrekturen und Regressionstests werden separat vereinbart."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie Programmiersprache, Framework, betroffene Komponenten, bekannte Fehler und vorhandene Tests. Teilen Sie mit, ob ein Repository und eine reproduzierbare Testumgebung verfügbar sind. Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/upgrades-wartung": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Bei WordPress umfasst die Abstimmung Plugin- und Sicherheits-Updates sowie Backups entsprechend dem gewählten Wartungspaket. Vor Änderungen sind Kompatibilität, Wiederherstellbarkeit und ein sinnvoller Testweg zu prüfen. Zusätzliche Reparaturen, individuelle Erweiterungen oder andere Systeme werden gesondert vereinbart."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie Website-Adresse, CMS, Hosting, eingesetzte Erweiterungen und gewünschte Wartungsintervalle. Informieren Sie uns über bekannte Update-Probleme und bestehende Backup-Routinen. Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/server-wartung": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Aktuelle Verfügbarkeit und Konditionen dieser früher gelisteten Leistung sind noch zu bestätigen. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Aktuelle Verfügbarkeit und Konditionen sind noch zu bestätigen. Bei einer möglichen Betreuung sind Verantwortlichkeiten für Betriebssystem-Updates, Dienste, Sicherungen, Störungen und Wiederherstellung ausdrücklich abzugrenzen; ein bestehender Hostingvertrag bleibt maßgeblich."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie Hostinganbieter, Servertyp, Betriebssystem, eingesetzte Dienste, Backup-Verfahren und bisherigen Betreuungsumfang. Beschreiben Sie konkrete Störungen oder gewünschten Unterstützungsbedarf. Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/cloud-hosting-3": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Aktuelle Verfügbarkeit und Konditionen dieser früher gelisteten Leistung sind noch zu bestätigen. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Aktuelle Verfügbarkeit und Konditionen sind noch zu bestätigen. Beim Vergleich zählen nicht nur der Einstiegspreis, sondern Ressourcenbedarf, Datenstandort, Backup- und Wiederherstellungsoptionen, vertragliche Verantwortlichkeiten und laufende Kosten. Ein konkreter Hostingvertrag ist separat zu klären."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Beschreiben Sie Anwendung, erwartete Besucherlast, Speicherbedarf, vorhandenes Hosting und Anforderungen an Verfügbarkeit oder Datenstandort. Nennen Sie geplante Änderungen und den gewünschten Zeitrahmen. Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/systemintegration": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Die Planung beginnt mit einer Zuordnung der führenden Datenquellen und dem gewünschten Datenfluss. Pflichtfelder, Dubletten, fehlgeschlagene Übertragungen und Wiederholungsregeln sind vorab zu klären. Eine Abnahme mit repräsentativen Testdaten schafft eine nachvollziehbare Grundlage für den späteren Betrieb."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie die zu verbindenden Systeme, Datenarten, Übertragungsrichtung und gewünschte Auslöser. Beschreiben Sie bisherige manuelle Arbeitsschritte und vorhandene Schnittstellendokumentation. Verwenden Sie anonymisierte Beispieldaten; Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/cs-cart-lizenz-reseller": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Aktuelle Verfügbarkeit und Konditionen dieser früher gelisteten Leistung sind noch zu bestätigen. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Aktueller Resellerstatus und Konditionen sind nicht bestätigt. Vor einer Lizenzentscheidung sollten Edition, erlaubte Nutzung, Erweiterungen, Updateansprüche und Verlängerungskosten anhand der Herstellerbedingungen geklärt werden. Eine Anfrage ist kein Lizenzkauf und kein verbindliches Angebot."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie die geplante CS-Cart-Edition, vorhandene Lizenz, Zahl der Shops oder Anbieter und benötigte Funktionen. Beschreiben Sie, ob es um eine Neuinstallation, Verlängerung oder Erweiterung geht. Keine Lizenzschlüssel oder Zugangsdaten übermitteln."
+    }
+  ],
+  "/cs-cart-konfiguration-einrichtung": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Aktuelle Verfügbarkeit und Konditionen dieser früher gelisteten Leistung sind noch zu bestätigen. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Aktuelle Verfügbarkeit und Konditionen sind noch zu bestätigen. Für eine mögliche Einrichtung müssen Produktdaten, Steuern, Zahlungsarten, Versandregeln und vorhandene Erweiterungen zur gewählten Edition passen. Eine geeignete Testbestellung und die Zuständigkeit für den laufenden Betrieb gehören in die Abstimmung."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie die vorhandene oder geplante CS-Cart-Version, Sortiment, Produktvarianten, Lieferländer und Zahlungsarten. Beschreiben Sie bestehende Erweiterungen und Datenimporte. Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/store-builder-standardlizenzen": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Aktuelle Verfügbarkeit und Konditionen dieser früher gelisteten Leistung sind noch zu bestätigen. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Aktuelle Verfügbarkeit und Konditionen sind noch zu bestätigen. Prüfen Sie vor der Entscheidung, welche Shopfunktionen und Erweiterungen eine Edition enthält, welche Updates möglich sind und welche laufenden Lizenzkosten anfallen. Es erfolgt kein direkter Lizenzverkauf."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie die benötigte Edition, Anzahl der Shops, gewünschte Funktionen und bestehende Lizenzmodelle. Beschreiben Sie, ob die Anfrage einen neuen Shop, eine Verlängerung oder einen Editionswechsel betrifft. Keine Lizenzschlüssel oder Zugangsdaten übermitteln."
+    }
+  ],
+  "/b2b-portal-entwicklung": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Bei einem B2B-Portal unterscheiden sich die Anforderungen von einem klassischen Endkundenshop. Kundenbezogene Preise, Bestellrechte, Dokumentenzugriff und Freigabestufen sollten anhand konkreter Geschäftskundenprozesse definiert werden. Umfang, Datenübernahme, Schnittstellen und Testfälle werden vor der Umsetzung vereinbart."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Beschreiben Sie Zielkunden, Benutzerrollen, typische Bestellungen, Preislogik und vorhandene Warenwirtschaft. Welche manuellen Freigaben oder Dokumente müssen digital abgebildet werden? Verwenden Sie anonymisierte Beispiele; Zugangsdaten bitte nicht übermitteln."
+    }
+  ],
+  "/marktplatz-entwicklung": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Bei einem Marktplatz müssen Anbieter und Betreiber getrennte Zuständigkeiten erhalten. Produktfreigabe, Verfügbarkeit, Gebührenmodell, Zahlungsabwicklung und Reklamationen beeinflussen den Funktionsumfang. Für eine erste Version sollten unverzichtbare Abläufe von späteren Erweiterungen getrennt werden."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie Produkt- oder Dienstleistungskategorien, geplante Anbieterzahl, Geschäftsmodell und die vorgesehenen Abläufe vom Angebot bis zum Kauf. Beschreiben Sie gewünschte Schnittstellen und Moderationsaufgaben. Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/e-commerce": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Ein eigener Onlineshop, ein geschlossenes B2B-Portal und ein Mehranbieter-Marktplatz stellen unterschiedliche Anforderungen an Rollen, Sortiment, Preislogik und Verwaltung. Die Systemwahl sollte sich an tatsächlichen Bestellabläufen, Pflegekapazität, Erweiterbarkeit und laufenden Kosten orientieren."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Beschreiben Sie Ihr Handelsmodell, Zielkunden, Produktzahl, Varianten, Lieferländer und vorhandene Systeme. Welche Prozesse sollen selbst verwaltet werden, welche sollen automatisiert ablaufen? Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/kundenspezifische-entwicklung": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Individuelle Entwicklung ist sinnvoll, wenn Standardfunktionen die entscheidenden Abläufe nicht ausreichend abbilden. Vorab sollten Aufgaben, Rollen, Datenmodell und Schnittstellen als prüfbare Anforderungen beschrieben werden. Umsetzung, Testfälle, Übergabe und Wartung hängen vom vereinbarten Funktionsumfang ab."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie das konkrete Problem, bisherige Arbeitsschritte, betroffene Nutzergruppen und vorhandene Software. Skizzieren Sie die wichtigsten Eingaben, Ausgaben und gewünschten Abläufe. Verwenden Sie anonymisierte Beispieldaten; Zugangsdaten bitte nicht übermitteln."
+    }
+  ],
+  "/addon-theme-entwicklung": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Ein Add-on erweitert Funktionen; ein Theme beeinflusst vor allem Darstellung und Bedienung. Abhängigkeiten zur Plattform, bestehende Anpassungen und Updatefähigkeit müssen vorab geprüft werden. Der vereinbarte Testumfang sollte sowohl die neue Funktion als auch betroffene bestehende Abläufe erfassen."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie Plattform und Version, vorhandenes Theme, Erweiterungen und das gewünschte Verhalten oder die gewünschte Gestaltung. Stellen Sie möglichst eine Beschreibung oder Bildschirmabbildung des aktuellen Zustands bereit. Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/ui-ux-entwicklung": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Gute Nutzerführung entsteht aus klaren Aufgaben, verständlichen Begriffen und nachvollziehbaren Interaktionen. Informationsstruktur und Prototypen sollten typische Wege auf Mobilgeräten und Desktop abbilden. Kontraste, Tastaturbedienung und konkrete Nutzungsszenarien werden passend zum Projekt geprüft."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Beschreiben Sie digitale Anwendung, Zielgruppen, die wichtigsten Nutzeraufgaben und bekannte Bedienprobleme. Vorhandene Screenshots, Wireframes oder anonymisierte Nutzungsbefunde helfen bei der Abstimmung. Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ],
+  "/animation": [
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(2) p",
+      "before": "Wir klären anhand des konkreten Vorhabens, welche Umsetzung sinnvoll und machbar ist. Keine pauschalen Leistungs-, Preis- oder Erfolgsgarantien.",
+      "after": "Bewegung sollte eine Aussage erklären, den Blick gezielt führen oder eine Interaktion verständlich machen. Für Websites sind Dateigröße, Ladezeit, Mobilansicht und reduzierte Bewegung zu berücksichtigen. Bei Präsentationen und Kampagnen stehen Dauer, Ausgabeformat und Einsatzkanal im Vordergrund."
+    },
+    {
+      "selector": "#projektumfang .cm-depth-grid article:nth-child(3) p",
+      "before": "Beschreiben Sie Ihre Ausgangslage, verwendete Systeme, Ziel, vorhandene Zugänge und gewünschte Unterstützung. Zugangsdaten bitte nicht im Kontaktformular übermitteln.",
+      "after": "Nennen Sie Ziel, Zielgruppe, Einsatzort, gewünschte Dauer und vorhandene Markenrichtlinien. Beschreiben Sie benötigte Formate, verfügbare Bild- oder Videodateien und den geplanten Nutzungsumfang. Zugangsdaten bitte nicht im Kontaktformular übermitteln."
+    }
+  ]
+}
