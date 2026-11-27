@@ -30,8 +30,8 @@
     "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Landingpage für Kampagnen: Elemente und Prüfliste\",\"description\":\"Welche Elemente braucht Ihre Kampagnen-Landingpage? Planen und prüfen Sie Überschrift, Belege, Anfrageformular und mobile Nutzung vor dem Werbestart.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/beste-landingpage-elemente-fuer-kampagnen\"},\"url\":\"https://creaid-media.de/beste-landingpage-elemente-fuer-kampagnen\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/07/Handwerker-sitzt-vor-seiner-Webseite.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-07-05T14:38:22Z\",\"articleSection\":\"Marketing & SEO\",\"keywords\":\"Landingpage für Kampagnen\",\"dateModified\":\"2026-07-05T14:53:39Z\"}"
   },
   "blog": {
-    "title": "Journal für Webdesign, SEO, Branding & KI | CreAid-Media",
-    "description": "Ratgeber zu Websites, E-Commerce, lokaler Sichtbarkeit, Markenauftritt und KI-Workflows. Finden Sie die passenden Beiträge für Ihr Projekt.",
+    "title": "Journal: Webdesign, SEO, Branding & KI | CreAid-Media",
+    "description": "Lesen Sie praktische Ratgeber zu Websites, E-Commerce, lokaler Sichtbarkeit, Markenführung und KI. Finden Sie passende Beiträge für Ihr Unternehmen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/creaid-blog",
@@ -41,11 +41,12 @@
     "url": "blog.html",
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
-    "ogType": "website"
+    "ogType": "website",
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"@id\":\"https://creaid-media.de/creaid-blog#webpage\",\"url\":\"https://creaid-media.de/creaid-blog\",\"name\":\"Journal: Webdesign, SEO, Branding & KI | CreAid-Media\",\"description\":\"Lesen Sie praktische Ratgeber zu Websites, E-Commerce, lokaler Sichtbarkeit, Markenführung und KI. Finden Sie passende Beiträge für Ihr Unternehmen.\",\"publisher\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\"}"
   },
   "branding": {
-    "title": "Branding & Grafikdesign für Unternehmen | CreAid-Media",
-    "description": "Corporate Design, Logoentwicklung und Printdesign für einen einheitlichen Markenauftritt. Lernen Sie die Leistungen von CreAid-Media kennen.",
+    "title": "Branding-Agentur für Logo & Corporate Design | CreAid-Media",
+    "description": "Entwickeln Sie einen einheitlichen Markenauftritt mit CreAid-Media: Logo, Corporate Design, Farben, Typografie und passende Print- und Digitalmedien.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/grafikdesign-2",
@@ -56,7 +57,7 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Branding und Grafikdesign\",\"serviceType\":\"Branding und Grafikdesign\",\"description\":\"Corporate Design, Logoentwicklung und Printdesign für einen einheitlichen Markenauftritt. Lernen Sie die Leistungen von CreAid-Media kennen.\",\"url\":\"https://creaid-media.de/grafikdesign-2\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Branding und Grafikdesign\",\"serviceType\":\"Branding und Grafikdesign\",\"description\":\"Entwickeln Sie einen einheitlichen Markenauftritt mit CreAid-Media: Logo, Corporate Design, Farben, Typografie und passende Print- und Digitalmedien.\",\"url\":\"https://creaid-media.de/grafikdesign-2\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\",\"@id\":\"https://creaid-media.de/grafikdesign-2#service\"}"
   },
   "cookie-einstellungen": {
     "title": "Cookie-Einstellungen (Entwurf) | CreAid-Media",
@@ -162,8 +163,8 @@
     "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Google Ads: Klicks, aber keine Anfragen? Ursachen prüfen\", \"description\": \"Viele Klicks, wenige Leads? Prüfen Sie Suchbegriffe, Conversion-Tracking und Landingpage, bevor Sie Budget oder Gebote verändern.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/google-ads-aber-keine-anfragen\"}, \"url\": \"https://creaid-media.de/google-ads-aber-keine-anfragen\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/warum-bringt-meine-website-keine-kunden-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-10\", \"articleSection\": \"Marketing & SEO\"}"
   },
   "google-ads-social-media": {
-    "title": "Google Ads & Social-Media-Kampagnen für Unternehmen | CreAid-Media",
-    "description": "Planen Sie mit CreAid-Media Google Ads und Social-Media-Kampagnen. Wir stimmen Zielgruppe, Anzeigen, Landingpage und Auswertung aufeinander ab.",
+    "title": "Google Ads-Agentur & Social-Media-Kampagnen | CreAid-Media",
+    "description": "Planen Sie Google Ads und Social-Media-Kampagnen mit CreAid-Media. Anzeigen, Zielseiten, Werbebudget und Auswertung auf Ihre Ziele abstimmen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/google-ads-social-media",
@@ -174,7 +175,7 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Google Ads und Social Media\",\"serviceType\":\"Google Ads und Social Media\",\"description\":\"Planen Sie mit CreAid-Media Google Ads und Social-Media-Kampagnen. Wir stimmen Zielgruppe, Anzeigen, Landingpage und Auswertung aufeinander ab.\",\"url\":\"https://creaid-media.de/google-ads-social-media\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Google Ads und Social Media\",\"serviceType\":\"Google Ads und Social Media\",\"description\":\"Planen Sie Google Ads und Social-Media-Kampagnen mit CreAid-Media. Anzeigen, Zielseiten, Werbebudget und Auswertung auf Ihre Ziele abstimmen.\",\"url\":\"https://creaid-media.de/google-ads-social-media\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\",\"@id\":\"https://creaid-media.de/google-ads-social-media#service\"}"
   },
   "google-maps-auffindbarkeit-verbessern": {
     "title": "Google Maps: Auffindbarkeit für Unternehmen verbessern | CreAid-Media",
@@ -221,8 +222,8 @@
     "ogType": "website"
   },
   "index": {
-    "title": "Werbeagentur für Webdesign, Branding & SEO | CreAid-Media",
-    "description": "CreAid-Media verbindet Webdesign, Branding, digitales Marketing und KI-Automatisierung. Lernen Sie unsere Leistungen kennen und besprechen Sie Ihr Projekt.",
+    "title": "Werbeagentur für Webdesign, SEO & Branding | CreAid-Media",
+    "description": "Webdesign, SEO, Branding und KI-Automatisierung für Unternehmen. CreAid-Media verbindet Gestaltung, Technik und persönliche Projektabstimmung.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/",
@@ -233,7 +234,7 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\",\"logo\":\"https://creaid-media.de/assets/creaid-media-logo.webp\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\",\"logo\":\"https://creaid-media.de/assets/creaid-media-logo.webp\",\"@id\":\"https://creaid-media.de/#organization\",\"description\":\"Webdesign, SEO, Branding und KI-Automatisierung für Unternehmen. CreAid-Media verbindet Gestaltung, Technik und persönliche Projektabstimmung.\",\"sameAs\":[\"https://www.facebook.com/p/CreAid-Media-61585200856940/\",\"https://www.instagram.com/creaid.media/\",\"https://www.linkedin.com/company/creaid-media\"]}"
   },
   "individuelle-webentwicklung-fuer-unternehmen": {
     "title": "Individuelle Webentwicklung: Standard oder Maßarbeit? | CreAid-Media",
@@ -282,7 +283,7 @@
   },
   "ki-automatisierung": {
     "title": "KI-Automatisierung für Unternehmen | CreAid-Media",
-    "description": "Wiederkehrende Aufgaben und Schnittstellen mit CreAid-Media prüfen. Erfahren Sie, wie ein KI-Pilot mit Freigabe und klaren Zuständigkeiten startet.",
+    "description": "Wiederkehrende Prozesse mit KI und Schnittstellen vereinfachen. CreAid-Media plant geeignete Workflows, Pilotprojekte und klare menschliche Freigaben.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/ki-automatisierung",
@@ -293,11 +294,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"KI und Automatisierung\",\"serviceType\":\"KI und Automatisierung\",\"description\":\"Wiederkehrende Aufgaben und Schnittstellen mit CreAid-Media prüfen. Erfahren Sie, wie ein KI-Pilot mit Freigabe und klaren Zuständigkeiten startet.\",\"url\":\"https://creaid-media.de/ki-automatisierung\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"KI und Automatisierung\",\"serviceType\":\"KI und Automatisierung\",\"description\":\"Wiederkehrende Prozesse mit KI und Schnittstellen vereinfachen. CreAid-Media plant geeignete Workflows, Pilotprojekte und klare menschliche Freigaben.\",\"url\":\"https://creaid-media.de/ki-automatisierung\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\",\"@id\":\"https://creaid-media.de/ki-automatisierung#service\"}"
   },
   "ki-workflows-crm": {
-    "title": "KI-Workflows & CRM-Automatisierung | CreAid-Media",
-    "description": "Automatisieren Sie wiederkehrende Anfrage- und Übergabeprozesse. CreAid-Media plant CRM-Anbindungen, Freigaben und nachvollziehbare Abläufe.",
+    "title": "CRM-Automatisierung & KI-Workflows | CreAid-Media",
+    "description": "Anfragen strukturiert erfassen und weiterbearbeiten: CreAid-Media plant CRM-Schnittstellen, Aufgaben, Freigaben und nachvollziehbare Automatisierungen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/ki-workflows-crm",
@@ -308,11 +309,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"KI-Workflows und CRM\",\"serviceType\":\"KI-Workflows und CRM\",\"description\":\"Automatisieren Sie wiederkehrende Anfrage- und Übergabeprozesse. CreAid-Media plant CRM-Anbindungen, Freigaben und nachvollziehbare Abläufe.\",\"url\":\"https://creaid-media.de/ki-workflows-crm\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"KI-Workflows und CRM\",\"serviceType\":\"KI-Workflows und CRM\",\"description\":\"Anfragen strukturiert erfassen und weiterbearbeiten: CreAid-Media plant CRM-Schnittstellen, Aufgaben, Freigaben und nachvollziehbare Automatisierungen.\",\"url\":\"https://creaid-media.de/ki-workflows-crm\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\",\"@id\":\"https://creaid-media.de/ki-workflows-crm#service\"}"
   },
   "kontakt": {
-    "title": "Kontakt & Projektanfrage bei CreAid-Media | CreAid-Media",
-    "description": "Besprechen Sie Ihr Projekt mit CreAid-Media. Wählen Sie eine Leistung und bereiten Sie Ihre Anfrage für Ihr E-Mail-Programm vor.",
+    "title": "Kontakt & Projektanfrage | CreAid-Media",
+    "description": "Besprechen Sie Ihr Website-, Design-, Marketing- oder KI-Projekt mit CreAid-Media. Senden Sie Ihre Anfrage direkt über das Kontaktformular.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/kontakt",
@@ -322,11 +323,12 @@
     "url": "kontakt.html",
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
-    "ogType": "website"
+    "ogType": "website",
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"ContactPage\",\"@id\":\"https://creaid-media.de/kontakt#webpage\",\"url\":\"https://creaid-media.de/kontakt\",\"name\":\"Kontakt & Projektanfrage | CreAid-Media\",\"description\":\"Besprechen Sie Ihr Website-, Design-, Marketing- oder KI-Projekt mit CreAid-Media. Senden Sie Ihre Anfrage direkt über das Kontaktformular.\",\"publisher\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\"}"
   },
   "leistungen": {
-    "title": "Spezialleistungen für Web, Marketing, Design & KI | CreAid-Media",
-    "description": "SEO, Onlineshops, Handwerker-Webdesign, Editorial, Kampagnen und KI-Workflows: Finden Sie die passende Leistung für Ihr Vorhaben.",
+    "title": "Leistungen: Webdesign, SEO, Design & KI | CreAid-Media",
+    "description": "Entdecken Sie unsere Webdesign-, Marketing-, Design- und KI-Leistungen, Branchen-Websites sowie technische Spezialleistungen für Ihr Unternehmen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/leistungen",
@@ -336,7 +338,8 @@
     "url": "leistungen.html",
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
-    "ogType": "website"
+    "ogType": "website",
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"@id\":\"https://creaid-media.de/leistungen#webpage\",\"url\":\"https://creaid-media.de/leistungen\",\"name\":\"Leistungen: Webdesign, SEO, Design & KI | CreAid-Media\",\"description\":\"Entdecken Sie unsere Webdesign-, Marketing-, Design- und KI-Leistungen, Branchen-Websites sowie technische Spezialleistungen für Ihr Unternehmen.\",\"publisher\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\"}"
   },
   "logo-design-agentur": {
     "title": "Logo-Design-Agentur: Auswahl, Ablauf und Leistung | CreAid-Media",
@@ -385,7 +388,7 @@
   },
   "marketing": {
     "title": "Digitales Marketing für Unternehmen | CreAid-Media",
-    "description": "CreAid-Media unterstützt Unternehmen mit SEO, Content, Google Ads und Social Media. Finden Sie die passenden Maßnahmen für Ihr Ziel.",
+    "description": "Planen Sie SEO, Content, Google Ads und Social Media passend zu Ihrem Angebot. CreAid-Media stimmt Zielgruppe, Kanäle, Budget und Auswertung ab.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/digitales-marketing",
@@ -396,7 +399,7 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Digitales Marketing\",\"serviceType\":\"Digitales Marketing\",\"description\":\"CreAid-Media unterstützt Unternehmen mit SEO, Content, Google Ads und Social Media. Finden Sie die passenden Maßnahmen für Ihr Ziel.\",\"url\":\"https://creaid-media.de/digitales-marketing\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Digitales Marketing\",\"serviceType\":\"Digitales Marketing\",\"description\":\"Planen Sie SEO, Content, Google Ads und Social Media passend zu Ihrem Angebot. CreAid-Media stimmt Zielgruppe, Kanäle, Budget und Auswertung ab.\",\"url\":\"https://creaid-media.de/digitales-marketing\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\",\"@id\":\"https://creaid-media.de/digitales-marketing#service\"}"
   },
   "marktplatz-plattform-entwickeln": {
     "title": "Online-Marktplatz entwickeln: MVP, Rollen und Betrieb | CreAid-Media",
@@ -459,8 +462,8 @@
     "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Onlineshop selbst bauen oder erstellen lassen?\",\"description\":\"Onlineshop erstellen lassen oder selbst starten? Vergleichen Sie Eigenbau und Agentur nach Sortiment, Schnittstellen, laufenden Kosten und Zuständigkeiten.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/onlineshop-erstellen-lassen\"},\"url\":\"https://creaid-media.de/onlineshop-erstellen-lassen\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/05/onlineshop-erstellen-lassen-lohnt-es-sich-featured.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-05-03T01:45:14Z\",\"articleSection\":\"Webdesign\",\"keywords\":\"Onlineshop erstellen lassen\",\"dateModified\":\"2026-11-25T00:39:19Z\"}"
   },
   "onlineshops-ecommerce": {
-    "title": "Onlineshop erstellen lassen – E-Commerce für Unternehmen | CreAid-Media",
-    "description": "Planen Sie Ihren Onlineshop mit CreAid-Media: Produktseiten, mobile Bestellung und die Abläufe für Ihren Betrieb gemeinsam abstimmen.",
+    "title": "Onlineshop erstellen lassen | Onlineshop-Agentur | CreAid-Media",
+    "description": "Planen Sie Ihren WooCommerce-Shop mit CreAid-Media: Kategorien, Varianten, Zahlungen, Versand, mobilen Checkout und Produktpflege gemeinsam abstimmen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/online-shop-entwicklung",
@@ -471,11 +474,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Onlineshop und E-Commerce\",\"serviceType\":\"Onlineshop und E-Commerce\",\"description\":\"Planen Sie Ihren Onlineshop mit CreAid-Media: Produktseiten, mobile Bestellung und die Abläufe für Ihren Betrieb gemeinsam abstimmen.\",\"url\":\"https://creaid-media.de/online-shop-entwicklung\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Onlineshop und E-Commerce\",\"serviceType\":\"Onlineshop und E-Commerce\",\"description\":\"Planen Sie Ihren WooCommerce-Shop mit CreAid-Media: Kategorien, Varianten, Zahlungen, Versand, mobilen Checkout und Produktpflege gemeinsam abstimmen.\",\"url\":\"https://creaid-media.de/online-shop-entwicklung\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\",\"@id\":\"https://creaid-media.de/online-shop-entwicklung#service\"}"
   },
   "printdesign-editorial": {
-    "title": "Printdesign & Editorial Design für Unternehmen | CreAid-Media",
-    "description": "Lassen Sie Broschüren, Magazine, Kataloge und Anzeigen gestalten. CreAid-Media verbindet klares Layout mit druckfertiger Aufbereitung.",
+    "title": "Printdesign-Agentur & Editorial Design | CreAid-Media",
+    "description": "Broschüren, Magazine, Kataloge und Anzeigen professionell gestalten lassen. CreAid-Media plant Layout, Typografie, Korrekturen und druckfähige Dateien.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/print-design",
@@ -486,7 +489,7 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Printdesign und Editorial Design\",\"serviceType\":\"Printdesign und Editorial Design\",\"description\":\"Lassen Sie Broschüren, Magazine, Kataloge und Anzeigen gestalten. CreAid-Media verbindet klares Layout mit druckfertiger Aufbereitung.\",\"url\":\"https://creaid-media.de/print-design\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Printdesign und Editorial Design\",\"serviceType\":\"Printdesign und Editorial Design\",\"description\":\"Broschüren, Magazine, Kataloge und Anzeigen professionell gestalten lassen. CreAid-Media plant Layout, Typografie, Korrekturen und druckfähige Dateien.\",\"url\":\"https://creaid-media.de/print-design\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\",\"@id\":\"https://creaid-media.de/print-design#service\"}"
   },
   "produktfim-erstellen-lassen": {
     "title": "Produktfilm erstellen lassen: Briefing und Formate | CreAid-Media",
@@ -533,8 +536,8 @@
     "ogType": "website"
   },
   "referenzen": {
-    "title": "Portfolio & Designstudien von CreAid-Media | CreAid-Media",
-    "description": "Sehen Sie Designstudien von CreAid-Media zu Webdesign, Editorial und Automatisierung. Die Konzepte zeigen Gestaltung und Arbeitsweise.",
+    "title": "Portfolio & Referenzen | CreAid-Media",
+    "description": "Entdecken Sie veröffentlichte Arbeitsproben aus Webdesign, Branding, Editorial, Fotografie und Werbung sowie gekennzeichnete Konzeptstudien.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/referenzen",
@@ -544,7 +547,8 @@
     "url": "referenzen.html",
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
-    "ogType": "website"
+    "ogType": "website",
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"@id\":\"https://creaid-media.de/referenzen#webpage\",\"url\":\"https://creaid-media.de/referenzen\",\"name\":\"Portfolio & Referenzen | CreAid-Media\",\"description\":\"Entdecken Sie veröffentlichte Arbeitsproben aus Webdesign, Branding, Editorial, Fotografie und Werbung sowie gekennzeichnete Konzeptstudien.\",\"publisher\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\"}"
   },
   "schlechte-website-verbessern": {
     "title": "Website verbessern: 7 Schritte für bestehende Seiten | CreAid-Media",
@@ -562,8 +566,8 @@
     "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Website verbessern: 7 Schritte für bestehende Seiten\", \"description\": \"Verbessern Sie eine bestehende Website in sieben Schritten: Startseite, Inhalte, mobile Nutzung, Ladezeit, SEO und Kontaktweg prüfen.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/schlechte-website-verbessern\"}, \"url\": \"https://creaid-media.de/schlechte-website-verbessern\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/schlechte-website-verbessern-in-7-schritten-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-11\", \"articleSection\": \"Webdesign\"}"
   },
   "seo-content-marketing": {
-    "title": "SEO & Content-Marketing für Unternehmen | CreAid-Media",
-    "description": "CreAid-Media unterstützt bei technischer SEO, Themenplanung, verständlichen Inhalten und interner Verlinkung für Ihre Website.",
+    "title": "SEO-Agentur für Unternehmen & Content-Marketing | CreAid-Media",
+    "description": "Keyword-Recherche, technisches SEO, lokale Sichtbarkeit und Content-Marketing für Unternehmen. Lassen Sie Ihre Website und passenden Maßnahmen besprechen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/seo-3",
@@ -574,7 +578,7 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"SEO und Content-Marketing\",\"serviceType\":\"SEO und Content-Marketing\",\"description\":\"CreAid-Media unterstützt bei technischer SEO, Themenplanung, verständlichen Inhalten und interner Verlinkung für Ihre Website.\",\"url\":\"https://creaid-media.de/seo-3\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"SEO und Content-Marketing\",\"serviceType\":\"SEO und Content-Marketing\",\"description\":\"Keyword-Recherche, technisches SEO, lokale Sichtbarkeit und Content-Marketing für Unternehmen. Lassen Sie Ihre Website und passenden Maßnahmen besprechen.\",\"url\":\"https://creaid-media.de/seo-3\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\",\"@id\":\"https://creaid-media.de/seo-3#service\"}"
   },
   "seo-fuer-lokale-sichtbarkeit": {
     "title": "Lokale SEO-Strategie: Website und Google-Profil abstimmen | CreAid-Media",
@@ -637,8 +641,8 @@
     "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Social-Media-Betreuung: Leistungen und Aufwand\", \"description\": \"Welche Aufgaben gehören zur Social-Media-Betreuung? Vergleichen Sie redaktionelle Planung, Produktion, Freigabe und Auswertung für Ihr Unternehmen.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/social-media-betreuung-unternehmen\"}, \"url\": \"https://creaid-media.de/social-media-betreuung-unternehmen\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/social-media-betreuung-fuer-unternehmen-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-16\", \"articleSection\": \"Marketing & SEO\"}"
   },
   "ueber-uns": {
-    "title": "Über CreAid-Media: Arbeitsweise und Zusammenarbeit | CreAid-Media",
-    "description": "Lernen Sie CreAid-Media kennen: Wie wir Webdesign, Marketing, Branding und Automatisierung planen und mit Unternehmen zusammenarbeiten.",
+    "title": "Über uns: Agentur & Arbeitsweise | CreAid-Media",
+    "description": "Lernen Sie CreAid-Media und unsere Arbeitsweise kennen: von der Projektabstimmung über Gestaltung und technische Umsetzung bis zur Übergabe.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/ueber-uns",
@@ -648,7 +652,8 @@
     "url": "ueber-uns.html",
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
-    "ogType": "website"
+    "ogType": "website",
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"AboutPage\",\"@id\":\"https://creaid-media.de/ueber-uns#webpage\",\"url\":\"https://creaid-media.de/ueber-uns\",\"name\":\"Über uns: Agentur & Arbeitsweise | CreAid-Media\",\"description\":\"Lernen Sie CreAid-Media und unsere Arbeitsweise kennen: von der Projektabstimmung über Gestaltung und technische Umsetzung bis zur Übergabe.\",\"publisher\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\"}"
   },
   "warum-bringt-meine-website-keine-kunden": {
     "title": "Website bringt keine Anfragen: Ursachen finden | CreAid-Media",
@@ -801,8 +806,8 @@
     "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Webdesign für kleine Unternehmen: Website planen\",\"description\":\"Webdesign für kleine Unternehmen planen: Welche Seiten, Referenzen und Kontaktwege braucht Ihre Website? Mit Prüfplan für den Start und den mobilen Auftritt.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/webdesign-fuer-kleine-unternehmen\"},\"url\":\"https://creaid-media.de/webdesign-fuer-kleine-unternehmen\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/07/1-unklare-website-kleiner-handwerksbetrieb.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-07-05T18:43:17Z\",\"articleSection\":\"Webdesign\",\"keywords\":\"Webdesign für kleine Unternehmen\",\"dateModified\":\"2026-07-05T18:43:27Z\"}"
   },
   "webdesign-handwerker": {
-    "title": "Webdesign für Handwerker: Websites für Ihren Betrieb | CreAid-Media",
-    "description": "Professionelles Webdesign für Handwerksbetriebe: Leistungsseiten, Einsatzgebiete, Referenzen und klare Kontaktwege. Projekt besprechen.",
+    "title": "Webdesign für Handwerker: Website erstellen lassen | CreAid-Media",
+    "description": "Ihre Handwerker-Website mit klaren Leistungen, Einsatzgebieten, Projektbildern und einfachen Kontaktwegen. Webdesign-Pakete und Projektumfang entdecken.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen",
@@ -813,7 +818,7 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Webdesign für Handwerker\",\"serviceType\":\"Webdesign für Handwerker\",\"description\":\"Professionelles Webdesign für Handwerksbetriebe: Leistungsseiten, Einsatzgebiete, Referenzen und klare Kontaktwege. Projekt besprechen.\",\"url\":\"https://creaid-media.de/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Webdesign für Handwerker\",\"serviceType\":\"Webdesign für Handwerker\",\"description\":\"Ihre Handwerker-Website mit klaren Leistungen, Einsatzgebieten, Projektbildern und einfachen Kontaktwegen. Webdesign-Pakete und Projektumfang entdecken.\",\"url\":\"https://creaid-media.de/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\",\"@id\":\"https://creaid-media.de/webdesign/webdesign-fuer-handwerker-mehr-anfragen-statt-nur-empfehlungen#service\"}"
   },
   "webdesign-outsourcing-deutschland": {
     "title": "Webdesign-Outsourcing: Briefing, Abnahme und Übergabe | CreAid-Media",
@@ -831,8 +836,8 @@
     "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Webdesign-Outsourcing: Briefing, Abnahme und Übergabe\", \"description\": \"So lagern deutsche Unternehmen Webdesign planbar aus: Rollen, Briefing, Meilensteine und Übergabe vor Projektstart festlegen.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/webdesign-outsourcing-deutschland\"}, \"url\": \"https://creaid-media.de/webdesign-outsourcing-deutschland\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/webdesign-outsourcing-deutschland-richtig-nutzen-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-19\", \"articleSection\": \"Webdesign\"}"
   },
   "webdesign": {
-    "title": "Webdesign & Webentwicklung für Unternehmen | CreAid-Media",
-    "description": "Individuelle Websites und Webentwicklung für Unternehmen. Lernen Sie Leistungen, Ablauf und Ratgeber kennen und besprechen Sie Ihr Website-Projekt.",
+    "title": "Webdesign-Agentur: Website erstellen lassen | CreAid-Media",
+    "description": "Lassen Sie Ihre Unternehmenswebsite individuell gestalten und entwickeln. Vergleichen Sie Webdesign-Pakete, klären Sie Inhalte, CMS und Projektumfang.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/webdesign",
@@ -843,7 +848,7 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Webdesign und Webentwicklung\",\"serviceType\":\"Webdesign und Webentwicklung\",\"description\":\"Individuelle Websites und Webentwicklung für Unternehmen. Lernen Sie Leistungen, Ablauf und Ratgeber kennen und besprechen Sie Ihr Website-Projekt.\",\"url\":\"https://creaid-media.de/webdesign\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Webdesign und Webentwicklung\",\"serviceType\":\"Webdesign und Webentwicklung\",\"description\":\"Lassen Sie Ihre Unternehmenswebsite individuell gestalten und entwickeln. Vergleichen Sie Webdesign-Pakete, klären Sie Inhalte, CMS und Projektumfang.\",\"url\":\"https://creaid-media.de/webdesign\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\",\"@id\":\"https://creaid-media.de/webdesign#service\"}"
   },
   "website-wartung-fuer-firmen": {
     "title": "Website-Wartung für Firmen: Aufgaben und Ablauf | CreAid",
@@ -876,8 +881,8 @@
     "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Corporate Design prüfen: Kriterien für einen konsistenten Auftritt\",\"description\":\"Bewerten Sie Ihr vorhandenes Corporate Design anhand von Wiedererkennung, Lesbarkeit, Medienkonsistenz und Alltagstauglichkeit.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/wie-wirkt-corporate-design\"},\"url\":\"https://creaid-media.de/wie-wirkt-corporate-design\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/Gemini_Generated_Image_7pgpod7pgpod7pgp-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-24\",\"articleSection\":\"Branding & Design\"}"
   },
   "webdesign-aerzte": {
-    "title": "Webdesign für Ärzte und Praxen: Patienten gezielt informieren | CreAid-Media",
-    "description": "Individuelle Praxis-Websites mit verständlichen Leistungen, Sprechzeiten, mobiler Bedienung und klaren Terminwegen. Projekt besprechen.",
+    "title": "Webdesign für Ärzte & Arztpraxen | CreAid-Media",
+    "description": "Lassen Sie eine individuelle Praxiswebsite planen: Fachgebiete, Team, Sprechzeiten und mobile Terminwege. Vergleichen Sie Pakete für Ihre Arztpraxis.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/webdesign/webdesign-fuer-aerzte",
@@ -888,11 +893,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Webdesign für Ärzte und Praxen: Patienten gezielt informieren\",\"description\":\"Individuelle Praxis-Websites mit verständlichen Leistungen, Sprechzeiten, mobiler Bedienung und klaren Terminwegen. Projekt besprechen.\",\"url\":\"https://creaid-media.de/webdesign/webdesign-fuer-aerzte\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Webdesign für Ärzte und Praxen: Patienten gezielt informieren\",\"description\":\"Lassen Sie eine individuelle Praxiswebsite planen: Fachgebiete, Team, Sprechzeiten und mobile Terminwege. Vergleichen Sie Pakete für Ihre Arztpraxis.\",\"url\":\"https://creaid-media.de/webdesign/webdesign-fuer-aerzte\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/webdesign/webdesign-fuer-aerzte#service\"}"
   },
   "webdesign-immobilienmakler": {
-    "title": "Webdesign für Immobilienmakler: moderne Immobilien-Websites | CreAid-Media",
-    "description": "Immobilien-Websites mit Objektübersichten, Exposés, mobiler Nutzerführung und klaren Anfragewegen für Makler, Käufer und Verkäufer.",
+    "title": "Webdesign für Immobilienmakler | CreAid-Media",
+    "description": "Planen Sie Ihre Makler-Website mit Objektübersichten, Exposés, Filtern und klaren Anfragewegen. Schnittstellen und Webdesign-Pakete individuell abstimmen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/webdesign-fuer-immobilienmakler-moderne-immobilien-websites",
@@ -903,11 +908,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Webdesign für Immobilienmakler: moderne Immobilien-Websites\",\"description\":\"Immobilien-Websites mit Objektübersichten, Exposés, mobiler Nutzerführung und klaren Anfragewegen für Makler, Käufer und Verkäufer.\",\"url\":\"https://creaid-media.de/webdesign-fuer-immobilienmakler-moderne-immobilien-websites\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Webdesign für Immobilienmakler: moderne Immobilien-Websites\",\"description\":\"Planen Sie Ihre Makler-Website mit Objektübersichten, Exposés, Filtern und klaren Anfragewegen. Schnittstellen und Webdesign-Pakete individuell abstimmen.\",\"url\":\"https://creaid-media.de/webdesign-fuer-immobilienmakler-moderne-immobilien-websites\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/webdesign-fuer-immobilienmakler-moderne-immobilien-websites#service\"}"
   },
   "performance-optimization-3": {
-    "title": "Performance-Optimierung – Projektplanung und Beratung | CreAid-Media",
-    "description": "Caching, Medien, Frontend-Code und serverseitige Engpässe untersuchen – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Website-Performance optimieren | CreAid-Media",
+    "description": "Ladezeiten gezielt verbessern: Caching, Bilder, Skripte und Serverantworten prüfen. Messziele und Optimierungsumfang für Ihre Website abstimmen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/performance-optimization-3",
@@ -918,11 +923,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Performance-Optimierung – Projektplanung und Beratung\",\"description\":\"Caching, Medien, Frontend-Code und serverseitige Engpässe untersuchen – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/performance-optimization-3\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Performance-Optimierung – Projektplanung und Beratung\",\"description\":\"Ladezeiten gezielt verbessern: Caching, Bilder, Skripte und Serverantworten prüfen. Messziele und Optimierungsumfang für Ihre Website abstimmen.\",\"url\":\"https://creaid-media.de/performance-optimization-3\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/performance-optimization-3#service\"}"
   },
   "load-testing-3": {
-    "title": "Load Testing – Projektplanung und Beratung | CreAid-Media",
-    "description": "Repräsentative Nutzerabläufe und zulässige Testlast definieren – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Load Testing für Websites & Anwendungen | CreAid-Media",
+    "description": "Lasttests für Websites und Anwendungen planen. Nutzerabläufe, zulässige Testlast, Antwortzeiten und Fehlerraten in einer Testumgebung prüfen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/load-testing-3",
@@ -933,11 +938,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Load Testing – Projektplanung und Beratung\",\"description\":\"Repräsentative Nutzerabläufe und zulässige Testlast definieren – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/load-testing-3\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Load Testing – Projektplanung und Beratung\",\"description\":\"Lasttests für Websites und Anwendungen planen. Nutzerabläufe, zulässige Testlast, Antwortzeiten und Fehlerraten in einer Testumgebung prüfen.\",\"url\":\"https://creaid-media.de/load-testing-3\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/load-testing-3#service\"}"
   },
   "performance-audit-3": {
-    "title": "Performance-Audit – Projektplanung und Beratung | CreAid-Media",
-    "description": "Ladezeiten, Ressourcen, Skripte, Serverantworten und typische Interaktionen untersuchen – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Technisches Performance-Audit für Websites | CreAid-Media",
+    "description": "Ladezeiten, Ressourcen, Skripte und Serverantworten analysieren. Technische Schwachstellen Ihrer Website nach Wirkung und Aufwand priorisieren.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/performance-audit-3",
@@ -948,11 +953,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Performance-Audit – Projektplanung und Beratung\",\"description\":\"Ladezeiten, Ressourcen, Skripte, Serverantworten und typische Interaktionen untersuchen – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/performance-audit-3\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Performance-Audit – Projektplanung und Beratung\",\"description\":\"Ladezeiten, Ressourcen, Skripte und Serverantworten analysieren. Technische Schwachstellen Ihrer Website nach Wirkung und Aufwand priorisieren.\",\"url\":\"https://creaid-media.de/performance-audit-3\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/performance-audit-3#service\"}"
   },
   "code-ueberpruefung": {
-    "title": "Code-Überprüfung – Projektplanung und Beratung | CreAid-Media",
-    "description": "Relevante Codebereiche, Abhängigkeiten, Fehlerbehandlung und Wartbarkeit prüfen – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Code-Überprüfung für Webanwendungen | CreAid-Media",
+    "description": "Codequalität, Abhängigkeiten, Fehlerbehandlung und Wartbarkeit Ihrer Webanwendung prüfen lassen. Umfang und Freigaben vor Projektbeginn klären.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/code-ueberpruefung",
@@ -963,11 +968,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Code-Überprüfung – Projektplanung und Beratung\",\"description\":\"Relevante Codebereiche, Abhängigkeiten, Fehlerbehandlung und Wartbarkeit prüfen – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/code-ueberpruefung\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Code-Überprüfung – Projektplanung und Beratung\",\"description\":\"Codequalität, Abhängigkeiten, Fehlerbehandlung und Wartbarkeit Ihrer Webanwendung prüfen lassen. Umfang und Freigaben vor Projektbeginn klären.\",\"url\":\"https://creaid-media.de/code-ueberpruefung\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/code-ueberpruefung#service\"}"
   },
   "upgrades-wartung": {
-    "title": "Upgrades & Wartung – Projektplanung und Beratung | CreAid-Media",
-    "description": "Versionen, Erweiterungen, Backups und Kompatibilität prüfen; Updates zuerst in einer geeigneten Testumgebung erproben – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Website-Wartung & WordPress-Updates | CreAid-Media",
+    "description": "WordPress-Wartung mit Plugin- und Sicherheits-Updates sowie Backups. Wartungspakete vergleichen und den passenden Umfang für Ihre Website klären.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/upgrades-wartung",
@@ -978,11 +983,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Upgrades & Wartung – Projektplanung und Beratung\",\"description\":\"Versionen, Erweiterungen, Backups und Kompatibilität prüfen; Updates zuerst in einer geeigneten Testumgebung erproben – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/upgrades-wartung\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Upgrades & Wartung – Projektplanung und Beratung\",\"description\":\"WordPress-Wartung mit Plugin- und Sicherheits-Updates sowie Backups. Wartungspakete vergleichen und den passenden Umfang für Ihre Website klären.\",\"url\":\"https://creaid-media.de/upgrades-wartung\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/upgrades-wartung#service\"}"
   },
   "server-wartung": {
-    "title": "Server-Wartung – Projektplanung und Beratung | CreAid-Media",
-    "description": "Betriebssystem, Dienste, Zugriffsrechte, Backups und Monitoring inventarisieren – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Server-Wartung: Bedarf & Verfügbarkeit klären | CreAid-Media",
+    "description": "Serverbetrieb, Zugriffsrechte, Backups und Monitoring besprechen. Verfügbarkeit und konkreten Betreuungsumfang für Ihre Hostingumgebung vorab klären.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/server-wartung",
@@ -993,11 +998,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Server-Wartung – Projektplanung und Beratung\",\"description\":\"Betriebssystem, Dienste, Zugriffsrechte, Backups und Monitoring inventarisieren – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/server-wartung\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/server-wartung#webpage\",\"url\":\"https://creaid-media.de/server-wartung\",\"name\":\"Server-Wartung: Bedarf & Verfügbarkeit klären\",\"description\":\"Serverbetrieb, Zugriffsrechte, Backups und Monitoring besprechen. Verfügbarkeit und konkreten Betreuungsumfang für Ihre Hostingumgebung vorab klären.\",\"publisher\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\"}"
   },
   "cloud-hosting-3": {
-    "title": "Cloud-Hosting – Projektplanung und Beratung | CreAid-Media",
-    "description": "Ressourcenbedarf, Standort, Skalierung, Backups und Verantwortlichkeiten vergleichen – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Cloud-Hosting: Beratung & Anforderungen | CreAid-Media",
+    "description": "Cloud-Hosting nach Ressourcen, Standort, Backups und Skalierung bewerten. Anbieter, Verfügbarkeit und Konditionen für Ihr Vorhaben vorab klären.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/cloud-hosting-3",
@@ -1008,11 +1013,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Cloud-Hosting – Projektplanung und Beratung\",\"description\":\"Ressourcenbedarf, Standort, Skalierung, Backups und Verantwortlichkeiten vergleichen – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/cloud-hosting-3\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/cloud-hosting-3#webpage\",\"url\":\"https://creaid-media.de/cloud-hosting-3\",\"name\":\"Cloud-Hosting: Beratung & Anforderungen\",\"description\":\"Cloud-Hosting nach Ressourcen, Standort, Backups und Skalierung bewerten. Anbieter, Verfügbarkeit und Konditionen für Ihr Vorhaben vorab klären.\",\"publisher\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\"}"
   },
   "systemintegration": {
-    "title": "Systemintegration – Projektplanung und Beratung | CreAid-Media",
-    "description": "Datenfelder, Schnittstellen, Authentifizierung, Fehlerbehandlung und Zuständigkeiten definieren – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Systemintegration für Unternehmen | CreAid-Media",
+    "description": "Schnittstellen zwischen Anwendungen und Geschäftsprozessen planen. Datenfelder, Berechtigungen, Fehlerbehandlung und Testfälle gemeinsam klären.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/systemintegration",
@@ -1023,11 +1028,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Systemintegration – Projektplanung und Beratung\",\"description\":\"Datenfelder, Schnittstellen, Authentifizierung, Fehlerbehandlung und Zuständigkeiten definieren – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/systemintegration\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Systemintegration – Projektplanung und Beratung\",\"description\":\"Schnittstellen zwischen Anwendungen und Geschäftsprozessen planen. Datenfelder, Berechtigungen, Fehlerbehandlung und Testfälle gemeinsam klären.\",\"url\":\"https://creaid-media.de/systemintegration\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/systemintegration#service\"}"
   },
   "cs-cart-lizenz-reseller": {
-    "title": "CS-Cart Lizenz-Reseller – Projektplanung und Beratung | CreAid-Media",
-    "description": "Die frühere Website führte diese Lizenzleistung – Projektumfang und Voraussetzungen besprechen.",
+    "title": "CS-Cart-Lizenzen: Anfrage & Lizenzberatung | CreAid-Media",
+    "description": "Lizenzbedarf für CS-Cart klären. Aktuellen Resellerstatus, verfügbare Editionen und Konditionen vor einem Angebot prüfen. Kein direkter Lizenzverkauf.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/cs-cart-lizenz-reseller",
@@ -1038,11 +1043,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"CS-Cart Lizenz-Reseller – Projektplanung und Beratung\",\"description\":\"Die frühere Website führte diese Lizenzleistung – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/cs-cart-lizenz-reseller\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/cs-cart-lizenz-reseller#webpage\",\"url\":\"https://creaid-media.de/cs-cart-lizenz-reseller\",\"name\":\"CS-Cart-Lizenzen: Anfrage & Lizenzberatung\",\"description\":\"Lizenzbedarf für CS-Cart klären. Aktuellen Resellerstatus, verfügbare Editionen und Konditionen vor einem Angebot prüfen. Kein direkter Lizenzverkauf.\",\"publisher\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\"}"
   },
   "cs-cart-konfiguration-einrichtung": {
-    "title": "CS-Cart-Konfiguration & Einrichtung – Projektplanung und Beratung | CreAid-Media",
-    "description": "Bestehende oder geplante CS-Cart-Installation, Edition, Produkte, Zahlungs- und Versandanforderungen prüfen – Projektumfang und Voraussetzungen besprechen.",
+    "title": "CS-Cart-Konfiguration & Einrichtung | CreAid-Media",
+    "description": "CS-Cart-Shop, Produkte, Zahlung und Versand vorbereiten. Kompatibilität, Lizenzen, Verfügbarkeit und konkreten Betreuungsumfang vorab klären.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/cs-cart-konfiguration-einrichtung",
@@ -1053,11 +1058,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"CS-Cart-Konfiguration & Einrichtung – Projektplanung und Beratung\",\"description\":\"Bestehende oder geplante CS-Cart-Installation, Edition, Produkte, Zahlungs- und Versandanforderungen prüfen – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/cs-cart-konfiguration-einrichtung\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/cs-cart-konfiguration-einrichtung#webpage\",\"url\":\"https://creaid-media.de/cs-cart-konfiguration-einrichtung\",\"name\":\"CS-Cart-Konfiguration & Einrichtung\",\"description\":\"CS-Cart-Shop, Produkte, Zahlung und Versand vorbereiten. Kompatibilität, Lizenzen, Verfügbarkeit und konkreten Betreuungsumfang vorab klären.\",\"publisher\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\"}"
   },
   "store-builder-standardlizenzen": {
-    "title": "Store Builder & Standardlizenzen – Projektplanung und Beratung | CreAid-Media",
-    "description": "Die frühere Website führte Store Builder und Standardlizenzen – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Store Builder & Standardlizenzen: Beratung | CreAid-Media",
+    "description": "Store-Builder-Editionen und Lizenzumfang vergleichen. Verfügbarkeit, Verlängerung und aktuelle Herstellerbedingungen vor einem Angebot klären.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/store-builder-standardlizenzen",
@@ -1068,11 +1073,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Store Builder & Standardlizenzen – Projektplanung und Beratung\",\"description\":\"Die frühere Website führte Store Builder und Standardlizenzen – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/store-builder-standardlizenzen\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/store-builder-standardlizenzen#webpage\",\"url\":\"https://creaid-media.de/store-builder-standardlizenzen\",\"name\":\"Store Builder & Standardlizenzen: Beratung\",\"description\":\"Store-Builder-Editionen und Lizenzumfang vergleichen. Verfügbarkeit, Verlängerung und aktuelle Herstellerbedingungen vor einem Angebot klären.\",\"publisher\":{\"@id\":\"https://creaid-media.de/#organization\"},\"inLanguage\":\"de-DE\"}"
   },
   "b2b-portal-entwicklung": {
-    "title": "B2B-Portal-Entwicklung – Projektplanung und Beratung | CreAid-Media",
-    "description": "Rollen, kundenspezifische Konditionen, Freigaben, Dokumente und Schnittstellen als Anforderungen erfassen – Projektumfang und Voraussetzungen besprechen.",
+    "title": "B2B-Portal entwickeln lassen | CreAid-Media",
+    "description": "Ein B2B-Portal für Geschäftskunden planen: Rollen, Konditionen, Freigaben, Dokumente und Schnittstellen. Projektumfang und Machbarkeit besprechen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/b2b-portal-entwicklung",
@@ -1083,11 +1088,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"B2B-Portal-Entwicklung – Projektplanung und Beratung\",\"description\":\"Rollen, kundenspezifische Konditionen, Freigaben, Dokumente und Schnittstellen als Anforderungen erfassen – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/b2b-portal-entwicklung\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"B2B-Portal-Entwicklung – Projektplanung und Beratung\",\"description\":\"Ein B2B-Portal für Geschäftskunden planen: Rollen, Konditionen, Freigaben, Dokumente und Schnittstellen. Projektumfang und Machbarkeit besprechen.\",\"url\":\"https://creaid-media.de/b2b-portal-entwicklung\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/b2b-portal-entwicklung#service\"}"
   },
   "marktplatz-entwicklung": {
-    "title": "Marktplatz-Entwicklung – Projektplanung und Beratung | CreAid-Media",
-    "description": "Anbieterrollen, Produktfreigaben, Bestellungen, Zahlungsflüsse und Moderation definieren – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Online-Marktplatz entwickeln lassen | CreAid-Media",
+    "description": "Planen Sie einen Mehranbieter-Marktplatz: Anbieterrollen, Produktfreigaben, Bestellabläufe und Zahlungsflüsse. Anforderungen für den MVP klären.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/marktplatz-entwicklung",
@@ -1098,11 +1103,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Marktplatz-Entwicklung – Projektplanung und Beratung\",\"description\":\"Anbieterrollen, Produktfreigaben, Bestellungen, Zahlungsflüsse und Moderation definieren – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/marktplatz-entwicklung\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Marktplatz-Entwicklung – Projektplanung und Beratung\",\"description\":\"Planen Sie einen Mehranbieter-Marktplatz: Anbieterrollen, Produktfreigaben, Bestellabläufe und Zahlungsflüsse. Anforderungen für den MVP klären.\",\"url\":\"https://creaid-media.de/marktplatz-entwicklung\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/marktplatz-entwicklung#service\"}"
   },
   "e-commerce": {
-    "title": "E-Commerce – Projektplanung und Beratung | CreAid-Media",
-    "description": "Onlineshop, B2B-Portal und Marktplatz unterscheiden sich in Sortiment, Rollen, Bestellprozessen und Integrationen – Projektumfang und Voraussetzungen besprechen.",
+    "title": "E-Commerce-Beratung & Handelsarchitektur | CreAid-Media",
+    "description": "Onlineshop, B2B-Portal oder Marktplatz? Vergleichen Sie Geschäftsmodell, Rollen, Bestellprozesse und Integrationen vor der Wahl Ihrer Handelsarchitektur.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/e-commerce",
@@ -1113,11 +1118,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"E-Commerce – Projektplanung und Beratung\",\"description\":\"Onlineshop, B2B-Portal und Marktplatz unterscheiden sich in Sortiment, Rollen, Bestellprozessen und Integrationen – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/e-commerce\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"E-Commerce – Projektplanung und Beratung\",\"description\":\"Onlineshop, B2B-Portal oder Marktplatz? Vergleichen Sie Geschäftsmodell, Rollen, Bestellprozesse und Integrationen vor der Wahl Ihrer Handelsarchitektur.\",\"url\":\"https://creaid-media.de/e-commerce\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/e-commerce#service\"}"
   },
   "kundenspezifische-entwicklung": {
-    "title": "Kundenspezifische Entwicklung – Projektplanung und Beratung | CreAid-Media",
-    "description": "Bestehende Abläufe, Nutzerrollen, Datenmodelle und technische Abhängigkeiten erfassen – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Kundenspezifische Webentwicklung | CreAid-Media",
+    "description": "Individuelle Webanwendungen anhand Ihrer Prozesse, Nutzerrollen und Datenmodelle planen. Standardlösungen und Erweiterungen vorab vergleichen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/kundenspezifische-entwicklung",
@@ -1128,11 +1133,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Kundenspezifische Entwicklung – Projektplanung und Beratung\",\"description\":\"Bestehende Abläufe, Nutzerrollen, Datenmodelle und technische Abhängigkeiten erfassen – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/kundenspezifische-entwicklung\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Kundenspezifische Entwicklung – Projektplanung und Beratung\",\"description\":\"Individuelle Webanwendungen anhand Ihrer Prozesse, Nutzerrollen und Datenmodelle planen. Standardlösungen und Erweiterungen vorab vergleichen.\",\"url\":\"https://creaid-media.de/kundenspezifische-entwicklung\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/kundenspezifische-entwicklung#service\"}"
   },
   "addon-theme-entwicklung": {
-    "title": "Add-on- & Theme-Entwicklung – Projektplanung und Beratung | CreAid-Media",
-    "description": "Gewünschte Zusatzfunktionen und Gestaltung mit der bestehenden Plattformversion abgleichen – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Add-on- & Theme-Entwicklung | CreAid-Media",
+    "description": "Erweiterungen und Themes für bestehende Webplattformen planen. Funktionen, Kompatibilität, Schnittstellen und Updatefähigkeit im Projekt klären.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/addon-theme-entwicklung",
@@ -1143,11 +1148,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Add-on- & Theme-Entwicklung – Projektplanung und Beratung\",\"description\":\"Gewünschte Zusatzfunktionen und Gestaltung mit der bestehenden Plattformversion abgleichen – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/addon-theme-entwicklung\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Add-on- & Theme-Entwicklung – Projektplanung und Beratung\",\"description\":\"Erweiterungen und Themes für bestehende Webplattformen planen. Funktionen, Kompatibilität, Schnittstellen und Updatefähigkeit im Projekt klären.\",\"url\":\"https://creaid-media.de/addon-theme-entwicklung\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/addon-theme-entwicklung#service\"}"
   },
   "ui-ux-entwicklung": {
-    "title": "UI/UX-Entwicklung – Projektplanung und Beratung | CreAid-Media",
-    "description": "Nutzeraufgaben, Informationsarchitektur, Prototypen und responsive Interaktionen planen – Projektumfang und Voraussetzungen besprechen.",
+    "title": "UI/UX-Design & Entwicklung | CreAid-Media",
+    "description": "Digitale Oberflächen nutzerfreundlich gestalten: Informationsarchitektur, Prototypen, responsive Interaktionen und konkrete Nutzeraufgaben planen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/ui-ux-entwicklung",
@@ -1158,11 +1163,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"UI/UX-Entwicklung – Projektplanung und Beratung\",\"description\":\"Nutzeraufgaben, Informationsarchitektur, Prototypen und responsive Interaktionen planen – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/ui-ux-entwicklung\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"UI/UX-Entwicklung – Projektplanung und Beratung\",\"description\":\"Digitale Oberflächen nutzerfreundlich gestalten: Informationsarchitektur, Prototypen, responsive Interaktionen und konkrete Nutzeraufgaben planen.\",\"url\":\"https://creaid-media.de/ui-ux-entwicklung\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/ui-ux-entwicklung#service\"}"
   },
   "animation": {
-    "title": "Animation – Projektplanung und Beratung | CreAid-Media",
-    "description": "Ziel, Medienformat, Dauer und Bildsprache klären; Animationen für digitale Präsentationen, Markenkommunikation oder Website-Interaktionen nach Bedarf konzipieren – Projektumfang und Voraussetzungen besprechen.",
+    "title": "Animation für Unternehmen & Websites | CreAid-Media",
+    "description": "Animationen für digitale Präsentationen, Markenkommunikation oder Websites konzipieren. Ziel, Bildsprache, Dauer, Formate und Nutzungsrechte klären.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/animation",
@@ -1173,7 +1178,7 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Animation – Projektplanung und Beratung\",\"description\":\"Ziel, Medienformat, Dauer und Bildsprache klären; Animationen für digitale Präsentationen, Markenkommunikation oder Website-Interaktionen nach Bedarf konzipieren – Projektumfang und Voraussetzungen besprechen.\",\"url\":\"https://creaid-media.de/animation\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Animation – Projektplanung und Beratung\",\"description\":\"Animationen für digitale Präsentationen, Markenkommunikation oder Websites konzipieren. Ziel, Bildsprache, Dauer, Formate und Nutzungsrechte klären.\",\"url\":\"https://creaid-media.de/animation\",\"provider\":{\"@id\":\"https://creaid-media.de/#organization\"},\"@id\":\"https://creaid-media.de/animation#service\"}"
   },
   "archiv-corporate-design": {
     "title": "Corporate Design – Journalarchiv | CreAid-Media",
