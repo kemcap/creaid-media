@@ -225,8 +225,11 @@ async function interactionTests(browser){
   await p.screenshot({animations:'disabled',path:join(out,'mobile-story.png'),fullPage:true});
  }catch(e){errors.push({id:'interactions',issues:[String(e.message||e)]});}finally{await context.close();}
 }
-for(const [engine,launcher] of Object.entries({chromium,firefox,webkit})){
- const browser=await launcher.launch({headless:true});
+const browsers={chromium,firefox,webkit};
+if(process.env.CREAID_QA_EDGE==='1')browsers.edge=chromium;
+for(const [engine,launcher] of Object.entries(browsers)){
+ const options=engine==='edge'?{headless:true,channel:'msedge'}:{headless:true};
+ const browser=await launcher.launch(options);
  try{
   const widths=engine==='chromium'?sizes:[sizes[0],sizes[2]];
   for(const viewport of widths){
