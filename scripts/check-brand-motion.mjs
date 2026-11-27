@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const read=p=>readFileSync(p,'utf8');
+const guide=read('docs/CreAid-Media-Style-Guide.html');
+const css=read('public/assets/brand-motion.css');
+const canonical=guide.match(/<style id="cm-brand-components">\n([\s\S]*?)<\/style>/)?.[1];
+assert.equal(canonical,css,'Guide and runtime component CSS must match byte-for-byte');
+const registry=JSON.parse(guide.match(/<script type="application\/json" id="cm-design-registry">([\s\S]*?)<\/script>/)[1]);
+assert.equal(registry.components.find(c=>c.id==='CM-MOTION-001').cycleMs,1500);
+assert.equal(registry.components.find(c=>c.id==='CM-MOTION-002').cycleMs,1100);
+assert.ok(css.includes('2.5%{transform:scale(1.06,.94)}')&&css.includes('filter:blur(2.4px);opacity:.34'));
+assert.ok(css.includes('prefers-reduced-motion'));
+const page=read('dist/index.html');
+assert.ok(page.includes('/assets/brand-motion.css')&&page.includes('cm-focus-pulse--small'));
+assert.ok(read('public/assets/ux-phase1.css').includes('100svh - var(--cm-nav-height) - var(--cm-contactbar-height)'));
+assert.ok(read('public/assets/ux-phase1.js').includes('contactbar.getBoundingClientRect().height'));
+assert.ok(read('public/assets/home-motion-v5.js').includes('at 50% 50%'));
+console.log('PASS: Brand guide, motion tokens, shared CSS, hero sizing and circular reveal.');

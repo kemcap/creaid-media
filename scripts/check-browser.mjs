@@ -165,6 +165,9 @@ async function interactionTests(browser){
    const initial=await strip.boundingBox();
    assert.ok(initial && initial.height>=28 && initial.height<=36 && initial.y>=-1,'Slim contact strip at page top');
    assert.ok(await strip.evaluate(e=>[...e.querySelectorAll('a')].every(a=>{const r=a.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1;})),'Contact links overflow');
+   assert.ok(await strip.evaluate(e=>{const a=[...e.querySelectorAll('a')];return a[0].href.includes('linkedin')&&a[1].href.startsWith('mailto:')&&a[2].getAttribute('aria-label').includes('WhatsApp')&&a[3].href.startsWith('tel:');}),'Contact order');
+   const ticker=await p.locator('.cm-hero-ticker').boundingBox();
+   assert.ok(ticker && Math.abs(ticker.y+ticker.height-844)<=2,'Ticker must end at viewport bottom on standard viewport');
    await p.evaluate(()=>window.scrollTo({top:200,behavior:'instant'}));
    await p.waitForFunction(()=>{const bar=document.querySelector('#cm-contactbar').getBoundingClientRect();const header=document.querySelector('#cm-global-header').getBoundingClientRect();return bar.bottom<=1&&Math.abs(header.top)<=2;});
    await p.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
