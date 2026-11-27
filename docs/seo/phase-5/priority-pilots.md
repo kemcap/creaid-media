@@ -1,0 +1,15 @@
+# Phase 5: drei priorisierte Artikelpiloten
+Basis: gerenderte Bestandsanalyse + Originalmedien aus CreAid-Media.zip (13 Motive als Kontaktbogen geprüft); V2.3 Option 2, Modus A.
+Keine neue globale Design-DNA; vorhandene Batch-01-Editorial-Komponenten nur innerhalb der jeweiligen Artikelspalte, vorhandene Schrift und Farbrollen. Keine neuen Medien eingefügt, keine Rechts- oder Kundenreferenzfreigabe unterstellt.
+| Artikel | Suchintention / Zielgruppe | Leitidee und Dramaturgie | Editorial-Rollen | Medien / offene Punkte |
+| --- | --- | --- | --- | --- |
+| webdesign-fuer-dachdecker-firma | Informationsfrage: Inhalte und Nutzerwege einer Dachdeckerwebsite; Inhaber von Dachdeckerbetrieben | Frühe direkte Antwort, ruhiger Text, konkretes Hürden-Lösungs-Doppelfeld im Mittelteil, sichtbare Projektplanung, abschließende Checkliste; vorhandene Lesebreite und H2-IDs erhalten | E01 Direktantwort, E04 Kontaktproblem, E05 Prüfschritte | Hero Laptop mit Dachdeckerwebsite; Teamfoto bei Vertrauen, Detailaufnahme bei Bildsprache, Drohnenperspektive bei Leistungsdarstellung; generisches SEO-Motiv nicht als viertes Bild mitzählen. Bildszenen als Illustrationen kennzeichnen, kein bestätigter Kundenauftrag. |
+| webdesign-fuer-arztpraxen | Informationsfrage: Inhalte und Terminwege; Praxisleitung | Direktantwort, Patientenfragen in Ablauf, Risiken klar getrennt, Entscheidungshilfe zur Modernisierung; keine Behauptung über medizinische Qualität | E06 Patientenweg, E17 sensible Daten, E10 Relaunch-Entscheidung | Hero Praxiswebsite am Desktop, Beratungsszene ohne Identitäts-/Kundenbehauptung, Smartphone-Terminansicht, Kartenmotiv. Letzteres ähnelt einem anderen Artikelcover; eigene Ersatzillustration prüfen. |
+| seo-grundlagen-lokale-dienstleister | Praktische Checkliste; KMU, lokale Dienstleister | Handlungsschritte früh, Kriterien statt pauschaler Rankingversprechen, Priorisierung als dominanter Vergleich; abschließende messbare Prüfkriterien | E05 Einstieg, E09 Prioritätsmatrix, E01 Kernaussage | Hero Karten-Laptop, Handwerker/Standortmarkierung, Bewertungsillustration, Beratung am Tisch. Bewertungsgrafik stilistisch schwach; Ersatzbedarf offen. |
+## Skizze (Lesefolge)
+Dachdecker: Hero → direkte Antwort/E01 → Vertrauen + Team → E04 Kontakt → Baustellenmotiv → lokale Leistungen + Drohnenmotiv → E05 → FAQ.
+Praxis: Hero → direkte Antwort → Beratung → E06 + Smartphone → lokale Sichtbarkeit + Karte → E17 → E10 → vorhandener Abschluss.
+Local SEO: Hero → direkte Antwort → E05 → Standortmotiv → Leistungsseiten & Profil → E09 → Bewertungsmotiv/Prüfung → Beratung → E01 → Abschluss.
+Mobil: einspaltige Leserichtung; Tabellen innerhalb Artikelspalte, bei Bedarf lokal scrollbar, sichtbarer Fokus; keine Raster- oder Templateänderung.
+## Abnahme
+Inhalt, tatsächliche Medienrechte und eindeutige Bildmotive, Quellen/Fachprüfung, Desktop/Mobil (inkl. 200% Zoom), E-ID-Funktion, Links, Metadaten und Browser-Screenshots nach Build einzeln prüfen. Bestehende Quellen und IDs erhalten; Lesezeit erst nach Body-Wortzählung aktualisieren. Kein Serien-Rollout ohne visuelle Abnahme. Status aller drei: OFFEN.
