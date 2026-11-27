@@ -76,6 +76,10 @@ jobs:
         run: node .github/scripts/prepare-production-indexing.mjs
       - name: Verify production index policy and historical routes before upload
         run: node scripts/check-production-seo.mjs
+      - name: Verify internal link graph before upload
+        run: |
+          node scripts/test-canonical-page-links.mjs
+          python scripts/check-technical-seo.py --output seo-phase2-report/candidate.json
       - name: Confirm main has the same preview sources
         run: |
           git fetch --no-tags origin main
@@ -128,6 +132,15 @@ jobs:
         run: python .github/scripts/upload-ionos.py
       - name: Verify deployed production index policy and historical routes
         run: node scripts/check-production-seo.mjs --live
+      - name: Verify live internal link graph
+        run: python scripts/check-technical-seo.py --live --output seo-phase2-report/live.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seo-phase2-production-report
+          path: seo-phase2-report/
+          if-no-files-found: ignore
+          retention-days: 30
       - name: Update the private contact core on IONOS preview
         if: github.event_name == 'push' && contains(github.event.head_commit.message, '[ionos-preview-contact-core]')
         env:

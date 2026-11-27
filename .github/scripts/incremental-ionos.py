@@ -208,6 +208,13 @@ def deploy(sftp,files,dist,manifest,mode='apply'):
         require(all(ok for _,ok in results),'HTTPS mismatch: '+', '.join(p for p,ok in results if not ok))
         if cached:verify_cache_policy(expected)
         if PRODUCTION:
+            if b'BEGIN CREAID CANONICAL HOST' in expected['.htaccess'].read_bytes():
+                for variant in ('http://creaid-media.de','http://www.creaid-media.de','https://www.creaid-media.de'):
+                    path='/webdesign?qa=1'
+                    variant_code,variant_headers,_=get(variant+path)
+                    require(variant_code==301 and variant_headers.get('Location')==ORIGIN+path,
+                            'Canonical host redirect verification failed: '+variant)
+                print('CANONICAL_HOST_REDIRECTS_VERIFIED',flush=True)
             try:
                 preview_code,preview_headers,preview_body=get('https://vorschau.creaid-media.de/')
             except Exception:
