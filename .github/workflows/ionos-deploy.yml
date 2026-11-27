@@ -74,6 +74,8 @@ jobs:
           node .github/scripts/prepare-preview-cache.mjs
       - name: Set production index policy and sitemap (IONOS only)
         run: node .github/scripts/prepare-production-indexing.mjs
+      - name: Verify production index policy and historical routes before upload
+        run: node scripts/check-production-seo.mjs
       - name: Confirm main has the same preview sources
         run: |
           git fetch --no-tags origin main
@@ -124,6 +126,8 @@ jobs:
           SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
         run: python .github/scripts/upload-ionos.py
+      - name: Verify deployed production index policy and historical routes
+        run: node scripts/check-production-seo.mjs --live
       - name: Update the private contact core on IONOS preview
         if: github.event_name == 'push' && contains(github.event.head_commit.message, '[ionos-preview-contact-core]')
         env:

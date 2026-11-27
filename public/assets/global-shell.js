@@ -1,6 +1,12 @@
 /* Global CreAid-Media navigation; independent of page-specific scripts. */
 (() => {
   'use strict';
+  // Production and preview may share IONOS files; the static build defaults to production text.
+  const notice = document.querySelector('[data-creaid-preview-notice]');
+  if (notice && location.origin !== 'https://creaid-media.de') {
+    notice.textContent = 'Designvorschau · Nicht die veröffentlichte Unternehmenswebsite';
+    notice.hidden = false;
+  }
   const header = document.querySelector('#cm-global-header');
   if (!header || header.classList.contains('cm-header--ready')) return;
   const button = header.querySelector('#cm-menu-toggle');
