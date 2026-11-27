@@ -1,0 +1,46 @@
+{
+  "source": "CreAid-Media.zip, original article and image assets; archive ZIP and generated exact Git binary patch checked",
+  "article": "firmennamen-entwickeln-lassen",
+  "branchStatus": "DRAFT; media provenance recorded, rights and visual review OPEN; no customer reference inferred",
+  "method": "Git binary patch literal decoding, zlib checksum and exact Git blob SHA verification; no image transformation",
+  "images": [
+    {
+      "path": "public/assets/blog/original/2026/04/firmennamen-entwickeln-lassen-problem-1024x683.webp",
+      "gitBlobSha": "ce02ecbc8edd7eb0e5c71083781f2d32ad68aebf",
+      "sha256": "f3e1676b2b9670a89e85f4dfe159aad8831b6eb52ca7f2f98a4bcf8fb9251d98",
+      "bytes": 62230,
+      "dimensions": [
+        1024,
+        683
+      ],
+      "alt": "Eine Frau prüft eine Visitenkarte und Gestaltungsmuster am Schreibtisch.",
+      "placementBefore": "warum-es-sinnvoll-ist-firmennamen-entwickeln-zu-lassen"
+    },
+    {
+      "path": "public/assets/blog/original/2026/04/firmennamen-vorschlaege-praxistest-1024x571.webp",
+      "gitBlobSha": "47219435c9da74852a5b23374dd15e8472c390da",
+      "sha256": "959b524693f59a5e8b006f3bdc81e43794316505bab7e51c6f13b1f192fc1bfa",
+      "bytes": 53134,
+      "dimensions": [
+        1024,
+        571
+      ],
+      "alt": "Zwei Personen besprechen eine Skizze mit Namensideen.",
+      "placementBefore": "welche-arten-von-firmennamen-es-gibt"
+    },
+    {
+      "path": "public/assets/blog/original/2026/04/firmennamen-naming-prozess-agentur-1024x683.webp",
+      "gitBlobSha": "64370caf452bc7f696f20778bac483a5a07e467e",
+      "sha256": "0de67fa0eae6550640d17e0801ef3ad47427a7aa690777c724009105c5bd7d35",
+      "bytes": 85876,
+      "dimensions": [
+        1024,
+        683
+      ],
+      "alt": "Ausgelegte Namensvorschläge auf Karten neben Laptop und Smartphone.",
+      "placementBefore": "firmennamen-entwickeln-lassen-fur-wen-sich-das-besonders-lohnt"
+    }
+  ],
+  "heroAlt": "Hände über Namensentwürfen und Gestaltungsmustern neben einem Laptop.",
+  "visualGate": "OFFEN"
+}
