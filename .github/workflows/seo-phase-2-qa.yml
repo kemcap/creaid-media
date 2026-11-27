@@ -1,0 +1,55 @@
+name: SEO phase 2 technical QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'scripts/**'
+      - 'eleventy.config.js'
+      - '.github/workflows/seo-phase-2-qa.yml'
+      - 'docs/seo/**'
+permissions:
+  contents: read
+jobs:
+  link-graph:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: npm run verify
+      - run: node scripts/test-canonical-page-links.mjs
+      - name: Build immutable baseline
+        env:
+          BASELINE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          [[ "$BASELINE_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git worktree add --detach "$RUNNER_TEMP/seo-phase2-baseline" "$BASELINE_SHA"
+          (cd "$RUNNER_TEMP/seo-phase2-baseline" && npm ci && npm run build)
+          python scripts/check-technical-seo.py --baseline --dist "$RUNNER_TEMP/seo-phase2-baseline/dist" --output seo-phase2-report/baseline.json
+      - name: Check complete candidate link graph
+        run: python scripts/check-technical-seo.py --output seo-phase2-report/candidate.json
+      - name: Read-only production baseline
+        run: python scripts/check-technical-seo.py --live --baseline --output seo-phase2-report/live-before.json
+      - name: Inspect domain variants (read only)
+        run: |
+          for url in 'http://creaid-media.de/webdesign?qa=1' 'http://www.creaid-media.de/webdesign?qa=1' 'https://www.creaid-media.de/webdesign?qa=1'; do
+            echo "$url" | tee -a seo-phase2-report/host-variants.txt
+            curl -sS -L --max-redirs 5 --max-time 25 -o /dev/null -w '%{http_code} %{url_effective} redirects=%{num_redirects}\n' "$url" | tee -a seo-phase2-report/host-variants.txt || true
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seo-phase2-report
+          path: seo-phase2-report/
+          retention-days: 30
