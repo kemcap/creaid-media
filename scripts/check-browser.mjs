@@ -249,6 +249,15 @@ for(const [engine,launcher] of Object.entries(browsers)){
     for(const route of ['/', '/webdesign','/creaid-blog','/online-shop-entwicklung'])await inspect(p,route,viewport,engine,false);
     await c.close();
    }
+   const viewport = {width: 320, height: 800};
+   const enlargedText = await browser.newContext({viewport, reducedMotion: 'reduce'});
+   await seedConsent(enlargedText);
+   await enlargedText.addInitScript(() => {
+    document.addEventListener('DOMContentLoaded', () => { document.documentElement.style.fontSize = '200%'; });
+   });
+   const page = await enlargedText.newPage();
+   for (const route of all) await inspect(page, route, viewport, 'chromium-enlarged-text', false);
+   await enlargedText.close();
    await interactionTests(browser);
    await consentTests(browser);
   }
