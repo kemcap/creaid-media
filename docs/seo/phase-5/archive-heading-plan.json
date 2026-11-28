@@ -31,7 +31,7 @@
     },
     "after": {
       "mode": "archive",
-      "h1": "Handwerksbetriebe digital aufstellen",
+      "h1": "Digitaler Auftritt im Handwerk",
       "topic": "Digitalisierung im Handwerk"
     }
   },
@@ -57,6 +57,18 @@
       "mode": "archive",
       "h1": "SEO-Grundlagen für lokale Betriebe",
       "topic": "lokaler Suchmaschinenoptimierung"
+    }
+  },
+  "archiv-kundengewinnung": {
+    "before": {
+      "mode": "archive",
+      "h1": "Ratgeber zu Kundengewinnung",
+      "topic": "Kundengewinnung"
+    },
+    "after": {
+      "mode": "archive",
+      "h1": "Mehr Kunden gewinnen",
+      "topic": "Kundengewinnung"
     }
   }
 }

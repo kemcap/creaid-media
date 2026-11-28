@@ -191,10 +191,18 @@ async function captureJournalReview(browser){
        missingImages:[...main.querySelectorAll('img')].filter(i=>!i.naturalWidth).map(i=>i.currentSrc||i.src),
        modules:elements.map(el=>({id:el.dataset.editorial,width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height,overflow:el.scrollWidth>el.clientWidth+2,allowedLocalScroll:el.matches('.ed-table')&&el.tabIndex===0&&['auto','scroll'].includes(getComputedStyle(el).overflowX)})),
        tables:[...main.querySelectorAll('.ed-table')].map(el=>({focusable:el.tabIndex===0,scrollable:el.scrollWidth>el.clientWidth+2})),
-       h1:main.querySelector('h1')?.innerText};
+       h1:main.querySelector('h1')?.innerText,
+       detachedDot:[...main.querySelectorAll('h1 .cm-journal-dot-tail')].some(t=>{
+        const dot=t.querySelector('.cm-heading-dot'),node=t.firstChild;
+        if(!dot||!node||node.nodeType!==Node.TEXT_NODE||!node.textContent.trim())return true;
+        const range=document.createRange();const end=node.textContent.length;
+        range.setStart(node,end-1);range.setEnd(node,end);
+        const a=range.getBoundingClientRect(),b=dot.getBoundingClientRect();
+        return b.top>=a.bottom||b.bottom<=a.top||b.left<a.left;
+       })};
      });
      review.push({id,route,...metrics});
-     if(metrics.scrollWidth>metrics.width+2||metrics.missingImages.length||metrics.modules.some(m=>m.height<=0||m.width<=0||(m.overflow&&!m.allowedLocalScroll)))throw Error('Review evidence: overflow, missing media or invisible editorial module');
+     if(metrics.detachedDot||metrics.scrollWidth>metrics.width+2||metrics.missingImages.length||metrics.modules.some(m=>m.height<=0||m.width<=0||(m.overflow&&!m.allowedLocalScroll)))throw Error('Review evidence: overflow, missing media or invisible editorial module');
      await page.screenshot({animations:'disabled',caret:'hide',path:join(dir,id+'-full.png'),fullPage:true});
      const article=page.locator('main .j-prose');if(await article.count()){
       const modules=article.locator('[data-editorial]');

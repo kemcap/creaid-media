@@ -93,3 +93,7 @@ main .j-listing-head>p{grid-column:2;grid-row:2;min-width:0}
 @media(prefers-reduced-motion:reduce){
  .cm-heading-dot,.hero-heading .hero-last .pink-dot{animation:none!important;transform:none!important}
 }
+
+/* Phase 5: Keep reviewed journal/archive heading signatures on the terminal word.
+   The inline tail has no block width and preserves the original heading text. */
+main :is(.cm-archive-title,.j-article-hero h1) .cm-journal-dot-tail{white-space:nowrap;overflow-wrap:normal;word-break:normal}
