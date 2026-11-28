@@ -166,6 +166,7 @@ const journalReviewRoutes = [
  '/social-media-betreuung-unternehmen','/messeauftritt-gestalten-lassen',
  '/seo-fuer-lokale-sichtbarkeit','/webdesign-agentur-fuer-handwerker',
  '/onlineshop-erfolgreich-aufbauen-anleitung','/corporate-design-erstellen-lassen',
+ '/schlechte-website-verbessern',
  ...all.filter(route=>route.startsWith('/category/'))
 ].filter(route=>all.includes(route));
 async function captureJournalReview(browser){
