@@ -161,6 +161,8 @@ async function inspect(page,route,viewport,engine,compare){
 const journalReviewRoutes = [
  '/firmennamen-entwickeln-lassen','/webdesign-fuer-dachdecker-firma',
  '/webdesign-fuer-arztpraxen','/seo-grundlagen-lokale-dienstleister',
+ '/deutschsprachige-agentur-in-der-tuerkei-finden','/webdesign-outsourcing-deutschland',
+ '/guenstige-webdesign-agentur-europa-finden','/warum-bringt-meine-website-keine-kunden',
  ...all.filter(route=>route.startsWith('/category/'))
 ].filter(route=>all.includes(route));
 async function captureJournalReview(browser){
