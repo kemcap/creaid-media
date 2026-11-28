@@ -164,6 +164,7 @@ const journalReviewRoutes = [
  '/deutschsprachige-agentur-in-der-tuerkei-finden','/webdesign-outsourcing-deutschland',
  '/guenstige-webdesign-agentur-europa-finden','/warum-bringt-meine-website-keine-kunden',
  '/social-media-betreuung-unternehmen','/messeauftritt-gestalten-lassen',
+ '/seo-fuer-lokale-sichtbarkeit','/webdesign-agentur-fuer-handwerker',
  ...all.filter(route=>route.startsWith('/category/'))
 ].filter(route=>all.includes(route));
 async function captureJournalReview(browser){
