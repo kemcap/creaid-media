@@ -165,6 +165,7 @@ const journalReviewRoutes = [
  '/guenstige-webdesign-agentur-europa-finden','/warum-bringt-meine-website-keine-kunden',
  '/social-media-betreuung-unternehmen','/messeauftritt-gestalten-lassen',
  '/seo-fuer-lokale-sichtbarkeit','/webdesign-agentur-fuer-handwerker',
+ '/onlineshop-erfolgreich-aufbauen-anleitung','/corporate-design-erstellen-lassen',
  ...all.filter(route=>route.startsWith('/category/'))
 ].filter(route=>all.includes(route));
 async function captureJournalReview(browser){
