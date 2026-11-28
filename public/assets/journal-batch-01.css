@@ -164,3 +164,9 @@
   .batch-editorial .ed-list li { gap: .18rem; }
   .batch-editorial .ed-process li { grid-template-columns: 2rem minmax(0, 1fr); column-gap: .55rem; }
 }
+
+/* User-requested summary signature, pilot only. Reuse the existing motion token. */
+.batch-editorial .ed-spring-heading .cm-journal-dot-tail{white-space:nowrap;overflow-wrap:normal;word-break:normal}
+
+/* Prevent long German labels from overflowing narrow editorial grids at 200% text. */
+.batch-editorial .ed-open dt,.batch-editorial .ed-list li > span{min-inline-size:0;overflow-wrap:anywhere;hyphens:auto}

@@ -10,8 +10,8 @@ permalink: /archiv-google-ads.html
       <div class="j-section-kicker">+ JOURNAL / THEMENARCHIV</div>
       <nav aria-label="Brotkrumen"><a href="/creaid-blog">Journal ↗</a></nav>
       <h1 class="cm-archive-title">Google Ads.</h1>
-      <p>Ratgeber zu Google Ads, Kampagnen und Anfragen für Unternehmen.</p>
-      <div class="j-articles">
+      <p>Wenn Suchanzeigen Klicks, aber keine passenden Anfragen bringen, prüfen Sie Suchbegriffe, Zielseite und Messung gemeinsam. Hier finden Sie den Ursachenratgeber und eine praktische Ergänzung zur Landingpage-Planung.</p>
+      <div class="j-articles">{% for archiveSlug in ["beste-landingpage-elemente-fuer-kampagnen"] %}{% for post in postsIndex | releaseJournal %}{% if post.slug == archiveSlug %}<article class="j-card"><a href="{{ post.url | escape }}"><div class="j-card-image"><img src="{{ post.image | escape }}" alt="" width="{{ post.width }}" height="{{ post.height }}" loading="lazy" decoding="async"></div><div class="j-card-top">{{ post.categoryText | escape }}</div><h3>{{ post.title | escape }}</h3><p>{{ post.excerpt | escape }}</p><div class="j-card-bottom"><span>{% if post.date %}<time datetime="{{ post.date }}">{{ post.dateLabel }}</time> · {% endif %}ca. {{ post.minutes }} Min.</span><span class="j-card-read">LESEN ↗</span></div></a></article>{% endif %}{% endfor %}{% endfor %}
         {% for post in postsIndex | releaseJournal %}
           {% if post.slug == "google-ads-aber-keine-anfragen" %}
             {% include "partials/journal-card.njk" %}

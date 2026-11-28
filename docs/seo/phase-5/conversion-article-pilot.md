@@ -1,0 +1,3 @@
+# Conversion-Ratgeber – Diagnose statt pauschaler Erfolgsversprechen
+
+E06 Diagnosefolge, E04 konkrete Gegenüberstellung, E09 Priorisierung anhand beobachteter Hürden. Neun bestehende Quellenbilder wurden in der vorherigen Revision wiederhergestellt, davon eines in diesem Artikel; drei Inhaltsbildpfade vorhanden. Keine neuen Kundenreferenzen, Erfolgs- oder Preisversprechen. Bestehende H2/H3-IDs, FAQ, CTA und Publikationszustand erhalten. Link zum bestehenden Google-Ads-Ratgeber ergänzt. Full-page QA umfasst acht Artikel und 20 Archive (vier Breiten). V2.3 Sicht-/Rechteprüfung bleibt OFFEN. Kein Merge.

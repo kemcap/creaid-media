@@ -157,6 +157,69 @@ async function inspect(page,route,viewport,engine,compare){
  finally{page.off('pageerror',onError);page.off('response',onResponse);page.off('requestfailed',onRequestFailed);page.off('request',onRequest);}
  if(localErrors.length)errors.push({id,issues:[...new Set(localErrors)]});
 }
+// Additional review evidence for V2.3. This never suppresses the existing visual regression gate.
+const journalReviewRoutes = [
+ '/firmennamen-entwickeln-lassen','/webdesign-fuer-dachdecker-firma',
+ '/webdesign-fuer-arztpraxen','/seo-grundlagen-lokale-dienstleister',
+ '/deutschsprachige-agentur-in-der-tuerkei-finden','/webdesign-outsourcing-deutschland',
+ '/guenstige-webdesign-agentur-europa-finden','/warum-bringt-meine-website-keine-kunden',
+ '/social-media-betreuung-unternehmen','/messeauftritt-gestalten-lassen',
+ '/seo-fuer-lokale-sichtbarkeit','/webdesign-agentur-fuer-handwerker',
+ '/onlineshop-erfolgreich-aufbauen-anleitung','/corporate-design-erstellen-lassen',
+ '/schlechte-website-verbessern',
+ ...all.filter(route=>route.startsWith('/category/'))
+].filter(route=>all.includes(route));
+async function captureJournalReview(browser){
+ const dir=join(out,'journal-v23');mkdirSync(dir,{recursive:true});
+ const review=[];
+ for(const viewport of [{width:1440,height:900},{width:768,height:1024},{width:390,height:844},{width:360,height:800}]){
+  const context=await browser.newContext({viewport,reducedMotion:'reduce',deviceScaleFactor:1});
+  await seedConsent(context);const page=await context.newPage();
+  try{
+   for(const route of journalReviewRoutes){
+    const id=viewport.width+'x'+viewport.height+'-'+safe(route);
+    try{
+     await settle(page,base+route);
+     await page.evaluate(async()=>{
+      for(const img of document.querySelectorAll('main img'))img.loading='eager';
+      await Promise.all([...document.querySelectorAll('main img')].map(async img=>{try{await img.decode()}catch{}}));
+      // Trigger the existing lazy reveal behavior, then return to the top.
+      for(let y=0;y<document.documentElement.scrollHeight;y+=Math.max(1,innerHeight-100)){
+       window.scrollTo({top:y,behavior:'instant'});await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+      }
+      window.scrollTo({top:0,behavior:'instant'});await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+     });
+     await readyForScreenshot(page);
+     const metrics=await page.evaluate(()=>{
+      const main=document.querySelector('main');
+      const elements=[...main.querySelectorAll('.j-prose [data-editorial]')];
+      return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,
+       missingImages:[...main.querySelectorAll('img')].filter(i=>!i.naturalWidth).map(i=>i.currentSrc||i.src),
+       modules:elements.map(el=>({id:el.dataset.editorial,width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height,overflow:el.scrollWidth>el.clientWidth+2,allowedLocalScroll:el.matches('.ed-table')&&el.tabIndex===0&&['auto','scroll'].includes(getComputedStyle(el).overflowX)})),
+       tables:[...main.querySelectorAll('.ed-table')].map(el=>({focusable:el.tabIndex===0,scrollable:el.scrollWidth>el.clientWidth+2})),
+       h1:main.querySelector('h1')?.innerText,
+       detachedDot:[...main.querySelectorAll('h1 .cm-journal-dot-tail, .ed-spring-heading .cm-journal-dot-tail')].some(t=>{
+        const dot=t.querySelector('.cm-heading-dot'),node=t.firstChild;
+        if(!dot||!node||node.nodeType!==Node.TEXT_NODE||!node.textContent.trim())return true;
+        const range=document.createRange();const end=node.textContent.length;
+        range.setStart(node,end-1);range.setEnd(node,end);
+        const a=range.getBoundingClientRect(),b=dot.getBoundingClientRect();
+        return b.top>=a.bottom||b.bottom<=a.top||b.left<a.left;
+       })};
+     });
+     review.push({id,route,...metrics});
+     if(metrics.detachedDot||metrics.scrollWidth>metrics.width+2||metrics.missingImages.length||metrics.modules.some(m=>m.height<=0||m.width<=0||(m.overflow&&!m.allowedLocalScroll)))throw Error('Review evidence: overflow, missing media or invisible editorial module');
+     await page.screenshot({animations:'disabled',caret:'hide',path:join(dir,id+'-full.png'),fullPage:true});
+     const article=page.locator('main .j-prose');if(await article.count()){
+      const modules=article.locator('[data-editorial]');
+      for(let i=0;i<await modules.count();i++)await modules.nth(i).screenshot({animations:'disabled',caret:'hide',path:join(dir,id+'-module-'+(i+1)+'.png')});
+     }
+    }catch(e){errors.push({id:'journal-review-'+id,issues:[String(e.message||e)]});}
+   }
+  }finally{await context.close();}
+ }
+ writeFileSync(join(dir,'review-metrics.json'),JSON.stringify({status:'OPEN: individual visual and rights review required',review},null,2));
+}
 async function seedConsent(context){
  await context.addInitScript(()=>{try{if(!localStorage.getItem('creaid-consent-v1'))localStorage.setItem('creaid-consent-v1',JSON.stringify({version:1,analytics:false,time:Date.now()}));}catch{}});
 }
@@ -229,6 +292,18 @@ async function interactionTests(browser){
   await settle(p,base+'/webdesign');
   assert.equal(await p.locator('main .cm-claim-h1 .cm-heading-dot').first().evaluate(e=>getComputedStyle(e).animationName),'cm-hero-ball-hop');
   await p.emulateMedia({reducedMotion:'reduce'});
+  await settle(p,base+'/firmennamen-entwickeln-lassen');
+  const spring=p.locator('main .ed-spring-heading');
+  assert.equal(await spring.count(),1,'One summary signature pilot');
+  assert.equal((await spring.textContent()).replace(/\u2060/g,'').trim(),'Der springende Punkt');
+  const springDot=spring.locator('.cm-heading-dot');
+  assert.equal(await springDot.count(),1);
+  assert.equal(await springDot.getAttribute('aria-hidden'),'true');
+  assert.equal(await springDot.evaluate(e=>getComputedStyle(e).animationName),'none');
+  await p.emulateMedia({reducedMotion:'no-preference'});
+  assert.equal(await springDot.evaluate(e=>getComputedStyle(e).animationName),'cm-hero-ball-hop');
+  await p.emulateMedia({reducedMotion:'reduce'});
+  assert.equal(await p.locator('.j-toc a[href="#das-wichtigste-auf-einen-blick"]').count(),1);
   await settle(p,base+'/creaid-blog');
   const search=p.locator('#jSearch');await search.fill('ZZZ-QA-NO-MATCH-987654');assert.equal(await p.locator('.j-card[data-cat]:visible').count(),0);await search.fill('');assert.ok(await p.locator('.j-card[data-cat]:visible').count()>0);
   await settle(p,base+'/google-ads-aber-keine-anfragen');
@@ -286,6 +361,7 @@ for(const [engine,launcher] of Object.entries(browsers)){
    await enlargedText.close();
    await interactionTests(browser);
    await consentTests(browser);
+   if(process.env.CREAID_QA_JOURNAL_REVIEW==='1')await captureJournalReview(browser);
   }
  }finally{await browser.close();}
 }

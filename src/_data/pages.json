@@ -25,9 +25,9 @@
     "family": "journal",
     "url": "beste-landingpage-elemente-fuer-kampagnen.html",
     "isPost": true,
-    "shareImage": "https://creaid-media.de/wp-content/uploads/2026/07/Handwerker-sitzt-vor-seiner-Webseite.webp",
+    "shareImage": "https://creaid-media.de/assets/blog/original/2026/07/Handwerker-sitzt-vor-seiner-Webseite-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Landingpage für Kampagnen: Elemente und Prüfliste\",\"description\":\"Welche Elemente braucht Ihre Kampagnen-Landingpage? Planen und prüfen Sie Überschrift, Belege, Anfrageformular und mobile Nutzung vor dem Werbestart.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/beste-landingpage-elemente-fuer-kampagnen\"},\"url\":\"https://creaid-media.de/beste-landingpage-elemente-fuer-kampagnen\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/07/Handwerker-sitzt-vor-seiner-Webseite.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-07-05T14:38:22Z\",\"articleSection\":\"Marketing & SEO\",\"keywords\":\"Landingpage für Kampagnen\",\"dateModified\":\"2026-07-05T14:53:39Z\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Landingpage für Kampagnen: Elemente und Prüfliste\",\"description\":\"Welche Elemente braucht Ihre Kampagnen-Landingpage? Planen und prüfen Sie Überschrift, Belege, Anfrageformular und mobile Nutzung vor dem Werbestart.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/beste-landingpage-elemente-fuer-kampagnen\"},\"url\":\"https://creaid-media.de/beste-landingpage-elemente-fuer-kampagnen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/07/Handwerker-sitzt-vor-seiner-Webseite-1080x675.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-07-05T14:38:22Z\",\"articleSection\":\"Marketing & SEO\",\"keywords\":\"Landingpage für Kampagnen\",\"dateModified\":\"2026-07-05T14:53:39Z\"}"
   },
   "blog": {
     "title": "Journal: Webdesign, SEO, Branding & KI | CreAid-Media",
@@ -74,19 +74,19 @@
     "ogType": "website"
   },
   "corporate-design-erstellen-lassen": {
-    "title": "Corporate Design erstellen lassen: Briefing, Umfang & Ablauf | CreAid-Media",
-    "description": "Planen Sie Ihr Corporate-Design-Projekt: Briefing, Logo, Gestaltungsregeln, Medien, Übergabe und Faktoren für den Aufwand.",
+    "title": "Corporate Design erstellen lassen: Briefing & Ablauf | CreAid-Media",
+    "description": "Planen Sie Ihr Corporate Design: Welche Angaben gehören ins Briefing? Klären Sie Logo, Gestaltungsregeln, Medien, Übergabe und Faktoren für den Aufwand.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/corporate-design-erstellen-lassen",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "corporate-design-erstellen-lassen.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/corporate-design-erstellen-lassen-lohnt-sich-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Corporate Design erstellen lassen: Briefing, Umfang & Ablauf\",\"description\":\"Planen Sie Ihr Corporate-Design-Projekt: Briefing, Logo, Gestaltungsregeln, Medien, Übergabe und Faktoren für den Aufwand.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/corporate-design-erstellen-lassen\"},\"url\":\"https://creaid-media.de/corporate-design-erstellen-lassen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/corporate-design-erstellen-lassen-lohnt-sich-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-13\",\"articleSection\":\"Branding & Design\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Corporate Design erstellen lassen: Briefing, Umfang & Ablauf\",\"description\":\"Planen Sie Ihr Corporate Design: Welche Angaben gehören ins Briefing? Klären Sie Logo, Gestaltungsregeln, Medien, Übergabe und Faktoren für den Aufwand.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/corporate-design-erstellen-lassen\"},\"url\":\"https://creaid-media.de/corporate-design-erstellen-lassen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/corporate-design-erstellen-lassen-lohnt-sich-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-13\",\"articleSection\":\"Branding & Design\"}"
   },
   "datenschutz": {
     "title": "Datenschutzerklärung (Entwurf) | CreAid-Media",
@@ -103,38 +103,38 @@
     "ogType": "website"
   },
   "deutschsprachige-agentur-in-der-tuerkei-finden": {
-    "title": "Deutschsprachige Agentur in der Türkei: Auswahlkriterien | CreAid-Media",
-    "description": "Was bei der Wahl einer deutschsprachigen Agentur in der Türkei zählt: Ansprechpartner, Abstimmung, Übergabe und Zusammenarbeit.",
+    "title": "Deutschsprachige Agentur in der Türkei finden | CreAid-Media",
+    "description": "Eine deutschsprachige Agentur in der Türkei finden: Prüfen Sie Ansprechpartner, Abstimmung, Übergabe und Zusammenarbeit vor der Beauftragung.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/deutschsprachige-agentur-in-der-tuerkei-finden",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "deutschsprachige-agentur-in-der-tuerkei-finden.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/deutschsprachige-agentur-in-der-tuerkei-finden-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Deutschsprachige Agentur in der Türkei: Auswahlkriterien\", \"description\": \"Was bei der Wahl einer deutschsprachigen Agentur in der Türkei zählt: Ansprechpartner, Abstimmung, Übergabe und Zusammenarbeit.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/deutschsprachige-agentur-in-der-tuerkei-finden\"}, \"url\": \"https://creaid-media.de/deutschsprachige-agentur-in-der-tuerkei-finden\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/deutschsprachige-agentur-in-der-tuerkei-finden-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-20\", \"articleSection\": \"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Deutschsprachige Agentur in der Türkei: Auswahlkriterien\",\"description\":\"Eine deutschsprachige Agentur in der Türkei finden: Prüfen Sie Ansprechpartner, Abstimmung, Übergabe und Zusammenarbeit vor der Beauftragung.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/deutschsprachige-agentur-in-der-tuerkei-finden\"},\"url\":\"https://creaid-media.de/deutschsprachige-agentur-in-der-tuerkei-finden\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/deutschsprachige-agentur-in-der-tuerkei-finden-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-20\",\"articleSection\":\"Webdesign\"}"
   },
   "firmennamen-entwickeln-lassen": {
     "title": "Firmennamen entwickeln lassen: Vorgehen und Kriterien | CreAid-Media",
-    "description": "Wie entsteht ein passender Firmenname? Prüfen Sie Auswahlkriterien, Namensrichtungen und die Schritte, die vor der Entscheidung anstehen.",
+    "description": "Wie entsteht ein passender Firmenname? Prüfen Sie Namensrichtungen, Auswahlkriterien und die nötigen Schritte vor der Entscheidung für Ihre Marke.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/firmennamen-entwickeln-lassen",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "firmennamen-entwickeln-lassen.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/firmennamen-entwickeln-lassen-lohnt-sich-das-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Firmennamen entwickeln lassen: Vorgehen und Kriterien\", \"description\": \"Wie entsteht ein passender Firmenname? Prüfen Sie Auswahlkriterien, Namensrichtungen und die Schritte, die vor der Entscheidung anstehen.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/firmennamen-entwickeln-lassen\"}, \"url\": \"https://creaid-media.de/firmennamen-entwickeln-lassen\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/firmennamen-entwickeln-lassen-lohnt-sich-das-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-21\", \"articleSection\": \"Branding & Design\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Firmennamen entwickeln lassen: Vorgehen und Kriterien\",\"description\":\"Wie entsteht ein passender Firmenname? Prüfen Sie Namensrichtungen, Auswahlkriterien und die nötigen Schritte vor der Entscheidung für Ihre Marke.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/firmennamen-entwickeln-lassen\"},\"url\":\"https://creaid-media.de/firmennamen-entwickeln-lassen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/firmennamen-entwickeln-lassen-lohnt-sich-das-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-21\",\"articleSection\":\"Branding & Design\"}"
   },
   "flyer-design-fuer-unternehmen": {
     "title": "Flyer-Design für Unternehmen: Aufbau und Gestaltung | CreAid-Media",
-    "description": "So planen Sie einen Unternehmensflyer: Angebot, Aufbau, Bildsprache, Kontakt und Druckformat – mit einem klaren Ziel für jedes Exemplar.",
+    "description": "Planen Sie einen Unternehmensflyer mit klarem Ziel: Angebot, Aufbau, Bildsprache, Kontaktinformationen und Druckformat sinnvoll aufeinander abstimmen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/flyer-design-fuer-unternehmen",
@@ -145,11 +145,11 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/03/flyer-design-fuer-unternehmen-das-wirkt-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Flyer-Design für Unternehmen: Aufbau und Gestaltung\", \"description\": \"So planen Sie einen Unternehmensflyer: Angebot, Aufbau, Bildsprache, Kontakt und Druckformat – mit einem klaren Ziel für jedes Exemplar.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/flyer-design-fuer-unternehmen\"}, \"url\": \"https://creaid-media.de/flyer-design-fuer-unternehmen\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/03/flyer-design-fuer-unternehmen-das-wirkt-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-03-29\", \"articleSection\": \"Branding & Design\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Flyer-Design für Unternehmen: Aufbau und Gestaltung\",\"description\":\"Planen Sie einen Unternehmensflyer mit klarem Ziel: Angebot, Aufbau, Bildsprache, Kontaktinformationen und Druckformat sinnvoll aufeinander abstimmen.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/flyer-design-fuer-unternehmen\"},\"url\":\"https://creaid-media.de/flyer-design-fuer-unternehmen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/flyer-design-fuer-unternehmen-das-wirkt-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-29\",\"articleSection\":\"Branding & Design\"}"
   },
   "google-ads-aber-keine-anfragen": {
-    "title": "Google Ads: Klicks, aber keine Anfragen? Ursachen prüfen | CreAid-Media",
-    "description": "Viele Klicks, wenige Leads? Prüfen Sie Suchbegriffe, Conversion-Tracking und Landingpage, bevor Sie Budget oder Gebote verändern.",
+    "title": "Google Ads, aber keine Anfragen? Ursachen prüfen | CreAid-Media",
+    "description": "Google Ads bringen Klicks, aber keine Anfragen? Prüfen Sie Suchbegriffe, Conversion-Tracking und Landingpage, bevor Sie Budget oder Gebote ändern.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/google-ads-aber-keine-anfragen",
@@ -160,7 +160,7 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/warum-bringt-meine-website-keine-kunden-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Google Ads: Klicks, aber keine Anfragen? Ursachen prüfen\", \"description\": \"Viele Klicks, wenige Leads? Prüfen Sie Suchbegriffe, Conversion-Tracking und Landingpage, bevor Sie Budget oder Gebote verändern.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/google-ads-aber-keine-anfragen\"}, \"url\": \"https://creaid-media.de/google-ads-aber-keine-anfragen\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/warum-bringt-meine-website-keine-kunden-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-10\", \"articleSection\": \"Marketing & SEO\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Google Ads: Klicks, aber keine Anfragen? Ursachen prüfen\",\"description\":\"Google Ads bringen Klicks, aber keine Anfragen? Prüfen Sie Suchbegriffe, Conversion-Tracking und Landingpage, bevor Sie Budget oder Gebote ändern.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/google-ads-aber-keine-anfragen\"},\"url\":\"https://creaid-media.de/google-ads-aber-keine-anfragen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/warum-bringt-meine-website-keine-kunden-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-10\",\"articleSection\":\"Marketing & SEO\"}"
   },
   "google-ads-social-media": {
     "title": "Google Ads-Agentur & Social-Media-Kampagnen | CreAid-Media",
@@ -179,7 +179,7 @@
   },
   "google-maps-auffindbarkeit-verbessern": {
     "title": "Google Maps: Auffindbarkeit für Unternehmen verbessern | CreAid-Media",
-    "description": "Verbessern Sie Ihr Google-Unternehmensprofil mit passenden Kategorien, konsistenten Angaben, Bewertungen und einer klar verlinkten Website.",
+    "description": "Verbessern Sie Ihre Auffindbarkeit bei Google Maps mit passenden Kategorien, konsistenten Unternehmensdaten, Bewertungen und einer verlinkten Website.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/google-maps-auffindbarkeit-verbessern",
@@ -190,22 +190,22 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/03/google-maps-auffindbarkeit-verbessern-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Google Maps: Auffindbarkeit für Unternehmen verbessern\", \"description\": \"Verbessern Sie Ihr Google-Unternehmensprofil mit passenden Kategorien, konsistenten Angaben, Bewertungen und einer klar verlinkten Website.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/google-maps-auffindbarkeit-verbessern\"}, \"url\": \"https://creaid-media.de/google-maps-auffindbarkeit-verbessern\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/03/google-maps-auffindbarkeit-verbessern-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-03-29\", \"articleSection\": \"Marketing & SEO\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Google Maps: Auffindbarkeit für Unternehmen verbessern\",\"description\":\"Verbessern Sie Ihre Auffindbarkeit bei Google Maps mit passenden Kategorien, konsistenten Unternehmensdaten, Bewertungen und einer verlinkten Website.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/google-maps-auffindbarkeit-verbessern\"},\"url\":\"https://creaid-media.de/google-maps-auffindbarkeit-verbessern\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/google-maps-auffindbarkeit-verbessern-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-29\",\"articleSection\":\"Marketing & SEO\"}"
   },
   "guenstige-webdesign-agentur-europa-finden": {
     "title": "Webdesign-Agenturen in Europa: Angebote vergleichen | CreAid-Media",
-    "description": "Prüfen Sie Leistungen, Folgekosten und Übergabe bei Webdesign-Angeboten aus Europa. Mit Kriterien für einen fairen Preisvergleich.",
+    "description": "Vergleichen Sie Webdesign-Agenturen in Europa nach Leistungen, Folgekosten und Übergabe. Mit konkreten Kriterien für einen fairen Angebotsvergleich.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/guenstige-webdesign-agentur-europa-finden",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "guenstige-webdesign-agentur-europa-finden.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/guenstige-webdesign-agentur-europa-finden-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Webdesign-Agenturen in Europa: Angebote vergleichen\", \"description\": \"Prüfen Sie Leistungen, Folgekosten und Übergabe bei Webdesign-Angeboten aus Europa. Mit Kriterien für einen fairen Preisvergleich.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/guenstige-webdesign-agentur-europa-finden\"}, \"url\": \"https://creaid-media.de/guenstige-webdesign-agentur-europa-finden\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/guenstige-webdesign-agentur-europa-finden-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-18\", \"articleSection\": \"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Webdesign-Agenturen in Europa: Angebote vergleichen\",\"description\":\"Vergleichen Sie Webdesign-Agenturen in Europa nach Leistungen, Folgekosten und Übergabe. Mit konkreten Kriterien für einen fairen Angebotsvergleich.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/guenstige-webdesign-agentur-europa-finden\"},\"url\":\"https://creaid-media.de/guenstige-webdesign-agentur-europa-finden\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/guenstige-webdesign-agentur-europa-finden-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-18\",\"articleSection\":\"Webdesign\"}"
   },
   "impressum": {
     "title": "Impressum (Entwurf) | CreAid-Media",
@@ -238,7 +238,7 @@
   },
   "individuelle-webentwicklung-fuer-unternehmen": {
     "title": "Individuelle Webentwicklung: Standard oder Maßarbeit? | CreAid-Media",
-    "description": "Wann lohnt sich eine individuelle Webentwicklung? Vergleichen Sie Standardlösungen, Schnittstellen, Erweiterbarkeit und laufenden Betrieb.",
+    "description": "Wann lohnt sich individuelle Webentwicklung? Vergleichen Sie Standardlösungen und Maßarbeit nach Schnittstellen, Erweiterbarkeit und laufendem Betrieb.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/individuelle-webentwicklung-fuer-unternehmen",
@@ -249,11 +249,11 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/individuelle-webentwicklung-fuer-unternehmen-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Individuelle Webentwicklung: Standard oder Maßarbeit?\", \"description\": \"Wann lohnt sich eine individuelle Webentwicklung? Vergleichen Sie Standardlösungen, Schnittstellen, Erweiterbarkeit und laufenden Betrieb.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/individuelle-webentwicklung-fuer-unternehmen\"}, \"url\": \"https://creaid-media.de/individuelle-webentwicklung-fuer-unternehmen\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/individuelle-webentwicklung-fuer-unternehmen-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-03\", \"articleSection\": \"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Individuelle Webentwicklung: Standard oder Maßarbeit?\",\"description\":\"Wann lohnt sich individuelle Webentwicklung? Vergleichen Sie Standardlösungen und Maßarbeit nach Schnittstellen, Erweiterbarkeit und laufendem Betrieb.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/individuelle-webentwicklung-fuer-unternehmen\"},\"url\":\"https://creaid-media.de/individuelle-webentwicklung-fuer-unternehmen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/individuelle-webentwicklung-fuer-unternehmen-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-03\",\"articleSection\":\"Webdesign\"}"
   },
   "kampagne-fuer-lokale-unternehmen": {
     "title": "Lokale Werbekampagne planen: Ziele, Kanäle und Messung | CreAid-Media",
-    "description": "So planen lokale Unternehmen eine Kampagne: Ziel und Einzugsgebiet festlegen, passende Kanäle wählen und Ergebnisse nachvollziehbar messen.",
+    "description": "So planen lokale Unternehmen eine Werbekampagne: Ziel und Einzugsgebiet festlegen, passende Kanäle wählen und Ergebnisse nachvollziehbar auswerten.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/kampagne-fuer-lokale-unternehmen",
@@ -264,11 +264,11 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/03/kampagne-fuer-lokale-unternehmen-die-wirkt-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Lokale Werbekampagne planen: Ziele, Kanäle und Messung\", \"description\": \"So planen lokale Unternehmen eine Kampagne: Ziel und Einzugsgebiet festlegen, passende Kanäle wählen und Ergebnisse nachvollziehbar messen.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/kampagne-fuer-lokale-unternehmen\"}, \"url\": \"https://creaid-media.de/kampagne-fuer-lokale-unternehmen\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/03/kampagne-fuer-lokale-unternehmen-die-wirkt-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-03-31\", \"articleSection\": \"Marketing & SEO\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Lokale Werbekampagne planen: Ziele, Kanäle und Messung\",\"description\":\"So planen lokale Unternehmen eine Werbekampagne: Ziel und Einzugsgebiet festlegen, passende Kanäle wählen und Ergebnisse nachvollziehbar auswerten.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/kampagne-fuer-lokale-unternehmen\"},\"url\":\"https://creaid-media.de/kampagne-fuer-lokale-unternehmen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/kampagne-fuer-lokale-unternehmen-die-wirkt-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-31\",\"articleSection\":\"Marketing & SEO\"}"
   },
   "ki-automatisierung-fuer-unternehmen": {
     "title": "KI-Automatisierung für kleine Unternehmen: Einstieg | CreAid-Media",
-    "description": "Welche Abläufe eignen sich für KI? Planen Sie einen kleinen Pilot mit klaren Prüfregeln, menschlicher Freigabe und messbaren Zielen.",
+    "description": "Welche Abläufe eignen sich für KI-Automatisierung? Planen Sie für Ihr kleines Unternehmen einen Pilot mit Prüfregeln, Freigaben und messbaren Zielen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/ki-automatisierung-fuer-unternehmen",
@@ -279,7 +279,7 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/ki-workflow.svg",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"KI-Automatisierung für kleine Unternehmen: Einstieg\",\"description\":\"Welche Abläufe eignen sich für KI? Planen Sie einen kleinen Pilot mit klaren Prüfregeln, menschlicher Freigabe und messbaren Zielen.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/ki-automatisierung-fuer-unternehmen\"},\"url\":\"https://creaid-media.de/ki-automatisierung-fuer-unternehmen\",\"image\":\"https://creaid-media.de/assets/blog/ki-workflow.svg\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"articleSection\":\"KI & Automatisierung\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"KI-Automatisierung für kleine Unternehmen: Einstieg\",\"description\":\"Welche Abläufe eignen sich für KI-Automatisierung? Planen Sie für Ihr kleines Unternehmen einen Pilot mit Prüfregeln, Freigaben und messbaren Zielen.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/ki-automatisierung-fuer-unternehmen\"},\"url\":\"https://creaid-media.de/ki-automatisierung-fuer-unternehmen\",\"image\":\"https://creaid-media.de/assets/blog/ki-workflow.svg\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"articleSection\":\"KI & Automatisierung\"}"
   },
   "ki-automatisierung": {
     "title": "KI-Automatisierung für Unternehmen | CreAid-Media",
@@ -358,7 +358,7 @@
   },
   "logo-und-slogan-entwickeln": {
     "title": "Logo und Slogan entwickeln: Briefing und Praxistest | CreAid-Media",
-    "description": "Wie Logo und Slogan zusammenpassen: Legen Sie Botschaft, Zielgruppe und Ton fest und testen Sie beide an konkreten Anwendungen.",
+    "description": "Logo und Slogan entwickeln: Legen Sie Botschaft, Zielgruppe und Ton fest und prüfen Sie, wie beide in konkreten Anwendungen gemeinsam funktionieren.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/logo-und-slogan-entwickeln",
@@ -369,11 +369,11 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/03/logo-und-slogan-entwickeln-mit-wirkung-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Logo und Slogan entwickeln: Briefing und Praxistest\", \"description\": \"Wie Logo und Slogan zusammenpassen: Legen Sie Botschaft, Zielgruppe und Ton fest und testen Sie beide an konkreten Anwendungen.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/logo-und-slogan-entwickeln\"}, \"url\": \"https://creaid-media.de/logo-und-slogan-entwickeln\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/03/logo-und-slogan-entwickeln-mit-wirkung-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-03-29\", \"articleSection\": \"Branding & Design\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Logo und Slogan entwickeln: Briefing und Praxistest\",\"description\":\"Logo und Slogan entwickeln: Legen Sie Botschaft, Zielgruppe und Ton fest und prüfen Sie, wie beide in konkreten Anwendungen gemeinsam funktionieren.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/logo-und-slogan-entwickeln\"},\"url\":\"https://creaid-media.de/logo-und-slogan-entwickeln\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/logo-und-slogan-entwickeln-mit-wirkung-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-29\",\"articleSection\":\"Branding & Design\"}"
   },
   "markenauftritt-fuer-kleine-unternehmen": {
     "title": "Markenauftritt für kleine Unternehmen: Grundlagen | CreAid-Media",
-    "description": "Wie Sie Positionierung, Gestaltung und Sprache für kleine Unternehmen abstimmen – vom ersten Kundenkontakt bis zu Website und Print.",
+    "description": "So stimmen kleine Unternehmen Positionierung, Gestaltung und Sprache für einen einheitlichen Markenauftritt ab – vom Kundenkontakt bis zu Web und Print.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/markenauftritt-fuer-kleine-unternehmen",
@@ -384,7 +384,7 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/03/markenauftritt-fuer-kleine-unternehmen-richtig-auf-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Markenauftritt für kleine Unternehmen: Grundlagen\", \"description\": \"Wie Sie Positionierung, Gestaltung und Sprache für kleine Unternehmen abstimmen – vom ersten Kundenkontakt bis zu Website und Print.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/markenauftritt-fuer-kleine-unternehmen\"}, \"url\": \"https://creaid-media.de/markenauftritt-fuer-kleine-unternehmen\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/03/markenauftritt-fuer-kleine-unternehmen-richtig-auf-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-03-24\", \"articleSection\": \"Branding & Design\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Markenauftritt für kleine Unternehmen: Grundlagen\",\"description\":\"So stimmen kleine Unternehmen Positionierung, Gestaltung und Sprache für einen einheitlichen Markenauftritt ab – vom Kundenkontakt bis zu Web und Print.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/markenauftritt-fuer-kleine-unternehmen\"},\"url\":\"https://creaid-media.de/markenauftritt-fuer-kleine-unternehmen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/markenauftritt-fuer-kleine-unternehmen-richtig-auf-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-24\",\"articleSection\":\"Branding & Design\"}"
   },
   "marketing": {
     "title": "Digitales Marketing für Unternehmen | CreAid-Media",
@@ -403,7 +403,7 @@
   },
   "marktplatz-plattform-entwickeln": {
     "title": "Online-Marktplatz entwickeln: MVP, Rollen und Betrieb | CreAid-Media",
-    "description": "So planen Sie einen Mehranbieter-Marktplatz: Geschäftsmodell, Anbieterrollen, Kernfunktionen und Betrieb für die erste Version festlegen.",
+    "description": "So planen Sie einen Mehranbieter-Marktplatz: Legen Sie Geschäftsmodell, Anbieterrollen, notwendige Kernfunktionen und Betrieb der ersten Version fest.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/marktplatz-plattform-entwickeln",
@@ -414,37 +414,37 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/marktplatz-plattform-entwickeln-so-gehts-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Online-Marktplatz entwickeln: MVP, Rollen und Betrieb\", \"description\": \"So planen Sie einen Mehranbieter-Marktplatz: Geschäftsmodell, Anbieterrollen, Kernfunktionen und Betrieb für die erste Version festlegen.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/marktplatz-plattform-entwickeln\"}, \"url\": \"https://creaid-media.de/marktplatz-plattform-entwickeln\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/marktplatz-plattform-entwickeln-so-gehts-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-06\", \"articleSection\": \"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Online-Marktplatz entwickeln: MVP, Rollen und Betrieb\",\"description\":\"So planen Sie einen Mehranbieter-Marktplatz: Legen Sie Geschäftsmodell, Anbieterrollen, notwendige Kernfunktionen und Betrieb der ersten Version fest.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/marktplatz-plattform-entwickeln\"},\"url\":\"https://creaid-media.de/marktplatz-plattform-entwickeln\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/marktplatz-plattform-entwickeln-so-gehts-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-06\",\"articleSection\":\"Webdesign\"}"
   },
   "messeauftritt-gestalten-lassen": {
     "title": "Messeauftritt gestalten lassen: Konzept und Aufwand | CreAid-Media",
-    "description": "Planen Sie Ihren Messeauftritt vom Ziel über Standgrafik und Materialien bis zur Nachbereitung. Darauf kommt es bei der Beauftragung an.",
+    "description": "Planen Sie Ihren Messeauftritt vom Ziel über Standgrafik und Werbematerialien bis zur Nachbereitung. Prüfen Sie Konzept und Aufwand vor der Beauftragung.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/messeauftritt-gestalten-lassen",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "messeauftritt-gestalten-lassen.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/03/messeauftritt-gestalten-lassen-lohnt-sich-das-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Messeauftritt gestalten lassen: Konzept und Aufwand\", \"description\": \"Planen Sie Ihren Messeauftritt vom Ziel über Standgrafik und Materialien bis zur Nachbereitung. Darauf kommt es bei der Beauftragung an.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/messeauftritt-gestalten-lassen\"}, \"url\": \"https://creaid-media.de/messeauftritt-gestalten-lassen\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/03/messeauftritt-gestalten-lassen-lohnt-sich-das-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-03-31\", \"articleSection\": \"Branding & Design\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Messeauftritt gestalten lassen: Konzept und Aufwand\",\"description\":\"Planen Sie Ihren Messeauftritt vom Ziel über Standgrafik und Werbematerialien bis zur Nachbereitung. Prüfen Sie Konzept und Aufwand vor der Beauftragung.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/messeauftritt-gestalten-lassen\"},\"url\":\"https://creaid-media.de/messeauftritt-gestalten-lassen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/messeauftritt-gestalten-lassen-lohnt-sich-das-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-31\",\"articleSection\":\"Branding & Design\"}"
   },
   "onlineshop-erfolgreich-aufbauen-anleitung": {
     "title": "Onlineshop aufbauen: Anleitung von Planung bis Start | CreAid-Media",
-    "description": "Eine Schritt-für-Schritt-Anleitung für Ihren Onlineshop: Sortiment, Shopsystem, Produktseiten, Checkout und Start vorbereiten.",
+    "description": "Onlineshop aufbauen: Eine Schritt-für-Schritt-Anleitung für Sortiment, Shopsystem, Produktseiten, Checkout und die Vorbereitung des ersten Shopstarts.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/onlineshop-erfolgreich-aufbauen-anleitung",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "onlineshop-erfolgreich-aufbauen-anleitung.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/onlineshop-erfolgreich-aufbauen-anleitung-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Onlineshop aufbauen: Anleitung von Planung bis Start\", \"description\": \"Eine Schritt-für-Schritt-Anleitung für Ihren Onlineshop: Sortiment, Shopsystem, Produktseiten, Checkout und Start vorbereiten.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/onlineshop-erfolgreich-aufbauen-anleitung\"}, \"url\": \"https://creaid-media.de/onlineshop-erfolgreich-aufbauen-anleitung\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/onlineshop-erfolgreich-aufbauen-anleitung-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-14\", \"articleSection\": \"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Onlineshop aufbauen: Anleitung von Planung bis Start\",\"description\":\"Onlineshop aufbauen: Eine Schritt-für-Schritt-Anleitung für Sortiment, Shopsystem, Produktseiten, Checkout und die Vorbereitung des ersten Shopstarts.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/onlineshop-erfolgreich-aufbauen-anleitung\"},\"url\":\"https://creaid-media.de/onlineshop-erfolgreich-aufbauen-anleitung\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/onlineshop-erfolgreich-aufbauen-anleitung-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-14\",\"articleSection\":\"Webdesign\"}"
   },
   "onlineshop-erstellen-lassen": {
     "title": "Onlineshop erstellen lassen oder selbst bauen? | CreAid",
@@ -457,9 +457,9 @@
     "family": "journal",
     "url": "onlineshop-erstellen-lassen.html",
     "isPost": true,
-    "shareImage": "https://creaid-media.de/wp-content/uploads/2026/05/onlineshop-erstellen-lassen-lohnt-es-sich-featured.webp",
+    "shareImage": "https://creaid-media.de/assets/blog/original/2026/05/onlineshop-erstellen-lassen-lohnt-es-sich-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Onlineshop selbst bauen oder erstellen lassen?\",\"description\":\"Onlineshop erstellen lassen oder selbst starten? Vergleichen Sie Eigenbau und Agentur nach Sortiment, Schnittstellen, laufenden Kosten und Zuständigkeiten.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/onlineshop-erstellen-lassen\"},\"url\":\"https://creaid-media.de/onlineshop-erstellen-lassen\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/05/onlineshop-erstellen-lassen-lohnt-es-sich-featured.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-05-03T01:45:14Z\",\"articleSection\":\"Webdesign\",\"keywords\":\"Onlineshop erstellen lassen\",\"dateModified\":\"2026-11-25T00:39:19Z\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Onlineshop selbst bauen oder erstellen lassen?\",\"description\":\"Onlineshop erstellen lassen oder selbst starten? Vergleichen Sie Eigenbau und Agentur nach Sortiment, Schnittstellen, laufenden Kosten und Zuständigkeiten.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/onlineshop-erstellen-lassen\"},\"url\":\"https://creaid-media.de/onlineshop-erstellen-lassen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/05/onlineshop-erstellen-lassen-lohnt-es-sich-featured-1080x675.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-05-03T01:45:14Z\",\"articleSection\":\"Webdesign\",\"keywords\":\"Onlineshop erstellen lassen\",\"dateModified\":\"2026-11-25T00:39:19Z\"}"
   },
   "onlineshops-ecommerce": {
     "title": "Onlineshop erstellen lassen | Onlineshop-Agentur | CreAid-Media",
@@ -493,7 +493,7 @@
   },
   "produktfim-erstellen-lassen": {
     "title": "Produktfilm erstellen lassen: Briefing und Formate | CreAid-Media",
-    "description": "Planen Sie einen Produktfilm für Shop, Social Media oder Anzeigen. Klären Sie Story, Formate und Produktionsaufwand vor dem Briefing.",
+    "description": "Planen Sie einen Produktfilm für Onlineshop, Social Media oder Anzeigen. Klären Sie Story, benötigte Formate und Produktionsaufwand vor dem Briefing.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/produktfim-erstellen-lassen",
@@ -504,11 +504,11 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/produktfim-erstellen-lassen-lohnt-sich-das-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Produktfilm erstellen lassen: Briefing und Formate\", \"description\": \"Planen Sie einen Produktfilm für Shop, Social Media oder Anzeigen. Klären Sie Story, Formate und Produktionsaufwand vor dem Briefing.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/produktfim-erstellen-lassen\"}, \"url\": \"https://creaid-media.de/produktfim-erstellen-lassen\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/produktfim-erstellen-lassen-lohnt-sich-das-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-22\", \"articleSection\": \"Marketing & SEO\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Produktfilm erstellen lassen: Briefing und Formate\",\"description\":\"Planen Sie einen Produktfilm für Onlineshop, Social Media oder Anzeigen. Klären Sie Story, benötigte Formate und Produktionsaufwand vor dem Briefing.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/produktfim-erstellen-lassen\"},\"url\":\"https://creaid-media.de/produktfim-erstellen-lassen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/produktfim-erstellen-lassen-lohnt-sich-das-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-22\",\"articleSection\":\"Marketing & SEO\"}"
   },
   "professionelle-website-fuer-lokale-dienstleister": {
     "title": "Website für lokale Dienstleister: Aufbau und Inhalte | CreAid-Media",
-    "description": "Welche Seiten braucht ein lokaler Dienstleister? Planen Sie Leistungen, Einzugsgebiet, Vertrauenssignale und mobile Kontaktmöglichkeiten.",
+    "description": "Welche Seiten braucht ein lokaler Dienstleister? Planen Sie Leistungen, Einzugsgebiet, Vertrauenssignale und verständliche mobile Kontaktmöglichkeiten.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/professionelle-website-fuer-lokale-dienstleister",
@@ -519,7 +519,7 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/professionelle-website-fuer-lokale-dienstleister-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Website für lokale Dienstleister: Aufbau und Inhalte\", \"description\": \"Welche Seiten braucht ein lokaler Dienstleister? Planen Sie Leistungen, Einzugsgebiet, Vertrauenssignale und mobile Kontaktmöglichkeiten.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/professionelle-website-fuer-lokale-dienstleister\"}, \"url\": \"https://creaid-media.de/professionelle-website-fuer-lokale-dienstleister\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/professionelle-website-fuer-lokale-dienstleister-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-09\", \"articleSection\": \"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Website für lokale Dienstleister: Aufbau und Inhalte\",\"description\":\"Welche Seiten braucht ein lokaler Dienstleister? Planen Sie Leistungen, Einzugsgebiet, Vertrauenssignale und verständliche mobile Kontaktmöglichkeiten.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/professionelle-website-fuer-lokale-dienstleister\"},\"url\":\"https://creaid-media.de/professionelle-website-fuer-lokale-dienstleister\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/professionelle-website-fuer-lokale-dienstleister-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-09\",\"articleSection\":\"Webdesign\"}"
   },
   "projekt-detail": {
     "title": "Webdesign-Studie: von der Struktur zur Nutzerführung | CreAid-Media",
@@ -552,18 +552,18 @@
   },
   "schlechte-website-verbessern": {
     "title": "Website verbessern: 7 Schritte für bestehende Seiten | CreAid-Media",
-    "description": "Verbessern Sie eine bestehende Website in sieben Schritten: Startseite, Inhalte, mobile Nutzung, Ladezeit, SEO und Kontaktweg prüfen.",
+    "description": "Verbessern Sie Ihre bestehende Website in sieben Schritten: Prüfen Sie Startseite, Inhalte, mobile Nutzung, Ladezeit, SEO und die Wege zur Anfrage.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/schlechte-website-verbessern",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "schlechte-website-verbessern.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/schlechte-website-verbessern-in-7-schritten-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Website verbessern: 7 Schritte für bestehende Seiten\", \"description\": \"Verbessern Sie eine bestehende Website in sieben Schritten: Startseite, Inhalte, mobile Nutzung, Ladezeit, SEO und Kontaktweg prüfen.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/schlechte-website-verbessern\"}, \"url\": \"https://creaid-media.de/schlechte-website-verbessern\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/schlechte-website-verbessern-in-7-schritten-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-11\", \"articleSection\": \"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Website verbessern: 7 Schritte für bestehende Seiten\",\"description\":\"Verbessern Sie Ihre bestehende Website in sieben Schritten: Prüfen Sie Startseite, Inhalte, mobile Nutzung, Ladezeit, SEO und die Wege zur Anfrage.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/schlechte-website-verbessern\"},\"url\":\"https://creaid-media.de/schlechte-website-verbessern\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/schlechte-website-verbessern-in-7-schritten-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-11\",\"articleSection\":\"Webdesign\"}"
   },
   "seo-content-marketing": {
     "title": "SEO-Agentur für Unternehmen & Content-Marketing | CreAid-Media",
@@ -581,34 +581,34 @@
     "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"SEO und Content-Marketing\",\"serviceType\":\"SEO und Content-Marketing\",\"description\":\"Keyword-Recherche, technisches SEO, lokale Sichtbarkeit und Content-Marketing für Unternehmen. Lassen Sie Ihre Website und passenden Maßnahmen besprechen.\",\"url\":\"https://creaid-media.de/seo-3\",\"provider\":{\"@type\":\"Organization\",\"@id\":\"https://creaid-media.de/#organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"@id\":\"https://creaid-media.de/seo-3#service\"}"
   },
   "seo-fuer-lokale-sichtbarkeit": {
-    "title": "Lokale SEO-Strategie: Website und Google-Profil abstimmen | CreAid-Media",
-    "description": "Planen Sie die lokale Sichtbarkeit Ihres Unternehmens mit Suchintention, Leistungsseiten, Google-Unternehmensprofil und Erfolgskontrolle.",
+    "title": "Lokale SEO-Strategie: Website und Google-Profil | CreAid-Media",
+    "description": "Planen Sie Ihre lokale Sichtbarkeit mit Suchintention, passenden Leistungsseiten, Google-Unternehmensprofil und nachvollziehbarer Erfolgskontrolle.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/seo-fuer-lokale-sichtbarkeit",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "seo-fuer-lokale-sichtbarkeit.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/seo-fuer-lokale-sichtbarkeit-die-kunden-bringt-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Lokale SEO-Strategie: Website und Google-Profil abstimmen\",\"description\":\"Planen Sie die lokale Sichtbarkeit Ihres Unternehmens mit Suchintention, Leistungsseiten, Google-Unternehmensprofil und Erfolgskontrolle.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/seo-fuer-lokale-sichtbarkeit\"},\"url\":\"https://creaid-media.de/seo-fuer-lokale-sichtbarkeit\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/seo-fuer-lokale-sichtbarkeit-die-kunden-bringt-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-15\",\"articleSection\":\"Marketing & SEO\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Lokale SEO-Strategie: Website und Google-Profil abstimmen\",\"description\":\"Planen Sie Ihre lokale Sichtbarkeit mit Suchintention, passenden Leistungsseiten, Google-Unternehmensprofil und nachvollziehbarer Erfolgskontrolle.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/seo-fuer-lokale-sichtbarkeit\"},\"url\":\"https://creaid-media.de/seo-fuer-lokale-sichtbarkeit\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/seo-fuer-lokale-sichtbarkeit-die-kunden-bringt-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-15\",\"articleSection\":\"Marketing & SEO\"}"
   },
   "seo-grundlagen-lokale-dienstleister": {
-    "title": "Local SEO Checkliste: Grundlagen für lokale Dienstleister | CreAid-Media",
-    "description": "Konkrete Prüfschritte für lokale Dienstleister: Unternehmensdaten, Leistungsseiten, Google-Profil und technische Grundlagen.",
+    "title": "Local SEO: Checkliste für lokale Dienstleister | CreAid-Media",
+    "description": "Local SEO Schritt für Schritt prüfen: Unternehmensdaten, Leistungsseiten, Google-Unternehmensprofil und technische Grundlagen für lokale Dienstleister.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/seo-grundlagen-lokale-dienstleister",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "seo-grundlagen-lokale-dienstleister.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/seo-grundlagen-fuer-lokale-dienstleister-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Local SEO Checkliste: Grundlagen für lokale Dienstleister\",\"description\":\"Konkrete Prüfschritte für lokale Dienstleister: Unternehmensdaten, Leistungsseiten, Google-Profil und technische Grundlagen.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/seo-grundlagen-lokale-dienstleister\"},\"url\":\"https://creaid-media.de/seo-grundlagen-lokale-dienstleister\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/seo-grundlagen-fuer-lokale-dienstleister-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-04\",\"articleSection\":\"Marketing & SEO\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Local SEO Checkliste: Grundlagen für lokale Dienstleister\",\"description\":\"Local SEO Schritt für Schritt prüfen: Unternehmensdaten, Leistungsseiten, Google-Unternehmensprofil und technische Grundlagen für lokale Dienstleister.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/seo-grundlagen-lokale-dienstleister\"},\"url\":\"https://creaid-media.de/seo-grundlagen-lokale-dienstleister\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/seo-grundlagen-fuer-lokale-dienstleister-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-04\",\"articleSection\":\"Marketing & SEO\"}"
   },
   "shopware-vs-wordpress-shop": {
     "title": "Shopware vs. WooCommerce: Shopsysteme im Vergleich | CreAid",
@@ -621,9 +621,9 @@
     "family": "journal",
     "url": "shopware-vs-wordpress-shop.html",
     "isPost": true,
-    "shareImage": "https://creaid-media.de/wp-content/uploads/2026/04/shopware-vs-wordpress-shop-im-vergleich-featured.webp",
+    "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/shopware-vs-wordpress-shop-im-vergleich-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Shopware oder WooCommerce? Vergleich für Unternehmen\",\"description\":\"Shopware oder WordPress mit WooCommerce? Vergleichen Sie Sortiment, Verkaufskanäle, Pflege, Schnittstellen und Gesamtkosten anhand konkreter Tests.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/shopware-vs-wordpress-shop\"},\"url\":\"https://creaid-media.de/shopware-vs-wordpress-shop\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/04/shopware-vs-wordpress-shop-im-vergleich-featured.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-29T01:42:42Z\",\"articleSection\":\"Webdesign\",\"keywords\":\"Shopware vs. WooCommerce\",\"dateModified\":\"2026-11-25T00:39:00Z\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Shopware oder WooCommerce? Vergleich für Unternehmen\",\"description\":\"Shopware oder WordPress mit WooCommerce? Vergleichen Sie Sortiment, Verkaufskanäle, Pflege, Schnittstellen und Gesamtkosten anhand konkreter Tests.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/shopware-vs-wordpress-shop\"},\"url\":\"https://creaid-media.de/shopware-vs-wordpress-shop\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/shopware-vs-wordpress-shop-im-vergleich-featured-1080x675.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-29T01:42:42Z\",\"articleSection\":\"Webdesign\",\"keywords\":\"Shopware vs. WooCommerce\",\"dateModified\":\"2026-11-25T00:39:00Z\"}"
   },
   "social-media-betreuung-unternehmen": {
     "title": "Social-Media-Betreuung: Leistungen und Aufwand | CreAid-Media",
@@ -631,7 +631,7 @@
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/social-media-betreuung-unternehmen",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "social-media-betreuung-unternehmen.html",
@@ -661,7 +661,7 @@
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/warum-bringt-meine-website-keine-kunden",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "warum-bringt-meine-website-keine-kunden.html",
@@ -671,8 +671,8 @@
     "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Website bringt keine Anfragen: Ursachen finden\", \"description\": \"Warum bleiben Anfragen auf Ihrer Website aus? Prüfen Sie Besucherquellen, Angebot, Vertrauen und Kontaktweg, bevor Sie Änderungen priorisieren.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/warum-bringt-meine-website-keine-kunden\"}, \"url\": \"https://creaid-media.de/warum-bringt-meine-website-keine-kunden\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/warum-bringt-meine-website-keine-kunden-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-17\", \"articleSection\": \"Webdesign\"}"
   },
   "warum-corporate-design-wichtig-ist": {
-    "title": "Warum Corporate Design wichtig ist: Nutzen im Unternehmen | CreAid-Media",
-    "description": "Verstehen Sie, wie einheitliche Gestaltung Wiedererkennung und Zusammenarbeit unterstützt und wann eine Überarbeitung sinnvoll ist.",
+    "title": "Warum Corporate Design wichtig ist | CreAid-Media",
+    "description": "Verstehen Sie, wie einheitliche Gestaltung Wiedererkennung und Zusammenarbeit im Unternehmen unterstützt und wann eine Überarbeitung sinnvoll ist.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/warum-corporate-design-wichtig-ist",
@@ -683,7 +683,7 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/03/warum-corporate-design-wichtig-ist-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Warum Corporate Design wichtig ist: Nutzen im Unternehmen\",\"description\":\"Verstehen Sie, wie einheitliche Gestaltung Wiedererkennung und Zusammenarbeit unterstützt und wann eine Überarbeitung sinnvoll ist.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/warum-corporate-design-wichtig-ist\"},\"url\":\"https://creaid-media.de/warum-corporate-design-wichtig-ist\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/warum-corporate-design-wichtig-ist-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-24\",\"articleSection\":\"Branding & Design\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Warum Corporate Design wichtig ist: Nutzen im Unternehmen\",\"description\":\"Verstehen Sie, wie einheitliche Gestaltung Wiedererkennung und Zusammenarbeit im Unternehmen unterstützt und wann eine Überarbeitung sinnvoll ist.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/warum-corporate-design-wichtig-ist\"},\"url\":\"https://creaid-media.de/warum-corporate-design-wichtig-ist\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/warum-corporate-design-wichtig-ist-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-24\",\"articleSection\":\"Branding & Design\"}"
   },
   "was-kostet-ein-imagefilm": {
     "title": "Was kostet ein Imagefilm? Preise und Leistungen | CreAid",
@@ -696,24 +696,24 @@
     "family": "journal",
     "url": "was-kostet-ein-imagefilm.html",
     "isPost": true,
-    "shareImage": "https://creaid-media.de/wp-content/uploads/2026/05/was-kostet-ein-imagefilm-wirklich-featured.webp",
+    "shareImage": "https://creaid-media.de/assets/blog/original/2026/05/was-kostet-ein-imagefilm-wirklich-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Was kostet ein Imagefilm? Budget und Kostenfaktoren\",\"description\":\"Was kostet ein Imagefilm? Öffentliche Preisbeispiele und eine Checkliste helfen, Angebote für Konzept, Drehtage, Schnitt und Nutzungsrechte zu vergleichen.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/was-kostet-ein-imagefilm\"},\"url\":\"https://creaid-media.de/was-kostet-ein-imagefilm\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/05/was-kostet-ein-imagefilm-wirklich-featured.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-05-05T01:57:38Z\",\"articleSection\":\"Branding & Design\",\"keywords\":\"was kostet ein Imagefilm\",\"dateModified\":\"2026-11-25T00:37:35Z\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Was kostet ein Imagefilm? Budget und Kostenfaktoren\",\"description\":\"Was kostet ein Imagefilm? Öffentliche Preisbeispiele und eine Checkliste helfen, Angebote für Konzept, Drehtage, Schnitt und Nutzungsrechte zu vergleichen.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/was-kostet-ein-imagefilm\"},\"url\":\"https://creaid-media.de/was-kostet-ein-imagefilm\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/05/was-kostet-ein-imagefilm-wirklich-featured-1080x675.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-05-05T01:57:38Z\",\"articleSection\":\"Branding & Design\",\"keywords\":\"was kostet ein Imagefilm\",\"dateModified\":\"2026-11-25T00:37:35Z\"}"
   },
   "webdesign-agentur-fuer-handwerker": {
-    "title": "Webdesign-Agentur für Handwerker auswählen: Briefing & Angebot | CreAid-Media",
-    "description": "Welche Fragen sollten Handwerksbetriebe einer Webdesign-Agentur stellen? Kriterien für Briefing, Angebot, Übergabe und Zusammenarbeit.",
+    "title": "Webdesign-Agentur für Handwerker auswählen | CreAid-Media",
+    "description": "Welche Fragen sollten Handwerksbetriebe einer Webdesign-Agentur stellen? Prüfen Sie Briefing, Angebot, Übergabe und Zusammenarbeit vor dem Auftrag.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/webdesign-agentur-fuer-handwerker",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "webdesign-agentur-fuer-handwerker.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/webdesign-agentur-fuer-handwerker-finden-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Webdesign-Agentur für Handwerker auswählen: Briefing & Angebot\",\"description\":\"Welche Fragen sollten Handwerksbetriebe einer Webdesign-Agentur stellen? Kriterien für Briefing, Angebot, Übergabe und Zusammenarbeit.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/webdesign-agentur-fuer-handwerker\"},\"url\":\"https://creaid-media.de/webdesign-agentur-fuer-handwerker\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/webdesign-agentur-fuer-handwerker-finden-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-07\",\"articleSection\":\"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Webdesign-Agentur für Handwerker auswählen: Briefing & Angebot\",\"description\":\"Welche Fragen sollten Handwerksbetriebe einer Webdesign-Agentur stellen? Prüfen Sie Briefing, Angebot, Übergabe und Zusammenarbeit vor dem Auftrag.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/webdesign-agentur-fuer-handwerker\"},\"url\":\"https://creaid-media.de/webdesign-agentur-fuer-handwerker\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/webdesign-agentur-fuer-handwerker-finden-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-07\",\"articleSection\":\"Webdesign\"}"
   },
   "webdesign-agentur-fuer-kleine-unternehmen": {
     "title": "Webdesign-Agentur für KMU: Angebot und Ablauf prüfen | CreAid-Media",
@@ -732,36 +732,36 @@
   },
   "webdesign-fuer-arztpraxen": {
     "title": "Website für Arztpraxen: Inhalte und Terminwege | CreAid-Media",
-    "description": "Planen Sie eine Praxiswebsite mit klaren Patienteninformationen, verständlichen Kontaktwegen und einem gut auffindbaren Terminangebot.",
+    "description": "Planen Sie Ihre Praxiswebsite mit klaren Patienteninformationen, verständlichen Kontaktwegen und einem gut auffindbaren Angebot zur Terminbuchung.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/webdesign-fuer-arztpraxen",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "webdesign-fuer-arztpraxen.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/webdesign-fuer-arztpraxen-das-vertrauen-schafft-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Website für Arztpraxen: Inhalte und Terminwege\", \"description\": \"Planen Sie eine Praxiswebsite mit klaren Patienteninformationen, verständlichen Kontaktwegen und einem gut auffindbaren Terminangebot.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/webdesign-fuer-arztpraxen\"}, \"url\": \"https://creaid-media.de/webdesign-fuer-arztpraxen\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/webdesign-fuer-arztpraxen-das-vertrauen-schafft-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-02\", \"articleSection\": \"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Website für Arztpraxen: Inhalte und Terminwege\",\"description\":\"Planen Sie Ihre Praxiswebsite mit klaren Patienteninformationen, verständlichen Kontaktwegen und einem gut auffindbaren Angebot zur Terminbuchung.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/webdesign-fuer-arztpraxen\"},\"url\":\"https://creaid-media.de/webdesign-fuer-arztpraxen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/webdesign-fuer-arztpraxen-das-vertrauen-schafft-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-02\",\"articleSection\":\"Webdesign\"}"
   },
   "webdesign-fuer-dachdecker-firma": {
     "title": "Website für Dachdecker: Leistungen, Bilder und Anfragen | CreAid-Media",
-    "description": "So zeigen Dachdeckerbetriebe Leistungen, Baustellenbilder und Einsatzgebiete auf ihrer Website und erleichtern die Kontaktaufnahme.",
+    "description": "So präsentieren Dachdeckerbetriebe ihre Leistungen, Baustellenbilder und Einsatzgebiete auf der Website und erleichtern Interessenten die Kontaktaufnahme.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/webdesign-fuer-dachdecker-firma",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "webdesign-fuer-dachdecker-firma.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/webdesign-fuer-dachdecker-firma-das-verkauft-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Website für Dachdecker: Leistungen, Bilder und Anfragen\", \"description\": \"So zeigen Dachdeckerbetriebe Leistungen, Baustellenbilder und Einsatzgebiete auf ihrer Website und erleichtern die Kontaktaufnahme.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/webdesign-fuer-dachdecker-firma\"}, \"url\": \"https://creaid-media.de/webdesign-fuer-dachdecker-firma\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/webdesign-fuer-dachdecker-firma-das-verkauft-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-08\", \"articleSection\": \"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Website für Dachdecker: Leistungen, Bilder und Anfragen\",\"description\":\"So präsentieren Dachdeckerbetriebe ihre Leistungen, Baustellenbilder und Einsatzgebiete auf der Website und erleichtern Interessenten die Kontaktaufnahme.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/webdesign-fuer-dachdecker-firma\"},\"url\":\"https://creaid-media.de/webdesign-fuer-dachdecker-firma\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/webdesign-fuer-dachdecker-firma-das-verkauft-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-08\",\"articleSection\":\"Webdesign\"}"
   },
   "webdesign-fuer-handwerker": {
-    "title": "Handwerker-Website: Inhalte für die erste eigene Website | CreAid-Media",
+    "title": "Handwerker-Website: Inhalte für die erste Website | CreAid-Media",
     "description": "Welche Leistungen, Einsatzgebiete, Projektbilder und Kontaktwege gehören auf die erste Website eines Handwerksbetriebs? Eine Orientierung für den Aufbau.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
@@ -777,7 +777,7 @@
   },
   "webdesign-fuer-handwerksbetriebe": {
     "title": "Handwerker-Website modernisieren: Relaunch-Checkliste | CreAid-Media",
-    "description": "Bestehende Handwerker-Website erneuern: Prüfen Sie Inhalte, mobile Bedienung, bisherige URLs und Kontaktwege vor dem Relaunch.",
+    "description": "Bestehende Handwerker-Website modernisieren: Prüfen Sie Inhalte, mobile Bedienung, bisherige URLs und Kontaktwege vor dem Relaunch mit dieser Checkliste.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/webdesign-fuer-handwerksbetriebe",
@@ -788,11 +788,11 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/03/webdesign-fuer-handwerksbetriebe-das-verkauft-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Handwerker-Website modernisieren: Relaunch-Checkliste\",\"description\":\"Bestehende Handwerker-Website erneuern: Prüfen Sie Inhalte, mobile Bedienung, bisherige URLs und Kontaktwege vor dem Relaunch.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/webdesign-fuer-handwerksbetriebe\"},\"url\":\"https://creaid-media.de/webdesign-fuer-handwerksbetriebe\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/webdesign-fuer-handwerksbetriebe-das-verkauft-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-31\",\"articleSection\":\"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Handwerker-Website modernisieren: Relaunch-Checkliste\",\"description\":\"Bestehende Handwerker-Website modernisieren: Prüfen Sie Inhalte, mobile Bedienung, bisherige URLs und Kontaktwege vor dem Relaunch mit dieser Checkliste.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/webdesign-fuer-handwerksbetriebe\"},\"url\":\"https://creaid-media.de/webdesign-fuer-handwerksbetriebe\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/webdesign-fuer-handwerksbetriebe-das-verkauft-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-31\",\"articleSection\":\"Webdesign\"}"
   },
   "webdesign-fuer-kleine-unternehmen": {
     "title": "Webdesign für kleine Unternehmen: Planung und Inhalte | CreAid",
-    "description": "Webdesign für kleine Unternehmen planen: Welche Seiten, Referenzen und Kontaktwege braucht Ihre Website? Mit Prüfplan für den Start und den mobilen Auftritt.",
+    "description": "Webdesign für kleine Unternehmen planen: Welche Seiten, Referenzen und Kontaktwege braucht Ihre Website? Mit einer Prüfliste für den mobilen Start.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/webdesign-fuer-kleine-unternehmen",
@@ -801,9 +801,9 @@
     "family": "journal",
     "url": "webdesign-fuer-kleine-unternehmen.html",
     "isPost": true,
-    "shareImage": "https://creaid-media.de/wp-content/uploads/2026/07/1-unklare-website-kleiner-handwerksbetrieb.webp",
+    "shareImage": "https://creaid-media.de/assets/blog/original/2026/07/1-unklare-website-kleiner-handwerksbetrieb-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Webdesign für kleine Unternehmen: Website planen\",\"description\":\"Webdesign für kleine Unternehmen planen: Welche Seiten, Referenzen und Kontaktwege braucht Ihre Website? Mit Prüfplan für den Start und den mobilen Auftritt.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/webdesign-fuer-kleine-unternehmen\"},\"url\":\"https://creaid-media.de/webdesign-fuer-kleine-unternehmen\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/07/1-unklare-website-kleiner-handwerksbetrieb.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-07-05T18:43:17Z\",\"articleSection\":\"Webdesign\",\"keywords\":\"Webdesign für kleine Unternehmen\",\"dateModified\":\"2026-07-05T18:43:27Z\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Webdesign für kleine Unternehmen: Website planen\",\"description\":\"Webdesign für kleine Unternehmen planen: Welche Seiten, Referenzen und Kontaktwege braucht Ihre Website? Mit einer Prüfliste für den mobilen Start.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/webdesign-fuer-kleine-unternehmen\"},\"url\":\"https://creaid-media.de/webdesign-fuer-kleine-unternehmen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/07/1-unklare-website-kleiner-handwerksbetrieb-1080x675.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-07-05T18:43:17Z\",\"articleSection\":\"Webdesign\",\"keywords\":\"Webdesign für kleine Unternehmen\",\"dateModified\":\"2026-07-05T18:43:27Z\"}"
   },
   "webdesign-handwerker": {
     "title": "Webdesign für Handwerker: Website erstellen lassen | CreAid-Media",
@@ -822,18 +822,18 @@
   },
   "webdesign-outsourcing-deutschland": {
     "title": "Webdesign-Outsourcing: Briefing, Abnahme und Übergabe | CreAid-Media",
-    "description": "So lagern deutsche Unternehmen Webdesign planbar aus: Rollen, Briefing, Meilensteine und Übergabe vor Projektstart festlegen.",
+    "description": "So lagern deutsche Unternehmen Webdesign planbar aus: Legen Sie Rollen, Briefing, Meilensteine, Abnahme und Übergabe vor dem Projektstart fest.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/webdesign-outsourcing-deutschland",
-    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>",
+    "extraHead": "<link href=\"/assets/journal.css\" rel=\"stylesheet\"/><script defer=\"\" src=\"/assets/journal.js\"></script><link href=\"/assets/journal-v9.css\" rel=\"stylesheet\"/>\n  <link rel=\"stylesheet\" href=\"/assets/journal-batch-01.css\">",
     "bodyAttrs": "",
     "family": "journal",
     "url": "webdesign-outsourcing-deutschland.html",
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/04/webdesign-outsourcing-deutschland-richtig-nutzen-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Webdesign-Outsourcing: Briefing, Abnahme und Übergabe\", \"description\": \"So lagern deutsche Unternehmen Webdesign planbar aus: Rollen, Briefing, Meilensteine und Übergabe vor Projektstart festlegen.\", \"mainEntityOfPage\": {\"@type\": \"WebPage\", \"@id\": \"https://creaid-media.de/webdesign-outsourcing-deutschland\"}, \"url\": \"https://creaid-media.de/webdesign-outsourcing-deutschland\", \"image\": \"https://creaid-media.de/assets/blog/original/2026/04/webdesign-outsourcing-deutschland-richtig-nutzen-featured-1080x675.webp\", \"author\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/ueber-uns\"}, \"publisher\": {\"@type\": \"Organization\", \"name\": \"CreAid-Media\", \"url\": \"https://creaid-media.de/\"}, \"inLanguage\": \"de-DE\", \"datePublished\": \"2026-04-19\", \"articleSection\": \"Webdesign\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Webdesign-Outsourcing: Briefing, Abnahme und Übergabe\",\"description\":\"So lagern deutsche Unternehmen Webdesign planbar aus: Legen Sie Rollen, Briefing, Meilensteine, Abnahme und Übergabe vor dem Projektstart fest.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/webdesign-outsourcing-deutschland\"},\"url\":\"https://creaid-media.de/webdesign-outsourcing-deutschland\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/04/webdesign-outsourcing-deutschland-richtig-nutzen-featured-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-04-19\",\"articleSection\":\"Webdesign\"}"
   },
   "webdesign": {
     "title": "Webdesign-Agentur: Website erstellen lassen | CreAid-Media",
@@ -861,13 +861,13 @@
     "family": "journal",
     "url": "website-wartung-fuer-firmen.html",
     "isPost": true,
-    "shareImage": "https://creaid-media.de/wp-content/uploads/2026/05/website-wartung-fuer-firmen-richtig-planen-featured.webp",
+    "shareImage": "https://creaid-media.de/assets/blog/original/2026/05/website-wartung-fuer-firmen-richtig-planen-featured-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Website-Wartung für Firmen: Aufgaben und Ablauf\",\"description\":\"Website-Wartung für Firmen planen: Legen Sie fest, wer sich um Updates, Backups und Funktionstests kümmert und wie Ihr Team auf Störungen reagiert.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/website-wartung-fuer-firmen\"},\"url\":\"https://creaid-media.de/website-wartung-fuer-firmen\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/05/website-wartung-fuer-firmen-richtig-planen-featured.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-05-01T01:45:44Z\",\"articleSection\":\"Webdesign\",\"keywords\":\"Website-Wartung für Firmen\",\"dateModified\":\"2026-11-25T00:39:21Z\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Website-Wartung für Firmen: Aufgaben und Ablauf\",\"description\":\"Website-Wartung für Firmen planen: Legen Sie fest, wer sich um Updates, Backups und Funktionstests kümmert und wie Ihr Team auf Störungen reagiert.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/website-wartung-fuer-firmen\"},\"url\":\"https://creaid-media.de/website-wartung-fuer-firmen\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/05/website-wartung-fuer-firmen-richtig-planen-featured-1080x675.webp\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-05-01T01:45:44Z\",\"articleSection\":\"Webdesign\",\"keywords\":\"Website-Wartung für Firmen\",\"dateModified\":\"2026-11-25T00:39:21Z\"}"
   },
   "wie-wirkt-corporate-design": {
-    "title": "Corporate Design prüfen: Kriterien für einen konsistenten Auftritt | CreAid-Media",
-    "description": "Bewerten Sie Ihr vorhandenes Corporate Design anhand von Wiedererkennung, Lesbarkeit, Medienkonsistenz und Alltagstauglichkeit.",
+    "title": "Corporate Design prüfen: Kriterien & Wirkung | CreAid-Media",
+    "description": "Prüfen Sie Ihr Corporate Design anhand von Wiedererkennung, Lesbarkeit, Konsistenz über verschiedene Medien und seiner Eignung für den Arbeitsalltag.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/wie-wirkt-corporate-design",
@@ -878,7 +878,7 @@
     "isPost": true,
     "shareImage": "https://creaid-media.de/assets/blog/original/2026/03/Gemini_Generated_Image_7pgpod7pgpod7pgp-1080x675.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Corporate Design prüfen: Kriterien für einen konsistenten Auftritt\",\"description\":\"Bewerten Sie Ihr vorhandenes Corporate Design anhand von Wiedererkennung, Lesbarkeit, Medienkonsistenz und Alltagstauglichkeit.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/wie-wirkt-corporate-design\"},\"url\":\"https://creaid-media.de/wie-wirkt-corporate-design\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/Gemini_Generated_Image_7pgpod7pgpod7pgp-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-24\",\"articleSection\":\"Branding & Design\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Corporate Design prüfen: Kriterien für einen konsistenten Auftritt\",\"description\":\"Prüfen Sie Ihr Corporate Design anhand von Wiedererkennung, Lesbarkeit, Konsistenz über verschiedene Medien und seiner Eignung für den Arbeitsalltag.\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://creaid-media.de/wie-wirkt-corporate-design\"},\"url\":\"https://creaid-media.de/wie-wirkt-corporate-design\",\"image\":\"https://creaid-media.de/assets/blog/original/2026/03/Gemini_Generated_Image_7pgpod7pgpod7pgp-1080x675.webp\",\"author\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/ueber-uns\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"},\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-03-24\",\"articleSection\":\"Branding & Design\"}"
   },
   "webdesign-aerzte": {
     "title": "Webdesign für Ärzte & Arztpraxen | CreAid-Media",
@@ -1182,7 +1182,7 @@
   },
   "archiv-corporate-design": {
     "title": "Corporate Design – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Corporate Design. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Corporate Design planen und prüfen: Ratgeber zu Gestaltungsregeln, Wiedererkennung, Medien und einem konsistenten Erscheinungsbild für Unternehmen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/corporate-design",
@@ -1193,11 +1193,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Corporate Design – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Corporate Design. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/corporate-design\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Corporate Design – Journalarchiv\",\"description\":\"Corporate Design planen und prüfen: Ratgeber zu Gestaltungsregeln, Wiedererkennung, Medien und einem konsistenten Erscheinungsbild für Unternehmen.\",\"url\":\"https://creaid-media.de/category/corporate-design\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-branding": {
     "title": "Branding – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Branding. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Branding-Ratgeber zu Positionierung, Logo, Firmennamen, Slogan und Corporate Design. Entwickeln Sie einen verständlichen, einheitlichen Markenauftritt.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/branding",
@@ -1208,11 +1208,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Branding – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Branding. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/branding\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Branding – Journalarchiv\",\"description\":\"Branding-Ratgeber zu Positionierung, Logo, Firmennamen, Slogan und Corporate Design. Entwickeln Sie einen verständlichen, einheitlichen Markenauftritt.\",\"url\":\"https://creaid-media.de/category/branding\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-seo": {
     "title": "SEO – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu SEO. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Ratgeber für Suchmaschinenoptimierung: lokale Suchanfragen, Google-Unternehmensprofil, Website-Struktur und konkrete Schritte zur Verbesserung.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/seo",
@@ -1223,11 +1223,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"SEO – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu SEO. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/seo\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"SEO – Journalarchiv\",\"description\":\"Ratgeber für Suchmaschinenoptimierung: lokale Suchanfragen, Google-Unternehmensprofil, Website-Struktur und konkrete Schritte zur Verbesserung.\",\"url\":\"https://creaid-media.de/category/seo\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-lokales-marketing": {
     "title": "Lokales Marketing – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Lokales Marketing. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Lokales Marketing für Betriebe: regionale Kampagnen, Google Maps, Suchmaschinenoptimierung und passende Website-Inhalte für Ihr Einsatzgebiet planen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/lokales-marketing",
@@ -1238,11 +1238,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Lokales Marketing – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Lokales Marketing. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/lokales-marketing\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Lokales Marketing – Journalarchiv\",\"description\":\"Lokales Marketing für Betriebe: regionale Kampagnen, Google Maps, Suchmaschinenoptimierung und passende Website-Inhalte für Ihr Einsatzgebiet planen.\",\"url\":\"https://creaid-media.de/category/lokales-marketing\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-kundengewinnung": {
     "title": "Kundengewinnung – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Kundengewinnung. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Kundengewinnung verbessern: Ursachen ausbleibender Website-Anfragen, Google Ads, Landingpages und Social-Media-Betreuung gezielt einordnen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/kundengewinnung",
@@ -1253,11 +1253,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Kundengewinnung – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Kundengewinnung. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/kundengewinnung\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Kundengewinnung – Journalarchiv\",\"description\":\"Kundengewinnung verbessern: Ursachen ausbleibender Website-Anfragen, Google Ads, Landingpages und Social-Media-Betreuung gezielt einordnen.\",\"url\":\"https://creaid-media.de/category/kundengewinnung\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-lokal": {
     "title": "Lokale Unternehmen – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Lokale Unternehmen. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Ratgeber für lokale Unternehmen und Praxen: Leistungen, Standorte, Kontaktwege und lokale Auffindbarkeit verständlich auf der eigenen Website darstellen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/lokal",
@@ -1268,11 +1268,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Lokale Unternehmen – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Lokale Unternehmen. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/lokal\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Lokale Unternehmen – Journalarchiv\",\"description\":\"Ratgeber für lokale Unternehmen und Praxen: Leistungen, Standorte, Kontaktwege und lokale Auffindbarkeit verständlich auf der eigenen Website darstellen.\",\"url\":\"https://creaid-media.de/category/lokal\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-marketing": {
     "title": "Marketing – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Marketing. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Marketing-Ratgeber zu Social Media, regionalen Kampagnen, Landingpages, Google Ads und Imagefilmen. Maßnahmen nach Ziel, Aufwand und Nutzen einordnen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/marketing",
@@ -1283,11 +1283,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Marketing – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Marketing. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/marketing\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Marketing – Journalarchiv\",\"description\":\"Marketing-Ratgeber zu Social Media, regionalen Kampagnen, Landingpages, Google Ads und Imagefilmen. Maßnahmen nach Ziel, Aufwand und Nutzen einordnen.\",\"url\":\"https://creaid-media.de/category/marketing\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-webdesign": {
     "title": "Webdesign – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Webdesign-Ratgeber für Unternehmen: Website-Inhalte, Relaunch, Agenturauswahl, Wartung, Onlineshops und individuelle Webentwicklung sinnvoll planen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/webdesign",
@@ -1298,11 +1298,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Webdesign – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/webdesign\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Webdesign – Journalarchiv\",\"description\":\"Webdesign-Ratgeber für Unternehmen: Website-Inhalte, Relaunch, Agenturauswahl, Wartung, Onlineshops und individuelle Webentwicklung sinnvoll planen.\",\"url\":\"https://creaid-media.de/category/webdesign\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-handwerk": {
     "title": "Handwerk – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Handwerk. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Digitale Kundengewinnung im Handwerk: Websites für Handwerksbetriebe planen, bestehende Auftritte verbessern, regionale Suchthemen und Agenturen prüfen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/handwerk",
@@ -1313,11 +1313,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Handwerk – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Handwerk. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/handwerk\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Handwerk – Journalarchiv\",\"description\":\"Digitale Kundengewinnung im Handwerk: Websites für Handwerksbetriebe planen, bestehende Auftritte verbessern, regionale Suchthemen und Agenturen prüfen.\",\"url\":\"https://creaid-media.de/category/handwerk\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-handwerk-webdesign-handwerk": {
     "title": "Webdesign im Handwerk – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign im Handwerk. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Webdesign im Handwerk: Inhalte für die erste Website, Relaunch-Checklisten, Agenturauswahl und konkrete Anforderungen für Dachdeckerbetriebe.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/handwerk/webdesign-handwerk",
@@ -1328,11 +1328,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Webdesign im Handwerk – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign im Handwerk. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/handwerk/webdesign-handwerk\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Webdesign im Handwerk – Journalarchiv\",\"description\":\"Webdesign im Handwerk: Inhalte für die erste Website, Relaunch-Checklisten, Agenturauswahl und konkrete Anforderungen für Dachdeckerbetriebe.\",\"url\":\"https://creaid-media.de/category/handwerk/webdesign-handwerk\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-handwerk-seo-handwerk": {
     "title": "SEO im Handwerk – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu SEO im Handwerk. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "SEO im Handwerk: lokale Suchanfragen, Google Maps, Unternehmensprofile und branchengerechte Leistungsseiten für eine verständliche regionale Präsenz.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/handwerk/seo-handwerk",
@@ -1343,11 +1343,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"SEO im Handwerk – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu SEO im Handwerk. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/handwerk/seo-handwerk\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"SEO im Handwerk – Journalarchiv\",\"description\":\"SEO im Handwerk: lokale Suchanfragen, Google Maps, Unternehmensprofile und branchengerechte Leistungsseiten für eine verständliche regionale Präsenz.\",\"url\":\"https://creaid-media.de/category/handwerk/seo-handwerk\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-handwerk-handwerk-handwerk": {
     "title": "Handwerksbetriebe digital – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Handwerksbetriebe digital. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Handwerksbetriebe digital: Ratgeber zu Website-Inhalten, Modernisierung und Leistungsdarstellung. Schaffen Sie klare Wege vom Erstkontakt zur Anfrage.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/handwerk/handwerk-handwerk",
@@ -1358,11 +1358,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Handwerksbetriebe digital – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Handwerksbetriebe digital. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/handwerk/handwerk-handwerk\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Handwerksbetriebe digital – Journalarchiv\",\"description\":\"Handwerksbetriebe digital: Ratgeber zu Website-Inhalten, Modernisierung und Leistungsdarstellung. Schaffen Sie klare Wege vom Erstkontakt zur Anfrage.\",\"url\":\"https://creaid-media.de/category/handwerk/handwerk-handwerk\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-webdesign-conversion": {
     "title": "Webdesign & Conversion – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign & Conversion. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Webdesign und Conversion: Prüfen Sie Website-Anfragen, Kontaktwege, Landingpages und Google-Ads-Zielseiten auf konkrete Hürden und Verbesserungen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/webdesign-conversion",
@@ -1373,11 +1373,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Webdesign & Conversion – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Webdesign & Conversion. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/webdesign-conversion\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Webdesign & Conversion – Journalarchiv\",\"description\":\"Webdesign und Conversion: Prüfen Sie Website-Anfragen, Kontaktwege, Landingpages und Google-Ads-Zielseiten auf konkrete Hürden und Verbesserungen.\",\"url\":\"https://creaid-media.de/category/webdesign-conversion\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-digitalisierung": {
     "title": "Digitalisierung – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Digitalisierung. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Digitalisierung im Unternehmen planen: KI-Workflows, B2B-Portale, individuelle Webentwicklung und Website-Wartung anhand konkreter Abläufe einordnen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/digitalisierung",
@@ -1388,11 +1388,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Digitalisierung – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Digitalisierung. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/digitalisierung\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Digitalisierung – Journalarchiv\",\"description\":\"Digitalisierung im Unternehmen planen: KI-Workflows, B2B-Portale, individuelle Webentwicklung und Website-Wartung anhand konkreter Abläufe einordnen.\",\"url\":\"https://creaid-media.de/category/digitalisierung\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-suchmaschinenoptimierung": {
     "title": "Suchmaschinenoptimierung – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Suchmaschinenoptimierung. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "SEO-Grundlagen für lokale Dienstleister: Suchintention, Unternehmensdaten, Google Maps und Website-Inhalte mit konkreten Prüfschritten abstimmen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/suchmaschinenoptimierung",
@@ -1403,11 +1403,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Suchmaschinenoptimierung – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Suchmaschinenoptimierung. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/suchmaschinenoptimierung\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Suchmaschinenoptimierung – Journalarchiv\",\"description\":\"SEO-Grundlagen für lokale Dienstleister: Suchintention, Unternehmensdaten, Google Maps und Website-Inhalte mit konkreten Prüfschritten abstimmen.\",\"url\":\"https://creaid-media.de/category/suchmaschinenoptimierung\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-plattform-konzeption": {
     "title": "Plattform-Konzeption – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Plattform-Konzeption. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Digitale Plattformen konzipieren: Marktplätze, B2B-Portale und individuelle Webentwicklung nach Funktionen, Rollen, Schnittstellen und Aufwand planen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/plattform-konzeption",
@@ -1418,11 +1418,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Plattform-Konzeption – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Plattform-Konzeption. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/plattform-konzeption\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Plattform-Konzeption – Journalarchiv\",\"description\":\"Digitale Plattformen konzipieren: Marktplätze, B2B-Portale und individuelle Webentwicklung nach Funktionen, Rollen, Schnittstellen und Aufwand planen.\",\"url\":\"https://creaid-media.de/category/plattform-konzeption\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-e-commerce": {
     "title": "E-Commerce – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu E-Commerce. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "E-Commerce-Ratgeber: Onlineshop, B2B-Portal und Marktplatz vergleichen. Sortiment, Geschäftsmodell, Shopsystem und technische Voraussetzungen klären.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/e-commerce",
@@ -1433,11 +1433,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"E-Commerce – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu E-Commerce. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/e-commerce\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"E-Commerce – Journalarchiv\",\"description\":\"E-Commerce-Ratgeber: Onlineshop, B2B-Portal und Marktplatz vergleichen. Sortiment, Geschäftsmodell, Shopsystem und technische Voraussetzungen klären.\",\"url\":\"https://creaid-media.de/category/e-commerce\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-online-shop": {
     "title": "Onlineshop – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Onlineshop. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Onlineshop planen und starten: Eigenbau oder Agentur vergleichen, ein geeignetes Shopsystem wählen und Produktseiten, Checkout und Pflege vorbereiten.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/online-shop",
@@ -1448,11 +1448,11 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Onlineshop – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Onlineshop. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/online-shop\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Onlineshop – Journalarchiv\",\"description\":\"Onlineshop planen und starten: Eigenbau oder Agentur vergleichen, ein geeignetes Shopsystem wählen und Produktseiten, Checkout und Pflege vorbereiten.\",\"url\":\"https://creaid-media.de/category/online-shop\",\"inLanguage\":\"de-DE\"}"
   },
   "archiv-digitales-marketing": {
     "title": "Digitales Marketing – Journalarchiv | CreAid-Media",
-    "description": "Thematisch ausgewählte CreAid-Media-Ratgeber zu Digitales Marketing. Beiträge entdecken und zum Journal zurückkehren.",
+    "description": "Digitales Marketing: Social-Media-Betreuung, Google Ads, Landingpages, lokale Kampagnen und organische Sichtbarkeit auf Ihre Geschäftsziele abstimmen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/digitales-marketing",
@@ -1463,7 +1463,7 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Digitales Marketing – Journalarchiv\",\"description\":\"Thematisch ausgewählte CreAid-Media-Ratgeber zu Digitales Marketing. Beiträge entdecken und zum Journal zurückkehren.\",\"url\":\"https://creaid-media.de/category/digitales-marketing\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Digitales Marketing – Journalarchiv\",\"description\":\"Digitales Marketing: Social-Media-Betreuung, Google Ads, Landingpages, lokale Kampagnen und organische Sichtbarkeit auf Ihre Geschäftsziele abstimmen.\",\"url\":\"https://creaid-media.de/category/digitales-marketing\",\"inLanguage\":\"de-DE\"}"
   },
   "freelancer-oder-full-service-agentur": {
     "title": "Freelancer oder Full-Service-Agentur? Eine Entscheidungshilfe | CreAid-Media",
@@ -1762,14 +1762,14 @@
     "family": "journal",
     "url": "wann-lohnt-sich-seo.html",
     "isPost": true,
-    "shareImage": "https://creaid-media.de/wp-content/uploads/2026/05/wann-lohnt-sich-seo-wirklich-fuer-handwerker-featured.webp",
+    "shareImage": "https://creaid-media.de/assets/blog/wp-import/wann-lohnt-sich-seo-wirklich-fuer-handwerker-featured.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Wann lohnt sich SEO wirklich für Handwerker?\",\"description\":\"Wann rechnet sich SEO für Handwerksbetriebe? Prüfen Sie lokale Nachfrage, Website und Auftragswert und berechnen Sie, wie viele neue Aufträge nötig sind.\",\"url\":\"https://creaid-media.de/wann-lohnt-sich-seo\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/05/wann-lohnt-sich-seo-wirklich-fuer-handwerker-featured.webp\",\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-11-24T23:30:12Z\",\"keywords\":\"wann lohnt sich SEO für Handwerker\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"dateModified\":\"2026-11-25T00:31:44Z\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Wann lohnt sich SEO wirklich für Handwerker?\",\"description\":\"Wann rechnet sich SEO für Handwerksbetriebe? Prüfen Sie lokale Nachfrage, Website und Auftragswert und berechnen Sie, wie viele neue Aufträge nötig sind.\",\"url\":\"https://creaid-media.de/wann-lohnt-sich-seo\",\"image\":\"https://creaid-media.de/assets/blog/wp-import/wann-lohnt-sich-seo-wirklich-fuer-handwerker-featured.webp\",\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-11-24T23:30:12Z\",\"keywords\":\"wann lohnt sich SEO für Handwerker\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"dateModified\":\"2026-11-25T00:31:44Z\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
   },
   "7-branding-fehler-bei-neugruendung": {
     "title": "7 Branding-Fehler bei Neugründung vermeiden | CreAid",
     "heading": "7 Branding-Fehler bei Neugründung und wie Sie sie vermeiden",
-    "description": "So vermeiden Handwerksbetriebe sieben Branding-Fehler bei der Gründung. Planen Sie Positionierung, Logo, Website und Werbemittel in der richtigen Reihenfolge.",
+    "description": "Vermeiden Sie sieben Branding-Fehler bei der Gründung. Planen Sie Positionierung, Logo, Website und Werbemittel für Ihren Handwerksbetrieb sinnvoll.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/7-branding-fehler-bei-neugruendung",
@@ -1778,9 +1778,9 @@
     "family": "journal",
     "url": "7-branding-fehler-bei-neugruendung.html",
     "isPost": true,
-    "shareImage": "https://creaid-media.de/wp-content/uploads/2026/05/7-branding-fehler-bei-neugruendung-featured.webp",
+    "shareImage": "https://creaid-media.de/assets/blog/wp-import/7-branding-fehler-bei-neugruendung-featured.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"7 Branding-Fehler bei Neugründung und wie Sie sie vermeiden\",\"description\":\"So vermeiden Handwerksbetriebe sieben Branding-Fehler bei der Gründung. Planen Sie Positionierung, Logo, Website und Werbemittel in der richtigen Reihenfolge.\",\"url\":\"https://creaid-media.de/7-branding-fehler-bei-neugruendung\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/05/7-branding-fehler-bei-neugruendung-featured.webp\",\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-11-24T20:59:15Z\",\"keywords\":\"Branding-Fehler bei Neugründung\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"dateModified\":\"2026-11-25T00:31:49Z\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"7 Branding-Fehler bei Neugründung und wie Sie sie vermeiden\",\"description\":\"Vermeiden Sie sieben Branding-Fehler bei der Gründung. Planen Sie Positionierung, Logo, Website und Werbemittel für Ihren Handwerksbetrieb sinnvoll.\",\"url\":\"https://creaid-media.de/7-branding-fehler-bei-neugruendung\",\"image\":\"https://creaid-media.de/assets/blog/wp-import/7-branding-fehler-bei-neugruendung-featured.webp\",\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-11-24T20:59:15Z\",\"keywords\":\"Branding-Fehler bei Neugründung\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"dateModified\":\"2026-11-25T00:31:49Z\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
   },
   "website-audit-unternehmen": {
     "title": "Website-Audit für Unternehmen: Check und Prioritäten | CreAid",
@@ -1794,14 +1794,14 @@
     "family": "journal",
     "url": "website-audit-unternehmen.html",
     "isPost": true,
-    "shareImage": "https://creaid-media.de/wp-content/uploads/2026/05/website-audit-fuer-unternehmen-richtig-nutzen-featured.webp",
+    "shareImage": "https://creaid-media.de/assets/blog/wp-import/website-audit-fuer-unternehmen-richtig-nutzen-featured.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Website-Audit für Unternehmen: Was bremst Ihre Anfragen?\",\"description\":\"Ein Website-Audit für Unternehmen zeigt, wo Anfragen verloren gehen. Prüfen Sie Sichtbarkeit, Technik, Inhalte und Kontaktwege und setzen Sie Prioritäten.\",\"url\":\"https://creaid-media.de/website-audit-unternehmen\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/05/website-audit-fuer-unternehmen-richtig-nutzen-featured.webp\",\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-11-24T20:59:09Z\",\"keywords\":\"Website-Audit für Unternehmen\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"dateModified\":\"2026-11-25T00:31:51Z\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Website-Audit für Unternehmen: Was bremst Ihre Anfragen?\",\"description\":\"Ein Website-Audit für Unternehmen zeigt, wo Anfragen verloren gehen. Prüfen Sie Sichtbarkeit, Technik, Inhalte und Kontaktwege und setzen Sie Prioritäten.\",\"url\":\"https://creaid-media.de/website-audit-unternehmen\",\"image\":\"https://creaid-media.de/assets/blog/wp-import/website-audit-fuer-unternehmen-richtig-nutzen-featured.webp\",\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-11-24T20:59:09Z\",\"keywords\":\"Website-Audit für Unternehmen\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"dateModified\":\"2026-11-25T00:31:51Z\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
   },
   "360-grad-rundgang-erstellen": {
     "title": "360-Grad-Rundgang erstellen: Aufwand und Kosten | CreAid",
     "heading": "360-Grad-Rundgang erstellen: Selbst machen oder beauftragen?",
-    "description": "360-Grad-Rundgang erstellen oder beauftragen? Vergleichen Sie Aufwand und Kosten und erfahren Sie, wie Sie eine virtuelle Tour für Ihre Website vorbereiten.",
+    "description": "360-Grad-Rundgang selbst erstellen oder beauftragen? Vergleichen Sie Aufwand und Kosten und bereiten Sie eine virtuelle Tour für Ihre Website vor.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/360-grad-rundgang-erstellen",
@@ -1810,13 +1810,13 @@
     "family": "journal",
     "url": "360-grad-rundgang-erstellen.html",
     "isPost": true,
-    "shareImage": "https://creaid-media.de/wp-content/uploads/2026/05/360-grad-rundgang-erstellen-lassen-oder-selbst-featured.webp",
+    "shareImage": "https://creaid-media.de/assets/blog/wp-import/360-grad-rundgang-erstellen-lassen-oder-selbst-featured.webp",
     "ogType": "article",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"360-Grad-Rundgang erstellen: Selbst machen oder beauftragen?\",\"description\":\"360-Grad-Rundgang erstellen oder beauftragen? Vergleichen Sie Aufwand und Kosten und erfahren Sie, wie Sie eine virtuelle Tour für Ihre Website vorbereiten.\",\"url\":\"https://creaid-media.de/360-grad-rundgang-erstellen\",\"image\":\"https://creaid-media.de/wp-content/uploads/2026/05/360-grad-rundgang-erstellen-lassen-oder-selbst-featured.webp\",\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-11-24T20:59:02Z\",\"keywords\":\"360-Grad-Rundgang erstellen\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"dateModified\":\"2026-11-25T00:31:47Z\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"360-Grad-Rundgang erstellen: Selbst machen oder beauftragen?\",\"description\":\"360-Grad-Rundgang selbst erstellen oder beauftragen? Vergleichen Sie Aufwand und Kosten und bereiten Sie eine virtuelle Tour für Ihre Website vor.\",\"url\":\"https://creaid-media.de/360-grad-rundgang-erstellen\",\"image\":\"https://creaid-media.de/assets/blog/wp-import/360-grad-rundgang-erstellen-lassen-oder-selbst-featured.webp\",\"inLanguage\":\"de-DE\",\"datePublished\":\"2026-11-24T20:59:02Z\",\"keywords\":\"360-Grad-Rundgang erstellen\",\"author\":{\"@type\":\"Person\",\"name\":\"Creaid_Admin\",\"url\":\"https://creaid-media.de/author/creaid_admin\"},\"dateModified\":\"2026-11-25T00:31:47Z\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"CreAid-Media\",\"url\":\"https://creaid-media.de/\"}}"
   },
   "archiv-google-ads": {
     "title": "Google Ads – Journalarchiv | CreAid-Media",
-    "description": "Ratgeber zu Google Ads, Kampagnen und Anfragen für Unternehmen.",
+    "description": "Google-Ads-Ratgeber für Unternehmen: Warum führen Klicks nicht zu Anfragen? Suchbegriffe, Conversion-Tracking und Landingpages auf Ursachen prüfen.",
     "robots": "noindex,nofollow,noarchive",
     "themeColor": "#121315",
     "canonical": "https://creaid-media.de/category/google-ads",
@@ -1827,6 +1827,6 @@
     "isPost": false,
     "shareImage": "https://creaid-media.de/assets/creaid-media-logo.webp",
     "ogType": "website",
-    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Google Ads – Journalarchiv\",\"description\":\"Ratgeber zu Google Ads, Kampagnen und Anfragen für Unternehmen.\",\"url\":\"https://creaid-media.de/category/google-ads\",\"inLanguage\":\"de-DE\"}"
+    "structuredData": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"Google Ads – Journalarchiv\",\"description\":\"Google-Ads-Ratgeber für Unternehmen: Warum führen Klicks nicht zu Anfragen? Suchbegriffe, Conversion-Tracking und Landingpages auf Ursachen prüfen.\",\"url\":\"https://creaid-media.de/category/google-ads\",\"inLanguage\":\"de-DE\"}"
   }
 }

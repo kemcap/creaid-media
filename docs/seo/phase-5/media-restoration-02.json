@@ -1,0 +1,152 @@
+{
+  "source": "Original image bytes from verified archive; no transformation; review rights before release",
+  "method": "Recovered original WebP bytes through transfer manifest, checked length, RIFF/WEBP headers and Git blob SHA, exact original content retained",
+  "images": [
+    {
+      "article": "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "dimensions": [
+        1024,
+        687
+      ],
+      "bytes": 63968,
+      "sha256": "f55fc0dc47f5c052c039fec47afe64297f94d2629f024f07508994bbe54442fb",
+      "suggestedAlt": "Unternehmer prüft Projektunterlagen neben türkischer und deutscher Flagge.",
+      "suggestedPlacement": "Nach Einleitung zur Agenturauswahl",
+      "path": "public/assets/blog/original/2026/04/deutschsprachige-agentur-tuerkei-suchen-1024x687.webp",
+      "gitSha": "9926f9779e122cdba175054d8cd0464f63e6ee1e",
+      "placementBefore": "warum-eine-deutschsprachige-agentur-in-der-turkei-interessant-ist",
+      "caption": "Illustrative Szene zur Auswahl eines deutschsprachigen Partners.",
+      "reviewStatus": "OFFEN: actual full-size image, individual rights and stylistic suitability before release"
+    },
+    {
+      "article": "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "dimensions": [
+        1024,
+        687
+      ],
+      "bytes": 82844,
+      "sha256": "1586ee17c8e0783ade70185464b443db35b604d1b55eebd6d1e8b6f637687e56",
+      "suggestedAlt": "Zwei Personen besprechen Entwürfe an einem Tisch.",
+      "suggestedPlacement": "Beim Abschnitt zur Abstimmung",
+      "path": "public/assets/blog/original/2026/04/deutschsprachige-beratung-agentur-tuerkei-1024x687.webp",
+      "gitSha": "2b0842341df00573a9c819f610e7d30512cfe4b0",
+      "placementBefore": "fur-welche-leistungen-sich-das-modell-besonders-lohnt",
+      "caption": "Beispiel einer Entwurfsbesprechung: Erwartungen und Rückfragen gemeinsam klären.",
+      "reviewStatus": "OFFEN: actual full-size image, individual rights and stylistic suitability before release"
+    },
+    {
+      "article": "deutschsprachige-agentur-in-der-tuerkei-finden",
+      "dimensions": [
+        1024,
+        687
+      ],
+      "bytes": 120000,
+      "sha256": "0f1ee03a18bba0c4dbafb567861dfb72681d2f118d6570de98584ee980148b5a",
+      "suggestedAlt": "Team bespricht Entwürfe an einem Tisch.",
+      "suggestedPlacement": "Beim Abschnitt zur Projektorganisation",
+      "path": "public/assets/blog/original/2026/04/agenturprojekt-webdesign-branding-tuerkei-1024x687.webp",
+      "gitSha": "83726ba1044ecbc540a469cc570dcea79db278e0",
+      "placementBefore": "so-treffen-sie-die-richtige-entscheidung",
+      "caption": "Illustrative Projektbesprechung. Leistungsumfang und Freigabewege sollten vor Beginn vereinbart werden.",
+      "reviewStatus": "OFFEN: actual full-size image, individual rights and stylistic suitability before release"
+    },
+    {
+      "article": "webdesign-outsourcing-deutschland",
+      "dimensions": [
+        1024,
+        558
+      ],
+      "bytes": 64116,
+      "sha256": "1157cfc7a7e425e4f9fc4a98eac437914464e634b3c4391d657d168252cb8c12",
+      "suggestedAlt": "Zwei Personen betrachten Website-Entwürfe am Besprechungstisch.",
+      "suggestedPlacement": "Nach Einleitung zum Outsourcing",
+      "path": "public/assets/blog/original/2026/04/webdesign-outsourcing-veraltete-website-1024x558.webp",
+      "gitSha": "28831b12950ce060eff446425a4ce4af37643910",
+      "placementBefore": "was-webdesign-outsourcing-in-deutschland-wirklich-bedeutet",
+      "caption": "Illustrative Besprechung zur Planung eines neuen Webauftritts.",
+      "reviewStatus": "OFFEN: actual full-size image, individual rights and stylistic suitability before release"
+    },
+    {
+      "article": "webdesign-outsourcing-deutschland",
+      "dimensions": [
+        1024,
+        558
+      ],
+      "bytes": 96564,
+      "sha256": "c2bfbfb21195aba243831daf7eae36ab8560d0368bd1ea4901697d8637a3a9fd",
+      "suggestedAlt": "Team diskutiert ausgebreitete Projektunterlagen.",
+      "suggestedPlacement": "Beim Abschnitt zu Briefing und Risiken",
+      "path": "public/assets/blog/original/2026/04/webdesign-outsourcing-risiken-briefing-1024x558.webp",
+      "gitSha": "c93e215da0515df96663c001ada3dfa00638a1ae",
+      "placementBefore": "woran-sie-einen-starken-outsourcing-partner-erkennen",
+      "caption": "Beispiel einer Projektabstimmung mit gemeinsamen Arbeitsunterlagen.",
+      "reviewStatus": "OFFEN: actual full-size image, individual rights and stylistic suitability before release"
+    },
+    {
+      "article": "webdesign-outsourcing-deutschland",
+      "dimensions": [
+        1024,
+        687
+      ],
+      "bytes": 77296,
+      "sha256": "c20a15fe05341b2aa5bb5ba38e543cc0cfff4030fc04b34f80313a04596ec708",
+      "suggestedAlt": "Laptop und Prozesskarten auf einem Holzschreibtisch.",
+      "suggestedPlacement": "Beim Abschnitt zu Übergabe und Ablauf",
+      "path": "public/assets/blog/original/2026/04/webdesign-outsourcing-prozess-relaunch-1024x687.webp",
+      "gitSha": "f81706a67facc0c15628dc10dcccb001e762eda4",
+      "placementBefore": "preis-qualitat-und-realitat",
+      "caption": "Illustration eines strukturierten Projektablaufs mit einzelnen Arbeitsschritten.",
+      "reviewStatus": "OFFEN: actual full-size image, individual rights and stylistic suitability before release"
+    },
+    {
+      "article": "guenstige-webdesign-agentur-europa-finden",
+      "dimensions": [
+        1024,
+        571
+      ],
+      "bytes": 57260,
+      "sha256": "f0957216d0352d73281495e516ef3e453e511f90bc36c742234e69219ed7b06f",
+      "suggestedAlt": "Unternehmer nimmt an einer Videokonferenz am Laptop teil.",
+      "suggestedPlacement": "Beim Abschnitt zur Zusammenarbeit aus der Ferne",
+      "path": "public/assets/blog/original/2026/04/guenstige-webdesign-agentur-europa-beratung-1024x571.webp",
+      "gitSha": "2097428c308cafc7c71cc200bdc6fe5fbde497ff",
+      "placementBefore": "4-wie-funktioniert-die-kommunikation",
+      "caption": "Beispiel für die digitale Abstimmung zwischen Auftraggeber und Agentur.",
+      "reviewStatus": "OFFEN: actual full-size image, individual rights and stylistic suitability before release"
+    },
+    {
+      "article": "guenstige-webdesign-agentur-europa-finden",
+      "dimensions": [
+        1024,
+        687
+      ],
+      "bytes": 61000,
+      "sha256": "69d02e35d555ab00a4bd704b6eb14a65b2eeee2e902a5e28d7db7244cb59508d",
+      "suggestedAlt": "Laptop mit einer Vergleichstabelle neben gedruckten Angebotsunterlagen.",
+      "suggestedPlacement": "Beim Abschnitt zum Angebotsvergleich; Bildschirmtext vor Einsatz prüfen",
+      "path": "public/assets/blog/original/2026/04/webdesign-agentur-angebote-vergleichen-1024x687.webp",
+      "gitSha": "e5c520e513f62b57220dd7b62503517a649f8b53",
+      "placementBefore": "wo-gunstige-webdesign-angebote-kippen-konnen",
+      "caption": "Illustration zum Vergleich von Angeboten; die Bildschirmdarstellung ist kein verbindliches Angebot.",
+      "reviewStatus": "OFFEN: actual full-size image, individual rights and stylistic suitability before release"
+    },
+    {
+      "article": "warum-bringt-meine-website-keine-kunden",
+      "dimensions": [
+        1024,
+        683
+      ],
+      "bytes": 31350,
+      "sha256": "9dca0fd5215e17c0df19090005210c6ad3640c1c1750ca099ed569722e112c5a",
+      "suggestedAlt": "Abstrakte geometrische Formen treffen auf eine dunkle Scheibe mit einer Öffnung.",
+      "suggestedPlacement": "Beim Abschnitt über unpassende Besucher",
+      "path": "public/assets/blog/original/2026/04/falsche-besucher-keine-kunden-1024x683.webp",
+      "gitSha": "b0618256e8d56e8827962f7c28ea4e4e8c66f376",
+      "placementBefore": "2-ihr-angebot-wird-nicht-schnell-genug-verstanden",
+      "caption": "Abstrakte Bildmetapher: Nicht jeder Besucher passt zur angebotenen Leistung.",
+      "reviewStatus": "OFFEN: actual full-size image, individual rights and stylistic suitability before release"
+    }
+  ],
+  "scope": "Draft PR 30 only; no publication; archive motif proposals, no asserted client or reference",
+  "remaining": "European agency article has 2 content images, needs at least one distinct third image; conversion article has 3 structural candidates, verify distinctness and hero; rights and V2.3 visual acceptance remain open."
+}
