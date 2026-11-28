@@ -7,15 +7,17 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit,urljoin,unquote
 ROOT=Path(__file__).resolve().parent.parent
 ORIGIN="https://creaid-media.de"
-def read(path):return json.loads((ROOT/path).read_text(encoding="utf-8"))
-idx=read("src/_data/postsIndex.json")
-pages=read("src/_data/pages.json")
-drafts=read("src/_data/wordpressPreviewDrafts.json")
-imports=read("src/_data/wordpressPreviewArticles.json")
-owners=read("docs/seo/phase-3/page-ownership.json")
-routes=read("src/_data/routes.json")
-by_url={v:k for k,v in routes.items()}
-owner={x["pageKey"]:x for x in owners}
+def load_sources(source_root):
+    def read(path):return json.loads((source_root/path).read_text(encoding="utf-8"))
+    idx=read("src/_data/postsIndex.json")
+    pages=read("src/_data/pages.json")
+    drafts=read("src/_data/wordpressPreviewDrafts.json")
+    imports=read("src/_data/wordpressPreviewArticles.json")
+    owners=read("docs/seo/phase-3/page-ownership.json")
+    routes=read("src/_data/routes.json")
+    by_url={v:k for k,v in routes.items()}
+    owner={x["pageKey"]:x for x in owners}
+    return idx,pages,drafts,imports,owners,routes,by_url,owner
 void=set("area base br col embed hr img input link meta param source track wbr".split())
 class Audit(HTMLParser):
     def __init__(self,raw,url):
@@ -72,7 +74,8 @@ def normalize_image(src):
 def image_exists(src,dist):
     path=normalize_image(src)
     return bool(path and path.startswith("/assets/") and (dist/unquote(path.lstrip("/"))).is_file())
-def inventory(dist):
+def inventory(dist,source_root=ROOT):
+    idx,pages,drafts,imports,owners,routes,by_url,owner=load_sources(source_root)
     articles=[];archives=[];errors=[]
     for x in idx:
         k=x["slug"];p=pages[k];url=routes[k];f=dist/p["url"];a=Audit(f.read_text(encoding="utf-8"),url)
@@ -116,7 +119,7 @@ def inventory(dist):
     assert len(articles)==62 and len(archives)==20 and summary["draftSources"]==19
     return {"method":"Rendered HTML inventory, image path counts are optimistic upper bounds, NOT visual or semantic quality acceptance","summary":summary,"articles":articles,"archives":archives,"overlaps":overlaps}
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--dist",type=Path,default=ROOT/"dist");p.add_argument("--output",type=Path,required=True);a=p.parse_args()
-    report=inventory(a.dist);a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    p=argparse.ArgumentParser();p.add_argument("--dist",type=Path,default=ROOT/"dist");p.add_argument("--source-root",type=Path,default=ROOT,help="Source tree corresponding to the rendered dist");p.add_argument("--output",type=Path,required=True);a=p.parse_args()
+    report=inventory(a.dist,a.source_root);a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(report["summary"],ensure_ascii=False,indent=2))
     if report["summary"]["technicalErrors"]:raise SystemExit(1)

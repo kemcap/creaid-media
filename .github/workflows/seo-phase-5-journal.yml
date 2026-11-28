@@ -35,7 +35,7 @@ jobs:
           [[ "$BASELINE_SHA" =~ ^[0-9a-f]{40}$ ]]
           git worktree add --detach "$RUNNER_TEMP/journal-baseline" "$BASELINE_SHA"
           (cd "$RUNNER_TEMP/journal-baseline" && npm ci && npm run build)
-          python scripts/audit-journal-v23.py --dist "$RUNNER_TEMP/journal-baseline/dist" --output seo-phase5-report/baseline.json
+          python scripts/audit-journal-v23.py --dist "$RUNNER_TEMP/journal-baseline/dist" --source-root "$RUNNER_TEMP/journal-baseline" --output seo-phase5-report/baseline.json
       - name: Verify unchanged draft sources, URLs, assets and publication state
         env:
           BASELINE_SHA: ${{ github.event.pull_request.base.sha }}

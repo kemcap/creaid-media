@@ -197,7 +197,7 @@ async function captureJournalReview(browser){
        modules:elements.map(el=>({id:el.dataset.editorial,width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height,overflow:el.scrollWidth>el.clientWidth+2,allowedLocalScroll:el.matches('.ed-table')&&el.tabIndex===0&&['auto','scroll'].includes(getComputedStyle(el).overflowX)})),
        tables:[...main.querySelectorAll('.ed-table')].map(el=>({focusable:el.tabIndex===0,scrollable:el.scrollWidth>el.clientWidth+2})),
        h1:main.querySelector('h1')?.innerText,
-       detachedDot:[...main.querySelectorAll('h1 .cm-journal-dot-tail')].some(t=>{
+       detachedDot:[...main.querySelectorAll('h1 .cm-journal-dot-tail, .ed-spring-heading .cm-journal-dot-tail')].some(t=>{
         const dot=t.querySelector('.cm-heading-dot'),node=t.firstChild;
         if(!dot||!node||node.nodeType!==Node.TEXT_NODE||!node.textContent.trim())return true;
         const range=document.createRange();const end=node.textContent.length;
@@ -291,6 +291,18 @@ async function interactionTests(browser){
   await settle(p,base+'/webdesign');
   assert.equal(await p.locator('main .cm-claim-h1 .cm-heading-dot').first().evaluate(e=>getComputedStyle(e).animationName),'cm-hero-ball-hop');
   await p.emulateMedia({reducedMotion:'reduce'});
+  await settle(p,base+'/firmennamen-entwickeln-lassen');
+  const spring=p.locator('main .ed-spring-heading');
+  assert.equal(await spring.count(),1,'One summary signature pilot');
+  assert.equal((await spring.textContent()).replace(/\u2060/g,'').trim(),'Der springende Punkt');
+  const springDot=spring.locator('.cm-heading-dot');
+  assert.equal(await springDot.count(),1);
+  assert.equal(await springDot.getAttribute('aria-hidden'),'true');
+  assert.equal(await springDot.evaluate(e=>getComputedStyle(e).animationName),'none');
+  await p.emulateMedia({reducedMotion:'no-preference'});
+  assert.equal(await springDot.evaluate(e=>getComputedStyle(e).animationName),'cm-hero-ball-hop');
+  await p.emulateMedia({reducedMotion:'reduce'});
+  assert.equal(await p.locator('.j-toc a[href="#das-wichtigste-auf-einen-blick"]').count(),1);
   await settle(p,base+'/creaid-blog');
   const search=p.locator('#jSearch');await search.fill('ZZZ-QA-NO-MATCH-987654');assert.equal(await p.locator('.j-card[data-cat]:visible').count(),0);await search.fill('');assert.ok(await p.locator('.j-card[data-cat]:visible').count()>0);
   await settle(p,base+'/google-ads-aber-keine-anfragen');
